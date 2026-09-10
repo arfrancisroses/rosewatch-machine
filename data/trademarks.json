@@ -539,15 +539,17 @@
       "first_use_date": "2020-08-25T00:00:00",
       "goods": "Live plants; namely, rose plants",
       "eu_reg_no": null,
-      "filing_date": 45209,
+      "filing_date": "45209",
       "registration_date": "NYA",
       "next_action": null,
       "owner_breeder": "Interplant Roses B.V.",
       "party_selling": null,
       "source_row": 30,
       "status_category": "Abandoned",
-      "needs_review": false,
-      "needs_review_reasons": []
+      "needs_review": true,
+      "needs_review_reasons": [
+        "Filing Date cell contains a raw number (45209) instead of a formatted date in the source spreadsheet -- likely an unformatted Excel date serial. Not converted automatically; needs source verification."
+      ]
     },
     {
       "row_index": 2,

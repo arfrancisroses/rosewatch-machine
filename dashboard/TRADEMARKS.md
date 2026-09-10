@@ -144,7 +144,7 @@ Fields preserve the original wording from the Master Trademark Filing Chart. Row
 | Sweet Mantiquilla | To Be Filed | 93002.0679999957 |  | NYA |  | NYA |  |  |
 | Symbol | To Be Filed | 93002.011 |  | NYA |  | NYA |  |  |
 | The Artist's Light | To Be Filed | 93002.0689999956 |  | NYA |  | NYA |  |  |
-| Trendsetter | Abandoned (Rose Varietal) | 93002.001 | 98216529 | NYA | 45209 | NYA |  |  |
+| Trendsetter | Abandoned (Rose Varietal) | 93002.001 | 98216529 | NYA | 45209 | NYA |  | Yes — Filing Date cell contains a raw number (45209) instead of a formatted date in the source spreadsheet -- likely an unformatted Excel date serial. Not converted automatically; needs source verification. |
 | Valentina | To Be Filed | 93002.0699999955 |  | NYA |  | NYA |  |  |
 | Wedding Bells | To Be Filed | 93002.0709999954 |  | NYA |  | NYA |  |  |
 

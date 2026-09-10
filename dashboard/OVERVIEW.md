@@ -1,6 +1,6 @@
 # Rose Watch — Overview
 
-Dashboard last regenerated: 2026-09-10 13:34 MST
+Dashboard last regenerated: 2026-09-10 15:53 MST
 
 ## Trademark chart summary
 
@@ -13,7 +13,7 @@ Dashboard last regenerated: 2026-09-10 13:34 MST
   - Abandoned: 4
   - Do Not File: 1
 - Active for crawling (Registered + Pending): **93**
-- Flagged Needs Review: 86
+- Flagged Needs Review: 87
 
 ## Known sites
 

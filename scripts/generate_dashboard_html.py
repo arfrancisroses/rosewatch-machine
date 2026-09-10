@@ -331,6 +331,15 @@ footer.foot { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--l
 const DATA = JSON.parse(document.getElementById('rw-data').textContent);
 
 function esc(s){ return (s===null||s===undefined) ? '' : String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function dateOnly(s){ return String(s ?? '').slice(0,10); }
+function runPanel(name, fn){
+  try { fn(); }
+  catch (err) {
+    console.error('Rose Watch dashboard: panel "' + name + '" failed to render', err);
+    const el = document.getElementById('panel-' + name);
+    if (el) el.innerHTML = `<div class="intro" style="color:var(--bad)">This section hit an error while rendering (${esc(err.message)}). The underlying data may need review — check the browser console for details, and see the repo's dashboard/*.md as a fallback.</div>`;
+  }
+}
 
 function statusPill(status, category){
   const label = esc(status || 'Needs Review');
@@ -411,7 +420,7 @@ function makeTable(container, {columns, rows, getSortValue, rowHtml, emptyMessag
 }
 
 /* ---------- Overview ---------- */
-(function renderOverview(){
+runPanel('overview', function renderOverview(){
   const el = document.getElementById('panel-overview');
   const m = DATA.meta;
   el.innerHTML = `
@@ -432,10 +441,10 @@ function makeTable(container, {columns, rows, getSortValue, rowHtml, emptyMessag
       Rose Watch's work is investigative research, not a legal determination &mdash; every case here is a potential lead for Francis Roses or legal counsel to review, not a confirmed infringement.
     </div>
   `;
-})();
+});
 
 /* ---------- Trademarks ---------- */
-(function renderTrademarks(){
+runPanel('trademarks', function renderTrademarks(){
   const el = document.getElementById('panel-trademarks');
   el.innerHTML = `
     <div class="intro">All records from the Master Trademark Filing Chart, in the original wording. Rows flagged <strong>Needs Review</strong> have missing, unclear, duplicate, or conflicting source data and were not silently corrected.</div>
@@ -482,8 +491,8 @@ function makeTable(container, {columns, rows, getSortValue, rowHtml, emptyMessag
       <td class="mono">${esc(r.docket)}</td>
       <td class="mono">${esc(r.appNo)}</td>
       <td class="mono">${esc(r.regNo)}</td>
-      <td class="mono">${esc((r.filingDate||'').slice(0,10))}</td>
-      <td class="mono">${esc((r.regDate||'').slice(0,10))}</td>
+      <td class="mono">${esc(dateOnly(r.filingDate))}</td>
+      <td class="mono">${esc(dateOnly(r.regDate))}</td>
       <td>${esc(r.authorizedSeller)}</td>
     </tr>`
   });
@@ -505,10 +514,10 @@ function makeTable(container, {columns, rows, getSortValue, rowHtml, emptyMessag
   }
   searchEl.addEventListener('input', applyFilter);
   applyFilter();
-})();
+});
 
 /* ---------- Cases ---------- */
-(function renderCases(){
+runPanel('cases', function renderCases(){
   const el = document.getElementById('panel-cases');
   el.innerHTML = `
     <div class="intro">Potential-infringement findings matched to a <strong>Registered</strong> or <strong>Pending</strong> trademark. Every row is a lead for review, not a legal conclusion.</div>
@@ -580,10 +589,10 @@ function makeTable(container, {columns, rows, getSortValue, rowHtml, emptyMessag
   [statusSel, siteSel, reviewSel].forEach(s => s.addEventListener('change', applyFilter));
   document.getElementById('case-search').addEventListener('input', applyFilter);
   applyFilter();
-})();
+});
 
 /* ---------- Known Sites ---------- */
-(function renderSites(){
+runPanel('sites', function renderSites(){
   const el = document.getElementById('panel-sites');
   el.innerHTML = `
     <div class="intro">Rose Watch's crawl target roster &mdash; a <strong>closed scope</strong> per user instruction. No sites are discovered or added automatically; the roster only changes when the source spreadsheet is updated.</div>
@@ -601,10 +610,10 @@ function makeTable(container, {columns, rows, getSortValue, rowHtml, emptyMessag
     </table></div>
     <p class="small-note">"Prior reported varieties" carries over informal, pre-Rose-Watch research from the source spreadsheet &mdash; background context only, not verified case evidence.</p>
   `;
-})();
+});
 
 /* ---------- Needs Review ---------- */
-(function renderReview(){
+runPanel('review', function renderReview(){
   const el = document.getElementById('panel-review');
   el.innerHTML = `
     <div class="intro"><strong>Trademark chart records needing review</strong> &mdash; ${DATA.needsReviewTrademarks.length} of ${DATA.meta.trademarkCount} records have missing, unclear, duplicate, or conflicting data.</div>
@@ -652,10 +661,10 @@ function makeTable(container, {columns, rows, getSortValue, rowHtml, emptyMessag
       <td class="mono">${esc(r.first_date_found)}</td>
     </tr>`
   });
-})();
+});
 
 /* ---------- Data Sources ---------- */
-(function renderSources(){
+runPanel('sources', function renderSources(){
   const el = document.getElementById('panel-sources');
   el.innerHTML = `
     <div class="intro">Append-only log of source files ingested into Rose Watch. Each new file gets its own dated row; the data above always reflects the most recent successful import.</div>
@@ -672,7 +681,7 @@ function makeTable(container, {columns, rows, getSortValue, rowHtml, emptyMessag
       </tbody>
     </table></div>
   `;
-})();
+});
 </script>
 """
 

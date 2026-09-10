@@ -2,10 +2,11 @@
 
 ## Trademark chart records needing review
 
-86 of 275 trademark records have missing, unclear, duplicate, or conflicting data and were not silently corrected.
+87 of 275 trademark records have missing, unclear, duplicate, or conflicting data and were not silently corrected.
 
 | Rose/Variety | Owner/Breeder | Status (as written) | Source Row | Reason |
 |---|---|---|---|---|
+| Trendsetter | Interplant Roses B.V. | Abandoned (Rose Varietal) | 30 | Filing Date cell contains a raw number (45209) instead of a formatted date in the source spreadsheet -- likely an unformatted Excel date serial. Not converted automatically; needs source verification. |
 | Golden Mustard | Interplant Roses B.V. | To Be Filed | 60 | Duplicate trademark name also on source row 44 |
 | Gelato | Interplant Roses B.V. | To Be Filed | 64 | Duplicate trademark name also on source row 52 |
 | Sweet Flow | Interplant Roses B.V. | To Be Filed | 96 | Duplicate trademark name also on source row 43 |

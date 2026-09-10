@@ -114,6 +114,16 @@ def parse_trademark_chart(path):
             else:
                 seen_names[key] = r
 
+        for date_field, label in (("filing_date", "Filing Date"), ("registration_date", "Registration Date"), ("first_use_date", "First Use Date")):
+            val = rec.get(date_field)
+            if val is not None and not isinstance(val, str):
+                reasons.append(
+                    f"{label} cell contains a raw number ({val!r}) instead of a formatted date in the source "
+                    "spreadsheet -- likely an unformatted Excel date serial. Not converted automatically; needs "
+                    "source verification."
+                )
+                rec[date_field] = str(val)
+
         rec["needs_review"] = bool(reasons)
         rec["needs_review_reasons"] = reasons
         records.append(rec)

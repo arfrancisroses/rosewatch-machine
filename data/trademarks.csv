@@ -25,7 +25,7 @@ row_index,docket_no,link,trademark,status,reg_no,app_ser_no,first_use_date,goods
 22,93001.0219999999,,Princeses Astrid de Belgique -- LIVING PERSON,To Be Filed,,,2025-11-01T00:00:00,Live plants; roses,,,,,Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,To Be Filed,False,,25
 24,93001.0229999999,,Rue Saint-Honoré,Pending,NYA,99751265,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,NYA,,Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,26
 25,93001.0239999999,,Velours de Nuit,Pending,NYA,99751291,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,NYA,,Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,27
-1,93002.001,,Trendsetter,Abandoned (Rose Varietal),NYA,98216529,2020-08-25T00:00:00,"Live plants; namely, rose plants",,45209,NYA,,Interplant Roses B.V.,,Abandoned,False,,30
+1,93002.001,,Trendsetter,Abandoned (Rose Varietal),NYA,98216529,2020-08-25T00:00:00,"Live plants; namely, rose plants",,45209,NYA,,Interplant Roses B.V.,,Abandoned,True,Filing Date cell contains a raw number (45209) instead of a formatted date in the source spreadsheet -- likely an unformatted Excel date serial. Not converted automatically; needs source verification.,30
 2,93002.002,,Balmoral,To Be Filed,NYA,,2025-11-01T00:00:00,,,,NYA,,Interplant Roses B.V.,,To Be Filed,False,,31
 2,93002.003,,J'adore,To Be Filed,NYA,,2025-11-01T00:00:00,,N/A,N/A,NYA,,Interplant Roses B.V.,,To Be Filed,False,,32
 3,93002.004,,Bella Trendsetter,To Be Filed,NYA,,,,,,NYA,,Interplant Roses B.V.,,To Be Filed,False,,33
