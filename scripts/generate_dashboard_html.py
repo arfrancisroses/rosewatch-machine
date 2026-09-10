@@ -17,7 +17,8 @@ from zoneinfo import ZoneInfo
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = REPO_ROOT / "data"
-CASES_FILE = REPO_ROOT / "cases" / "cases.json"
+CASES_DIR = REPO_ROOT / "cases"
+CASES_FILE = CASES_DIR / "cases.json"
 OUT_FILE = REPO_ROOT / "dashboard" / "index.html"
 PHOENIX = ZoneInfo("America/Phoenix")
 
@@ -89,6 +90,14 @@ def build_data():
     case_rows = cases.get("cases", [])
     review_queue = cases.get("review_queue", [])
 
+    case_details = {}
+    for c in case_rows:
+        case_no = c.get("case_number")
+        detail_path = CASES_DIR / case_no / "case.json"
+        detail = load_json(detail_path, None)
+        if detail is not None:
+            case_details[case_no] = detail
+
     status_counts = {}
     for r in trademarks:
         key = r["statusCategory"] or "Needs Review"
@@ -101,6 +110,7 @@ def build_data():
         "trademarks": trademarks,
         "knownSites": known_sites,
         "cases": case_rows,
+        "caseDetails": case_details,
         "reviewQueue": review_queue,
         "needsReviewTrademarks": needs_review_tm,
         "dataSources": DATA_SOURCES_LOG,
@@ -283,9 +293,26 @@ td.num { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-
 .pill.dot::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
 
 .small-note { font-size: 12px; color: var(--ink-faint); margin-top: 10px; }
-.case-detail { font-size: 12.5px; color: var(--ink-soft); }
-.case-detail summary { cursor: pointer; color: var(--accent-ink); font-weight: 600; }
 code.k { font-family: 'IBM Plex Mono', monospace; background: var(--neutral-soft); padding: 1px 5px; border-radius: 4px; font-size: 11.5px; }
+
+/* Case link + detail page */
+.case-link { font-family: 'IBM Plex Mono', monospace; font-weight: 600; color: var(--accent-ink); background: none; border: none; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; font-size: inherit; }
+.case-link:hover { color: var(--accent); }
+.case-back { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--ink-soft); background: none; border: none; padding: 0; margin-bottom: 16px; cursor: pointer; }
+.case-back:hover { color: var(--accent-ink); }
+.case-page-header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 16px; margin-bottom: 4px; }
+.case-page-header h2 { font-size: 24px; font-weight: 600; }
+.case-page-sub { color: var(--ink-soft); font-size: 14.5px; margin-bottom: 20px; }
+.case-section { background: var(--paper-raised); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; margin-bottom: 14px; box-shadow: var(--shadow); }
+.case-section h3 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; font-family: 'Public Sans', sans-serif; font-weight: 700; color: var(--ink-faint); margin-bottom: 12px; }
+.field-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px 20px; }
+.field label { display: block; font-size: 11.5px; color: var(--ink-faint); margin-bottom: 3px; }
+.field .v { font-size: 14px; }
+.field .v.mono { font-family: 'IBM Plex Mono', monospace; font-size: 13px; }
+.quote-block { font-size: 14px; line-height: 1.6; border-left: 3px solid var(--accent-soft); padding: 4px 0 4px 14px; margin: 6px 0; color: var(--ink-soft); font-style: italic; }
+.limitation-list, .note-list { margin: 0; padding-left: 20px; font-size: 13.5px; line-height: 1.6; color: var(--ink-soft); }
+.limitation-list li::marker { color: var(--bad); }
+.case-page-not-found { padding: 40px 0; text-align: center; color: var(--ink-faint); }
 
 footer.foot { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 12px; color: var(--ink-faint); }
 
@@ -320,6 +347,7 @@ footer.foot { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--l
   <section class="panel" id="panel-sites"></section>
   <section class="panel" id="panel-review"></section>
   <section class="panel" id="panel-sources"></section>
+  <section class="panel" id="panel-case-detail"></section>
 
   <footer class="foot">
     Investigative research, not a legal determination. A matching product or trademark name is a potential lead for Francis Roses or legal counsel to review.
@@ -361,14 +389,30 @@ function matchPill(m){
 
 document.getElementById('genAt').textContent = DATA.generatedAt;
 
-/* ---------- Tabs ---------- */
+/* ---------- Tabs + hash routing (so a case detail is a real, linkable, back-button-friendly page) ----------
+   Artifacts render in a sandboxed iframe where history.pushState is unreliable, so navigation relies only on
+   location.hash + the hashchange event -- never pushState/replaceState. */
 const tabs = Array.from(document.querySelectorAll('.tab'));
-tabs.forEach(tab => tab.addEventListener('click', () => {
-  tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
-  tab.setAttribute('aria-selected', 'true');
+let lastTab = 'overview';
+
+function showTab(name){
+  lastTab = name;
+  tabs.forEach(t => t.setAttribute('aria-selected', t.dataset.panel === name ? 'true' : 'false'));
   document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-  document.getElementById('panel-' + tab.dataset.panel).classList.add('active');
+  const el = document.getElementById('panel-' + name);
+  if (el) el.classList.add('active');
+}
+tabs.forEach(tab => tab.addEventListener('click', () => {
+  showTab(tab.dataset.panel);
+  if (location.hash) location.hash = ''; // triggers hashchange -> route(), which lands back on lastTab (set above)
 }));
+
+function route(){
+  const m = location.hash.match(/^#case\/(.+)$/);
+  if (m) { showCaseDetail(decodeURIComponent(m[1])); return; }
+  showTab(lastTab);
+}
+window.addEventListener('hashchange', route);
 
 /* ---------- Generic sortable/filterable table ---------- */
 function makeTable(container, {columns, rows, getSortValue, rowHtml, emptyMessage}) {
@@ -558,7 +602,7 @@ runPanel('cases', function renderCases(){
     getSortValue: (r,k) => (r[k] ?? '').toString().toLowerCase(),
     emptyMessage: DATA.cases.length ? 'No cases match this filter.' : 'No cases yet — none of today’s crawl results have been processed into full case records.',
     rowHtml: r => `<tr>
-      <td class="mono">${esc(r.case_number)}</td>
+      <td class="mono"><a class="case-link" href="#case/${encodeURIComponent(r.case_number)}">${esc(r.case_number)}</a></td>
       <td class="mono">${esc(r.site_code)}</td>
       <td>${esc(r.variety)}</td>
       <td>${esc(r.matched_trademark)}</td>
@@ -590,6 +634,133 @@ runPanel('cases', function renderCases(){
   document.getElementById('case-search').addEventListener('input', applyFilter);
   applyFilter();
 });
+
+/* ---------- Case detail page (linked to from the Cases table) ---------- */
+function field(label, value, mono){
+  if (value === undefined || value === null || value === '') return '';
+  return `<div class="field"><label>${esc(label)}</label><div class="v${mono?' mono':''}">${value}</div></div>`;
+}
+function linkOut(url){ return url ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(url)}</a>` : ''; }
+
+function showCaseDetail(caseNumber){
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  tabs.forEach(t => t.setAttribute('aria-selected', t.dataset.panel === 'cases' ? 'true' : 'false'));
+  const panel = document.getElementById('panel-case-detail');
+  panel.classList.add('active');
+  runPanel('case-detail', function renderCaseDetail(){
+    const summary = DATA.cases.find(c => c.case_number === caseNumber);
+    const c = DATA.caseDetails[caseNumber];
+    if (!c && !summary) {
+      panel.innerHTML = `
+        <button class="case-back" data-back>&larr; Back to Cases</button>
+        <div class="case-page-not-found">No case found for <span class="mono">${esc(caseNumber)}</span>. It may have been renumbered or removed — case numbers are otherwise permanent.</div>`;
+      panel.querySelector('[data-back]').addEventListener('click', () => { showTab('cases'); if (location.hash) location.hash = ''; });
+      return;
+    }
+    const loc = c?.seller_location || {};
+    const host = c?.website_host || {};
+    const limitations = c?.access_or_research_limitations || [];
+    const history = c?.history || [];
+    const screenshots = c?.evidence_screenshots || [];
+
+    panel.innerHTML = `
+      <button class="case-back" data-back>&larr; Back to Cases</button>
+      <div class="case-page-header">
+        <h2 class="mono">${esc(caseNumber)}</h2>
+        ${matchPill(c?.match_classification || summary?.match_classification)}
+        ${reviewStatusPill(c?.review_status || summary?.review_status)}
+        ${statusPill(c?.trademark_status || summary?.trademark_status, c?.trademark_status || summary?.trademark_status)}
+      </div>
+      <div class="case-page-sub">${esc(c?.variety || summary?.variety)} &mdash; ${esc(c?.seller_name || summary?.seller_name)} (${esc(c?.website_domain || summary?.website_domain)})</div>
+
+      <div class="case-section">
+        <h3>Trademark Match</h3>
+        <div class="field-grid">
+          ${field('Matched trademark', esc(c?.matched_trademark))}
+          ${field('Trademark status', esc(c?.trademark_status))}
+          ${field('Application / registration no.', esc(c?.trademark_application_or_registration_no), true)}
+          ${field('Breeder', esc(c?.breeder))}
+          ${field('Site code', esc(c?.site_code), true)}
+        </div>
+      </div>
+
+      <div class="case-section">
+        <h3>Listing</h3>
+        <div class="field-grid">
+          ${field('Seller / business name', esc(c?.seller_name))}
+          ${field('Website domain', esc(c?.website_domain), true)}
+          ${field('Product URL', linkOut(c?.product_url))}
+          ${field('Exact product title', esc(c?.exact_product_title))}
+          ${field('Price', c?.price ? esc(c.price) + ' ' + esc(c.currency || '') : null)}
+          ${field('Quantity / form', esc(c?.quantity_or_form))}
+        </div>
+      </div>
+
+      <div class="case-section">
+        <h3>Match Assessment</h3>
+        <div class="field-grid">${field('Classification', matchPill(c?.match_classification))}</div>
+        ${c?.match_explanation ? `<div class="quote-block">${esc(c.match_explanation)}</div>` : ''}
+        ${c?.quoted_text ? `<label style="display:block;font-size:11.5px;color:var(--ink-faint);margin-top:10px">Quoted from page</label><div class="quote-block">&ldquo;${esc(c.quoted_text)}&rdquo;</div>` : ''}
+      </div>
+
+      <div class="case-section">
+        <h3>Evidence Dates</h3>
+        <div class="field-grid">
+          ${field('First date found', esc(c?.first_date_found), true)}
+          ${field('Most recent verified', esc(c?.last_verified), true)}
+          ${field('Screenshot captured', esc(c?.screenshot_captured_at) || 'Not captured this run', true)}
+        </div>
+      </div>
+
+      <div class="case-section">
+        <h3>Seller Location ${loc.estimated ? '<span class="pill neutral">Estimated</span>' : ''}</h3>
+        <div class="field-grid">
+          ${field('Country', esc(loc.country))}
+          ${field('State / region', esc(loc.state_or_region))}
+          ${field('City', esc(loc.city))}
+          ${field('Source', esc(loc.source))}
+        </div>
+      </div>
+
+      <div class="case-section">
+        <h3>Website Host ${host.estimated ? '<span class="pill neutral">Estimated</span>' : ''}</h3>
+        <div class="field-grid">
+          ${field('Hosting platform', esc(host.hosting_platform))}
+          ${field('CDN / proxy', esc(host.cdn_or_proxy))}
+          ${field('Server IP', esc(host.server_ip), true)}
+          ${field('IP geolocation', esc(host.ip_geolocation))}
+          ${field('Registrar', esc(host.registrar))}
+        </div>
+      </div>
+
+      <div class="case-section">
+        <h3>Evidence Screenshots</h3>
+        ${screenshots.length
+          ? `<div class="field-grid">${screenshots.map(s => `<div class="field"><div class="v">${linkOut(s)}</div></div>`).join('')}</div>`
+          : '<div class="quote-block">No screenshot on file for this case — see Access &amp; Research Limitations below.</div>'}
+      </div>
+
+      ${limitations.length ? `
+      <div class="case-section">
+        <h3>Access &amp; Research Limitations</h3>
+        <ul class="limitation-list">${limitations.map(l => `<li>${esc(l)}</li>`).join('')}</ul>
+      </div>` : ''}
+
+      ${c?.investigator_notes ? `
+      <div class="case-section">
+        <h3>Investigator Notes</h3>
+        <div class="quote-block">${esc(c.investigator_notes)}</div>
+      </div>` : ''}
+
+      ${history.length ? `
+      <div class="case-section">
+        <h3>History</h3>
+        <ul class="note-list">${history.map(h => `<li><span class="mono">${esc(h.date)}</span> &mdash; <strong>${esc(h.action)}</strong>${h.details ? ': ' + esc(h.details) : ''}</li>`).join('')}</ul>
+      </div>` : ''}
+    `;
+    panel.querySelector('[data-back]').addEventListener('click', () => { showTab('cases'); if (location.hash) location.hash = ''; });
+  });
+}
 
 /* ---------- Known Sites ---------- */
 runPanel('sites', function renderSites(){
@@ -682,6 +853,9 @@ runPanel('sources', function renderSources(){
     </table></div>
   `;
 });
+
+/* ---------- Initial route (deep link support: opening a #case/... URL lands straight on that case) ---------- */
+route();
 </script>
 """
 
