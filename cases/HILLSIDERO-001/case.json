@@ -1,0 +1,52 @@
+{
+  "case_number": "HILLSIDERO-001",
+  "site_code": "HILLSIDERO",
+  "variety": "Whitby Abbey",
+  "matched_trademark": "Whitby Abbey",
+  "trademark_status": "Pending",
+  "trademark_application_or_registration_no": "App. Ser. No. 50051597 (Reg. No.: N/A)",
+  "breeder": "Jan Spek Rozen",
+  "seller_name": "Hillside Rose Farm",
+  "website_domain": "hillsiderosefarm.com",
+  "product_url": "https://hillsiderosefarm.com/products/whitby-abbey-惠特比修道院-netherlands",
+  "exact_product_title": "Whitby Abbey 惠特比修道院 (Netherlands)",
+  "quoted_text": "A very much sought-after shrub rose by enthusiasts, it has soft buttery color with a pink color tone at the center core while the most outer layers are yellow-greenish, very adorable. Flower diameter 3-4 inches, plant height 3-4 ft. Mildly fragrant. *See Disclaimer in the Footer of the webpages",
+  "price": "59.00",
+  "currency": "USD",
+  "quantity_or_form": "Live plant, own-root shrub rose (single listing; no explicit pot size or quantity stated on page)",
+  "match_classification": "Strong",
+  "match_explanation": "Product title uses the full protected name \"Whitby Abbey\" verbatim, appended with a parenthetical origin note \"(Netherlands)\" and the Chinese transliteration 惠特比修道院. The core variety name matches the Pending trademark exactly; classified Strong rather than Exact because of the added descriptor text in the title.",
+  "review_status": "New",
+  "first_date_found": "2026-09-10 13:28 MST (America/Phoenix)",
+  "last_verified": "2026-09-10 13:31 MST (America/Phoenix) — verified live via direct page fetch (title/price/description confirmed against the live page) and independently via the store's live product feed (hillsiderosefarm.com/products.json)",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "United States (inferred — the site's \"Our Story\" page refers to a \"Southern California home\" but does not explicitly state \"United States\")",
+    "state_or_region": "California (\"Southern California\" per the site's Our Story / About page)",
+    "city": "Not available on page",
+    "source": "hillsiderosefarm.com/pages/about-us (\"Our Story\"); no address given on Contact or Shipping & Ordering Information pages",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (storefront platform — page footer states \"Powered by Shopify\")",
+    "cdn_or_proxy": "Cloudflare, Inc. (AS13335)",
+    "server_ip": "23.227.38.68 (apex hillsiderosefarm.com); 23.227.38.74 (www.hillsiderosefarm.com)",
+    "ip_geolocation": "Ottawa, Ontario, Canada per ip-api.com lookup on the apex IP — labeled Estimated: this reflects Cloudflare's routing/edge location for the IP, not necessarily Shopify's or the seller's physical location",
+    "registrar": "Not available — WHOIS lookup services attempted (rdap.org, hackertarget.com) were blocked by this session's network policy",
+    "estimated": true
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch to the same URL succeeds. Evidence text (title, price, description) was instead verified directly against the live rendered page and cross-checked against the store's live product data feed.",
+    "Domain WHOIS/registrar lookup blocked by network policy — registrar not confirmed.",
+    "No specific city-level seller address found anywhere on the site; only \"Southern California\" is stated."
+  ],
+  "investigator_notes": "First identified via this session's crawl of the store's public product feed (hillsiderosefarm.com/products.json) on 2026-09-10, then independently verified by fetching the live product page directly. This is a potential lead for Francis Roses/legal counsel review, not a legal determination of infringement.",
+  "history": [
+    {
+      "date": "2026-09-10",
+      "action": "Case created",
+      "details": "Initial discovery and verification during first Rose Watch monitoring run under the current system."
+    }
+  ]
+}

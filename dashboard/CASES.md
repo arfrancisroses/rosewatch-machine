@@ -6,7 +6,6 @@ Filter by: trademark status, website/seller code, seller location, review status
 
 | Case No. | Site Code | Rose/Variety | Matched Trademark | TM Status | Seller | Domain | Seller Location | Website Host | First Found | Last Verified | Match Class. | Review Status |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| _(none yet)_ | | | | | | | | | | | | |
-
-No monitoring run has been completed under this system yet, so no case numbers have been assigned. See `dashboard/DATA_SOURCES.md` for the current data baseline.
+| HILLSIDERO-001 | HILLSIDERO | Whitby Abbey | Whitby Abbey | Pending | Hillside Rose Farm | hillsiderosefarm.com | California, United States (site-stated "Southern California") | Shopify, Inc. (behind Cloudflare) | 2026-09-10 13:28 MST (America/Phoenix) | 2026-09-10 13:31 MST (America/Phoenix) | Strong | New |
+| HILLSIDERO-002 | HILLSIDERO | Cappuccino | Cappuccino | Pending | Hillside Rose Farm | hillsiderosefarm.com | California, United States (site-stated "Southern California") | Shopify, Inc. (behind Cloudflare) | 2026-09-10 13:28 MST (America/Phoenix) | 2026-09-10 13:31 MST (America/Phoenix) | Exact | New |
 

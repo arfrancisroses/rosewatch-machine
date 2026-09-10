@@ -1,7 +1,43 @@
 {
   "_readme": "Rose Watch case database. 'cases' holds published findings matched to a Registered or Pending trademark (each case's full evidence record lives in cases/<CASE-NUMBER>/case.json). 'review_queue' holds matches against To Be Filed, Needs Review, Abandoned, Do Not File, Not Applicable, or Not in Trademark Chart records -- never characterized as confirmed infringement. 'site_code_registry' tracks the next sequence number for each website/seller case-number code so numbers are never reused or renumbered. This file is only ever appended to by a completed Rose Watch monitoring run -- never overwritten, and existing review_status values are always preserved.",
   "last_run_completed": null,
-  "site_code_registry": {},
-  "cases": [],
+  "site_code_registry": {
+    "hillsiderosefarm.com": {
+      "site_code": "HILLSIDERO",
+      "next_sequence": 3
+    }
+  },
+  "cases": [
+    {
+      "case_number": "HILLSIDERO-001",
+      "site_code": "HILLSIDERO",
+      "variety": "Whitby Abbey",
+      "matched_trademark": "Whitby Abbey",
+      "trademark_status": "Pending",
+      "seller_name": "Hillside Rose Farm",
+      "website_domain": "hillsiderosefarm.com",
+      "seller_location": "California, United States (site-stated \"Southern California\")",
+      "website_host": "Shopify, Inc. (behind Cloudflare)",
+      "first_date_found": "2026-09-10 13:28 MST (America/Phoenix)",
+      "last_verified": "2026-09-10 13:31 MST (America/Phoenix)",
+      "match_classification": "Strong",
+      "review_status": "New"
+    },
+    {
+      "case_number": "HILLSIDERO-002",
+      "site_code": "HILLSIDERO",
+      "variety": "Cappuccino",
+      "matched_trademark": "Cappuccino",
+      "trademark_status": "Pending",
+      "seller_name": "Hillside Rose Farm",
+      "website_domain": "hillsiderosefarm.com",
+      "seller_location": "California, United States (site-stated \"Southern California\")",
+      "website_host": "Shopify, Inc. (behind Cloudflare)",
+      "first_date_found": "2026-09-10 13:28 MST (America/Phoenix)",
+      "last_verified": "2026-09-10 13:31 MST (America/Phoenix)",
+      "match_classification": "Exact",
+      "review_status": "New"
+    }
+  ],
   "review_queue": []
 }
