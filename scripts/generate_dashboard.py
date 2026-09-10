@@ -87,7 +87,9 @@ def generate_known_sites_md(sites):
         f"Source file: `{sites['source_file']}` — imported {sites['imported_date']}.",
         f"Total known reseller sites: {sites['record_count']}.",
         "",
-        "This list is Rose Watch's crawl target roster (SOURCE FILES item 2). The "
+        "This list is Rose Watch's crawl target roster (SOURCE FILES item 2), and per "
+        "user instruction (2026-09-10) it is a **closed scope** — Rose Watch scans only "
+        "these sites and does not discover or add others on its own. The "
         "\"Prior reported varieties\" and \"Prior manual notes\" columns carry over "
         "informal, pre-Rose-Watch research from the source spreadsheet. **They are "
         "background context only** — not verified Rose Watch case evidence (no case "

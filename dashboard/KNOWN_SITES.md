@@ -3,7 +3,7 @@
 Source file: `2026-09-10_ListofIPInfringements.xlsx` — imported 2026-09-10.
 Total known reseller sites: 14.
 
-This list is Rose Watch's crawl target roster (SOURCE FILES item 2). The "Prior reported varieties" and "Prior manual notes" columns carry over informal, pre-Rose-Watch research from the source spreadsheet. **They are background context only** — not verified Rose Watch case evidence (no case number, product URL, screenshot, quoted text, or evidence date exists for them). Each site must still be crawled and, if a match is confirmed against the trademark chart, given a proper case record in `cases/cases.json`.
+This list is Rose Watch's crawl target roster (SOURCE FILES item 2), and per user instruction (2026-09-10) it is a **closed scope** — Rose Watch scans only these sites and does not discover or add others on its own. The "Prior reported varieties" and "Prior manual notes" columns carry over informal, pre-Rose-Watch research from the source spreadsheet. **They are background context only** — not verified Rose Watch case evidence (no case number, product URL, screenshot, quoted text, or evidence date exists for them). Each site must still be crawled and, if a match is confirmed against the trademark chart, given a proper case record in `cases/cases.json`.
 
 | Company | Website(s) | Sales Platform | Shipped From | Prior Reported Varieties (unverified) | Notes |
 |---|---|---|---|---|---|

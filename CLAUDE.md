@@ -293,6 +293,9 @@ Your goal is to provide accurate, organized, traceable research that helps Franc
 ## Working Conventions
 
 - **Ingesting a new/updated source file**: copy it into `data/sources/` with a `YYYY-MM-DD_` prefix (America/Phoenix date) preserving the rest of the original filename, then run `python3 scripts/import_sources.py`. Never delete or overwrite a prior dated source file — it's the evidentiary record of what the chart said on that date. Log the ingestion in `dashboard/DATA_SOURCES.md`.
+- **Crawl scope is closed to the known-sites roster.** Per user instruction (2026-09-10), Rose Watch scans *only* the sites listed in `data/known_sites.json` / `dashboard/KNOWN_SITES.md` — currently 14 companies / 16 URLs:
+  `ergongzy.com`, `etsy.com/shop/Ergongzi`, `myroseworld.com`, `etsy.com/shop/GcmRanch`, `highgardenroses.com`, `hillsiderosefarm.com`, `huniurosegarden.ca`, `jessiesrose.com`, `etsy.com/shop/JessiesRoseUSA`, `kateroses.com`, `kisakiplant.com`, `museroses.com`, `oneloveroseandgardens.com`, `roseexplosion.com`, `springlandflowers.com`, `your-roses.com`.
+  Do not discover, add, or crawl any additional site — including other pages on `etsy.com` beyond the two listed shops, or any site merely mentioned in search results, product descriptions, or "also sold on" text — without the user explicitly adding it to the source spreadsheet (re-run `scripts/import_sources.py` after) or asking in chat. If a listed site's URL changes or redirects to a new domain (e.g. GCM Ranch's Etsy shop redirecting to Kisaki Plant), note that in `dashboard/DATA_SOURCES.md` and ask before treating the new domain as in-scope.
 - **A daily monitoring run**, in order:
   1. Run `scripts/import_sources.py` only if a new source file was supplied that day; otherwise use the existing `data/*.json`.
   2. Load `data/trademarks.json`, filter to `status_category` in `Registered`/`Pending` — this is the active crawl list.
