@@ -1,0 +1,269 @@
+{
+  "source_file": "2026-09-10_ListofIPInfringements.xlsx",
+  "imported_date": "2026-09-10",
+  "record_count": 14,
+  "records": [
+    {
+      "company": "Ergonzy / Ergonzi",
+      "websites": [
+        "https://ergongzy.com/",
+        "https://www.etsy.com/shop/Ergongzi"
+      ],
+      "sales_platforms": [
+        "Etsy",
+        "Shop"
+      ],
+      "shipped_from": "Austin, Texas",
+      "prior_manual_notes": [],
+      "prior_reported_varieties": [
+        "Admiral® Rose",
+        "Modern Art ®",
+        "Piano®\nTantau",
+        "Pink O'Hara™",
+        "Sophie Rochas ®\nDelbard",
+        "Sophie Rochas ®’"
+      ],
+      "source_sheets": [
+        "Sheet1",
+        "Etsy"
+      ]
+    },
+    {
+      "company": "Flower Meadow Dream",
+      "websites": [
+        "https://www.myroseworld.com/"
+      ],
+      "sales_platforms": [],
+      "shipped_from": "Los Angeles, California",
+      "prior_manual_notes": [],
+      "prior_reported_varieties": [
+        "Admiral® Rose",
+        "Modern Art ®",
+        "Sophie Rochas ®\nDelbard"
+      ],
+      "source_sheets": [
+        "Sheet1"
+      ]
+    },
+    {
+      "company": "GCM Ranch",
+      "websites": [
+        "https://www.etsy.com/shop/GcmRanch"
+      ],
+      "sales_platforms": [
+        "Etsy"
+      ],
+      "shipped_from": "Corsicana, TX",
+      "prior_manual_notes": [
+        "7/17 update - Etsy shop closed, points to KisakiPlant.com - see below"
+      ],
+      "prior_reported_varieties": [
+        "Admiral® Rose",
+        "Sophie Rochas ®\nDelbard",
+        "Sophie Rochas ®’"
+      ],
+      "source_sheets": [
+        "Sheet1",
+        "Etsy"
+      ]
+    },
+    {
+      "company": "High Garden",
+      "websites": [
+        "https://highgardenroses.com/"
+      ],
+      "sales_platforms": [
+        "Shop"
+      ],
+      "shipped_from": "Portland, Oregon",
+      "prior_manual_notes": [],
+      "prior_reported_varieties": [
+        "Admiral® Rose",
+        "Charming Piano®\nTantau",
+        "Pink O'Hara™",
+        "Sophie Rochas ®\nDelbard"
+      ],
+      "source_sheets": [
+        "Sheet1"
+      ]
+    },
+    {
+      "company": "Hillside Rose Farm",
+      "websites": [
+        "https://www.hillsiderosefarm.com/"
+      ],
+      "sales_platforms": [
+        "Shop"
+      ],
+      "shipped_from": "California",
+      "prior_manual_notes": [],
+      "prior_reported_varieties": [
+        "Admiral® Rose",
+        "Modern Art ®",
+        "Sophie Rochas ®\nDelbard"
+      ],
+      "source_sheets": [
+        "Sheet1"
+      ]
+    },
+    {
+      "company": "Huniu Rose Garden",
+      "websites": [
+        "https://huniurosegarden.ca/"
+      ],
+      "sales_platforms": [
+        "Shopify"
+      ],
+      "shipped_from": "Canada (not shipped to U.S.)",
+      "prior_manual_notes": [],
+      "prior_reported_varieties": [
+        "Charming Piano®\nTantau",
+        "Piano®\nTantau",
+        "Sophie Rochas ®\nDelbard"
+      ],
+      "source_sheets": [
+        "Sheet1"
+      ]
+    },
+    {
+      "company": "Jessie's Roses",
+      "websites": [
+        "https://www.jessiesrose.com/",
+        "https://www.etsy.com/shop/JessiesRoseUSA"
+      ],
+      "sales_platforms": [
+        "Etsy"
+      ],
+      "shipped_from": null,
+      "prior_manual_notes": [
+        "no products on website or Etsy"
+      ],
+      "prior_reported_varieties": [],
+      "source_sheets": [
+        "Sheet1"
+      ]
+    },
+    {
+      "company": "Kate Roses",
+      "websites": [
+        "https://www.kateroses.com/"
+      ],
+      "sales_platforms": [],
+      "shipped_from": "California",
+      "prior_manual_notes": [],
+      "prior_reported_varieties": [
+        "Sophie Rochas ®\nDelbard"
+      ],
+      "source_sheets": [
+        "Sheet1"
+      ]
+    },
+    {
+      "company": "Kisaki Plant",
+      "websites": [
+        "https://kisakiplant.com/"
+      ],
+      "sales_platforms": [
+        "Shopify"
+      ],
+      "shipped_from": "Kerens, TX",
+      "prior_manual_notes": [],
+      "prior_reported_varieties": [
+        "Sophie Rochas ®\nDelbard"
+      ],
+      "source_sheets": [
+        "Sheet1"
+      ]
+    },
+    {
+      "company": "Muse Roses",
+      "websites": [
+        "https://museroses.com/"
+      ],
+      "sales_platforms": [],
+      "shipped_from": "Buda, Texas",
+      "prior_manual_notes": [
+        "office address in TX is a home address"
+      ],
+      "prior_reported_varieties": [
+        "Piano®\nTantau",
+        "Pink O'Hara™",
+        "Sophie Rochas ®\nDelbard"
+      ],
+      "source_sheets": [
+        "Sheet1"
+      ]
+    },
+    {
+      "company": "One Love",
+      "websites": [
+        "https://oneloveroseandgardens.com/"
+      ],
+      "sales_platforms": [],
+      "shipped_from": null,
+      "prior_manual_notes": [],
+      "prior_reported_varieties": [],
+      "source_sheets": [
+        "Sheet1"
+      ]
+    },
+    {
+      "company": "Rose Explosion",
+      "websites": [
+        "https://roseexplosion.com/"
+      ],
+      "sales_platforms": [
+        "PayPal, web"
+      ],
+      "shipped_from": "China",
+      "prior_manual_notes": [],
+      "prior_reported_varieties": [
+        "Admiral® Rose",
+        "Piano®\nTantau",
+        "Pink O'Hara™",
+        "Sophie Rochas ®\nDelbard"
+      ],
+      "source_sheets": [
+        "Sheet1"
+      ]
+    },
+    {
+      "company": "Springland Flowers",
+      "websites": [
+        "https://springlandflowers.com/"
+      ],
+      "sales_platforms": [
+        "Shop, web"
+      ],
+      "shipped_from": null,
+      "prior_manual_notes": [],
+      "prior_reported_varieties": [
+        "Modern Art ®",
+        "Sophie Rochas ®\nDelbard"
+      ],
+      "source_sheets": [
+        "Sheet1"
+      ]
+    },
+    {
+      "company": "Your Roses",
+      "websites": [
+        "https://your-roses.com/"
+      ],
+      "sales_platforms": [
+        "PayPal, web"
+      ],
+      "shipped_from": "China",
+      "prior_manual_notes": [],
+      "prior_reported_varieties": [
+        "Admiral® Rose",
+        "Modern Art ®",
+        "Pink O'Hara™",
+        "Sophie Rochas ®\nDelbard"
+      ],
+      "source_sheets": [
+        "Sheet1"
+      ]
+    }
+  ]
+}

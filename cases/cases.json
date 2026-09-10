@@ -1,0 +1,7 @@
+{
+  "_readme": "Rose Watch case database. 'cases' holds published findings matched to a Registered or Pending trademark (each case's full evidence record lives in cases/<CASE-NUMBER>/case.json). 'review_queue' holds matches against To Be Filed, Needs Review, Abandoned, Do Not File, Not Applicable, or Not in Trademark Chart records -- never characterized as confirmed infringement. 'site_code_registry' tracks the next sequence number for each website/seller case-number code so numbers are never reused or renumbered. This file is only ever appended to by a completed Rose Watch monitoring run -- never overwritten, and existing review_status values are always preserved.",
+  "last_run_completed": null,
+  "site_code_registry": {},
+  "cases": [],
+  "review_queue": []
+}
