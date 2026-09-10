@@ -97,6 +97,10 @@ def build_data():
         detail = load_json(detail_path, None)
         if detail is not None:
             case_details[case_no] = detail
+            # Surface a few high-value fields on the summary row itself (not just the detail
+            # page), pulled from the full case record so cases.json doesn't need to duplicate them.
+            c.setdefault("product_url", detail.get("product_url"))
+            c.setdefault("exact_product_title", detail.get("exact_product_title"))
 
     status_counts = {}
     for r in trademarks:
@@ -282,6 +286,8 @@ thead th.sorted::after { content: " " attr(data-arrow); }
 tbody tr:hover { background: var(--line-soft); }
 tbody tr:last-child td { border-bottom: none; }
 td.num { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.url-cell { max-width: 220px; }
+td.url-cell a { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .empty-row td { text-align: center; color: var(--ink-faint); padding: 28px; }
 
 /* Pills */
@@ -591,6 +597,7 @@ runPanel('cases', function renderCases(){
       {label:'TM Status', sortKey:'trademark_status'},
       {label:'Seller', sortKey:'seller_name'},
       {label:'Domain', sortKey:'website_domain'},
+      {label:'Product URL', sortKey:'product_url'},
       {label:'Seller Location', sortKey:'seller_location'},
       {label:'Website Host', sortKey:'website_host'},
       {label:'First Found', sortKey:'first_date_found'},
@@ -609,6 +616,7 @@ runPanel('cases', function renderCases(){
       <td>${statusPill(r.trademark_status, r.trademark_status)}</td>
       <td>${esc(r.seller_name)}</td>
       <td class="mono">${esc(r.website_domain)}</td>
+      <td class="url-cell">${r.product_url ? `<a href="${esc(r.product_url)}" target="_blank" rel="noopener" title="${esc(r.product_url)}">${esc(r.exact_product_title || r.product_url)}</a>` : ''}</td>
       <td>${esc(r.seller_location)}</td>
       <td>${esc(r.website_host)}</td>
       <td class="mono">${esc(r.first_date_found)}</td>
@@ -625,7 +633,7 @@ runPanel('cases', function renderCases(){
       if (siteSel.value && r.site_code !== siteSel.value) return false;
       if (reviewSel.value && r.review_status !== reviewSel.value) return false;
       if (!q) return true;
-      return [r.case_number, r.variety, r.matched_trademark, r.seller_name, r.website_domain].some(v => (v??'').toString().toLowerCase().includes(q));
+      return [r.case_number, r.variety, r.matched_trademark, r.seller_name, r.website_domain, r.product_url, r.exact_product_title].some(v => (v??'').toString().toLowerCase().includes(q));
     });
     const n = tbl.render(filtered);
     document.getElementById('case-count').textContent = `${n} of ${DATA.cases.length}`;
