@@ -237,6 +237,7 @@ The daily PDF report must include:
 - Number of possible matches held for review
 - Number of websites or pages that could not be fully accessed
 - New findings listed by case number, rose name, seller, website domain, seller location, website host, trademark status, and direct product URL
+  - **Per user instruction (2026-09-10): itemize Registered-trademark findings only** in this listing, since those are the only marks currently enforceable/actionable. Still report the *counts* of new Registered and new Pending findings per the two bullets above (Pending isn't hidden from the summary), but don't list Pending findings row-by-row in the New Findings table. Pending matches remain fully recorded with complete evidence in `cases.json` and the dashboard regardless -- this only affects what's itemized in the PDF.
 - Any access or research limitations encountered
 - Confirmation that the dashboard was updated
 

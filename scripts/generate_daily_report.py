@@ -153,6 +153,10 @@ def generate(run_date_str):
     new_cases = [c for c in all_cases if str(c.get("first_date_found", "")).startswith(run_date_str)]
     new_registered = [c for c in new_cases if c.get("trademark_status") == "Registered"]
     new_pending = [c for c in new_cases if c.get("trademark_status") == "Pending"]
+    # Per user instruction: the PDF itemizes Registered-trademark matches only -- those are the
+    # only marks currently enforceable/actionable. Pending matches still count in the summary
+    # stats above and remain fully tracked in the dashboard and case database either way.
+    reportable_cases = new_registered
 
     styles = build_styles()
     out_path = REPORTS_DIR / f"Rose Watch Daily Report - {run_date_str}.pdf"
@@ -187,7 +191,10 @@ def generate(run_date_str):
         "This is Rose Watch's first monitoring pass under the current system. All 14 known reseller sites "
         "(16 URLs) on the closed crawl roster were attempted. Product catalogs were pulled directly from each "
         "accessible site's own product data feed (Shopify's product API, Squarespace's collection data, or the "
-        f"WordPress REST API) and checked against the Master Trademark Filing Chart. {disposition}",
+        f"WordPress REST API) and checked against the Master Trademark Filing Chart. {disposition} Per current "
+        f"reporting policy, this PDF itemizes matches against <b>Registered</b> trademarks only, since those are "
+        f"the only marks currently enforceable; Pending-trademark matches are still fully recorded with complete "
+        f"evidence in the case database and dashboard.",
         styles["RWBody"]))
     story.append(Spacer(1, 8))
     story.append(stat_table([
@@ -220,8 +227,17 @@ def generate(run_date_str):
     story.append(PageBreak())
 
     # ---- New findings ----
-    story.append(Paragraph("New Findings (Case Records)", styles["RWH2"]))
-    if new_cases:
+    story.append(Paragraph("New Findings (Registered Trademarks Only)", styles["RWH2"]))
+    if new_pending:
+        story.append(Paragraph(
+            f"This report itemizes matches against <b>Registered</b> trademarks only &mdash; those are the only "
+            f"marks currently enforceable. {len(new_pending)} additional match{'es' if len(new_pending) != 1 else ''} "
+            f"against <b>Pending</b> trademarks were also found today; they remain fully tracked with complete "
+            f"evidence records in the case database and dashboard, and will appear here automatically once/if "
+            f"their trademark registers.",
+            styles["RWNote"]))
+        story.append(Spacer(1, 8))
+    if reportable_cases:
         story.append(Paragraph(
             "Each row below is a potential lead for Francis Roses or legal counsel to review &mdash; a matching "
             "product or trademark name, not a legal determination of infringement. Grouped by seller/site; click "
@@ -230,7 +246,7 @@ def generate(run_date_str):
         story.append(Spacer(1, 8))
 
         by_seller = {}
-        for c in new_cases:
+        for c in reportable_cases:
             by_seller.setdefault((c.get("seller_name"), c.get("website_domain"), c.get("website_host")), []).append(c)
 
         for (seller, domain, host), rows in sorted(by_seller.items(), key=lambda kv: kv[0][0] or ""):
@@ -256,6 +272,10 @@ def generate(run_date_str):
             story.append(KeepTogether([header, tbl]) if len(find_rows) <= 3 else header)
             if len(find_rows) > 3:
                 story.append(tbl)
+    elif new_cases:
+        story.append(Paragraph(
+            "No new Registered-trademark findings on this date. (Pending-trademark matches were found and are "
+            "noted above; see the dashboard for full details.)", styles["RWBody"]))
     else:
         story.append(Paragraph("No new case records were created on this date.", styles["RWBody"]))
 
