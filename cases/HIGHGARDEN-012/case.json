@@ -1,0 +1,50 @@
+{
+  "case_number": "HIGHGARDEN-012",
+  "site_code": "HIGHGARDEN",
+  "variety": "Lady Ella",
+  "matched_trademark": "Lady Ella",
+  "trademark_status": "Pending",
+  "trademark_application_or_registration_no": "App. Ser. No. 50051990 (Reg. No.: N/A)",
+  "breeder": "Jan Spek Rozen",
+  "seller_name": "High Garden",
+  "website_domain": "highgardenroses.com",
+  "product_url": "https://highgardenroses.com/products/newsps-netherlands-florist-shrub-rose",
+  "exact_product_title": "Lady Ella Dutch Florist Shrub Rose",
+  "quoted_text": "This lovely rose features pale peach to salmon pink petals with a beautiful gradient, reminiscent of a sunset. In high temperatures, the color fades softly to yellow, adding a gentle charm. The blooms are full and rounded, often in a rosette or quartered shape. With a mild fruity fragrance and long ",
+  "price": "30.00",
+  "currency": "USD",
+  "quantity_or_form": "Live plant listing (no explicit pot size or quantity stated in the product feed)",
+  "match_classification": "Strong",
+  "match_explanation": "Product title contains the trademarked name \"Lady Ella\" (as part of a longer product title).",
+  "review_status": "New",
+  "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
+  "last_verified": "2026-09-10 16:45 MST (America/Phoenix) -- verified via the store's live product data feed",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Oregon",
+    "city": "Portland",
+    "source": "Site homepage: \"Grown and shipped from Portland, Oregon\" (highgardenroses.com)",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed and site footer)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.65",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed."
+  ],
+  "investigator_notes": "Identified via this session's crawl of the store's public product data feed on 2026-09-10, cross-checked against the Master Trademark Filing Chart. This is a potential lead for Francis Roses/legal counsel review, not a legal determination of infringement.",
+  "history": [
+    {
+      "date": "2026-09-10",
+      "action": "Case created",
+      "details": "Bulk case-creation pass following the initial two-case format sample (HILLSIDERO-001/002)."
+    }
+  ]
+}

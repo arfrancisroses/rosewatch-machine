@@ -1,0 +1,50 @@
+{
+  "case_number": "ONELOVEROS-004",
+  "site_code": "ONELOVEROS",
+  "variety": "Forever Yours",
+  "matched_trademark": "Forever Yours",
+  "trademark_status": "Pending",
+  "trademark_application_or_registration_no": "App. Ser. No. 99939895 (Reg. No.: NYA)",
+  "breeder": "Rosen Tantau KG",
+  "seller_name": "One Love",
+  "website_domain": "oneloveroseandgardens.com",
+  "product_url": "https://oneloveroseandgardens.com/products/forever-yours-tan08242",
+  "exact_product_title": "Forever Yours (TAN08242)",
+  "quoted_text": "https://www.helpmefind.com/rose/l.php?l=2.80405.3",
+  "price": "25.95",
+  "currency": "USD",
+  "quantity_or_form": "Live plant listing (no explicit pot size or quantity stated in the product feed)",
+  "match_classification": "Strong",
+  "match_explanation": "Product title contains the trademarked name \"Forever Yours\" (as part of a longer product title).",
+  "review_status": "New",
+  "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
+  "last_verified": "2026-09-10 16:45 MST (America/Phoenix) -- verified via the store's live product data feed",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Texas",
+    "city": "Not available on page",
+    "source": "Site contact page: \"Your premier source for Texas-grown, healthy roses!\" (oneloveroseandgardens.com) -- no city/address given.",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.65",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed."
+  ],
+  "investigator_notes": "Identified via this session's crawl of the store's public product data feed on 2026-09-10, cross-checked against the Master Trademark Filing Chart. This is a potential lead for Francis Roses/legal counsel review, not a legal determination of infringement.",
+  "history": [
+    {
+      "date": "2026-09-10",
+      "action": "Case created",
+      "details": "Bulk case-creation pass following the initial two-case format sample (HILLSIDERO-001/002)."
+    }
+  ]
+}

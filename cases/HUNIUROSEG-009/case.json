@@ -1,0 +1,50 @@
+{
+  "case_number": "HUNIUROSEG-009",
+  "site_code": "HUNIUROSEG",
+  "variety": "PIANO",
+  "matched_trademark": "PIANO",
+  "trademark_status": "Registered",
+  "trademark_application_or_registration_no": "App. Ser. No. 77397918 (Reg. No.: 3504651)",
+  "breeder": "Rosen Tantau KG",
+  "seller_name": "Huniu Rose Garden",
+  "website_domain": "huniurosegarden.ca",
+  "product_url": "https://huniurosegarden.ca/products/red-piano-germany-tantau",
+  "exact_product_title": "Red piano Germany Tantau",
+  "quoted_text": "Beautiful and colourful shrub Germany Tantau happy piano rose, One gallon pot perennial plant , grafted root or own root depends different varieties rose. resistance disease, repeated flowers, blooms flower 5-14 days! Pickup in North York March-June. More details and payment please confirm message h",
+  "price": "45.00",
+  "currency": "USD",
+  "quantity_or_form": "Live plant listing (no explicit pot size or quantity stated in the product feed)",
+  "match_classification": "Strong",
+  "match_explanation": "Product title contains the trademarked name \"PIANO\" (as part of a longer product title).",
+  "review_status": "New",
+  "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
+  "last_verified": "2026-09-10 16:45 MST (America/Phoenix) -- verified via the store's live product data feed",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "Canada",
+    "state_or_region": "Ontario",
+    "city": "North York (pick-up location stated on site)",
+    "source": "Site contact page: pick-up location \"North York\"; site states roses are grown \"in Ontario\" (huniurosegarden.ca)",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.67",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed."
+  ],
+  "investigator_notes": "Identified via this session's crawl of the store's public product data feed on 2026-09-10, cross-checked against the Master Trademark Filing Chart. This is a potential lead for Francis Roses/legal counsel review, not a legal determination of infringement. Known-sites prior research notes this seller does not ship to the U.S.",
+  "history": [
+    {
+      "date": "2026-09-10",
+      "action": "Case created",
+      "details": "Bulk case-creation pass following the initial two-case format sample (HILLSIDERO-001/002)."
+    }
+  ]
+}

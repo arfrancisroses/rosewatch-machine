@@ -1,0 +1,51 @@
+{
+  "case_number": "MUSEROSES-007",
+  "site_code": "MUSEROSES",
+  "variety": "Monsieur",
+  "matched_trademark": "Monsieur",
+  "trademark_status": "Pending",
+  "trademark_application_or_registration_no": "App. Ser. No. 99751179 (Reg. No.: NYA)",
+  "breeder": "Société Nouvelle Pépinières et Roseraies Georges Delbard SAS",
+  "seller_name": "Muse Roses",
+  "website_domain": "museroses.com",
+  "product_url": "https://museroses.com/products/la-rose-monsieur-rose",
+  "exact_product_title": "La Rose Monsieur Rose",
+  "quoted_text": ".rose-detail-minimal{ font-family:inherit; font-size:16px; line-height:1.75; color:#2b2b2b; } .rose-detail-minimal h2{ font-size:24px; margin:34px 0 14px; color:#222; } .rose-summary{ border-top:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5; padding:24px 0; margin:20px 0 30px; } .rose-keywords ",
+  "price": "68.00",
+  "currency": "USD",
+  "quantity_or_form": "Live plant listing (no explicit pot size or quantity stated in the product feed)",
+  "match_classification": "Strong",
+  "match_explanation": "Product title contains the trademarked name \"Monsieur\" (as part of a longer product title).",
+  "review_status": "New",
+  "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
+  "last_verified": "2026-09-10 16:45 MST (America/Phoenix) -- verified via the store's live product data feed",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Texas",
+    "city": "Buda",
+    "source": "Not confirmed directly this run -- the site now redirects to molarose.com, which was blocked by this session's network egress policy. Carried over from prior known-sites research (data/known_sites.json), which separately notes the stated Texas office address resembles a home address -- flagged, not confirmed.",
+    "estimated": true
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed under the museroses.com domain)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.65",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed.",
+    "museroses.com now 301-redirects to molarose.com; the redirect target could not be fetched this run (blocked by network egress policy). Catalog data was pulled from museroses.com's own product feed before the redirect was noticed and reflects that domain."
+  ],
+  "investigator_notes": "Identified via this session's crawl of the store's public product data feed on 2026-09-10, cross-checked against the Master Trademark Filing Chart. This is a potential lead for Francis Roses/legal counsel review, not a legal determination of infringement.",
+  "history": [
+    {
+      "date": "2026-09-10",
+      "action": "Case created",
+      "details": "Bulk case-creation pass following the initial two-case format sample (HILLSIDERO-001/002)."
+    }
+  ]
+}

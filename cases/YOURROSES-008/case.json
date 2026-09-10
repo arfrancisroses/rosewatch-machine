@@ -1,0 +1,50 @@
+{
+  "case_number": "YOURROSES-008",
+  "site_code": "YOURROSES",
+  "variety": "Darlington",
+  "matched_trademark": "Darlington",
+  "trademark_status": "Pending",
+  "trademark_application_or_registration_no": "App. Ser. No. 50051623 (Reg. No.: N/A)",
+  "breeder": "Jan Spek Rozen",
+  "seller_name": "Your Roses",
+  "website_domain": "your-roses.com",
+  "product_url": "https://your-roses.com/product/darlington-rose-2/",
+  "exact_product_title": "Darlington Rose Plant",
+  "quoted_text": "Discover the enchanting Darlington Rose! This Dutch-bred cut rose features 8-10cm-wide blooms that start as creamy-pink cups and fade to a delicate blush. Standing 100cm tall with a 50cm stem length, it’s perfect for bridal bouquets. Its elegant, double-petaled flowers and gentle fragrance make it a",
+  "price": null,
+  "currency": null,
+  "quantity_or_form": "Not available via product feed this run (price/form data was not exposed by this site's API)",
+  "match_classification": "Strong",
+  "match_explanation": "Product title contains the trademarked name \"Darlington\" (as part of a longer product title).",
+  "review_status": "New",
+  "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
+  "last_verified": "2026-09-10 16:45 MST (America/Phoenix) -- verified via the store's live product data feed",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "China (Estimated)",
+    "state_or_region": "Not available on page",
+    "city": "Not available on page",
+    "source": "Estimated from a phone number shown on the site using China's country code (\"86-135-3333-8492\"); consistent with prior known-sites research noting this seller ships from China. No address or explicit country statement appears on the site itself.",
+    "estimated": true
+  },
+  "website_host": {
+    "hosting_platform": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
+    "cdn_or_proxy": null,
+    "server_ip": "191.101.104.131",
+    "ip_geolocation": "Not separately geolocated this run.",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed."
+  ],
+  "investigator_notes": "Identified via this session's crawl of the store's public product data feed on 2026-09-10, cross-checked against the Master Trademark Filing Chart. This is a potential lead for Francis Roses/legal counsel review, not a legal determination of infringement.",
+  "history": [
+    {
+      "date": "2026-09-10",
+      "action": "Case created",
+      "details": "Bulk case-creation pass following the initial two-case format sample (HILLSIDERO-001/002)."
+    }
+  ]
+}

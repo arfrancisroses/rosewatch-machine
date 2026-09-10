@@ -98,10 +98,28 @@ def stat_table(pairs, styles):
     return t
 
 
-def wrapped_table(header, rows, col_widths, styles, header_bg=INK):
+def xml_escape(s):
+    return (str(s) if s is not None else "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def link_cell(url, text="View listing"):
+    if not url:
+        return ""
+    href = safe_url(url).replace("&", "&amp;")
+    return f'<link href="{href}"><u>{xml_escape(text)}</u></link>'
+
+
+def wrapped_table(header, rows, col_widths, styles, header_bg=INK, raw_html_cols=None):
+    """raw_html_cols: set of column indices whose values are pre-built markup (e.g. from
+    link_cell) and must NOT be XML-escaped, unlike plain text cells."""
+    raw_html_cols = raw_html_cols or set()
     data = [[Paragraph(h, styles["RWCellHead"]) for h in header]]
     for r in rows:
-        data.append([Paragraph(str(c) if c is not None else "", styles["RWCell"]) for c in r])
+        row_cells = []
+        for i, c in enumerate(r):
+            text = c if (i in raw_html_cols and c) else xml_escape(c)
+            row_cells.append(Paragraph(text, styles["RWCell"]))
+        data.append(row_cells)
     t = Table(data, colWidths=col_widths, repeatRows=1)
     t.setStyle(TableStyle([
         ("BACKGROUND", (0, 0), (-1, 0), header_bg),
@@ -158,13 +176,18 @@ def generate(run_date_str):
 
     # ---- Monitoring run summary ----
     story.append(Paragraph("Monitoring Run Summary", styles["RWH2"]))
+    held = run.get("matches_held_pending_case_creation", 0)
+    created = run.get("cases_created_this_run", len(new_cases))
+    disposition = (
+        f"{created} matches were carried through into full, evidence-complete case records this run"
+        + (f"; {held} additional matched listings remain held pending a decision on how to process them into cases."
+           if held else ".")
+    )
     story.append(Paragraph(
         "This is Rose Watch's first monitoring pass under the current system. All 14 known reseller sites "
         "(16 URLs) on the closed crawl roster were attempted. Product catalogs were pulled directly from each "
         "accessible site's own product data feed (Shopify's product API, Squarespace's collection data, or the "
-        "WordPress REST API) and checked against the Master Trademark Filing Chart. Two matches were carried "
-        "through into full, evidence-complete case records as an initial format sample; the remaining matched "
-        "listings are being held, at the user's direction, pending a decision on how to process them into cases.",
+        f"WordPress REST API) and checked against the Master Trademark Filing Chart. {disposition}",
         styles["RWBody"]))
     story.append(Spacer(1, 8))
     story.append(stat_table([
@@ -201,37 +224,50 @@ def generate(run_date_str):
     if new_cases:
         story.append(Paragraph(
             "Each row below is a potential lead for Francis Roses or legal counsel to review &mdash; a matching "
-            "product or trademark name, not a legal determination of infringement.",
+            "product or trademark name, not a legal determination of infringement. Grouped by seller/site; click "
+            "“View listing” to go directly to the product page.",
             styles["RWBody"]))
-        story.append(Spacer(1, 6))
-        find_rows = []
+        story.append(Spacer(1, 8))
+
+        by_seller = {}
         for c in new_cases:
-            find_rows.append([
-                c.get("case_number"), c.get("variety"), c.get("seller_name"), c.get("website_domain"),
-                c.get("seller_location"), c.get("website_host"), c.get("trademark_status"),
-            ])
-        story.append(wrapped_table(
-            ["Case #", "Rose Name", "Seller", "Domain", "Seller Location", "Website Host", "TM Status"],
-            find_rows,
-            [0.85*inch, 0.75*inch, 0.85*inch, 1.0*inch, 1.15*inch, 1.05*inch, 0.65*inch],
-            styles,
-        ))
-        story.append(Spacer(1, 6))
-        for c in new_cases:
-            detail = load_json(REPO_ROOT / "cases" / c["case_number"] / "case.json", {})
-            url = safe_url(detail.get("product_url", ""))
-            story.append(Paragraph(f'<b>{c.get("case_number")}</b> direct product URL: <link href="{url}">{url}</link>', styles["RWBodySmall"]))
+            by_seller.setdefault((c.get("seller_name"), c.get("website_domain"), c.get("website_host")), []).append(c)
+
+        for (seller, domain, host), rows in sorted(by_seller.items(), key=lambda kv: kv[0][0] or ""):
+            header = Paragraph(
+                f"{xml_escape(seller)} &mdash; {xml_escape(domain)} ({len(rows)} finding{'s' if len(rows) != 1 else ''}, host: {xml_escape(host)})",
+                ParagraphStyle("siteHead", parent=styles["RWBody"], fontName="Helvetica-Bold", fontSize=10, textColor=ACCENT, spaceBefore=10, spaceAfter=4))
+            find_rows = []
+            for c in sorted(rows, key=lambda r: r.get("case_number") or ""):
+                detail = load_json(REPO_ROOT / "cases" / c["case_number"] / "case.json", {})
+                find_rows.append([
+                    c.get("case_number"), c.get("variety"), c.get("trademark_status"),
+                    c.get("seller_location"), link_cell(detail.get("product_url")),
+                ])
+            tbl = wrapped_table(
+                ["Case #", "Rose Name", "TM Status", "Seller Location", "Product URL"],
+                find_rows,
+                [1.1*inch, 1.35*inch, 0.7*inch, 2.0*inch, 1.1*inch],
+                styles,
+                raw_html_cols={4},
+            )
+            # Keep the site header glued to at least the table's first row so it never
+            # ends up orphaned alone at the bottom of a page.
+            story.append(KeepTogether([header, tbl]) if len(find_rows) <= 3 else header)
+            if len(find_rows) > 3:
+                story.append(tbl)
     else:
         story.append(Paragraph("No new case records were created on this date.", styles["RWBody"]))
 
-    story.append(Spacer(1, 10))
-    story.append(Paragraph(
-        f'<b>{run["matches_held_pending_case_creation"]} additional listings</b> matched an active (Registered or '
-        f'Pending) trademark name during this run\'s catalog comparison across the remaining sites, but have not '
-        f'yet been assigned case numbers or full evidence records &mdash; this is on hold pending the user\'s '
-        f'decision on how to process them (full cases for all, a lighter-evidence pass, or a further staged '
-        f'rollout). None of these are lost: they remain identified and available to convert into cases.',
-        styles["RWNote"]))
+    if run.get("matches_held_pending_case_creation", 0):
+        story.append(Spacer(1, 10))
+        story.append(Paragraph(
+            f'<b>{run["matches_held_pending_case_creation"]} additional listings</b> matched an active (Registered or '
+            f'Pending) trademark name during this run\'s catalog comparison across the remaining sites, but have not '
+            f'yet been assigned case numbers or full evidence records &mdash; this is on hold pending the user\'s '
+            f'decision on how to process them (full cases for all, a lighter-evidence pass, or a further staged '
+            f'rollout). None of these are lost: they remain identified and available to convert into cases.',
+            styles["RWNote"]))
 
     if run.get("review_queue_entries_this_run", 0):
         story.append(Paragraph(

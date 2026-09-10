@@ -1,0 +1,50 @@
+{
+  "case_number": "ERGONGZY-006",
+  "site_code": "ERGONGZY",
+  "variety": "PIANO",
+  "matched_trademark": "PIANO",
+  "trademark_status": "Registered",
+  "trademark_application_or_registration_no": "App. Ser. No. 77397918 (Reg. No.: 3504651)",
+  "breeder": "Rosen Tantau KG",
+  "seller_name": "Ergonzy / Ergonzi",
+  "website_domain": "ergongzy.com",
+  "product_url": "https://ergongzy.com/products/pink-piano",
+  "exact_product_title": "Pink Piano rose-粉钢琴｜Germany Cut Rose",
+  "quoted_text": "Pink Piano by Tantau (Germany, 2008) is an upright HT rose (100–130 cm tall). Its spherical buds open into 6–8 cm pink, fully cupped blooms with a raspberry scent. The plant has glossy, disease-resistant leaves, blooms continuously until autumn, and is hardy. Compact (45–50 cm spacing), it's great f",
+  "price": "68.00",
+  "currency": "USD",
+  "quantity_or_form": "Live plant listing (no explicit pot size or quantity stated in the product feed)",
+  "match_classification": "Strong",
+  "match_explanation": "Product title contains the trademarked name \"PIANO\" (as part of a longer product title).",
+  "review_status": "New",
+  "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
+  "last_verified": "2026-09-10 16:45 MST (America/Phoenix) -- verified via the store's live product data feed",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Texas",
+    "city": "Austin",
+    "source": "Site footer: \"Ergongzy's Roses, Betty Cook Dr, Austin, Texas 78723, United States\" (ergongzy.com)",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed and site footer)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.65",
+    "ip_geolocation": "Not separately geolocated this run (IP falls in the same Shopify-assigned block, 23.227.38.x, previously confirmed via ip-api.com for another site on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed."
+  ],
+  "investigator_notes": "Identified via this session's crawl of the store's public product data feed on 2026-09-10, cross-checked against the Master Trademark Filing Chart. This is a potential lead for Francis Roses/legal counsel review, not a legal determination of infringement. This listing's title also contains a possible match to: Pink Piano (Pending) -- see the product title/description for context.",
+  "history": [
+    {
+      "date": "2026-09-10",
+      "action": "Case created",
+      "details": "Bulk case-creation pass following the initial two-case format sample (HILLSIDERO-001/002)."
+    }
+  ]
+}

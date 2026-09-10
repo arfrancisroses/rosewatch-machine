@@ -1,0 +1,51 @@
+{
+  "case_number": "ROSEEXPLOS-013",
+  "site_code": "ROSEEXPLOS",
+  "variety": "PIANO",
+  "matched_trademark": "PIANO",
+  "trademark_status": "Registered",
+  "trademark_application_or_registration_no": "App. Ser. No. 77397918 (Reg. No.: 3504651)",
+  "breeder": "Rosen Tantau KG",
+  "seller_name": "Rose Explosion",
+  "website_domain": "roseexplosion.com",
+  "product_url": "https://roseexplosion.com/products/lemon-piano",
+  "exact_product_title": "Lemon Piano Rose Plant｜柠檬钢琴",
+  "quoted_text": "Name: Lemon Piano Appearance: Initially round like a large bun, then cup-shaped. Color starts as milky green during the early bud stage, turns pale yellow as it opens into a bun, and becomes pure milky white when fully open. Flower diameter is 9 centimeters, expanding to over 10 centimeters when ful",
+  "price": "69.00",
+  "currency": "USD",
+  "quantity_or_form": "Live plant listing (no explicit pot size or quantity stated in the product feed)",
+  "match_classification": "Strong",
+  "match_explanation": "Product title contains the trademarked name \"PIANO\" (as part of a longer product title).",
+  "review_status": "New",
+  "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
+  "last_verified": "2026-09-10 16:45 MST (America/Phoenix) -- verified via the store's live product data feed",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "China (Estimated)",
+    "state_or_region": "Not available on page",
+    "city": "Not available on page",
+    "source": "Estimated from prior known-sites research (data/known_sites.json), which notes this seller ships from China. The site's own Contact page returned 404 this run and the homepage shows only a phone number with no geographic text.",
+    "estimated": true
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.66",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed.",
+    "Site's Contact page (roseexplosion.com/pages/contact-us) returned HTTP 404 this run."
+  ],
+  "investigator_notes": "Identified via this session's crawl of the store's public product data feed on 2026-09-10, cross-checked against the Master Trademark Filing Chart. This is a potential lead for Francis Roses/legal counsel review, not a legal determination of infringement.",
+  "history": [
+    {
+      "date": "2026-09-10",
+      "action": "Case created",
+      "details": "Bulk case-creation pass following the initial two-case format sample (HILLSIDERO-001/002)."
+    }
+  ]
+}

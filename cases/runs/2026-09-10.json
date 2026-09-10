@@ -1,7 +1,8 @@
 {
   "_readme": "Per-run monitoring log, one file per calendar day (America/Phoenix), used to generate the Daily PDF Report. Distinct from cases.json, which is the permanent case/review-queue index.",
   "run_date": "2026-09-10",
-  "generated_at": "2026-09-10 16:10 MST (America/Phoenix)",
+  "generated_at": "2026-09-10 16:45 MST (America/Phoenix)",
+  "_case_creation_note": "Cases were created in two passes on this date, both counted in cases_created_this_run: HILLSIDERO-001/002 first, as a format sample (Hillside Rose Farm, the smallest-listing site), then the remaining 154 matched listings across the other 11 sites once the sample was approved.",
   "sites": [
     {"company": "Ergonzy / Ergonzi", "url": "https://ergongzy.com/", "accessible": true, "platform": "Shopify", "product_pages_reviewed": 499, "notes": null},
     {"company": "Ergonzy / Ergonzi (Etsy)", "url": "https://www.etsy.com/shop/Ergongzi", "accessible": false, "platform": "Etsy", "product_pages_reviewed": 0, "notes": "Etsy blocked direct access (HTTP 403, bot/access detection) on the sibling Etsy shops checked this run; not independently re-verified for this specific shop."},
@@ -27,8 +28,8 @@
   "total_product_pages_reviewed": 7271,
   "active_trademark_matches_found": 156,
   "active_trademark_matches_by_status": {"Registered": 34, "Pending": 122},
-  "cases_created_this_run": 2,
-  "matches_held_pending_case_creation": 154,
+  "cases_created_this_run": 156,
+  "matches_held_pending_case_creation": 0,
   "review_queue_entries_this_run": 0,
   "screenshot_limitation": "Full-page screenshots could not be captured for any listing this run: the session's headless browser (Playwright/Chromium) cannot complete a connection through this environment's network egress proxy (the connection resets mid-handshake), even though direct page fetch and text verification succeed for accessible sites. Evidence text (titles, prices, descriptions) was independently verified directly against live pages instead.",
   "dashboard_updated": true,

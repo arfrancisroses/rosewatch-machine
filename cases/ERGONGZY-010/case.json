@@ -1,0 +1,50 @@
+{
+  "case_number": "ERGONGZY-010",
+  "site_code": "ERGONGZY",
+  "variety": "Living Coral",
+  "matched_trademark": "Living Coral",
+  "trademark_status": "Pending",
+  "trademark_application_or_registration_no": "App. Ser. No. 50051666 (Reg. No.: N/A)",
+  "breeder": "Jan Spek Rozen",
+  "seller_name": "Ergonzy / Ergonzi",
+  "website_domain": "ergongzy.com",
+  "product_url": "https://ergongzy.com/products/rose-living-coral",
+  "exact_product_title": "Living Coral Rose-活力珊瑚｜Netherland Cut Rose",
+  "quoted_text": "'Living Coral', bred by Jan Spek Rozen in the Netherlands and released in 2019, is a 120 cm tall rose. Its 10-12 cm coral-pink blooms have a golden undertone, light fragrance, and prominent stamens. Categorized Features : Flower Shape: Not specified (standard rose form with prominent stamens). Flowe",
+  "price": "59.00",
+  "currency": "USD",
+  "quantity_or_form": "Live plant listing (no explicit pot size or quantity stated in the product feed)",
+  "match_classification": "Strong",
+  "match_explanation": "Product title contains the trademarked name \"Living Coral\" (as part of a longer product title).",
+  "review_status": "New",
+  "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
+  "last_verified": "2026-09-10 16:45 MST (America/Phoenix) -- verified via the store's live product data feed",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Texas",
+    "city": "Austin",
+    "source": "Site footer: \"Ergongzy's Roses, Betty Cook Dr, Austin, Texas 78723, United States\" (ergongzy.com)",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed and site footer)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.65",
+    "ip_geolocation": "Not separately geolocated this run (IP falls in the same Shopify-assigned block, 23.227.38.x, previously confirmed via ip-api.com for another site on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed."
+  ],
+  "investigator_notes": "Identified via this session's crawl of the store's public product data feed on 2026-09-10, cross-checked against the Master Trademark Filing Chart. This is a potential lead for Francis Roses/legal counsel review, not a legal determination of infringement.",
+  "history": [
+    {
+      "date": "2026-09-10",
+      "action": "Case created",
+      "details": "Bulk case-creation pass following the initial two-case format sample (HILLSIDERO-001/002)."
+    }
+  ]
+}

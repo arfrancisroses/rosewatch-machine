@@ -1,0 +1,50 @@
+{
+  "case_number": "HIGHGARDEN-013",
+  "site_code": "HIGHGARDEN",
+  "variety": "Patchouli",
+  "matched_trademark": "Patchouli",
+  "trademark_status": "Pending",
+  "trademark_application_or_registration_no": "App. Ser. No. 50051958 (Reg. No.: N/A)",
+  "breeder": "Jan Spek Rozen",
+  "seller_name": "High Garden",
+  "website_domain": "highgardenroses.com",
+  "product_url": "https://highgardenroses.com/products/patchouli-netherlands-florist-shrub-rose",
+  "exact_product_title": "Patchouli Dutch Florist Shrub Rose",
+  "quoted_text": "This lovely rose features delicate silver, lavender, and pink hues that shift with temperature and bloom stage. Its flowers open to elegant rose cup-shaped, exuding a rare, sweet lychee fragrance. This rose blooms continuously year-round, adding beauty and charm to any setting.",
+  "price": "30.00",
+  "currency": "USD",
+  "quantity_or_form": "Live plant listing (no explicit pot size or quantity stated in the product feed)",
+  "match_classification": "Strong",
+  "match_explanation": "Product title contains the trademarked name \"Patchouli\" (as part of a longer product title).",
+  "review_status": "New",
+  "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
+  "last_verified": "2026-09-10 16:45 MST (America/Phoenix) -- verified via the store's live product data feed",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Oregon",
+    "city": "Portland",
+    "source": "Site homepage: \"Grown and shipped from Portland, Oregon\" (highgardenroses.com)",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed and site footer)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.65",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed."
+  ],
+  "investigator_notes": "Identified via this session's crawl of the store's public product data feed on 2026-09-10, cross-checked against the Master Trademark Filing Chart. This is a potential lead for Francis Roses/legal counsel review, not a legal determination of infringement.",
+  "history": [
+    {
+      "date": "2026-09-10",
+      "action": "Case created",
+      "details": "Bulk case-creation pass following the initial two-case format sample (HILLSIDERO-001/002)."
+    }
+  ]
+}

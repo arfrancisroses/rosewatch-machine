@@ -1,0 +1,50 @@
+{
+  "case_number": "HUNIUROSEG-010",
+  "site_code": "HUNIUROSEG",
+  "variety": "Solsbury Hill",
+  "matched_trademark": "Solsbury Hill",
+  "trademark_status": "Pending",
+  "trademark_application_or_registration_no": "App. Ser. No. 50052019 (Reg. No.: N/A)",
+  "breeder": "Jan Spek Rozen",
+  "seller_name": "Huniu Rose Garden",
+  "website_domain": "huniurosegarden.ca",
+  "product_url": "https://huniurosegarden.ca/products/solsbury-hill-germany-wans-cutting-rose",
+  "exact_product_title": "Solsbury Hill Germany Wans cutting rose",
+  "quoted_text": "Beautiful and big cutting rose, very new varieties! Big flowers 8-12cm, high 100-220cm. This is the one gallon pot. You can repot it in 2-3 gallon pot when you see many white roots appear the bottom of pots. There are several kinds of DA rose preorders , like Olive, Boscobel, Gable Oak, Jubilee cele",
+  "price": "45.00",
+  "currency": "USD",
+  "quantity_or_form": "Live plant listing (no explicit pot size or quantity stated in the product feed)",
+  "match_classification": "Strong",
+  "match_explanation": "Product title contains the trademarked name \"Solsbury Hill\" (as part of a longer product title).",
+  "review_status": "New",
+  "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
+  "last_verified": "2026-09-10 16:45 MST (America/Phoenix) -- verified via the store's live product data feed",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "Canada",
+    "state_or_region": "Ontario",
+    "city": "North York (pick-up location stated on site)",
+    "source": "Site contact page: pick-up location \"North York\"; site states roses are grown \"in Ontario\" (huniurosegarden.ca)",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.67",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed."
+  ],
+  "investigator_notes": "Identified via this session's crawl of the store's public product data feed on 2026-09-10, cross-checked against the Master Trademark Filing Chart. This is a potential lead for Francis Roses/legal counsel review, not a legal determination of infringement. Known-sites prior research notes this seller does not ship to the U.S.",
+  "history": [
+    {
+      "date": "2026-09-10",
+      "action": "Case created",
+      "details": "Bulk case-creation pass following the initial two-case format sample (HILLSIDERO-001/002)."
+    }
+  ]
+}

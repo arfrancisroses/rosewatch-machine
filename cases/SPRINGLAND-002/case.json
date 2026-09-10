@@ -1,0 +1,50 @@
+{
+  "case_number": "SPRINGLAND-002",
+  "site_code": "SPRINGLAND",
+  "variety": "Solsbury Hill",
+  "matched_trademark": "Solsbury Hill",
+  "trademark_status": "Pending",
+  "trademark_application_or_registration_no": "App. Ser. No. 50052019 (Reg. No.: N/A)",
+  "breeder": "Jan Spek Rozen",
+  "seller_name": "Springland Flowers",
+  "website_domain": "springlandflowers.com",
+  "product_url": "https://springlandflowers.com/products/spn226-solsbury-hill-rose-索尔斯伯里山-florist-shrub-rose-heat-tolerant-disease-resistant-non-grafted-own-root",
+  "exact_product_title": "#SPN226, Solsbury Hill Rose, Florist Shrub Rose,  Heat-tolerant, disease-resistant, Non-Grafted/Own Root.",
+  "quoted_text": "This exceptional variety transitions from vibrant yellow to creamy white as it blooms, featuring a unique green center and dense, fine petals for a captivating display. Bloom Size: 8 cm in diameter Fragrance: No fragrance Vase Life: Long-lasting. Hardiness Zone: 5-10 SHIPS IN ORIGINAL PLANTER: To pr",
+  "price": "65.98",
+  "currency": "USD",
+  "quantity_or_form": "Live plant listing (no explicit pot size or quantity stated in the product feed)",
+  "match_classification": "Strong",
+  "match_explanation": "Product title contains the trademarked name \"Solsbury Hill\" (as part of a longer product title).",
+  "review_status": "New",
+  "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
+  "last_verified": "2026-09-10 16:45 MST (America/Phoenix) -- verified via the store's live product data feed",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "Location not available",
+    "state_or_region": "Location not available",
+    "city": "Location not available",
+    "source": "Checked homepage and footer -- no location, address, or shipping-origin information is shown anywhere on the site. Prior known-sites research also left this field blank.",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed and site footer)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.67",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed."
+  ],
+  "investigator_notes": "Identified via this session's crawl of the store's public product data feed on 2026-09-10, cross-checked against the Master Trademark Filing Chart. This is a potential lead for Francis Roses/legal counsel review, not a legal determination of infringement.",
+  "history": [
+    {
+      "date": "2026-09-10",
+      "action": "Case created",
+      "details": "Bulk case-creation pass following the initial two-case format sample (HILLSIDERO-001/002)."
+    }
+  ]
+}
