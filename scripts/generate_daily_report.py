@@ -182,19 +182,32 @@ def generate(run_date_str):
     story.append(Paragraph("Monitoring Run Summary", styles["RWH2"]))
     held = run.get("matches_held_pending_case_creation", 0)
     created = run.get("cases_created_this_run", len(new_cases))
-    disposition = (
-        f"{created} matches were carried through into full, evidence-complete case records this run"
-        + (f"; {held} additional matched listings remain held pending a decision on how to process them into cases."
-           if held else ".")
-    )
+    reverified = run.get("cases_reverified_this_run", 0)
+    if created:
+        disposition = (
+            f"{created} match{'es' if created != 1 else ''} were carried through into full, evidence-complete case "
+            f"records this run"
+            + (f"; {held} additional matched listing{'s' if held != 1 else ''} remain held pending a decision on "
+               f"how to process them into cases." if held else ".")
+        )
+    else:
+        disposition = "No new matches against the active trademark list were found this run."
+    if reverified:
+        disposition += f" {reverified} previously existing case{'s' if reverified != 1 else ''} were re-verified still present in their site's current catalog."
+
+    if not new_cases:
+        story.append(Paragraph(
+            "<b>No new potential infringement findings were identified during this monitoring run.</b>",
+            ParagraphStyle("noFindings", parent=styles["RWBody"], fontName="Helvetica-Bold", textColor=ACCENT)))
+        story.append(Spacer(1, 6))
+
     story.append(Paragraph(
-        "This is Rose Watch's first monitoring pass under the current system. All 14 known reseller sites "
-        "(16 URLs) on the closed crawl roster were attempted. Product catalogs were pulled directly from each "
-        "accessible site's own product data feed (Shopify's product API, Squarespace's collection data, or the "
-        f"WordPress REST API) and checked against the Master Trademark Filing Chart. {disposition} Per current "
-        f"reporting policy, this PDF itemizes matches against <b>Registered</b> trademarks only, since those are "
-        f"the only marks currently enforceable; Pending-trademark matches are still fully recorded with complete "
-        f"evidence in the case database and dashboard.",
+        "All 14 known reseller sites (16 URLs) on the closed crawl roster were attempted. Product catalogs were "
+        "pulled directly from each accessible site's own product data feed (Shopify's product API, Squarespace's "
+        "collection data, or the WordPress REST API) and checked against the Master Trademark Filing Chart. "
+        f"{disposition} Per current reporting policy, this PDF itemizes matches against <b>Registered</b> "
+        f"trademarks only, since those are the only marks currently enforceable; Pending-trademark matches are "
+        f"still fully recorded with complete evidence in the case database and dashboard.",
         styles["RWBody"]))
     story.append(Spacer(1, 8))
     story.append(stat_table([

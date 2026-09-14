@@ -18,7 +18,7 @@
   "match_explanation": "Product title uses the full protected name \"Whitby Abbey\" verbatim, appended with a parenthetical origin note \"(Netherlands)\" and the Chinese transliteration 惠特比修道院. The core variety name matches the Pending trademark exactly; classified Strong rather than Exact because of the added descriptor text in the title.",
   "review_status": "New",
   "first_date_found": "2026-09-10 13:28 MST (America/Phoenix)",
-  "last_verified": "2026-09-10 13:31 MST (America/Phoenix) — verified live via direct page fetch (title/price/description confirmed against the live page) and independently via the store's live product feed (hillsiderosefarm.com/products.json)",
+  "last_verified": "2026-09-14 06:06 MST (America/Phoenix) -- re-verified live against the store's current product data feed",
   "screenshot_captured_at": null,
   "seller_location": {
     "country": "United States (inferred — the site's \"Our Story\" page refers to a \"Southern California home\" but does not explicitly state \"United States\")",
@@ -47,6 +47,11 @@
       "date": "2026-09-10",
       "action": "Case created",
       "details": "Initial discovery and verification during first Rose Watch monitoring run under the current system."
+    },
+    {
+      "date": "2026-09-14",
+      "action": "Re-verified",
+      "details": "Listing confirmed still present in the site's live product data feed during the scheduled Mon-Fri monitoring run; no changes to title, price, or description evidence."
     }
   ]
 }

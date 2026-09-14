@@ -38,7 +38,8 @@
   "evidence_screenshots": [],
   "access_or_research_limitations": [
     "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed.",
-    "Site's Contact page (www.myroseworld.com/contact) could not be fetched this run -- the www subdomain was blocked by this session's network egress policy, though the apex domain's collection data feed was reachable."
+    "Site's Contact page (www.myroseworld.com/contact) could not be fetched this run -- the www subdomain was blocked by this session's network egress policy, though the apex domain's collection data feed was reachable.",
+    "Not re-checked on 2026-09-14: myroseworld.com now redirects to the www subdomain, which was blocked by this session network egress policy this run."
   ],
   "investigator_notes": "Identified via this session's crawl of the store's public product data feed on 2026-09-10, cross-checked against the Master Trademark Filing Chart. This is a potential lead for Francis Roses/legal counsel review, not a legal determination of infringement.",
   "history": [
