@@ -261,6 +261,17 @@ Include a clear "As of" timestamp on the first page showing when the evidence wa
 
 If no new findings were discovered, the report must clearly state that no new potential infringement findings were identified, and report any coverage limitations.
 
+## EMAIL DELIVERY
+
+Per explicit user instruction (2026-09-15): after generating each day's PDF report, email it to the user (aren@francisroses.com) as an attachment, via the Gmail connector. Do this every time a daily report is generated -- scheduled Mon-Fri run or an ad hoc one -- including no-new-findings days. This is delivery to the user themselves, not "sending evidence or reports to third parties" (which still requires separate explicit permission per Important Safeguards).
+
+- To: aren@francisroses.com
+- Subject: `Rose Watch Daily Report - YYYY-MM-DD` (same date format as the filename)
+- Body: a short plain-text version of the REPORTING summary below (websites checked, product pages reviewed, new Registered/Pending counts, possible matches held for review, inaccessible sites/pages, and the no-new-findings sentence when applicable) plus the dashboard link.
+- Attachment: the exact `reports/Rose Watch Daily Report - YYYY-MM-DD.pdf` just generated.
+
+If the Gmail connector is unavailable or the send fails, say so explicitly in the chat summary (per "never fabricate") rather than silently skipping it -- the report still gets committed/pushed regardless of whether the email succeeds.
+
 ## REPORTING
 
 After each requested crawl, provide a concise summary containing:
@@ -322,8 +333,9 @@ Your goal is to provide accurate, organized, traceable research that helps Franc
   6. For each match against any other trademark status: append to `cases.json.review_queue`, never to `cases`.
   7. Run `python3 scripts/generate_dashboard.py` to refresh `dashboard/*.md` from the updated data.
   8. Generate `reports/Rose Watch Daily Report - YYYY-MM-DD.pdf` per the DAILY PDF REPORT section (use the `pdf` skill). Even a no-findings day gets a report.
-  9. Set `cases.json.last_run_completed` to the run's ISO timestamp in America/Phoenix.
-  10. Commit and push the updated `data/`, `cases/`, `dashboard/`, and `reports/` files to the designated branch, and give the REPORTING summary in chat.
+  9. Email the PDF to aren@francisroses.com per the EMAIL DELIVERY section (Gmail connector). Note success or failure in the chat summary either way.
+  10. Set `cases.json.last_run_completed` to the run's ISO timestamp in America/Phoenix.
+  11. Commit and push the updated `data/`, `cases/`, `dashboard/`, and `reports/` files to the designated branch, and give the REPORTING summary in chat.
 - **Case numbers are permanent.** Derive the website code once per seller (per the CASE NUMBERS algorithm) and store it in `site_code_registry`; reuse the stored code even if a rule change would compute a different one later.
 - **Never fabricate.** If a site is inaccessible (CAPTCHA, login wall, Cloudflare, timeout, robots, deleted page), record that exact limitation in both the case (if one exists) and the daily report — never mark an unreachable site "clean" and never skip mentioning it.
 - **No automation changes.** Do not create, modify, or delete scheduled triggers/Routines for Rose Watch runs unless the user explicitly asks.
