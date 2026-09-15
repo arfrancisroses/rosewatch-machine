@@ -263,16 +263,22 @@ If no new findings were discovered, the report must clearly state that no new po
 
 ## EMAIL DELIVERY
 
-Per explicit user instruction (2026-09-15): after generating each day's PDF report, email it to the user (aren@francisroses.com) as an attachment, via the Gmail connector. Do this every time a daily report is generated -- scheduled Mon-Fri run or an ad hoc one -- including no-new-findings days. This is delivery to the user themselves, not "sending evidence or reports to third parties" (which still requires separate explicit permission per Important Safeguards).
+Per explicit user instruction (2026-09-15): after generating each day's PDF report, email the report to the user (aren@francisroses.com) via the Gmail connector. Do this every time a daily report is generated -- scheduled Mon-Fri run or an ad hoc one -- including no-new-findings days. This is delivery to the user themselves, not "sending evidence or reports to third parties" (which still requires separate explicit permission per Important Safeguards).
 
 - To: aren@francisroses.com
 - Subject: `Rose Watch Daily Report - YYYY-MM-DD` (same date format as the filename)
-- Body: a short plain-text version of the REPORTING summary below (websites checked, product pages reviewed, new Registered/Pending counts, possible matches held for review, inaccessible sites/pages, and the no-new-findings sentence when applicable), the dashboard link, and the GitHub link to the same PDF in this repo (see the attachment caveat below).
-- Attachment: the exact `reports/Rose Watch Daily Report - YYYY-MM-DD.pdf` just generated.
+- `htmlBody`: **the full report rendered as HTML in the email body** -- header with the "As of" timestamp, the no-new-findings sentence when applicable, the stat tiles (websites checked, URLs accessible, product pages reviewed, new Registered/Pending counts, possible matches held for review, inaccessible sites/pages), the Websites Checked table, New Findings, and Access & Research Limitations. Mirror the PDF's content and section order.
+- `body`: a plain-text equivalent of the same content, for clients that don't render HTML.
+- Links at the end of both: the GitHub link to that day's PDF, and the dashboard link.
+- **Do not attach the PDF** -- see below.
 
-**Attachment fidelity caveat.** The Gmail tool takes attachment bytes as an inline base64 string, which has to be reproduced by hand -- there is no attach-by-file-path option, and no tool to download a sent attachment back for byte-comparison. A ~20KB PDF is ~26,000 base64 characters, and a single wrong character can corrupt the PDF. So: always commit and push the report *before* emailing, and include the GitHub link to that exact file in the email body, e.g.
-`https://github.com/arfrancisroses/rosewatch-machine/blob/claude/charming-archimedes-9dhty7/reports/Rose%20Watch%20Daily%20Report%20-%20YYYY-MM-DD.pdf`
-That link is always byte-correct and is the fallback if the attachment won't open. Never claim the attachment was "verified" -- it can't be, from inside this environment.
+**Why the PDF is linked, not attached (learned 2026-09-15).** The Gmail tool takes attachment bytes as an inline base64 string. There is no attach-by-file-path option, so the ~26,000 base64 characters of a ~20KB PDF have to be emitted by hand, and a single wrong character corrupts the file. This was tried on 2026-09-15 and the delivered PDF had blank/missing pages; a controlled test measured ~4 character errors per 26,000. Verification before sending is technically possible (`create_draft` -> `get_draft` with `messageFormat: RAW` returns the MIME including the attachment, and `send_message` with `draftId` sends verified bytes unchanged), but the readback costs more transcription than the attachment itself and would have to pass on every attempt -- not viable as a daily job. So:
+
+- Always commit and push the report **before** emailing, then link to that exact file:
+  `https://github.com/arfrancisroses/rosewatch-machine/blob/claude/charming-archimedes-9dhty7/reports/Rose%20Watch%20Daily%20Report%20-%20YYYY-MM-DD.pdf`
+  That copy is always byte-correct.
+- Never claim an emailed attachment was "verified" -- from inside this environment, it can't be.
+- Don't reintroduce attachments without the user asking. If they do ask, use the draft/RAW verification loop above and never send an unverified one.
 
 If the Gmail connector is unavailable or the send fails, say so explicitly in the chat summary (per "never fabricate") rather than silently skipping it -- the report still gets committed/pushed regardless of whether the email succeeds.
 
@@ -337,9 +343,10 @@ Your goal is to provide accurate, organized, traceable research that helps Franc
   6. For each match against any other trademark status: append to `cases.json.review_queue`, never to `cases`.
   7. Run `python3 scripts/generate_dashboard.py` to refresh `dashboard/*.md` from the updated data.
   8. Generate `reports/Rose Watch Daily Report - YYYY-MM-DD.pdf` per the DAILY PDF REPORT section (use the `pdf` skill). Even a no-findings day gets a report.
-  9. Email the PDF to aren@francisroses.com per the EMAIL DELIVERY section (Gmail connector). Note success or failure in the chat summary either way.
-  10. Set `cases.json.last_run_completed` to the run's ISO timestamp in America/Phoenix.
-  11. Commit and push the updated `data/`, `cases/`, `dashboard/`, and `reports/` files to the designated branch, and give the REPORTING summary in chat.
+  9. Set `cases.json.last_run_completed` to the run's ISO timestamp in America/Phoenix.
+  10. Commit and push the updated `data/`, `cases/`, `dashboard/`, and `reports/` files to the designated branch. Do this **before** emailing, so the PDF link in the email resolves.
+  11. Email the report to aren@francisroses.com per the EMAIL DELIVERY section -- full report in the HTML body, that day's PDF linked from GitHub, no binary attachment. Note success or failure in the chat summary either way.
+  12. Give the REPORTING summary in chat.
 - **Case numbers are permanent.** Derive the website code once per seller (per the CASE NUMBERS algorithm) and store it in `site_code_registry`; reuse the stored code even if a rule change would compute a different one later.
 - **Never fabricate.** If a site is inaccessible (CAPTCHA, login wall, Cloudflare, timeout, robots, deleted page), record that exact limitation in both the case (if one exists) and the daily report — never mark an unreachable site "clean" and never skip mentioning it.
 - **No automation changes.** Do not create, modify, or delete scheduled triggers/Routines for Rose Watch runs unless the user explicitly asks.
