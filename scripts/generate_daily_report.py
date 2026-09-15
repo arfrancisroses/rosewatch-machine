@@ -18,6 +18,12 @@ from pathlib import Path
 from urllib.parse import quote
 from zoneinfo import ZoneInfo
 
+from reportlab import rl_config
+
+# Binary Flate streams instead of ASCII85-over-Flate: ~9% smaller file, which
+# matters because the report is emailed as an inline base64 attachment.
+rl_config.useA85 = 0
+
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.units import inch
 from reportlab.lib import colors

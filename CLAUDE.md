@@ -267,18 +267,21 @@ Per explicit user instruction (2026-09-15): after generating each day's PDF repo
 
 - To: aren@francisroses.com
 - Subject: `Rose Watch Daily Report - YYYY-MM-DD` (same date format as the filename)
-- `htmlBody`: **the full report rendered as HTML in the email body** -- header with the "As of" timestamp, the no-new-findings sentence when applicable, the stat tiles (websites checked, URLs accessible, product pages reviewed, new Registered/Pending counts, possible matches held for review, inaccessible sites/pages), the Websites Checked table, New Findings, and Access & Research Limitations. Mirror the PDF's content and section order.
-- `body`: a plain-text equivalent of the same content, for clients that don't render HTML.
-- Links at the end of both: the GitHub link to that day's PDF, and the dashboard link.
-- **Do not attach the PDF** -- see below.
+- **Body: short.** Per explicit user instruction (2026-09-15), the email text is only: the time the scan completed (America/Phoenix), any errors / sites not fully accessible, and the number of new findings. Do **not** reproduce the report in the body -- that's what the attachment is for.
+- **Attachment: that day's PDF**, built and verified per the procedure below.
 
-**Why the PDF is linked, not attached (learned 2026-09-15).** The Gmail tool takes attachment bytes as an inline base64 string. There is no attach-by-file-path option, so the ~26,000 base64 characters of a ~20KB PDF have to be emitted by hand, and a single wrong character corrupts the file. This was tried on 2026-09-15 and the delivered PDF had blank/missing pages; a controlled test measured ~4 character errors per 26,000. Verification before sending is technically possible (`create_draft` -> `get_draft` with `messageFormat: RAW` returns the MIME including the attachment, and `send_message` with `draftId` sends verified bytes unchanged), but the readback costs more transcription than the attachment itself and would have to pass on every attempt -- not viable as a daily job. So:
+**Attaching the PDF correctly (learned the hard way, 2026-09-15).** The Gmail tool takes attachment bytes as an inline base64 string -- there is no attach-by-file-path option, so the ~24,000 base64 characters have to be emitted by hand. A first attempt corrupted the file (blank/missing pages) because the base64 was read from a `fold`-wrapped, line-numbered view and re-joined by hand; that transformation introduced ~4 character errors. **Copying is reliable; transforming is not.** Use this procedure:
 
-- Always commit and push the report **before** emailing, then link to that exact file:
-  `https://github.com/arfrancisroses/rosewatch-machine/blob/claude/charming-archimedes-9dhty7/reports/Rose%20Watch%20Daily%20Report%20-%20YYYY-MM-DD.pdf`
-  That copy is always byte-correct.
-- Never claim an emailed attachment was "verified" -- from inside this environment, it can't be.
-- Don't reintroduce attachments without the user asking. If they do ask, use the draft/RAW verification loop above and never send an unverified one.
+1. `base64 -w0 "reports/Rose Watch Daily Report - YYYY-MM-DD.pdf" > pdf.b64` in the scratchpad, then `split -b 6000 -d pdf.b64 part_`.
+2. `Read` each `part_NN` file. Each is a single unbroken line, so copying it into the tool call is a pure copy with no unwrapping, no line numbers to strip. A controlled test of this method was byte-exact over 6,000 characters.
+3. `create_draft` with the attachment content = the parts concatenated in order, in one string.
+4. Verify before sending: `get_draft` with `messageFormat: RAW` returns the full MIME (base64url). The attachment appears inside it as the PDF's base64 wrapped at 76 chars with CRLF. Copy a slice back, `base64.urlsafe_b64decode` it, strip the CRLFs, and confirm it matches the corresponding part of `pdf.b64`. Check at minimum the head and the tail.
+5. `send_message` with `draftId` -- this sends the verified draft unchanged, with no second transcription.
+
+Never re-type the base64 into `send_message` directly; always send the draft you verified. Never claim an attachment was fully verified if only sampled -- say what was actually checked.
+
+Also commit and push the report **before** emailing, so this link is live as a fallback if a PDF ever arrives damaged:
+`https://github.com/arfrancisroses/rosewatch-machine/blob/claude/charming-archimedes-9dhty7/reports/Rose%20Watch%20Daily%20Report%20-%20YYYY-MM-DD.pdf`
 
 If the Gmail connector is unavailable or the send fails, say so explicitly in the chat summary (per "never fabricate") rather than silently skipping it -- the report still gets committed/pushed regardless of whether the email succeeds.
 
@@ -345,7 +348,7 @@ Your goal is to provide accurate, organized, traceable research that helps Franc
   8. Generate `reports/Rose Watch Daily Report - YYYY-MM-DD.pdf` per the DAILY PDF REPORT section (use the `pdf` skill). Even a no-findings day gets a report.
   9. Set `cases.json.last_run_completed` to the run's ISO timestamp in America/Phoenix.
   10. Commit and push the updated `data/`, `cases/`, `dashboard/`, and `reports/` files to the designated branch. Do this **before** emailing, so the PDF link in the email resolves.
-  11. Email the report to aren@francisroses.com per the EMAIL DELIVERY section -- full report in the HTML body, that day's PDF linked from GitHub, no binary attachment. Note success or failure in the chat summary either way.
+  11. Email the report to aren@francisroses.com per the EMAIL DELIVERY section -- short body (scan time, errors, new-findings count) with that day's PDF attached and verified via the draft/RAW procedure. Note success or failure in the chat summary either way.
   12. Give the REPORTING summary in chat.
 - **Case numbers are permanent.** Derive the website code once per seller (per the CASE NUMBERS algorithm) and store it in `site_code_registry`; reuse the stored code even if a rule change would compute a different one later.
 - **Never fabricate.** If a site is inaccessible (CAPTCHA, login wall, Cloudflare, timeout, robots, deleted page), record that exact limitation in both the case (if one exists) and the daily report — never mark an unreachable site "clean" and never skip mentioning it.
