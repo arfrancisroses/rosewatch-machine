@@ -7,12 +7,19 @@ files and scripts — read those too before doing any work here.
 
 Last updated: 2026-09-10.
 
-## Open Items (deferred to 2026-09-14 by user instruction)
+## Open Items
 
-- **GCM Ranch handling.** Its Etsy shop is closed and known-sites notes say it redirects to Kisaki Plant (already tracked separately). User wants to decide how to record this in Known Sites -- ask them Monday 9/14 rather than deciding unilaterally.
-- **Screenshot evidence.** No case has a screenshot yet -- this session's headless browser (Playwright/Chromium) cannot complete a connection through this environment's network egress proxy, even though direct page fetch works. User wants this explained Monday 9/14 (how to capture screenshots correctly), rather than solved silently or skipped.
+- **Screenshot evidence.** No case has a screenshot yet -- this session's headless browser (Playwright/Chromium) cannot complete a connection through this environment's network egress proxy, even though direct page fetch works. User wants this explained (how to capture screenshots correctly), rather than solved silently or skipped. Explained 2026-09-14 (manual capture / Wayback Machine / environment-level fix); user has not yet chosen an approach.
 
-Both are bundled into the first scheduled run's prompt below; if picked up in a fresh session instead, raise them before closing out that day's work.
+If picked up in a fresh session, raise this before closing out that day's work.
+
+### Resolved: GCM Ranch handling (decided 2026-09-15)
+
+GCM Ranch's Etsy shop (`etsy.com/shop/GcmRanch`) is closed; known-sites notes say it redirects to Kisaki Plant (`kisakiplant.com`), already tracked as its own separate roster entry. Per explicit user instruction (2026-09-15), **keep both as separate roster entries and do not merge them**:
+
+- GCM Ranch stays on the known-sites roster as its own entry, marked dormant/inactive (dead Etsy link). It is still checked each run for the daily report's "websites checked" accounting, but is expected to remain inaccessible -- log it as "Etsy shop closed (dormant)" rather than "awaiting user decision."
+- Kisaki Plant remains a fully independent entry with its own crawl, cases, and `KISAKIPLAN-###` case-number sequence.
+- Do **not** fold GCM Ranch's data, notes, or case-number sequence into Kisaki Plant's, and do not assign any new GCM Ranch case using the Kisaki Plant sequence (or vice versa), even though GCM Ranch's own dead link points there. Revisit only if the user explicitly says otherwise.
 
 ---
 
