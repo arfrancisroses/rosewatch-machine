@@ -576,6 +576,7 @@ runPanel('cases', function renderCases(){
       <select id="case-status"><option value="">All trademark statuses</option></select>
       <select id="case-site"><option value="">All sites</option></select>
       <select id="case-review"><option value="">All review statuses</option></select>
+      <select id="case-month"><option value="">All months (First Found)</option></select>
       <span class="result-count" id="case-count"></span>
     </div>
     <div id="case-table"></div>
@@ -584,9 +585,15 @@ runPanel('cases', function renderCases(){
   const statusSel = document.getElementById('case-status');
   const siteSel = document.getElementById('case-site');
   const reviewSel = document.getElementById('case-review');
+  const monthSel = document.getElementById('case-month');
   [...new Set(DATA.cases.map(c=>c.trademark_status))].sort().forEach(s => statusSel.insertAdjacentHTML('beforeend', `<option>${esc(s)}</option>`));
   [...new Set(DATA.cases.map(c=>c.site_code))].sort().forEach(s => siteSel.insertAdjacentHTML('beforeend', `<option>${esc(s)}</option>`));
   [...new Set(DATA.cases.map(c=>c.review_status))].sort().forEach(s => reviewSel.insertAdjacentHTML('beforeend', `<option>${esc(s)}</option>`));
+  const MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  function monthKey(dateStr){ const m = (dateStr||'').match(/^(\d{4})-(\d{2})/); return m ? `${m[1]}-${m[2]}` : ''; }
+  function monthLabel(key){ const [y,m] = key.split('-'); return `${MONTH_NAMES[parseInt(m,10)-1]} ${y}`; }
+  [...new Set(DATA.cases.map(c=>monthKey(c.first_date_found)))].filter(Boolean).sort().reverse()
+    .forEach(k => monthSel.insertAdjacentHTML('beforeend', `<option value="${k}">${esc(monthLabel(k))}</option>`));
 
   const tbl = makeTable(document.getElementById('case-table'), {
     columns: [
@@ -632,13 +639,14 @@ runPanel('cases', function renderCases(){
       if (statusSel.value && r.trademark_status !== statusSel.value) return false;
       if (siteSel.value && r.site_code !== siteSel.value) return false;
       if (reviewSel.value && r.review_status !== reviewSel.value) return false;
+      if (monthSel.value && monthKey(r.first_date_found) !== monthSel.value) return false;
       if (!q) return true;
       return [r.case_number, r.variety, r.matched_trademark, r.seller_name, r.website_domain, r.product_url, r.exact_product_title].some(v => (v??'').toString().toLowerCase().includes(q));
     });
     const n = tbl.render(filtered);
     document.getElementById('case-count').textContent = `${n} of ${DATA.cases.length}`;
   }
-  [statusSel, siteSel, reviewSel].forEach(s => s.addEventListener('change', applyFilter));
+  [statusSel, siteSel, reviewSel, monthSel].forEach(s => s.addEventListener('change', applyFilter));
   document.getElementById('case-search').addEventListener('input', applyFilter);
   applyFilter();
 });

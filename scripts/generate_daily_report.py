@@ -11,6 +11,7 @@ Usage: python3 scripts/generate_daily_report.py [YYYY-MM-DD]
        (defaults to today in America/Phoenix)
 """
 import json
+import re
 import sys
 import datetime
 from pathlib import Path
@@ -339,6 +340,56 @@ def generate(run_date_str):
         "Rose Watch's work is investigative research, not a legal determination. A matching product or trademark "
         "name is a potential lead that must be reviewed by Francis Roses or legal counsel before any action is taken.",
         styles["RWBodySmall"]))
+
+    # ---- All Past Findings (new page, appended -- does not alter anything above) ----
+    story.append(PageBreak())
+    story.append(Paragraph("All Past Findings (Registered Trademarks)", styles["RWH2"]))
+    story.append(Paragraph(
+        "Every Registered-trademark case on record to date, not just today's, split into sections by the month "
+        "each was first found. Pending-trademark cases are omitted here too, consistent with this report's "
+        "Registered-only policy -- see the dashboard for the complete history including Pending.",
+        styles["RWBody"]))
+    story.append(Spacer(1, 8))
+
+    all_registered = [c for c in all_cases if c.get("trademark_status") == "Registered"]
+    MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August",
+                   "September", "October", "November", "December"]
+
+    def month_key(date_str):
+        m = re.match(r"^(\d{4})-(\d{2})", str(date_str or ""))
+        return m.group(0) if m else "Unknown"
+
+    def month_label(key):
+        if key == "Unknown":
+            return "Date unknown"
+        y, mo = key.split("-")
+        return f"{MONTH_NAMES[int(mo) - 1]} {y}"
+
+    by_month = {}
+    for c in all_registered:
+        by_month.setdefault(month_key(c.get("first_date_found")), []).append(c)
+
+    if not by_month:
+        story.append(Paragraph("No Registered-trademark cases exist yet.", styles["RWBody"]))
+    for key in sorted(by_month.keys(), reverse=True):
+        rows = by_month[key]
+        story.append(Paragraph(
+            f"{month_label(key)} ({len(rows)} case{'s' if len(rows) != 1 else ''})",
+            ParagraphStyle("monthHead", parent=styles["RWBody"], fontName="Helvetica-Bold", fontSize=11, textColor=ACCENT, spaceBefore=12, spaceAfter=4)))
+        find_rows = []
+        for c in sorted(rows, key=lambda r: r.get("case_number") or ""):
+            detail = load_json(REPO_ROOT / "cases" / c["case_number"] / "case.json", {})
+            find_rows.append([
+                c.get("case_number"), c.get("variety"), c.get("seller_name"),
+                c.get("first_date_found"), link_cell(detail.get("product_url")),
+            ])
+        story.append(wrapped_table(
+            ["Case #", "Rose Name", "Seller", "First Found", "Product URL"],
+            find_rows,
+            [1.0*inch, 1.15*inch, 1.1*inch, 1.75*inch, 1.15*inch],
+            styles,
+            raw_html_cols={4},
+        ))
 
     doc.build(story)
     print(f"Wrote {out_path}")
