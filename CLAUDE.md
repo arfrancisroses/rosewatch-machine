@@ -267,8 +267,12 @@ Per explicit user instruction (2026-09-15): after generating each day's PDF repo
 
 - To: aren@francisroses.com
 - Subject: `Rose Watch Daily Report - YYYY-MM-DD` (same date format as the filename)
-- Body: a short plain-text version of the REPORTING summary below (websites checked, product pages reviewed, new Registered/Pending counts, possible matches held for review, inaccessible sites/pages, and the no-new-findings sentence when applicable) plus the dashboard link.
+- Body: a short plain-text version of the REPORTING summary below (websites checked, product pages reviewed, new Registered/Pending counts, possible matches held for review, inaccessible sites/pages, and the no-new-findings sentence when applicable), the dashboard link, and the GitHub link to the same PDF in this repo (see the attachment caveat below).
 - Attachment: the exact `reports/Rose Watch Daily Report - YYYY-MM-DD.pdf` just generated.
+
+**Attachment fidelity caveat.** The Gmail tool takes attachment bytes as an inline base64 string, which has to be reproduced by hand -- there is no attach-by-file-path option, and no tool to download a sent attachment back for byte-comparison. A ~20KB PDF is ~26,000 base64 characters, and a single wrong character can corrupt the PDF. So: always commit and push the report *before* emailing, and include the GitHub link to that exact file in the email body, e.g.
+`https://github.com/arfrancisroses/rosewatch-machine/blob/claude/charming-archimedes-9dhty7/reports/Rose%20Watch%20Daily%20Report%20-%20YYYY-MM-DD.pdf`
+That link is always byte-correct and is the fallback if the attachment won't open. Never claim the attachment was "verified" -- it can't be, from inside this environment.
 
 If the Gmail connector is unavailable or the send fails, say so explicitly in the chat summary (per "never fabricate") rather than silently skipping it -- the report still gets committed/pushed regardless of whether the email succeeds.
 
