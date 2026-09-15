@@ -1,8 +1,25 @@
 {
-  "source_file": "2026-09-10_ListofIPInfringements.xlsx",
-  "imported_date": "2026-09-10",
-  "record_count": 14,
+  "source_file": "2026-09-15_ListofIPInfringements.xlsx",
+  "imported_date": "2026-09-15",
+  "record_count": 15,
   "records": [
+    {
+      "company": "Bloomora Roses",
+      "websites": [
+        "https://www.facebook.com/profile.php?id=61591662794131"
+      ],
+      "sales_platforms": [
+        "Facebook"
+      ],
+      "shipped_from": "Woodinville, WA (local pickup; limited USA shipping, by request)",
+      "prior_manual_notes": [
+        "Added 2026-09-15 per user report. Facebook page named 'Bloomora Roses' (profile.php?id=61591662794131). Advertises 'Exclusive Rose Plants for sale.' No specific rose variety names identified yet -- columns E-J left blank pending identification, not marked '-' (which would imply confirmed absence). Facebook could not be accessed directly this session (blocked by network egress policy, connect_rejected at the CONNECT stage -- request never reached Facebook's servers). No separate website, Etsy, or Instagram presence found via search as of 2026-09-15."
+      ],
+      "prior_reported_varieties": [],
+      "source_sheets": [
+        "Sheet1"
+      ]
+    },
     {
       "company": "Ergonzy / Ergonzi",
       "websites": [
