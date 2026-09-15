@@ -18,7 +18,7 @@
   "match_explanation": "Product title contains the trademarked name \"Bourbon Street\" (as part of a longer product title).",
   "review_status": "New",
   "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-  "last_verified": "2026-09-14 06:06 MST (America/Phoenix) -- re-verified live against the store's current product data feed",
+  "last_verified": "2026-09-15 06:06 MST (America/Phoenix) -- re-verified live against the store's current product data feed",
   "screenshot_captured_at": null,
   "seller_location": {
     "country": "China (Estimated)",
@@ -48,6 +48,11 @@
     },
     {
       "date": "2026-09-14",
+      "action": "Re-verified",
+      "details": "Listing confirmed still present in the site's live product data feed during the scheduled Mon-Fri monitoring run; no changes to title, price, or description evidence."
+    },
+    {
+      "date": "2026-09-15",
       "action": "Re-verified",
       "details": "Listing confirmed still present in the site's live product data feed during the scheduled Mon-Fri monitoring run; no changes to title, price, or description evidence."
     }

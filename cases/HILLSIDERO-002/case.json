@@ -18,7 +18,7 @@
   "match_explanation": "Product title is the protected name \"Cappuccino\" verbatim (plus its Chinese transliteration 卡布奇诺) with no other qualifying words — an exact match to the Pending trademark name.",
   "review_status": "New",
   "first_date_found": "2026-09-10 13:28 MST (America/Phoenix)",
-  "last_verified": "2026-09-14 06:06 MST (America/Phoenix) -- re-verified live against the store's current product data feed",
+  "last_verified": "2026-09-15 06:06 MST (America/Phoenix) -- re-verified live against the store's current product data feed",
   "screenshot_captured_at": null,
   "seller_location": {
     "country": "United States (inferred — the site's \"Our Story\" page refers to a \"Southern California home\" but does not explicitly state \"United States\")",
@@ -50,6 +50,11 @@
     },
     {
       "date": "2026-09-14",
+      "action": "Re-verified",
+      "details": "Listing confirmed still present in the site's live product data feed during the scheduled Mon-Fri monitoring run; no changes to title, price, or description evidence."
+    },
+    {
+      "date": "2026-09-15",
       "action": "Re-verified",
       "details": "Listing confirmed still present in the site's live product data feed during the scheduled Mon-Fri monitoring run; no changes to title, price, or description evidence."
     }
