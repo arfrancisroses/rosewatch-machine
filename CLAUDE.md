@@ -328,6 +328,7 @@ Your goal is to provide accurate, organized, traceable research that helps Franc
 | Rose Watch findings database / case numbers / review decisions | `cases/cases.json` (index: `cases`, `review_queue`, `site_code_registry`) plus one `cases/<CASE-NUMBER>/case.json` per case with full evidence and a `screenshots/` subfolder |
 | Dashboard (Overview, Trademarks, Cases, Known Sites, Needs Review) | `dashboard/*.md` — regenerate with `python3 scripts/generate_dashboard.py` after any data or case change |
 | Data Sources dashboard tab | `dashboard/DATA_SOURCES.md` — hand-maintained append log, update it whenever a new source file is ingested |
+| Daily catalog crawl | `scripts/crawl_sites.py` → `cases/runs/crawl-YYYY-MM-DD.json` (per-site feed pull, trademark matching, new-vs-existing case comparison) |
 | Daily PDF reports | `reports/Rose Watch Daily Report - YYYY-MM-DD.pdf` |
 | Website-code sequence tracking (never reuse/renumber) | `cases/cases.json` → `site_code_registry` |
 
@@ -341,7 +342,8 @@ Your goal is to provide accurate, organized, traceable research that helps Franc
   1. Run `scripts/import_sources.py` only if a new source file was supplied that day; otherwise use the existing `data/*.json`.
   2. Load `data/trademarks.json`, filter to `status_category` in `Registered`/`Pending` — this is the active crawl list.
   3. Load `data/known_sites.json` for the crawl roster, plus any sites already tracked in `cases/cases.json`.
-  4. Crawl each site per the DAILY WEBSITE MONITORING rules above, using WebFetch/WebSearch (or a browser tool if available). Screenshot evidence: save under `cases/<CASE-NUMBER>/screenshots/`.
+  4. Run `python3 scripts/crawl_sites.py`. It reads the roster from `data/known_sites.json`, pulls each site's own product feed (auto-detecting Shopify vs WooCommerce), matches titles against the active trademark list, and writes `cases/runs/crawl-YYYY-MM-DD.json` with a `new_matches` list of matches that have no existing case. **Read its stderr summary** — a site reported `FAILED` is a genuine coverage gap that must be carried into the run log and the PDF, never treated as clean. Follow up by hand only on the products it flags (per the DAILY WEBSITE MONITORING rules above); screenshot evidence goes under `cases/<CASE-NUMBER>/screenshots/`.
+     - The script already retries the www/apex counterpart of every URL, so a proxy 403 on one host form is not a coverage gap on its own. If you still need to crawl something outside the roster's feeds, do it by hand — but never widen the roster (see the closed-scope rule above).
   5. For each match against Registered/Pending: check `cases/cases.json` for an existing case at that product URL first. If new, allocate the next sequence number for that site code from `site_code_registry`, create `cases/<CASE-NUMBER>/case.json` with every required field, and append a summary row to `cases.json.cases`. Never rewrite an existing case's review_status, case number, or prior evidence — only append new verification entries.
   6. For each match against any other trademark status: append to `cases.json.review_queue`, never to `cases`.
   7. Run `python3 scripts/generate_dashboard.py` to refresh `dashboard/*.md` from the updated data.
