@@ -5,13 +5,15 @@
   "sites": {
     "Bloomora Roses": {
       "url_used": null,
-      "platform": "marketplace/social",
+      "url_attempted": "https://www.facebook.com/profile.php?id=61591662794131",
+      "platform": "Facebook",
       "count": 0,
       "error": "no open product feed; not crawlable from here",
       "matches": []
     },
     "Ergonzy / Ergonzi (ergongzy.com)": {
       "url_used": "https://ergongzy.com",
+      "url_attempted": "https://ergongzy.com/",
       "platform": "Shopify",
       "count": 499,
       "error": null,
@@ -116,13 +118,15 @@
     },
     "Ergonzy / Ergonzi (www.etsy.com)": {
       "url_used": null,
-      "platform": "marketplace/social",
+      "url_attempted": "https://www.etsy.com/shop/Ergongzi",
+      "platform": "Etsy",
       "count": 0,
       "error": "no open product feed; not crawlable from here",
       "matches": []
     },
     "Flower Meadow Dream": {
       "url_used": null,
+      "url_attempted": "https://www.myroseworld.com/",
       "platform": null,
       "count": 0,
       "error": "https://www.myroseworld.com [Shopify]: URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; https://www.myroseworld.com [WordPress/WooCommerce]: URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; https://myroseworld.com [Shopify]: URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; https://myroseworld.com [WordPress/WooCommerce]: URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
@@ -130,13 +134,15 @@
     },
     "GCM Ranch": {
       "url_used": null,
-      "platform": "marketplace/social",
+      "url_attempted": "https://www.etsy.com/shop/GcmRanch",
+      "platform": "Etsy",
       "count": 0,
       "error": "no open product feed; not crawlable from here",
       "matches": []
     },
     "High Garden": {
       "url_used": "https://highgardenroses.com",
+      "url_attempted": "https://highgardenroses.com/",
       "platform": "Shopify",
       "count": 670,
       "error": null,
@@ -289,6 +295,7 @@
     },
     "Hillside Rose Farm": {
       "url_used": "https://hillsiderosefarm.com",
+      "url_attempted": "https://www.hillsiderosefarm.com/",
       "platform": "Shopify",
       "count": 146,
       "error": null,
@@ -309,6 +316,7 @@
     },
     "Huniu Rose Garden": {
       "url_used": "https://huniurosegarden.ca",
+      "url_attempted": "https://huniurosegarden.ca/",
       "platform": "Shopify",
       "count": 296,
       "error": null,
@@ -383,6 +391,7 @@
     },
     "Jessie's Roses (www.jessiesrose.com)": {
       "url_used": "https://jessiesrose.com",
+      "url_attempted": "https://www.jessiesrose.com/",
       "platform": "Shopify",
       "count": 0,
       "error": null,
@@ -390,13 +399,15 @@
     },
     "Jessie's Roses (www.etsy.com)": {
       "url_used": null,
-      "platform": "marketplace/social",
+      "url_attempted": "https://www.etsy.com/shop/JessiesRoseUSA",
+      "platform": "Etsy",
       "count": 0,
       "error": "no open product feed; not crawlable from here",
       "matches": []
     },
     "Kate Roses": {
       "url_used": "https://kateroses.com",
+      "url_attempted": "https://www.kateroses.com/",
       "platform": "Shopify",
       "count": 109,
       "error": null,
@@ -411,6 +422,7 @@
     },
     "Kisaki Plant": {
       "url_used": "https://kisakiplant.com",
+      "url_attempted": "https://kisakiplant.com/",
       "platform": "Shopify",
       "count": 315,
       "error": null,
@@ -449,6 +461,7 @@
     },
     "Muse Roses": {
       "url_used": "https://museroses.com",
+      "url_attempted": "https://museroses.com/",
       "platform": "Shopify",
       "count": 750,
       "error": null,
@@ -571,6 +584,7 @@
     },
     "One Love": {
       "url_used": "https://oneloveroseandgardens.com",
+      "url_attempted": "https://oneloveroseandgardens.com/",
       "platform": "Shopify",
       "count": 865,
       "error": null,
@@ -621,6 +635,7 @@
     },
     "Rose Explosion": {
       "url_used": "https://roseexplosion.com",
+      "url_attempted": "https://roseexplosion.com/",
       "platform": "Shopify",
       "count": 1414,
       "error": null,
@@ -827,6 +842,7 @@
     },
     "Springland Flowers": {
       "url_used": "https://springlandflowers.com",
+      "url_attempted": "https://springlandflowers.com/",
       "platform": "Shopify",
       "count": 116,
       "error": null,
@@ -847,6 +863,7 @@
     },
     "Your Roses": {
       "url_used": "https://your-roses.com",
+      "url_attempted": "https://your-roses.com/",
       "platform": "WordPress/WooCommerce",
       "count": 1656,
       "error": null,

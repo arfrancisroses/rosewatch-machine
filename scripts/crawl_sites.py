@@ -119,10 +119,20 @@ def crawl_site(url):
             except Exception as e:
                 errors.append(f"{candidate} [{platform}]: {type(e).__name__}: {e}")
                 continue
-            return {"url_used": candidate, "platform": platform,
+            return {"url_used": candidate, "url_attempted": url, "platform": platform,
                     "count": len(items), "error": None, "items": items}
-    return {"url_used": None, "platform": None, "count": 0,
+    return {"url_used": None, "url_attempted": url, "platform": None, "count": 0,
             "error": "; ".join(errors) or "no feed found", "items": []}
+
+
+def marketplace_name(url):
+    """Short, readable platform label for a marketplace/social URL."""
+    host = urlsplit(url if "://" in url else "https://" + url).netloc.lower()
+    host = host[4:] if host.startswith("www.") else host
+    for h in NO_FEED_HOSTS:
+        if h in host:
+            return h.split(".")[0].capitalize()
+    return "Marketplace"
 
 
 def active_trademarks():
@@ -178,8 +188,9 @@ def main():
         for url in site["websites"]:
             label = site["company"] if len(site["websites"]) == 1 else f"{site['company']} ({urlsplit(url).netloc})"
             if any(h in url for h in NO_FEED_HOSTS):
-                results[label] = {"url_used": None, "platform": "marketplace/social",
-                                  "count": 0, "error": "no open product feed; not crawlable from here",
+                results[label] = {"url_used": None, "url_attempted": url,
+                                  "platform": marketplace_name(url), "count": 0,
+                                  "error": "no open product feed; not crawlable from here",
                                   "matches": []}
                 print(f"{label}: skipped (no feed)", file=sys.stderr)
                 continue
@@ -189,7 +200,7 @@ def main():
             for m in matches:
                 if m["url"].rstrip("/") not in existing:
                     new_matches.append({"site": label, **m})
-            results[label] = {k: r[k] for k in ("url_used", "platform", "count", "error")}
+            results[label] = {k: r[k] for k in ("url_used", "url_attempted", "platform", "count", "error")}
             results[label]["matches"] = matches
             note = f"via {r['url_used']}" if r["url_used"] else f"FAILED: {r['error'][:120]}"
             print(f"{label}: {r['count']} products, {len(matches)} matches, {note}", file=sys.stderr)

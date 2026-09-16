@@ -142,15 +142,71 @@ def wrapped_table(header, rows, col_widths, styles, header_bg=INK, raw_html_cols
     return t
 
 
+def build_coverage(crawl, run):
+    """Derive the coverage picture from the crawler's own output.
+
+    Whether a site was reached, and how many product pages it served, both come
+    from the same record the crawler wrote -- so a site it could not reach cannot
+    be reported as checked with a page count beside it. The hand-written run log
+    contributes only the prose note for each site, never its status.
+    """
+    notes = {}
+    for s in run.get("sites", []):
+        notes[s.get("company", "")] = s.get("notes")
+
+    def note_for(label):
+        if label in notes:
+            return notes[label]
+        company = label.split(" (")[0]
+        for name, note in notes.items():
+            if name.split(" (")[0] == company:
+                return note
+        return None
+
+    rows, limitations = [], []
+    accessible = 0
+    for label, s in crawl.get("sites", {}).items():
+        reached = s.get("error") is None
+        accessible += 1 if reached else 0
+        # Show the host that actually served the catalog; for anything unreachable
+        # keep the roster URL so the reader can see which page went unchecked.
+        url = s.get("url_used") or s.get("url_attempted") or "--"
+        rows.append([label, url, s.get("platform") or "--",
+                     f'{s.get("count", 0):,}', "Accessible" if reached else "Not accessible"])
+        if not reached:
+            limitations.append([label, url, note_for(label) or s.get("error") or "Not accessible."])
+
+    return {
+        "rows": rows,
+        "limitations": limitations,
+        "urls_total": len(rows),
+        "urls_accessible": accessible,
+        "urls_inaccessible": len(rows) - accessible,
+        "pages_reviewed": crawl.get("total_product_pages_reviewed", 0),
+        "new_matches": len(crawl.get("new_matches", [])),
+    }
+
+
 def generate(run_date_str):
     run_date = datetime.date.fromisoformat(run_date_str)
     run = load_json(RUNS_DIR / f"{run_date_str}.json")
     cases_db = load_json(CASES_FILE, {"cases": [], "review_queue": []})
     known_sites = load_json(REPO_ROOT / "data" / "known_sites.json", {"records": []})
+    crawl = load_json(RUNS_DIR / f"crawl-{run_date_str}.json")
 
     if run is None:
         print(f"No run log found at cases/runs/{run_date_str}.json", file=sys.stderr)
         return 1
+    if crawl is None:
+        # Coverage (which sites were reached, and how many pages) is reported from
+        # the crawler's own output so a site it could not reach cannot be written up
+        # as checked. Without it there is nothing to attest to, so refuse rather than
+        # fall back to hand-entered numbers.
+        print(f"No crawl output at cases/runs/crawl-{run_date_str}.json -- "
+              f"run scripts/crawl_sites.py first.", file=sys.stderr)
+        return 1
+
+    coverage = build_coverage(crawl, run)
 
     generated_at = datetime.datetime.now(PHOENIX).strftime("%Y-%m-%d %H:%M %Z")
     as_of = run.get("generated_at", generated_at)
@@ -208,19 +264,21 @@ def generate(run_date_str):
             ParagraphStyle("noFindings", parent=styles["RWBody"], fontName="Helvetica-Bold", textColor=ACCENT)))
         story.append(Spacer(1, 6))
 
+    roster_companies = len(known_sites.get("records", []))
     story.append(Paragraph(
-        "All 14 known reseller sites (16 URLs) on the closed crawl roster were attempted. Product catalogs were "
-        "pulled directly from each accessible site's own product data feed (Shopify's product API, Squarespace's "
-        "collection data, or the WordPress REST API) and checked against the Master Trademark Filing Chart. "
+        f"All {roster_companies} known reseller companies ({coverage['urls_total']} URLs) on the closed crawl roster "
+        f"were attempted, of which {coverage['urls_accessible']} served a catalog. Product catalogs were "
+        "pulled directly from each accessible site's own product data feed (Shopify's product API or the WordPress "
+        "REST API) and checked against the Master Trademark Filing Chart. "
         f"{disposition} Per current reporting policy, this PDF itemizes matches against <b>Registered</b> "
         f"trademarks only, since those are the only marks currently enforceable; Pending-trademark matches are "
         f"still fully recorded with complete evidence in the case database and dashboard.",
         styles["RWBody"]))
     story.append(Spacer(1, 8))
     story.append(stat_table([
-        ("Websites checked", f"{run['total_sites_on_roster']} / 14"),
-        ("URLs accessible", f"{run['urls_accessible']} / {run['total_urls_on_roster']}"),
-        ("Product pages reviewed", f"{run['total_product_pages_reviewed']:,}"),
+        ("Websites checked", f"{roster_companies} / {roster_companies}"),
+        ("URLs accessible", f"{coverage['urls_accessible']} / {coverage['urls_total']}"),
+        ("Product pages reviewed", f"{coverage['pages_reviewed']:,}"),
         ("Active-trademark matches found", run["active_trademark_matches_found"]),
     ], styles))
     story.append(Spacer(1, 10))
@@ -228,18 +286,14 @@ def generate(run_date_str):
         ("New Registered findings (cases)", len(new_registered)),
         ("New Pending findings (cases)", len(new_pending)),
         ("Possible matches held for review", run["matches_held_pending_case_creation"]),
-        ("Sites/pages not fully accessible", run["urls_inaccessible"]),
+        ("Sites/pages not fully accessible", coverage["urls_inaccessible"]),
     ], styles))
 
     # ---- Websites checked ----
     story.append(Paragraph("Websites Checked", styles["RWH2"]))
-    site_rows = []
-    for s in run["sites"]:
-        status = "Accessible" if s["accessible"] else "Not accessible"
-        site_rows.append([s["company"], s["url"], s["platform"], f'{s["product_pages_reviewed"]:,}', status])
     story.append(wrapped_table(
         ["Company", "URL", "Platform", "Pages Reviewed", "Status"],
-        site_rows,
+        coverage["rows"],
         [1.3*inch, 2.35*inch, 1.05*inch, 0.85*inch, 0.75*inch],
         styles,
     ))
@@ -318,10 +372,7 @@ def generate(run_date_str):
 
     # ---- Access / research limitations ----
     story.append(Paragraph("Access &amp; Research Limitations", styles["RWH2"]))
-    limitation_rows = []
-    for s in run["sites"]:
-        if not s["accessible"]:
-            limitation_rows.append([s["company"], s["url"], s["notes"] or "Not accessible."])
+    limitation_rows = coverage["limitations"]
     if limitation_rows:
         story.append(wrapped_table(
             ["Company", "URL", "Limitation"],
