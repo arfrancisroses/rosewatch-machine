@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Gmail__create_draft",
+      "mcp__Gmail__get_draft",
+      "mcp__Gmail__send_message",
+      "Bash(git push:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(python3 scripts/crawl_sites.py:*)",
+      "Bash(python3 scripts/generate_daily_report.py:*)",
+      "Bash(python3 scripts/generate_dashboard.py:*)",
+      "Bash(python3 scripts/generate_dashboard_html.py:*)",
+      "Bash(python3 scripts/import_sources.py:*)"
+    ]
+  }
+}
