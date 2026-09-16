@@ -1,7 +1,7 @@
 {
-  "source_file": "2026-09-15_ListofIPInfringements.xlsx",
-  "imported_date": "2026-09-15",
-  "record_count": 15,
+  "source_file": "2026-09-16_ListofIPInfringements.xlsx",
+  "imported_date": "2026-09-16",
+  "record_count": 16,
   "records": [
     {
       "company": "Bloomora Roses",
@@ -219,6 +219,23 @@
       "sales_platforms": [],
       "shipped_from": null,
       "prior_manual_notes": [],
+      "prior_reported_varieties": [],
+      "source_sheets": [
+        "Sheet1"
+      ]
+    },
+    {
+      "company": "Redland Ranch Roses",
+      "websites": [
+        "https://redlandranchroses.com/"
+      ],
+      "sales_platforms": [
+        "Shopify"
+      ],
+      "shipped_from": "Not stated on site -- estimated Redland area, Miami-Dade County, Florida (Estimated)",
+      "prior_manual_notes": [
+        "Added 2026-09-16 per explicit user instruction after a user-supplied tip and a one-off recon crawl. Shopify storefront; full catalog pulled from /products.json on 2026-09-16 (1,846 products, 224 of them roses). Columns E-J marked '-' on the basis of that full-catalog check: none of the six previously flagged varieties appears in any product title. Zero matches against Registered trademarks; the only rose-product name matches were against non-active chart entries ('Sultry', blank status, and 'My Girl', To Be Filed) and are held for review rather than recorded as cases. Site is a general nursery (perennials, shrubs, trees) with a substantial rose section, not a rose-only seller. No street address is published on the contact, about, or privacy pages -- only info@redlandranchroses.com -- so the 'Shipped from' value is Estimated from the business name, the 'Deep South Strong'/Fortuniana-rootstock focus, and needs confirmation. Domain registration could not be checked: RDAP/whois endpoints are blocked by this session's network egress policy. Hosting is Shopify (A record 23.227.38.32, in Shopify's 23.227.38.0/24 range; the site's own privacy policy states it is 'powered by Shopify'). Direct access to the site required the domain being allowlisted in the environment on 2026-09-16 -- before that the egress proxy refused CONNECT."
+      ],
       "prior_reported_varieties": [],
       "source_sheets": [
         "Sheet1"

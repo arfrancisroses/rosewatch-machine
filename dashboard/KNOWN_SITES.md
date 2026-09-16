@@ -1,7 +1,7 @@
 # Known Sites
 
-Source file: `2026-09-15_ListofIPInfringements.xlsx` — imported 2026-09-15.
-Total known reseller sites: 15.
+Source file: `2026-09-16_ListofIPInfringements.xlsx` — imported 2026-09-16.
+Total known reseller sites: 16.
 
 This list is Rose Watch's crawl target roster (SOURCE FILES item 2), and per user instruction (2026-09-10) it is a **closed scope** — Rose Watch scans only these sites and does not discover or add others on its own. The "Prior reported varieties" and "Prior manual notes" columns carry over informal, pre-Rose-Watch research from the source spreadsheet. **They are background context only** — not verified Rose Watch case evidence (no case number, product URL, screenshot, quoted text, or evidence date exists for them). Each site must still be crawled and, if a match is confirmed against the trademark chart, given a proper case record in `cases/cases.json`.
 
@@ -19,6 +19,7 @@ This list is Rose Watch's crawl target roster (SOURCE FILES item 2), and per use
 | Kisaki Plant | https://kisakiplant.com/ | Shopify | Kerens, TX | Sophie Rochas ® Delbard |  |
 | Muse Roses | https://museroses.com/ |  | Buda, Texas | Piano® Tantau, Pink O'Hara™, Sophie Rochas ® Delbard | office address in TX is a home address |
 | One Love | https://oneloveroseandgardens.com/ |  |  |  |  |
+| Redland Ranch Roses | https://redlandranchroses.com/ | Shopify | Not stated on site -- estimated Redland area, Miami-Dade County, Florida (Estimated) |  | Added 2026-09-16 per explicit user instruction after a user-supplied tip and a one-off recon crawl. Shopify storefront; full catalog pulled from /products.json on 2026-09-16 (1,846 products, 224 of them roses). Columns E-J marked '-' on the basis of that full-catalog check: none of the six previously flagged varieties appears in any product title. Zero matches against Registered trademarks; the only rose-product name matches were against non-active chart entries ('Sultry', blank status, and 'My Girl', To Be Filed) and are held for review rather than recorded as cases. Site is a general nursery (perennials, shrubs, trees) with a substantial rose section, not a rose-only seller. No street address is published on the contact, about, or privacy pages -- only info@redlandranchroses.com -- so the 'Shipped from' value is Estimated from the business name, the 'Deep South Strong'/Fortuniana-rootstock focus, and needs confirmation. Domain registration could not be checked: RDAP/whois endpoints are blocked by this session's network egress policy. Hosting is Shopify (A record 23.227.38.32, in Shopify's 23.227.38.0/24 range; the site's own privacy policy states it is 'powered by Shopify'). Direct access to the site required the domain being allowlisted in the environment on 2026-09-16 -- before that the egress proxy refused CONNECT. |
 | Rose Explosion | https://roseexplosion.com/ | PayPal, web | China | Admiral® Rose, Piano® Tantau, Pink O'Hara™, Sophie Rochas ® Delbard |  |
 | Springland Flowers | https://springlandflowers.com/ | Shop, web |  | Modern Art ®, Sophie Rochas ® Delbard |  |
 | Your Roses | https://your-roses.com/ | PayPal, web | China | Admiral® Rose, Modern Art ®, Pink O'Hara™, Sophie Rochas ® Delbard |  |
