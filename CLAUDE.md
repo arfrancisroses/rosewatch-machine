@@ -23,6 +23,12 @@ Email is not a usable channel for this report, and the user has ended it. The re
 
 Do not reopen this by trying to be more careful with base64. A real alternative would have to remove hand-transcription from the path -- an attach-by-path capability, or a connector that takes a file reference. Ask the user before attempting anything else here.
 
+### The live dashboard artifact (set 2026-09-17)
+
+- **Live:** `https://claude.ai/artifact/3preykJttUmrHnxS9KgspC`, titled **Rose Watch LIVE**. Same artifact as the UUID form `16e0d5da-a772-4f6c-81b7-80697febeeb1` that the PDF's "Dashboard:" link uses -- two address forms, one artifact, both valid.
+- **Stale duplicate, keep but never publish to:** `https://claude.ai/artifact/7M6Ms2kkxd7WNA1VyPaV4F` (last updated 2026-09-10). The user knows it exists and chose to leave it.
+- The `LIVE` in the title comes from `<title>Rose Watch LIVE</title>` in `scripts/generate_dashboard_html.py`, so it survives every regeneration rather than depending on what a publish call passes.
+
 ### Resolved: GCM Ranch handling (decided 2026-09-15)
 
 GCM Ranch's Etsy shop (`etsy.com/shop/GcmRanch`) is closed; known-sites notes say it redirects to Kisaki Plant (`kisakiplant.com`), already tracked as its own separate roster entry. Per explicit user instruction (2026-09-15), **keep both as separate roster entries and do not merge them**:
@@ -344,7 +350,8 @@ Your goal is to provide accurate, organized, traceable research that helps Franc
      - The script already retries the www/apex counterpart of every URL, so a proxy 403 on one host form is not a coverage gap on its own. If you still need to crawl something outside the roster's feeds, do it by hand — but never widen the roster (see the closed-scope rule above).
   5. For each match against Registered/Pending: check `cases/cases.json` for an existing case at that product URL first. If new, allocate the next sequence number for that site code from `site_code_registry`, create `cases/<CASE-NUMBER>/case.json` with every required field, and append a summary row to `cases.json.cases`. Never rewrite an existing case's review_status, case number, or prior evidence — only append new verification entries.
   6. For each match against any other trademark status: append to `cases.json.review_queue`, never to `cases`.
-  7. Run `python3 scripts/generate_dashboard.py` to refresh `dashboard/*.md` from the updated data.
+  7. Run `python3 scripts/generate_dashboard.py` to refresh `dashboard/*.md`, then `python3 scripts/generate_dashboard_html.py` to rebuild `dashboard/index.html`.
+  7b. **Republish the live dashboard artifact** -- `Artifact` publish with `url` = `https://claude.ai/artifact/3preykJttUmrHnxS9KgspC` and `file_path` = `dashboard/index.html`. This is the artifact the user reads and the one the PDF links to; it is titled **Rose Watch LIVE** so it can be told apart from the stale 2026-09-10 duplicate (`7M6Ms2kkxd7WNA1VyPaV4F`), which the user has kept and which must not be published to. Republishing was missed on the 09-16 and 09-17 runs, which left the dashboard two days behind the data and without Redland Ranch Roses -- do not skip it.
   8. Generate `reports/Rose Watch Daily Report - YYYY-MM-DD.pdf` per the DAILY PDF REPORT section (use the `pdf` skill). Even a no-findings day gets a report.
   9. Set `cases.json.last_run_completed` to the run's ISO timestamp in America/Phoenix.
   10. Commit and push the updated `data/`, `cases/`, `dashboard/`, and `reports/` files to the designated branch.

@@ -137,7 +137,7 @@ def build_data():
 
 
 TEMPLATE = r"""<!doctype html>
-<title>Rose Watch</title>
+<title>Rose Watch LIVE</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
