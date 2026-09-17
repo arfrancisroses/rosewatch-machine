@@ -412,26 +412,70 @@ def generate(run_date_str):
         "name is a potential lead that must be reviewed by Francis Roses or legal counsel before any action is taken.",
         styles["RWBodySmall"]))
 
-    # ---- Case history summary ----
-    # This was a full table of every past Registered case. It roughly doubled the
-    # file (34 rows plus a link annotation each), and the same list already lives on
-    # the dashboard, kept current and filterable. Size matters here because the PDF
-    # has to be emailed as an inline base64 attachment, and a smaller payload is one
-    # that can be transcribed and verified reliably -- see CLAUDE.md Open Items. The
-    # counts stay so the reader still sees the standing totals without the duplication.
-    all_registered = [c for c in all_cases if c.get("trademark_status") == "Registered"]
+    # ---- Case history ----
+    # Totals first -- the appendix below lists Registered cases only, so the Pending
+    # count is otherwise invisible in this report. The full case-by-case list follows;
+    # it was briefly dropped on 2026-09-17 to shrink the file for email transcription
+    # and restored the same day per user instruction once delivery stopped depending
+    # on the file's size.
     all_pending = [c for c in all_cases if c.get("trademark_status") == "Pending"]
     story.append(Spacer(1, 10))
-    story.append(Paragraph("Case History", styles["RWH2"]))
     story.append(Paragraph(
         f"{len(all_cases)} case{'s' if len(all_cases) != 1 else ''} on record to date: "
-        f"<b>{len(all_registered)}</b> against Registered trademarks and <b>{len(all_pending)}</b> against Pending. "
-        f"The full case-by-case history, with product URLs, evidence and review status, is on the dashboard rather "
-        f"than repeated in each day's report.",
+        f"<b>{len([c for c in all_cases if c.get('trademark_status') == 'Registered'])}</b> against Registered "
+        f"trademarks and <b>{len(all_pending)}</b> against Pending. The dashboard carries the complete history, "
+        f"including Pending cases, with evidence and review status.",
         styles["RWBody"]))
-    if run.get("dashboard_url"):
+
+    # ---- All Past Findings (new page, appended -- does not alter anything above) ----
+    story.append(PageBreak())
+    story.append(Paragraph("All Past Findings (Registered Trademarks)", styles["RWH2"]))
+    story.append(Paragraph(
+        "Every Registered-trademark case on record to date, not just today's, split into sections by the month "
+        "each was first found. Pending-trademark cases are omitted here too, consistent with this report's "
+        "Registered-only policy -- see the dashboard for the complete history including Pending.",
+        styles["RWBody"]))
+    story.append(Spacer(1, 8))
+
+    all_registered = [c for c in all_cases if c.get("trademark_status") == "Registered"]
+    MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August",
+                   "September", "October", "November", "December"]
+
+    def month_key(date_str):
+        m = re.match(r"^(\d{4})-(\d{2})", str(date_str or ""))
+        return m.group(0) if m else "Unknown"
+
+    def month_label(key):
+        if key == "Unknown":
+            return "Date unknown"
+        y, mo = key.split("-")
+        return f"{MONTH_NAMES[int(mo) - 1]} {y}"
+
+    by_month = {}
+    for c in all_registered:
+        by_month.setdefault(month_key(c.get("first_date_found")), []).append(c)
+
+    if not by_month:
+        story.append(Paragraph("No Registered-trademark cases exist yet.", styles["RWBody"]))
+    for key in sorted(by_month.keys(), reverse=True):
+        rows = by_month[key]
         story.append(Paragraph(
-            f'Dashboard: <link href="{run["dashboard_url"]}">{run["dashboard_url"]}</link>', styles["RWBodySmall"]))
+            f"{month_label(key)} ({len(rows)} case{'s' if len(rows) != 1 else ''})",
+            ParagraphStyle("monthHead", parent=styles["RWBody"], fontName="Helvetica-Bold", fontSize=11, textColor=ACCENT, spaceBefore=12, spaceAfter=4)))
+        find_rows = []
+        for c in sorted(rows, key=lambda r: r.get("case_number") or ""):
+            detail = load_json(REPO_ROOT / "cases" / c["case_number"] / "case.json", {})
+            find_rows.append([
+                c.get("case_number"), c.get("variety"), c.get("seller_name"),
+                c.get("first_date_found"), link_cell(detail.get("product_url")),
+            ])
+        story.append(wrapped_table(
+            ["Case #", "Rose Name", "Seller", "First Found", "Product URL"],
+            find_rows,
+            [1.0*inch, 1.15*inch, 1.1*inch, 1.75*inch, 1.15*inch],
+            styles,
+            raw_html_cols={4},
+        ))
 
     doc.build(story)
     print(f"Wrote {out_path}")
