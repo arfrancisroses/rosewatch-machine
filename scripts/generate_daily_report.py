@@ -301,6 +301,8 @@ def generate(run_date_str):
         ("Sites/pages not fully accessible", coverage["urls_inaccessible"]),
     ], styles))
 
+    story.append(PageBreak())
+
     # ---- Websites checked ----
     story.append(Paragraph("Websites Checked", styles["RWH2"]))
     story.append(wrapped_table(
@@ -311,6 +313,14 @@ def generate(run_date_str):
     ))
 
     story.append(PageBreak())
+
+
+    # ---- Dashboard confirmation ----
+    story.append(Paragraph("Dashboard", styles["RWH2"]))
+    dash_note = "The Rose Watch dashboard (Overview, Trademarks, Cases, Known Sites, Needs Review, Data Sources) was updated to reflect this run." if run.get("dashboard_updated") else "The dashboard was NOT updated this run."
+    story.append(Paragraph(dash_note, styles["RWBody"]))
+    if run.get("dashboard_url"):
+        story.append(Paragraph(f'Dashboard: <link href="{run["dashboard_url"]}">{run["dashboard_url"]}</link>', styles["RWBodySmall"]))
 
     # ---- New findings ----
     story.append(Paragraph("New Findings (Registered Trademarks Only)", styles["RWH2"]))
@@ -384,34 +394,6 @@ def generate(run_date_str):
             f'records) &mdash; never characterized as confirmed infringement.',
             styles["RWNote"]))
 
-    # ---- Access / research limitations ----
-    story.append(Paragraph("Access &amp; Research Limitations", styles["RWH2"]))
-    limitation_rows = coverage["limitations"]
-    if limitation_rows:
-        story.append(wrapped_table(
-            ["Company", "URL", "Limitation"],
-            limitation_rows,
-            [1.3*inch, 2.1*inch, 2.9*inch],
-            styles,
-            header_bg=BAD,
-        ))
-    story.append(Spacer(1, 8))
-    story.append(Paragraph(f"<b>Screenshot capture:</b> {run['screenshot_limitation']}", styles["RWBodySmall"]))
-
-    # ---- Dashboard confirmation ----
-    story.append(Paragraph("Dashboard", styles["RWH2"]))
-    dash_note = "The Rose Watch dashboard (Overview, Trademarks, Cases, Known Sites, Needs Review, Data Sources) was updated to reflect this run." if run.get("dashboard_updated") else "The dashboard was NOT updated this run."
-    story.append(Paragraph(dash_note, styles["RWBody"]))
-    if run.get("dashboard_url"):
-        story.append(Paragraph(f'Dashboard: <link href="{run["dashboard_url"]}">{run["dashboard_url"]}</link>', styles["RWBodySmall"]))
-
-    story.append(Spacer(1, 14))
-    story.append(HRFlowable(width="100%", thickness=0.5, color=LINE, spaceBefore=4, spaceAfter=6))
-    story.append(Paragraph(
-        "Rose Watch's work is investigative research, not a legal determination. A matching product or trademark "
-        "name is a potential lead that must be reviewed by Francis Roses or legal counsel before any action is taken.",
-        styles["RWBodySmall"]))
-
     # ---- Case history ----
     # Totals first -- the appendix below lists Registered cases only, so the Pending
     # count is otherwise invisible in this report. The full case-by-case list follows;
@@ -427,8 +409,7 @@ def generate(run_date_str):
         f"including Pending cases, with evidence and review status.",
         styles["RWBody"]))
 
-    # ---- All Past Findings (new page, appended -- does not alter anything above) ----
-    story.append(PageBreak())
+    # ---- All Past Findings (flows on from the findings above) ----
     story.append(Paragraph("All Past Findings (Registered Trademarks)", styles["RWH2"]))
     story.append(Paragraph(
         "Every Registered-trademark case on record to date, not just today's, split into sections by the month "
@@ -465,17 +446,45 @@ def generate(run_date_str):
         find_rows = []
         for c in sorted(rows, key=lambda r: r.get("case_number") or ""):
             detail = load_json(REPO_ROOT / "cases" / c["case_number"] / "case.json", {})
+            # Date only here. The full timestamp with timezone is on the case record;
+            # repeating it on every row of a 34-row history wrapped each row onto two
+            # lines and pushed the table onto a page carrying almost nothing else.
+            found = str(c.get("first_date_found") or "")
+            m = re.match(r"^(\d{4}-\d{2}-\d{2})", found)
             find_rows.append([
                 c.get("case_number"), c.get("variety"), c.get("seller_name"),
-                c.get("first_date_found"), link_cell(detail.get("product_url")),
+                m.group(1) if m else found, link_cell(detail.get("product_url")),
             ])
         story.append(wrapped_table(
             ["Case #", "Rose Name", "Seller", "First Found", "Product URL"],
             find_rows,
-            [1.0*inch, 1.15*inch, 1.1*inch, 1.75*inch, 1.15*inch],
+            [1.0*inch, 1.5*inch, 1.35*inch, 0.85*inch, 1.45*inch],
             styles,
             raw_html_cols={4},
         ))
+
+    story.append(PageBreak())
+
+    # ---- Access / research limitations ----
+    story.append(Paragraph("Access &amp; Research Limitations", styles["RWH2"]))
+    limitation_rows = coverage["limitations"]
+    if limitation_rows:
+        story.append(wrapped_table(
+            ["Company", "URL", "Limitation"],
+            limitation_rows,
+            [1.3*inch, 2.1*inch, 2.9*inch],
+            styles,
+            header_bg=BAD,
+        ))
+    story.append(Spacer(1, 8))
+    story.append(Paragraph(f"<b>Screenshot capture:</b> {run['screenshot_limitation']}", styles["RWBodySmall"]))
+
+    story.append(Spacer(1, 14))
+    story.append(HRFlowable(width="100%", thickness=0.5, color=LINE, spaceBefore=4, spaceAfter=6))
+    story.append(Paragraph(
+        "Rose Watch's work is investigative research, not a legal determination. A matching product or trademark "
+        "name is a potential lead that must be reviewed by Francis Roses or legal counsel before any action is taken.",
+        styles["RWBodySmall"]))
 
     doc.build(story)
     print(f"Wrote {out_path}")

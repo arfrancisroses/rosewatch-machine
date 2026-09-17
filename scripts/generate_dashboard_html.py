@@ -128,6 +128,14 @@ def build_data():
             "statusCounts": status_counts,
             "activeCount": active_count,
             "needsReviewCount": len(needs_review_tm),
+            # Split for the Overview: 80 of the 90 flagged records are flagged only
+            # because the chart gives them no status at all, which is a different
+            # problem from a record whose data conflicts with itself. One tile for
+            # each, so the real data faults are not buried under the blank statuses.
+            "missingStatusCount": len([r for r in needs_review_tm
+                                       if r["needsReviewReasons"] == ["Missing status"]]),
+            "dataIssueCount": len([r for r in needs_review_tm
+                                   if any(x != "Missing status" for x in r["needsReviewReasons"])]),
             "caseCount": len(case_rows),
             "reviewQueueCount": len(review_queue),
             "lastRunCompleted": cases.get("last_run_completed"),
@@ -477,7 +485,8 @@ runPanel('overview', function renderOverview(){
     <div class="stats">
       <div class="stat accent"><div class="n tabular">${m.activeCount}</div><div class="l">Active trademarks<br>(Registered + Pending)</div></div>
       <div class="stat"><div class="n tabular">${m.trademarkCount}</div><div class="l">Total trademark records</div></div>
-      <div class="stat bad"><div class="n tabular">${m.needsReviewCount}</div><div class="l">Trademark records<br>flagged Needs Review</div></div>
+      <div class="stat warn"><div class="n tabular">${m.missingStatusCount}</div><div class="l">Trademarks with<br>no status in the chart</div></div>
+      <div class="stat bad"><div class="n tabular">${m.dataIssueCount}</div><div class="l">Trademarks needing<br>review</div></div>
       <div class="stat"><div class="n tabular">${m.siteCount}</div><div class="l">Known reseller sites<br>(closed roster)</div></div>
       <div class="stat ok"><div class="n tabular">${m.caseCount}</div><div class="l">Active cases</div></div>
       <div class="stat warn"><div class="n tabular">${m.reviewQueueCount}</div><div class="l">Review-queue entries</div></div>
