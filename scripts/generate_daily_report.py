@@ -234,17 +234,15 @@ def generate(run_date_str):
 
     story = []
 
-    cover = []
-
     # ---- Header ----
-    cover.append(Paragraph("Rose Watch Daily Report", styles["RWTitle"]))
-    cover.append(Paragraph(f"Francis Roses &middot; IP monitoring &amp; evidence-management system", styles["RWSubtitle"]))
-    cover.append(Paragraph(f"As of: {as_of} &mdash; evidence and findings below reflect the state of each site at the time it was checked.", styles["RWAsOf"]))
-    cover.append(Paragraph(f"Report generated: {generated_at}", styles["RWBodySmall"]))
-    cover.append(HRFlowable(width="100%", thickness=0.75, color=LINE, spaceBefore=10, spaceAfter=6))
+    story.append(Paragraph("Rose Watch Daily Report", styles["RWTitle"]))
+    story.append(Paragraph(f"Francis Roses &middot; IP monitoring &amp; evidence-management system", styles["RWSubtitle"]))
+    story.append(Paragraph(f"As of: {as_of} &mdash; evidence and findings below reflect the state of each site at the time it was checked.", styles["RWAsOf"]))
+    story.append(Paragraph(f"Report generated: {generated_at}", styles["RWBodySmall"]))
+    story.append(HRFlowable(width="100%", thickness=0.75, color=LINE, spaceBefore=10, spaceAfter=6))
 
     # ---- Monitoring run summary ----
-    cover.append(Paragraph("Monitoring Run Summary", styles["RWH2"]))
+    story.append(Paragraph("Monitoring Run Summary", styles["RWH2"]))
     held = run.get("matches_held_pending_case_creation", 0)
     created = run.get("cases_created_this_run", len(new_cases))
     reverified = run.get("cases_reverified_this_run", 0)
@@ -267,19 +265,19 @@ def generate(run_date_str):
         disposition += f" {reverified} previously existing case{'s' if reverified != 1 else ''} were re-verified still present in their site's current catalog."
 
     if not new_cases:
-        cover.append(Paragraph(
+        story.append(Paragraph(
             "<b>No new potential infringement findings were identified during this monitoring run.</b>",
             ParagraphStyle("noFindings", parent=styles["RWBody"], fontName="Helvetica-Bold", textColor=ACCENT)))
         if held:
-            cover.append(Paragraph(
+            story.append(Paragraph(
                 f"({held} listing{'s' if held != 1 else ''} did match an active trademark name and "
                 f"{'are' if held != 1 else 'is'} held for review &mdash; the reason no case was opened is stated "
                 f"with the findings below. Nothing has been discarded.)",
                 styles["RWBodySmall"]))
-        cover.append(Spacer(1, 6))
+        story.append(Spacer(1, 6))
 
     roster_companies = len(known_sites.get("records", []))
-    cover.append(Paragraph(
+    story.append(Paragraph(
         f"All {roster_companies} known reseller companies ({coverage['urls_total']} URLs) on the closed crawl roster "
         f"were attempted, of which {coverage['urls_accessible']} served a catalog. Product catalogs were "
         "pulled directly from each accessible site's own product data feed (Shopify's product API or the WordPress "
@@ -288,44 +286,20 @@ def generate(run_date_str):
         f"trademarks only, since those are the only marks currently enforceable; Pending-trademark matches are "
         f"still fully recorded with complete evidence in the case database and dashboard.",
         styles["RWBody"]))
-    cover.append(Spacer(1, 16))
-    cover.append(stat_table([
+    story.append(Spacer(1, 8))
+    story.append(stat_table([
         ("Websites checked", f"{roster_companies} / {roster_companies}"),
         ("URLs accessible", f"{coverage['urls_accessible']} / {coverage['urls_total']}"),
         ("Product pages reviewed", f"{coverage['pages_reviewed']:,}"),
         ("Active-trademark matches found", run["active_trademark_matches_found"]),
     ], styles))
-    cover.append(Spacer(1, 16))
-    cover.append(stat_table([
+    story.append(Spacer(1, 10))
+    story.append(stat_table([
         ("New Registered findings (cases)", len(new_registered)),
         ("New Pending findings (cases)", len(new_pending)),
         ("Possible matches held for review", run["matches_held_pending_case_creation"]),
         ("Sites/pages not fully accessible", coverage["urls_inaccessible"]),
     ], styles))
-
-
-    # Page one is a summary page, so set it on the page as one: measure the block
-    # and pad above it by half the leftover height. Without this the title sits
-    # hard against the top margin with the tiles tucked under it and a third of
-    # the page empty underneath, which reads like a page that got cut short.
-    frame_w = letter[0] - doc.leftMargin - doc.rightMargin
-    frame_h = letter[1] - doc.topMargin - doc.bottomMargin
-    used, prev_after = 0.0, None
-    for flowable in cover:
-        style = getattr(flowable, "style", None)
-        before = getattr(style, "spaceBefore", 0) or 0
-        after = getattr(style, "spaceAfter", 0) or 0
-        # ReportLab collapses the gap between two flowables to the larger of the
-        # pair rather than stacking both, so summing them overstates the block by
-        # tens of points and leaves the page sitting high.
-        if prev_after is not None:
-            used += max(prev_after, before)
-        used += flowable.wrap(frame_w, frame_h)[1]
-        prev_after = after
-    # A day with enough findings to fill the page gets no padding and simply
-    # flows, rather than being forced into a centred block that spills.
-    story.append(Spacer(1, max(0.0, (frame_h - used) / 2.0)))
-    story.extend(cover)
 
     story.append(PageBreak())
 
