@@ -253,6 +253,12 @@ def generate(run_date_str):
             + (f"; {held} additional matched listing{'s' if held != 1 else ''} remain held pending a decision on "
                f"how to process them into cases." if held else ".")
         )
+    elif held:
+        disposition = (
+            f"{held} listing{'s' if held != 1 else ''} matched an active trademark name this run, but "
+            f"{'none were' if held != 1 else 'it was not'} carried into a case record &mdash; see the note below "
+            f"the findings table for why."
+        )
     else:
         disposition = "No new matches against the active trademark list were found this run."
     if reverified:
@@ -262,6 +268,12 @@ def generate(run_date_str):
         story.append(Paragraph(
             "<b>No new potential infringement findings were identified during this monitoring run.</b>",
             ParagraphStyle("noFindings", parent=styles["RWBody"], fontName="Helvetica-Bold", textColor=ACCENT)))
+        if held:
+            story.append(Paragraph(
+                f"({held} listing{'s' if held != 1 else ''} did match an active trademark name and "
+                f"{'are' if held != 1 else 'is'} held for review &mdash; the reason no case was opened is stated "
+                f"with the findings below. Nothing has been discarded.)",
+                styles["RWBodySmall"]))
         story.append(Spacer(1, 6))
 
     roster_companies = len(known_sites.get("records", []))
@@ -358,9 +370,11 @@ def generate(run_date_str):
         story.append(Paragraph(
             f'<b>{run["matches_held_pending_case_creation"]} additional listings</b> matched an active (Registered or '
             f'Pending) trademark name during this run\'s catalog comparison across the remaining sites, but have not '
-            f'yet been assigned case numbers or full evidence records &mdash; this is on hold pending the user\'s '
-            f'decision on how to process them (full cases for all, a lighter-evidence pass, or a further staged '
-            f'rollout). None of these are lost: they remain identified and available to convert into cases.',
+            f'yet been assigned case numbers or full evidence records. '
+            + (xml_escape(run["matches_held_note"]) if run.get("matches_held_note") else
+               'This is on hold pending the user\'s decision on how to process them (full cases for all, a '
+               'lighter-evidence pass, or a further staged rollout).')
+            + ' None of these are lost: they remain identified and available to convert into cases.',
             styles["RWNote"]))
 
     if run.get("review_queue_entries_this_run", 0):

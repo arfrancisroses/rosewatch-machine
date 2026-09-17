@@ -1,0 +1,1112 @@
+{
+  "crawl_date": "2026-09-17",
+  "total_product_pages_reviewed": 8685,
+  "new_matches": [
+    {
+      "site": "Redland Ranch Roses",
+      "title": "Paeonia lactiflora 'Monsieur Jules Elie'  - Monsieur Jules Elie Peony",
+      "url": "https://redlandranchroses.com/products/paeonia-lactiflora-monsieur-jules-elie-monsieur-jules-elie-peony",
+      "trademark": "Monsieur",
+      "status": "Pending"
+    },
+    {
+      "site": "Redland Ranch Roses",
+      "title": "Heuchera 'Wildberry'  - Dolce® Wildberry Heuchera",
+      "url": "https://redlandranchroses.com/products/heuchera-wildberry-dolce®-wildberry-heuchera",
+      "trademark": "Wildberry",
+      "status": "Pending"
+    }
+  ],
+  "sites": {
+    "Bloomora Roses": {
+      "url_used": null,
+      "url_attempted": "https://www.facebook.com/profile.php?id=61591662794131",
+      "platform": "Facebook",
+      "count": 0,
+      "error": "no open product feed; not crawlable from here",
+      "matches": []
+    },
+    "Ergonzy / Ergonzi (ergongzy.com)": {
+      "url_used": "https://ergongzy.com",
+      "url_attempted": "https://ergongzy.com/",
+      "platform": "Shopify",
+      "count": 499,
+      "error": null,
+      "matches": [
+        {
+          "title": "Anuschka Rose-阿奴诗卡｜Germany shrub rose",
+          "url": "https://ergongzy.com/products/anuschka-rose",
+          "trademark": "Anuschka",
+          "status": "Pending"
+        },
+        {
+          "title": "Pink 'N Pretty Rose-粉红美丽| Netherland Cut Roses",
+          "url": "https://ergongzy.com/products/pink-n-pretty-rose",
+          "trademark": "Pink 'n Pretty",
+          "status": "Pending"
+        },
+        {
+          "title": "Jillian Rose-吉莉安｜Netherlands Cut Rose",
+          "url": "https://ergongzy.com/products/jillian-rose",
+          "trademark": "Jillian",
+          "status": "Pending"
+        },
+        {
+          "title": "Paradise Beach Rose-沙滩乐园｜Dutch Shrub Rose",
+          "url": "https://ergongzy.com/products/paradise-beach",
+          "trademark": "Paradise Beach",
+          "status": "Pending"
+        },
+        {
+          "title": "Pink Piano rose-粉钢琴｜Germany Cut Rose",
+          "url": "https://ergongzy.com/products/pink-piano",
+          "trademark": "PIANO",
+          "status": "Registered"
+        },
+        {
+          "title": "Shades of grey rose-灰色影子｜Netherlands Cut Rose",
+          "url": "https://ergongzy.com/products/shades-of-grey",
+          "trademark": "Shades of Grey",
+          "status": "Pending"
+        },
+        {
+          "title": "Love fountain Rose-爱情喷泉｜Netherlands Shrub Rose",
+          "url": "https://ergongzy.com/products/rose-love-fountain",
+          "trademark": "Love Fountain",
+          "status": "Pending"
+        },
+        {
+          "title": "Whitby abbey Rose-惠特比修道院｜Netherland Cut Rose",
+          "url": "https://ergongzy.com/products/rose-whitby-abbey",
+          "trademark": "Whitby Abbey",
+          "status": "Pending"
+        },
+        {
+          "title": "Living Coral Rose-活力珊瑚｜Netherland Cut Rose",
+          "url": "https://ergongzy.com/products/rose-living-coral",
+          "trademark": "Living Coral",
+          "status": "Pending"
+        },
+        {
+          "title": "Darlington Rose-达林顿｜Netherland Cut Rose",
+          "url": "https://ergongzy.com/products/rose-darlington",
+          "trademark": "Darlington",
+          "status": "Pending"
+        },
+        {
+          "title": "Stanley Abbey Rose-斯坦利修道院｜Germany Cut Rose",
+          "url": "https://ergongzy.com/products/stanley-abbey-rose",
+          "trademark": "Stanley Abbey",
+          "status": "Pending"
+        },
+        {
+          "title": "Emma woodhouse Rose-艾玛伍德｜Netherland Cut Rose",
+          "url": "https://ergongzy.com/products/vip-emma-woodhous",
+          "trademark": "Emma WoodHouse",
+          "status": "Pending"
+        },
+        {
+          "title": "RED Piano Rose-红钢琴｜Germany Shrub Rose",
+          "url": "https://ergongzy.com/products/rose-red-piano",
+          "trademark": "PIANO",
+          "status": "Registered"
+        },
+        {
+          "title": "Bourbon Street Rose-波本街｜Netherlands Cut Rose",
+          "url": "https://ergongzy.com/products/rose-bourbon-street",
+          "trademark": "Bourbon Street",
+          "status": "Pending"
+        },
+        {
+          "title": "Bridal piano Rose-新娘钢琴｜Germany Cut Rose",
+          "url": "https://ergongzy.com/products/rose-bridal-piano",
+          "trademark": "PIANO",
+          "status": "Registered"
+        },
+        {
+          "title": "Cappuccino Rose-卡布奇诺｜Germany Cut Rose",
+          "url": "https://ergongzy.com/products/cappuccino-rose",
+          "trademark": "Cappuccino",
+          "status": "Pending"
+        }
+      ],
+      "retried": "recovered on retry after a first-pass failure"
+    },
+    "Ergonzy / Ergonzi (www.etsy.com)": {
+      "url_used": null,
+      "url_attempted": "https://www.etsy.com/shop/Ergongzi",
+      "platform": "Etsy",
+      "count": 0,
+      "error": "no open product feed; not crawlable from here",
+      "matches": []
+    },
+    "Flower Meadow Dream": {
+      "url_used": null,
+      "url_attempted": "https://www.myroseworld.com/",
+      "platform": null,
+      "count": 0,
+      "error": "https://www.myroseworld.com [Shopify]: URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; https://www.myroseworld.com [WordPress/WooCommerce]: URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; https://myroseworld.com [Shopify]: URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; https://myroseworld.com [WordPress/WooCommerce]: URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+      "matches": [],
+      "retried": "still failing after retry"
+    },
+    "GCM Ranch": {
+      "url_used": null,
+      "url_attempted": "https://www.etsy.com/shop/GcmRanch",
+      "platform": "Etsy",
+      "count": 0,
+      "error": "no open product feed; not crawlable from here",
+      "matches": []
+    },
+    "High Garden": {
+      "url_used": "https://highgardenroses.com",
+      "url_attempted": "https://highgardenroses.com/",
+      "platform": "Shopify",
+      "count": 670,
+      "error": null,
+      "matches": [
+        {
+          "title": "Baronesse German Florist Shrub Rose",
+          "url": "https://highgardenroses.com/products/baronesse-german-florist-shrub-rose",
+          "trademark": "BARONESSE",
+          "status": "Registered"
+        },
+        {
+          "title": "Stanley Abbey Dutch Florist Shrub Rose",
+          "url": "https://highgardenroses.com/products/stanley-abbey-netherlands-florist-shrub-rose",
+          "trademark": "Stanley Abbey",
+          "status": "Pending"
+        },
+        {
+          "title": "Bourbon Street Dutch Florist Shrub Rose",
+          "url": "https://highgardenroses.com/products/bourbon-street-netherlands-florist-shrub-rose",
+          "trademark": "Bourbon Street",
+          "status": "Pending"
+        },
+        {
+          "title": "Country Spirit Peonia German Florist Hybrid Tea Rose",
+          "url": "https://highgardenroses.com/products/country-spirit-peonia-german-florist-shrub-rose",
+          "trademark": "Country Spirit Peonia",
+          "status": "Pending"
+        },
+        {
+          "title": "Lady Ella Dutch Florist Shrub Rose",
+          "url": "https://highgardenroses.com/products/newsps-netherlands-florist-shrub-rose",
+          "trademark": "Lady Ella",
+          "status": "Pending"
+        },
+        {
+          "title": "Republic de Montmartre French Florist Climbing Rose",
+          "url": "https://highgardenroses.com/products/republic-de-montmartre-french-florist-shrub-rose",
+          "trademark": "Montmartre",
+          "status": "Pending"
+        },
+        {
+          "title": "French Florist Hybrid Tea Rose Inspired by Maurice Utrillo",
+          "url": "https://highgardenroses.com/products/maurice-utrollo-french-florist-shrub-rose",
+          "trademark": "Maurice Utrillo",
+          "status": "Registered"
+        },
+        {
+          "title": "Scentuous German Florist Shrub Rose",
+          "url": "https://highgardenroses.com/products/scentuous-german-florist-shrub-rose",
+          "trademark": "Scentuous",
+          "status": "Registered"
+        },
+        {
+          "title": "French Florist Shrub Rose Inspired by Marc Chagall",
+          "url": "https://highgardenroses.com/products/marc-chagall-french-florist-shrub-rose",
+          "trademark": "Marc Chagall",
+          "status": "Pending"
+        },
+        {
+          "title": "German Florist Shrub Rose Inspired by Pink Piano",
+          "url": "https://highgardenroses.com/products/pink-piano-german-florist-shrub-rose",
+          "trademark": "PIANO",
+          "status": "Registered"
+        },
+        {
+          "title": "Patchouli Dutch Florist Shrub Rose",
+          "url": "https://highgardenroses.com/products/patchouli-netherlands-florist-shrub-rose",
+          "trademark": "Patchouli",
+          "status": "Pending"
+        },
+        {
+          "title": "Wildberry German Florist Shrub Rose",
+          "url": "https://highgardenroses.com/products/wildberry-german-florist-shrub-rose",
+          "trademark": "Wildberry",
+          "status": "Pending"
+        },
+        {
+          "title": "Emma Woodhouse Dutch Florist Shrub Rose",
+          "url": "https://highgardenroses.com/products/emma-woodhouse-netherlands-florist-shrub-rose",
+          "trademark": "Emma WoodHouse",
+          "status": "Pending"
+        },
+        {
+          "title": "Montmartre Dutch Florist Shrub Rose",
+          "url": "https://highgardenroses.com/products/montmartre-netherlands-florist-shrub-rose",
+          "trademark": "Montmartre",
+          "status": "Pending"
+        },
+        {
+          "title": "Shades of Grey Dutch Florist Shrub Rose",
+          "url": "https://highgardenroses.com/products/shades-of-grey-netherlands-florist-shrub-rose",
+          "trademark": "Shades of Grey",
+          "status": "Pending"
+        },
+        {
+          "title": "Pavlova French Florist Shrub Rose",
+          "url": "https://highgardenroses.com/products/pavlova-french-florist-shrub-rose",
+          "trademark": "Pavlova",
+          "status": "Pending"
+        },
+        {
+          "title": "Quicksand Dutch Florist Shrub Rose",
+          "url": "https://highgardenroses.com/products/quicksand-netherlands-florist-shrub-rose",
+          "trademark": "Quicksand",
+          "status": "Registered"
+        },
+        {
+          "title": "Darlington Dutch Florist Shrub Rose",
+          "url": "https://highgardenroses.com/products/darlington-netherlands-florist-shrub-rose",
+          "trademark": "Darlington",
+          "status": "Pending"
+        },
+        {
+          "title": "German Florist Shrub Rose Inspired by Charming Piano",
+          "url": "https://highgardenroses.com/products/charming-piano-german-florist-shrub-rose",
+          "trademark": "PIANO",
+          "status": "Registered"
+        },
+        {
+          "title": "White O'hara French Florist Shrub Rose",
+          "url": "https://highgardenroses.com/products/white-ohara-french-florist-shrub-rose",
+          "trademark": "White O'Hara",
+          "status": "Pending"
+        },
+        {
+          "title": "Whitby Abbey Dutch Florist Shrub Rose",
+          "url": "https://highgardenroses.com/products/whitby-abbey-netherlands-florist-shrub-rose",
+          "trademark": "Whitby Abbey",
+          "status": "Pending"
+        },
+        {
+          "title": "German Florist Shrub Rose Inspired by Happy Piano",
+          "url": "https://highgardenroses.com/products/happy-piano-german-florist-shrub-rose",
+          "trademark": "PIANO",
+          "status": "Registered"
+        },
+        {
+          "title": "Cappuccino German Florist Shrub Rose",
+          "url": "https://highgardenroses.com/products/cappuccino-german-garden-florist-shrub-rose-bush",
+          "trademark": "Cappuccino",
+          "status": "Pending"
+        },
+        {
+          "title": "Pink O'hara French Florist Shrub Rose",
+          "url": "https://highgardenroses.com/products/pink-ohara-french-florist-garden-shrub-rose-bush",
+          "trademark": "Pink O'Hara",
+          "status": "Pending"
+        }
+      ]
+    },
+    "Hillside Rose Farm": {
+      "url_used": "https://hillsiderosefarm.com",
+      "url_attempted": "https://www.hillsiderosefarm.com/",
+      "platform": "Shopify",
+      "count": 146,
+      "error": null,
+      "matches": [
+        {
+          "title": "Whitby Abbey 惠特比修道院 (Netherlands)",
+          "url": "https://hillsiderosefarm.com/products/whitby-abbey-惠特比修道院-netherlands",
+          "trademark": "Whitby Abbey",
+          "status": "Pending"
+        },
+        {
+          "title": "Cappuccino 卡布奇诺",
+          "url": "https://hillsiderosefarm.com/products/cappuccino-卡布奇诺",
+          "trademark": "Cappuccino",
+          "status": "Pending"
+        }
+      ]
+    },
+    "Huniu Rose Garden": {
+      "url_used": "https://huniurosegarden.ca",
+      "url_attempted": "https://huniurosegarden.ca/",
+      "platform": "Shopify",
+      "count": 296,
+      "error": null,
+      "matches": [
+        {
+          "title": "Darlington  cutting rose",
+          "url": "https://huniurosegarden.ca/products/darlington-cutting-rose",
+          "trademark": "Darlington",
+          "status": "Pending"
+        },
+        {
+          "title": "Solsbury Hill Germany Wans cutting rose",
+          "url": "https://huniurosegarden.ca/products/solsbury-hill-germany-wans-cutting-rose",
+          "trademark": "Solsbury Hill",
+          "status": "Pending"
+        },
+        {
+          "title": "Delbard purple rose Alexandra David Neel",
+          "url": "https://huniurosegarden.ca/products/delbard-purple-rose-alexandra-david-neel",
+          "trademark": "Alexandra David Neel",
+          "status": "Pending"
+        },
+        {
+          "title": "Charming piano Germany Tantau",
+          "url": "https://huniurosegarden.ca/products/charming-piano-germany-tantau",
+          "trademark": "PIANO",
+          "status": "Registered"
+        },
+        {
+          "title": "Red piano Germany Tantau",
+          "url": "https://huniurosegarden.ca/products/red-piano-germany-tantau",
+          "trademark": "PIANO",
+          "status": "Registered"
+        },
+        {
+          "title": "Happy piano cutting rose Germany Tantau",
+          "url": "https://huniurosegarden.ca/products/happy-piano-cutting-rose-germany-tantau",
+          "trademark": "PIANO",
+          "status": "Registered"
+        },
+        {
+          "title": "Wans cutting rose Emma woodhouse爱玛伍德豪斯",
+          "url": "https://huniurosegarden.ca/products/无标题-3月9日_19-15",
+          "trademark": "Emma WoodHouse",
+          "status": "Pending"
+        },
+        {
+          "title": "Marc Chagall Delbard stripe colour",
+          "url": "https://huniurosegarden.ca/products/marc-chagall-delbard-stripe-colour",
+          "trademark": "Marc Chagall",
+          "status": "Pending"
+        },
+        {
+          "title": "Patchouli cutting rose",
+          "url": "https://huniurosegarden.ca/products/patchouli-cutting-rose",
+          "trademark": "Patchouli",
+          "status": "Pending"
+        },
+        {
+          "title": "Living coral cutting rose Germany Wans",
+          "url": "https://huniurosegarden.ca/products/living-coral-cutting-rose-wans",
+          "trademark": "Living Coral",
+          "status": "Pending"
+        },
+        {
+          "title": "Cappuccino cutting rose",
+          "url": "https://huniurosegarden.ca/products/cappuccino-cutting-rose",
+          "trademark": "Cappuccino",
+          "status": "Pending"
+        }
+      ],
+      "retried": "recovered on retry after a first-pass failure"
+    },
+    "Jessie's Roses (www.jessiesrose.com)": {
+      "url_used": "https://jessiesrose.com",
+      "url_attempted": "https://www.jessiesrose.com/",
+      "platform": "Shopify",
+      "count": 0,
+      "error": null,
+      "matches": [],
+      "retried": "recovered on retry after a first-pass failure"
+    },
+    "Jessie's Roses (www.etsy.com)": {
+      "url_used": null,
+      "url_attempted": "https://www.etsy.com/shop/JessiesRoseUSA",
+      "platform": "Etsy",
+      "count": 0,
+      "error": "no open product feed; not crawlable from here",
+      "matches": []
+    },
+    "Kate Roses": {
+      "url_used": "https://kateroses.com",
+      "url_attempted": "https://www.kateroses.com/",
+      "platform": "Shopify",
+      "count": 109,
+      "error": null,
+      "matches": [
+        {
+          "title": "Republique de Montmartre Rose",
+          "url": "https://kateroses.com/products/republique-de-montmartre-rose",
+          "trademark": "Montmartre",
+          "status": "Pending"
+        }
+      ]
+    },
+    "Kisaki Plant": {
+      "url_used": "https://kisakiplant.com",
+      "url_attempted": "https://kisakiplant.com/",
+      "platform": "Shopify",
+      "count": 315,
+      "error": null,
+      "matches": [
+        {
+          "title": "Rose ‘ Montmartre  |  蒙特马特",
+          "url": "https://kisakiplant.com/products/montmartre",
+          "trademark": "Montmartre",
+          "status": "Pending"
+        },
+        {
+          "title": "Rose  ‘ Divina ’ 迪威娜",
+          "url": "https://kisakiplant.com/products/divina",
+          "trademark": "Divina",
+          "status": "Pending"
+        },
+        {
+          "title": "Rose  ‘ Pink O'Hara ’  粉荔枝",
+          "url": "https://kisakiplant.com/products/rose-pink-ohara-粉荔枝",
+          "trademark": "Pink O'Hara",
+          "status": "Pending"
+        },
+        {
+          "title": "Rose  ‘ White O'Hara | 白荔枝 ’",
+          "url": "https://kisakiplant.com/products/rose-white-ohara-白荔枝",
+          "trademark": "White O'Hara",
+          "status": "Pending"
+        },
+        {
+          "title": "Rose ‘Cappuccino’ 卡布奇诺",
+          "url": "https://kisakiplant.com/products/cappuccino",
+          "trademark": "Cappuccino",
+          "status": "Pending"
+        }
+      ]
+    },
+    "Muse Roses": {
+      "url_used": "https://museroses.com",
+      "url_attempted": "https://museroses.com/",
+      "platform": "Shopify",
+      "count": 751,
+      "error": null,
+      "matches": [
+        {
+          "title": "Montmartre Rose",
+          "url": "https://museroses.com/products/montmartre-rose",
+          "trademark": "Montmartre",
+          "status": "Pending"
+        },
+        {
+          "title": "Pink O'Hara Rose",
+          "url": "https://museroses.com/products/pink-ohara-rose-粉荔枝",
+          "trademark": "Pink O'Hara",
+          "status": "Pending"
+        },
+        {
+          "title": "White O'Hara Rose",
+          "url": "https://museroses.com/products/white-ohara-rose-白哈娜",
+          "trademark": "White O'Hara",
+          "status": "Pending"
+        },
+        {
+          "title": "Happy Piano Rose",
+          "url": "https://museroses.com/products/happy-piano-rose-快乐钢琴",
+          "trademark": "PIANO",
+          "status": "Registered"
+        },
+        {
+          "title": "Love Fountain Rose",
+          "url": "https://museroses.com/products/love-fountain-rose",
+          "trademark": "Love Fountain",
+          "status": "Pending"
+        },
+        {
+          "title": "Emma woodhouse Rose",
+          "url": "https://museroses.com/products/emma-woodhouse-rose",
+          "trademark": "Emma WoodHouse",
+          "status": "Pending"
+        },
+        {
+          "title": "Bourbon Street Rose",
+          "url": "https://museroses.com/products/bourbon-street-rose",
+          "trademark": "Bourbon Street",
+          "status": "Pending"
+        },
+        {
+          "title": "Bloomsbury Rose",
+          "url": "https://museroses.com/products/bloomsbury-rose",
+          "trademark": "Bloomsbury",
+          "status": "Pending"
+        },
+        {
+          "title": "Living Coral Rose",
+          "url": "https://museroses.com/products/living-coral-rose",
+          "trademark": "Living Coral",
+          "status": "Pending"
+        },
+        {
+          "title": "Country Spirit Peonia Rose",
+          "url": "https://museroses.com/products/country-spirit-peonia-rose",
+          "trademark": "Country Spirit Peonia",
+          "status": "Pending"
+        },
+        {
+          "title": "Stanley Abbey Rose",
+          "url": "https://museroses.com/products/stanley-abbey-rose",
+          "trademark": "Stanley Abbey",
+          "status": "Pending"
+        },
+        {
+          "title": "La Rose Monsieur Rose",
+          "url": "https://museroses.com/products/la-rose-monsieur-rose",
+          "trademark": "Monsieur",
+          "status": "Pending"
+        },
+        {
+          "title": "Whitby Abbey Rose",
+          "url": "https://museroses.com/products/whitby-abbey-rose",
+          "trademark": "Whitby Abbey",
+          "status": "Pending"
+        },
+        {
+          "title": "Jillian Rose",
+          "url": "https://museroses.com/products/jillian-rose",
+          "trademark": "Jillian",
+          "status": "Pending"
+        },
+        {
+          "title": "Quicksand Roses – The Timeless Beige-Pink Rose for Modern Elegance",
+          "url": "https://museroses.com/products/quicksand-rose",
+          "trademark": "Quicksand",
+          "status": "Registered"
+        },
+        {
+          "title": "Piano Rose",
+          "url": "https://museroses.com/products/piano-rose",
+          "trademark": "PIANO",
+          "status": "Registered"
+        },
+        {
+          "title": "Paradise Beach Rose",
+          "url": "https://museroses.com/products/paradise-beach-rose",
+          "trademark": "Paradise Beach",
+          "status": "Pending"
+        },
+        {
+          "title": "Maurice Utrillo Rose",
+          "url": "https://museroses.com/products/maurice-utrillo-rose",
+          "trademark": "Maurice Utrillo",
+          "status": "Registered"
+        },
+        {
+          "title": "Pink Piano Rose",
+          "url": "https://museroses.com/products/pink-piano-rose",
+          "trademark": "PIANO",
+          "status": "Registered"
+        }
+      ]
+    },
+    "One Love": {
+      "url_used": "https://oneloveroseandgardens.com",
+      "url_attempted": "https://oneloveroseandgardens.com/",
+      "platform": "Shopify",
+      "count": 865,
+      "error": null,
+      "matches": [
+        {
+          "title": "Cappuccino",
+          "url": "https://oneloveroseandgardens.com/products/cappuccino",
+          "trademark": "Cappuccino",
+          "status": "Pending"
+        },
+        {
+          "title": "Darlington",
+          "url": "https://oneloveroseandgardens.com/products/darlington",
+          "trademark": "Darlington",
+          "status": "Pending"
+        },
+        {
+          "title": "Moonlight in Paris",
+          "url": "https://oneloveroseandgardens.com/products/moonlight-in-paris",
+          "trademark": "Moonlight in Paris",
+          "status": "Registered"
+        },
+        {
+          "title": "AC Navy Lady",
+          "url": "https://oneloveroseandgardens.com/products/ac-navy-lady",
+          "trademark": "Navy",
+          "status": "Pending"
+        },
+        {
+          "title": "Scentuous",
+          "url": "https://oneloveroseandgardens.com/products/scentuous",
+          "trademark": "Scentuous",
+          "status": "Registered"
+        },
+        {
+          "title": "Monsieur Tillier",
+          "url": "https://oneloveroseandgardens.com/products/monsieur-tillier",
+          "trademark": "Monsieur",
+          "status": "Pending"
+        },
+        {
+          "title": "Forever Yours (TAN08242)",
+          "url": "https://oneloveroseandgardens.com/products/forever-yours-tan08242",
+          "trademark": "Forever Yours",
+          "status": "Pending"
+        }
+      ]
+    },
+    "Redland Ranch Roses": {
+      "url_used": "https://redlandranchroses.com",
+      "url_attempted": "https://redlandranchroses.com/",
+      "platform": "Shopify",
+      "count": 1846,
+      "error": null,
+      "matches": [
+        {
+          "title": "Paeonia lactiflora 'Monsieur Jules Elie'  - Monsieur Jules Elie Peony",
+          "url": "https://redlandranchroses.com/products/paeonia-lactiflora-monsieur-jules-elie-monsieur-jules-elie-peony",
+          "trademark": "Monsieur",
+          "status": "Pending"
+        },
+        {
+          "title": "Heuchera 'Wildberry'  - Dolce® Wildberry Heuchera",
+          "url": "https://redlandranchroses.com/products/heuchera-wildberry-dolce®-wildberry-heuchera",
+          "trademark": "Wildberry",
+          "status": "Pending"
+        }
+      ]
+    },
+    "Rose Explosion": {
+      "url_used": "https://roseexplosion.com",
+      "url_attempted": "https://roseexplosion.com/",
+      "platform": "Shopify",
+      "count": 1416,
+      "error": null,
+      "matches": [
+        {
+          "title": "Bridgerton Rose Plant|布里奇顿",
+          "url": "https://roseexplosion.com/products/bridgerton-rose-plant",
+          "trademark": "Bridgerton",
+          "status": "Pending"
+        },
+        {
+          "title": "Marc Chagall Rose Plant | 马克·夏加尔",
+          "url": "https://roseexplosion.com/products/marc-chagall",
+          "trademark": "Marc Chagall",
+          "status": "Pending"
+        },
+        {
+          "title": "White O'Hara Rose Plant | 白哈娜",
+          "url": "https://roseexplosion.com/products/white-ohara",
+          "trademark": "White O'Hara",
+          "status": "Pending"
+        },
+        {
+          "title": "Jillian Rose Plant｜吉莉安公主",
+          "url": "https://roseexplosion.com/products/jillian-rose",
+          "trademark": "Jillian",
+          "status": "Pending"
+        },
+        {
+          "title": "La Rose Monsieur Rose Plant｜玫瑰先生",
+          "url": "https://roseexplosion.com/products/la-rose-monsieur",
+          "trademark": "Monsieur",
+          "status": "Pending"
+        },
+        {
+          "title": "Paradise Beach Rose | 天堂海滩",
+          "url": "https://roseexplosion.com/products/paradise-beach-rose",
+          "trademark": "Paradise Beach",
+          "status": "Pending"
+        },
+        {
+          "title": "Maurice Utrillo Rose Plant｜莫里斯•尤特里罗",
+          "url": "https://roseexplosion.com/products/maurice-utrillo-rose",
+          "trademark": "Maurice Utrillo",
+          "status": "Registered"
+        },
+        {
+          "title": "Stanley Abbey Rose Plant｜斯坦利修道院",
+          "url": "https://roseexplosion.com/products/stanley-abbey",
+          "trademark": "Stanley Abbey",
+          "status": "Pending"
+        },
+        {
+          "title": "Pride of Jane Rose Plant｜简的骄傲-Pre Sale",
+          "url": "https://roseexplosion.com/products/pride-of-jane",
+          "trademark": "Pride of Jane",
+          "status": "Pending"
+        },
+        {
+          "title": "Wildberry Rose Plant|野莓子",
+          "url": "https://roseexplosion.com/products/wildberry-rose-plant",
+          "trademark": "Wildberry",
+          "status": "Pending"
+        },
+        {
+          "title": "Cappuccino Rose Plant｜卡布奇诺",
+          "url": "https://roseexplosion.com/products/cappuccino",
+          "trademark": "Cappuccino",
+          "status": "Pending"
+        },
+        {
+          "title": "Happy Piano Rose Plant｜快乐钢琴",
+          "url": "https://roseexplosion.com/products/happy-piano",
+          "trademark": "PIANO",
+          "status": "Registered"
+        },
+        {
+          "title": "Moonlight in Paris Rose Plant|巴黎月光",
+          "url": "https://roseexplosion.com/products/moonlight-in-paris",
+          "trademark": "Moonlight in Paris",
+          "status": "Registered"
+        },
+        {
+          "title": "Bourbon Street Rose Plant|波本街",
+          "url": "https://roseexplosion.com/products/bourbon-street",
+          "trademark": "Bourbon Street",
+          "status": "Pending"
+        },
+        {
+          "title": "Quicksand Rose Plant|流沙",
+          "url": "https://roseexplosion.com/products/quicksandroseplant",
+          "trademark": "Quicksand",
+          "status": "Registered"
+        },
+        {
+          "title": "Pink ohara Rose Plant|粉哈娜",
+          "url": "https://roseexplosion.com/products/pinkohara",
+          "trademark": "Pink O'Hara",
+          "status": "Pending"
+        },
+        {
+          "title": "Montmartre Rose Plant｜蒙马特",
+          "url": "https://roseexplosion.com/products/montmartre-rose",
+          "trademark": "Montmartre",
+          "status": "Pending"
+        },
+        {
+          "title": "Paradise Beach Rose Plant | 沙滩乐园",
+          "url": "https://roseexplosion.com/products/paradisebeachrose",
+          "trademark": "Paradise Beach",
+          "status": "Pending"
+        },
+        {
+          "title": "Love Fountain Rose Plant | 爱情喷泉",
+          "url": "https://roseexplosion.com/products/lovefountainrose",
+          "trademark": "Love Fountain",
+          "status": "Pending"
+        },
+        {
+          "title": "Darlington Rose Plant | 达林顿",
+          "url": "https://roseexplosion.com/products/darlington-rose",
+          "trademark": "Darlington",
+          "status": "Pending"
+        },
+        {
+          "title": "Bridal Piano Rose Plant|新娘钢琴",
+          "url": "https://roseexplosion.com/products/bridal-piano-rose",
+          "trademark": "PIANO",
+          "status": "Registered"
+        },
+        {
+          "title": "Bloomsbury Rose Plant|布鲁姆斯伯里",
+          "url": "https://roseexplosion.com/products/bloomsbury",
+          "trademark": "Bloomsbury",
+          "status": "Pending"
+        },
+        {
+          "title": "Alabaster Rose  Plant| 雪花石膏",
+          "url": "https://roseexplosion.com/products/alabaster-rose",
+          "trademark": "ALABASTER",
+          "status": "Registered"
+        },
+        {
+          "title": "Living Coral Rose Plant |活力珊瑚",
+          "url": "https://roseexplosion.com/products/livng-coral-rose",
+          "trademark": "Living Coral",
+          "status": "Pending"
+        },
+        {
+          "title": "Shades of Grey Rose Plant| 灰色阴影",
+          "url": "https://roseexplosion.com/products/shades-of-grey",
+          "trademark": "Shades of Grey",
+          "status": "Pending"
+        },
+        {
+          "title": "Whitby Abbey Rose Plant|惠特比修道院",
+          "url": "https://roseexplosion.com/products/whitby-abbey",
+          "trademark": "Whitby Abbey",
+          "status": "Pending"
+        },
+        {
+          "title": "Lemon Piano Rose Plant｜柠檬钢琴",
+          "url": "https://roseexplosion.com/products/lemon-piano",
+          "trademark": "PIANO",
+          "status": "Registered"
+        },
+        {
+          "title": "Solsbury Hill Rose Plant|索尔斯伯里山",
+          "url": "https://roseexplosion.com/products/solsbury-hill",
+          "trademark": "Solsbury Hill",
+          "status": "Pending"
+        },
+        {
+          "title": "Charming Piano Rose Plant | 妩媚钢琴",
+          "url": "https://roseexplosion.com/products/charming-piano",
+          "trademark": "PIANO",
+          "status": "Registered"
+        },
+        {
+          "title": "Wedding Piano Rose Plant|婚礼钢琴",
+          "url": "https://roseexplosion.com/products/wedding-piano",
+          "trademark": "PIANO",
+          "status": "Registered"
+        },
+        {
+          "title": "Red Piano Rose Plant| 红钢琴",
+          "url": "https://roseexplosion.com/products/piano",
+          "trademark": "PIANO",
+          "status": "Registered"
+        },
+        {
+          "title": "Emma woodhouse Rose Plant｜艾玛伍德度假屋",
+          "url": "https://roseexplosion.com/products/emma-woodhouse",
+          "trademark": "Emma WoodHouse",
+          "status": "Pending"
+        },
+        {
+          "title": "Republique de Montmartre Rose Plant｜蒙马特共和国",
+          "url": "https://roseexplosion.com/products/republique-de-montmartre",
+          "trademark": "Montmartre",
+          "status": "Pending"
+        }
+      ]
+    },
+    "Springland Flowers": {
+      "url_used": "https://springlandflowers.com",
+      "url_attempted": "https://springlandflowers.com/",
+      "platform": "Shopify",
+      "count": 116,
+      "error": null,
+      "matches": [
+        {
+          "title": "#SPN116, Darlington 达林顿,  Florist Shrub Rose.",
+          "url": "https://springlandflowers.com/products/spn116-netherlands-florist-shrub-rose-grafted",
+          "trademark": "Darlington",
+          "status": "Pending"
+        },
+        {
+          "title": "#SPN226, Solsbury Hill Rose, Florist Shrub Rose,  Heat-tolerant, disease-resistant, Non-Grafted/Own Root.",
+          "url": "https://springlandflowers.com/products/spn226-solsbury-hill-rose-索尔斯伯里山-florist-shrub-rose-heat-tolerant-disease-resistant-non-grafted-own-root",
+          "trademark": "Solsbury Hill",
+          "status": "Pending"
+        }
+      ]
+    },
+    "Your Roses": {
+      "url_used": "https://your-roses.com",
+      "url_attempted": "https://your-roses.com/",
+      "platform": "WordPress/WooCommerce",
+      "count": 1656,
+      "error": null,
+      "matches": [
+        {
+          "title": "Alexandra David Neel Rose Plant| 大卫·尼尔/雪域青莲",
+          "url": "https://your-roses.com/product/alexandra-david-neel-rose/",
+          "trademark": "Alexandra David Neel",
+          "status": "Pending"
+        },
+        {
+          "title": "Bridgerton Rose Plant|布奇里顿",
+          "url": "https://your-roses.com/product/bridgerton-rose/",
+          "trademark": "Bridgerton",
+          "status": "Pending"
+        },
+        {
+          "title": "Cappuccino Rose Plant|卡布奇诺",
+          "url": "https://your-roses.com/product/cappuccino-rose/",
+          "trademark": "Cappuccino",
+          "status": "Pending"
+        },
+        {
+          "title": "Living Coral Rose Plant l活力珊瑚",
+          "url": "https://your-roses.com/product/living-coral-rose-2/",
+          "trademark": "Living Coral",
+          "status": "Pending"
+        },
+        {
+          "title": "pink n pretty Rose Plant|粉红美丽",
+          "url": "https://your-roses.com/product/pink-n-pretty-rose/",
+          "trademark": "Pink 'n Pretty",
+          "status": "Pending"
+        },
+        {
+          "title": "Pavlova Rose Plant|Japanese rose|帕夫洛娃",
+          "url": "https://your-roses.com/product/pavlova-rose/",
+          "trademark": "Pavlova",
+          "status": "Pending"
+        },
+        {
+          "title": "Whitby Abbey Rose Plant|Dutch Rose|惠比修道院",
+          "url": "https://your-roses.com/product/whitby-abbey-rose-2/",
+          "trademark": "Whitby Abbey",
+          "status": "Pending"
+        },
+        {
+          "title": "Jillian Rose Plant|Dutch Rose|吉莉安公主|吉莉安",
+          "url": "https://your-roses.com/product/jiian-rose/",
+          "trademark": "Jillian",
+          "status": "Pending"
+        },
+        {
+          "title": "Paradise Beach Rose Spekaradise Rose Plant",
+          "url": "https://your-roses.com/product/paradise-beach-rose-2/",
+          "trademark": "Paradise Beach",
+          "status": "Pending"
+        },
+        {
+          "title": "Darlington Rose Plant",
+          "url": "https://your-roses.com/product/darlington-rose-2/",
+          "trademark": "Darlington",
+          "status": "Pending"
+        },
+        {
+          "title": "Pride of Jane Rose Plant",
+          "url": "https://your-roses.com/product/pride-of-jane-rose/",
+          "trademark": "Pride of Jane",
+          "status": "Pending"
+        },
+        {
+          "title": "Living Coral Rose Plant",
+          "url": "https://your-roses.com/product/living-coral-rose/",
+          "trademark": "Living Coral",
+          "status": "Pending"
+        },
+        {
+          "title": "Wildberry Rose Plant",
+          "url": "https://your-roses.com/product/wildberry-rose/",
+          "trademark": "Wildberry",
+          "status": "Pending"
+        },
+        {
+          "title": "Emma Woodhouse Rose Plant",
+          "url": "https://your-roses.com/product/emma-woodhouse-rose/",
+          "trademark": "Emma WoodHouse",
+          "status": "Pending"
+        },
+        {
+          "title": "Shades of grey  Rose Plant",
+          "url": "https://your-roses.com/product/shades-of-grey-rose/",
+          "trademark": "Shades of Grey",
+          "status": "Pending"
+        },
+        {
+          "title": "Patchouli Rose Plant",
+          "url": "https://your-roses.com/product/patchouli-rose/",
+          "trademark": "Patchouli",
+          "status": "Pending"
+        },
+        {
+          "title": "Love Fountain Rose Plant",
+          "url": "https://your-roses.com/product/love-fountain-rose/",
+          "trademark": "Love Fountain",
+          "status": "Pending"
+        },
+        {
+          "title": "Solsbury Hill Rose Plant",
+          "url": "https://your-roses.com/product/solsbury-hill-rose/",
+          "trademark": "Solsbury Hill",
+          "status": "Pending"
+        },
+        {
+          "title": "Navy Rose Plant",
+          "url": "https://your-roses.com/product/navy-rose/",
+          "trademark": "Navy",
+          "status": "Pending"
+        },
+        {
+          "title": "Paradise Beach Rose",
+          "url": "https://your-roses.com/product/paradise-beach-rose/",
+          "trademark": "Paradise Beach",
+          "status": "Pending"
+        },
+        {
+          "title": "Country Peonia Rose Country Spirit Peonia Rose",
+          "url": "https://your-roses.com/product/country-peonia-rose/",
+          "trademark": "Country Spirit Peonia",
+          "status": "Pending"
+        },
+        {
+          "title": "Darlington Rose",
+          "url": "https://your-roses.com/product/darlington-rose/",
+          "trademark": "Darlington",
+          "status": "Pending"
+        },
+        {
+          "title": "Stanley Abbey Rose",
+          "url": "https://your-roses.com/product/stanley-abbey-rose/",
+          "trademark": "Stanley Abbey",
+          "status": "Pending"
+        },
+        {
+          "title": "Bourbon Street Rose",
+          "url": "https://your-roses.com/product/bourbon-street-rose/",
+          "trademark": "Bourbon Street",
+          "status": "Pending"
+        },
+        {
+          "title": "Whitby Abbey Rose Spetabbey Rose",
+          "url": "https://your-roses.com/product/whitby-abbey-rose/",
+          "trademark": "Whitby Abbey",
+          "status": "Pending"
+        },
+        {
+          "title": "Baronesse Rose",
+          "url": "https://your-roses.com/product/baronesse-rose/",
+          "trademark": "BARONESSE",
+          "status": "Registered"
+        },
+        {
+          "title": "Happy Piano Rose",
+          "url": "https://your-roses.com/product/happy-piano-rose/",
+          "trademark": "PIANO",
+          "status": "Registered"
+        },
+        {
+          "title": "Piano Rose",
+          "url": "https://your-roses.com/product/piano-rose/",
+          "trademark": "PIANO",
+          "status": "Registered"
+        },
+        {
+          "title": "Capri Rose Lady Capri Rose",
+          "url": "https://your-roses.com/product/capri-rose/",
+          "trademark": "Lady Capri",
+          "status": "Pending"
+        },
+        {
+          "title": "Republique de Montmartre Rose",
+          "url": "https://your-roses.com/product/republique-de-montmartre-rose/",
+          "trademark": "Montmartre",
+          "status": "Pending"
+        },
+        {
+          "title": "Moonlight in Paris Rose",
+          "url": "https://your-roses.com/product/moonlight-in-paris-rose/",
+          "trademark": "Moonlight in Paris",
+          "status": "Registered"
+        },
+        {
+          "title": "La Rose Monsieur DELrouniparf Rose",
+          "url": "https://your-roses.com/product/la-rose-monsieur/",
+          "trademark": "Monsieur",
+          "status": "Pending"
+        },
+        {
+          "title": "Marc Chagall Rose",
+          "url": "https://your-roses.com/product/marc-chagall-rose/",
+          "trademark": "Marc Chagall",
+          "status": "Pending"
+        }
+      ]
+    }
+  }
+}

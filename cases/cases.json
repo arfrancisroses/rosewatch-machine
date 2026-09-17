@@ -1,6 +1,6 @@
 {
   "_readme": "Rose Watch case database. 'cases' holds published findings matched to a Registered or Pending trademark (each case's full evidence record lives in cases/<CASE-NUMBER>/case.json). 'review_queue' holds matches against To Be Filed, Needs Review, Abandoned, Do Not File, Not Applicable, or Not in Trademark Chart records -- never characterized as confirmed infringement. 'site_code_registry' tracks the next sequence number for each website/seller case-number code so numbers are never reused or renumbered. This file is only ever appended to by a completed Rose Watch monitoring run -- never overwritten, and existing review_status values are always preserved.",
-  "last_run_completed": "2026-09-16T06:03:00-07:00",
+  "last_run_completed": "2026-09-17T06:03:00-07:00",
   "site_code_registry": {
     "hillsiderosefarm.com": {
       "site_code": "HILLSIDERO",
@@ -63,7 +63,7 @@
       "seller_location": "California, United States (site-stated \"Southern California\")",
       "website_host": "Shopify, Inc. (behind Cloudflare)",
       "first_date_found": "2026-09-10 13:28 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -78,7 +78,7 @@
       "seller_location": "California, United States (site-stated \"Southern California\")",
       "website_host": "Shopify, Inc. (behind Cloudflare)",
       "first_date_found": "2026-09-10 13:28 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Exact",
       "review_status": "New"
     },
@@ -93,7 +93,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -108,7 +108,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -123,7 +123,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -138,7 +138,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -153,7 +153,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -168,7 +168,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -183,7 +183,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -198,7 +198,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -213,7 +213,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -228,7 +228,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -243,7 +243,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -258,7 +258,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -273,7 +273,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -288,7 +288,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -303,7 +303,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -318,7 +318,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -378,7 +378,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -393,7 +393,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -408,7 +408,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -423,7 +423,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -438,7 +438,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -453,7 +453,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -468,7 +468,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -483,7 +483,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -498,7 +498,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -513,7 +513,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -528,7 +528,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -543,7 +543,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -558,7 +558,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -573,7 +573,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -588,7 +588,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -603,7 +603,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -618,7 +618,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -633,7 +633,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -648,7 +648,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -663,7 +663,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -678,7 +678,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -693,7 +693,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -708,7 +708,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -723,7 +723,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -738,7 +738,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -753,7 +753,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -768,7 +768,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -783,7 +783,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -798,7 +798,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -813,7 +813,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -828,7 +828,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -843,7 +843,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -858,7 +858,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -873,7 +873,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -888,7 +888,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -903,7 +903,7 @@
       "seller_location": "California, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -918,7 +918,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -933,7 +933,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -948,7 +948,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -963,7 +963,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -978,7 +978,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -993,7 +993,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1008,7 +1008,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1023,7 +1023,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1038,7 +1038,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1053,7 +1053,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1068,7 +1068,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1083,7 +1083,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1098,7 +1098,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1113,7 +1113,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1128,7 +1128,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1143,7 +1143,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1158,7 +1158,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1173,7 +1173,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1188,7 +1188,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1203,7 +1203,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1218,7 +1218,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1233,7 +1233,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1248,7 +1248,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1263,7 +1263,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1278,7 +1278,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1293,7 +1293,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Exact",
       "review_status": "New"
     },
@@ -1308,7 +1308,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Exact",
       "review_status": "New"
     },
@@ -1323,7 +1323,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1338,7 +1338,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1353,7 +1353,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Exact",
       "review_status": "New"
     },
@@ -1368,7 +1368,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Exact",
       "review_status": "New"
     },
@@ -1383,7 +1383,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1398,7 +1398,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1413,7 +1413,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1428,7 +1428,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1443,7 +1443,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1458,7 +1458,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1473,7 +1473,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1488,7 +1488,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1503,7 +1503,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1518,7 +1518,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1533,7 +1533,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1548,7 +1548,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1563,7 +1563,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1578,7 +1578,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1593,7 +1593,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1608,7 +1608,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1623,7 +1623,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1638,7 +1638,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1653,7 +1653,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1668,7 +1668,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1683,7 +1683,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1698,7 +1698,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1713,7 +1713,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1728,7 +1728,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1743,7 +1743,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1758,7 +1758,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1773,7 +1773,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1788,7 +1788,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1803,7 +1803,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1818,7 +1818,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1833,7 +1833,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1848,7 +1848,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1863,7 +1863,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1878,7 +1878,7 @@
       "seller_location": "Location not available",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1893,7 +1893,7 @@
       "seller_location": "Location not available",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1908,7 +1908,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1923,7 +1923,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1938,7 +1938,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1953,7 +1953,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1968,7 +1968,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1983,7 +1983,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1998,7 +1998,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2013,7 +2013,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2028,7 +2028,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2043,7 +2043,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2058,7 +2058,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2073,7 +2073,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2088,7 +2088,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2103,7 +2103,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2118,7 +2118,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2133,7 +2133,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2148,7 +2148,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2163,7 +2163,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2178,7 +2178,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2193,7 +2193,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2208,7 +2208,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2223,7 +2223,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2238,7 +2238,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2253,7 +2253,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2268,7 +2268,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2283,7 +2283,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2298,7 +2298,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2313,7 +2313,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2328,7 +2328,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2343,7 +2343,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2358,7 +2358,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2373,7 +2373,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2388,7 +2388,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-16 06:03 MST (America/Phoenix)",
+      "last_verified": "2026-09-17 06:03 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     }

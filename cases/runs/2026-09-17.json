@@ -1,0 +1,170 @@
+{
+  "_readme": "Per-run monitoring log, one file per calendar day (America/Phoenix), used to generate the Daily PDF Report. Distinct from cases.json, which is the permanent case/review-queue index.",
+  "run_date": "2026-09-17",
+  "generated_at": "2026-09-17 06:03 MST (America/Phoenix)",
+  "_run_note": "Fourth scheduled Mon-Fri run, and the first to include Redland Ranch Roses (added to the roster 2026-09-16). Product-count deltas since 2026-09-16: Muse Roses 750->751, Rose Explosion 1414->1416 (all others unchanged; Redland Ranch Roses at 1,846 has no prior day to compare against). None of those 3 newly listed products matched an active (Registered or Pending) trademark name. 153 of the 156 existing cases were re-verified present in their site's current catalog feed and had their Last Verified date updated; no case content changed and no previously recorded listing disappeared. The 3 Flower Meadow Dream cases could not be checked because that domain was unreachable (see its note). Two matches against Pending trademarks were found at Redland Ranch Roses and NO CASE WAS CREATED for either, deliberately: the matched products are a peony (Paeonia lactiflora 'Monsieur Jules Elie', matching the chart name \"Monsieur\") and a heuchera (Dolce(R) Wildberry Heuchera, matching the chart name \"Wildberry\"). Neither product is a rose, so a single common word shared with a rose trademark is not evidence of unauthorized rose sales. They are counted below as matches held for review and are put to the user for a decision rather than recorded as findings. Note these will re-surface on every future run until either a case or a suppression record exists for them.",
+  "sites": [
+    {
+      "company": "Bloomora Roses",
+      "url": "https://www.facebook.com/profile.php?id=61591662794131",
+      "accessible": false,
+      "platform": "Facebook",
+      "product_pages_reviewed": 0,
+      "notes": "Facebook page; facebook.com is blocked by this environment's network egress policy at the CONNECT stage, so the page was never reached. No open product feed exists for a Facebook page in any case. Unchanged limitation since the site was added 2026-09-15."
+    },
+    {
+      "company": "Ergonzy / Ergonzi (ergongzy.com)",
+      "url": "https://ergongzy.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 499,
+      "notes": "First attempt returned HTTP 429 (Too Many Requests); recovered on a retry later in the run and served its full catalog."
+    },
+    {
+      "company": "Ergonzy / Ergonzi (www.etsy.com)",
+      "url": "https://www.etsy.com/shop/Ergongzi",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "Etsy storefront; etsy.com is blocked by this environment's network egress policy at the CONNECT stage. The seller's own site (ergongzy.com) was crawled in full and carries the same catalog."
+    },
+    {
+      "company": "Flower Meadow Dream",
+      "url": "https://www.myroseworld.com/",
+      "accessible": false,
+      "platform": null,
+      "product_pages_reviewed": 0,
+      "notes": "Not reached. Both www.myroseworld.com and myroseworld.com were refused by this environment's egress proxy at the CONNECT stage (403 to CONNECT on all four host/platform combinations), so the request never reached the seller's server. Retried once mid-run with the same result. This is our own network policy, not a block by the site. The site's 3 existing cases (MYROSEWORL-001..003) could not be re-verified today and keep their 2026-09-16 Last Verified date."
+    },
+    {
+      "company": "GCM Ranch",
+      "url": "https://www.etsy.com/shop/GcmRanch",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "Etsy shop closed (dormant). Roster entry retained per user instruction (2026-09-15); expected to stay inaccessible and not awaiting any decision."
+    },
+    {
+      "company": "High Garden",
+      "url": "https://highgardenroses.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 670,
+      "notes": null
+    },
+    {
+      "company": "Hillside Rose Farm",
+      "url": "https://hillsiderosefarm.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 146,
+      "notes": null
+    },
+    {
+      "company": "Huniu Rose Garden",
+      "url": "https://huniurosegarden.ca",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 296,
+      "notes": "First attempt returned HTTP 429 (Too Many Requests); recovered on a retry later in the run and served its full catalog."
+    },
+    {
+      "company": "Jessie's Roses (www.jessiesrose.com)",
+      "url": "https://jessiesrose.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 0,
+      "notes": "Reached on the apex host after the www host was refused by the egress proxy. The Shopify feed returned HTTP 200 with an empty product array -- the store genuinely lists no products, consistent with the prior note on this seller. Counted as checked, zero products."
+    },
+    {
+      "company": "Jessie's Roses (www.etsy.com)",
+      "url": "https://www.etsy.com/shop/JessiesRoseUSA",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "Etsy storefront; etsy.com is blocked by this environment's network egress policy at the CONNECT stage."
+    },
+    {
+      "company": "Kate Roses",
+      "url": "https://kateroses.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 109,
+      "notes": null
+    },
+    {
+      "company": "Kisaki Plant",
+      "url": "https://kisakiplant.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 315,
+      "notes": null
+    },
+    {
+      "company": "Muse Roses",
+      "url": "https://museroses.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 751,
+      "notes": null
+    },
+    {
+      "company": "One Love",
+      "url": "https://oneloveroseandgardens.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 865,
+      "notes": null
+    },
+    {
+      "company": "Redland Ranch Roses",
+      "url": "https://redlandranchroses.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 1846,
+      "notes": "First scheduled run since the site joined the roster on 2026-09-16. Full Shopify catalog served. Its 2 active-trademark matches are both non-rose products and are held for review rather than opened as cases -- see the run note."
+    },
+    {
+      "company": "Rose Explosion",
+      "url": "https://roseexplosion.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 1416,
+      "notes": null
+    },
+    {
+      "company": "Springland Flowers",
+      "url": "https://springlandflowers.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 116,
+      "notes": null
+    },
+    {
+      "company": "Your Roses",
+      "url": "https://your-roses.com",
+      "accessible": true,
+      "platform": "WordPress/WooCommerce",
+      "product_pages_reviewed": 1656,
+      "notes": null
+    }
+  ],
+  "total_sites_on_roster": 16,
+  "total_urls_on_roster": 18,
+  "urls_accessible": 13,
+  "urls_inaccessible": 5,
+  "total_product_pages_reviewed": 8685,
+  "active_trademark_matches_found": 2,
+  "active_trademark_matches_by_status": {
+    "Registered": 0,
+    "Pending": 2
+  },
+  "cases_created_this_run": 0,
+  "cases_reverified_this_run": 153,
+  "matches_held_pending_case_creation": 2,
+  "review_queue_entries_this_run": 0,
+  "screenshot_limitation": "Still no case has a screenshot on file -- same network-proxy limitation as prior runs (headless Chromium cannot complete a connection through this environment's egress proxy). Explained to the user in chat on 2026-09-14; awaiting their choice of approach (manual capture vs. Wayback Machine vs. environment-level fix).",
+  "dashboard_updated": true,
+  "dashboard_url": "https://claude.ai/code/artifact/16e0d5da-a772-4f6c-81b7-80697febeeb1",
+  "matches_held_note": "Both matches are at Redland Ranch Roses and both are false positives on inspection: the products are a peony (Paeonia lactiflora 'Monsieur Jules Elie', which shares the single word \"Monsieur\" with a Pending chart entry) and a heuchera (Dolce(R) Wildberry Heuchera, sharing the word \"Wildberry\"). Neither product is a rose, so neither is evidence of unauthorized rose sales, and opening a case would record a known false positive as a potential finding. They are reported here instead so the check is on the record, and are put to the user for a decision."
+}
