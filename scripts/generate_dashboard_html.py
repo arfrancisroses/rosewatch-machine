@@ -107,7 +107,15 @@ def build_data():
         key = r["statusCategory"] or "Needs Review"
         status_counts[key] = status_counts.get(key, 0) + 1
     active_count = status_counts.get("Registered", 0) + status_counts.get("Pending", 0)
-    needs_review_tm = [r for r in trademarks if r["needsReview"]]
+    # Records flagged only because the chart never gave them a status are a
+    # different kind of problem from records whose own data conflicts, and there
+    # are eight times as many of them. Kept apart so the second group stays
+    # readable instead of being buried under the first.
+    flagged_tm = [r for r in trademarks if r["needsReview"]]
+    missing_status_tm = [r for r in flagged_tm
+                         if r["needsReviewReasons"] == ["Missing status"]]
+    needs_review_tm = [r for r in flagged_tm
+                       if any(x != "Missing status" for x in r["needsReviewReasons"])]
 
     data = {
         "generatedAt": now_phoenix_str(),
@@ -117,6 +125,7 @@ def build_data():
         "caseDetails": case_details,
         "reviewQueue": review_queue,
         "needsReviewTrademarks": needs_review_tm,
+        "missingStatusTrademarks": missing_status_tm,
         "dataSources": DATA_SOURCES_LOG,
         "meta": {
             "trademarkSourceFile": tm.get("source_file"),
@@ -127,15 +136,13 @@ def build_data():
             "siteCount": sites.get("record_count", 0),
             "statusCounts": status_counts,
             "activeCount": active_count,
-            "needsReviewCount": len(needs_review_tm),
+            "needsReviewCount": len(flagged_tm),
             # Split for the Overview: 80 of the 90 flagged records are flagged only
             # because the chart gives them no status at all, which is a different
             # problem from a record whose data conflicts with itself. One tile for
             # each, so the real data faults are not buried under the blank statuses.
-            "missingStatusCount": len([r for r in needs_review_tm
-                                       if r["needsReviewReasons"] == ["Missing status"]]),
-            "dataIssueCount": len([r for r in needs_review_tm
-                                   if any(x != "Missing status" for x in r["needsReviewReasons"])]),
+            "missingStatusCount": len(missing_status_tm),
+            "dataIssueCount": len(needs_review_tm),
             "caseCount": len(case_rows),
             "reviewQueueCount": len(review_queue),
             "lastRunCompleted": cases.get("last_run_completed"),
@@ -352,6 +359,7 @@ footer.foot { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--l
     <button class="tab" role="tab" data-panel="cases">Cases</button>
     <button class="tab" role="tab" data-panel="sites">Known Sites</button>
     <button class="tab" role="tab" data-panel="review">Needs Review</button>
+    <button class="tab" role="tab" data-panel="missing">Missing Status</button>
     <button class="tab" role="tab" data-panel="sources">Data Sources</button>
   </nav>
 
@@ -360,6 +368,7 @@ footer.foot { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--l
   <section class="panel" id="panel-cases"></section>
   <section class="panel" id="panel-sites"></section>
   <section class="panel" id="panel-review"></section>
+  <section class="panel" id="panel-missing"></section>
   <section class="panel" id="panel-sources"></section>
   <section class="panel" id="panel-case-detail"></section>
 
@@ -808,11 +817,42 @@ runPanel('sites', function renderSites(){
   `;
 });
 
+/* ---------- Missing Status ---------- */
+runPanel('missing', function renderMissing(){
+  const el = document.getElementById('panel-missing');
+  el.innerHTML = `
+    <div class="intro"><strong>Trademarks with no status in the chart</strong> &mdash; ${DATA.missingStatusTrademarks.length} of ${DATA.meta.trademarkCount} records have no status value at all in the Master Trademark Filing Chart. Nothing else about them is flagged.
+    <br><br>These are <strong>not crawled against</strong>: monitoring matches product titles to Registered and Pending marks only, so a record with no status is invisible to the daily scan until the chart says what it is.</div>
+    <div id="missing-tm-table"></div>
+  `;
+  makeTable(document.getElementById('missing-tm-table'), {
+    columns: [
+      {label:'Variety', sortKey:'variety'},
+      {label:'Breeder', sortKey:'breeder'},
+      {label:'Docket', sortKey:'docket'},
+      {label:'App / Serial No.', sortKey:'appNo'},
+      {label:'Reg. No.', sortKey:'regNo'},
+      {label:'Source Row', sortKey:'sourceRow'},
+    ],
+    rows: DATA.missingStatusTrademarks,
+    getSortValue: (r,k) => k==='sourceRow' ? (r[k]||0) : (r[k] ?? '').toString().toLowerCase(),
+    emptyMessage: 'Every trademark record in the chart has a status.',
+    rowHtml: r => `<tr>
+      <td>${esc(r.variety) || '<em>(unnamed)</em>'}</td>
+      <td>${esc(r.breeder)}</td>
+      <td class="mono">${esc(r.docket)}</td>
+      <td class="mono">${esc(r.appNo)}</td>
+      <td class="mono">${esc(r.regNo)}</td>
+      <td class="mono">${esc(r.sourceRow)}</td>
+    </tr>`
+  });
+});
+
 /* ---------- Needs Review ---------- */
 runPanel('review', function renderReview(){
   const el = document.getElementById('panel-review');
   el.innerHTML = `
-    <div class="intro"><strong>Trademark chart records needing review</strong> &mdash; ${DATA.needsReviewTrademarks.length} of ${DATA.meta.trademarkCount} records have missing, unclear, duplicate, or conflicting data.</div>
+    <div class="intro"><strong>Trademark chart records needing review</strong> &mdash; ${DATA.needsReviewTrademarks.length} of ${DATA.meta.trademarkCount} records carry unclear, duplicate or conflicting data and were not silently corrected. Records whose only fault is a blank status are on the <strong>Missing Status</strong> tab.</div>
     <div id="review-tm-table"></div>
     <div class="intro" style="margin-top:28px"><strong>Crawl matches held for review</strong> &mdash; matches against To Be Filed, Abandoned, Do Not File, Not Applicable, or Not-in-chart trademarks. Never characterized as confirmed infringement.</div>
     <div id="review-queue-table"></div>
