@@ -1,6 +1,6 @@
 {
   "source_file": "2026-09-10_MasterTrademarkFilingChart.xlsx",
-  "imported_date": "2026-09-16",
+  "imported_date": "2026-09-17",
   "record_count": 275,
   "records": [
     {
@@ -126,8 +126,10 @@
       "party_selling": "April & Ashley",
       "source_row": 8,
       "status_category": "Registered",
-      "needs_review": false,
-      "needs_review_reasons": []
+      "needs_review": true,
+      "needs_review_reasons": [
+        "Application/serial number 9733048 has 7 digits; every other numeric serial in this chart has 8. Possible dropped or extra digit -- verify against the source filing."
+      ]
     },
     {
       "row_index": 6,
@@ -315,8 +317,11 @@
       "party_selling": "April & Ashley",
       "source_row": 17,
       "status_category": "Registered",
-      "needs_review": false,
-      "needs_review_reasons": []
+      "needs_review": true,
+      "needs_review_reasons": [
+        "Application/serial number 97330478 is also used by 'Moonlight in Paris' (source row 20). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing.",
+        "Registration number 7296592 is also used by 'Moonlight in Paris' (source row 20). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing."
+      ]
     },
     {
       "row_index": 15,
@@ -378,8 +383,11 @@
       "party_selling": "April & Ashley",
       "source_row": 20,
       "status_category": "Registered",
-      "needs_review": false,
-      "needs_review_reasons": []
+      "needs_review": true,
+      "needs_review_reasons": [
+        "Application/serial number 97330478 is also used by 'Maurice Utrillo' (source row 17). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing.",
+        "Registration number 7296592 is also used by 'Maurice Utrillo' (source row 17). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing."
+      ]
     },
     {
       "row_index": 18,

@@ -66,6 +66,59 @@ def classify_status(raw_status):
     return None, True
 
 
+PLACEHOLDER_NUMBERS = {"", "NYA", "N/A", "NA", "TBD", "?", "NONE"}
+
+
+def _is_real_number(value):
+    """A number field that actually names a filing, not a placeholder like NYA."""
+    return value is not None and str(value).strip().upper() not in PLACEHOLDER_NUMBERS
+
+
+def flag_cross_record_issues(records):
+    """Flag problems only visible when records are compared to each other.
+
+    The per-row checks cannot see these: a serial number is individually
+    well-formed and only wrong because a different rose claims it too. The spec
+    requires duplicate and conflicting information to be surfaced rather than
+    silently corrected, so both sides of a collision are flagged -- either row
+    could be the mistaken one, and that is for the user to resolve against the
+    source filing.
+    """
+    for field, label in (("app_ser_no", "Application/serial number"),
+                         ("reg_no", "Registration number")):
+        by_value = {}
+        for rec in records:
+            if _is_real_number(rec.get(field)):
+                by_value.setdefault(str(rec[field]).strip(), []).append(rec)
+        for value, rows in by_value.items():
+            if len(rows) < 2:
+                continue
+            for rec in rows:
+                others = [r for r in rows if r is not rec]
+                where = ", ".join(
+                    f"{o['trademark']!r} (source row {o['source_row']})" for o in others)
+                rec["needs_review_reasons"].append(
+                    f"{label} {value} is also used by {where}. Two records cannot share one "
+                    f"filing; at least one is wrong. Not corrected automatically -- verify against "
+                    f"the source filing.")
+                rec["needs_review"] = True
+
+    # USPTO application serial numbers are eight digits; a shorter all-digit value
+    # is more likely a dropped character in the chart than a real serial.
+    for rec in records:
+        v = rec.get("app_ser_no")
+        if not _is_real_number(v):
+            continue
+        digits = str(v).strip()
+        if digits.isdigit() and len(digits) != 8:
+            rec["needs_review_reasons"].append(
+                f"Application/serial number {digits} has {len(digits)} digits; every other "
+                f"numeric serial in this chart has 8. Possible dropped or extra digit -- verify "
+                f"against the source filing.")
+            rec["needs_review"] = True
+    return records
+
+
 def find_latest_source(prefix_glob):
     matches = sorted(SOURCES_DIR.glob(prefix_glob))
     if not matches:
@@ -127,7 +180,7 @@ def parse_trademark_chart(path):
         rec["needs_review"] = bool(reasons)
         rec["needs_review_reasons"] = reasons
         records.append(rec)
-    return records
+    return flag_cross_record_issues(records)
 
 
 KNOWN_SITE_HEADERS_SHEET1 = None  # discovered dynamically
