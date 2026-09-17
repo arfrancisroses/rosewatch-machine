@@ -11,6 +11,8 @@ Last updated: 2026-09-10.
 
 - **Screenshot evidence.** No case has a screenshot yet -- this session's headless browser (Playwright/Chromium) cannot complete a connection through this environment's network egress proxy, even though direct page fetch works. User wants this explained (how to capture screenshots correctly), rather than solved silently or skipped. Explained 2026-09-14 (manual capture / Wayback Machine / environment-level fix); user has not yet chosen an approach.
 
+- **PDF attachment delivery is broken and unsafe (2026-09-17).** The Gmail tool takes attachment bytes only as an inline base64 string, so ~26,000 characters have to be emitted by hand. On 2026-09-17 that failed twice in one run: the first draft was silently truncated (3 of 5 chunks), and the second was worse -- the later chunks were **reconstructed rather than copied**, producing base64 that looked plausible but was not the file (its object 53 read `/Length 1374` against the real file's `1163`). Neither was sent; the report went out as a repository link instead, with the reason stated to the user. **Until a byte-exact mechanism exists, do not hand-transcribe a PDF into an attachment.** Send the repository link and say why. The 2026-09-15 procedure below is NOT sufficient: verifying only the head and tail passes a file whose middle is wrong, which is exactly what happened here. Any real fix has to remove hand-transcription from the path, not add more spot checks to it.
+
 If picked up in a fresh session, raise this before closing out that day's work.
 
 ### Resolved: GCM Ranch handling (decided 2026-09-15)
@@ -276,6 +278,8 @@ The send is also **time-critical**: the user reads this first thing in the morni
 - Subject: `Rose Watch Daily Report - YYYY-MM-DD` (same date format as the filename)
 - **Body: short.** Per explicit user instruction (2026-09-15), the email text is only: the time the scan completed (America/Phoenix), any errors / sites not fully accessible, and the number of new findings. Do **not** reproduce the report in the body -- that's what the attachment is for.
 - **Attachment: that day's PDF**, built and verified per the procedure below.
+
+**SUPERSEDED 2026-09-17 -- see Open Items. The procedure below is retained for its diagnosis of the problem, but head-and-tail verification is not enough: it passed a draft whose middle had been reconstructed rather than copied. Do not attach a hand-transcribed PDF; link the repository copy instead.**
 
 **Attaching the PDF correctly (learned the hard way, 2026-09-15).** The Gmail tool takes attachment bytes as an inline base64 string -- there is no attach-by-file-path option, so the ~24,000 base64 characters have to be emitted by hand. A first attempt corrupted the file (blank/missing pages) because the base64 was read from a `fold`-wrapped, line-numbered view and re-joined by hand; that transformation introduced ~4 character errors. **Copying is reliable; transforming is not.** Use this procedure:
 

@@ -166,5 +166,12 @@
   "screenshot_limitation": "Still no case has a screenshot on file -- same network-proxy limitation as prior runs (headless Chromium cannot complete a connection through this environment's egress proxy). Explained to the user in chat on 2026-09-14; awaiting their choice of approach (manual capture vs. Wayback Machine vs. environment-level fix).",
   "dashboard_updated": true,
   "dashboard_url": "https://claude.ai/code/artifact/16e0d5da-a772-4f6c-81b7-80697febeeb1",
-  "matches_held_note": "Both matches are at Redland Ranch Roses and both are false positives on inspection: the products are a peony (Paeonia lactiflora 'Monsieur Jules Elie', which shares the single word \"Monsieur\" with a Pending chart entry) and a heuchera (Dolce(R) Wildberry Heuchera, sharing the word \"Wildberry\"). Neither product is a rose, so neither is evidence of unauthorized rose sales, and opening a case would record a known false positive as a potential finding. They are reported here instead so the check is on the record, and are put to the user for a decision."
+  "matches_held_note": "Both matches are at Redland Ranch Roses and both are false positives on inspection: the products are a peony (Paeonia lactiflora 'Monsieur Jules Elie', which shares the single word \"Monsieur\" with a Pending chart entry) and a heuchera (Dolce(R) Wildberry Heuchera, sharing the word \"Wildberry\"). Neither product is a rose, so neither is evidence of unauthorized rose sales, and opening a case would record a known false positive as a potential finding. They are reported here instead so the check is on the record, and are put to the user for a decision.",
+  "email_delivery": {
+    "sent": true,
+    "sent_at": "2026-09-17 06:47 MST (America/Phoenix)",
+    "to": "aren@francisroses.com",
+    "attachment": null,
+    "note": "Report delivered as a repository link, not a PDF attachment. Two attachment attempts were built and both were rejected before sending: the first was truncated (3 of the 5 base64 chunks), the second did not match the real file on verification (its object 53 read /Length 1374 against the file's 1163 -- the later chunks had been reconstructed rather than copied). Nothing damaged was sent. The email states the reason plainly and links the committed report. See CLAUDE.md Open Items."
+  }
 }
