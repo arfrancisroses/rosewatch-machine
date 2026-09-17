@@ -11,14 +11,17 @@ Last updated: 2026-09-10.
 
 - **Screenshot evidence.** No case has a screenshot yet -- this session's headless browser (Playwright/Chromium) cannot complete a connection through this environment's network egress proxy, even though direct page fetch works. User wants this explained (how to capture screenshots correctly), rather than solved silently or skipped. Explained 2026-09-14 (manual capture / Wayback Machine / environment-level fix); user has not yet chosen an approach.
 
-- **PDF attachment delivery does not work through this interface, and the reason is measured, not suspected (2026-09-17).** The Gmail tool accepts attachment bytes only as an inline base64 string; neither it nor the Drive tool can attach from a file path. That forces the whole payload to be retyped by hand, and hand-transcription of base64 is not accurate enough at any useful length. Evidence from a single day:
-  - Attempt 1 was truncated -- 3 of 5 chunks reached the draft.
-  - Attempt 2 had its later chunks **reconstructed rather than copied**: plausible-looking base64 for a document that does not exist (object 53 declared `/Length 1374` against the real file's `1163`).
-  - Attempt 3 halved the file first (9,221 bytes, 12,296 base64 characters, three chunks read from clean single-line files -- the supposedly reliable path) and **still corrupted a character**: the dashboard URL came through as `...80699febeeb1` where the file says `...80697febeeb1`. Confirmed by two independent reads of the draft against the source file. Not sent.
-  So the 2026-09-15 "byte-exact over 6,000 characters" result was luck, not a property of the method, and head-and-tail verification only ever certified the ends.
-  **Do not attach a hand-transcribed PDF. Deliver the repository link and say why.** Verification cannot rescue this: reading the draft back is itself a transcription, so a mismatch can never be pinned on the draft or the check without more transcription. A real fix has to remove hand-transcription from the path -- an attach-by-path capability, or a delivery channel that does not encode bytes through the model. Ask the user before trying anything else here; three failures in one morning is enough.
-
 If picked up in a fresh session, raise this before closing out that day's work.
+
+### Resolved: report delivery (decided 2026-09-17)
+
+Email is not a usable channel for this report, and the user has ended it. The record, because it cost a morning to establish:
+
+- **Attachments cannot be made correct.** The Gmail tool accepts attachment bytes only as an inline base64 string, and neither it nor the Drive tool can attach from a file path, so the payload has to be retyped by the model. Three attempts in one run: the first was truncated (3 of 5 chunks), the second had its later chunks **reconstructed rather than copied** (object 53 declared `/Length 1374` against the real file's `1163`), and the third -- after halving the file, from clean single-line chunks -- still corrupted a character (`...80699febeeb1` for `...80697febeeb1`). None were sent. Verification cannot rescue the method either: reading the draft back is itself a transcription, so a mismatch cannot be pinned on the draft or on the check without transcribing more.
+- **Repository links do not reach the user.** Their phone hands GitHub URLs to the GitHub app or a sign-in page, for `github.com` and `raw.githubusercontent.com` alike. Nothing about how the link is written changes that.
+- **So delivery is now `SendUserFile`, proactive** -- see the DELIVERY section. The bytes are read from disk and never pass through the model.
+
+Do not reopen this by trying to be more careful with base64. A real alternative would have to remove hand-transcription from the path -- an attach-by-path capability, or a connector that takes a file reference. Ask the user before attempting anything else here.
 
 ### Resolved: GCM Ranch handling (decided 2026-09-15)
 
@@ -268,38 +271,17 @@ Include a clear "As of" timestamp on the first page showing when the evidence wa
 
 If no new findings were discovered, the report must clearly state that no new potential infringement findings were identified, and report any coverage limitations.
 
-## EMAIL DELIVERY
+## DELIVERY
 
-Per explicit user instruction (2026-09-15): after generating each day's PDF report, email the report to the user (aren@francisroses.com) via the Gmail connector. Do this every time a daily report is generated -- scheduled Mon-Fri run or an ad hoc one -- including no-new-findings days. This is delivery to the user themselves, not "sending evidence or reports to third parties" (which still requires separate explicit permission per Important Safeguards).
+**Per explicit user instruction (2026-09-17): no emails. Hand the PDF to the user directly in the session.**
 
-**The daily run's email is automatic; a re-send is not (per user instruction, 2026-09-16).**
+After the report is generated, committed and pushed, deliver it with `SendUserFile`, passing the path to that day's PDF and `status: "proactive"` -- the flag that lets it surface on the user's phone rather than waiting to be found. Then give the chat summary. The user downloads the file and forwards it themselves if they want it in an inbox; that is their call and needs nothing from Rose Watch.
 
-- **The one email per scheduled run is pre-authorized.** Do not ask whether to send it and do not wait for a reply -- just send it. `.claude/settings.json` pre-approves the Gmail draft/send tools and the scripts and git commands the run uses, so nothing in the sequence should stall on an approval prompt.
-- **Any second email about the same report needs the user's permission first.** That covers a corrected copy after fixing a bad PDF, a re-send of numbers that changed, or a duplicate for any other reason. Say what changed and why a re-send is worth it, then wait for an answer. The point of the standing authorization is that the user reliably gets one report each morning -- not that Rose Watch may mail them repeatedly.
+This replaces email delivery entirely. Do not send the daily report by email, do not send a short text summary by email, and do not send a link in place of the file. If the user asks for an email on a particular day, that is a fresh instruction and needs their explicit ask each time.
 
-The send is also **time-critical**: the user reads this first thing in the morning, so it must go out as soon as the report exists, not after any other work. On 2026-09-16 the scan finished at 06:03 but the email did not leave until 08:05, because improvement work was done in between -- from the user's side that is indistinguishable from the report never arriving. Order of operations on a run day: crawl -> cases -> dashboard -> PDF -> commit/push -> **email** -> chat summary. Anything optional (refactors, tooling, investigating a lead) waits until after the email is sent.
+Why this path: it is the only one where the report's bytes are never re-encoded by hand. `SendUserFile` reads the file from disk. Everything else available here -- Gmail attachments, Google Drive uploads -- takes the bytes as an inline base64 string, which means the whole payload is retyped by the model, and that does not survive contact with reality (see the resolved note above).
 
-- To: aren@francisroses.com
-- Subject: `Rose Watch Daily Report - YYYY-MM-DD` (same date format as the filename)
-- **Body: short.** Per explicit user instruction (2026-09-15), the email text is only: the time the scan completed (America/Phoenix), any errors / sites not fully accessible, and the number of new findings. Do **not** reproduce the report in the body -- that's what the attachment is for.
-- **Attachment: that day's PDF**, built and verified per the procedure below.
-
-**SUPERSEDED 2026-09-17 -- see Open Items. The procedure below is retained for its diagnosis of the problem, but head-and-tail verification is not enough: it passed a draft whose middle had been reconstructed rather than copied. Do not attach a hand-transcribed PDF; link the repository copy instead.**
-
-**Attaching the PDF correctly (learned the hard way, 2026-09-15).** The Gmail tool takes attachment bytes as an inline base64 string -- there is no attach-by-file-path option, so the ~24,000 base64 characters have to be emitted by hand. A first attempt corrupted the file (blank/missing pages) because the base64 was read from a `fold`-wrapped, line-numbered view and re-joined by hand; that transformation introduced ~4 character errors. **Copying is reliable; transforming is not.** Use this procedure:
-
-1. `base64 -w0 "reports/Rose Watch Daily Report - YYYY-MM-DD.pdf" > pdf.b64` in the scratchpad, then `split -b 6000 -d pdf.b64 part_`.
-2. `Read` each `part_NN` file. Each is a single unbroken line, so copying it into the tool call is a pure copy with no unwrapping, no line numbers to strip. A controlled test of this method was byte-exact over 6,000 characters.
-3. `create_draft` with the attachment content = the parts concatenated in order, in one string.
-4. Verify before sending: `get_draft` with `messageFormat: RAW` returns the full MIME (base64url). The attachment appears inside it as the PDF's base64 wrapped at 76 chars with CRLF. Copy a slice back, `base64.urlsafe_b64decode` it, strip the CRLFs, and confirm it matches the corresponding part of `pdf.b64`. Check at minimum the head and the tail.
-5. `send_message` with `draftId` -- this sends the verified draft unchanged, with no second transcription.
-
-Never re-type the base64 into `send_message` directly; always send the draft you verified. Never claim an attachment was fully verified if only sampled -- say what was actually checked.
-
-Also commit and push the report **before** emailing, so this link is live as a fallback if a PDF ever arrives damaged:
-`https://github.com/arfrancisroses/rosewatch-machine/blob/claude/charming-archimedes-9dhty7/reports/Rose%20Watch%20Daily%20Report%20-%20YYYY-MM-DD.pdf`
-
-If the Gmail connector is unavailable or the send fails, say so explicitly in the chat summary (per "never fabricate") rather than silently skipping it -- the report still gets committed/pushed regardless of whether the email succeeds.
+Keep committing and pushing each day's PDF before delivering it. The user asked for the repository to stay as the archive, and it is also the backstop if a delivered file is ever lost.
 
 ## REPORTING
 
@@ -365,9 +347,9 @@ Your goal is to provide accurate, organized, traceable research that helps Franc
   7. Run `python3 scripts/generate_dashboard.py` to refresh `dashboard/*.md` from the updated data.
   8. Generate `reports/Rose Watch Daily Report - YYYY-MM-DD.pdf` per the DAILY PDF REPORT section (use the `pdf` skill). Even a no-findings day gets a report.
   9. Set `cases.json.last_run_completed` to the run's ISO timestamp in America/Phoenix.
-  10. Commit and push the updated `data/`, `cases/`, `dashboard/`, and `reports/` files to the designated branch. Do this **before** emailing, so the PDF link in the email resolves.
-  11. Email the report to aren@francisroses.com per the EMAIL DELIVERY section -- short body (scan time, errors, new-findings count) with that day's PDF attached and verified via the draft/RAW procedure. **Send this one without asking, and before starting anything else** -- it is the deliverable the user is waiting on. (A *second* email about the same report is different: ask first. See EMAIL DELIVERY.) Note success or failure in the chat summary either way.
-  12. Give the REPORTING summary in chat. Any optional work (tooling, refactors, following up a lead) comes after this, never before the email.
+  10. Commit and push the updated `data/`, `cases/`, `dashboard/`, and `reports/` files to the designated branch.
+  11. Deliver the PDF with `SendUserFile` (`status: "proactive"`) per the DELIVERY section. **No email** -- per user instruction 2026-09-17, the daily report is not emailed at all, in any form.
+  12. Give the REPORTING summary in chat. Any optional work (tooling, refactors, following up a lead) comes after this.
 - **Case numbers are permanent.** Derive the website code once per seller (per the CASE NUMBERS algorithm) and store it in `site_code_registry`; reuse the stored code even if a rule change would compute a different one later.
 - **Never fabricate.** If a site is inaccessible (CAPTCHA, login wall, Cloudflare, timeout, robots, deleted page), record that exact limitation in both the case (if one exists) and the daily report — never mark an unreachable site "clean" and never skip mentioning it.
 - **No automation changes.** Do not create, modify, or delete scheduled triggers/Routines for Rose Watch runs unless the user explicitly asks.

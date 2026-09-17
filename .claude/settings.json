@@ -1,9 +1,6 @@
 {
   "permissions": {
     "allow": [
-      "mcp__Gmail__create_draft",
-      "mcp__Gmail__get_draft",
-      "mcp__Gmail__send_message",
       "Bash(git push:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
