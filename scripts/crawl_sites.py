@@ -144,10 +144,47 @@ def active_trademarks():
     return out
 
 
+# Genus names of plants that are not roses. A trademark name is a word, and a
+# word can land on any plant: the chart's "Monsieur" matched a peony and
+# "Wildberry" matched a heuchera, both at a general nursery that sells far more
+# than roses. Neither is evidence of unauthorized rose sales, so they are not
+# matches at all and are dropped before anything downstream sees them. Per user
+# instruction 2026-09-17: if the product is not a rose, it is not a finding.
+NON_ROSE_GENERA = (
+    "paeonia", "peony", "peonies", "heuchera", "hydrangea", "kalmia", "aruncus",
+    "gaillardia", "sedum", "cornus", "dogwood", "astilbe", "abelia", "clematis",
+    "hosta", "echinacea", "salvia", "lavandula", "lavender", "buxus", "boxwood",
+    "acer", "maple", "magnolia", "camellia", "azalea", "rhododendron", "viburnum",
+    "spiraea", "spirea", "weigela", "forsythia", "lilac", "syringa", "phlox",
+    "iris", "peonia", "helleborus", "hellebore", "geranium", "dianthus", "yucca",
+    "juniperus", "juniper", "thuja", "arborvitae", "picea", "spruce", "pinus",
+    "mountain laurel", "goat's beard", "goats beard", "blanket flower",
+    "stonecrop", "coral bells", "butterfly bush", "buddleia", "crape myrtle",
+    "lagerstroemia", "nandina", "pieris", "ilex", "holly",
+)
+
+
+def is_rose_product(title):
+    """True unless the title names a plant that is not a rose.
+
+    Conservative on purpose: a title that says rose or Rosa anywhere is kept even
+    if it also names another genus, so a genuine rose listing is never dropped by
+    a stray word. The cost of a wrong drop is a missed finding; the cost of a
+    wrong keep is a line in a report. Only the first is serious.
+    """
+    t = normalize(title)
+    toks = set(t.split())
+    if "rose" in toks or "roses" in toks or "rosa" in toks:
+        return True
+    return not any(g in t for g in NON_ROSE_GENERA)
+
+
 def match_titles(items, active):
     """Whole-word match of a trademark name inside a product title."""
     matches = []
     for title, url in items:
+        if not is_rose_product(title):
+            continue
         toks = normalize(title).split()
         for tm_norm, rec in active.items():
             tw = tm_norm.split()

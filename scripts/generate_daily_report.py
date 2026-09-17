@@ -317,7 +317,7 @@ def generate(run_date_str):
 
     # ---- Dashboard confirmation ----
     story.append(Paragraph("Dashboard", styles["RWH2"]))
-    dash_note = "The Rose Watch dashboard (Overview, Trademarks, Cases, Known Sites, Needs Review, Data Sources) was updated to reflect this run." if run.get("dashboard_updated") else "The dashboard was NOT updated this run."
+    dash_note = "The Rose Watch dashboard (Overview, Trademarks, Cases, Known Sites, Needs Review, Missing Status, Data Sources) was updated to reflect this run." if run.get("dashboard_updated") else "The dashboard was NOT updated this run."
     story.append(Paragraph(dash_note, styles["RWBody"]))
     if run.get("dashboard_url"):
         story.append(Paragraph(f'Dashboard: <link href="{run["dashboard_url"]}">{run["dashboard_url"]}</link>', styles["RWBodySmall"]))
@@ -359,7 +359,7 @@ def generate(run_date_str):
             tbl = wrapped_table(
                 ["Case #", "Rose Name", "TM Status", "Seller Location", "Product URL"],
                 find_rows,
-                [1.1*inch, 1.35*inch, 0.7*inch, 2.0*inch, 1.1*inch],
+                [1.25*inch, 1.3*inch, 0.7*inch, 1.9*inch, 1.1*inch],
                 styles,
                 raw_html_cols={4},
             )
@@ -458,7 +458,7 @@ def generate(run_date_str):
         story.append(wrapped_table(
             ["Case #", "Rose Name", "Seller", "First Found", "Product URL"],
             find_rows,
-            [1.0*inch, 1.5*inch, 1.35*inch, 0.85*inch, 1.45*inch],
+            [1.25*inch, 1.45*inch, 1.25*inch, 0.85*inch, 1.4*inch],
             styles,
             raw_html_cols={4},
         ))

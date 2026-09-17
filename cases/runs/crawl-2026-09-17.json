@@ -1,22 +1,7 @@
 {
   "crawl_date": "2026-09-17",
   "total_product_pages_reviewed": 8685,
-  "new_matches": [
-    {
-      "site": "Redland Ranch Roses",
-      "title": "Paeonia lactiflora 'Monsieur Jules Elie'  - Monsieur Jules Elie Peony",
-      "url": "https://redlandranchroses.com/products/paeonia-lactiflora-monsieur-jules-elie-monsieur-jules-elie-peony",
-      "trademark": "Monsieur",
-      "status": "Pending"
-    },
-    {
-      "site": "Redland Ranch Roses",
-      "title": "Heuchera 'Wildberry'  - Dolce® Wildberry Heuchera",
-      "url": "https://redlandranchroses.com/products/heuchera-wildberry-dolce®-wildberry-heuchera",
-      "trademark": "Wildberry",
-      "status": "Pending"
-    }
-  ],
+  "new_matches": [],
   "sites": {
     "Bloomora Roses": {
       "url_used": null,
@@ -658,20 +643,7 @@
       "platform": "Shopify",
       "count": 1846,
       "error": null,
-      "matches": [
-        {
-          "title": "Paeonia lactiflora 'Monsieur Jules Elie'  - Monsieur Jules Elie Peony",
-          "url": "https://redlandranchroses.com/products/paeonia-lactiflora-monsieur-jules-elie-monsieur-jules-elie-peony",
-          "trademark": "Monsieur",
-          "status": "Pending"
-        },
-        {
-          "title": "Heuchera 'Wildberry'  - Dolce® Wildberry Heuchera",
-          "url": "https://redlandranchroses.com/products/heuchera-wildberry-dolce®-wildberry-heuchera",
-          "trademark": "Wildberry",
-          "status": "Pending"
-        }
-      ]
+      "matches": []
     },
     "Rose Explosion": {
       "url_used": "https://roseexplosion.com",
