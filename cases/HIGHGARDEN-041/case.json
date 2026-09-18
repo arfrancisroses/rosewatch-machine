@@ -1,0 +1,51 @@
+{
+  "case_number": "HIGHGARDEN-041",
+  "site_code": "HIGHGARDEN",
+  "variety": "Kensington Gardens!",
+  "matched_trademark": "Kensington Gardens!",
+  "trademark_status": "Not Applicable",
+  "trademark_status_as_written": "N/A",
+  "trademark_application_or_registration_no": "App. Ser. No. N/A (Reg. No.: N/A)",
+  "breeder": "Piet Schreurs Holding B.V.",
+  "seller_name": "High Garden",
+  "website_domain": "highgardenroses.com",
+  "product_url": "https://highgardenroses.com/products/kensington-gardens-netherlands-florist-shrub-rose",
+  "exact_product_title": "Kensington Gardens Dutch Florist Shrub Rose",
+  "quoted_text": "A vibrant orange garden rose with ruffled petals and a bright green heart. It shares similarities with the well-known Vuvuzela rose, ready to bring joy and delight to any garden.",
+  "price": "30.00",
+  "currency": "USD",
+  "quantity_or_form": "S / Own Root",
+  "match_classification": "Strong",
+  "match_explanation": "The product title contains the full chart name \"Kensington Gardens!\" as a phrase, inside a longer title.",
+  "review_status": "New",
+  "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Oregon",
+    "city": "Portland",
+    "source": "Site homepage: \"Grown and shipped from Portland, Oregon\" (highgardenroses.com)",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed and site footer)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.65",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown."
+  ],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-09-18, the first run to match product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"N/A\", not an enforceable registration: it is recorded so the match is tracked, and must not be read as a finding of infringement. The product title contains the full chart name \"Kensington Gardens!\" as a phrase, inside a longer title.",
+  "history": [
+    {
+      "date": "2026-09-18 06:06 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created by the first all-status crawl; chart status carried through unchanged."
+    }
+  ]
+}

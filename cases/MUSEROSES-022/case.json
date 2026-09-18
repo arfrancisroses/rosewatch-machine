@@ -1,0 +1,51 @@
+{
+  "case_number": "MUSEROSES-022",
+  "site_code": "MUSEROSES",
+  "variety": "St Tropez",
+  "matched_trademark": "St Tropez",
+  "trademark_status": "(no status)",
+  "trademark_status_as_written": null,
+  "trademark_application_or_registration_no": "App. Ser. No. none on chart (Reg. No.: none on chart)",
+  "breeder": "Roses Orard Selection Edition",
+  "seller_name": "Muse Roses",
+  "website_domain": "museroses.com",
+  "product_url": "https://museroses.com/products/st-tropez-rose",
+  "exact_product_title": "St.Tropez Rose",
+  "quoted_text": ".rose-detail-minimal { font-family: inherit; color: #2b2b2b; line-height: 1.75; font-size: 16px; } .rose-detail-minimal h2 { font-size: 24px; margin: 34px 0 14px; color: #222; } .rose-summary { border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; padding: 24px 0; margin: 20px 0 30px; } .rose-keywords span { border: 1px solid #ddd; border-radius: 999px; padding: 6px 12px; font-size: 13px; margin-right: 6px...",
+  "price": "68.00",
+  "currency": "USD",
+  "quantity_or_form": "Live plant listing (no explicit pot size or quantity in the product feed)",
+  "match_classification": "Strong",
+  "match_explanation": "The product title contains the full chart name \"St Tropez\" as a phrase, inside a longer title.",
+  "review_status": "New",
+  "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Texas",
+    "city": "Buda",
+    "source": "Not confirmed directly this run -- the site now redirects to molarose.com, which was blocked by this session's network egress policy. Carried over from prior known-sites research (data/known_sites.json), which separately notes the stated Texas office address resembles a home address -- flagged, not confirmed.",
+    "estimated": true
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed under the museroses.com domain)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.65",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown."
+  ],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-09-18, the first run to match product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"blank\", not an enforceable registration: it is recorded so the match is tracked, and must not be read as a finding of infringement. The product title contains the full chart name \"St Tropez\" as a phrase, inside a longer title.",
+  "history": [
+    {
+      "date": "2026-09-18 06:06 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created by the first all-status crawl; chart status carried through unchanged."
+    }
+  ]
+}

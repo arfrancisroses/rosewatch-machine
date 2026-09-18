@@ -136,10 +136,19 @@ def marketplace_name(url):
 
 
 def active_trademarks():
+    """Every named record in the chart, whatever its status.
+
+    Until 2026-09-18 this returned Registered and Pending only, which meant the
+    other 182 of 275 chart records were never compared against a product title at
+    all -- the review queue in the spec could not fill because nothing outside the
+    active list was ever looked at. Per user instruction 2026-09-18 the crawl now
+    matches every name; status travels with each match so a To Be Filed hit is
+    never presented as an enforceable finding.
+    """
     recs = json.loads((REPO_ROOT / "data" / "trademarks.json").read_text())["records"]
     out = {}
     for r in recs:
-        if r.get("status_category") in ("Registered", "Pending") and r.get("trademark"):
+        if r.get("trademark"):
             out.setdefault(normalize(r["trademark"]), r)
     return out
 
@@ -191,7 +200,8 @@ def match_titles(items, active):
             if any(toks[i:i + len(tw)] == tw for i in range(len(toks) - len(tw) + 1)):
                 matches.append({"title": title, "url": url,
                                 "trademark": rec["trademark"],
-                                "status": rec.get("status_category")})
+                                "status": rec.get("status_category") or "(no status)",
+                                "status_raw": rec.get("status")})
                 break
     return matches
 
@@ -218,7 +228,7 @@ def main():
     active = active_trademarks()
     existing = existing_case_urls()
     sites = json.loads((REPO_ROOT / "data" / "known_sites.json").read_text())["records"]
-    print(f"{len(active)} active trademark names, {len(existing)} existing case URLs", file=sys.stderr)
+    print(f"{len(active)} chart names (all statuses), {len(existing)} existing case URLs", file=sys.stderr)
 
     results, new_matches, total = {}, [], 0
     for site in sites:

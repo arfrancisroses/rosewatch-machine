@@ -1,0 +1,51 @@
+{
+  "case_number": "ROSEEXPLOS-051",
+  "site_code": "ROSEEXPLOS",
+  "variety": "Westminster Abbey",
+  "matched_trademark": "Westminster Abbey",
+  "trademark_status": "Abandoned",
+  "trademark_status_as_written": "Abandoned",
+  "trademark_application_or_registration_no": "App. Ser. No. 97276873 (Reg. No.: N/A)",
+  "breeder": "Piet Schreurs Holding B.V.",
+  "seller_name": "Rose Explosion",
+  "website_domain": "roseexplosion.com",
+  "product_url": "https://roseexplosion.com/products/westminster-abbey",
+  "exact_product_title": "Westminster Abbey Rose Plant｜威斯敏特大教堂",
+  "quoted_text": "Name: Westminster Abbey Origin: Netherlands Release time: 2018 Rose Type: Cut Roses Color: Mysterious gray purple Fragrance: Light tea fragrance Plant: 2-year-old live plant with strong roots Plant height: 120cm Flower: Diameter 10cm, Double, with more than 50 petals Characteristics: It blooms repeatedly for many seasons, has good flowering ability and strong disease resistance.",
+  "price": "65.00",
+  "currency": "USD",
+  "quantity_or_form": "Live plant listing (no explicit pot size or quantity in the product feed)",
+  "match_classification": "Strong",
+  "match_explanation": "The product title contains the full chart name \"Westminster Abbey\" as a phrase, inside a longer title.",
+  "review_status": "New",
+  "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "China (Estimated)",
+    "state_or_region": "Not available on page",
+    "city": "Not available on page",
+    "source": "Estimated from prior known-sites research (data/known_sites.json), which notes this seller ships from China. The site's own Contact page returned 404 this run and the homepage shows only a phone number with no geographic text.",
+    "estimated": true
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.66",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown."
+  ],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-09-18, the first run to match product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"Abandoned\", not an enforceable registration: it is recorded so the match is tracked, and must not be read as a finding of infringement. The product title contains the full chart name \"Westminster Abbey\" as a phrase, inside a longer title.",
+  "history": [
+    {
+      "date": "2026-09-18 06:06 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created by the first all-status crawl; chart status carried through unchanged."
+    }
+  ]
+}

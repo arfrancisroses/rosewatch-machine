@@ -144,6 +144,10 @@ def build_data():
             "missingStatusCount": len(missing_status_tm),
             "dataIssueCount": len(needs_review_tm),
             "caseCount": len(case_rows),
+            # Cases now exist for every chart status, so the headline count no longer
+            # equals the number that carry an enforceable right. Both are shown.
+            "enforceableCaseCount": len([c for c in case_rows
+                                         if c.get("trademark_status") in ("Registered", "Pending")]),
             "reviewQueueCount": len(review_queue),
             "lastRunCompleted": cases.get("last_run_completed"),
         },
@@ -497,7 +501,8 @@ runPanel('overview', function renderOverview(){
       <div class="stat warn"><div class="n tabular">${m.missingStatusCount}</div><div class="l">Trademarks with<br>no status in the chart</div></div>
       <div class="stat bad"><div class="n tabular">${m.dataIssueCount}</div><div class="l">Trademarks needing<br>review</div></div>
       <div class="stat"><div class="n tabular">${m.siteCount}</div><div class="l">Known reseller sites<br>(closed roster)</div></div>
-      <div class="stat ok"><div class="n tabular">${m.caseCount}</div><div class="l">Active cases</div></div>
+      <div class="stat ok"><div class="n tabular">${m.caseCount}</div><div class="l">Cases on record<br>(all chart statuses)</div></div>
+      <div class="stat accent"><div class="n tabular">${m.enforceableCaseCount}</div><div class="l">Cases against Registered<br>or Pending marks</div></div>
       <div class="stat warn"><div class="n tabular">${m.reviewQueueCount}</div><div class="l">Review-queue entries</div></div>
     </div>
     <div class="intro">

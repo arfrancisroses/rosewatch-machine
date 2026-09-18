@@ -1,0 +1,51 @@
+{
+  "case_number": "REDLANDRAN-002",
+  "site_code": "REDLANDRAN",
+  "variety": "My Girl",
+  "matched_trademark": "My Girl",
+  "trademark_status": "To Be Filed",
+  "trademark_status_as_written": "To Be Filed",
+  "trademark_application_or_registration_no": "App. Ser. No. none on chart (Reg. No.: NYA)",
+  "breeder": "Interplant Roses B.V.",
+  "seller_name": "Redland Ranch Roses",
+  "website_domain": "redlandranchroses.com",
+  "product_url": "https://redlandranchroses.com/products/rosa-baigirl-easy-elegance®-my-girl-rose",
+  "exact_product_title": "Rosa 'BAIgirl'  - Easy Elegance® My Girl Rose",
+  "quoted_text": "My Girl Rose is a fast-growing deciduous shrub with upright branching and deep green foliage. The vivid deep pink double flowers with ruffled petals blooms continuously from late spring into fall. Best grown with full sun in rich and moist well-drained, lightly acidic soils. My Girl is highly disease resistant. Type: Shrub Height: 3' - 5' Spread: 3’ - 5' Spacing: 4' USDA Hardiness Zone: 4 - 9 Culture: Full Sun, Part ...",
+  "price": "59.99",
+  "currency": "USD",
+  "quantity_or_form": "2 GALLON",
+  "match_classification": "Strong",
+  "match_explanation": "The product title contains the full chart name \"My Girl\" as a phrase, inside a longer title.",
+  "review_status": "New",
+  "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Florida (Estimated)",
+    "city": "Redland / Miami-Dade area (Estimated)",
+    "source": "No address published on the contact, about or privacy pages -- only info@redlandranchroses.com. Estimated from the business name and the site's Deep-South / Fortuniana-rootstock focus; unconfirmed.",
+    "estimated": true
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (the site's own privacy policy states it is 'powered by Shopify')",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.32 (apex), within Shopify's 23.227.38.0/24 range",
+    "ip_geolocation": "Not determined",
+    "registrar": "Not determined -- RDAP/whois endpoints (rdap.org, rdap.verisign.com) are refused by this environment's network egress policy",
+    "hosting_country": "Not determined"
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown."
+  ],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-09-18, the first run to match product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"To Be Filed\", not an enforceable registration: it is recorded so the match is tracked, and must not be read as a finding of infringement. The product title contains the full chart name \"My Girl\" as a phrase, inside a longer title.",
+  "history": [
+    {
+      "date": "2026-09-18 06:06 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created by the first all-status crawl; chart status carried through unchanged."
+    }
+  ]
+}

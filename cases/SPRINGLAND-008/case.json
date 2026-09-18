@@ -1,0 +1,51 @@
+{
+  "case_number": "SPRINGLAND-008",
+  "site_code": "SPRINGLAND",
+  "variety": "Royal Diva",
+  "matched_trademark": "Royal Diva",
+  "trademark_status": "Not Applicable",
+  "trademark_status_as_written": "N/A",
+  "trademark_application_or_registration_no": "App. Ser. No. N/A (Reg. No.: N/A)",
+  "breeder": "Roses Forever",
+  "seller_name": "Springland Flowers",
+  "website_domain": "springlandflowers.com",
+  "product_url": "https://springlandflowers.com/products/opera-queen-皇家迪瓦-歌剧皇后-shrub-rose-2-years-old-1-gal-non-grafted-own-root",
+  "exact_product_title": "Royal Diva/Opera Queen 皇家迪瓦/歌剧皇后，Shrub Rose,  Non-Grafted/Own Root.",
+  "quoted_text": "Opera Queen Rose features creamy-colored flowers with apricot yellow at the center and white edges. The beautiful petals have a distinct pointed shape and carry a strong fragrance. With a diameter of 10-12 cm, the flowers emit a rich citrus scent. As a shrub rose, it undergoes multiple seasons of repeat blooming, displaying a diligent flowering pattern. With a height of 80-100 cm, it grows upright, showcasing robust ...",
+  "price": "49.98",
+  "currency": "USD",
+  "quantity_or_form": "Live plant listing (no explicit pot size or quantity in the product feed)",
+  "match_classification": "Strong",
+  "match_explanation": "The product title contains the full chart name \"Royal Diva\" as a phrase, inside a longer title.",
+  "review_status": "New",
+  "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "Location not available",
+    "state_or_region": "Location not available",
+    "city": "Location not available",
+    "source": "Checked homepage and footer -- no location, address, or shipping-origin information is shown anywhere on the site. Prior known-sites research also left this field blank.",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed and site footer)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.67",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown."
+  ],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-09-18, the first run to match product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"N/A\", not an enforceable registration: it is recorded so the match is tracked, and must not be read as a finding of infringement. The product title contains the full chart name \"Royal Diva\" as a phrase, inside a longer title.",
+  "history": [
+    {
+      "date": "2026-09-18 06:06 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created by the first all-status crawl; chart status carried through unchanged."
+    }
+  ]
+}

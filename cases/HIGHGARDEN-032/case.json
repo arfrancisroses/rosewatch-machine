@@ -1,0 +1,51 @@
+{
+  "case_number": "HIGHGARDEN-032",
+  "site_code": "HIGHGARDEN",
+  "variety": "Tropicana",
+  "matched_trademark": "Tropicana",
+  "trademark_status": "To Be Filed",
+  "trademark_status_as_written": "To Be Filed",
+  "trademark_application_or_registration_no": "App. Ser. No. N/A (Reg. No.: NYA)",
+  "breeder": "Rosen Tantau KG",
+  "seller_name": "High Garden",
+  "website_domain": "highgardenroses.com",
+  "product_url": "https://highgardenroses.com/products/tropicana-german-florist-shrub-rose",
+  "exact_product_title": "Tropicana German Florist Shrub Rose",
+  "quoted_text": "This lovely rose has a delightful passion fruit scent. Its medium-sized blooms are light orange with hints of deeper orange, making them visually stunning. Not only are they beautiful, but they can also be used to make rose jelly and jam, adding both charm and practicality to any garden.",
+  "price": "30.00",
+  "currency": "USD",
+  "quantity_or_form": "S / Own Root",
+  "match_classification": "Possible",
+  "match_explanation": "The product title contains the single word \"Tropicana\", which is the whole of the chart entry. A one-word match can be coincidence rather than the variety -- needs a human read of the listing before it means anything.",
+  "review_status": "New",
+  "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Oregon",
+    "city": "Portland",
+    "source": "Site homepage: \"Grown and shipped from Portland, Oregon\" (highgardenroses.com)",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed and site footer)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.65",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown."
+  ],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-09-18, the first run to match product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"To Be Filed\", not an enforceable registration: it is recorded so the match is tracked, and must not be read as a finding of infringement. The product title contains the single word \"Tropicana\", which is the whole of the chart entry. A one-word match can be coincidence rather than the variety -- needs a human read of the listing before it means anything.",
+  "history": [
+    {
+      "date": "2026-09-18 06:06 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created by the first all-status crawl; chart status carried through unchanged."
+    }
+  ]
+}

@@ -259,8 +259,10 @@ def generate(run_date_str):
             f"{'none were' if held != 1 else 'it was not'} carried into a case record &mdash; see the note below "
             f"the findings table for why."
         )
+    elif created:
+        disposition = (f"{created} match{'es' if created != 1 else ''} were carried into case records this run.")
     else:
-        disposition = "No new matches against the active trademark list were found this run."
+        disposition = "No new matches against the trademark chart were found this run."
     if reverified:
         disposition += f" {reverified} previously existing case{'s' if reverified != 1 else ''} were re-verified still present in their site's current catalog."
 
@@ -282,23 +284,26 @@ def generate(run_date_str):
         f"were attempted, of which {coverage['urls_accessible']} served a catalog. Product catalogs were "
         "pulled directly from each accessible site's own product data feed (Shopify's product API or the WordPress "
         "REST API) and checked against the Master Trademark Filing Chart. "
-        f"{disposition} Per current reporting policy, this PDF itemizes matches against <b>Registered</b> "
-        f"trademarks only, since those are the only marks currently enforceable; Pending-trademark matches are "
-        f"still fully recorded with complete evidence in the case database and dashboard.",
+        f"{disposition} Product titles are matched against <b>every</b> name in the Master Trademark Filing Chart, "
+        f"not only the Registered and Pending ones, and findings are listed below grouped by status with the most "
+        f"enforceable first. A match against a To Be Filed, Abandoned, Not Applicable, Do Not File or unstatused "
+        f"entry is recorded so it is tracked, and carries no enforceable right.",
         styles["RWBody"]))
     story.append(Spacer(1, 8))
+    new_other = [c for c in new_cases
+                 if c.get("trademark_status") not in ("Registered", "Pending")]
     story.append(stat_table([
         ("Websites checked", f"{roster_companies} / {roster_companies}"),
         ("URLs accessible", f"{coverage['urls_accessible']} / {coverage['urls_total']}"),
         ("Product pages reviewed", f"{coverage['pages_reviewed']:,}"),
-        ("Active-trademark matches found", run["active_trademark_matches_found"]),
+        ("Sites/pages not fully accessible", coverage["urls_inaccessible"]),
     ], styles))
     story.append(Spacer(1, 10))
     story.append(stat_table([
         ("New Registered findings (cases)", len(new_registered)),
         ("New Pending findings (cases)", len(new_pending)),
+        ("New cases, other chart statuses", len(new_other)),
         ("Possible matches held for review", run["matches_held_pending_case_creation"]),
-        ("Sites/pages not fully accessible", coverage["urls_inaccessible"]),
     ], styles))
 
     story.append(PageBreak())
@@ -322,76 +327,69 @@ def generate(run_date_str):
     if run.get("dashboard_url"):
         story.append(Paragraph(f'Dashboard: <link href="{run["dashboard_url"]}">{run["dashboard_url"]}</link>', styles["RWBodySmall"]))
 
-    # ---- New findings ----
-    story.append(Paragraph("New Findings (Registered Trademarks Only)", styles["RWH2"]))
-    if new_pending:
-        story.append(Paragraph(
-            f"This report itemizes matches against <b>Registered</b> trademarks only &mdash; those are the only "
-            f"marks currently enforceable. {len(new_pending)} additional match{'es' if len(new_pending) != 1 else ''} "
-            f"against <b>Pending</b> trademarks were also found today; they remain fully tracked with complete "
-            f"evidence records in the case database and dashboard, and will appear here automatically once/if "
-            f"their trademark registers.",
-            styles["RWNote"]))
-        story.append(Spacer(1, 8))
-    if reportable_cases:
-        story.append(Paragraph(
-            "Each row below is a potential lead for Francis Roses or legal counsel to review &mdash; a matching "
-            "product or trademark name, not a legal determination of infringement. Grouped by seller/site; click "
-            "“View listing” to go directly to the product page.",
-            styles["RWBody"]))
-        story.append(Spacer(1, 8))
+    # ---- New findings, ordered by trademark status ----
+    # Registered first, then Pending, then everything else. Until 2026-09-18 this
+    # section itemised Registered only; the user widened the crawl to every chart
+    # status and asked for all of them listed in that order. Status is a column on
+    # every row so a To Be Filed match is never mistaken for an enforceable one.
+    STATUS_ORDER = ["Registered", "Pending", "To Be Filed", "Abandoned",
+                    "Not Applicable", "Do Not File", "(no status)"]
 
-        by_seller = {}
-        for c in reportable_cases:
-            by_seller.setdefault((c.get("seller_name"), c.get("website_domain"), c.get("website_host")), []).append(c)
+    def status_rank(name):
+        return STATUS_ORDER.index(name) if name in STATUS_ORDER else len(STATUS_ORDER)
 
-        for (seller, domain, host), rows in sorted(by_seller.items(), key=lambda kv: kv[0][0] or ""):
-            header = Paragraph(
-                f"{xml_escape(seller)} &mdash; {xml_escape(domain)} ({len(rows)} finding{'s' if len(rows) != 1 else ''}, host: {xml_escape(host)})",
-                ParagraphStyle("siteHead", parent=styles["RWBody"], fontName="Helvetica-Bold", fontSize=10, textColor=ACCENT, spaceBefore=10, spaceAfter=4))
-            find_rows = []
+    def findings_tables(cases, note_when_empty):
+        """One table per trademark status, in enforceability order."""
+        if not cases:
+            story.append(Paragraph(note_when_empty, styles["RWBody"]))
+            return
+        groups = {}
+        for c in cases:
+            groups.setdefault(c.get("trademark_status") or "(no status)", []).append(c)
+        for status in sorted(groups, key=status_rank):
+            rows = groups[status]
+            story.append(Paragraph(
+                f"{xml_escape(status)} &mdash; {len(rows)} case{'s' if len(rows) != 1 else ''}",
+                ParagraphStyle("statusHead", parent=styles["RWBody"], fontName="Helvetica-Bold",
+                               fontSize=11, textColor=ACCENT, spaceBefore=12, spaceAfter=4)))
+            table_rows = []
             for c in sorted(rows, key=lambda r: r.get("case_number") or ""):
                 detail = load_json(REPO_ROOT / "cases" / c["case_number"] / "case.json", {})
-                find_rows.append([
-                    c.get("case_number"), c.get("variety"), c.get("trademark_status"),
-                    c.get("seller_location"), link_cell(detail.get("product_url")),
+                table_rows.append([
+                    c.get("case_number"), c.get("variety"), c.get("seller_name"),
+                    c.get("match_classification"), link_cell(detail.get("product_url")),
                 ])
-            tbl = wrapped_table(
-                ["Case #", "Rose Name", "TM Status", "Seller Location", "Product URL"],
-                find_rows,
-                [1.25*inch, 1.3*inch, 0.7*inch, 1.9*inch, 1.1*inch],
+            story.append(wrapped_table(
+                ["Case #", "Rose Name", "Seller", "Match", "Product URL"],
+                table_rows,
+                [1.25*inch, 1.45*inch, 1.25*inch, 0.85*inch, 1.4*inch],
                 styles,
                 raw_html_cols={4},
-            )
-            # Keep the site header glued to at least the table's first row so it never
-            # ends up orphaned alone at the bottom of a page.
-            story.append(KeepTogether([header, tbl]) if len(find_rows) <= 3 else header)
-            if len(find_rows) > 3:
-                story.append(tbl)
-    elif new_cases:
-        story.append(Paragraph(
-            "No new Registered-trademark findings on this date. (Pending-trademark matches were found and are "
-            "noted above; see the dashboard for full details.)", styles["RWBody"]))
-    else:
-        story.append(Paragraph("No new case records were created on this date.", styles["RWBody"]))
+            ))
+
+    story.append(Paragraph("New Findings", styles["RWH2"]))
+    story.append(Paragraph(
+        "Every row below is a potential lead for Francis Roses or legal counsel to review &mdash; a matching product "
+        "or trademark name, not a legal determination of infringement. Grouped by the trademark's status in the "
+        "chart, most enforceable first: <b>Registered</b> and <b>Pending</b> marks carry weight that <b>To Be "
+        "Filed</b>, <b>Abandoned</b>, <b>Not Applicable</b>, <b>Do Not File</b> and unstatused entries do not. "
+        "Click &ldquo;View listing&rdquo; to open the seller's product page.",
+        styles["RWBody"]))
+    story.append(Spacer(1, 4))
+    findings_tables(new_cases, "No new case records were created on this date.")
 
     if run.get("matches_held_pending_case_creation", 0):
         story.append(Spacer(1, 10))
         story.append(Paragraph(
-            f'<b>{run["matches_held_pending_case_creation"]} additional listings</b> matched an active (Registered or '
-            f'Pending) trademark name during this run\'s catalog comparison across the remaining sites, but have not '
-            f'yet been assigned case numbers or full evidence records. '
-            + (xml_escape(run["matches_held_note"]) if run.get("matches_held_note") else
-               'This is on hold pending the user\'s decision on how to process them (full cases for all, a '
-               'lighter-evidence pass, or a further staged rollout).')
-            + ' None of these are lost: they remain identified and available to convert into cases.',
+            f'<b>{run["matches_held_pending_case_creation"]} additional listings</b> matched a chart name during this '
+            f'run but have not been assigned case numbers. '
+            + (xml_escape(run["matches_held_note"]) if run.get("matches_held_note") else ""),
             styles["RWNote"]))
 
     if run.get("review_queue_entries_this_run", 0):
         story.append(Paragraph(
-            f'{run["review_queue_entries_this_run"]} additional matches were held in the review queue (matches '
-            f'against To Be Filed, Needs Review, Abandoned, Do Not File, Not Applicable, or Not-in-chart trademark '
-            f'records) &mdash; never characterized as confirmed infringement.',
+            f'{run["review_queue_entries_this_run"]} additional matches were held in the review queue &mdash; never '
+            f'characterized as confirmed infringement.',
             styles["RWNote"]))
 
     # ---- Case history ----
@@ -410,58 +408,13 @@ def generate(run_date_str):
         styles["RWBody"]))
 
     # ---- All Past Findings (flows on from the findings above) ----
-    story.append(Paragraph("All Past Findings (Registered Trademarks)", styles["RWH2"]))
+    story.append(Paragraph("All Cases on Record", styles["RWH2"]))
     story.append(Paragraph(
-        "Every Registered-trademark case on record to date, not just today's, split into sections by the month "
-        "each was first found. Pending-trademark cases are omitted here too, consistent with this report's "
-        "Registered-only policy -- see the dashboard for the complete history including Pending.",
+        "Every case on record to date, not just today's, in the same order: Registered and Pending first, then the "
+        "statuses that carry no enforceable right. The dashboard holds the full evidence for each.",
         styles["RWBody"]))
-    story.append(Spacer(1, 8))
-
-    all_registered = [c for c in all_cases if c.get("trademark_status") == "Registered"]
-    MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August",
-                   "September", "October", "November", "December"]
-
-    def month_key(date_str):
-        m = re.match(r"^(\d{4})-(\d{2})", str(date_str or ""))
-        return m.group(0) if m else "Unknown"
-
-    def month_label(key):
-        if key == "Unknown":
-            return "Date unknown"
-        y, mo = key.split("-")
-        return f"{MONTH_NAMES[int(mo) - 1]} {y}"
-
-    by_month = {}
-    for c in all_registered:
-        by_month.setdefault(month_key(c.get("first_date_found")), []).append(c)
-
-    if not by_month:
-        story.append(Paragraph("No Registered-trademark cases exist yet.", styles["RWBody"]))
-    for key in sorted(by_month.keys(), reverse=True):
-        rows = by_month[key]
-        story.append(Paragraph(
-            f"{month_label(key)} ({len(rows)} case{'s' if len(rows) != 1 else ''})",
-            ParagraphStyle("monthHead", parent=styles["RWBody"], fontName="Helvetica-Bold", fontSize=11, textColor=ACCENT, spaceBefore=12, spaceAfter=4)))
-        find_rows = []
-        for c in sorted(rows, key=lambda r: r.get("case_number") or ""):
-            detail = load_json(REPO_ROOT / "cases" / c["case_number"] / "case.json", {})
-            # Date only here. The full timestamp with timezone is on the case record;
-            # repeating it on every row of a 34-row history wrapped each row onto two
-            # lines and pushed the table onto a page carrying almost nothing else.
-            found = str(c.get("first_date_found") or "")
-            m = re.match(r"^(\d{4}-\d{2}-\d{2})", found)
-            find_rows.append([
-                c.get("case_number"), c.get("variety"), c.get("seller_name"),
-                m.group(1) if m else found, link_cell(detail.get("product_url")),
-            ])
-        story.append(wrapped_table(
-            ["Case #", "Rose Name", "Seller", "First Found", "Product URL"],
-            find_rows,
-            [1.25*inch, 1.45*inch, 1.25*inch, 0.85*inch, 1.4*inch],
-            styles,
-            raw_html_cols={4},
-        ))
+    story.append(Spacer(1, 4))
+    findings_tables(all_cases, "No cases exist yet.")
 
     story.append(PageBreak())
 

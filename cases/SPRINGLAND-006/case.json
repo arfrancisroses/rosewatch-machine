@@ -1,0 +1,51 @@
+{
+  "case_number": "SPRINGLAND-006",
+  "site_code": "SPRINGLAND",
+  "variety": "Gelato",
+  "matched_trademark": "Gelato",
+  "trademark_status": "To Be Filed",
+  "trademark_status_as_written": "To Be Filed",
+  "trademark_application_or_registration_no": "App. Ser. No. none on chart (Reg. No.: NYA)",
+  "breeder": "Interplant Roses B.V.",
+  "seller_name": "Springland Flowers",
+  "website_domain": "springlandflowers.com",
+  "product_url": "https://springlandflowers.com/products/gelato-冰淇淋-shrub-rose-2-years-old-1-gal-non-grafted-own-root",
+  "exact_product_title": "#SPN057，Gelato 冰淇淋, Netherlands Florist Floribunda Rose，Heat-tolerant, disease-resistant, Non-Grafted/Own Root.",
+  "quoted_text": "The plant height of 120 cm, features flowers measuring 4-6 cm. The petals have a milky white or light green hue along the edges, transitioning to pink in the center, and are curled into a heart shape. The flower exhibits a semi-globular shape when partially open and a cup-shaped form when fully open, emitting a subtle rose fragrance. This rose variety is suitable for multi-headed cut flowers, with each stem carrying ...",
+  "price": "49.98",
+  "currency": "USD",
+  "quantity_or_form": "Live plant listing (no explicit pot size or quantity in the product feed)",
+  "match_classification": "Possible",
+  "match_explanation": "The product title contains the single word \"Gelato\", which is the whole of the chart entry. A one-word match can be coincidence rather than the variety -- needs a human read of the listing before it means anything.",
+  "review_status": "New",
+  "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "Location not available",
+    "state_or_region": "Location not available",
+    "city": "Location not available",
+    "source": "Checked homepage and footer -- no location, address, or shipping-origin information is shown anywhere on the site. Prior known-sites research also left this field blank.",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed and site footer)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.67",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown."
+  ],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-09-18, the first run to match product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"To Be Filed\", not an enforceable registration: it is recorded so the match is tracked, and must not be read as a finding of infringement. The product title contains the single word \"Gelato\", which is the whole of the chart entry. A one-word match can be coincidence rather than the variety -- needs a human read of the listing before it means anything.",
+  "history": [
+    {
+      "date": "2026-09-18 06:06 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created by the first all-status crawl; chart status carried through unchanged."
+    }
+  ]
+}

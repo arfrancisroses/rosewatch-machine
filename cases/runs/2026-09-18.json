@@ -2,7 +2,7 @@
   "_readme": "Per-run monitoring log, one file per calendar day (America/Phoenix), used to generate the Daily PDF Report. Distinct from cases.json, which is the permanent case/review-queue index.",
   "run_date": "2026-09-18",
   "generated_at": "2026-09-18 06:06 MST (America/Phoenix)",
-  "_run_note": "Fifth scheduled Mon-Fri run. Product-count deltas since 2026-09-17: Hillside Rose Farm 146->145, Rose Explosion 1416->1418, Your Roses 1656->0. None of the newly listed products matched an active (Registered or Pending) trademark name, and no previously recorded listing disappeared from a reachable site. 120 of the 156 existing cases were re-verified present in their site's current catalog feed. The remaining 36 could not be checked because their sites were unreachable: 3 at Flower Meadow Dream (our egress proxy, unchanged) and 33 at Your Roses, which began returning a security-firewall 403 from its own server sometime after yesterday's run. Redland Ranch Roses returned 0 matches this run against 2 yesterday: the two were a peony and a heuchera, and the non-rose filter added 2026-09-17 now discards them before matching, which is the intended behaviour rather than a change at the site.",
+  "_run_note": "Fifth scheduled Mon-Fri run. Product-count deltas since 2026-09-17: Hillside Rose Farm 146->145, Rose Explosion 1416->1418, Your Roses 1656->0. None of the newly listed products matched an active (Registered or Pending) trademark name, and no previously recorded listing disappeared from a reachable site. 120 of the 156 existing cases were re-verified present in their site's current catalog feed. The remaining 36 could not be checked because their sites were unreachable: 3 at Flower Meadow Dream (our egress proxy, unchanged) and 33 at Your Roses, which began returning a security-firewall 403 from its own server sometime after yesterday's run. Redland Ranch Roses returned 0 matches this run against 2 yesterday: the two were a peony and a heuchera, and the non-rose filter added 2026-09-17 now discards them before matching, which is the intended behaviour rather than a change at the site. WIDENED SCOPE THIS RUN: per user instruction 2026-09-18 the crawl now matches product titles against every name in the Master Trademark Filing Chart (271 names) rather than the 93 Registered and Pending ones only. The other 182 chart records had never been compared against a product title at all. That first widened pass created 124 cases, none of them Registered or Pending: 56 against chart entries with no status, 31 To Be Filed, 18 Abandoned, 18 Not Applicable, 1 Do Not File. 68 are classified Possible -- a single common word matching inside a longer title -- and each carries its chart status so it cannot be read as an enforceable finding.",
   "sites": [
     {
       "company": "Bloomora Roses",
@@ -154,12 +154,15 @@
   "urls_accessible": 12,
   "urls_inaccessible": 6,
   "total_product_pages_reviewed": 7030,
-  "active_trademark_matches_found": 0,
+  "active_trademark_matches_found": 124,
   "active_trademark_matches_by_status": {
-    "Registered": 0,
-    "Pending": 0
+    "(no status)": 56,
+    "To Be Filed": 31,
+    "Abandoned": 18,
+    "Not Applicable": 18,
+    "Do Not File": 1
   },
-  "cases_created_this_run": 0,
+  "cases_created_this_run": 124,
   "cases_reverified_this_run": 120,
   "matches_held_pending_case_creation": 0,
   "review_queue_entries_this_run": 0,

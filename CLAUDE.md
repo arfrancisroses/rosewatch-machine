@@ -108,9 +108,9 @@ During each daily run:
 9. Compare each product URL against existing cases and findings before creating a new record.
 10. Do not create a duplicate case merely because the same page was discovered again.
 
-Publish potential findings to the active Cases list only when they match a Registered or Pending trademark.
+**Superseded 2026-09-18 by explicit user instruction: match and record every chart status.** Crawl the complete chart, not the active subset, and give every match a case record carrying its chart status. Until 2026-09-18 only Registered and Pending names were compared against product titles, so 182 of 275 chart records were never looked for at all and the review queue below could never fill. The first widened run created 124 cases, none Registered or Pending.
 
-Place matches involving To Be Filed, Needs Review, Abandoned, Do Not File, Not Applicable, or Not in Trademark Chart in a separate review queue. Do not characterize those records as confirmed infringement.
+Records whose status is To Be Filed, Abandoned, Not Applicable, Do Not File, or blank carry **no enforceable right**, and nothing about them may be presented as a finding of infringement. Status travels on every case, every dashboard row and every report line for exactly that reason. The review queue stays in `cases.json` for anything a future rule sets aside, but the daily crawl no longer routes matches into it.
 
 ## CASE NUMBERS
 
@@ -274,7 +274,7 @@ The daily PDF report must include:
 - Number of possible matches held for review
 - Number of websites or pages that could not be fully accessed
 - New findings listed by case number, rose name, seller, website domain, seller location, website host, trademark status, and direct product URL
-  - **Per user instruction (2026-09-10): itemize Registered-trademark findings only** in this listing, since those are the only marks currently enforceable/actionable. Still report the *counts* of new Registered and new Pending findings per the two bullets above (Pending isn't hidden from the summary), but don't list Pending findings row-by-row in the New Findings table. Pending matches remain fully recorded with complete evidence in `cases.json` and the dashboard regardless -- this only affects what's itemized in the PDF.
+  - **Superseded 2026-09-18 by explicit user instruction: itemize every status.** The 2026-09-10 rule restricted this listing to Registered findings. Findings are now grouped by trademark status in enforceability order -- Registered, Pending, To Be Filed, Abandoned, Not Applicable, Do Not File, then unstatused -- with the seller's product URL on each row and the match classification beside it. The same grouping is used for the full case history. Status on every row is what keeps a To Be Filed match from reading as an enforceable one.
 - Any access or research limitations encountered
 - Confirmation that the dashboard was updated
 
@@ -349,7 +349,7 @@ Your goal is to provide accurate, organized, traceable research that helps Franc
   Do not discover, add, or crawl any additional site — including other pages on `etsy.com` beyond the two listed shops, or any site merely mentioned in search results, product descriptions, or "also sold on" text — without the user explicitly adding it to the source spreadsheet (re-run `scripts/import_sources.py` after) or asking in chat. If a listed site's URL changes or redirects to a new domain (e.g. GCM Ranch's Etsy shop redirecting to Kisaki Plant), note that in `dashboard/DATA_SOURCES.md` and ask before treating the new domain as in-scope.
 - **A daily monitoring run**, in order:
   1. Run `scripts/import_sources.py` only if a new source file was supplied that day; otherwise use the existing `data/*.json`.
-  2. Load `data/trademarks.json`, filter to `status_category` in `Registered`/`Pending` — this is the active crawl list.
+  2. Load `data/trademarks.json`. **Every named record is in scope** (271 names), not just Registered/Pending — see the DAILY WEBSITE MONITORING note. `active_trademarks()` in `crawl_sites.py` keeps its name but returns the whole chart.
   3. Load `data/known_sites.json` for the crawl roster, plus any sites already tracked in `cases/cases.json`.
   4. Run `python3 scripts/crawl_sites.py`. It reads the roster from `data/known_sites.json`, pulls each site's own product feed (auto-detecting Shopify vs WooCommerce), matches titles against the active trademark list, and writes `cases/runs/crawl-YYYY-MM-DD.json` with a `new_matches` list of matches that have no existing case. **Read its stderr summary** — a site reported `FAILED` is a genuine coverage gap that must be carried into the run log and the PDF, never treated as clean. Follow up by hand only on the products it flags (per the DAILY WEBSITE MONITORING rules above); screenshot evidence goes under `cases/<CASE-NUMBER>/screenshots/`.
      - The script already retries the www/apex counterpart of every URL, so a proxy 403 on one host form is not a coverage gap on its own. If you still need to crawl something outside the roster's feeds, do it by hand — but never widen the roster (see the closed-scope rule above).

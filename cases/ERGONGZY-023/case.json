@@ -1,0 +1,51 @@
+{
+  "case_number": "ERGONGZY-023",
+  "site_code": "ERGONGZY",
+  "variety": "Jeanne Moreau",
+  "matched_trademark": "Jeanne Moreau",
+  "trademark_status": "(no status)",
+  "trademark_status_as_written": null,
+  "trademark_application_or_registration_no": "App. Ser. No. none on chart (Reg. No.: none on chart)",
+  "breeder": "Meilland",
+  "seller_name": "Ergonzy / Ergonzi",
+  "website_domain": "ergongzy.com",
+  "product_url": "https://ergongzy.com/products/jeanne-moreau",
+  "exact_product_title": "Jeanne Moreau Rose-珍妮莫罗｜France Shrub Rose",
+  "quoted_text": "' Jeanne Moreau ', a white shrub rose introduced by Meilland (France) in 2005, stands 120 cm tall with vigorous, compact growth and excellent disease resistance. Its 12 cm pure white blooms feature classic round-cup shapes with dense petal layers, emitting a strong lemon fragrance. Often compared to 'Wedding Road', it differs in taller stature, round-cup form (vs. bun-shaped), and lemon scent (vs. almond). Categorize...",
+  "price": "59.00",
+  "currency": "USD",
+  "quantity_or_form": "Live plant listing (no explicit pot size or quantity in the product feed)",
+  "match_classification": "Strong",
+  "match_explanation": "The product title contains the full chart name \"Jeanne Moreau\" as a phrase, inside a longer title.",
+  "review_status": "New",
+  "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Texas",
+    "city": "Austin",
+    "source": "Site footer: \"Ergongzy's Roses, Betty Cook Dr, Austin, Texas 78723, United States\" (ergongzy.com)",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed and site footer)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.65",
+    "ip_geolocation": "Not separately geolocated this run (IP falls in the same Shopify-assigned block, 23.227.38.x, previously confirmed via ip-api.com for another site on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown."
+  ],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-09-18, the first run to match product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"blank\", not an enforceable registration: it is recorded so the match is tracked, and must not be read as a finding of infringement. The product title contains the full chart name \"Jeanne Moreau\" as a phrase, inside a longer title.",
+  "history": [
+    {
+      "date": "2026-09-18 06:06 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created by the first all-status crawl; chart status carried through unchanged."
+    }
+  ]
+}

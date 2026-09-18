@@ -1,0 +1,51 @@
+{
+  "case_number": "REDLANDRAN-001",
+  "site_code": "REDLANDRAN",
+  "variety": "Sultry",
+  "matched_trademark": "Sultry",
+  "trademark_status": "(no status)",
+  "trademark_status_as_written": null,
+  "trademark_application_or_registration_no": "App. Ser. No. none on chart (Reg. No.: none on chart)",
+  "breeder": "Dr. Keith W. Zary",
+  "seller_name": "Redland Ranch Roses",
+  "website_domain": "redlandranchroses.com",
+  "product_url": "https://redlandranchroses.com/products/sultry-night™-rose-bush",
+  "exact_product_title": "Sultry Night™ Rose Bush",
+  "quoted_text": "Dark, dramatic, and irresistibly sophisticated, Sultry Night™ is a captivating rose that brings rich, velvety color and an elegant presence to the garden. Its intensely colored blooms create a striking contrast against healthy green foliage, making this variety an outstanding choice for gardeners who love roses with deep, moody tones and a distinctive personality. Sultry Night™ produces beautifully formed blooms in s...",
+  "price": "79.99",
+  "currency": "USD",
+  "quantity_or_form": "3 Gallon Budded on Dr Huey",
+  "match_classification": "Possible",
+  "match_explanation": "The product title contains the single word \"Sultry\", which is the whole of the chart entry. A one-word match can be coincidence rather than the variety -- needs a human read of the listing before it means anything.",
+  "review_status": "New",
+  "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Florida (Estimated)",
+    "city": "Redland / Miami-Dade area (Estimated)",
+    "source": "No address published on the contact, about or privacy pages -- only info@redlandranchroses.com. Estimated from the business name and the site's Deep-South / Fortuniana-rootstock focus; unconfirmed.",
+    "estimated": true
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (the site's own privacy policy states it is 'powered by Shopify')",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.32 (apex), within Shopify's 23.227.38.0/24 range",
+    "ip_geolocation": "Not determined",
+    "registrar": "Not determined -- RDAP/whois endpoints (rdap.org, rdap.verisign.com) are refused by this environment's network egress policy",
+    "hosting_country": "Not determined"
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown."
+  ],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-09-18, the first run to match product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"blank\", not an enforceable registration: it is recorded so the match is tracked, and must not be read as a finding of infringement. The product title contains the single word \"Sultry\", which is the whole of the chart entry. A one-word match can be coincidence rather than the variety -- needs a human read of the listing before it means anything.",
+  "history": [
+    {
+      "date": "2026-09-18 06:06 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created by the first all-status crawl; chart status carried through unchanged."
+    }
+  ]
+}
