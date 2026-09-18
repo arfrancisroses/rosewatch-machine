@@ -98,7 +98,7 @@ Preserve the original wording from the source file. Flag missing, unclear, dupli
 During each daily run:
 
 1. Read the current list of known reseller websites.
-2. Review the complete list of active Registered and Pending trademarks.
+2. Review the complete trademark chart — every named record, whatever its status.
 3. Deep-crawl each accessible reseller website.
 4. Check product catalogs, collections, categories, pagination, sitemaps, search pages, product feeds, and individual product pages.
 5. Do not limit the crawl to a website's homepage.
@@ -233,6 +233,7 @@ Maintain the Rose Watch dashboard with these sections:
 - Cases
 - Known Sites
 - Needs Review
+- Missing Status
 - Data Sources
 
 The Cases tab must include columns for:
@@ -337,6 +338,7 @@ Your goal is to provide accurate, organized, traceable research that helps Franc
 | Rose Watch findings database / case numbers / review decisions | `cases/cases.json` (index: `cases`, `review_queue`, `site_code_registry`) plus one `cases/<CASE-NUMBER>/case.json` per case with full evidence and a `screenshots/` subfolder |
 | Dashboard (Overview, Trademarks, Cases, Known Sites, Needs Review) | `dashboard/*.md` — regenerate with `python3 scripts/generate_dashboard.py` after any data or case change |
 | Data Sources dashboard tab | `dashboard/DATA_SOURCES.md` — hand-maintained append log, update it whenever a new source file is ingested |
+| Case creation from a day's matches | `scripts/create_cases.py` (all chart statuses; safe to re-run) |
 | Daily catalog crawl | `scripts/crawl_sites.py` → `cases/runs/crawl-YYYY-MM-DD.json` (per-site feed pull, trademark matching, new-vs-existing case comparison) |
 | Daily PDF reports | `reports/Rose Watch Daily Report - YYYY-MM-DD.pdf` |
 | Website-code sequence tracking (never reuse/renumber) | `cases/cases.json` → `site_code_registry` |
@@ -351,10 +353,10 @@ Your goal is to provide accurate, organized, traceable research that helps Franc
   1. Run `scripts/import_sources.py` only if a new source file was supplied that day; otherwise use the existing `data/*.json`.
   2. Load `data/trademarks.json`. **Every named record is in scope** (271 names), not just Registered/Pending — see the DAILY WEBSITE MONITORING note. `active_trademarks()` in `crawl_sites.py` keeps its name but returns the whole chart.
   3. Load `data/known_sites.json` for the crawl roster, plus any sites already tracked in `cases/cases.json`.
-  4. Run `python3 scripts/crawl_sites.py`. It reads the roster from `data/known_sites.json`, pulls each site's own product feed (auto-detecting Shopify vs WooCommerce), matches titles against the active trademark list, and writes `cases/runs/crawl-YYYY-MM-DD.json` with a `new_matches` list of matches that have no existing case. **Read its stderr summary** — a site reported `FAILED` is a genuine coverage gap that must be carried into the run log and the PDF, never treated as clean. Follow up by hand only on the products it flags (per the DAILY WEBSITE MONITORING rules above); screenshot evidence goes under `cases/<CASE-NUMBER>/screenshots/`.
+  4. Run `python3 scripts/crawl_sites.py`. It reads the roster from `data/known_sites.json`, pulls each site's own product feed (auto-detecting Shopify vs WooCommerce), matches titles against every name in the chart, and writes `cases/runs/crawl-YYYY-MM-DD.json` with a `new_matches` list of matches that have no existing case. **Read its stderr summary** — a site reported `FAILED` is a genuine coverage gap that must be carried into the run log and the PDF, never treated as clean. Follow up by hand only on the products it flags (per the DAILY WEBSITE MONITORING rules above); screenshot evidence goes under `cases/<CASE-NUMBER>/screenshots/`.
      - The script already retries the www/apex counterpart of every URL, so a proxy 403 on one host form is not a coverage gap on its own. If you still need to crawl something outside the roster's feeds, do it by hand — but never widen the roster (see the closed-scope rule above).
-  5. For each match against Registered/Pending: check `cases/cases.json` for an existing case at that product URL first. If new, allocate the next sequence number for that site code from `site_code_registry`, create `cases/<CASE-NUMBER>/case.json` with every required field, and append a summary row to `cases.json.cases`. Never rewrite an existing case's review_status, case number, or prior evidence — only append new verification entries.
-  6. For each match against any other trademark status: append to `cases.json.review_queue`, never to `cases`.
+  5. Run `python3 scripts/create_cases.py` to turn that day's matches into cases — **every chart status, not just Registered/Pending** (see the DAILY WEBSITE MONITORING note). It allocates each site's next sequence number from `site_code_registry`, writes `cases/<CASE-NUMBER>/case.json` with every required field, and appends the summary row to `cases.json.cases`. It checks existing case URLs live rather than trusting the crawler's `new_matches` snapshot, so re-running it cannot create a second case for the same listing. It refuses to write a case for a site with no seller-location/hosting research on file rather than leaving those fields blank — seed the research in the script's `SITE_RESEARCH_SEED` or build that site's first case by hand.
+  6. Never rewrite an existing case's review_status, case number, or prior evidence — only append new verification entries. `cases.json.review_queue` stays in the file for anything a future rule sets aside; the daily crawl no longer routes matches into it.
   7. Run `python3 scripts/generate_dashboard.py` to refresh `dashboard/*.md`, then `python3 scripts/generate_dashboard_html.py` to rebuild `dashboard/index.html`.
   7b. **Republish the live dashboard artifact** -- `Artifact` publish with `url` = `https://claude.ai/artifact/3preykJttUmrHnxS9KgspC` and `file_path` = `dashboard/index.html`. This is the artifact the user reads and the one the PDF links to; it is titled **Rose Watch LIVE** so it can be told apart from the stale 2026-09-10 duplicate (`7M6Ms2kkxd7WNA1VyPaV4F`), which the user has kept and which must not be published to. Republishing was missed on the 09-16 and 09-17 runs, which left the dashboard two days behind the data and without Redland Ranch Roses -- do not skip it.
   8. Generate `reports/Rose Watch Daily Report - YYYY-MM-DD.pdf` per the DAILY PDF REPORT section (use the `pdf` skill). Even a no-findings day gets a report.
@@ -367,4 +369,4 @@ Your goal is to provide accurate, organized, traceable research that helps Franc
 
 - **Never fabricate.** If a site is inaccessible (CAPTCHA, login wall, Cloudflare, timeout, robots, deleted page), record that exact limitation in both the case (if one exists) and the daily report — never mark an unreachable site "clean" and never skip mentioning it.
 - **No automation changes.** Do not create, modify, or delete scheduled triggers/Routines for Rose Watch runs unless the user explicitly asks.
-- **Don't over-scrape a site once it's clear there's nothing there.** Pull each site's catalog cheaply first (its own product feed/API where one exists: Shopify `/products.json`, a Squarespace collection's `?format=json`, a WordPress site's `/wp-json/wp/v2/product`, or a sitemap) and match titles against the active (Registered/Pending) trademark list from that single pull. Only spend further effort — fetching individual product pages, verifying live text, attempting screenshots, seller-location/hosting research — on products that actually match a name. A site with zero title matches this way still counts as "checked" for the daily report; it does not need page-by-page crawling to prove it's clean. (Per-site seller-location and hosting research, once done, is reusable across every case from that site — no need to redo it per product.)
+- **Don't over-scrape a site once it's clear there's nothing there.** Pull each site's catalog cheaply first (its own product feed/API where one exists: Shopify `/products.json`, a Squarespace collection's `?format=json`, a WordPress site's `/wp-json/wp/v2/product`, or a sitemap) and match titles against the full chart from that single pull. Only spend further effort — fetching individual product pages, verifying live text, attempting screenshots, seller-location/hosting research — on products that actually match a name. A site with zero title matches this way still counts as "checked" for the daily report; it does not need page-by-page crawling to prove it's clean. (Per-site seller-location and hosting research, once done, is reusable across every case from that site — no need to redo it per product.)
