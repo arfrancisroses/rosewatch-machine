@@ -11,12 +11,17 @@ Last updated: 2026-09-10.
 
 - **Screenshot evidence.** No case has a screenshot yet -- this session's headless browser (Playwright/Chromium) cannot complete a connection through this environment's network egress proxy, even though direct page fetch works. User wants this explained (how to capture screenshots correctly), rather than solved silently or skipped. Explained 2026-09-14 (manual capture / Wayback Machine / environment-level fix); user has not yet chosen an approach.
 
-- **Your Roses is blocked at the seller's end; waiting it out until the week of 2026-09-21 (decided 2026-09-18).** From 2026-09-18 `your-roses.com` answers HTTP 403 "Your request was blocked by the security firewall" (LiteSpeed/Hostinger WAF) on every catalog path. The CONNECT succeeds, so this is the site refusing us, not our egress proxy. It served 1,656 products through its WordPress feed on 2026-09-17.
+- **Your Roses is blocked at the seller's end; still waiting, next review the week of 2026-09-28 (decided 2026-09-18, extended 2026-09-21).** From 2026-09-18 `your-roses.com` answers HTTP 403 "Your request was blocked by the security firewall" (LiteSpeed/Hostinger WAF) on every catalog path. The CONNECT succeeds, so this is the site refusing us, not our egress proxy. It served 1,656 products through its WordPress feed on 2026-09-17.
   - **Do not attempt to get around it** -- no user-agent spoofing, no alternate routing, nothing. It is a website security control, and the standing safeguard against bypassing those is not conditional on the block being inconvenient.
   - The daily crawl keeps attempting it as normal; each run reports it as a coverage gap, never as clean. Its 33 cases (`YOURROSES-001..033`) hold their 2026-09-17 Last Verified date until the site answers again.
-  - **On the first run of the week of 2026-09-21, raise the status explicitly in the chat summary** -- recovered, or still blocked and now a week old. If still blocked, put the options back to the user (keep waiting, verify that catalog by hand from a browser, or approach the seller); do not pick one unprompted.
+  - **2026-09-21 check:** still blocked, four days on, with one change -- the site root now answers HTTP 200 where it returned 403, while every catalog path stays refused (403 from the firewall on `/wp-json/wp/v2/product`, 404 on `/products.json`). Raised to the user, who chose to keep waiting.
+  - **On the first run of the week of 2026-09-28, raise the status again in the chat summary** -- recovered, or still blocked and then ten days old. If still blocked, put the same options back to the user (keep waiting, verify that catalog by hand from a browser, or approach the seller); do not pick one unprompted. If the root-200 / feed-403 split has changed either way, say which, since that is the only signal so far about whether the rule is being tuned.
 
 If picked up in a fresh session, raise this before closing out that day's work.
+
+### The scheduled trigger's prompt (updated 2026-09-21)
+
+The Mon-Fri 6:00 AM Routine (`trig_015KreDFY19Dz7hVxM6XR5mQ`) fires a prompt that used to describe the pre-2026-09-18 policy -- Registered/Pending matching, Registered-only itemization -- which had been superseded here. Cosmetic rather than behavioural, since CLAUDE.md governs, but a stale instruction firing daily is a trap for a session that trusts it. Per explicit user instruction 2026-09-21 the prompt was rewritten to match: all chart statuses, `scripts/create_cases.py`, artifact republish, status-ordered PDF, `SendUserFile` delivery with no email. It also now says outright that **CLAUDE.md is authoritative if the two ever disagree**, so the next drift is self-correcting. Only the prompt changed -- schedule, name and binding are untouched.
 
 ### Resolved: report delivery (decided 2026-09-17)
 
