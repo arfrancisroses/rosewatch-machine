@@ -19,7 +19,7 @@
   "match_explanation": "The product title normalises exactly to the chart name \"Pink Floyd\".",
   "review_status": "New",
   "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
   "screenshot_captured_at": null,
   "seller_location": {
     "country": "United States",
@@ -46,6 +46,10 @@
       "date": "2026-09-18 06:06 MST (America/Phoenix)",
       "action": "Case created",
       "details": "Created by the first all-status crawl; chart status carried through unchanged."
+    },
+    {
+      "date": "2026-09-21 06:04 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

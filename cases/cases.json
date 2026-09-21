@@ -1,10 +1,10 @@
 {
   "_readme": "Rose Watch case database. 'cases' holds published findings matched to a Registered or Pending trademark (each case's full evidence record lives in cases/<CASE-NUMBER>/case.json). 'review_queue' holds matches against To Be Filed, Needs Review, Abandoned, Do Not File, Not Applicable, or Not in Trademark Chart records -- never characterized as confirmed infringement. 'site_code_registry' tracks the next sequence number for each website/seller case-number code so numbers are never reused or renumbered. This file is only ever appended to by a completed Rose Watch monitoring run -- never overwritten, and existing review_status values are always preserved.",
-  "last_run_completed": "2026-09-18T06:06:00-07:00",
+  "last_run_completed": "2026-09-21T06:04:00-07:00",
   "site_code_registry": {
     "hillsiderosefarm.com": {
       "site_code": "HILLSIDERO",
-      "next_sequence": 5
+      "next_sequence": 6
     },
     "ergongzy.com": {
       "site_code": "ERGONGZY",
@@ -40,7 +40,7 @@
     },
     "roseexplosion.com": {
       "site_code": "ROSEEXPLOS",
-      "next_sequence": 73
+      "next_sequence": 74
     },
     "springlandflowers.com": {
       "site_code": "SPRINGLAND",
@@ -67,7 +67,7 @@
       "seller_location": "California, United States (site-stated \"Southern California\")",
       "website_host": "Shopify, Inc. (behind Cloudflare)",
       "first_date_found": "2026-09-10 13:28 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -82,7 +82,7 @@
       "seller_location": "California, United States (site-stated \"Southern California\")",
       "website_host": "Shopify, Inc. (behind Cloudflare)",
       "first_date_found": "2026-09-10 13:28 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Exact",
       "review_status": "New"
     },
@@ -97,7 +97,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -112,7 +112,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -127,7 +127,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -142,7 +142,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -157,7 +157,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -172,7 +172,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -187,7 +187,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -202,7 +202,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -217,7 +217,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -232,7 +232,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -247,7 +247,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -262,7 +262,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -277,7 +277,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -292,7 +292,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -307,7 +307,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -322,7 +322,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -382,7 +382,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -397,7 +397,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -412,7 +412,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -427,7 +427,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -442,7 +442,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -457,7 +457,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -472,7 +472,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -487,7 +487,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -502,7 +502,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -517,7 +517,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -532,7 +532,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -547,7 +547,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -562,7 +562,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -577,7 +577,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -592,7 +592,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -607,7 +607,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -622,7 +622,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -637,7 +637,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -652,7 +652,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -667,7 +667,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -682,7 +682,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -697,7 +697,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -712,7 +712,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -727,7 +727,7 @@
       "seller_location": "Oregon, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -742,7 +742,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -757,7 +757,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -772,7 +772,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -787,7 +787,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -802,7 +802,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -817,7 +817,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -832,7 +832,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -847,7 +847,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -862,7 +862,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -877,7 +877,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -892,7 +892,7 @@
       "seller_location": "Ontario, Canada",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -907,7 +907,7 @@
       "seller_location": "California, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -922,7 +922,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -937,7 +937,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -952,7 +952,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -967,7 +967,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -982,7 +982,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -997,7 +997,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1012,7 +1012,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1027,7 +1027,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1042,7 +1042,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1057,7 +1057,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1072,7 +1072,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1087,7 +1087,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1102,7 +1102,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1117,7 +1117,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1132,7 +1132,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1147,7 +1147,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1162,7 +1162,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1177,7 +1177,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1192,7 +1192,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1207,7 +1207,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1222,7 +1222,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1237,7 +1237,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1252,7 +1252,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1267,7 +1267,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1282,7 +1282,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1297,7 +1297,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Exact",
       "review_status": "New"
     },
@@ -1312,7 +1312,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Exact",
       "review_status": "New"
     },
@@ -1327,7 +1327,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1342,7 +1342,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1357,7 +1357,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Exact",
       "review_status": "New"
     },
@@ -1372,7 +1372,7 @@
       "seller_location": "Texas, United States",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Exact",
       "review_status": "New"
     },
@@ -1387,7 +1387,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1402,7 +1402,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1417,7 +1417,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1432,7 +1432,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1447,7 +1447,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1462,7 +1462,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1477,7 +1477,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1492,7 +1492,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1507,7 +1507,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1522,7 +1522,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1537,7 +1537,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1552,7 +1552,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1567,7 +1567,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1582,7 +1582,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1597,7 +1597,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1612,7 +1612,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1627,7 +1627,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1642,7 +1642,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1657,7 +1657,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1672,7 +1672,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1687,7 +1687,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1702,7 +1702,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1717,7 +1717,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1732,7 +1732,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1747,7 +1747,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1762,7 +1762,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1777,7 +1777,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1792,7 +1792,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1807,7 +1807,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1822,7 +1822,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1837,7 +1837,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1852,7 +1852,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1867,7 +1867,7 @@
       "seller_location": "Not available on page, China (Estimated)",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1882,7 +1882,7 @@
       "seller_location": "Location not available",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -1897,7 +1897,7 @@
       "seller_location": "Location not available",
       "website_host": "Shopify, Inc.",
       "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
       "match_classification": "Strong",
       "review_status": "New"
     },
@@ -2409,7 +2409,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ERGONGZY-018",
@@ -2424,7 +2424,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ERGONGZY-019",
@@ -2439,7 +2439,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ERGONGZY-020",
@@ -2454,7 +2454,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ERGONGZY-021",
@@ -2469,7 +2469,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ERGONGZY-022",
@@ -2484,7 +2484,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ERGONGZY-023",
@@ -2499,7 +2499,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ERGONGZY-024",
@@ -2514,7 +2514,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ERGONGZY-025",
@@ -2529,7 +2529,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-025",
@@ -2544,7 +2544,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-026",
@@ -2559,7 +2559,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-027",
@@ -2574,7 +2574,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-028",
@@ -2589,7 +2589,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-029",
@@ -2604,7 +2604,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-030",
@@ -2619,7 +2619,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-031",
@@ -2634,7 +2634,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-032",
@@ -2649,7 +2649,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-033",
@@ -2664,7 +2664,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-034",
@@ -2679,7 +2679,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-035",
@@ -2694,7 +2694,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-036",
@@ -2709,7 +2709,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-037",
@@ -2724,7 +2724,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-038",
@@ -2739,7 +2739,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-039",
@@ -2754,7 +2754,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-040",
@@ -2769,7 +2769,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-041",
@@ -2784,7 +2784,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-042",
@@ -2799,7 +2799,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-043",
@@ -2814,7 +2814,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-044",
@@ -2829,7 +2829,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-045",
@@ -2844,7 +2844,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HIGHGARDEN-046",
@@ -2859,7 +2859,7 @@
       "seller_location": "Oregon",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HILLSIDERO-003",
@@ -2874,7 +2874,7 @@
       "seller_location": "California (\"Southern California\" per the site's Our Story / About page)",
       "website_host": "Shopify, Inc. (storefront platform — page footer states \"Pow",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HILLSIDERO-004",
@@ -2889,7 +2889,7 @@
       "seller_location": "California (\"Southern California\" per the site's Our Story / About page)",
       "website_host": "Shopify, Inc. (storefront platform — page footer states \"Pow",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HUNIUROSEG-012",
@@ -2904,7 +2904,7 @@
       "seller_location": "Ontario",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HUNIUROSEG-013",
@@ -2919,7 +2919,7 @@
       "seller_location": "Ontario",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HUNIUROSEG-014",
@@ -2934,7 +2934,7 @@
       "seller_location": "Ontario",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HUNIUROSEG-015",
@@ -2949,7 +2949,7 @@
       "seller_location": "Ontario",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HUNIUROSEG-016",
@@ -2964,7 +2964,7 @@
       "seller_location": "Ontario",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HUNIUROSEG-017",
@@ -2979,7 +2979,7 @@
       "seller_location": "Ontario",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HUNIUROSEG-018",
@@ -2994,7 +2994,7 @@
       "seller_location": "Ontario",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HUNIUROSEG-019",
@@ -3009,7 +3009,7 @@
       "seller_location": "Ontario",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "HUNIUROSEG-020",
@@ -3024,7 +3024,7 @@
       "seller_location": "Ontario",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "KATEROSES-002",
@@ -3039,7 +3039,7 @@
       "seller_location": "California",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "KISAKIPLAN-006",
@@ -3054,7 +3054,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "KISAKIPLAN-007",
@@ -3069,7 +3069,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "KISAKIPLAN-008",
@@ -3084,7 +3084,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "KISAKIPLAN-009",
@@ -3099,7 +3099,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "KISAKIPLAN-010",
@@ -3114,7 +3114,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "MUSEROSES-020",
@@ -3129,7 +3129,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "MUSEROSES-021",
@@ -3144,7 +3144,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "MUSEROSES-022",
@@ -3159,7 +3159,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "MUSEROSES-023",
@@ -3174,7 +3174,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "MUSEROSES-024",
@@ -3189,7 +3189,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "MUSEROSES-025",
@@ -3204,7 +3204,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "MUSEROSES-026",
@@ -3219,7 +3219,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "MUSEROSES-027",
@@ -3234,7 +3234,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "MUSEROSES-028",
@@ -3249,7 +3249,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "MUSEROSES-029",
@@ -3264,7 +3264,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "MUSEROSES-030",
@@ -3279,7 +3279,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "MUSEROSES-031",
@@ -3294,7 +3294,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "MUSEROSES-032",
@@ -3309,7 +3309,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "MUSEROSES-033",
@@ -3324,7 +3324,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "MUSEROSES-034",
@@ -3339,7 +3339,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "MUSEROSES-035",
@@ -3354,7 +3354,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "MUSEROSES-036",
@@ -3369,7 +3369,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "MUSEROSES-037",
@@ -3384,7 +3384,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "MUSEROSES-038",
@@ -3399,7 +3399,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "MUSEROSES-039",
@@ -3414,7 +3414,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ONELOVEROS-008",
@@ -3429,7 +3429,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ONELOVEROS-009",
@@ -3444,7 +3444,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ONELOVEROS-010",
@@ -3459,7 +3459,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ONELOVEROS-011",
@@ -3474,7 +3474,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ONELOVEROS-012",
@@ -3489,7 +3489,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ONELOVEROS-013",
@@ -3504,7 +3504,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ONELOVEROS-014",
@@ -3519,7 +3519,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ONELOVEROS-015",
@@ -3534,7 +3534,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ONELOVEROS-016",
@@ -3549,7 +3549,7 @@
       "seller_location": "Texas",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "REDLANDRAN-001",
@@ -3564,7 +3564,7 @@
       "seller_location": "Florida (Estimated)",
       "website_host": "Shopify, Inc. (the site's own privacy policy states it is 'p",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "REDLANDRAN-002",
@@ -3579,7 +3579,7 @@
       "seller_location": "Florida (Estimated)",
       "website_host": "Shopify, Inc. (the site's own privacy policy states it is 'p",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-034",
@@ -3594,7 +3594,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-035",
@@ -3609,7 +3609,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-036",
@@ -3624,7 +3624,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-037",
@@ -3639,7 +3639,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-038",
@@ -3654,7 +3654,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-039",
@@ -3669,7 +3669,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-040",
@@ -3684,7 +3684,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-041",
@@ -3699,7 +3699,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-042",
@@ -3714,7 +3714,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-043",
@@ -3729,7 +3729,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-044",
@@ -3744,7 +3744,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-045",
@@ -3759,7 +3759,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-046",
@@ -3774,7 +3774,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-047",
@@ -3789,7 +3789,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-048",
@@ -3804,7 +3804,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-049",
@@ -3819,7 +3819,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-050",
@@ -3834,7 +3834,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-051",
@@ -3849,7 +3849,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-052",
@@ -3864,7 +3864,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-053",
@@ -3879,7 +3879,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-054",
@@ -3894,7 +3894,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-055",
@@ -3909,7 +3909,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-056",
@@ -3924,7 +3924,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-057",
@@ -3939,7 +3939,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-058",
@@ -3954,7 +3954,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-059",
@@ -3969,7 +3969,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-060",
@@ -3984,7 +3984,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-061",
@@ -3999,7 +3999,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-062",
@@ -4014,7 +4014,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-063",
@@ -4029,7 +4029,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-064",
@@ -4044,7 +4044,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-065",
@@ -4059,7 +4059,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-066",
@@ -4074,7 +4074,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-067",
@@ -4089,7 +4089,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-068",
@@ -4104,7 +4104,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-069",
@@ -4119,7 +4119,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-070",
@@ -4134,7 +4134,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-071",
@@ -4149,7 +4149,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "ROSEEXPLOS-072",
@@ -4164,7 +4164,7 @@
       "seller_location": "Not available on page",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "SPRINGLAND-003",
@@ -4179,7 +4179,7 @@
       "seller_location": "Location not available",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "SPRINGLAND-004",
@@ -4194,7 +4194,7 @@
       "seller_location": "Location not available",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "SPRINGLAND-005",
@@ -4209,7 +4209,7 @@
       "seller_location": "Location not available",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "SPRINGLAND-006",
@@ -4224,7 +4224,7 @@
       "seller_location": "Location not available",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "SPRINGLAND-007",
@@ -4239,7 +4239,7 @@
       "seller_location": "Location not available",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
     },
     {
       "case_number": "SPRINGLAND-008",
@@ -4254,7 +4254,37 @@
       "seller_location": "Location not available",
       "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
       "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-      "last_verified": "2026-09-18 06:06 MST (America/Phoenix)"
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)"
+    },
+    {
+      "case_number": "HILLSIDERO-005",
+      "site_code": "HILLSIDERO",
+      "variety": "Darlington",
+      "matched_trademark": "Darlington",
+      "trademark_status": "Pending",
+      "seller_name": "Hillside Rose Farm",
+      "website_domain": "hillsiderosefarm.com",
+      "seller_location": "California (\"Southern California\" per the site's Our Story / About page)",
+      "website_host": "Shopify, Inc. (storefront platform — page footer states \"Pow",
+      "first_date_found": "2026-09-21 06:04 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
+      "match_classification": "Possible",
+      "review_status": "New"
+    },
+    {
+      "case_number": "ROSEEXPLOS-073",
+      "site_code": "ROSEEXPLOS",
+      "variety": "Monsieur",
+      "matched_trademark": "Monsieur",
+      "trademark_status": "Pending",
+      "seller_name": "Rose Explosion",
+      "website_domain": "roseexplosion.com",
+      "seller_location": "Not available on page",
+      "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
+      "first_date_found": "2026-09-21 06:04 MST (America/Phoenix)",
+      "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
+      "match_classification": "Possible",
+      "review_status": "New"
     }
   ],
   "review_queue": []
