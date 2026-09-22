@@ -124,6 +124,7 @@ def build_data():
         "cases": case_rows,
         "caseDetails": case_details,
         "reviewQueue": review_queue,
+        "cutRoses": cases.get("cut_roses", []),
         "needsReviewTrademarks": needs_review_tm,
         "missingStatusTrademarks": missing_status_tm,
         "dataSources": DATA_SOURCES_LOG,
@@ -144,6 +145,7 @@ def build_data():
             "missingStatusCount": len(missing_status_tm),
             "dataIssueCount": len(needs_review_tm),
             "caseCount": len(case_rows),
+            "cutRosesCount": len(cases.get("cut_roses", [])),
             # Cases now exist for every chart status, so the headline count no longer
             # equals the number that carry an enforceable right. Both are shown.
             "enforceableCaseCount": len([c for c in case_rows
@@ -362,6 +364,7 @@ footer.foot { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--l
     <button class="tab" role="tab" data-panel="trademarks">Trademarks</button>
     <button class="tab" role="tab" data-panel="cases">Cases</button>
     <button class="tab" role="tab" data-panel="sites">Known Sites</button>
+    <button class="tab" role="tab" data-panel="cutroses">Cut Roses</button>
     <button class="tab" role="tab" data-panel="review">Needs Review</button>
     <button class="tab" role="tab" data-panel="missing">Missing Status</button>
     <button class="tab" role="tab" data-panel="sources">Data Sources</button>
@@ -371,6 +374,7 @@ footer.foot { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--l
   <section class="panel" id="panel-trademarks"></section>
   <section class="panel" id="panel-cases"></section>
   <section class="panel" id="panel-sites"></section>
+  <section class="panel" id="panel-cutroses"></section>
   <section class="panel" id="panel-review"></section>
   <section class="panel" id="panel-missing"></section>
   <section class="panel" id="panel-sources"></section>
@@ -827,7 +831,7 @@ runPanel('missing', function renderMissing(){
   const el = document.getElementById('panel-missing');
   el.innerHTML = `
     <div class="intro"><strong>Trademarks with no status in the chart</strong> &mdash; ${DATA.missingStatusTrademarks.length} of ${DATA.meta.trademarkCount} records have no status value at all in the Master Trademark Filing Chart. Nothing else about them is flagged.
-    <br><br>These are <strong>not crawled against</strong>: monitoring matches product titles to Registered and Pending marks only, so a record with no status is invisible to the daily scan until the chart says what it is.</div>
+    <br><br>These <strong>are</strong> crawled against: since 2026-09-18 the daily scan matches product titles to every name in the chart, whatever its status, and a match on an unstatused record gets a case that carries "(no status)". What is missing is the chart's own answer about what the record is, not the monitoring.</div>
     <div id="missing-tm-table"></div>
   `;
   makeTable(document.getElementById('missing-tm-table'), {
@@ -849,6 +853,37 @@ runPanel('missing', function renderMissing(){
       <td class="mono">${esc(r.appNo)}</td>
       <td class="mono">${esc(r.regNo)}</td>
       <td class="mono">${esc(r.sourceRow)}</td>
+    </tr>`
+  });
+});
+
+/* ---------- Cut Roses ---------- */
+runPanel('cutroses', function renderCutRoses(){
+  const el = document.getElementById('panel-cutroses');
+  el.innerHTML = `
+    <div class="intro"><strong>Matched a chart name, but sold as cut flowers</strong> &mdash; ${DATA.cutRoses.length} listing${DATA.cutRoses.length === 1 ? '' : 's'}. These are <strong>not cases</strong>: Rose Watch monitors unauthorized sales of rose <em>varieties</em> &mdash; plants that can be propagated and resold &mdash; so a listing that is only stems, a bouquet or an arrangement belongs here instead of among the findings. They are kept rather than discarded so the number stays visible.
+    <br><br>A listing moves here only when it names a cut-flower product <strong>and</strong> nothing anywhere in it &mdash; title, product type, tags or description &mdash; suggests a plant. Say &ldquo;cut rose&rdquo; alongside plant, bush, bare root, own root, grafted, shrub, potted or any growing language, and it stays an ordinary case: &ldquo;cut rose&rdquo; is overwhelmingly a <em>variety class</em> (roses bred for the florist trade), not a product form.</div>
+    <div id="cutroses-table"></div>
+  `;
+  makeTable(document.getElementById('cutroses-table'), {
+    columns: [
+      {label:'Seller', sortKey:'seller_name'},
+      {label:'Product Title', sortKey:'exact_product_title'},
+      {label:'Matched Trademark', sortKey:'matched_trademark'},
+      {label:'TM Status', sortKey:'trademark_status'},
+      {label:'First Found', sortKey:'first_date_found'},
+      {label:'Listing', sortKey:'product_url'},
+    ],
+    rows: DATA.cutRoses,
+    getSortValue: (r,k) => (r[k] ?? '').toString().toLowerCase(),
+    emptyMessage: 'No listing on the roster is cut-roses-only. Every match so far is a plant listing \u2014 including the ones whose titles or tags say "Cut Rose", which name a variety class rather than a product form.',
+    rowHtml: r => `<tr>
+      <td>${esc(r.seller_name)}</td>
+      <td>${esc(r.exact_product_title)}</td>
+      <td>${esc(r.matched_trademark)}</td>
+      <td>${esc(r.trademark_status)}</td>
+      <td class="mono">${esc(r.first_date_found)}</td>
+      <td><a href="${esc(r.product_url)}" target="_blank" rel="noopener">View listing</a></td>
     </tr>`
   });
 });

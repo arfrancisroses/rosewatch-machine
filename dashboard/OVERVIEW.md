@@ -1,6 +1,6 @@
 # Rose Watch — Overview
 
-Dashboard last regenerated: 2026-09-22 11:27 MST
+Dashboard last regenerated: 2026-09-22 11:51 MST
 
 ## Trademark chart summary
 
@@ -32,5 +32,6 @@ Dashboard last regenerated: 2026-09-22 11:27 MST
 - [Cases](CASES.md)
 - [Known Sites](KNOWN_SITES.md)
 - [Needs Review](NEEDS_REVIEW.md)
+- [Cut Roses](CUT_ROSES.md)
 - [Data Sources](DATA_SOURCES.md)
 

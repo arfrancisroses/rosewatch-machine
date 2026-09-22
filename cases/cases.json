@@ -1,5 +1,6 @@
 {
   "_readme": "Rose Watch case database. 'cases' holds published findings matched to a Registered or Pending trademark (each case's full evidence record lives in cases/<CASE-NUMBER>/case.json). 'review_queue' holds matches against To Be Filed, Needs Review, Abandoned, Do Not File, Not Applicable, or Not in Trademark Chart records -- never characterized as confirmed infringement. 'site_code_registry' tracks the next sequence number for each website/seller case-number code so numbers are never reused or renumbered. This file is only ever appended to by a completed Rose Watch monitoring run -- never overwritten, and existing review_status values are always preserved.",
+  "_cut_roses_readme": "Listings that matched a chart name but read as cut flowers only -- stems, a bouquet, an arrangement -- with nothing anywhere in the listing suggesting a plant. Per user instruction 2026-09-22 these are not cases: Rose Watch monitors unauthorized sales of rose varieties, i.e. plants that can be propagated and resold. They are kept here, and shown on the dashboard's Cut Roses tab and in the daily PDF, so the number is visible rather than discarded. A listing that says 'cut rose' AND anything plant-like stays an ordinary case -- 'cut rose' is overwhelmingly a variety class, not a product form.",
   "last_run_completed": "2026-09-22T11:32:00-07:00",
   "site_code_registry": {
     "hillsiderosefarm.com": {
@@ -4876,5 +4877,6 @@
       "review_status": "New"
     }
   ],
-  "review_queue": []
+  "review_queue": [],
+  "cut_roses": []
 }

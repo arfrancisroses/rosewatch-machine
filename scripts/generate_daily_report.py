@@ -392,6 +392,36 @@ def generate(run_date_str):
             f'characterized as confirmed infringement.',
             styles["RWNote"]))
 
+    # Cut roses: matched a chart name, but sold as flowers rather than as a plant
+    # that can be propagated and resold (user decision, 2026-09-22). Not cases, and
+    # not findings -- listed so the count is visible. The section renders only when
+    # there is something in it, so an ordinary day's report is unchanged.
+    cut_rows = cases_db.get("cut_roses", [])
+    if cut_rows:
+        story.append(Spacer(1, 12))
+        story.append(Paragraph("Cut Roses &mdash; Matched, Not Cases", styles["RWH2"]))
+        story.append(Paragraph(
+            f"{len(cut_rows)} listing{'s' if len(cut_rows) != 1 else ''} on the roster matched a name in "
+            "the trademark chart but is sold as cut flowers &mdash; stems, a bouquet, an arrangement "
+            "&mdash; with nothing anywhere in the listing suggesting a plant. Rose Watch monitors "
+            "unauthorized sales of rose <i>varieties</i>, meaning plants that can be propagated and "
+            "resold, so these are <b>not case records and not findings</b>. They are listed so the "
+            "count is visible rather than discarded. A listing that says &ldquo;cut rose&rdquo; "
+            "<b>and</b> anything plant-like &mdash; plant, bush, bare root, own root, grafted, shrub, "
+            "potted, or growing language &mdash; remains an ordinary case, because &ldquo;cut "
+            "rose&rdquo; is overwhelmingly a variety class rather than a product form.",
+            styles["RWBody"]))
+        story.append(Spacer(1, 4))
+        story.append(wrapped_table(
+            ["Seller", "Product Title", "Matched Name", "Status", "Product URL"],
+            [[r.get("seller_name"), r.get("exact_product_title"), r.get("matched_trademark"),
+              r.get("trademark_status") or "(no status)", link_cell(r.get("product_url"))]
+             for r in cut_rows],
+            [1.15*inch, 1.75*inch, 1.1*inch, 0.85*inch, 1.35*inch],
+            styles,
+            raw_html_cols={4},
+        ))
+
     # ---- Case history ----
     # Totals first -- the appendix below lists Registered cases only, so the Pending
     # count is otherwise invisible in this report. The full case-by-case list follows;

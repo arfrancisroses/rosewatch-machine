@@ -237,6 +237,7 @@ Maintain the Rose Watch dashboard with these sections:
 - Trademarks
 - Cases
 - Known Sites
+- Cut Roses
 - Needs Review
 - Missing Status
 - Data Sources
@@ -281,6 +282,7 @@ The daily PDF report must include:
 - Number of websites or pages that could not be fully accessed
 - New findings listed by case number, rose name, seller, website domain, seller location, website host, trademark status, and direct product URL
   - **Superseded 2026-09-18 by explicit user instruction: itemize every status.** The 2026-09-10 rule restricted this listing to Registered findings. Findings are now grouped by trademark status in enforceability order -- Registered, Pending, To Be Filed, Abandoned, Not Applicable, Do Not File, then unstatused -- with the seller's product URL on each row and the match classification beside it. The same grouping is used for the full case history. Status on every row is what keeps a To Be Filed match from reading as an enforceable one.
+- Any listings moved to the Cut Roses register that run (a section that renders only when it has rows)
 - Any access or research limitations encountered
 - Confirmation that the dashboard was updated
 
@@ -341,7 +343,8 @@ Your goal is to provide accurate, organized, traceable research that helps Franc
 | Parsed trademark records | `data/trademarks.json` / `data/trademarks.csv` — regenerate with `python3 scripts/import_sources.py` |
 | Parsed known-site roster | `data/known_sites.json` / `data/known_sites.csv` — same script |
 | Rose Watch findings database / case numbers / review decisions | `cases/cases.json` (index: `cases`, `review_queue`, `site_code_registry`) plus one `cases/<CASE-NUMBER>/case.json` per case with full evidence and a `screenshots/` subfolder |
-| Dashboard (Overview, Trademarks, Cases, Known Sites, Needs Review) | `dashboard/*.md` — regenerate with `python3 scripts/generate_dashboard.py` after any data or case change |
+| Dashboard (Overview, Trademarks, Cases, Known Sites, Cut Roses, Needs Review) | `dashboard/*.md` — regenerate with `python3 scripts/generate_dashboard.py` after any data or case change |
+| Cut-roses register (matched, never a case) | `cases/cases.json` → `cut_roses`, shown at `dashboard/CUT_ROSES.md` and on the dashboard's Cut Roses tab |
 | Data Sources dashboard tab | `dashboard/DATA_SOURCES.md` — hand-maintained append log, update it whenever a new source file is ingested |
 | Case creation from a day's matches | `scripts/create_cases.py` (all chart statuses; safe to re-run) |
 | Daily catalog crawl | `scripts/crawl_sites.py` → `cases/runs/crawl-YYYY-MM-DD.json` (per-site feed pull, trademark matching, new-vs-existing case comparison) |
@@ -372,6 +375,10 @@ Your goal is to provide accurate, organized, traceable research that helps Franc
 - **Case numbers are permanent.** Derive the website code once per seller (per the CASE NUMBERS algorithm) and store it in `site_code_registry`; reuse the stored code even if a rule change would compute a different one later.
 - **A product that is not a rose is not a finding** (per user instruction, 2026-09-17). Trademark names are ordinary words, and a word lands wherever it lands: at a general nursery, the chart's "Monsieur" matched a peony and "Wildberry" matched a heuchera. `scripts/crawl_sites.py` drops products whose titles name a non-rose genus (`NON_ROSE_GENERA` / `is_rose_product`) before matching, so they never reach the cases, the review queue, or the report -- they are not held, not counted, and not written up. The filter is deliberately conservative: any title containing "rose", "roses" or "rosa" is kept even if it also names another genus, because a missed finding costs more than a stray line. Verified against all 156 existing cases, none of which it drops. If a genuine rose listing is ever dropped, widen the exception rather than removing the filter.
 
+- **A listing that is *only* cut roses is not a case; it goes to the Cut Roses register** (per user instruction, 2026-09-22). Rose Watch monitors unauthorized sales of rose *varieties* -- plants that can be propagated and resold -- so a listing sold as stems, a bouquet or an arrangement belongs on the **Cut Roses** tab rather than among the findings. These are **not dropped**: `scripts/crawl_sites.py` routes them to `cut_roses_only` instead of `new_matches`, `scripts/create_cases.py` writes them into `cases.json.cut_roses` instead of creating a case, and they appear on the dashboard's Cut Roses tab and in a daily-PDF section that renders only when it has rows.
+  - **The plant side wins ties, and wins on silence.** `is_cut_roses_only()` reads the **whole listing** -- title, product type, tags and description -- and moves it only when it names a cut-flower product **and** nothing anywhere in it suggests a plant. Any `PLANT_SIGNALS` word keeps it an ordinary case, and growing language counts (`grow`, `grows tall`, `gardener`, `hardy`, `disease resistance`, `hybrid tea`, `floribunda`, `cm tall`), because High Garden's "Florist Hybrid Tea Rose" listings carry no nursery noun but say "easy to grow" and "Grow tall" and are plants.
+  - **"Cut rose" and "florist" alone never move a listing.** They name a breeding *class* -- roses bred for the florist trade -- and sellers list plants under exactly those words. Ergonzi's "Darlington Rose-达林顿｜Netherland Cut Rose" is product type "Garden Plants", tagged "Live Plant"; Mola Rose tags 584 products "Cut Roses" and 750 "live plant", each described as a "2-Year-Old Live Plant". Judging on the title alone would have moved 23 genuine plant cases.
+  - **Verified on adoption (2026-09-22):** all 321 cases on record, plus every product in Ergonzi's 504, High Garden's 670 and Mola Rose's 754 catalogs, were checked against the rule. **None qualified**, so the register starts empty -- which is the honest result, not a bug. If a genuine plant listing is ever moved, remove the offending word from `CUT_ONLY_SIGNALS` or add the missing one to `PLANT_SIGNALS`; never loosen the plant-wins rule.
 - **Never fabricate.** If a site is inaccessible (CAPTCHA, login wall, Cloudflare, timeout, robots, deleted page), record that exact limitation in both the case (if one exists) and the daily report — never mark an unreachable site "clean" and never skip mentioning it.
 - **No automation changes.** Do not create, modify, or delete scheduled triggers/Routines for Rose Watch runs unless the user explicitly asks.
 - **Don't over-scrape a site once it's clear there's nothing there.** Pull each site's catalog cheaply first (its own product feed/API where one exists: Shopify `/products.json`, a Squarespace collection's `?format=json`, a WordPress site's `/wp-json/wp/v2/product`, or a sitemap) and match titles against the full chart from that single pull. Only spend further effort — fetching individual product pages, verifying live text, attempting screenshots, seller-location/hosting research — on products that actually match a name. A site with zero title matches this way still counts as "checked" for the daily report; it does not need page-by-page crawling to prove it's clean. (Per-site seller-location and hosting research, once done, is reusable across every case from that site — no need to redo it per product.)

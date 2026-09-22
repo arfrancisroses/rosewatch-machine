@@ -9,6 +9,10 @@ against ``cases.json`` when this runs, not against the ``new_matches`` list the
 crawler wrote earlier -- that list is a snapshot from crawl time, and trusting
 it would create a second case for every match on a re-run.
 
+Cut-roses-only listings never become cases (user decision, 2026-09-22): Rose Watch
+monitors unauthorized sales of rose varieties -- plants that can be propagated and
+resold -- and the crawler routes those listings to the Cut Roses register instead.
+
 Every chart status is recorded, per the user's 2026-09-18 decision. The status
 travels onto the case, and into the investigator note, so a To Be Filed or
 unstatused match can never read as an enforceable finding.
@@ -132,7 +136,11 @@ def main():
         existing.add(detail["product_url"].rstrip("/"))
         site_research.setdefault(c["website_domain"], (detail["seller_location"], detail["website_host"]))
 
-    todo = [m for m in crawl["new_matches"] if m["url"].rstrip("/") not in existing]
+    # The crawler already routes cut-roses-only listings to the Cut Roses register
+    # rather than new_matches; the guard is here too so a hand-edited or older
+    # crawl file cannot slip one into a case.
+    todo = [m for m in crawl["new_matches"]
+            if m["url"].rstrip("/") not in existing and not m.get("cut_roses_only")]
     if not todo:
         print(f"Nothing to create: all {len(crawl['new_matches'])} matches in crawl-{run_date}.json "
               f"already have cases.")
@@ -244,6 +252,25 @@ def main():
             "match_classification": cls, "review_status": "New",
         })
         created.append(case_no)
+
+    # Cut-roses-only listings: recorded, never a case. Matched on URL so a listing
+    # already in the register is not added twice.
+    register = db.setdefault("cut_roses", [])
+    known = {r["product_url"].rstrip("/") for r in register}
+    for m in crawl.get("cut_roses_only", []):
+        if m["url"].rstrip("/") in known or m["url"].rstrip("/") in existing:
+            continue
+        register.append({
+            "seller_name": m["site"].split(" (")[0], "product_url": m["url"],
+            "exact_product_title": m["title"], "matched_trademark": m["trademark"],
+            "trademark_status": m.get("status") or "(no status)",
+            "first_date_found": stamp, "last_verified": stamp,
+            "reason": ("The listing names a cut-flower product and nothing anywhere in it -- title, "
+                       "product type, tags or description -- suggests a plant. Not a case: Rose Watch "
+                       "monitors unauthorized sales of rose varieties, i.e. plants. Recorded so the "
+                       "match is visible."),
+        })
+        known.add(m["url"].rstrip("/"))
 
     (REPO / "cases" / "cases.json").write_text(json.dumps(db, indent=2, ensure_ascii=False) + "\n")
     from collections import Counter

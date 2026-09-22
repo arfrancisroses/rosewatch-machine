@@ -75,7 +75,11 @@ def try_shopify(base):
         if not prods:
             break
         for p in prods:
-            items.append((p.get("title", ""), f"{base}/products/{p.get('handle','')}"))
+            items.append({"title": p.get("title", ""),
+                          "url": f"{base}/products/{p.get('handle','')}",
+                          "product_type": p.get("product_type") or "",
+                          "tags": p.get("tags") or [],
+                          "description": (p.get("body_html") or "")[:3000]})
         if len(prods) < 250:
             break
         page += 1
@@ -86,7 +90,8 @@ def try_shopify(base):
 def try_woocommerce(base):
     items, page = [], 1
     while page <= 40:
-        url = f"{base}/wp-json/wp/v2/product?per_page=100&page={page}&_fields=title,link"
+        url = (f"{base}/wp-json/wp/v2/product?per_page=100&page={page}"
+               f"&_fields=title,link,content,excerpt")
         try:
             data = json.loads(fetch(url))
         except urllib.error.HTTPError as e:
@@ -98,7 +103,12 @@ def try_woocommerce(base):
         if not data:
             break
         for p in data:
-            items.append(((p.get("title") or {}).get("rendered", ""), p.get("link", "")))
+            items.append({"title": (p.get("title") or {}).get("rendered", ""),
+                          "url": p.get("link", ""),
+                          "product_type": "",
+                          "tags": [],
+                          "description": ((p.get("content") or {}).get("rendered", "")
+                                          or (p.get("excerpt") or {}).get("rendered", ""))[:3000]})
         if len(data) < 100:
             break
         page += 1
@@ -188,10 +198,80 @@ def is_rose_product(title):
     return not any(g in t for g in NON_ROSE_GENERA)
 
 
+# ---------------------------------------------------------------------------
+# Cut roses (user decision, 2026-09-22)
+#
+# A listing that is ONLY cut roses -- stems, a bouquet, an arrangement -- is not
+# a case. It is moved to the Cut Roses register and shown on its own dashboard
+# tab and its own PDF section, so it is visible without sitting among findings.
+#
+# But a listing that says "cut rose" AND anything plant-like stays an ordinary
+# case, because "cut rose" is overwhelmingly used as a VARIETY CLASS -- roses
+# bred for the florist trade, sold as plants. Checked against the whole listing,
+# not the title: Ergonzi's "Darlington Rose-达林顿｜Netherland Cut Rose" is
+# product type "Garden Plants", tagged "Live Plant"; Mola Rose tags 584 products
+# "Cut Roses" and 750 "live plant". On the day this rule was written, none of the
+# 321 cases on record was cut-roses-only.
+#
+# So the plant side wins ties and wins on silence: a listing moves only when it
+# names a cut-flower product AND nothing anywhere in it suggests a plant. The
+# cost of a wrong move is a hidden finding; the cost of a wrong keep is a row in
+# a report.
+# ---------------------------------------------------------------------------
+CUT_ONLY_SIGNALS = (
+    "bouquet", "bouquets", "fresh cut", "freshcut", "long stem", "long stemmed",
+    "single stem", "stem", "stems", "vase", "centerpiece", "centrepiece",
+    "floral arrangement", "arrangement", "arrangements", "preserved",
+    "eternal rose", "eternity rose", "forever rose", "infinity rose", "dried",
+    "petal", "petals", "boutonniere", "corsage", "dozen", "bunch", "posy",
+    "wreath", "garland", "cut rose", "cut roses", "cut flower", "cut flowers",
+    "florist", "florists",
+)
+
+# Anything here settles a listing as a plant. Growing language counts: High
+# Garden's "Florist Hybrid Tea" listings carry no nursery noun but say "easy to
+# grow", "Grow tall" and "rose gardeners", and they are plants.
+PLANT_SIGNALS = (
+    "plant", "plants", "bush", "bushes", "bare root", "bareroot", "bare-root",
+    "own root", "ownroot", "grafted", "graft", "non-grafted", "rootstock",
+    "seedling", "seedlings", "shrub", "shrubs", "potted", "pot", "gallon",
+    "live", "climber", "climbing", "standard", "tree rose", "patio rose",
+    "miniature", "starter", "sapling", "cutting", "cuttings", "garden",
+    "gardens", "gardener", "gardeners", "grow", "grows", "growing", "growth",
+    "grown", "hardy", "hardiness", "zone", "zones", "disease resistance",
+    "disease resistant", "disease-resistant", "prune", "pruning", "foliage",
+    "rootball", "bloom season", "re-flowering", "reblooming", "repeat blooming",
+    "tall", "height", "cm tall", "upright", "floribunda", "hybrid tea",
+    "landscape", "container", "planting", "transplant", "soil",
+)
+
+
+def _says(text, tokens, phrases):
+    return any(w in tokens for w in phrases if " " not in w) or \
+           any(w in text for w in phrases if " " in w)
+
+
+def listing_text(item):
+    """Everything the seller says about the listing, flattened for matching."""
+    parts = [item.get("title", ""), item.get("product_type", ""),
+             " ".join(item.get("tags") or []), item.get("description", "")]
+    return normalize(re.sub(r"(?s)<[^>]+>", " ", " ".join(p for p in parts if p)))
+
+
+def is_cut_roses_only(item):
+    """True only when the whole listing reads as cut flowers and never as a plant."""
+    text = listing_text(item)
+    tokens = set(text.split())
+    if _says(text, tokens, PLANT_SIGNALS):
+        return False
+    return _says(text, tokens, CUT_ONLY_SIGNALS)
+
+
 def match_titles(items, active):
     """Whole-word match of a trademark name inside a product title."""
     matches = []
-    for title, url in items:
+    for item in items:
+        title, url = item["title"], item["url"]
         if not is_rose_product(title):
             continue
         toks = normalize(title).split()
@@ -201,7 +281,8 @@ def match_titles(items, active):
                 matches.append({"title": title, "url": url,
                                 "trademark": rec["trademark"],
                                 "status": rec.get("status_category") or "(no status)",
-                                "status_raw": rec.get("status")})
+                                "status_raw": rec.get("status"),
+                                "cut_roses_only": is_cut_roses_only(item)})
                 break
     return matches
 
@@ -230,7 +311,7 @@ def main():
     sites = json.loads((REPO_ROOT / "data" / "known_sites.json").read_text())["records"]
     print(f"{len(active)} chart names (all statuses), {len(existing)} existing case URLs", file=sys.stderr)
 
-    results, new_matches, total = {}, [], 0
+    results, new_matches, cut_roses, total = {}, [], [], 0
     for site in sites:
         for url in site["websites"]:
             label = site["company"] if len(site["websites"]) == 1 else f"{site['company']} ({urlsplit(url).netloc})"
@@ -245,17 +326,28 @@ def main():
             matches = match_titles(r["items"], active)
             total += r["count"]
             for m in matches:
-                if m["url"].rstrip("/") not in existing:
-                    new_matches.append({"site": label, **m})
+                if m["url"].rstrip("/") in existing:
+                    continue
+                (cut_roses if m["cut_roses_only"] else new_matches).append({"site": label, **m})
             results[label] = {k: r[k] for k in ("url_used", "url_attempted", "platform", "count", "error")}
             results[label]["matches"] = matches
+            results[label]["cut_roses_only_count"] = sum(1 for m in matches if m["cut_roses_only"])
             note = f"via {r['url_used']}" if r["url_used"] else f"FAILED: {r['error'][:120]}"
-            print(f"{label}: {r['count']} products, {len(matches)} matches, {note}", file=sys.stderr)
+            cut = results[label]["cut_roses_only_count"]
+            print(f"{label}: {r['count']} products, {len(matches)} matches"
+                  + (f", {cut} cut-roses-only" if cut else "") + f", {note}", file=sys.stderr)
 
     payload = {"crawl_date": today, "total_product_pages_reviewed": total,
-               "new_matches": new_matches, "sites": results}
+               "new_matches": new_matches,
+               "cut_roses_only": cut_roses,
+               "cut_roses_only_count": len(cut_roses),
+               "sites": results}
     out_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
-    print(f"\n{total} product pages reviewed; {len(new_matches)} match(es) without an existing case", file=sys.stderr)
+    print(f"\n{total} product pages reviewed; {len(new_matches)} match(es) without an existing case",
+          file=sys.stderr)
+    if cut_roses:
+        print(f"{len(cut_roses)} further match(es) are cut-roses-only listings: moved to the Cut Roses "
+              f"register, no case created", file=sys.stderr)
     print(f"wrote {out_path}", file=sys.stderr)
     return 0
 
