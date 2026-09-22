@@ -265,6 +265,12 @@ def generate(run_date_str):
         disposition = "No new matches against the trademark chart were found this run."
     if reverified:
         disposition += f" {reverified} previously existing case{'s' if reverified != 1 else ''} were re-verified still present in their site's current catalog."
+    cut_flower = run.get("cut_flower_matches_not_recorded", 0)
+    if cut_flower:
+        disposition += (
+            f" A further {cut_flower} listing{'s' if cut_flower != 1 else ''} matched a chart name but "
+            f"{'are' if cut_flower != 1 else 'is'} cut flowers rather than plants, and so "
+            f"{'were' if cut_flower != 1 else 'was'} not recorded as a case &mdash; itemised under New Findings.")
 
     if not new_cases:
         story.append(Paragraph(
@@ -391,6 +397,33 @@ def generate(run_date_str):
             f'{run["review_queue_entries_this_run"]} additional matches were held in the review queue &mdash; never '
             f'characterized as confirmed infringement.',
             styles["RWNote"]))
+
+    # Cut-flower listings: counted and named, never a case. Rose Watch monitors
+    # unauthorized sales of rose *varieties* -- plants that can be propagated and
+    # resold -- so a bouquet or a box of stems is out of scope (user decision,
+    # 2026-09-22). They are itemised rather than dropped so the number is visible:
+    # if it moves, it can be looked at.
+    cut_rows = run.get("cut_flower_matches", [])
+    if cut_rows:
+        story.append(Spacer(1, 12))
+        story.append(Paragraph("Cut-Flower Listings &mdash; Matched, Not Recorded", styles["RWH2"]))
+        story.append(Paragraph(
+            f"{len(cut_rows)} listing{'s' if len(cut_rows) != 1 else ''} on the roster matched a name in the "
+            "trademark chart but read as cut flowers (bouquets, stems, arrangements, preserved or dried roses) "
+            "rather than plants that can be propagated and resold. Per instruction these are <b>not</b> case "
+            "records and are <b>not</b> findings; they are listed here so the count is visible rather than "
+            "silently discarded. A listing described with any nursery term &mdash; plant, bush, bare root, "
+            "grafted, own root, potted &mdash; is treated as a plant and goes through the normal case process.",
+            styles["RWBody"]))
+        story.append(Spacer(1, 4))
+        story.append(wrapped_table(
+            ["Seller", "Product Title", "Matched Name", "Status", "Product URL"],
+            [[r.get("site"), r.get("title"), r.get("trademark"),
+              r.get("status") or "(no status)", link_cell(r.get("url"))] for r in cut_rows],
+            [1.15*inch, 1.75*inch, 1.1*inch, 0.85*inch, 1.35*inch],
+            styles,
+            raw_html_cols={4},
+        ))
 
     # ---- Case history ----
     # Totals first -- the appendix below lists Registered cases only, so the Pending

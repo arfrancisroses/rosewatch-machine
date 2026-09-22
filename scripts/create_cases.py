@@ -9,6 +9,10 @@ against ``cases.json`` when this runs, not against the ``new_matches`` list the
 crawler wrote earlier -- that list is a snapshot from crawl time, and trusting
 it would create a second case for every match on a re-run.
 
+Cut-flower listings are never turned into cases (user decision, 2026-09-22):
+Rose Watch monitors unauthorized sales of rose varieties -- plants that can be
+propagated and resold -- and the crawler counts those listings separately.
+
 Every chart status is recorded, per the user's 2026-09-18 decision. The status
 travels onto the case, and into the investigator note, so a To Be Filed or
 unstatused match can never read as an enforceable finding.
@@ -109,7 +113,10 @@ def main():
         existing.add(detail["product_url"].rstrip("/"))
         site_research.setdefault(c["website_domain"], (detail["seller_location"], detail["website_host"]))
 
-    todo = [m for m in crawl["new_matches"] if m["url"].rstrip("/") not in existing]
+    # The crawler already keeps cut-flower listings out of new_matches; the guard
+    # is here too so a hand-edited or older crawl file cannot slip one into a case.
+    todo = [m for m in crawl["new_matches"]
+            if m["url"].rstrip("/") not in existing and not m.get("cut_flower")]
     if not todo:
         print(f"Nothing to create: all {len(crawl['new_matches'])} matches in crawl-{run_date}.json "
               f"already have cases.")

@@ -3,9 +3,10 @@
 Rose Watch -- daily catalog crawl.
 
 Pulls each known site's own product feed (cheapest source of the full catalog,
-per CLAUDE.md's "don't over-scrape" rule), matches product titles against the
-active Registered/Pending trademark list, and reports which matches are new
-versus already covered by an existing case.
+per CLAUDE.md's "don't over-scrape" rule), matches product titles against every
+name in the trademark chart, and reports which matches are new versus already
+covered by an existing case. Cut-flower listings are counted separately and
+never become cases -- see CUT_FLOWER_SIGNALS.
 
 Usage: python3 scripts/crawl_sites.py [--out PATH]
        (defaults to cases/runs/crawl-YYYY-MM-DD.json in America/Phoenix)
@@ -188,8 +189,60 @@ def is_rose_product(title):
     return not any(g in t for g in NON_ROSE_GENERA)
 
 
+# A cut stem is not a plant. Rose Watch monitors unauthorized sales of rose
+# *varieties* -- plants someone can propagate and resell -- so a florist's
+# bouquet carrying a chart name is out of scope (user decision, 2026-09-22).
+# Unlike the non-rose filter above, these are not dropped silently: the product
+# really is a rose, so the count is carried into the run log and the daily
+# report. Nothing is recorded as a finding; nothing vanishes without a number.
+# Only words that describe the product's FORM belong here. "Cut rose", "cut
+# flower" and "florist" describe a breeding CLASS -- varieties bred for the
+# florist trade -- and nurseries sell plants of them under exactly those words:
+# 23 existing cases are titled like "Darlington Rose-达林顿｜Netherland Cut Rose"
+# (Ergonzi, plants) and "Barista German Florist Hybrid Tea Rose" (High Garden,
+# plants). Including those three words suppressed all 23. They stay out.
+CUT_FLOWER_SIGNALS = (
+    "bouquet", "bouquets", "fresh cut", "freshcut", "long stem", "long stemmed",
+    "single stem", "stem", "stems", "vase", "centerpiece", "centrepiece",
+    "floral arrangement", "arrangement", "arrangements", "preserved",
+    "eternal rose", "eternity rose", "forever rose", "infinity rose", "dried",
+    "petal", "petals", "boutonniere", "corsage", "dozen", "bunch", "posy",
+    "wreath", "garland",
+)
+
+# Nursery vocabulary. Any of these settles it as a plant: a listing that says
+# "bare root" or "rose bush" is a plant however else it is worded.
+PLANT_SIGNALS = (
+    "plant", "plants", "bush", "bushes", "bare root", "bareroot", "bare-root",
+    "own root", "ownroot", "grafted", "graft", "rootstock", "seedling",
+    "seedlings", "shrub", "shrubs", "potted", "pot", "gallon", "gal", "live",
+    "climber", "climbing", "standard", "tree rose", "patio rose", "miniature",
+    "starter", "sapling", "propagat", "cutting", "cuttings",
+)
+
+
+def is_cut_flower(title):
+    """True only when the title positively reads as cut flowers, not a plant.
+
+    Deliberately asymmetric with is_rose_product(): a wrong answer here
+    suppresses a real finding, so silence has to be earned. Any nursery word
+    settles it as a plant, and a title with no signal either way is treated as
+    a plant and goes through to matching as normal.
+    """
+    t = normalize(title)
+    toks = set(t.split())
+    if any((s in toks) if " " not in s else (s in t) for s in PLANT_SIGNALS):
+        return False
+    return any((s in toks) if " " not in s else (s in t) for s in CUT_FLOWER_SIGNALS)
+
+
 def match_titles(items, active):
-    """Whole-word match of a trademark name inside a product title."""
+    """Whole-word match of a trademark name inside a product title.
+
+    Every match is returned, each carrying ``cut_flower``. The caller keeps
+    cut-flower matches out of the new-case list but still counts them -- see
+    CUT_FLOWER_SIGNALS above.
+    """
     matches = []
     for title, url in items:
         if not is_rose_product(title):
@@ -201,7 +254,8 @@ def match_titles(items, active):
                 matches.append({"title": title, "url": url,
                                 "trademark": rec["trademark"],
                                 "status": rec.get("status_category") or "(no status)",
-                                "status_raw": rec.get("status")})
+                                "status_raw": rec.get("status"),
+                                "cut_flower": is_cut_flower(title)})
                 break
     return matches
 
@@ -230,7 +284,7 @@ def main():
     sites = json.loads((REPO_ROOT / "data" / "known_sites.json").read_text())["records"]
     print(f"{len(active)} chart names (all statuses), {len(existing)} existing case URLs", file=sys.stderr)
 
-    results, new_matches, total = {}, [], 0
+    results, new_matches, cut_flower_matches, total = {}, [], [], 0
     for site in sites:
         for url in site["websites"]:
             label = site["company"] if len(site["websites"]) == 1 else f"{site['company']} ({urlsplit(url).netloc})"
@@ -245,17 +299,32 @@ def main():
             matches = match_titles(r["items"], active)
             total += r["count"]
             for m in matches:
-                if m["url"].rstrip("/") not in existing:
-                    new_matches.append({"site": label, **m})
+                if m["url"].rstrip("/") in existing:
+                    continue
+                if m["cut_flower"]:
+                    cut_flower_matches.append({"site": label, **m})
+                    continue
+                new_matches.append({"site": label, **m})
             results[label] = {k: r[k] for k in ("url_used", "url_attempted", "platform", "count", "error")}
             results[label]["matches"] = matches
+            results[label]["cut_flower_match_count"] = sum(1 for m in matches if m["cut_flower"])
             note = f"via {r['url_used']}" if r["url_used"] else f"FAILED: {r['error'][:120]}"
-            print(f"{label}: {r['count']} products, {len(matches)} matches, {note}", file=sys.stderr)
+            cut = results[label]["cut_flower_match_count"]
+            cut_note = f", {cut} cut-flower (not recorded)" if cut else ""
+            print(f"{label}: {r['count']} products, {len(matches)} matches{cut_note}, {note}",
+                  file=sys.stderr)
 
     payload = {"crawl_date": today, "total_product_pages_reviewed": total,
-               "new_matches": new_matches, "sites": results}
+               "new_matches": new_matches,
+               "cut_flower_matches": cut_flower_matches,
+               "cut_flower_match_count": len(cut_flower_matches),
+               "sites": results}
     out_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
-    print(f"\n{total} product pages reviewed; {len(new_matches)} match(es) without an existing case", file=sys.stderr)
+    print(f"\n{total} product pages reviewed; {len(new_matches)} match(es) without an existing case",
+          file=sys.stderr)
+    if cut_flower_matches:
+        print(f"{len(cut_flower_matches)} further match(es) are cut-flower listings, not plants: "
+              f"counted and reported, no case created", file=sys.stderr)
     print(f"wrote {out_path}", file=sys.stderr)
     return 0
 
