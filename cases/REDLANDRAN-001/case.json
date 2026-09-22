@@ -19,7 +19,7 @@
   "match_explanation": "The product title contains the single word \"Sultry\", which is the whole of the chart entry. A one-word match can be coincidence rather than the variety -- needs a human read of the listing before it means anything.",
   "review_status": "New",
   "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
+  "last_verified": "2026-09-22 06:08 MST (America/Phoenix)",
   "screenshot_captured_at": null,
   "seller_location": {
     "country": "United States",
@@ -49,6 +49,10 @@
     },
     {
       "date": "2026-09-21 06:04 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-09-22 06:08 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]

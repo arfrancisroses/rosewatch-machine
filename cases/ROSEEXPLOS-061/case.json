@@ -19,7 +19,7 @@
   "match_explanation": "The product title contains the full chart name \"Sheffield Park!\" as a phrase, inside a longer title.",
   "review_status": "New",
   "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-09-21 06:04 MST (America/Phoenix)",
+  "last_verified": "2026-09-22 06:08 MST (America/Phoenix)",
   "screenshot_captured_at": null,
   "seller_location": {
     "country": "China (Estimated)",
@@ -49,6 +49,10 @@
     },
     {
       "date": "2026-09-21 06:04 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-09-22 06:08 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
