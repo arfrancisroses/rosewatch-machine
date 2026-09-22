@@ -36,6 +36,27 @@ from crawl_sites import fetch, normalize, PHOENIX  # noqa: E402
 # Research recorded by hand when the site joined the roster; keep the wording,
 # including its hedges -- "Estimated" is part of the finding.
 SITE_RESEARCH_SEED = {
+    "molarose.com": (
+        {"country": "United States",
+         "state_or_region": "Wyoming (published) -- see note",
+         "city": "Sheridan (published) -- see note",
+         "source": "Published on the site itself: contact-information, privacy and shipping policy pages all give "
+                   "\"Mola Rose, 30 N Gould St, Sheridan WY 82801, US\" with support@molarose.com. The footer adds "
+                   "that the website \"is Jointly Operated By Molarose, 30 N Gould St, Sheridan, WY 82801, United "
+                   "States\" and \"TELOS TRADING LIMITED, 134 Corfield St, London, England, E2 0DS\". NOTE, as a "
+                   "fact about the address and not a claim about this seller: 30 N Gould St, Sheridan WY 82801 is a "
+                   "widely used commercial registered-agent / mail-forwarding address shared by a large number of "
+                   "unrelated companies, so it identifies the entity's agent of record rather than any growing, "
+                   "warehouse or shipping location. Where the plants themselves are held is not stated anywhere on "
+                   "the site. Ships only within the United States (shipping policy).",
+         "estimated": False},
+        {"hosting_platform": "Shopify, Inc.",
+         "cdn_or_proxy": "cdn.shopify.com",
+         "server_ip": "23.227.38.65 (A), within Shopify's 23.227.38.0/24 range; 2620:127:f00f:5:: (AAAA), Shopify",
+         "ip_geolocation": "Not determined",
+         "registrar": "Not determined -- RDAP/whois endpoints (rdap.org, rdap.verisign.com) are refused by this "
+                      "environment's network egress policy",
+         "hosting_country": "Not determined"}),
     "redlandranchroses.com": (
         {"country": "United States",
          "state_or_region": "Florida (Estimated)",
@@ -87,12 +108,14 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("date", nargs="?", help="run date (default: today, America/Phoenix)")
     ap.add_argument("--stamp", help="evidence timestamp to record on the new cases")
+    ap.add_argument("--crawl", help="crawl JSON to read instead of cases/runs/crawl-<date>.json; "
+                                    "use for a mid-day recon so the scheduled run's own file stays untouched")
     args = ap.parse_args()
 
     run_date = args.date or datetime.datetime.now(PHOENIX).date().isoformat()
     stamp = args.stamp or datetime.datetime.now(PHOENIX).strftime("%Y-%m-%d %H:%M %Z (America/Phoenix)")
 
-    crawl_path = REPO / "cases" / "runs" / f"crawl-{run_date}.json"
+    crawl_path = Path(args.crawl) if args.crawl else REPO / "cases" / "runs" / f"crawl-{run_date}.json"
     if not crawl_path.exists():
         sys.exit(f"No crawl output at {crawl_path} -- run scripts/crawl_sites.py first.")
     crawl = json.loads(crawl_path.read_text())

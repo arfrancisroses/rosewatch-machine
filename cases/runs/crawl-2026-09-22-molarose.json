@@ -1,0 +1,603 @@
+{
+  "crawl_date": "2026-09-22",
+  "_note": "Supplementary mid-day recon of molarose.com only, run at 11:25 MST after the user allowlisted the domain in the environment. The 06:08 scheduled run's own file, crawl-2026-09-22.json, is left untouched -- this does not replace it.",
+  "total_product_pages_reviewed": 754,
+  "new_matches": [
+    {
+      "site": "Mola Rose",
+      "title": "Just More Rose",
+      "url": "https://molarose.com/products/just-more-rose-plant",
+      "trademark": "Just More!",
+      "status": "(no status)",
+      "status_raw": null
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Montmartre Rose",
+      "url": "https://molarose.com/products/montmartre-rose",
+      "trademark": "Montmartre",
+      "status": "Pending",
+      "status_raw": "Pending"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Pink O'Hara Rose",
+      "url": "https://molarose.com/products/pink-ohara-rose-粉荔枝",
+      "trademark": "Pink O'Hara",
+      "status": "Pending",
+      "status_raw": "Pending"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "White O'Hara Rose",
+      "url": "https://molarose.com/products/white-ohara-rose-白哈娜",
+      "trademark": "White O'Hara",
+      "status": "Pending",
+      "status_raw": "Pending"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "The Pride Rose",
+      "url": "https://molarose.com/products/the-pride-rose",
+      "trademark": "The Pride",
+      "status": "Not Applicable",
+      "status_raw": "N/A"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Happy Piano Rose",
+      "url": "https://molarose.com/products/happy-piano-rose-快乐钢琴",
+      "trademark": "PIANO",
+      "status": "Registered",
+      "status_raw": "Registered"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Love Fountain Rose",
+      "url": "https://molarose.com/products/love-fountain-rose",
+      "trademark": "Love Fountain",
+      "status": "Pending",
+      "status_raw": "Pending"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Emma woodhouse Rose",
+      "url": "https://molarose.com/products/emma-woodhouse-rose",
+      "trademark": "Emma WoodHouse",
+      "status": "Pending",
+      "status_raw": "Pending"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Bourbon Street Rose",
+      "url": "https://molarose.com/products/bourbon-street-rose",
+      "trademark": "Bourbon Street",
+      "status": "Pending",
+      "status_raw": "Pending"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "St.Tropez Rose",
+      "url": "https://molarose.com/products/st-tropez-rose",
+      "trademark": "St Tropez",
+      "status": "(no status)",
+      "status_raw": null
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Party Trendsetter Rose",
+      "url": "https://molarose.com/products/party-trendsetter-rose",
+      "trademark": "Trendsetter",
+      "status": "Abandoned",
+      "status_raw": "Abandoned (Rose Varietal)"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Bella Trendsetter Rose",
+      "url": "https://molarose.com/products/bella-trendsetter-rose",
+      "trademark": "Trendsetter",
+      "status": "Abandoned",
+      "status_raw": "Abandoned (Rose Varietal)"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Bloomsbury Rose",
+      "url": "https://molarose.com/products/bloomsbury-rose",
+      "trademark": "Bloomsbury",
+      "status": "Pending",
+      "status_raw": "Pending"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Living Coral Rose",
+      "url": "https://molarose.com/products/living-coral-rose",
+      "trademark": "Living Coral",
+      "status": "Pending",
+      "status_raw": "Pending"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Country Spirit Peonia Rose",
+      "url": "https://molarose.com/products/country-spirit-peonia-rose",
+      "trademark": "Country Spirit Peonia",
+      "status": "Pending",
+      "status_raw": "Pending"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Kensington Gardens Rose",
+      "url": "https://molarose.com/products/kensington-gardens-rose",
+      "trademark": "Kensington Gardens!",
+      "status": "Not Applicable",
+      "status_raw": "N/A"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Stanley Abbey Rose",
+      "url": "https://molarose.com/products/stanley-abbey-rose",
+      "trademark": "Stanley Abbey",
+      "status": "Pending",
+      "status_raw": "Pending"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Symbol Rose",
+      "url": "https://molarose.com/products/symbol-rose",
+      "trademark": "Symbol",
+      "status": "To Be Filed",
+      "status_raw": "To Be Filed"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Trésor du Jardin Rose",
+      "url": "https://molarose.com/products/tresor-du-jardin-rose-花园宝藏",
+      "trademark": "Tresor Du Jardin",
+      "status": "(no status)",
+      "status_raw": null
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Notre Dame Rose",
+      "url": "https://molarose.com/products/notre-dame-rose",
+      "trademark": "Notre Dame",
+      "status": "(no status)",
+      "status_raw": null
+    },
+    {
+      "site": "Mola Rose",
+      "title": "La Rose Monsieur Rose",
+      "url": "https://molarose.com/products/la-rose-monsieur-rose",
+      "trademark": "Monsieur",
+      "status": "Pending",
+      "status_raw": "Pending"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Victorian secret Rose",
+      "url": "https://molarose.com/products/victorian-secret-rose",
+      "trademark": "Secret",
+      "status": "(no status)",
+      "status_raw": null
+    },
+    {
+      "site": "Mola Rose",
+      "title": "White Ashley Rose",
+      "url": "https://molarose.com/products/white-ashley-rose",
+      "trademark": "ASHLEY",
+      "status": "Abandoned",
+      "status_raw": "Abandoned (will refile, see 93004.4400 below)"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Jeanne Moreau Rose",
+      "url": "https://molarose.com/products/jeanne-moreau-rose",
+      "trademark": "Jeanne Moreau",
+      "status": "(no status)",
+      "status_raw": null
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Tropicana Rose",
+      "url": "https://molarose.com/products/tropicana-rose",
+      "trademark": "Tropicana",
+      "status": "To Be Filed",
+      "status_raw": "To Be Filed"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Gruaud Larose Rose",
+      "url": "https://molarose.com/products/gruaud-larose-rose",
+      "trademark": "Gruaud Larose",
+      "status": "(no status)",
+      "status_raw": null
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Strawberry Macaron Rose",
+      "url": "https://molarose.com/products/strawberry-macaron-rose",
+      "trademark": "Macaron Rose",
+      "status": "(no status)",
+      "status_raw": null
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Whitby Abbey Rose",
+      "url": "https://molarose.com/products/whitby-abbey-rose",
+      "trademark": "Whitby Abbey",
+      "status": "Pending",
+      "status_raw": "Pending"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Dima Bombastic Rose",
+      "url": "https://molarose.com/products/dima-bombastic-rose",
+      "trademark": "Bombastic",
+      "status": "To Be Filed",
+      "status_raw": "To Be Filed"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Jillian Rose",
+      "url": "https://molarose.com/products/jillian-rose",
+      "trademark": "Jillian",
+      "status": "Pending",
+      "status_raw": "Pending"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Quicksand Roses – The Timeless Beige-Pink Rose for Modern Elegance",
+      "url": "https://molarose.com/products/quicksand-rose",
+      "trademark": "Quicksand",
+      "status": "Registered",
+      "status_raw": "Registered"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Barista Rose",
+      "url": "https://molarose.com/products/barista-rose",
+      "trademark": "Barista",
+      "status": "Not Applicable",
+      "status_raw": "N/A"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Deep Secret Rose",
+      "url": "https://molarose.com/products/deep-secret-rose",
+      "trademark": "Secret",
+      "status": "(no status)",
+      "status_raw": null
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Piano Rose",
+      "url": "https://molarose.com/products/piano-rose",
+      "trademark": "PIANO",
+      "status": "Registered",
+      "status_raw": "Registered"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Paradise Beach Rose",
+      "url": "https://molarose.com/products/paradise-beach-rose",
+      "trademark": "Paradise Beach",
+      "status": "Pending",
+      "status_raw": "Pending"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Maurice Utrillo Rose",
+      "url": "https://molarose.com/products/maurice-utrillo-rose",
+      "trademark": "Maurice Utrillo",
+      "status": "Registered",
+      "status_raw": "Registered"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Pink Piano Rose",
+      "url": "https://molarose.com/products/pink-piano-rose",
+      "trademark": "PIANO",
+      "status": "Registered",
+      "status_raw": "Registered"
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Country Spirit Secret Rose",
+      "url": "https://molarose.com/products/country-spirit-secret-rose",
+      "trademark": "Secret",
+      "status": "(no status)",
+      "status_raw": null
+    },
+    {
+      "site": "Mola Rose",
+      "title": "Macaron Rose",
+      "url": "https://molarose.com/products/macaron-rose",
+      "trademark": "Macaron Rose",
+      "status": "(no status)",
+      "status_raw": null
+    }
+  ],
+  "sites": {
+    "Mola Rose": {
+      "url_used": "https://molarose.com",
+      "url_attempted": "https://molarose.com/",
+      "platform": "Shopify",
+      "count": 754,
+      "error": null,
+      "matches": [
+        {
+          "title": "Just More Rose",
+          "url": "https://molarose.com/products/just-more-rose-plant",
+          "trademark": "Just More!",
+          "status": "(no status)",
+          "status_raw": null
+        },
+        {
+          "title": "Montmartre Rose",
+          "url": "https://molarose.com/products/montmartre-rose",
+          "trademark": "Montmartre",
+          "status": "Pending",
+          "status_raw": "Pending"
+        },
+        {
+          "title": "Pink O'Hara Rose",
+          "url": "https://molarose.com/products/pink-ohara-rose-粉荔枝",
+          "trademark": "Pink O'Hara",
+          "status": "Pending",
+          "status_raw": "Pending"
+        },
+        {
+          "title": "White O'Hara Rose",
+          "url": "https://molarose.com/products/white-ohara-rose-白哈娜",
+          "trademark": "White O'Hara",
+          "status": "Pending",
+          "status_raw": "Pending"
+        },
+        {
+          "title": "The Pride Rose",
+          "url": "https://molarose.com/products/the-pride-rose",
+          "trademark": "The Pride",
+          "status": "Not Applicable",
+          "status_raw": "N/A"
+        },
+        {
+          "title": "Happy Piano Rose",
+          "url": "https://molarose.com/products/happy-piano-rose-快乐钢琴",
+          "trademark": "PIANO",
+          "status": "Registered",
+          "status_raw": "Registered"
+        },
+        {
+          "title": "Love Fountain Rose",
+          "url": "https://molarose.com/products/love-fountain-rose",
+          "trademark": "Love Fountain",
+          "status": "Pending",
+          "status_raw": "Pending"
+        },
+        {
+          "title": "Emma woodhouse Rose",
+          "url": "https://molarose.com/products/emma-woodhouse-rose",
+          "trademark": "Emma WoodHouse",
+          "status": "Pending",
+          "status_raw": "Pending"
+        },
+        {
+          "title": "Bourbon Street Rose",
+          "url": "https://molarose.com/products/bourbon-street-rose",
+          "trademark": "Bourbon Street",
+          "status": "Pending",
+          "status_raw": "Pending"
+        },
+        {
+          "title": "St.Tropez Rose",
+          "url": "https://molarose.com/products/st-tropez-rose",
+          "trademark": "St Tropez",
+          "status": "(no status)",
+          "status_raw": null
+        },
+        {
+          "title": "Party Trendsetter Rose",
+          "url": "https://molarose.com/products/party-trendsetter-rose",
+          "trademark": "Trendsetter",
+          "status": "Abandoned",
+          "status_raw": "Abandoned (Rose Varietal)"
+        },
+        {
+          "title": "Bella Trendsetter Rose",
+          "url": "https://molarose.com/products/bella-trendsetter-rose",
+          "trademark": "Trendsetter",
+          "status": "Abandoned",
+          "status_raw": "Abandoned (Rose Varietal)"
+        },
+        {
+          "title": "Bloomsbury Rose",
+          "url": "https://molarose.com/products/bloomsbury-rose",
+          "trademark": "Bloomsbury",
+          "status": "Pending",
+          "status_raw": "Pending"
+        },
+        {
+          "title": "Living Coral Rose",
+          "url": "https://molarose.com/products/living-coral-rose",
+          "trademark": "Living Coral",
+          "status": "Pending",
+          "status_raw": "Pending"
+        },
+        {
+          "title": "Country Spirit Peonia Rose",
+          "url": "https://molarose.com/products/country-spirit-peonia-rose",
+          "trademark": "Country Spirit Peonia",
+          "status": "Pending",
+          "status_raw": "Pending"
+        },
+        {
+          "title": "Kensington Gardens Rose",
+          "url": "https://molarose.com/products/kensington-gardens-rose",
+          "trademark": "Kensington Gardens!",
+          "status": "Not Applicable",
+          "status_raw": "N/A"
+        },
+        {
+          "title": "Stanley Abbey Rose",
+          "url": "https://molarose.com/products/stanley-abbey-rose",
+          "trademark": "Stanley Abbey",
+          "status": "Pending",
+          "status_raw": "Pending"
+        },
+        {
+          "title": "Symbol Rose",
+          "url": "https://molarose.com/products/symbol-rose",
+          "trademark": "Symbol",
+          "status": "To Be Filed",
+          "status_raw": "To Be Filed"
+        },
+        {
+          "title": "Trésor du Jardin Rose",
+          "url": "https://molarose.com/products/tresor-du-jardin-rose-花园宝藏",
+          "trademark": "Tresor Du Jardin",
+          "status": "(no status)",
+          "status_raw": null
+        },
+        {
+          "title": "Notre Dame Rose",
+          "url": "https://molarose.com/products/notre-dame-rose",
+          "trademark": "Notre Dame",
+          "status": "(no status)",
+          "status_raw": null
+        },
+        {
+          "title": "La Rose Monsieur Rose",
+          "url": "https://molarose.com/products/la-rose-monsieur-rose",
+          "trademark": "Monsieur",
+          "status": "Pending",
+          "status_raw": "Pending"
+        },
+        {
+          "title": "Victorian secret Rose",
+          "url": "https://molarose.com/products/victorian-secret-rose",
+          "trademark": "Secret",
+          "status": "(no status)",
+          "status_raw": null
+        },
+        {
+          "title": "White Ashley Rose",
+          "url": "https://molarose.com/products/white-ashley-rose",
+          "trademark": "ASHLEY",
+          "status": "Abandoned",
+          "status_raw": "Abandoned (will refile, see 93004.4400 below)"
+        },
+        {
+          "title": "Jeanne Moreau Rose",
+          "url": "https://molarose.com/products/jeanne-moreau-rose",
+          "trademark": "Jeanne Moreau",
+          "status": "(no status)",
+          "status_raw": null
+        },
+        {
+          "title": "Tropicana Rose",
+          "url": "https://molarose.com/products/tropicana-rose",
+          "trademark": "Tropicana",
+          "status": "To Be Filed",
+          "status_raw": "To Be Filed"
+        },
+        {
+          "title": "Gruaud Larose Rose",
+          "url": "https://molarose.com/products/gruaud-larose-rose",
+          "trademark": "Gruaud Larose",
+          "status": "(no status)",
+          "status_raw": null
+        },
+        {
+          "title": "Strawberry Macaron Rose",
+          "url": "https://molarose.com/products/strawberry-macaron-rose",
+          "trademark": "Macaron Rose",
+          "status": "(no status)",
+          "status_raw": null
+        },
+        {
+          "title": "Whitby Abbey Rose",
+          "url": "https://molarose.com/products/whitby-abbey-rose",
+          "trademark": "Whitby Abbey",
+          "status": "Pending",
+          "status_raw": "Pending"
+        },
+        {
+          "title": "Dima Bombastic Rose",
+          "url": "https://molarose.com/products/dima-bombastic-rose",
+          "trademark": "Bombastic",
+          "status": "To Be Filed",
+          "status_raw": "To Be Filed"
+        },
+        {
+          "title": "Jillian Rose",
+          "url": "https://molarose.com/products/jillian-rose",
+          "trademark": "Jillian",
+          "status": "Pending",
+          "status_raw": "Pending"
+        },
+        {
+          "title": "Quicksand Roses – The Timeless Beige-Pink Rose for Modern Elegance",
+          "url": "https://molarose.com/products/quicksand-rose",
+          "trademark": "Quicksand",
+          "status": "Registered",
+          "status_raw": "Registered"
+        },
+        {
+          "title": "Barista Rose",
+          "url": "https://molarose.com/products/barista-rose",
+          "trademark": "Barista",
+          "status": "Not Applicable",
+          "status_raw": "N/A"
+        },
+        {
+          "title": "Deep Secret Rose",
+          "url": "https://molarose.com/products/deep-secret-rose",
+          "trademark": "Secret",
+          "status": "(no status)",
+          "status_raw": null
+        },
+        {
+          "title": "Piano Rose",
+          "url": "https://molarose.com/products/piano-rose",
+          "trademark": "PIANO",
+          "status": "Registered",
+          "status_raw": "Registered"
+        },
+        {
+          "title": "Paradise Beach Rose",
+          "url": "https://molarose.com/products/paradise-beach-rose",
+          "trademark": "Paradise Beach",
+          "status": "Pending",
+          "status_raw": "Pending"
+        },
+        {
+          "title": "Maurice Utrillo Rose",
+          "url": "https://molarose.com/products/maurice-utrillo-rose",
+          "trademark": "Maurice Utrillo",
+          "status": "Registered",
+          "status_raw": "Registered"
+        },
+        {
+          "title": "Pink Piano Rose",
+          "url": "https://molarose.com/products/pink-piano-rose",
+          "trademark": "PIANO",
+          "status": "Registered",
+          "status_raw": "Registered"
+        },
+        {
+          "title": "Country Spirit Secret Rose",
+          "url": "https://molarose.com/products/country-spirit-secret-rose",
+          "trademark": "Secret",
+          "status": "(no status)",
+          "status_raw": null
+        },
+        {
+          "title": "Macaron Rose",
+          "url": "https://molarose.com/products/macaron-rose",
+          "trademark": "Macaron Rose",
+          "status": "(no status)",
+          "status_raw": null
+        }
+      ]
+    }
+  }
+}
