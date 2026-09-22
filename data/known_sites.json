@@ -1,7 +1,7 @@
 {
-  "source_file": "2026-09-16_ListofIPInfringements.xlsx",
-  "imported_date": "2026-09-17",
-  "record_count": 16,
+  "source_file": "2026-09-22_ListofIPInfringements.xlsx",
+  "imported_date": "2026-09-22",
+  "record_count": 17,
   "records": [
     {
       "company": "Bloomora Roses",
@@ -188,6 +188,21 @@
       "prior_reported_varieties": [
         "Sophie Rochas ®\nDelbard"
       ],
+      "source_sheets": [
+        "Sheet1"
+      ]
+    },
+    {
+      "company": "Mola Rose",
+      "websites": [
+        "https://molarose.com/"
+      ],
+      "sales_platforms": [],
+      "shipped_from": null,
+      "prior_manual_notes": [
+        "Added 2026-09-22 per explicit user instruction (user-supplied URL). Columns E-J left BLANK, not '-': the catalog has not been checked even once. molarose.com and www.molarose.com are both refused by this session's network egress proxy at the CONNECT stage (gateway answered 403 to CONNECT, organization egress policy) -- the request never reached the seller's server, so nothing about this site is known first-hand yet: not its platform, not its catalog, not whether it sells rose plants or cut flowers, not its location or host. No attempt was made to route around the block. The same condition applied to Redland Ranch Roses until the domain was allowlisted in the environment on 2026-09-16; this one is on the roster and will be attempted every morning, reported as a coverage gap until it answers."
+      ],
+      "prior_reported_varieties": [],
       "source_sheets": [
         "Sheet1"
       ]

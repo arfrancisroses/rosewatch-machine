@@ -21,6 +21,7 @@ Kate Roses,https://www.kateroses.com/,,California,"Sophie Rochas ®
 Delbard",,Sheet1
 Kisaki Plant,https://kisakiplant.com/,Shopify,"Kerens, TX","Sophie Rochas ®
 Delbard",,Sheet1
+Mola Rose,https://molarose.com/,,,,"Added 2026-09-22 per explicit user instruction (user-supplied URL). Columns E-J left BLANK, not '-': the catalog has not been checked even once. molarose.com and www.molarose.com are both refused by this session's network egress proxy at the CONNECT stage (gateway answered 403 to CONNECT, organization egress policy) -- the request never reached the seller's server, so nothing about this site is known first-hand yet: not its platform, not its catalog, not whether it sells rose plants or cut flowers, not its location or host. No attempt was made to route around the block. The same condition applied to Redland Ranch Roses until the domain was allowlisted in the environment on 2026-09-16; this one is on the roster and will be attempted every morning, reported as a coverage gap until it answers.",Sheet1
 Muse Roses,https://museroses.com/,,"Buda, Texas","Piano®
 Tantau; Pink O'Hara™; Sophie Rochas ®
 Delbard",office address in TX is a home address,Sheet1
