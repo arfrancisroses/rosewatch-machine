@@ -162,8 +162,5 @@
   "review_queue_entries_this_run": 0,
   "screenshot_limitation": "Still no case has a screenshot on file -- same network-proxy limitation as prior runs (headless Chromium cannot complete a connection through this environment's egress proxy). Explained to the user in chat on 2026-09-14; awaiting their choice of approach (manual capture vs. Wayback Machine vs. environment-level fix).",
   "dashboard_updated": true,
-  "dashboard_url": "https://claude.ai/code/artifact/16e0d5da-a772-4f6c-81b7-80697febeeb1",
-  "cut_flower_matches_not_recorded": 0,
-  "cut_flower_matches": [],
-  "_cut_flower_note": "Cut-flower rule adopted by the user on 2026-09-22, after this run. Applied retroactively to this run's 246 matches as a check: none of them reads as a cut-flower listing, so the run's report is unaffected and was not regenerated."
+  "dashboard_url": "https://claude.ai/code/artifact/16e0d5da-a772-4f6c-81b7-80697febeeb1"
 }
