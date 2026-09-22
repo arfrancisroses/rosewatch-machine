@@ -17,6 +17,12 @@ Last updated: 2026-09-10.
   - **2026-09-21 check:** still blocked, four days on, with one change -- the site root now answers HTTP 200 where it returned 403, while every catalog path stays refused (403 from the firewall on `/wp-json/wp/v2/product`, 404 on `/products.json`). Raised to the user, who chose to keep waiting.
   - **On the first run of the week of 2026-09-28, raise the status again in the chat summary** -- recovered, or still blocked and then ten days old. If still blocked, put the same options back to the user (keep waiting, verify that catalog by hand from a browser, or approach the seller); do not pick one unprompted. If the root-200 / feed-403 split has changed either way, say which, since that is the only signal so far about whether the rule is being tuned.
 
+- **Raise on Monday 2026-09-28: High Garden's "Inspired by" listings and their trademark disclaimer.** Found 2026-09-22 while reading listing text for the cut-roses rule; the user asked for it to be brought up again next Monday, so it waits until then rather than being actioned now.
+  - `HIGHGARDEN-010`, *"French Florist Hybrid Tea Rose Inspired by Maurice Utrillo"* -- matched against **Maurice Utrillo (Registered)** -- carries this on the listing itself, quoted exactly as found: *"This rose is genetically the same variety as the rose commonly known as 'Maurice Utrillo'. Highgarden Roses does not own the trademarks for these rose names, nor are we affiliated with, endorsed by, or licensed by any third-party companies, breeders, or growers."*
+  - Several other High Garden titles use the same **"Inspired by [chart name]"** construction -- `HIGHGARDEN-004` (Charming Piano), `-008` (Happy Piano), `-009` (Marc Chagall), `-016` (Pink Piano). Whether the rest carry the same disclaimer text has **not** been checked; do that before raising it, so the user gets a count rather than one example.
+  - This is the seller's own wording, recorded as evidence. It is **not** a finding of infringement and must not be presented as one -- what it means is for Francis Roses or counsel to judge.
+  - Both this and the Your Roses decision fall on the same first run of the week of 2026-09-28, so raise them together in that day's chat summary.
+
 If picked up in a fresh session, raise this before closing out that day's work.
 
 ### The scheduled trigger's prompt (updated 2026-09-21)
