@@ -59,10 +59,34 @@ def host_variants(url):
     return [urlunsplit(parts._replace(netloc=h)).rstrip("/") for h in (host, other)]
 
 
-def fetch(url, timeout=45):
+def fetch(url, timeout=45, tries=5):
+    """GET a URL, backing off when the host asks us to slow down.
+
+    A 429 is the seller's server saying "too fast", not a refusal and not a
+    security control: the polite answer is to wait and try again, honouring
+    Retry-After when it is sent. Without this, a run that trips Shopify's rate
+    limiter reports healthy stores as coverage gaps -- seven did on 2026-09-24.
+    Anything other than 429 is raised on the first attempt, as before.
+    """
     req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.read().decode("utf-8", "replace")
+    delay = 20
+    for attempt in range(tries):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return r.read().decode("utf-8", "replace")
+        except urllib.error.HTTPError as e:
+            if e.code != 429 or attempt == tries - 1:
+                raise
+            wait = delay
+            retry_after = e.headers.get("Retry-After") if e.headers else None
+            if retry_after:
+                try:
+                    wait = max(wait, int(float(retry_after)))
+                except ValueError:
+                    pass
+            print(f"    429 from {urlsplit(url).netloc}; waiting {wait}s", file=sys.stderr)
+            time.sleep(min(wait, 120))
+            delay *= 2
 
 
 def try_shopify(base):
@@ -301,6 +325,8 @@ def existing_case_urls():
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--out", help="where to write the crawl JSON")
+    ap.add_argument("--only", help="comma-separated company names to crawl instead of the whole roster; "
+                                   "use to retry sites that were rate-limited, without re-pulling the rest")
     args = ap.parse_args()
 
     today = datetime.datetime.now(PHOENIX).date().isoformat()
@@ -309,6 +335,12 @@ def main():
     active = active_trademarks()
     existing = existing_case_urls()
     sites = json.loads((REPO_ROOT / "data" / "known_sites.json").read_text())["records"]
+    if args.only:
+        wanted = {n.strip().lower() for n in args.only.split(",")}
+        sites = [s for s in sites if s["company"].strip().lower() in wanted]
+        missing = wanted - {s["company"].strip().lower() for s in sites}
+        if missing:
+            sys.exit(f"--only named companies not on the roster: {sorted(missing)}")
     print(f"{len(active)} chart names (all statuses), {len(existing)} existing case URLs", file=sys.stderr)
 
     results, new_matches, cut_roses, total = {}, [], [], 0
@@ -332,6 +364,7 @@ def main():
             results[label] = {k: r[k] for k in ("url_used", "url_attempted", "platform", "count", "error")}
             results[label]["matches"] = matches
             results[label]["cut_roses_only_count"] = sum(1 for m in matches if m["cut_roses_only"])
+            time.sleep(2)
             note = f"via {r['url_used']}" if r["url_used"] else f"FAILED: {r['error'][:120]}"
             cut = results[label]["cut_roses_only_count"]
             print(f"{label}: {r['count']} products, {len(matches)} matches"
