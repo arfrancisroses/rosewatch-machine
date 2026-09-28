@@ -34,7 +34,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "scripts"))
-from crawl_sites import fetch, normalize, PHOENIX  # noqa: E402
+from crawl_sites import fetch, normalize, try_woocommerce, PHOENIX  # noqa: E402
 
 # Sites whose first case is being created before any case exists to copy from.
 # Research recorded by hand when the site joined the roster; keep the wording,
@@ -147,26 +147,37 @@ def main():
         return 0
 
     # Pull full product data once per site, only for sites that actually need it.
+    # Keyed by product URL, because a WordPress permalink has no Shopify "handle".
+    # The platform comes from the crawl rather than being assumed: Your Roses is
+    # WooCommerce, and pulling /products.json from it 404s (2026-09-28).
     needed = {m["site"] for m in todo}
     catalogs = {}
     for label in needed:
         s = crawl["sites"].get(label, {})
-        base = s.get("url_used")
+        base, platform = s.get("url_used"), (s.get("platform") or "")
         if not base:
             continue
-        prods, page = {}, 1
-        while page <= 30:
-            batch = (json.loads(fetch(f"{base}/products.json?limit=250&page={page}")) or {}).get("products") or []
-            if not batch:
-                break
-            for p in batch:
-                prods[p.get("handle", "")] = p
-            if len(batch) < 250:
-                break
-            page += 1
-            time.sleep(0.3)
+        prods = {}
+        if platform == "Shopify":
+            page = 1
+            while page <= 30:
+                batch = (json.loads(fetch(f"{base}/products.json?limit=250&page={page}")) or {}).get("products") or []
+                if not batch:
+                    break
+                for p in batch:
+                    prods[f"{base}/products/{p.get('handle','')}".rstrip("/")] = p
+                if len(batch) < 250:
+                    break
+                page += 1
+                time.sleep(0.3)
+        else:
+            # WordPress/WooCommerce: the REST feed carries the description but no
+            # price, so price is recorded as unavailable rather than guessed at.
+            for item in try_woocommerce(base):
+                prods[item["url"].rstrip("/")] = {"body_html": item.get("description"),
+                                                  "variants": [{}], "_no_price_in_feed": True}
         catalogs[label] = prods
-        print(f"  {label}: {len(prods)} products", file=sys.stderr)
+        print(f"  {label}: {len(prods)} products [{platform or 'unknown platform'}]", file=sys.stderr)
         time.sleep(0.5)
 
     created = []
@@ -184,9 +195,10 @@ def main():
         case_no = f"{reg['site_code']}-{seq:03d}"
 
         rec = chart[normalize(m["trademark"])]
-        prod = catalogs.get(label, {}).get(m["url"].rstrip("/").split("/")[-1], {})
+        prod = catalogs.get(label, {}).get(m["url"].rstrip("/"), {})
         variants = prod.get("variants") or [{}]
         price = variants[0].get("price")
+        no_price_in_feed = prod.get("_no_price_in_feed", False)
         cls, why = classify(m["title"], m["trademark"])
         loc, host = site_research[domain]
         status = m.get("status") or "(no status)"
@@ -209,9 +221,11 @@ def main():
             "quoted_text": text_of(prod.get("body_html")),
             "price": price,
             "currency": "USD" if price else None,
+            "price_note": ("Not available: this site's WordPress product feed does not carry price, and no "
+                           "price was read from the product page." if no_price_in_feed and not price else None),
             "quantity_or_form": (variants[0].get("title")
                                  if variants[0].get("title") not in (None, "Default Title")
-                                 else "Live plant listing (no explicit pot size or quantity in the product feed)"),
+                                 else "Not stated in the product feed"),
             "match_classification": cls,
             "match_explanation": why,
             "review_status": "New",

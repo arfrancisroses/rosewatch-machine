@@ -1,0 +1,56 @@
+{
+  "case_number": "YOURROSES-069",
+  "site_code": "YOURROSES",
+  "variety": "Jeanne Moreau",
+  "matched_trademark": "Jeanne Moreau",
+  "trademark_status": "(no status)",
+  "trademark_status_as_written": null,
+  "trademark_application_or_registration_no": "App. Ser. No. none on chart (Reg. No.: none on chart)",
+  "breeder": "Meilland",
+  "seller_name": "Your Roses",
+  "website_domain": "your-roses.com",
+  "product_url": "https://your-roses.com/product/jeanne-moreau-rose/",
+  "exact_product_title": "Jeanne Moreau Rose",
+  "quoted_text": "Jeanne Moreau Rose for sale！ 【SHIPPING INFORMATION】 Before sending the rose order, we need to trim the leaves and branches, remove soil from the roots and wrap a small amount of soil around the roots of rose for transportation.The delivery time is about 5-7 days. 【ORDER INFORMATION】 If the order is out of stock, we will notify you by email. If you can’t find your favorite variety on the website, you can ask us and we...",
+  "price": null,
+  "currency": null,
+  "price_note": "Not available: this site's WordPress product feed does not carry price, and no price was read from the product page.",
+  "quantity_or_form": "Not stated in the product feed",
+  "match_classification": "Strong",
+  "match_explanation": "The product title contains the full chart name \"Jeanne Moreau\" as a phrase, inside a longer title.",
+  "review_status": "New",
+  "first_date_found": "2026-09-28 06:13 MST (America/Phoenix)",
+  "last_verified": "2026-09-28 06:10 MST (America/Phoenix)",
+  "screenshot_captured_at": null,
+  "seller_location": {
+    "country": "China (Estimated)",
+    "state_or_region": "Not available on page",
+    "city": "Not available on page",
+    "source": "Estimated from a phone number shown on the site using China's country code (\"86-135-3333-8492\"); consistent with prior known-sites research noting this seller ships from China. No address or explicit country statement appears on the site itself.",
+    "estimated": true
+  },
+  "website_host": {
+    "hosting_platform": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
+    "cdn_or_proxy": null,
+    "server_ip": "191.101.104.131",
+    "ip_geolocation": "Not separately geolocated this run.",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown."
+  ],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-09-28, which matches product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"blank\", which carries no enforceable right: it is recorded so the match is tracked, and must not be read as a finding of infringement. The product title contains the full chart name \"Jeanne Moreau\" as a phrase, inside a longer title.",
+  "history": [
+    {
+      "date": "2026-09-28 06:13 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created from that day's crawl; chart status carried through unchanged."
+    },
+    {
+      "date": "2026-09-28 06:10 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "_readme": "Per-run monitoring log, one file per calendar day (America/Phoenix), used to generate the Daily PDF Report. Distinct from cases.json, which is the permanent case/review-queue index.",
+  "run_date": "2026-09-28",
+  "generated_at": "2026-09-28 06:10 MST (America/Phoenix)",
+  "_run_note": "Eleventh scheduled run, and the one where Your Roses came back. Its feed served 1,665 products after ten days of firewall refusals; nothing was done differently and no workaround was used. Its 33 existing cases re-verified present after eleven days unverified, and 39 matches that had never been compared against its catalog -- it was last crawled the day before all-status matching came in -- became YOURROSES-034..072. None is Registered or Pending: 17 unstatused, 8 Not Applicable, 7 To Be Filed, 7 Abandoned. That took the roster to full coverage apart from Flower Meadow Dream, so 357 of 360 cases were re-verified, against 285 of 321 on Friday. create_cases.py needed a fix to get there: it assumed every site was Shopify and 404'd on Your Roses' WordPress feed, so it now reads the platform from the crawl and pulls the WordPress REST feed where that is what a site runs, recording price as unavailable rather than guessing, since that feed does not carry it. 18 of 19 URLs served a catalog, the best coverage since the roster reached this size. No listing classified cut-roses-only. Also completed today, per the standing open item: High Garden's full 670-product catalog was checked for the \"Inspired by\" disclaimer -- exactly 9 listings use that construction and all 9 carry it, 5 of them matching a chart name and therefore holding cases (HIGHGARDEN-004, -008, -009, -010, -016). The seller's wording is recorded on those five cases as evidence, not as a finding.",
+  "sites": [
+    {
+      "company": "Bloomora Roses",
+      "url": "https://www.facebook.com/profile.php?id=61591662794131",
+      "accessible": false,
+      "platform": "Facebook",
+      "product_pages_reviewed": 0,
+      "notes": "Facebook page; facebook.com is blocked by this environment's network egress policy at the CONNECT stage, so the page was never reached. No open product feed exists for a Facebook page in any case."
+    },
+    {
+      "company": "Ergonzy / Ergonzi (ergongzy.com)",
+      "url": "https://ergongzy.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 506,
+      "notes": null
+    },
+    {
+      "company": "Ergonzy / Ergonzi (www.etsy.com)",
+      "url": "https://www.etsy.com/shop/Ergongzi",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "Etsy storefront; etsy.com is blocked by this environment's network egress policy at the CONNECT stage. The seller's own site (ergongzy.com) was crawled in full and carries the same catalog."
+    },
+    {
+      "company": "Flower Meadow Dream",
+      "url": "https://www.myroseworld.com/",
+      "accessible": false,
+      "platform": null,
+      "product_pages_reviewed": 0,
+      "notes": "Not reached. Both www.myroseworld.com and myroseworld.com were refused by this environment's egress proxy at the CONNECT stage, so the request never reached the seller's server. This is our own network policy, not a block by the site. Unchanged since 2026-09-16. The site's 3 existing cases (MYROSEWORL-001..003) could not be re-verified and keep their 2026-09-16 Last Verified date."
+    },
+    {
+      "company": "GCM Ranch",
+      "url": "https://www.etsy.com/shop/GcmRanch",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "Etsy shop closed (dormant). Roster entry retained per user instruction (2026-09-15); expected to stay inaccessible and not awaiting any decision."
+    },
+    {
+      "company": "High Garden",
+      "url": "https://highgardenroses.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 670,
+      "notes": null
+    },
+    {
+      "company": "Hillside Rose Farm",
+      "url": "https://hillsiderosefarm.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 153,
+      "notes": null
+    },
+    {
+      "company": "Huniu Rose Garden",
+      "url": "https://huniurosegarden.ca",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 296,
+      "notes": null
+    },
+    {
+      "company": "Jessie's Roses (www.etsy.com)",
+      "url": "https://www.etsy.com/shop/JessiesRoseUSA",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "Etsy storefront; etsy.com is blocked by this environment's network egress policy at the CONNECT stage."
+    },
+    {
+      "company": "Jessie's Roses (www.jessiesrose.com)",
+      "url": "https://jessiesrose.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 0,
+      "notes": "Reached on the apex host after the www host was refused by the egress proxy. The Shopify feed returned HTTP 200 with an empty product array -- the store genuinely lists no products. Counted as checked, zero products."
+    },
+    {
+      "company": "Kate Roses",
+      "url": "https://kateroses.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 110,
+      "notes": null
+    },
+    {
+      "company": "Kisaki Plant",
+      "url": "https://kisakiplant.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 317,
+      "notes": null
+    },
+    {
+      "company": "Mola Rose",
+      "url": "https://molarose.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 756,
+      "notes": "Served cleanly on the apex host; 755 products, unchanged. www.molarose.com stays refused by the egress proxy, which costs nothing since the crawler tries both host forms."
+    },
+    {
+      "company": "Muse Roses",
+      "url": "https://museroses.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 756,
+      "notes": null
+    },
+    {
+      "company": "One Love",
+      "url": "https://oneloveroseandgardens.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 864,
+      "notes": null
+    },
+    {
+      "company": "Redland Ranch Roses",
+      "url": "https://redlandranchroses.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 1846,
+      "notes": null
+    },
+    {
+      "company": "Rose Explosion",
+      "url": "https://roseexplosion.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 1430,
+      "notes": null
+    },
+    {
+      "company": "Springland Flowers",
+      "url": "https://springlandflowers.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 116,
+      "notes": null
+    },
+    {
+      "company": "Your Roses",
+      "url": "https://your-roses.com/",
+      "accessible": true,
+      "platform": null,
+      "product_pages_reviewed": 1665,
+      "notes": "RECOVERED. After ten days blocked (2026-09-18 to 2026-09-25), the site's WordPress product feed answered normally on this run and served 1,665 products -- 9 more than the 1,656 it served on 2026-09-17, the last day before the block. No workaround was used at any point; the crawler made the same request it has made every day and the site answered it. All 33 existing cases (YOURROSES-001..033) re-verified present and now carry a 2026-09-28 Last Verified date, closing an eleven-day gap. 39 further matches had no case and were written up as YOURROSES-034..072: the site was last crawled on 2026-09-17, the day before matching was widened to every chart status, so these are names that had never been compared against its catalog rather than newly added listings -- none is Registered or Pending."
+    }
+  ],
+  "total_sites_on_roster": 17,
+  "total_urls_on_roster": 19,
+  "urls_accessible": 14,
+  "urls_inaccessible": 5,
+  "total_product_pages_reviewed": 9485,
+  "active_trademark_matches_found": 39,
+  "active_trademark_matches_by_status": {
+    "(no status)": 17,
+    "Not Applicable": 8,
+    "To Be Filed": 7,
+    "Abandoned": 7
+  },
+  "cases_created_this_run": 39,
+  "cases_reverified_this_run": 357,
+  "matches_held_pending_case_creation": 0,
+  "review_queue_entries_this_run": 0,
+  "cut_roses_only_this_run": 0,
+  "screenshot_limitation": "Still no case has a screenshot on file -- same network-proxy limitation as prior runs (headless Chromium cannot complete a connection through this environment's egress proxy). Explained to the user in chat on 2026-09-14; awaiting their choice of approach (manual capture vs. Wayback Machine vs. environment-level fix).",
+  "dashboard_updated": true,
+  "dashboard_url": "https://claude.ai/code/artifact/16e0d5da-a772-4f6c-81b7-80697febeeb1"
+}
