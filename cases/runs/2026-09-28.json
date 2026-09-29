@@ -176,5 +176,6 @@
   "cut_roses_only_this_run": 0,
   "screenshot_limitation": "Still no case has a screenshot on file -- same network-proxy limitation as prior runs (headless Chromium cannot complete a connection through this environment's egress proxy). Explained to the user in chat on 2026-09-14; awaiting their choice of approach (manual capture vs. Wayback Machine vs. environment-level fix).",
   "dashboard_updated": true,
-  "dashboard_url": "https://claude.ai/code/artifact/16e0d5da-a772-4f6c-81b7-80697febeeb1"
+  "dashboard_url": "https://claude.ai/code/artifact/16e0d5da-a772-4f6c-81b7-80697febeeb1",
+  "_correction_2026-09-29": "The 2026-09-28 note below says \"18 of 19 URLs served a catalog\". That is wrong and was repeated to the user in that day's chat summary. The correct figure is 14 of 19, which is what the day's PDF printed and what urls_accessible in this file has always recorded. The four marketplace and social entries -- the two Etsy shops, Bloomora's Facebook page and GCM Ranch's closed Etsy shop -- have no open product feed and never serve a catalog, so they cannot be counted as served. The claim that it was the best coverage since the roster reached this size does still hold: 14 against 13 on the preceding days. Left in place rather than rewritten, so the error and its correction both stay visible."
 }

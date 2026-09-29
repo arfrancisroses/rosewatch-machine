@@ -38,7 +38,8 @@
   },
   "evidence_screenshots": [],
   "access_or_research_limitations": [
-    "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown."
+    "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown.",
+    "2026-09-29: could not confirm the state of the rendered product page. The apex URL redirects to www.hillsiderosefarm.com, which this environment's egress proxy refuses at the CONNECT stage. The catalog-feed absence and the 404 on the product JSON endpoint are what the delisting rests on."
   ],
   "investigator_notes": "Found by the daily catalog crawl on 2026-09-21, which matches product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"Pending\". The product title contains the single word \"Darlington\", which is the whole of the chart entry. A one-word match can be coincidence rather than the variety -- it needs a human read of the listing before it means anything.",
   "history": [
@@ -70,6 +71,12 @@
     {
       "date": "2026-09-28 06:10 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-09-29 06:07 MST (America/Phoenix)",
+      "action": "Listing no longer found in the seller's catalog",
+      "details": "First disappearance of a tracked listing since monitoring began. Recorded without advancing Last Verified, which stays at 2026-09-28 -- the last date the listing was actually confirmed present. Prior evidence, case number and review status are unchanged. The daily crawl keeps checking; if it reappears, that will be appended as a further entry."
     }
-  ]
+  ],
+  "listing_availability": "NOT FOUND in the seller's catalog as of 2026-09-29 06:07 MST (America/Phoenix). Last confirmed present 2026-09-28 06:10 MST. Evidence: the product is absent from hillsiderosefarm.com's own Shopify product feed (146 products today against 153 on 2026-09-28, with no Darlington listing under any title or handle), and /products/darlington-达林顿-netherlands.json returns HTTP 404 on the apex host. The rendered product page itself could not be checked: the apex URL answers HTTP 301 to the www host, and www.hillsiderosefarm.com is refused by this environment's egress proxy at the CONNECT stage. So the listing is gone from the catalog; whether the page still renders for a public visitor is unconfirmed. Nothing here says why it came down, and no inference should be drawn about the seller's reason."
 }
