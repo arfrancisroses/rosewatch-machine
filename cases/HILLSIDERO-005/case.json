@@ -81,6 +81,11 @@
       "date": "2026-09-30 06:07 MST (America/Phoenix)",
       "action": "Still not listed",
       "details": "Second consecutive run with the listing absent from Hillside Rose Farm's product feed (146 products, unchanged from 2026-09-29). Last Verified stays at 2026-09-28. No change to the evidence or to what can be said about it."
+    },
+    {
+      "date": "2026-10-01 06:07 MST (America/Phoenix)",
+      "action": "Still not listed",
+      "details": "Third consecutive run with the listing absent. Hillside Rose Farm's catalog grew back from 146 products to 150, so the seller is adding listings again, but this one is not among them and no Darlington listing appears under any title or handle. Last Verified stays at 2026-09-28."
     }
   ],
   "listing_availability": "NOT FOUND in the seller's catalog as of 2026-09-29 06:07 MST (America/Phoenix). Last confirmed present 2026-09-28 06:10 MST. Evidence: the product is absent from hillsiderosefarm.com's own Shopify product feed (146 products today against 153 on 2026-09-28, with no Darlington listing under any title or handle), and /products/darlington-达林顿-netherlands.json returns HTTP 404 on the apex host. The rendered product page itself could not be checked: the apex URL answers HTTP 301 to the www host, and www.hillsiderosefarm.com is refused by this environment's egress proxy at the CONNECT stage. So the listing is gone from the catalog; whether the page still renders for a public visitor is unconfirmed. Nothing here says why it came down, and no inference should be drawn about the seller's reason."
