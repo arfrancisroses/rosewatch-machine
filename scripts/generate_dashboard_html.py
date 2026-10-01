@@ -11,6 +11,7 @@ Artifact). dashboard/*.md remains the git-diff-friendly machine record.
 Re-run after import_sources.py or any change to cases/cases.json.
 """
 import json
+import re
 import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -25,22 +26,45 @@ PHOENIX = ZoneInfo("America/Phoenix")
 STATUS_ORDER = ["Registered", "Pending", "To Be Filed", "Abandoned", "Do Not File", "Not Applicable", None]
 
 # Hand-maintained ingestion log, kept in sync with dashboard/DATA_SOURCES.md.
-DATA_SOURCES_LOG = [
-    {
-        "date": "2026-09-10",
-        "kind": "Master Trademark Filing Chart",
-        "file": "data/sources/2026-09-10_MasterTrademarkFilingChart.xlsx",
-        "records": 275,
-        "notes": "Initial Rose Watch setup import. 86 records flagged Needs Review (missing/unclear status, missing owner/breeder, Registered status without a registration number, unrecognized status text, or duplicate trademark name).",
-    },
-    {
-        "date": "2026-09-10",
-        "kind": "Known reseller website list",
-        "file": "data/sources/2026-09-10_ListofIPInfringements.xlsx",
-        "records": 14,
-        "notes": "Initial Rose Watch setup import (Sheet1 + Etsy tabs, deduplicated by company). Predates the case-tracking system: per-variety flags are informal prior research, not case records. Imported as the crawl roster only. Per user instruction, this roster is now a closed scope -- no sites are added beyond it without explicit direction.",
-    },
-]
+def _load_data_sources_log():
+    """The Data Sources tab, read from dashboard/DATA_SOURCES.md.
+
+    This list used to be hardcoded here, which meant the artifact's Data Sources
+    tab silently stopped matching the append-only log: by 2026-10-01 it still
+    showed only the two 2026-09-10 imports and was missing Bloomora Roses,
+    Redland Ranch, Mola Rose and Bloom Ladies Roses. Reading the file is the
+    only version that cannot drift.
+    """
+    md = (REPO_ROOT / "dashboard" / "DATA_SOURCES.md").read_text()
+    entries, kind = [], None
+    for line in md.splitlines():
+        if line.startswith("## "):
+            heading = line[3:].strip().lower()
+            if "trademark" in heading:
+                kind = "Master Trademark Filing Chart"
+            elif "website" in heading or "reseller" in heading:
+                kind = "Known reseller website list"
+            else:
+                kind = None
+            continue
+        if not kind or not line.startswith("|"):
+            continue
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if len(cells) < 4 or cells[0].startswith("---") or cells[0] == "Date Ingested":
+            continue
+        if not re.match(r"^\d{4}-\d{2}-\d{2}$", cells[0]):
+            continue
+        entries.append({
+            "date": cells[0],
+            "kind": kind,
+            "file": cells[1].strip("`"),
+            "records": cells[2],
+            "notes": re.sub(r"[*`\[\]]|\((?:[A-Z_]+\.md)\)", "", cells[3]).strip(),
+        })
+    return entries
+
+
+DATA_SOURCES_LOG = _load_data_sources_log()
 
 
 def load_json(path, default):
