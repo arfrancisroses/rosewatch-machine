@@ -278,7 +278,14 @@ def generate(run_date_str):
                 styles["RWBodySmall"]))
         story.append(Spacer(1, 6))
 
-    roster_companies = len(known_sites.get("records", []))
+    # Count the companies the crawl file itself covered, not the roster as it
+    # stands today. data/known_sites.json is always current, so taking the count
+    # from there made a reissued report describe the wrong day: regenerating the
+    # 2026-09-22 report on 2026-10-01 had it claim 18 companies when 17 existed
+    # then. A site's labels are "Company" or "Company (host)" when it has several
+    # URLs, so stripping the suffix gives companies from URLs.
+    roster_companies = len({re.sub(r"\s*\([^)]*\)\s*$", "", label).strip()
+                            for label in crawl.get("sites", {})}) or len(known_sites.get("records", []))
     story.append(Paragraph(
         f"All {roster_companies} known reseller companies ({coverage['urls_total']} URLs) on the closed crawl roster "
         f"were attempted, of which {coverage['urls_accessible']} served a catalog. Product catalogs were "

@@ -177,5 +177,6 @@
   "review_queue_entries_this_run": 0,
   "screenshot_limitation": "Still no case has a screenshot on file -- same network-proxy limitation as prior runs (headless Chromium cannot complete a connection through this environment's egress proxy). Explained to the user in chat on 2026-09-14; awaiting their choice of approach (manual capture vs. Wayback Machine vs. environment-level fix).",
   "dashboard_updated": true,
-  "dashboard_url": "https://claude.ai/code/artifact/16e0d5da-a772-4f6c-81b7-80697febeeb1"
+  "dashboard_url": "https://claude.ai/code/artifact/16e0d5da-a772-4f6c-81b7-80697febeeb1",
+  "_correction_2026-10-01": "That day's report listed Mola Rose's 39 findings but its Websites Checked table named only the 17 companies on the roster at 06:08 and left Mola Rose out, because the site's mid-day recon was kept in its own crawl file and the report builds coverage from the day's crawl file alone. The recon has now been merged into crawl-2026-09-22.json and the PDF reissued, so coverage reads 17 companies / 19 URLs with 13 serving a catalog. No case, evidence or date changed -- only the coverage table the report draws from."
 }

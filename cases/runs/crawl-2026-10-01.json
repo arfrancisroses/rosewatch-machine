@@ -1,6 +1,6 @@
 {
   "crawl_date": "2026-10-01",
-  "total_product_pages_reviewed": 9488,
+  "total_product_pages_reviewed": 9642,
   "new_matches": [],
   "cut_roses_only": [],
   "cut_roses_only_count": 0,
@@ -3032,6 +3032,114 @@
         }
       ],
       "cut_roses_only_count": 0
+    },
+    "Bloom Ladies Roses": {
+      "url_used": "https://www.bloomladiesroses.com/shop",
+      "url_attempted": "https://www.bloomladiesroses.com/shop",
+      "platform": "Squarespace",
+      "count": 154,
+      "error": null,
+      "matches": [
+        {
+          "title": "Baronesse - cutting",
+          "url": "https://www.bloomladiesroses.com/shop/p/baronesse-cutting",
+          "trademark": "BARONESSE",
+          "status": "Registered",
+          "status_raw": "Registered",
+          "cut_roses_only": false
+        },
+        {
+          "title": "Tropicana Rose",
+          "url": "https://www.bloomladiesroses.com/shop/p/tropicana-rose",
+          "trademark": "Tropicana",
+          "status": "To Be Filed",
+          "status_raw": "To Be Filed",
+          "cut_roses_only": false
+        },
+        {
+          "title": "Darlington Rose",
+          "url": "https://www.bloomladiesroses.com/shop/p/darlington-rose",
+          "trademark": "Darlington",
+          "status": "Pending",
+          "status_raw": "Pending",
+          "cut_roses_only": false
+        },
+        {
+          "title": "Barista Rose",
+          "url": "https://www.bloomladiesroses.com/shop/p/barista-rose",
+          "trademark": "Barista",
+          "status": "Not Applicable",
+          "status_raw": "N/A",
+          "cut_roses_only": false
+        },
+        {
+          "title": "Bella Trendsetter Rose",
+          "url": "https://www.bloomladiesroses.com/shop/p/bella-trendsetter-rose",
+          "trademark": "Trendsetter",
+          "status": "Abandoned",
+          "status_raw": "Abandoned (Rose Varietal)",
+          "cut_roses_only": false
+        },
+        {
+          "title": "Pride of Jane Rose",
+          "url": "https://www.bloomladiesroses.com/shop/p/pride-of-jane-rose",
+          "trademark": "Pride of Jane",
+          "status": "Pending",
+          "status_raw": "Pending",
+          "cut_roses_only": false
+        },
+        {
+          "title": "Notre Dame Rose",
+          "url": "https://www.bloomladiesroses.com/shop/p/notre-dame-rose",
+          "trademark": "Notre Dame",
+          "status": "(no status)",
+          "status_raw": null,
+          "cut_roses_only": false
+        },
+        {
+          "title": "Victorian Secret Rose",
+          "url": "https://www.bloomladiesroses.com/shop/p/victorian-secret-rose",
+          "trademark": "Secret",
+          "status": "(no status)",
+          "status_raw": null,
+          "cut_roses_only": false
+        },
+        {
+          "title": "Emma Woodhouse Rose",
+          "url": "https://www.bloomladiesroses.com/shop/p/emma-woodhouse-rose",
+          "trademark": "Emma WoodHouse",
+          "status": "Pending",
+          "status_raw": "Pending",
+          "cut_roses_only": false
+        },
+        {
+          "title": "Cappuccino Rose",
+          "url": "https://www.bloomladiesroses.com/shop/p/cappuccino-rose",
+          "trademark": "Cappuccino",
+          "status": "Pending",
+          "status_raw": "Pending",
+          "cut_roses_only": false
+        },
+        {
+          "title": "Strawberry Macaron Rose",
+          "url": "https://www.bloomladiesroses.com/shop/p/strawberry-macaron-rose",
+          "trademark": "Macaron Rose",
+          "status": "(no status)",
+          "status_raw": null,
+          "cut_roses_only": false
+        },
+        {
+          "title": "Catalina Rose",
+          "url": "https://www.bloomladiesroses.com/shop/p/catalina",
+          "trademark": "Catalina",
+          "status": "(no status)",
+          "status_raw": null,
+          "cut_roses_only": false
+        }
+      ],
+      "cut_roses_only_count": 0,
+      "_note": "Crawled at 11:42 MST, after the 06:07 pass, because the site was added to the roster and allowlisted mid-morning. Not a failure of the scheduled pass -- it was not on the roster when that ran. Merged here so the day's coverage reflects every site actually checked."
     }
-  }
+  },
+  "_second_pass_note": "Two passes. The 06:07 pass covered the 19 URLs then on the roster. Bloom Ladies Roses was added and allowlisted afterwards and crawled at 11:42; its entry is merged above. Its own recon file is crawl-2026-10-01-bloomladies.json."
 }
