@@ -35,6 +35,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "scripts"))
 from crawl_sites import fetch, normalize, try_woocommerce, PHOENIX  # noqa: E402
+import datetime as _dt  # noqa: E402
 
 # Sites whose first case is being created before any case exists to copy from.
 # Research recorded by hand when the site joined the roster; keep the wording,
@@ -61,6 +62,26 @@ SITE_RESEARCH_SEED = {
          "registrar": "Not determined -- RDAP/whois endpoints (rdap.org, rdap.verisign.com) are refused by this "
                       "environment's network egress policy",
          "hosting_country": "Not determined"}),
+    "bloomladiesroses.com": (
+        {"country": "United States",
+         "state_or_region": "Not stated on the site -- Pacific time zone (Estimated)",
+         "city": "Not available",
+         "source": "No street address, phone or contact address appears on the home, about or contact "
+                   "pages; the site describes itself only as \"a small rose nursery devoted to growing "
+                   "beautiful, healthy garden roses\". The country and region are ESTIMATED from the "
+                   "site's own Squarespace configuration, which records country US and timezone "
+                   "America/Los_Angeles, and from its store shipping default of US. That is a hosting "
+                   "setting rather than a stated business address, so it is unconfirmed and must not be "
+                   "read as the seller's location of record.",
+         "estimated": True},
+        {"hosting_platform": "Squarespace (server header 'Squarespace')",
+         "cdn_or_proxy": None,
+         "server_ip": "198.185.159.144, 198.185.159.145, 198.49.23.144, 198.49.23.145 -- Squarespace's "
+                      "published front-end ranges",
+         "ip_geolocation": "Not determined",
+         "registrar": "Not determined -- RDAP/whois endpoints are refused by this environment's network "
+                      "egress policy",
+         "hosting_country": "Not determined"}),
     "redlandranchroses.com": (
         {"country": "United States",
          "state_or_region": "Florida (Estimated)",
@@ -79,6 +100,82 @@ SITE_RESEARCH_SEED = {
 }
 
 STATUS_NOT_ENFORCEABLE = ("To Be Filed", "Abandoned", "Not Applicable", "Do Not File", "(no status)")
+
+
+def site_domain(url):
+    """The seller's root domain: no scheme, no "www.", no path.
+
+    A roster URL may carry either (Bloom Ladies Roses is listed as
+    https://www.bloomladiesroses.com/shop). Keeping them would make the domain
+    "www.bloomladiesroses.com/shop" and, worse, the site code "WWW" -- see
+    site_code_for.
+    """
+    host = (url or "").split("//")[-1].split("/")[0].strip().lower()
+    return host[4:] if host.startswith("www.") else host
+
+
+def site_code_for(domain):
+    """The CASE NUMBERS code: root domain minus the extension, uppercased,
+    stripped of anything but letters and digits, cut to 10 characters.
+
+    Takes everything before the final dot, not just the first label, so
+    bloomladiesroses.com gives BLOOMLADIE rather than a code built from a
+    subdomain. Codes already in site_code_registry are never recomputed.
+    """
+    stem = domain.rsplit(".", 1)[0] if "." in domain else domain
+    return re.sub(r"[^A-Z0-9]", "", stem.upper())[:10]
+
+
+def _ms_to_phoenix(ms):
+    """A site-supplied epoch-millisecond stamp as a Phoenix datetime, or the
+    spec's wording when the page does not show one."""
+    if not ms:
+        return "Date not available on page"
+    try:
+        return (_dt.datetime.fromtimestamp(int(ms) / 1000, PHOENIX)
+                .strftime("%Y-%m-%d %H:%M %Z (America/Phoenix)"))
+    except (TypeError, ValueError, OSError):
+        return "Date not available on page"
+
+
+def _first_variant_label(structured):
+    """The first variant's option value (pot size, form), when the item has one."""
+    variants = structured.get("variants") or []
+    if not variants:
+        return None
+    opts = variants[0].get("optionValues") or []
+    return opts[0].get("value") if opts else None
+
+
+def squarespace_products(base):
+    """Squarespace items in the shape the case builder expects, price included."""
+    raw = json.loads(fetch(f"{base.rstrip('/')}?format=json")).get("items") or []
+    root = base.split("//")[0] + "//" + base.split("//")[-1].split("/")[0]
+    out = []
+    for i in raw:
+        sc = i.get("structuredContent") or {}
+        # The real price lives on the variant; the item-level priceMoney on this
+        # platform is a placeholder that reads "0.00" even when the product sells
+        # for $35 (observed across Bloom Ladies Roses' whole catalog, 2026-10-01).
+        # A zero is treated as no price rather than recorded as a real one.
+        v0 = (sc.get("variants") or [{}])[0]
+        money = (v0.get("salePriceMoney") if sc.get("onSale") else v0.get("priceMoney")) \
+            or (sc.get("salePriceMoney") if sc.get("onSale") else sc.get("priceMoney"))
+        value = (money or {}).get("value")
+        if value in ("0.00", "0", 0, None):
+            value = None
+        out.append({
+            "url": root + (i.get("fullUrl") or ""),
+            "body_html": (i.get("excerpt") or "") + " " + (i.get("body") or ""),
+            "variants": [{"price": value, "title": _first_variant_label(sc)}],
+            "_units_in_stock": (v0.get("qtyInStock") if not v0.get("unlimited") else "Unlimited"),
+            "_sku": v0.get("sku"),
+            # Squarespace stamps its own dates on each item; the spec asks for the
+            # page's publication and update dates when the site shows them.
+            "_published": i.get("publishOn") or i.get("addedOn"),
+            "_updated": i.get("updatedOn"),
+        })
+    return out
 
 
 def text_of(body, limit=420):
@@ -170,6 +267,10 @@ def main():
                     break
                 page += 1
                 time.sleep(0.3)
+        elif platform == "Squarespace":
+            # The collection's own JSON view carries description and price together.
+            for item in squarespace_products(base):
+                prods[item["url"].rstrip("/")] = item
         else:
             # WordPress/WooCommerce: the REST feed carries the description but no
             # price, so price is recorded as unavailable rather than guessed at.
@@ -183,13 +284,13 @@ def main():
     created = []
     for m in todo:
         label = m["site"]
-        domain = (crawl["sites"][label].get("url_used") or "").split("//")[-1].rstrip("/")
+        domain = site_domain(crawl["sites"][label].get("url_used") or "")
         if domain not in site_research:
             sys.exit(f"No seller-location or hosting research on file for {domain}. Add it to "
                      f"SITE_RESEARCH_SEED, or create that site's first case by hand. A case with empty "
                      f"location fields would claim less than 'not available' does.")
         reg = db["site_code_registry"].setdefault(domain, {
-            "site_code": re.sub(r"[^A-Z0-9]", "", domain.split(".")[0].upper())[:10], "next_sequence": 1})
+            "site_code": site_code_for(domain), "next_sequence": 1})
         seq = reg["next_sequence"]
         reg["next_sequence"] = seq + 1
         case_no = f"{reg['site_code']}-{seq:03d}"
@@ -232,6 +333,10 @@ def main():
             "first_date_found": stamp,
             "last_verified": stamp,
             "screenshot_captured_at": None,
+            "units_in_stock_at_capture": prod.get("_units_in_stock"),
+            "seller_sku": prod.get("_sku"),
+            "page_publication_date": _ms_to_phoenix(prod.get("_published")),
+            "page_update_date": _ms_to_phoenix(prod.get("_updated")),
             "seller_location": loc,
             "website_host": host,
             "evidence_screenshots": [],

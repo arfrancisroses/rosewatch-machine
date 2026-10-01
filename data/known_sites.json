@@ -1,8 +1,25 @@
 {
-  "source_file": "2026-09-22_ListofIPInfringements.xlsx",
-  "imported_date": "2026-09-22",
-  "record_count": 17,
+  "source_file": "2026-10-01_ListofIPInfringements.xlsx",
+  "imported_date": "2026-10-01",
+  "record_count": 18,
   "records": [
+    {
+      "company": "Bloom Ladies Roses",
+      "websites": [
+        "https://www.bloomladiesroses.com/shop"
+      ],
+      "sales_platforms": [
+        "Squarespace"
+      ],
+      "shipped_from": "Not stated on site -- estimated United States, Pacific time zone (Estimated)",
+      "prior_manual_notes": [
+        "Added 2026-10-01 per explicit user instruction (user-supplied URL), reported as a possible infringer. Squarespace storefront at /shop; the domain was allowlisted in the environment by the user before the crawl, and the www host serves (the apex is refused by the egress proxy, which costs nothing since the crawler tries both). Full catalog pulled the same day through the collection's own ?format=json view: 154 products, all of them roses. 12 match a name in the Master Trademark Filing Chart -- 1 Registered (BARONESSE, as 'Baronesse - cutting'), 4 Pending (Cappuccino, Darlington, Emma Woodhouse, Pride of Jane), 1 To Be Filed, 1 Abandoned, 1 Not Applicable and 4 unstatused. None is cut-roses-only; the site describes itself as 'a small rose nursery devoted to growing beautiful, healthy garden roses'. Columns E-J left BLANK rather than '-': the six previously flagged varieties were not separately verified against this catalog on the day of addition. No street address is published on the home, about or contact pages, so location is Estimated from the site's own configuration (country US, timezone America/Los_Angeles) and is unconfirmed. Hosting is Squarespace (A records 198.185.159.144/.145 and 198.49.23.144/.145, server header 'Squarespace'); registrar not determined, RDAP blocked by this environment's egress policy."
+      ],
+      "prior_reported_varieties": [],
+      "source_sheets": [
+        "Sheet1"
+      ]
+    },
     {
       "company": "Bloomora Roses",
       "websites": [

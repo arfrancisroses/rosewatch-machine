@@ -1,0 +1,56 @@
+{
+  "case_number": "BLOOMLADIE-002",
+  "site_code": "BLOOMLADIE",
+  "variety": "Tropicana",
+  "matched_trademark": "Tropicana",
+  "trademark_status": "To Be Filed",
+  "trademark_status_as_written": "To Be Filed",
+  "trademark_application_or_registration_no": "App. Ser. No. N/A (Reg. No.: NYA)",
+  "breeder": "Rosen Tantau KG",
+  "seller_name": "Bloom Ladies Roses",
+  "website_domain": "bloomladiesroses.com",
+  "product_url": "https://www.bloomladiesroses.com/shop/p/tropicana-rose",
+  "exact_product_title": "Tropicana Rose",
+  "quoted_text": "The Tropicana rose features light orange blooms with a strong, refreshing passionfruit scent that fills the air with a tropical fragrance. Its disease and rain resistance ensure it thrives in various conditions with minimal care. Perfect for adding a splash of color and an inviting aroma to your garden, this rose combines beauty and resilience. English Name: Tropicana Chinese Name: 百香果 Features: Disease & rain resist...",
+  "price": "35.00",
+  "currency": "USD",
+  "price_note": null,
+  "quantity_or_form": "Not stated in the product feed",
+  "match_classification": "Possible",
+  "match_explanation": "The product title contains the single word \"Tropicana\", which is the whole of the chart entry. A one-word match can be coincidence rather than the variety -- it needs a human read of the listing before it means anything.",
+  "review_status": "New",
+  "first_date_found": "2026-10-01 11:42 MST (America/Phoenix)",
+  "last_verified": "2026-10-01 11:42 MST (America/Phoenix)",
+  "screenshot_captured_at": null,
+  "units_in_stock_at_capture": 0,
+  "seller_sku": "SQ0401501",
+  "page_publication_date": "2025-03-18 18:19 MST (America/Phoenix)",
+  "page_update_date": "2026-09-15 20:14 MST (America/Phoenix)",
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Not stated on the site -- Pacific time zone (Estimated)",
+    "city": "Not available",
+    "source": "No street address, phone or contact address appears on the home, about or contact pages; the site describes itself only as \"a small rose nursery devoted to growing beautiful, healthy garden roses\". The country and region are ESTIMATED from the site's own Squarespace configuration, which records country US and timezone America/Los_Angeles, and from its store shipping default of US. That is a hosting setting rather than a stated business address, so it is unconfirmed and must not be read as the seller's location of record.",
+    "estimated": true
+  },
+  "website_host": {
+    "hosting_platform": "Squarespace (server header 'Squarespace')",
+    "cdn_or_proxy": null,
+    "server_ip": "198.185.159.144, 198.185.159.145, 198.49.23.144, 198.49.23.145 -- Squarespace's published front-end ranges",
+    "ip_geolocation": "Not determined",
+    "registrar": "Not determined -- RDAP/whois endpoints are refused by this environment's network egress policy",
+    "hosting_country": "Not determined"
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown."
+  ],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-10-01, which matches product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"To Be Filed\", which carries no enforceable right: it is recorded so the match is tracked, and must not be read as a finding of infringement. The product title contains the single word \"Tropicana\", which is the whole of the chart entry. A one-word match can be coincidence rather than the variety -- it needs a human read of the listing before it means anything.",
+  "history": [
+    {
+      "date": "2026-10-01 11:42 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created from that day's crawl; chart status carried through unchanged."
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 # Rose Watch — Overview
 
-Dashboard last regenerated: 2026-10-01 06:10 MST
+Dashboard last regenerated: 2026-10-01 08:25 MST
 
 ## Trademark chart summary
 
-- Total trademark records: 275 (source: `2026-09-10_MasterTrademarkFilingChart.xlsx`, imported 2026-09-22)
+- Total trademark records: 275 (source: `2026-09-10_MasterTrademarkFilingChart.xlsx`, imported 2026-10-01)
   - To Be Filed: 89
   - Uncategorized/Needs Review: 82
   - Pending: 81
@@ -17,14 +17,14 @@ Dashboard last regenerated: 2026-10-01 06:10 MST
 
 ## Known sites
 
-- Known reseller sites on roster: 17 (source: `2026-09-22_ListofIPInfringements.xlsx`, imported 2026-09-22)
+- Known reseller sites on roster: 18 (source: `2026-10-01_ListofIPInfringements.xlsx`, imported 2026-10-01)
 - Status: not yet crawled under the Rose Watch case-tracking system (see Data Sources for details).
 
 ## Cases
 
-- Active cases (matched Registered/Pending trademarks): 360
+- Active cases (matched Registered/Pending trademarks): 372
 - Review-queue entries (matched other statuses): 0
-- Last monitoring run completed: 2026-10-01T06:07:00-07:00
+- Last monitoring run completed: 2026-10-01T11:42:00-07:00
 
 ## Sections
 

@@ -1,0 +1,56 @@
+{
+  "case_number": "BLOOMLADIE-006",
+  "site_code": "BLOOMLADIE",
+  "variety": "Pride of Jane",
+  "matched_trademark": "Pride of Jane",
+  "trademark_status": "Pending",
+  "trademark_status_as_written": "Pending",
+  "trademark_application_or_registration_no": "App. Ser. No. 50051972 (Reg. No.: N/A)",
+  "breeder": "Jan Spek Rozen",
+  "seller_name": "Bloom Ladies Roses",
+  "website_domain": "bloomladiesroses.com",
+  "product_url": "https://www.bloomladiesroses.com/shop/p/pride-of-jane-rose",
+  "exact_product_title": "Pride of Jane Rose",
+  "quoted_text": "The Pride of Jane rose boasts a rugged yet charming look, with light pink petals accented by green edges. Its mild fragrance adds a subtle touch of elegance to your garden, while its strong disease resistance ensures it thrives with minimal care. Perfect for adding both beauty and resilience to your outdoor space. English Name: Pride of Jane Chinese Name: 简的骄傲 Features: Disease resistant, compact growth Color: Light ...",
+  "price": "35.00",
+  "currency": "USD",
+  "price_note": null,
+  "quantity_or_form": "Not stated in the product feed",
+  "match_classification": "Strong",
+  "match_explanation": "The product title contains the full chart name \"Pride of Jane\" as a phrase, inside a longer title.",
+  "review_status": "New",
+  "first_date_found": "2026-10-01 11:42 MST (America/Phoenix)",
+  "last_verified": "2026-10-01 11:42 MST (America/Phoenix)",
+  "screenshot_captured_at": null,
+  "units_in_stock_at_capture": 0,
+  "seller_sku": "SQ0738689",
+  "page_publication_date": "2025-03-14 17:40 MST (America/Phoenix)",
+  "page_update_date": "2026-09-16 07:44 MST (America/Phoenix)",
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Not stated on the site -- Pacific time zone (Estimated)",
+    "city": "Not available",
+    "source": "No street address, phone or contact address appears on the home, about or contact pages; the site describes itself only as \"a small rose nursery devoted to growing beautiful, healthy garden roses\". The country and region are ESTIMATED from the site's own Squarespace configuration, which records country US and timezone America/Los_Angeles, and from its store shipping default of US. That is a hosting setting rather than a stated business address, so it is unconfirmed and must not be read as the seller's location of record.",
+    "estimated": true
+  },
+  "website_host": {
+    "hosting_platform": "Squarespace (server header 'Squarespace')",
+    "cdn_or_proxy": null,
+    "server_ip": "198.185.159.144, 198.185.159.145, 198.49.23.144, 198.49.23.145 -- Squarespace's published front-end ranges",
+    "ip_geolocation": "Not determined",
+    "registrar": "Not determined -- RDAP/whois endpoints are refused by this environment's network egress policy",
+    "hosting_country": "Not determined"
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown."
+  ],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-10-01, which matches product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"Pending\". The product title contains the full chart name \"Pride of Jane\" as a phrase, inside a longer title.",
+  "history": [
+    {
+      "date": "2026-10-01 11:42 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created from that day's crawl; chart status carried through unchanged."
+    }
+  ]
+}

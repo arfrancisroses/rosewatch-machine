@@ -140,7 +140,67 @@ def try_woocommerce(base):
     return items
 
 
-FEEDS = [("Shopify", try_shopify), ("WordPress/WooCommerce", try_woocommerce)]
+def try_squarespace(base):
+    """Squarespace store collections, read through their own ?format=json view.
+
+    A Squarespace store lives at a collection path (/shop, /store, ...) rather
+    than a site-wide product API, so the roster URL's own path is tried first and
+    the common paths only as a fallback. Items carry title, fullUrl, excerpt/body
+    and structuredContent.priceMoney, which is everything a case needs.
+    """
+    root = f"{urlsplit(base).scheme}://{urlsplit(base).netloc}"
+    path = urlsplit(base).path.rstrip("/")
+    candidates = [base.rstrip("/")] if path else []
+    candidates += [f"{root}{c}" for c in ("/shop", "/store", "/products", "/all-roses")
+                   if f"{root}{c}" not in candidates]
+
+    for collection in candidates:
+        try:
+            data = json.loads(fetch(f"{collection}?format=json"))
+        except Exception:
+            continue
+        if (data.get("collection") or {}).get("typeName") != "products":
+            continue
+        items, seen, offset = [], set(), None
+        for _ in range(30):
+            batch = data.get("items") or []
+            fresh = [i for i in batch if i.get("id") not in seen]
+            if not fresh:
+                break
+            for i in fresh:
+                seen.add(i.get("id"))
+                sc = i.get("structuredContent") or {}
+                items.append({
+                    "title": i.get("title", ""),
+                    "url": root + (i.get("fullUrl") or ""),
+                    "product_type": (sc.get("productType") if isinstance(sc.get("productType"), str) else ""),
+                    "tags": i.get("tags") or [],
+                    "description": ((i.get("excerpt") or "") + " " + (i.get("body") or ""))[:3000],
+                })
+            # Follow pagination only when the response actually offers it. Guessing
+            # an offset from the last item's addedOn made this site answer HTTP 500
+            # (2026-10-01); a collection that returns everything at once says so by
+            # leaving pagination null.
+            pag = data.get("pagination") or {}
+            nxt = pag.get("nextPageOffset") if pag.get("nextPage") else None
+            if not nxt or nxt == offset:
+                break
+            offset = nxt
+            time.sleep(0.3)
+            try:
+                data = json.loads(fetch(f"{collection}?format=json&offset={offset}"))
+            except Exception:
+                # Keep the pages already read rather than failing the whole site;
+                # a short catalog is still better than a false coverage gap, and
+                # the count in the run log shows what was actually seen.
+                break
+        if items:
+            return items
+    raise ValueError("no Squarespace product collection found")
+
+
+FEEDS = [("Shopify", try_shopify), ("WordPress/WooCommerce", try_woocommerce),
+         ("Squarespace", try_squarespace)]
 
 
 def crawl_site(url):
