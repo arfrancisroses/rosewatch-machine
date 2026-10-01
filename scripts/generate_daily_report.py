@@ -27,6 +27,8 @@ rl_config.useA85 = 0
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.units import inch
 from reportlab.lib import colors
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.cidfonts import UnicodeCIDFont
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.platypus import (
     SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak, HRFlowable, KeepTogether
@@ -116,6 +118,28 @@ def link_cell(url, text="View listing"):
     return f'<link href="{href}"><u>{xml_escape(text)}</u></link>'
 
 
+# Several tracked sellers list in Chinese or Japanese, and the seller's own
+# product title is evidence -- "Darlington Rose-达林顿｜Netherland Cut Rose" is
+# what the page says. The base-14 fonts have no CJK glyphs, so those characters
+# printed as empty boxes the moment titles reached the tables (2026-10-01).
+# ReportLab ships CID fonts for exactly this; the CJK runs are wrapped in one so
+# the Latin text keeps the report's own typeface.
+_CJK = re.compile(r"[\u2e80-\u9fff\u3000-\u30ff\uff00-\uffef\uac00-\ud7af]+")
+_CJK_FONT = "STSong-Light"
+try:
+    pdfmetrics.registerFont(UnicodeCIDFont(_CJK_FONT))
+    _CJK_OK = True
+except Exception:          # font pack unavailable -- fall back to plain text
+    _CJK_OK = False
+
+
+def cjk_safe(markup):
+    """Wrap CJK runs so they render instead of printing as boxes."""
+    if not _CJK_OK or not markup:
+        return markup
+    return _CJK.sub(lambda m: f'<font name="{_CJK_FONT}">{m.group(0)}</font>', markup)
+
+
 def wrapped_table(header, rows, col_widths, styles, header_bg=INK, raw_html_cols=None):
     """raw_html_cols: set of column indices whose values are pre-built markup (e.g. from
     link_cell) and must NOT be XML-escaped, unlike plain text cells."""
@@ -125,7 +149,7 @@ def wrapped_table(header, rows, col_widths, styles, header_bg=INK, raw_html_cols
         row_cells = []
         for i, c in enumerate(r):
             text = c if (i in raw_html_cols and c) else xml_escape(c)
-            row_cells.append(Paragraph(text, styles["RWCell"]))
+            row_cells.append(Paragraph(cjk_safe(text), styles["RWCell"]))
         data.append(row_cells)
     t = Table(data, colWidths=col_widths, repeatRows=1)
     t.setStyle(TableStyle([
@@ -362,14 +386,21 @@ def generate(run_date_str):
             table_rows = []
             for c in sorted(rows, key=lambda r: r.get("case_number") or ""):
                 detail = load_json(REPO_ROOT / "cases" / c["case_number"] / "case.json", {})
+                # Both halves of the comparison on one row (user instruction,
+                # 2026-10-01): the chart name and the seller's own title. Without
+                # the title, "Strong" and "Possible" have to be taken on faith --
+                # seeing "Macaron Rose" against "Strawberry Macaron Rose" explains
+                # the rating by itself. The seller column goes to make room; the
+                # case number already carries the site code.
                 table_rows.append([
-                    c.get("case_number"), c.get("variety"), c.get("seller_name"),
+                    c.get("case_number"), c.get("variety"),
+                    detail.get("exact_product_title") or "(title not recorded)",
                     c.get("match_classification"), link_cell(detail.get("product_url")),
                 ])
             story.append(wrapped_table(
-                ["Case #", "Rose Name", "Seller", "Match", "Product URL"],
+                ["Case #", "Chart Name", "Seller's Product Title", "Match", "Listing"],
                 table_rows,
-                [1.25*inch, 1.45*inch, 1.25*inch, 0.85*inch, 1.4*inch],
+                [1.15*inch, 1.3*inch, 2.25*inch, 0.75*inch, 0.75*inch],
                 styles,
                 raw_html_cols={4},
             ))
