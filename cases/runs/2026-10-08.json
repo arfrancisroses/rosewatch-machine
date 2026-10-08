@@ -1,0 +1,189 @@
+{
+  "_readme": "Per-run monitoring log, one file per calendar day (America/Phoenix), used to generate the Daily PDF Report. Distinct from cases.json, which is the permanent case/review-queue index.",
+  "run_date": "2026-10-08",
+  "generated_at": "2026-10-08 06:07 MST (America/Phoenix)",
+  "_run_note": "Nineteenth scheduled run, and the first with new findings since 2026-10-01. 15 of 20 URLs served a catalog; Flower Meadow Dream remains refused by this environment's egress proxy and the four marketplace and social entries have no product feed. THREE new matches, all genuinely new listings rather than names newly looked for: Rose Explosion's catalog grew 1,435->1,439 and one of the additions is 'Patchouli Rose Plant｜广藿香', matching the PENDING mark Patchouli (Jan Spek Rozen, App. Ser. No. 50051958) -- the first new Pending finding since 2026-09-21. Mola Rose and Muse Roses each added the same listing, 'Eastern Secret Realm Rose', matching the chart's unstatused 'Secret'; both are classified Possible, since 'Secret' is a single ordinary word inside a longer title and may well be a different variety. Cases ROSEEXPLOS-074, MOLAROSE-040 and MUSEROSES-040. Nothing held, nothing cut-roses-only. 371 of 375 cases re-verified; the four unconfirmed are Flower Meadow Dream's 3 and HILLSIDERO-005, absent for an eighth run.",
+  "sites": [
+    {
+      "company": "Bloom Ladies Roses",
+      "url": "https://www.bloomladiesroses.com/shop",
+      "accessible": true,
+      "platform": "Squarespace",
+      "product_pages_reviewed": 154,
+      "notes": null
+    },
+    {
+      "company": "Bloomora Roses",
+      "url": "https://www.facebook.com/profile.php?id=61591662794131",
+      "accessible": false,
+      "platform": "Facebook",
+      "product_pages_reviewed": 0,
+      "notes": "Facebook page; facebook.com is blocked by this environment's network egress policy at the CONNECT stage, so the page was never reached. No open product feed exists for a Facebook page in any case."
+    },
+    {
+      "company": "Ergonzy / Ergonzi (ergongzy.com)",
+      "url": "https://ergongzy.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 507,
+      "notes": null
+    },
+    {
+      "company": "Ergonzy / Ergonzi (www.etsy.com)",
+      "url": "https://www.etsy.com/shop/Ergongzi",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "Etsy storefront; etsy.com is blocked by this environment's network egress policy at the CONNECT stage. The seller's own site (ergongzy.com) was crawled in full and carries the same catalog."
+    },
+    {
+      "company": "Flower Meadow Dream",
+      "url": "https://www.myroseworld.com/",
+      "accessible": false,
+      "platform": null,
+      "product_pages_reviewed": 0,
+      "notes": "Not reached. Both www.myroseworld.com and myroseworld.com were refused by this environment's egress proxy at the CONNECT stage, so the request never reached the seller's server. This is our own network policy, not a block by the site. Unchanged since 2026-09-16. The site's 3 existing cases (MYROSEWORL-001..003) could not be re-verified and keep their 2026-09-16 Last Verified date."
+    },
+    {
+      "company": "GCM Ranch",
+      "url": "https://www.etsy.com/shop/GcmRanch",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "Etsy shop closed (dormant). Roster entry retained per user instruction (2026-09-15); expected to stay inaccessible and not awaiting any decision."
+    },
+    {
+      "company": "High Garden",
+      "url": "https://highgardenroses.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 670,
+      "notes": null
+    },
+    {
+      "company": "Hillside Rose Farm",
+      "url": "https://hillsiderosefarm.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 155,
+      "notes": "Served normally at 155 products, up from 152. HILLSIDERO-005 (Darlington, Pending) is absent for an eighth consecutive run; its Last Verified stays at 2026-09-28."
+    },
+    {
+      "company": "Huniu Rose Garden",
+      "url": "https://huniurosegarden.ca",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 296,
+      "notes": null
+    },
+    {
+      "company": "Jessie's Roses (www.etsy.com)",
+      "url": "https://www.etsy.com/shop/JessiesRoseUSA",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "Etsy storefront; etsy.com is blocked by this environment's network egress policy at the CONNECT stage."
+    },
+    {
+      "company": "Jessie's Roses (www.jessiesrose.com)",
+      "url": "https://jessiesrose.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 0,
+      "notes": "Reached on the apex host after the www host was refused by the egress proxy. The Shopify feed returned HTTP 200 with an empty product array -- the store genuinely lists no products. Counted as checked, zero products."
+    },
+    {
+      "company": "Kate Roses",
+      "url": "https://kateroses.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 111,
+      "notes": null
+    },
+    {
+      "company": "Kisaki Plant",
+      "url": "https://kisakiplant.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 318,
+      "notes": null
+    },
+    {
+      "company": "Mola Rose",
+      "url": "https://molarose.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 760,
+      "notes": "760 products, one more than yesterday, and the new listing is a match: 'Eastern Secret Realm Rose' against the chart's unstatused 'Secret'. Case MOLAROSE-040."
+    },
+    {
+      "company": "Muse Roses",
+      "url": "https://museroses.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 760,
+      "notes": "760 products, one more than yesterday, carrying the same new listing as Mola Rose: 'Eastern Secret Realm Rose'. Case MUSEROSES-040."
+    },
+    {
+      "company": "One Love",
+      "url": "https://oneloveroseandgardens.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 864,
+      "notes": null
+    },
+    {
+      "company": "Redland Ranch Roses",
+      "url": "https://redlandranchroses.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 1847,
+      "notes": null
+    },
+    {
+      "company": "Rose Explosion",
+      "url": "https://roseexplosion.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 1439,
+      "notes": "1,439 products, up from 1,435. One of the four new listings matches a PENDING mark: 'Patchouli Rose Plant｜广藿香' against the chart's 'Patchouli' (Jan Spek Rozen, App. Ser. No. 50051958). Case ROSEEXPLOS-074."
+    },
+    {
+      "company": "Springland Flowers",
+      "url": "https://springlandflowers.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 116,
+      "notes": null
+    },
+    {
+      "company": "Your Roses",
+      "url": "https://your-roses.com/",
+      "accessible": true,
+      "platform": null,
+      "product_pages_reviewed": 1665,
+      "notes": null
+    }
+  ],
+  "total_sites_on_roster": 18,
+  "total_urls_on_roster": 20,
+  "urls_accessible": 15,
+  "urls_inaccessible": 5,
+  "total_product_pages_reviewed": 9662,
+  "active_trademark_matches_found": 3,
+  "active_trademark_matches_by_status": {
+    "Pending": 1,
+    "(no status)": 2
+  },
+  "cases_created_this_run": 3,
+  "cases_reverified_this_run": 371,
+  "cases_no_longer_listed_this_run": [
+    "HILLSIDERO-005"
+  ],
+  "matches_held_pending_case_creation": 0,
+  "review_queue_entries_this_run": 0,
+  "cut_roses_only_this_run": 0,
+  "screenshot_limitation": "Still no case has a screenshot on file -- same network-proxy limitation as prior runs (headless Chromium cannot complete a connection through this environment's egress proxy). Explained to the user in chat on 2026-09-14; awaiting their choice of approach (manual capture vs. Wayback Machine vs. environment-level fix).",
+  "dashboard_updated": true,
+  "dashboard_url": "https://claude.ai/code/artifact/16e0d5da-a772-4f6c-81b7-80697febeeb1"
+}
