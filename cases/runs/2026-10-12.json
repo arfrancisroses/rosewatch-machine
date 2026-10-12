@@ -1,0 +1,189 @@
+{
+  "_readme": "Per-run monitoring log, one file per calendar day (America/Phoenix), used to generate the Daily PDF Report. Distinct from cases.json, which is the permanent case/review-queue index.",
+  "run_date": "2026-10-12",
+  "generated_at": "2026-10-12 06:11 MST (America/Phoenix)",
+  "_run_note": "Twenty-first scheduled run, first of the week, and the most eventful in a fortnight. THE DELISTED LISTING CAME BACK: HILLSIDERO-005 (Darlington, Pending) is present again at the same URL under the same title after nine consecutive runs absent, 2026-09-29 to 2026-10-09. Hillside Rose Farm's catalog jumped 156 -> 170 over the weekend, so this reads as part of a broad restock rather than anything specific to that listing; nothing is known about why it went or why it is back, and nothing should be inferred. Its Last Verified advances to today and the two-week gap stays visible in its history rather than being papered over. One new match: Your Roses added five listings and one, 'Just More Rose Plant|多多益善', matches the chart's unstatused 'Just More!' -- case YOURROSES-073, classified Strong. Ergonzi dropped the connection on the first pass ('Connection reset by peer', before any response) and served its full 511 products on a retry three minutes later, so it is counted as checked on the retry. Other weekend growth carries no chart names: Mola Rose and Muse Roses 761 -> 764, Redland Ranch 1847 -> 1848, Springland 116 -> 115. 373 of 376 cases re-verified, the highest yet, and the only three unconfirmed are Flower Meadow Dream's, whose site is still refused by this environment's egress proxy. For the first time since 2026-09-28 no delisted case is outstanding. Two housekeeping notes: this container was recycled with an older checkout and without reportlab, pypdf or openpyxl, so the 2026-10-09 commit had to be fetched and today's work re-applied on top of it (no case number moved and no history was lost), and the libraries were reinstalled. The re-verification helper, which lived in a scratch file and vanished with the container mid-run, is now scripts/reverify_cases.py in the repo.",
+  "sites": [
+    {
+      "company": "Bloom Ladies Roses",
+      "url": "https://www.bloomladiesroses.com/shop",
+      "accessible": true,
+      "platform": "Squarespace",
+      "product_pages_reviewed": 154,
+      "notes": null
+    },
+    {
+      "company": "Bloomora Roses",
+      "url": "https://www.facebook.com/profile.php?id=61591662794131",
+      "accessible": false,
+      "platform": "Facebook",
+      "product_pages_reviewed": 0,
+      "notes": "Facebook page; facebook.com is blocked by this environment's network egress policy at the CONNECT stage, so the page was never reached. No open product feed exists for a Facebook page in any case."
+    },
+    {
+      "company": "Ergonzy / Ergonzi (ergongzy.com)",
+      "url": "https://ergongzy.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 511,
+      "notes": "The 06:11 pass died with 'Connection reset by peer' -- the connection dropped before any response, which is neither a refusal nor a rate limit. Re-pulled at 06:14 and served its full catalog of 511 products. Counted as checked on that retry, not on the first attempt."
+    },
+    {
+      "company": "Ergonzy / Ergonzi (www.etsy.com)",
+      "url": "https://www.etsy.com/shop/Ergongzi",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "Etsy storefront; etsy.com is blocked by this environment's network egress policy at the CONNECT stage. The seller's own site (ergongzy.com) was crawled in full and carries the same catalog."
+    },
+    {
+      "company": "Flower Meadow Dream",
+      "url": "https://www.myroseworld.com/",
+      "accessible": false,
+      "platform": null,
+      "product_pages_reviewed": 0,
+      "notes": "Not reached. Both www.myroseworld.com and myroseworld.com were refused by this environment's egress proxy at the CONNECT stage, so the request never reached the seller's server. This is our own network policy, not a block by the site. Unchanged since 2026-09-16. The site's 3 existing cases (MYROSEWORL-001..003) could not be re-verified and keep their 2026-09-16 Last Verified date."
+    },
+    {
+      "company": "GCM Ranch",
+      "url": "https://www.etsy.com/shop/GcmRanch",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "Etsy shop closed (dormant). Roster entry retained per user instruction (2026-09-15); expected to stay inaccessible and not awaiting any decision."
+    },
+    {
+      "company": "High Garden",
+      "url": "https://highgardenroses.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 670,
+      "notes": null
+    },
+    {
+      "company": "Hillside Rose Farm",
+      "url": "https://hillsiderosefarm.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 170,
+      "notes": "Catalog jumped 156 -> 170 products over the weekend, the largest single move on the roster since monitoring began. HILLSIDERO-005 (Darlington, Pending) is among the restored listings: present again at the same URL under the same title after nine consecutive runs absent. Its Last Verified advances to today and the gap stays visible in its history."
+    },
+    {
+      "company": "Huniu Rose Garden",
+      "url": "https://huniurosegarden.ca",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 296,
+      "notes": null
+    },
+    {
+      "company": "Jessie's Roses (www.etsy.com)",
+      "url": "https://www.etsy.com/shop/JessiesRoseUSA",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "Etsy storefront; etsy.com is blocked by this environment's network egress policy at the CONNECT stage."
+    },
+    {
+      "company": "Jessie's Roses (www.jessiesrose.com)",
+      "url": "https://jessiesrose.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 0,
+      "notes": "Reached on the apex host after the www host was refused by the egress proxy. The Shopify feed returned HTTP 200 with an empty product array -- the store genuinely lists no products. Counted as checked, zero products."
+    },
+    {
+      "company": "Kate Roses",
+      "url": "https://kateroses.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 111,
+      "notes": null
+    },
+    {
+      "company": "Kisaki Plant",
+      "url": "https://kisakiplant.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 318,
+      "notes": null
+    },
+    {
+      "company": "Mola Rose",
+      "url": "https://molarose.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 764,
+      "notes": null
+    },
+    {
+      "company": "Muse Roses",
+      "url": "https://museroses.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 764,
+      "notes": null
+    },
+    {
+      "company": "One Love",
+      "url": "https://oneloveroseandgardens.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 864,
+      "notes": null
+    },
+    {
+      "company": "Redland Ranch Roses",
+      "url": "https://redlandranchroses.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 1848,
+      "notes": null
+    },
+    {
+      "company": "Rose Explosion",
+      "url": "https://roseexplosion.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 1440,
+      "notes": null
+    },
+    {
+      "company": "Springland Flowers",
+      "url": "https://springlandflowers.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 115,
+      "notes": null
+    },
+    {
+      "company": "Your Roses",
+      "url": "https://your-roses.com/",
+      "accessible": true,
+      "platform": null,
+      "product_pages_reviewed": 1670,
+      "notes": "1,670 products, up from 1,665. One of the five additions matches the chart's unstatused 'Just More!' -- case YOURROSES-073."
+    }
+  ],
+  "total_sites_on_roster": 18,
+  "total_urls_on_roster": 20,
+  "urls_accessible": 15,
+  "urls_inaccessible": 5,
+  "total_product_pages_reviewed": 9695,
+  "active_trademark_matches_found": 1,
+  "active_trademark_matches_by_status": {
+    "(no status)": 1
+  },
+  "cases_created_this_run": 1,
+  "cases_reverified_this_run": 373,
+  "cases_no_longer_listed_this_run": [],
+  "cases_relisted_this_run": [
+    "HILLSIDERO-005"
+  ],
+  "matches_held_pending_case_creation": 0,
+  "review_queue_entries_this_run": 0,
+  "cut_roses_only_this_run": 0,
+  "screenshot_limitation": "Still no case has a screenshot on file -- same network-proxy limitation as prior runs (headless Chromium cannot complete a connection through this environment's egress proxy). Explained to the user in chat on 2026-09-14; awaiting their choice of approach (manual capture vs. Wayback Machine vs. environment-level fix).",
+  "dashboard_updated": true,
+  "dashboard_url": "https://claude.ai/code/artifact/16e0d5da-a772-4f6c-81b7-80697febeeb1"
+}
