@@ -120,6 +120,11 @@
       "date": "2026-10-14 06:07 MST (America/Phoenix)",
       "action": "Listing no longer found in the seller's catalog",
       "details": "Absent from the site's product feed for the first time since this case was created on 2026-09-18. Last Verified stays at 2026-10-13, the last date it was confirmed present. Case number, prior evidence and review status are unchanged. Hillside Rose Farm's catalog has been swinging hard -- 156, 170, 159, 160 over four runs -- and HILLSIDERO-005 has already gone, returned and gone again in that window, so this may be the same churn; that is an observation, not a conclusion."
+    },
+    {
+      "date": "2026-10-15 06:07 MST (America/Phoenix)",
+      "action": "Still not listed",
+      "details": "Second consecutive run absent. Hillside Rose Farm served 161 products today. Last Verified stays at 2026-10-13."
     }
   ],
   "listing_availability": "NOT FOUND in the seller's catalog as of 2026-10-14 06:07 MST (America/Phoenix). Last confirmed present 2026-10-13 06:08 MST, so this is the first run in which it is missing. Evidence is its absence from hillsiderosefarm.com's own Shopify product feed, which served normally today at 160 products. The rendered product page itself could not be checked: the apex URL answers HTTP 301 to the www host, and www.hillsiderosefarm.com is refused by this environment's egress proxy at the CONNECT stage. So the listing is gone from the catalog; whether the page still renders for a public visitor is unconfirmed. Nothing is known about why it came down and nothing should be inferred."
