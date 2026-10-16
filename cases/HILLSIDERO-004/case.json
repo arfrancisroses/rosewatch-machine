@@ -125,6 +125,11 @@
       "date": "2026-10-15 06:07 MST (America/Phoenix)",
       "action": "Still not listed",
       "details": "Second consecutive run absent. Hillside Rose Farm served 161 products today. Last Verified stays at 2026-10-13."
+    },
+    {
+      "date": "2026-10-16 06:10 MST (America/Phoenix)",
+      "action": "Still not listed",
+      "details": "Third consecutive run absent. Hillside Rose Farm served 161 products, unchanged from yesterday. Last Verified stays at 2026-10-13."
     }
   ],
   "listing_availability": "NOT FOUND in the seller's catalog as of 2026-10-14 06:07 MST (America/Phoenix). Last confirmed present 2026-10-13 06:08 MST, so this is the first run in which it is missing. Evidence is its absence from hillsiderosefarm.com's own Shopify product feed, which served normally today at 160 products. The rendered product page itself could not be checked: the apex URL answers HTTP 301 to the www host, and www.hillsiderosefarm.com is refused by this environment's egress proxy at the CONNECT stage. So the listing is gone from the catalog; whether the page still renders for a public visitor is unconfirmed. Nothing is known about why it came down and nothing should be inferred."
