@@ -272,7 +272,7 @@ def generate(run_date_str):
     reverified = run.get("cases_reverified_this_run", 0)
     if created:
         disposition = (
-            f"{created} match{'es' if created != 1 else ''} were carried through into full, evidence-complete case "
+            f"{created} match{'es were' if created != 1 else ' was'} carried through into full, evidence-complete case "
             f"records this run"
             + (f"; {held} additional matched listing{'s' if held != 1 else ''} remain held pending a decision on "
                f"how to process them into cases." if held else ".")

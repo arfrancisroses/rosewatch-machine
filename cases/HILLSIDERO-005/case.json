@@ -19,7 +19,7 @@
   "match_explanation": "The product title contains the single word \"Darlington\", which is the whole of the chart entry. A one-word match can be coincidence rather than the variety -- it needs a human read of the listing before it means anything.",
   "review_status": "New",
   "first_date_found": "2026-09-21 06:04 MST (America/Phoenix)",
-  "last_verified": "2026-10-12 06:11 MST (America/Phoenix)",
+  "last_verified": "2026-10-19 06:17 MST (America/Phoenix)",
   "screenshot_captured_at": null,
   "seller_location": {
     "country": "United States (inferred — the site's \"Our Story\" page refers to a \"Southern California home\" but does not explicitly state \"United States\")",
@@ -145,6 +145,11 @@
       "date": "2026-10-16 06:10 MST (America/Phoenix)",
       "action": "Still not listed",
       "details": "Fourth consecutive run absent since the single-run return on 2026-10-12. Last Verified stays at 2026-10-12."
+    },
+    {
+      "date": "2026-10-19 06:17 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run.",
+      "details": "Back in the seller's feed after four consecutive runs absent (2026-10-13 through 2026-10-16). This is the second such return: the listing was also absent, then back for a single run on 2026-10-12, then absent again. Last Verified advances to today because the listing was actually seen; the pattern of it coming and going is recorded here rather than read as anything in itself."
     }
   ],
   "listing_availability": "NOT FOUND again, as of 2026-10-13 06:08 MST (America/Phoenix). The listing was present on 2026-10-12 after nine runs away, and is absent once more a single run later; Hillside Rose Farm's catalog fell 170 -> 159 in the same period, having risen 156 -> 170 the day before. So this listing has now gone, returned and gone again while the site's catalog swings by a dozen or more products at a time, which looks like inventory churn rather than anything directed at this listing -- but that is an observation about the pattern, not a conclusion, and nothing should be inferred about the seller's reasons. Last Verified stays at 2026-10-12, the last date the listing was actually confirmed present. The full sequence is in the history below and is not papered over."
