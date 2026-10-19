@@ -74,6 +74,14 @@ def cjk_safe(text):
     flush()
     return "".join(out)
 
+HILITE = "#ffe94d"   # highlighter yellow behind the match classification
+
+def highlight(value):
+    """The match rating, bold on a yellow highlight so it reads at a glance."""
+    if not value:
+        return '<font color="#99a29a">Not recorded</font>'
+    return (f'<font backColor="{HILITE}" color="#1a2420"><b>&nbsp;{esc(value)}&nbsp;</b></font>')
+
 def clip(text, limit):
     """Trim to a word boundary and mark the trim, so no quotation ends mid-word."""
     t = (text or "").strip()
@@ -117,36 +125,38 @@ def styles():
     add("Intro",     fontName="Helvetica", fontSize=9, textColor=SOFT, leading=12.5, spaceAfter=10)
     return st
 
-def thumb(src, box=None, pad_x=0.03, pad_y=0.12, max_w_px=1100):
+def thumb(src, box=None, max_w_px=1300):
     """Crop the capture to the listing's product image so the rose is legible.
 
-    `box` is the product image's position recorded at capture time. The crop hugs
-    it horizontally so no neighbouring column is sliced through mid-word, with a
-    little room above and below for page context. If no box was recorded, or it
-    does not sit inside the image, fall back to a top crop rather than guessing.
-    The untouched full capture remains on disk either way.
+    Keeps the full page width -- header, product photo and the detail column
+    (price, shipping, warranty, customer service) -- and cuts at the end of the
+    listing's own section, above the shop's related-products rows. If nothing
+    usable was recorded, fall back to a proportional top crop rather than
+    guessing. The untouched full capture remains on disk either way.
     """
     cache = os.path.join(ROOT, "reports", "_thumbs")
     os.makedirs(cache, exist_ok=True)
     out = os.path.join(cache, os.path.basename(src).replace(".png", "_crop.png"))
     with Image.open(src) as im:
         W, H = im.size
-        region = None
+        bottom = None
         if box:
             try:
                 d = float(box.get("dpr") or 1)
-                x, y = float(box["x"]) * d, float(box["y"]) * d
-                bw, bh = float(box["w"]) * d, float(box["h"]) * d
-                if bw > 40 and bh > 40 and 0 <= y < H and x < W:
-                    px, py = bw * pad_x, bh * pad_y
-                    region = (max(0, int(x - px)), max(0, int(y - py)),
-                              min(W, int(x + bw + px)), min(H, int(y + bh + py)))
-                    if region[2] - region[0] < 60 or region[3] - region[1] < 60:
-                        region = None
+                y, bh = float(box["y"]) * d, float(box["h"]) * d
+                cut = box.get("detail_bottom")
+                if cut is not None:
+                    cut = float(cut) * d
+                    # only trust a cut that sits below the product image
+                    if cut > y + bh * 1.05:
+                        bottom = cut
+                if bottom is None and bh > 40:
+                    bottom = y + bh * 1.9      # product image plus its detail column
             except (KeyError, TypeError, ValueError):
-                region = None
-        if region is None:
-            region = (0, 0, W, min(H, int(W * 1.1)))
+                bottom = None
+        if bottom is None:
+            bottom = W * 1.35
+        region = (0, 0, W, max(200, min(H, int(bottom))))
         im = im.crop(region)
         if im.size[0] > max_w_px:
             im = im.resize((max_w_px, int(im.size[1] * max_w_px / im.size[0])), Image.LANCZOS)
@@ -215,7 +225,7 @@ def card(case, st, content_w):
         Paragraph(f"{esc(cn)} &mdash; {cjk_safe(esc(case.get('variety')))}", st["CardTitle"]),
         Paragraph(f"Listing identified on {esc(case.get('website_domain'))} &middot; "
                   f"Status: {esc(case.get('review_status'))} &middot; "
-                  f"Classification: {esc(case.get('match_classification'))}", st["CardSub"]),
+                  f"Classification: {highlight(case.get('match_classification'))}", st["CardSub"]),
         Paragraph(f"Date &amp; time listing was found: {esc(case.get('first_date_found'))}",
                   st["CardFound"]),
     ]

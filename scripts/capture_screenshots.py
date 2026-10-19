@@ -147,7 +147,23 @@ def capture(page, url, out_path, settle_ms):
                             w: r.width, h: r.height, area};
                 }
             }
+            // Where the listing's own detail section ends, i.e. the top of the
+            // first "related products" style block. The card crops above this so
+            // it shows the listing itself and not the shop's cross-sell rows.
+            let cut = null;
+            const re = /^(related products|you may also like|recently viewed|customers also|you might also like|similar products)/i;
+            for (const el of document.querySelectorAll('h1,h2,h3,h4,div,section,p,span')) {
+                const t = (el.textContent || '').trim();
+                if (t.length > 60 || !re.test(t)) continue;
+                if (el.offsetParent === null) continue;        // hidden container
+                const r2 = el.getBoundingClientRect();
+                if (r2.width < 50 || r2.height < 10) continue;
+                const top = r2.top + window.scrollY;
+                const floor = best ? best.y + best.h : 400;    // must sit below the product image
+                if (top > floor && (cut === null || top < cut)) cut = top;
+            }
             return best ? {x: best.x, y: best.y, w: best.w, h: best.h,
+                           detail_bottom: cut,
                            dpr: window.devicePixelRatio || 1} : null;
         }""")
     except Exception:
