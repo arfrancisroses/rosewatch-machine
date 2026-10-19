@@ -17,6 +17,7 @@ from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import inch
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.cidfonts import UnicodeCIDFont
+from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import (BaseDocTemplate, Frame, HRFlowable, Image as RLImage,
                                 KeepTogether, PageTemplate, Paragraph, Spacer, Table, TableStyle)
 
@@ -28,8 +29,31 @@ LINE  = colors.HexColor("#c9d1c3")
 LINK  = colors.HexColor("#1f5c86")
 LABEL = colors.HexColor("#78857a")
 
-CJK = "STSong-Light"
-pdfmetrics.registerFont(UnicodeCIDFont(CJK))
+def _register_cjk():
+    """Pick a CJK face that is embedded in the PDF.
+
+    UnicodeCIDFont("STSong-Light") is NOT embedded: the glyphs render only where
+    the reader already has Adobe's Asian font pack, and are invisible everywhere
+    else. Several sellers list in Chinese and those titles are evidence, so the
+    font is embedded rather than assumed. Falls back to the CID font only if no
+    TrueType face is present on this machine.
+    """
+    for path, idx in (("/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc", 0),
+                      ("/usr/share/fonts/truetype/fonts-japanese-gothic.ttf", None)):
+        if not os.path.exists(path):
+            continue
+        try:
+            pdfmetrics.registerFont(
+                TTFont("RWCJK", path, subfontIndex=idx) if idx is not None
+                else TTFont("RWCJK", path))
+            return "RWCJK", True
+        except Exception:
+            continue
+    pdfmetrics.registerFont(UnicodeCIDFont("STSong-Light"))
+    return "STSong-Light", False
+
+
+CJK, CJK_EMBEDDED = _register_cjk()
 
 def cjk_safe(text):
     """Wrap CJK runs in the CJK font so they render instead of printing as boxes."""
@@ -93,17 +117,39 @@ def styles():
     add("Intro",     fontName="Helvetica", fontSize=9, textColor=SOFT, leading=12.5, spaceAfter=10)
     return st
 
-def thumb(src, max_w_px=900, aspect=1.25):
-    """Top-of-page crop for the card thumbnail; the full capture is shown below it."""
+def thumb(src, box=None, pad_x=0.03, pad_y=0.12, max_w_px=1100):
+    """Crop the capture to the listing's product image so the rose is legible.
+
+    `box` is the product image's position recorded at capture time. The crop hugs
+    it horizontally so no neighbouring column is sliced through mid-word, with a
+    little room above and below for page context. If no box was recorded, or it
+    does not sit inside the image, fall back to a top crop rather than guessing.
+    The untouched full capture remains on disk either way.
+    """
     cache = os.path.join(ROOT, "reports", "_thumbs")
     os.makedirs(cache, exist_ok=True)
-    out = os.path.join(cache, os.path.basename(src).replace(".png", "_thumb.png"))
+    out = os.path.join(cache, os.path.basename(src).replace(".png", "_crop.png"))
     with Image.open(src) as im:
-        w, h = im.size
-        crop_h = min(h, int(w * aspect))
-        im = im.crop((0, 0, w, crop_h))
-        if w > max_w_px:
-            im = im.resize((max_w_px, int(crop_h * max_w_px / w)), Image.LANCZOS)
+        W, H = im.size
+        region = None
+        if box:
+            try:
+                d = float(box.get("dpr") or 1)
+                x, y = float(box["x"]) * d, float(box["y"]) * d
+                bw, bh = float(box["w"]) * d, float(box["h"]) * d
+                if bw > 40 and bh > 40 and 0 <= y < H and x < W:
+                    px, py = bw * pad_x, bh * pad_y
+                    region = (max(0, int(x - px)), max(0, int(y - py)),
+                              min(W, int(x + bw + px)), min(H, int(y + bh + py)))
+                    if region[2] - region[0] < 60 or region[3] - region[1] < 60:
+                        region = None
+            except (KeyError, TypeError, ValueError):
+                region = None
+        if region is None:
+            region = (0, 0, W, min(H, int(W * 1.1)))
+        im = im.crop(region)
+        if im.size[0] > max_w_px:
+            im = im.resize((max_w_px, int(im.size[1] * max_w_px / im.size[0])), Image.LANCZOS)
         im.save(out)
     return out
 
@@ -138,12 +184,15 @@ def sliced(path, content_w, page_h, st, label):
     return flows
 
 def field(st, label, value):
-    """One cell: the small grey label above the value, as in the supplied layout."""
+    """One cell: the small grey label above the value, as in the supplied layout.
+
+    Two stacked paragraphs rather than nested <font> tags -- a <font name=...>
+    inside another <font> does not take effect, which silently dropped CJK
+    characters from values such as the seller's own product title.
+    """
     shown = cjk_safe(esc(value)) if value else '<font color="#99a29a">Not recorded</font>'
-    return Paragraph(
-        f'<font size="6.5" color="#78857a">{esc(label)}</font><br/>'
-        f'<font size="8.5" color="#1a2420">{shown}</font>',
-        st["FieldValue"])
+    return [Paragraph(esc(label), st["FieldLabel"]),
+            Paragraph(shown, st["FieldValue"])]
 
 def card(case, st, content_w):
     cn   = case["case_number"]
@@ -151,11 +200,11 @@ def card(case, st, content_w):
     path = os.path.join(ROOT, img["file"]) if img.get("file") else None
     have = bool(path and os.path.exists(path))
 
-    left_w  = 2.45 * inch
-    right_w = content_w - left_w - 0.18 * inch
+    left_w  = 3.05 * inch
+    right_w = content_w - left_w - 0.20 * inch
 
     if have:
-        left = scaled(thumb(path), left_w, 3.05 * inch)
+        left = scaled(thumb(path, img.get("product_image_box")), left_w, 3.2 * inch)
     else:
         left = Paragraph(
             "<b>No screenshot on file.</b><br/>" +
@@ -189,19 +238,16 @@ def card(case, st, content_w):
          field(st, "SELLER LOCATION", loc_s)],
         [field(st, "WEBSITE HOST", host_s),
          field(st, "EVIDENCE CAPTURED", case.get("screenshot_captured_at") or "Not captured")],
+        [field(st, "SELLER\u2019S PRODUCT TITLE", case.get("exact_product_title")), ""],
     ], colWidths=[right_w * 0.44, right_w * 0.56], hAlign="LEFT")
     grid.setStyle(TableStyle([
         ("VALIGN", (0, 0), (-1, -1), "TOP"),
         ("LEFTPADDING", (0, 0), (-1, -1), 0), ("RIGHTPADDING", (0, 0), (-1, -1), 6),
         ("TOPPADDING", (0, 0), (-1, -1), 4), ("BOTTOMPADDING", (0, 0), (-1, -1), 4),
+        ("SPAN", (0, 4), (1, 4)),
     ]))
 
-    right = head + [grid,
-        Paragraph(f'<link href="{esc(case.get("product_url"))}">'
-                  f'{cjk_safe(esc(case.get("product_url")))}</link>', st["CardURL"]),
-        Paragraph(f'&ldquo;{cjk_safe(esc(quote_display(case.get("quoted_text"))))}&rdquo;',
-                  st["CardQuote"]),
-    ]
+    right = head + [grid]
 
     outer = Table([[left, right]], colWidths=[left_w, content_w - left_w], hAlign="LEFT")
     outer.setStyle(TableStyle([
@@ -211,13 +257,19 @@ def card(case, st, content_w):
         ("TOPPADDING", (0, 0), (-1, -1), 0), ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
     ]))
 
-    flow = [KeepTogether([outer])]
+    below = [
+        Paragraph(f'<link href="{esc(case.get("product_url"))}">'
+                  f'{cjk_safe(esc(case.get("product_url")))}</link>', st["CardURL"]),
+        Paragraph(f'&ldquo;{cjk_safe(esc(quote_display(case.get("quoted_text"))))}&rdquo;',
+                  st["CardQuote"]),
+    ]
     if have:
-        label = (f"Full-page capture &mdash; {esc(img.get('captured_at'))} &middot; "
-                 f"{esc(img.get('file'))}")
-        flow += [Spacer(1, 8)] + sliced(path, content_w, 8.55 * inch, st, label)
-    flow += [Spacer(1, 10), HRFlowable(width="100%", color=LINE, thickness=0.6), Spacer(1, 10)]
-    return flow
+        below.append(Paragraph(
+            f"Screenshot: full-page capture {esc(img.get('captured_at'))}, filed at "
+            f"{esc(img.get('file'))}. Shown here cropped to the listing&rsquo;s product image; "
+            f"the complete capture is held with the case.", st["CapLabel"]))
+    return [KeepTogether([outer] + below),
+            Spacer(1, 10), HRFlowable(width="100%", color=LINE, thickness=0.6), Spacer(1, 10)]
 
 def build(cases, out_path, title, subtitle):
     st = styles()

@@ -19,7 +19,7 @@
   "review_status": "New",
   "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
   "last_verified": "2026-10-19 06:17 MST (America/Phoenix)",
-  "screenshot_captured_at": "2026-10-19 13:45 MST (America/Phoenix)",
+  "screenshot_captured_at": "2026-10-19 14:51 MST (America/Phoenix)",
   "seller_location": {
     "country": "United States",
     "state_or_region": "Texas",
@@ -37,12 +37,19 @@
   },
   "evidence_screenshots": [
     {
-      "file": "cases/ERGONGZY-006/screenshots/ERGONGZY-006_2026-10-19_1345.png",
-      "captured_at": "2026-10-19 13:45 MST (America/Phoenix)",
+      "file": "cases/ERGONGZY-006/screenshots/ERGONGZY-006_2026-10-19_1451.png",
+      "captured_at": "2026-10-19 14:51 MST (America/Phoenix)",
       "source_url": "https://ergongzy.com/products/pink-piano",
       "viewport_width_px": 1400,
       "full_page": true,
-      "bytes": 2304884,
+      "bytes": 2295424,
+      "product_image_box": {
+        "x": 15,
+        "y": 200,
+        "w": 795,
+        "h": 795,
+        "dpr": 1
+      },
       "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
       "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing; dismissed: div.background-overlay. No listing content was altered, added or removed."
     }
@@ -164,9 +171,9 @@
       "action": "Re-verified present in site catalog feed during scheduled daily run."
     },
     {
-      "date": "2026-10-19 13:45 MST (America/Phoenix)",
+      "date": "2026-10-19 14:51 MST (America/Phoenix)",
       "action": "Evidence screenshot captured",
-      "details": "Full-page capture of https://ergongzy.com/products/pink-piano saved to cases/ERGONGZY-006/screenshots/ERGONGZY-006_2026-10-19_1345.png (2,304,884 bytes)."
+      "details": "Full-page capture of https://ergongzy.com/products/pink-piano saved to cases/ERGONGZY-006/screenshots/ERGONGZY-006_2026-10-19_1451.png (2,295,424 bytes)."
     }
   ]
 }

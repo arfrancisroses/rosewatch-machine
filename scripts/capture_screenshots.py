@@ -126,6 +126,33 @@ def capture(page, url, out_path, settle_ms):
         pass
     page.wait_for_timeout(settle_ms)
 
+    # Locate the listing's main product image. The card crops to this band so the
+    # rose is legible at card size; the full capture on disk stays the evidence.
+    hero = None
+    try:
+        hero = page.evaluate("""() => {
+            let best = null;
+            for (const img of document.images) {
+                const r = img.getBoundingClientRect();
+                const top = r.top + window.scrollY;
+                if (r.width < 220 || r.height < 220) continue;
+                if (top < 0 || top > 3500) continue;          // off-canvas carousel slides
+                if (r.left + window.scrollX < -50) continue;  // ditto, horizontally
+                const cs = getComputedStyle(img);
+                if (cs.visibility === 'hidden' || cs.display === 'none') continue;
+                if (parseFloat(cs.opacity || '1') < 0.2) continue;
+                const area = r.width * r.height;
+                if (!best || area > best.area) {
+                    best = {x: r.left + window.scrollX, y: top,
+                            w: r.width, h: r.height, area};
+                }
+            }
+            return best ? {x: best.x, y: best.y, w: best.w, h: best.h,
+                           dpr: window.devicePixelRatio || 1} : null;
+        }""")
+    except Exception:
+        pass
+
     # Verify the page actually rendered before we call the image evidence.
     text = page.inner_text("body") if page.query_selector("body") else ""
     if len(text.strip()) < MIN_TEXT_CHARS:
@@ -143,7 +170,7 @@ def capture(page, url, out_path, settle_ms):
         size = os.path.getsize(out_path)
         os.remove(out_path)
         raise RenderFailure(f"capture was only {size:,} bytes, below the {MIN_BYTES:,} floor")
-    return dismissed
+    return dismissed, hero
 
 def main():
     ap = argparse.ArgumentParser()
@@ -191,7 +218,7 @@ def main():
             page.on("requestfailed", lambda r: blocked.add(
                 r.url.split("//")[-1].split("/")[0]) if "TUNNEL" in (r.failure or "") else None)
             try:
-                dismissed = capture(page, url, out, args.settle)
+                dismissed, hero = capture(page, url, out, args.settle)
             except Exception as e:
                 if os.path.exists(out):
                     os.remove(out)
@@ -212,6 +239,7 @@ def main():
                 "file": rel, "captured_at": stamp(now), "source_url": url,
                 "viewport_width_px": args.width, "full_page": True,
                 "bytes": size,
+                "product_image_box": hero,
                 "capture_method": ("Headless Chromium via Playwright, rendered through this "
                                    "environment's egress proxy. Full-page capture at the URL shown."),
                 "page_modifications": (
