@@ -120,6 +120,9 @@ def styles():
     add("CardURL",   fontName="Helvetica", fontSize=8, textColor=LINK, leading=10.5, spaceBefore=4)
     add("CardQuote", fontName="Helvetica-Oblique", fontSize=8, textColor=INK, leading=10.5, spaceBefore=2)
     add("CapLabel",  fontName="Helvetica", fontSize=7, textColor=LABEL, leading=9, spaceBefore=3)
+    add("GapHead",   fontName="Helvetica-Bold", fontSize=8.5, textColor=ACCENT, leading=11,
+                     alignment=TA_LEFT)
+    add("GapBody",   fontName="Helvetica", fontSize=7.5, textColor=SOFT, leading=10.5)
     add("Disclaim",  fontName="Helvetica", fontSize=7.5, textColor=SOFT, leading=10)
     add("H1",        fontName="Helvetica-Bold", fontSize=17, textColor=INK, leading=21, spaceAfter=2)
     add("Intro",     fontName="Helvetica", fontSize=9, textColor=SOFT, leading=12.5, spaceAfter=10)
@@ -193,6 +196,38 @@ def sliced(path, content_w, page_h, st, label):
                 flows.append(Spacer(1, 6))
     return flows
 
+def shot_gap_reason(case):
+    """Why this case has no screenshot, in one short line for the card."""
+    lims = " ".join(case.get("access_or_research_limitations") or [])
+    dom = (case.get("website_domain") or "").lower()
+    if "anti-automation" in lims or "innerHTML" in lims:
+        return ("The seller's page runs a script that blanks the page when it detects an "
+                "automated browser. Not bypassed. The listing is verified through the site's "
+                "public product feed instead.")
+    if "egress proxy" in lims or "Tunnel connection" in lims or "403" in lims:
+        return ("This environment's network policy refuses the seller's pages, so the page "
+                "could not be opened to photograph. The listing is verified through the site's "
+                "public product feed instead.")
+    return ("No screenshot has been captured for this listing yet. The listing is verified "
+            "through the site's public product feed.")
+
+
+def no_shot_box(st, width, case):
+    """Placeholder that keeps a screenshot-less case in the same card shape."""
+    inner = [Paragraph("NO SCREENSHOT ON FILE", st["GapHead"]),
+             Spacer(1, 4),
+             Paragraph(esc(shot_gap_reason(case)), st["GapBody"])]
+    t = Table([[inner]], colWidths=[width], rowHeights=[2.15 * inch])
+    t.setStyle(TableStyle([
+        ("BOX", (0, 0), (-1, -1), 0.8, LINE),
+        ("BACKGROUND", (0, 0), (-1, -1), colors.HexColor("#f5f6f2")),
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("LEFTPADDING", (0, 0), (-1, -1), 12), ("RIGHTPADDING", (0, 0), (-1, -1), 12),
+        ("TOPPADDING", (0, 0), (-1, -1), 10), ("BOTTOMPADDING", (0, 0), (-1, -1), 10),
+    ]))
+    return t
+
+
 def field(st, label, value):
     """One cell: the small grey label above the value, as in the supplied layout.
 
@@ -216,10 +251,7 @@ def card(case, st, content_w):
     if have:
         left = scaled(thumb(path, img.get("product_image_box")), left_w, 3.2 * inch)
     else:
-        left = Paragraph(
-            "<b>No screenshot on file.</b><br/>" +
-            esc((case.get("access_or_research_limitations") or ["Not captured."])[-1][:320]),
-            st["CardSub"])
+        left = no_shot_box(st, left_w, case)
 
     head = [
         Paragraph(f"{esc(cn)} &mdash; {cjk_safe(esc(case.get('variety')))}", st["CardTitle"]),
@@ -278,6 +310,11 @@ def card(case, st, content_w):
             f"Screenshot: full-page capture {esc(img.get('captured_at'))}, filed at "
             f"{esc(img.get('file'))}. Shown here cropped to the listing&rsquo;s product image; "
             f"the complete capture is held with the case.", st["CapLabel"]))
+    else:
+        below.append(Paragraph(
+            "Screenshot: none on file &mdash; recorded as a coverage gap, not as a clean result. "
+            "Every other field above was taken from the seller&rsquo;s own live listing data.",
+            st["CapLabel"]))
     return [KeepTogether([outer] + below),
             Spacer(1, 10), HRFlowable(width="100%", color=LINE, thickness=0.6), Spacer(1, 10)]
 
