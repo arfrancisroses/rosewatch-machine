@@ -184,7 +184,13 @@ def text_of(body, limit=420):
     t = re.sub(r"\s+", " ", t).strip()
     if not t:
         return None
-    return t[:limit] + ("..." if len(t) > limit else "")
+    if len(t) <= limit:
+        return t
+    cut = t[:limit]
+    sp = cut.rfind(" ")
+    if sp > limit * 0.6:          # cut on a word boundary, not mid-word
+        cut = cut[:sp]
+    return cut.rstrip(" ,;:.") + "..."
 
 
 def classify(title, mark):

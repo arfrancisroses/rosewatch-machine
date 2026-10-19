@@ -1,1 +1,5 @@
 __pycache__/
+
+# evidence-card build caches (regenerated on demand)
+reports/_thumbs/
+reports/_slices/

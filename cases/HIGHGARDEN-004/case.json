@@ -37,7 +37,9 @@
   },
   "evidence_screenshots": [],
   "access_or_research_limitations": [
-    "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed."
+    "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed.",
+    "Screenshot attempt 2026-10-19 produced a blank page and was discarded, not kept as evidence. highgardenroses.com loads its theme stylesheet, scripts and product images from cdn.shopify.com, which this environment's egress proxy refuses (ERR_TUNNEL_CONNECTION_FAILED); the HTML arrives but nothing renders. Allowlisting cdn.shopify.com would resolve it. The listing itself is reachable and was verified present in the seller's product feed on this date.",
+    "Screenshot attempt failed 2026-10-19 13:40 MST (America/Phoenix): RenderFailure: page rendered only 0 characters of text (threshold 400); blocked sub-resources usually cause this | sub-resources refused by this environment's egress proxy: cdn.shopify.com, connect.facebook.net, error-analytics-sessions-production.shopifysvc.com, otlp-http-production.shopifysvc.com, shop.app, www.googletagmanager.com. No image was kept; this case has no screenshot rather than a blank one."
   ],
   "investigator_notes": "Identified via this session's crawl of the store's public product data feed on 2026-09-10, cross-checked against the Master Trademark Filing Chart. This is a potential lead for Francis Roses/legal counsel review, not a legal determination of infringement.",
   "history": [
