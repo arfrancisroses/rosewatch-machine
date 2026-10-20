@@ -372,6 +372,9 @@ code.k { font-family: 'IBM Plex Mono', monospace; background: var(--neutral-soft
 .field label { display: block; font-size: 11.5px; color: var(--ink-faint); margin-bottom: 3px; }
 .field .v { font-size: 14px; }
 .field .v.mono { font-family: 'IBM Plex Mono', monospace; font-size: 13px; }
+.shot-cell { width: 68px; }
+.shot-cell img { display: block; width: 60px; height: 44px; object-fit: cover; object-position: top center; border: 1px solid var(--line); border-radius: 3px; background: #fff; }
+.shot-none { color: var(--ink-faint); }
 .shot { margin: 8px 0 0; }
 .shot img { display: block; width: 100%; max-width: 760px; height: auto; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
 .shot figcaption { font-size: 11.5px; line-height: 1.55; color: var(--ink-faint); margin-top: 8px; max-width: 760px; }
@@ -645,6 +648,11 @@ runPanel('cases', function renderCases(){
       <select id="case-site"><option value="">All sites</option></select>
       <select id="case-review"><option value="">All review statuses</option></select>
       <select id="case-month"><option value="">All months (First Found)</option></select>
+      <select id="case-shot">
+        <option value="">Screenshot: any</option>
+        <option value="yes">Has a screenshot</option>
+        <option value="no">No screenshot</option>
+      </select>
       <span class="result-count" id="case-count"></span>
     </div>
     <div id="case-table"></div>
@@ -654,6 +662,7 @@ runPanel('cases', function renderCases(){
   const siteSel = document.getElementById('case-site');
   const reviewSel = document.getElementById('case-review');
   const monthSel = document.getElementById('case-month');
+  const shotSel = document.getElementById('case-shot');
   [...new Set(DATA.cases.map(c=>c.trademark_status))].sort().forEach(s => statusSel.insertAdjacentHTML('beforeend', `<option>${esc(s)}</option>`));
   [...new Set(DATA.cases.map(c=>c.site_code))].sort().forEach(s => siteSel.insertAdjacentHTML('beforeend', `<option>${esc(s)}</option>`));
   [...new Set(DATA.cases.map(c=>c.review_status))].sort().forEach(s => reviewSel.insertAdjacentHTML('beforeend', `<option>${esc(s)}</option>`));
@@ -665,6 +674,7 @@ runPanel('cases', function renderCases(){
 
   const tbl = makeTable(document.getElementById('case-table'), {
     columns: [
+      {label:'Shot', sortKey:'screenshotWeb'},
       {label:'Case #', sortKey:'case_number'},
       {label:'Site Code', sortKey:'site_code'},
       {label:'Variety', sortKey:'variety'},
@@ -684,6 +694,9 @@ runPanel('cases', function renderCases(){
     getSortValue: (r,k) => (r[k] ?? '').toString().toLowerCase(),
     emptyMessage: DATA.cases.length ? 'No cases match this filter.' : 'No cases yet — none of today’s crawl results have been processed into full case records.',
     rowHtml: r => `<tr>
+      <td class="shot-cell">${r.screenshotWeb
+            ? `<a class="case-link" href="#case/${encodeURIComponent(r.case_number)}" title="Screenshot on file — open the case"><img src="${esc(r.screenshotWeb)}" alt="" loading="lazy"></a>`
+            : `<span class="shot-none" title="No screenshot on file">&mdash;</span>`}</td>
       <td class="mono"><a class="case-link" href="#case/${encodeURIComponent(r.case_number)}">${esc(r.case_number)}</a></td>
       <td class="mono">${esc(r.site_code)}</td>
       <td>${esc(r.variety)}</td>
@@ -708,13 +721,17 @@ runPanel('cases', function renderCases(){
       if (siteSel.value && r.site_code !== siteSel.value) return false;
       if (reviewSel.value && r.review_status !== reviewSel.value) return false;
       if (monthSel.value && monthKey(r.first_date_found) !== monthSel.value) return false;
+      if (shotSel.value === 'yes' && !r.screenshotWeb) return false;
+      if (shotSel.value === 'no' && r.screenshotWeb) return false;
       if (!q) return true;
       return [r.case_number, r.variety, r.matched_trademark, r.seller_name, r.website_domain, r.product_url, r.exact_product_title].some(v => (v??'').toString().toLowerCase().includes(q));
     });
     const n = tbl.render(filtered);
-    document.getElementById('case-count').textContent = `${n} of ${DATA.cases.length}`;
+    const withShot = filtered.filter(r => r.screenshotWeb).length;
+    document.getElementById('case-count').textContent =
+      `${n} of ${DATA.cases.length} \u00b7 ${withShot} with a screenshot`;
   }
-  [statusSel, siteSel, reviewSel, monthSel].forEach(s => s.addEventListener('change', applyFilter));
+  [statusSel, siteSel, reviewSel, monthSel, shotSel].forEach(s => s.addEventListener('change', applyFilter));
   document.getElementById('case-search').addEventListener('input', applyFilter);
   applyFilter();
 });
