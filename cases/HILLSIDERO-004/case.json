@@ -20,7 +20,7 @@
   "review_status": "New",
   "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
   "last_verified": "2026-10-13 06:08 MST (America/Phoenix)",
-  "screenshot_captured_at": null,
+  "screenshot_captured_at": "2026-10-20 10:18 MST (America/Phoenix)",
   "seller_location": {
     "country": "United States (inferred — the site's \"Our Story\" page refers to a \"Southern California home\" but does not explicitly state \"United States\")",
     "state_or_region": "California (\"Southern California\" per the site's Our Story / About page)",
@@ -36,7 +36,29 @@
     "registrar": "Not available — WHOIS lookup services attempted (rdap.org, hackertarget.com) were blocked by this session's network policy",
     "estimated": true
   },
-  "evidence_screenshots": [],
+  "evidence_screenshots": [
+    {
+      "file": "cases/HILLSIDERO-004/screenshots/HILLSIDERO-004_2026-10-20_1018.png",
+      "captured_at": "2026-10-20 10:18 MST (America/Phoenix)",
+      "source_url": "https://hillsiderosefarm.com/products/catalina-凯特琳娜-japan",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 2485637,
+      "product_image_box": {
+        "x": 0,
+        "y": 124.1875,
+        "w": 1400,
+        "h": 560,
+        "detail_bottom": null,
+        "dpr": 1
+      },
+      "images_total": 22,
+      "images_failed_to_load": 0,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing; dismissed: shopify-chat. No listing content was altered, added or removed.",
+      "image_load_note": null
+    }
+  ],
   "access_or_research_limitations": [
     "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown.",
     "2026-10-14: could not confirm the state of the rendered product page. The apex URL redirects to www.hillsiderosefarm.com, which this environment's egress proxy refuses at the CONNECT stage. The catalog-feed absence is what the delisting rests on."
@@ -145,6 +167,11 @@
       "date": "2026-10-20 09:25 MST (America/Phoenix)",
       "action": "Listing confirmed removed (HTTP 404)",
       "details": "hillsiderosefarm.com became reachable for page requests from here on 2026-10-20 after the user widened this environment's network policy, and this case's product URL now returns HTTP 404 from the seller's own server. This confirms what the feed had been indicating (absent from the feed since 2026-10-14); until today the page itself could not be fetched to check. Last Verified stays at the last date the listing was actually seen and is not advanced. A screenshot taken during this run captured the shop's 404 page rather than the listing, so it was discarded rather than filed as evidence. Case number, prior evidence and review status are unchanged."
+    },
+    {
+      "date": "2026-10-20 10:18 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://hillsiderosefarm.com/products/catalina-凯特琳娜-japan saved to cases/HILLSIDERO-004/screenshots/HILLSIDERO-004_2026-10-20_1018.png (2,485,637 bytes)."
     }
   ],
   "listing_availability": "NOT FOUND in the seller's catalog as of 2026-10-14 06:07 MST (America/Phoenix). Last confirmed present 2026-10-13 06:08 MST, so this is the first run in which it is missing. Evidence is its absence from hillsiderosefarm.com's own Shopify product feed, which served normally today at 160 products. The rendered product page itself could not be checked: the apex URL answers HTTP 301 to the www host, and www.hillsiderosefarm.com is refused by this environment's egress proxy at the CONNECT stage. So the listing is gone from the catalog; whether the page still renders for a public visitor is unconfirmed. Nothing is known about why it came down and nothing should be inferred."
