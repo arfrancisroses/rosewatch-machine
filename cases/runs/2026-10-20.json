@@ -1,0 +1,190 @@
+{
+  "_readme": "Per-run monitoring log, one file per calendar day (America/Phoenix), used to generate the Daily PDF Report. Distinct from cases.json, which is the permanent case/review-queue index.",
+  "run_date": "2026-10-20",
+  "generated_at": "2026-10-20 06:06 MST (America/Phoenix)",
+  "_run_note": "Twenty-seventh scheduled run. 15 of 20 URLs served a catalog -- the four marketplace and social entries have no product feed and never serve one, and Flower Meadow Dream remains refused by this environment's egress proxy, as on every day since 2026-09-16. No new matches, no cases created, nothing held, nothing cut-roses-only. Three cases stayed out of their sellers' feeds on sites that served normally: HILLSIDERO-004 for a fifth run, and Kate Roses' two for a second. No Last Verified date advanced on a listing that was not actually seen. Catalogs grew slightly almost everywhere -- Hillside 177 -> 178, Huniu 296 -> 297, Mola Rose and Muse Roses 770 -> 771, Rose Explosion 1446 -> 1447, Your Roses 1700 -> 1705 -- and none of the new products carried a chart name. Kate Roses slipped one further, 54 -> 53. 371 of 377 cases re-verified; the six unconfirmed are Flower Meadow Dream's 3, Kate Roses' 2 and HILLSIDERO-004.\n\nScreenshots: 3 of 377 cases have one, all captured on 2026-10-19 while the evidence-card format was being built. No new cases were created today, so none were due. Capture feasibility was probed per site on 2026-10-19: 320 of 377 cases sit on sites that capture cleanly, but backfilling them has not been approved and was not run. High Garden's 46 need manual capture by the user because the seller blocks automated browsing; Hillside's 6, Flower Meadow Dream's 3 and Kate Roses' 2 are blocked by our own network policy.",
+  "sites": [
+    {
+      "company": "Bloom Ladies Roses",
+      "url": "https://www.bloomladiesroses.com/shop",
+      "accessible": true,
+      "platform": "Squarespace",
+      "product_pages_reviewed": 154,
+      "notes": null
+    },
+    {
+      "company": "Bloomora Roses",
+      "url": "https://www.facebook.com/profile.php?id=61591662794131",
+      "accessible": false,
+      "platform": "Facebook",
+      "product_pages_reviewed": 0,
+      "notes": "Facebook page; facebook.com is blocked by this environment's network egress policy at the CONNECT stage, so the page was never reached. No open product feed exists for a Facebook page in any case."
+    },
+    {
+      "company": "Ergonzy / Ergonzi (ergongzy.com)",
+      "url": "https://ergongzy.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 518,
+      "notes": null
+    },
+    {
+      "company": "Ergonzy / Ergonzi (www.etsy.com)",
+      "url": "https://www.etsy.com/shop/Ergongzi",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "Etsy storefront; etsy.com is blocked by this environment's network egress policy at the CONNECT stage. The seller's own site (ergongzy.com) was crawled in full and carries the same catalog."
+    },
+    {
+      "company": "Flower Meadow Dream",
+      "url": "https://www.myroseworld.com/",
+      "accessible": false,
+      "platform": null,
+      "product_pages_reviewed": 0,
+      "notes": "Not reached. Both www.myroseworld.com and myroseworld.com were refused by this environment's egress proxy at the CONNECT stage, so the request never reached the seller's server. This is our own network policy, not a block by the site. Unchanged since 2026-09-16. The site's 3 existing cases (MYROSEWORL-001..003) could not be re-verified and keep their 2026-09-16 Last Verified date."
+    },
+    {
+      "company": "GCM Ranch",
+      "url": "https://www.etsy.com/shop/GcmRanch",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "Etsy shop closed (dormant). Roster entry retained per user instruction (2026-09-15); expected to stay inaccessible and not awaiting any decision."
+    },
+    {
+      "company": "High Garden",
+      "url": "https://highgardenroses.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 670,
+      "notes": null
+    },
+    {
+      "company": "Hillside Rose Farm",
+      "url": "https://hillsiderosefarm.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 178,
+      "notes": "Served normally at 178 products, up one from 2026-10-19. HILLSIDERO-004 (Catalina, unstatused) is absent for a fifth consecutive run and keeps its 2026-10-13 Last Verified date."
+    },
+    {
+      "company": "Huniu Rose Garden",
+      "url": "https://huniurosegarden.ca",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 297,
+      "notes": null
+    },
+    {
+      "company": "Jessie's Roses (www.etsy.com)",
+      "url": "https://www.etsy.com/shop/JessiesRoseUSA",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "Etsy storefront; etsy.com is blocked by this environment's network egress policy at the CONNECT stage."
+    },
+    {
+      "company": "Jessie's Roses (www.jessiesrose.com)",
+      "url": "https://jessiesrose.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 0,
+      "notes": "Reached on the apex host after the www host was refused by the egress proxy. The Shopify feed returned HTTP 200 with an empty product array -- the store genuinely lists no products. Counted as checked, zero products."
+    },
+    {
+      "company": "Kate Roses",
+      "url": "https://kateroses.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 53,
+      "notes": "Served normally at 53 products, one fewer than the 54 on 2026-10-19 and still far below the 98 it carried before the weekend contraction. Both of its cases remain out of the feed for a second run, holding their 2026-10-16 Last Verified dates. The site is healthy, so this is the seller changing what they list, not a coverage gap."
+    },
+    {
+      "company": "Kisaki Plant",
+      "url": "https://kisakiplant.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 322,
+      "notes": null
+    },
+    {
+      "company": "Mola Rose",
+      "url": "https://molarose.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 771,
+      "notes": null
+    },
+    {
+      "company": "Muse Roses",
+      "url": "https://museroses.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 771,
+      "notes": null
+    },
+    {
+      "company": "One Love",
+      "url": "https://oneloveroseandgardens.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 864,
+      "notes": null
+    },
+    {
+      "company": "Redland Ranch Roses",
+      "url": "https://redlandranchroses.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 1849,
+      "notes": null
+    },
+    {
+      "company": "Rose Explosion",
+      "url": "https://roseexplosion.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 1447,
+      "notes": null
+    },
+    {
+      "company": "Springland Flowers",
+      "url": "https://springlandflowers.com",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 117,
+      "notes": null
+    },
+    {
+      "company": "Your Roses",
+      "url": "https://your-roses.com/",
+      "accessible": true,
+      "platform": "WordPress/WooCommerce",
+      "product_pages_reviewed": 1705,
+      "notes": null
+    }
+  ],
+  "total_sites_on_roster": 18,
+  "total_urls_on_roster": 20,
+  "urls_accessible": 15,
+  "urls_inaccessible": 5,
+  "total_product_pages_reviewed": 9716,
+  "active_trademark_matches_found": 0,
+  "active_trademark_matches_by_status": {},
+  "cases_created_this_run": 0,
+  "cases_reverified_this_run": 371,
+  "cases_no_longer_listed_this_run": [
+    "HILLSIDERO-004",
+    "KATEROSES-001",
+    "KATEROSES-002"
+  ],
+  "matches_held_pending_case_creation": 0,
+  "review_queue_entries_this_run": 0,
+  "cut_roses_only_this_run": 0,
+  "screenshots_on_file": 3,
+  "screenshot_gaps": 374,
+  "screenshot_limitation": "374 of 377 cases have no screenshot. Captures now work for 11 of the 15 sites that hold cases (320 cases); backfilling those is a scope change awaiting the user's approval. High Garden (46 cases, 7 Registered) cannot be captured automatically -- an obfuscated script on the seller's own pages detects automated browsing and blanks the page, and that access control was not bypassed. Hillside Rose Farm (6), Flower Meadow Dream (3) and Kate Roses (2) are refused by this environment's own network policy. Recorded as a coverage gap, never as a clean result.",
+  "dashboard_updated": true,
+  "dashboard_url": "https://claude.ai/code/artifact/16e0d5da-a772-4f6c-81b7-80697febeeb1"
+}

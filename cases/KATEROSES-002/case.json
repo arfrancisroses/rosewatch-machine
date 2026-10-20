@@ -131,6 +131,11 @@
       "date": "2026-10-19 06:17 MST (America/Phoenix)",
       "action": "Listing no longer found in the seller's catalog",
       "details": "Absent from the site's product feed for the first time since this case was created. Kate Roses served 54 products today, down from 98 on 2026-10-16 -- a 44-listing contraction over the weekend that took this listing with it. Last Verified stays at 2026-10-16, the last date it was confirmed present. Case number, prior evidence and review status are unchanged. The product page itself could not be fetched directly to confirm: this environment's egress proxy allows the site's product-feed path but refuses its other paths, returning \"Tunnel connection failed: 403 Forbidden\" before the request reaches the seller. That is our own network policy, not the seller blocking us. Absence from the feed is therefore the evidence here, and it is not proof the page is gone."
+    },
+    {
+      "date": "2026-10-20 06:06 MST (America/Phoenix)",
+      "action": "Still not listed",
+      "details": "Second consecutive run absent. Kate Roses served 53 products today, down one more from the 54 it served on 2026-10-19 after its 44-listing contraction. Last Verified stays at 2026-10-16. The product page itself could not be fetched directly to confirm: this environment's egress proxy allows the site's product-feed path but refuses its other paths. That is our own network policy, not the seller blocking us. Absence from the feed is the evidence here, and it is not proof the page is gone."
     }
   ]
 }
