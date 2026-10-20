@@ -33,7 +33,9 @@ def load_cards_module():
     return mod
 
 def safe_name(text):
-    return re.sub(r"[^A-Za-z0-9 ()&.-]", "", (text or "").strip()) or "Unknown"
+    """A filename-safe seller name; separators collapse rather than leaving gaps."""
+    cleaned = re.sub(r"[^A-Za-z0-9 ()&.-]", " ", (text or ""))
+    return re.sub(r"\s+", " ", cleaned).strip(" -") or "Unknown"
 
 def fingerprint(cases):
     h = hashlib.sha256()

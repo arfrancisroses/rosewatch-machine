@@ -38,7 +38,8 @@
   },
   "evidence_screenshots": [],
   "access_or_research_limitations": [
-    "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown."
+    "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown.",
+    "Screenshot attempt failed 2026-10-20 11:54 MST (America/Phoenix): RenderFailure: page rendered only 0 characters of text (threshold 400); the server sent the page but the browser rendered nothing, which is the signature of a script that blanks the document when it detects an automated browser. highgardenroses.com is known to do this; it was not bypassed | sub-resources refused by this environment's egress proxy: blessifyinfotech.com, connect.facebook.net, data4.superboosty.com, error-analytics-sessions-production.shopifysvc.com, extensions.shopifycdn.com, js.sentry-cdn.com. No image was kept; this case has no screenshot rather than a blank one."
   ],
   "investigator_notes": "Found by the daily catalog crawl on 2026-09-18, the first run to match product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"N/A\", not an enforceable registration: it is recorded so the match is tracked, and must not be read as a finding of infringement. The product title contains the full chart name \"The Pride\" as a phrase, inside a longer title.",
   "history": [

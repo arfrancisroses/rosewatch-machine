@@ -56,6 +56,17 @@ MIN_BYTES = 40_000
 # rules, so a threshold near that number rejects good captures.
 MIN_CSS_RULES = 25
 
+# Phrases that mean the page shown is an access gate, not the listing. Capturing
+# one and filing it against a case would put a picture of a login box on the
+# record as if it were the product. One Love Rose and Gardens gates part of its
+# catalogue behind a membership login; the wall is never bypassed, it is recorded.
+ACCESS_WALL = re.compile(
+    r"content is for members only"
+    r"|members only\.\s*please log in"
+    r"|log in with your membership account"
+    r"|sign in to (?:view|see) this (?:page|product)",
+    re.I)
+
 class RenderFailure(RuntimeError):
     """The page loaded but did not render enough to be usable as evidence."""
 
@@ -213,9 +224,19 @@ def capture(page, url, out_path, settle_ms):
     # Verify the page actually rendered before we call the image evidence.
     text = page.inner_text("body") if page.query_selector("body") else ""
     if len(text.strip()) < MIN_TEXT_CHARS:
+        n = len(text.strip())
+        why = ("the server sent the page but the browser rendered nothing, which is the signature "
+               "of a script that blanks the document when it detects an automated browser"
+               if n == 0 else "blocked sub-resources usually cause this")
         raise RenderFailure(
-            f"page rendered only {len(text.strip())} characters of text "
-            f"(threshold {MIN_TEXT_CHARS}); blocked sub-resources usually cause this")
+            f"page rendered only {n} characters of text (threshold {MIN_TEXT_CHARS}); {why}")
+    wall = ACCESS_WALL.search(text or "")
+    if wall:
+        raise RenderFailure(
+            f"the seller shows an access wall on this URL rather than the listing "
+            f"(matched {wall.group(0)!r}). Not bypassed; no image kept, because a picture of a "
+            f"login box is not evidence of the product")
+
     rules = page.evaluate("""() => [...document.styleSheets].reduce((n, s) => {
             try { return n + s.cssRules.length; } catch (e) { return n; } }, 0)""")
     if rules < MIN_CSS_RULES:

@@ -21,7 +21,7 @@
   "review_status": "New",
   "first_date_found": "2026-10-01 11:42 MST (America/Phoenix)",
   "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
-  "screenshot_captured_at": null,
+  "screenshot_captured_at": "2026-10-20 11:46 MST (America/Phoenix)",
   "units_in_stock_at_capture": 0,
   "seller_sku": "SQ0401501",
   "page_publication_date": "2025-03-18 18:19 MST (America/Phoenix)",
@@ -41,7 +41,29 @@
     "registrar": "Not determined -- RDAP/whois endpoints are refused by this environment's network egress policy",
     "hosting_country": "Not determined"
   },
-  "evidence_screenshots": [],
+  "evidence_screenshots": [
+    {
+      "file": "cases/BLOOMLADIE-002/screenshots/BLOOMLADIE-002_2026-10-20_1146.png",
+      "captured_at": "2026-10-20 11:46 MST (America/Phoenix)",
+      "source_url": "https://www.bloomladiesroses.com/shop/p/tropicana-rose",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 3889692,
+      "product_image_box": {
+        "x": 700,
+        "y": 139.296875,
+        "w": 1400,
+        "h": 960,
+        "detail_bottom": 2269.90625,
+        "dpr": 1
+      },
+      "images_total": 29,
+      "images_failed_to_load": 17,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing. No listing content was altered, added or removed.",
+      "image_load_note": "17 of 29 images on the page did not load and appear blank in this capture. Their host is refused by this environment's network policy, not by the seller. The capture is kept for its text, price and layout; it is not a complete picture of the listing as a buyer saw it."
+    }
+  ],
   "access_or_research_limitations": [
     "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown."
   ],
@@ -103,6 +125,11 @@
     {
       "date": "2026-10-20 06:06 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-10-20 11:46 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://www.bloomladiesroses.com/shop/p/tropicana-rose saved to cases/BLOOMLADIE-002/screenshots/BLOOMLADIE-002_2026-10-20_1146.png (3,889,692 bytes)."
     }
   ]
 }

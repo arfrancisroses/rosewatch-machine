@@ -16,12 +16,20 @@ def reason_for(case):
     as a current diagnosis would mislabel sites that capture fine today.
     """
     attempts = [l for l in (case.get("access_or_research_limitations") or [])
-                if l.startswith(("Screenshot attempt failed", "Screenshot not captured"))]
+                if l.startswith(("Screenshot attempt failed", "Screenshot not captured",
+                                 "Screenshot not kept"))]
     if not attempts:
         return "no capture attempted yet"
     last = attempts[-1]
-    if "anti-automation" in last or "innerHTML" in last:
+    if ("anti-automation" in last or "innerHTML" in last
+            or "detects an automated browser" in last):
         return "seller blocks automated browsing -- manual capture needed"
+    if "members only" in last or "membership wall" in last:
+        return "seller's membership login wall -- not bypassed"
+    if "HTTP 404" in last:
+        return "listing removed by the seller -- nothing left to photograph"
+    if "HTTP 429" in last:
+        return "seller rate-limited us -- retry on a later run"
     if "egress proxy" in last or "Tunnel connection" in last or "403" in last:
         return "our network policy refuses the seller's pages"
     return "last capture attempt failed"

@@ -1,4 +1,32 @@
 {
+  "set:REGISTERED": {
+    "built": "2026-10-20",
+    "bytes": 4224764,
+    "cases": 40,
+    "file": "Rose Watch Evidence - Registered trademarks (all sellers) - 2026-10-20.pdf",
+    "fingerprint": "2c88d1e1ecef777b"
+  },
+  "site:BLOOMLADIE": {
+    "built": "2026-10-20",
+    "bytes": 1476335,
+    "cases": 12,
+    "file": "Rose Watch Evidence - Bloom Ladies Roses (BLOOMLADIE) - 2026-10-20.pdf",
+    "fingerprint": "a6b5d306cf64955c"
+  },
+  "site:ERGONGZY": {
+    "built": "2026-10-20",
+    "bytes": 3382285,
+    "cases": 25,
+    "file": "Rose Watch Evidence - Ergonzy Ergonzi (ERGONGZY) - 2026-10-20.pdf",
+    "fingerprint": "c63328a35f80c382"
+  },
+  "site:HIGHGARDEN": {
+    "built": "2026-10-20",
+    "bytes": 75973,
+    "cases": 46,
+    "file": "Rose Watch Evidence - High Garden (HIGHGARDEN) - 2026-10-20.pdf",
+    "fingerprint": "9acb66a10f6f6ec9"
+  },
   "site:HILLSIDERO": {
     "built": "2026-10-20",
     "bytes": 598464,
@@ -6,11 +34,81 @@
     "file": "Rose Watch Evidence - Hillside Rose Farm (HILLSIDERO) - 2026-10-20.pdf",
     "fingerprint": "3ae08d6b692e9415"
   },
+  "site:HUNIUROSEG": {
+    "built": "2026-10-20",
+    "bytes": 3029832,
+    "cases": 20,
+    "file": "Rose Watch Evidence - Huniu Rose Garden (HUNIUROSEG) - 2026-10-20.pdf",
+    "fingerprint": "053e79f8df77953f"
+  },
   "site:KATEROSES": {
     "built": "2026-10-20",
     "bytes": 250816,
     "cases": 2,
     "file": "Rose Watch Evidence - Kate Roses (KATEROSES) - 2026-10-20.pdf",
     "fingerprint": "677c2e9480f80263"
+  },
+  "site:KISAKIPLAN": {
+    "built": "2026-10-20",
+    "bytes": 3275728,
+    "cases": 10,
+    "file": "Rose Watch Evidence - Kisaki Plant (KISAKIPLAN) - 2026-10-20.pdf",
+    "fingerprint": "e3d62d25a8511894"
+  },
+  "site:MOLAROSE": {
+    "built": "2026-10-20",
+    "bytes": 6386185,
+    "cases": 40,
+    "file": "Rose Watch Evidence - Mola Rose (MOLAROSE) - 2026-10-20.pdf",
+    "fingerprint": "ec8923d1e48017b7"
+  },
+  "site:MUSEROSES": {
+    "built": "2026-10-20",
+    "bytes": 6368855,
+    "cases": 40,
+    "file": "Rose Watch Evidence - Muse Roses (MUSEROSES) - 2026-10-20.pdf",
+    "fingerprint": "d0c4e26a544ce921"
+  },
+  "site:MYROSEWORL": {
+    "built": "2026-10-20",
+    "bytes": 328496,
+    "cases": 7,
+    "file": "Rose Watch Evidence - Flower Meadow Dream (MYROSEWORL) - 2026-10-20.pdf",
+    "fingerprint": "4d47aae43c96ac0d"
+  },
+  "site:ONELOVEROS": {
+    "built": "2026-10-20",
+    "bytes": 1148732,
+    "cases": 16,
+    "file": "Rose Watch Evidence - One Love (ONELOVEROS) - 2026-10-20.pdf",
+    "fingerprint": "03d580423ba6f06a"
+  },
+  "site:REDLANDRAN": {
+    "built": "2026-10-20",
+    "bytes": 324255,
+    "cases": 2,
+    "file": "Rose Watch Evidence - Redland Ranch Roses (REDLANDRAN) - 2026-10-20.pdf",
+    "fingerprint": "6fd22b7bb72a16d8"
+  },
+  "site:ROSEEXPLOS": {
+    "built": "2026-10-20",
+    "bytes": 7806770,
+    "cases": 74,
+    "file": "Rose Watch Evidence - Rose Explosion (ROSEEXPLOS) - 2026-10-20.pdf",
+    "fingerprint": "9c3a352c2964efcf"
+  },
+  "site:SPRINGLAND": {
+    "built": "2026-10-20",
+    "bytes": 2752900,
+    "cases": 8,
+    "file": "Rose Watch Evidence - Springland Flowers (SPRINGLAND) - 2026-10-20.pdf",
+    "fingerprint": "402254502893baa9"
+  },
+  "site:YOURROSES": {
+    "built": "2026-10-20",
+    "bytes": 9932036,
+    "cases": 73,
+    "file": "Rose Watch Evidence - Your Roses (YOURROSES) - 2026-10-20.pdf",
+    "fingerprint": "0d5eca5b31ef8cd5"
   }
 }

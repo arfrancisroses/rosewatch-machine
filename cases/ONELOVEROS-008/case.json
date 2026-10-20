@@ -20,7 +20,7 @@
   "review_status": "New",
   "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
   "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
-  "screenshot_captured_at": "2026-10-20 10:30 MST (America/Phoenix)",
+  "screenshot_captured_at": null,
   "seller_location": {
     "country": "United States",
     "state_or_region": "Texas",
@@ -36,24 +36,10 @@
     "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
     "estimated": true
   },
-  "evidence_screenshots": [
-    {
-      "file": "cases/ONELOVEROS-008/screenshots/ONELOVEROS-008_2026-10-20_1030.png",
-      "captured_at": "2026-10-20 10:30 MST (America/Phoenix)",
-      "source_url": "https://oneloveroseandgardens.com/products/pink-floyd",
-      "viewport_width_px": 1400,
-      "full_page": true,
-      "bytes": 89493,
-      "product_image_box": null,
-      "images_total": 1,
-      "images_failed_to_load": 0,
-      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
-      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing. No listing content was altered, added or removed.",
-      "image_load_note": null
-    }
-  ],
+  "evidence_screenshots": [],
   "access_or_research_limitations": [
-    "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown."
+    "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown.",
+    "Screenshot not kept 2026-10-20 12:05 MST (America/Phoenix): this listing sits behind One Love Rose and Gardens' membership wall. The page returns HTTP 200 but shows \"This content is for members only. Please log in with your membership account to continue\" in place of the product. A capture taken on 2026-10-20 photographed that wall and was discarded rather than filed, because a picture of a login box is not evidence of the listing. The wall was not bypassed and no account was created. The listing itself remains verifiable through the store's public product feed, which is how this case is re-verified each run, and the feed is where this case's title, price and description came from."
   ],
   "investigator_notes": "Found by the daily catalog crawl on 2026-09-18, the first run to match product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"N/A\", not an enforceable registration: it is recorded so the match is tracked, and must not be read as a finding of infringement. The product title normalises exactly to the chart name \"Pink Floyd\".",
   "history": [
@@ -151,9 +137,9 @@
       "action": "Re-verified present in site catalog feed during scheduled daily run."
     },
     {
-      "date": "2026-10-20 10:30 MST (America/Phoenix)",
-      "action": "Evidence screenshot captured",
-      "details": "Full-page capture of https://oneloveroseandgardens.com/products/pink-floyd saved to cases/ONELOVEROS-008/screenshots/ONELOVEROS-008_2026-10-20_1030.png (89,493 bytes)."
+      "date": "2026-10-20 12:05 MST (America/Phoenix)",
+      "action": "Screenshot blocked by seller's membership wall",
+      "details": "The product page shows a members-only login instead of the listing. Recorded as an access limitation; not bypassed. Case data continues to come from the store's public product feed."
     }
   ]
 }

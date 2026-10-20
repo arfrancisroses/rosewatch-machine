@@ -10,6 +10,7 @@ This is the human-facing dashboard (view it, or have it published as an
 Artifact). dashboard/*.md remains the git-diff-friendly machine record.
 Re-run after import_sources.py or any change to cases/cases.json.
 """
+import base64
 import json
 import re
 import datetime
@@ -133,6 +134,15 @@ def build_data():
                      if x.get("file") and (REPO_ROOT / x["file"]).exists()]
             if shots and (REPO_ROOT / "dashboard" / "shots" / f"{case_no}.jpg").exists():
                 c["screenshotWeb"] = f"shots/{case_no}.jpg"
+                # The table's 60x44 cell carries its thumbnail inline as a data
+                # URI rather than as a published file. 332 tiny images would
+                # otherwise be 332 extra requests when the Cases tab opens, and
+                # 332 extra files to publish; inline they cost about 2 MB in the
+                # page and render with no network round-trip at all.
+                tpath = REPO_ROOT / "dashboard" / "shots" / "t" / f"{case_no}.jpg"
+                if tpath.exists():
+                    c["screenshotThumb"] = ("data:image/jpeg;base64,"
+                                            + base64.b64encode(tpath.read_bytes()).decode("ascii"))
                 c["screenshotCapturedAt"] = shots[-1].get("captured_at")
                 c["screenshotFile"] = shots[-1].get("file")
                 c["screenshotNote"] = shots[-1].get("page_modifications")
@@ -695,7 +705,7 @@ runPanel('cases', function renderCases(){
     emptyMessage: DATA.cases.length ? 'No cases match this filter.' : 'No cases yet — none of today’s crawl results have been processed into full case records.',
     rowHtml: r => `<tr>
       <td class="shot-cell">${r.screenshotWeb
-            ? `<a class="case-link" href="#case/${encodeURIComponent(r.case_number)}" title="Screenshot on file — open the case"><img src="${esc(r.screenshotWeb)}" alt="" loading="lazy"></a>`
+            ? `<a class="case-link" href="#case/${encodeURIComponent(r.case_number)}" title="Screenshot on file — open the case"><img src="${esc(r.screenshotThumb || r.screenshotWeb)}" alt="" loading="lazy"></a>`
             : `<span class="shot-none" title="No screenshot on file">&mdash;</span>`}</td>
       <td class="mono"><a class="case-link" href="#case/${encodeURIComponent(r.case_number)}">${esc(r.case_number)}</a></td>
       <td class="mono">${esc(r.site_code)}</td>

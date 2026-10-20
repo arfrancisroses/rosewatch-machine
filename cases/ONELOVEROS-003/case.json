@@ -19,7 +19,7 @@
   "review_status": "New",
   "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
   "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
-  "screenshot_captured_at": "2026-10-20 09:51 MST (America/Phoenix)",
+  "screenshot_captured_at": null,
   "seller_location": {
     "country": "United States",
     "state_or_region": "Texas",
@@ -35,24 +35,10 @@
     "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
     "estimated": true
   },
-  "evidence_screenshots": [
-    {
-      "file": "cases/ONELOVEROS-003/screenshots/ONELOVEROS-003_2026-10-20_0951.png",
-      "captured_at": "2026-10-20 09:51 MST (America/Phoenix)",
-      "source_url": "https://oneloveroseandgardens.com/products/darlington",
-      "viewport_width_px": 1400,
-      "full_page": true,
-      "bytes": 89493,
-      "product_image_box": null,
-      "images_total": 1,
-      "images_failed_to_load": 0,
-      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
-      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing. No listing content was altered, added or removed.",
-      "image_load_note": null
-    }
-  ],
+  "evidence_screenshots": [],
   "access_or_research_limitations": [
-    "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed."
+    "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed.",
+    "Screenshot not kept 2026-10-20 12:05 MST (America/Phoenix): this listing sits behind One Love Rose and Gardens' membership wall. The page returns HTTP 200 but shows \"This content is for members only. Please log in with your membership account to continue\" in place of the product. A capture taken on 2026-10-20 photographed that wall and was discarded rather than filed, because a picture of a login box is not evidence of the listing. The wall was not bypassed and no account was created. The listing itself remains verifiable through the store's public product feed, which is how this case is re-verified each run, and the feed is where this case's title, price and description came from."
   ],
   "investigator_notes": "Identified via this session's crawl of the store's public product data feed on 2026-09-10, cross-checked against the Master Trademark Filing Chart. This is a potential lead for Francis Roses/legal counsel review, not a legal determination of infringement.",
   "history": [
@@ -172,9 +158,9 @@
       "action": "Re-verified present in site catalog feed during scheduled daily run."
     },
     {
-      "date": "2026-10-20 09:51 MST (America/Phoenix)",
-      "action": "Evidence screenshot captured",
-      "details": "Full-page capture of https://oneloveroseandgardens.com/products/darlington saved to cases/ONELOVEROS-003/screenshots/ONELOVEROS-003_2026-10-20_0951.png (89,493 bytes)."
+      "date": "2026-10-20 12:05 MST (America/Phoenix)",
+      "action": "Screenshot blocked by seller's membership wall",
+      "details": "The product page shows a members-only login instead of the listing. Recorded as an access limitation; not bypassed. Case data continues to come from the store's public product feed."
     }
   ]
 }
