@@ -51,7 +51,10 @@ MIN_TEXT_CHARS = 400
 MIN_BYTES = 40_000
 # An unstyled page (stylesheets blocked) renders as raw HTML. It carries the text
 # but does not show the listing as a buyer saw it, so it is not kept as evidence.
-MIN_CSS_RULES = 80
+# The floor is deliberately low: it exists to catch a page with no styling at all,
+# not to judge how much a theme uses. Flower Meadow Dream renders perfectly at 77
+# rules, so a threshold near that number rejects good captures.
+MIN_CSS_RULES = 25
 
 class RenderFailure(RuntimeError):
     """The page loaded but did not render enough to be usable as evidence."""
@@ -61,7 +64,15 @@ def stamp(dt=None):
     return (dt or datetime.now(PHX)).strftime("%Y-%m-%d %H:%M %Z (America/Phoenix)")
 
 def capture(page, url, out_path, settle_ms):
-    page.goto(url, wait_until="domcontentloaded", timeout=90000)
+    resp = page.goto(url, wait_until="domcontentloaded", timeout=90000)
+    # A delisted product still renders a page -- the shop's 404. Photographing that
+    # and filing it against the case would put a picture of "not found" on the
+    # record as if it were the listing. Only a 2xx response is evidence of a live
+    # listing; anything else is a removal to be recorded in history, not an image.
+    if resp is not None and not (200 <= resp.status < 300):
+        raise RenderFailure(
+            f"the seller returned HTTP {resp.status} for this URL, so the listing is not live; "
+            f"no image kept")
     try:
         page.wait_for_load_state("networkidle", timeout=45000)
     except Exception:
@@ -84,7 +95,7 @@ def capture(page, url, out_path, settle_ms):
     # and carries a translucent or dark background. Listing content is never removed:
     # an element is only hidden when it holds no text of its own.
     try:
-        dismissed += page.evaluate("""() => {
+        dismissed += page.evaluate(r"""() => {
             const hidden = [];
             const vw = innerWidth, vh = innerHeight;
             for (const el of document.querySelectorAll('body *')) {
@@ -181,12 +192,21 @@ def capture(page, url, out_path, settle_ms):
         raise RenderFailure(
             f"page loaded unstyled ({rules} CSS rules, threshold {MIN_CSS_RULES}); the "
             f"stylesheets were refused, so the capture would not show the listing as served")
+
+    # Images are often the most probative part of a rose listing. A capture whose
+    # photos did not load is still worth keeping for its text, but the record must
+    # say so rather than let a blank frame pass for the listing as served.
+    imgs = page.evaluate("""() => {
+        const all = [...document.images];
+        const broken = all.filter(i => !i.complete || i.naturalWidth === 0);
+        return {total: all.length, broken: broken.length};
+    }""")
     page.screenshot(path=out_path, full_page=True)
     if os.path.getsize(out_path) < MIN_BYTES:
         size = os.path.getsize(out_path)
         os.remove(out_path)
         raise RenderFailure(f"capture was only {size:,} bytes, below the {MIN_BYTES:,} floor")
-    return dismissed, hero
+    return dismissed, hero, imgs
 
 def main():
     ap = argparse.ArgumentParser()
@@ -234,7 +254,7 @@ def main():
             page.on("requestfailed", lambda r: blocked.add(
                 r.url.split("//")[-1].split("/")[0]) if "TUNNEL" in (r.failure or "") else None)
             try:
-                dismissed, hero = capture(page, url, out, args.settle)
+                dismissed, hero, imgs = capture(page, url, out, args.settle)
             except Exception as e:
                 if os.path.exists(out):
                     os.remove(out)
@@ -256,12 +276,20 @@ def main():
                 "viewport_width_px": args.width, "full_page": True,
                 "bytes": size,
                 "product_image_box": hero,
+                "images_total": imgs.get("total"),
+                "images_failed_to_load": imgs.get("broken"),
                 "capture_method": ("Headless Chromium via Playwright, rendered through this "
                                    "environment's egress proxy. Full-page capture at the URL shown."),
                 "page_modifications": (
                     "Newsletter/cookie overlays hidden before capture so they did not cover the "
                     "listing" + (f"; dismissed: {', '.join(dismissed)}" if dismissed else "") +
                     ". No listing content was altered, added or removed."),
+                "image_load_note": (
+                    None if not imgs.get("broken") else
+                    f"{imgs['broken']} of {imgs['total']} images on the page did not load and appear "
+                    f"blank in this capture. Their host is refused by this environment's network "
+                    f"policy, not by the seller. The capture is kept for its text, price and layout; "
+                    f"it is not a complete picture of the listing as a buyer saw it."),
             })
             case.setdefault("history", []).append({
                 "date": stamp(now), "action": "Evidence screenshot captured",

@@ -136,6 +136,11 @@
       "date": "2026-10-20 06:06 MST (America/Phoenix)",
       "action": "Still not listed",
       "details": "Second consecutive run absent. Kate Roses served 53 products today, down one more from the 54 it served on 2026-10-19 after its 44-listing contraction. Last Verified stays at 2026-10-16. The product page itself could not be fetched directly to confirm: this environment's egress proxy allows the site's product-feed path but refuses its other paths. That is our own network policy, not the seller blocking us. Absence from the feed is the evidence here, and it is not proof the page is gone."
+    },
+    {
+      "date": "2026-10-20 09:25 MST (America/Phoenix)",
+      "action": "Listing confirmed removed (HTTP 404)",
+      "details": "kateroses.com became reachable for page requests from here on 2026-10-20 after the user widened this environment's network policy, and this case's product URL now returns HTTP 404 from the seller's own server. This confirms what the feed had been indicating (absent from the feed since 2026-10-19); until today the page itself could not be fetched to check. Last Verified stays at the last date the listing was actually seen and is not advanced. A screenshot taken during this run captured the shop's 404 page rather than the listing, so it was discarded rather than filed as evidence. Case number, prior evidence and review status are unchanged."
     }
   ]
 }

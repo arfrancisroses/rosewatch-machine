@@ -1,7 +1,7 @@
 {
   "_readme": "Rose Watch case database. 'cases' holds published findings matched to a Registered or Pending trademark (each case's full evidence record lives in cases/<CASE-NUMBER>/case.json). 'review_queue' holds matches against To Be Filed, Needs Review, Abandoned, Do Not File, Not Applicable, or Not in Trademark Chart records -- never characterized as confirmed infringement. 'site_code_registry' tracks the next sequence number for each website/seller case-number code so numbers are never reused or renumbered. This file is only ever appended to by a completed Rose Watch monitoring run -- never overwritten, and existing review_status values are always preserved.",
   "_cut_roses_readme": "Listings that matched a chart name but read as cut flowers only -- stems, a bouquet, an arrangement -- with nothing anywhere in the listing suggesting a plant. Per user instruction 2026-09-22 these are not cases: Rose Watch monitors unauthorized sales of rose varieties, i.e. plants that can be propagated and resold. They are kept here, and shown on the dashboard's Cut Roses tab and in the daily PDF, so the number is visible rather than discarded. A listing that says 'cut rose' AND anything plant-like stays an ordinary case -- 'cut rose' is overwhelmingly a variety class, not a product form.",
-  "last_run_completed": "2026-10-20T06:06:00-07:00",
+  "last_run_completed": "2026-10-20T09:20:00-07:00",
   "site_code_registry": {
     "hillsiderosefarm.com": {
       "site_code": "HILLSIDERO",
@@ -10,10 +10,6 @@
     "ergongzy.com": {
       "site_code": "ERGONGZY",
       "next_sequence": 26
-    },
-    "www.myroseworld.com": {
-      "site_code": "MYROSEWORL",
-      "next_sequence": 4
     },
     "highgardenroses.com": {
       "site_code": "HIGHGARDEN",
@@ -62,6 +58,10 @@
     "bloomladiesroses.com": {
       "site_code": "BLOOMLADIE",
       "next_sequence": 13
+    },
+    "myroseworld.com": {
+      "site_code": "MYROSEWORL",
+      "next_sequence": 8
     }
   },
   "cases": [
@@ -5717,6 +5717,66 @@
       "website_host": "Shopify, Inc. (storefront platform — page footer states \"Pow",
       "first_date_found": "2026-10-19 06:17 MST (America/Phoenix)",
       "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
+      "match_classification": "Possible",
+      "review_status": "New"
+    },
+    {
+      "case_number": "MYROSEWORL-004",
+      "site_code": "MYROSEWORL",
+      "variety": "Darlington",
+      "matched_trademark": "Darlington",
+      "trademark_status": "Pending",
+      "seller_name": "Flower Meadow Dream",
+      "website_domain": "myroseworld.com",
+      "seller_location": "Southern California",
+      "website_host": "Squarespace (confirmed via the site's own collection JSON AP",
+      "first_date_found": "2026-10-20 09:12 MST (America/Phoenix)",
+      "last_verified": "2026-10-20 09:12 MST (America/Phoenix)",
+      "match_classification": "Exact",
+      "review_status": "New"
+    },
+    {
+      "case_number": "MYROSEWORL-005",
+      "site_code": "MYROSEWORL",
+      "variety": "Secret",
+      "matched_trademark": "Secret",
+      "trademark_status": "(no status)",
+      "seller_name": "Flower Meadow Dream",
+      "website_domain": "myroseworld.com",
+      "seller_location": "Southern California",
+      "website_host": "Squarespace (confirmed via the site's own collection JSON AP",
+      "first_date_found": "2026-10-20 09:12 MST (America/Phoenix)",
+      "last_verified": "2026-10-20 09:12 MST (America/Phoenix)",
+      "match_classification": "Possible",
+      "review_status": "New"
+    },
+    {
+      "case_number": "MYROSEWORL-006",
+      "site_code": "MYROSEWORL",
+      "variety": "Whitby Abbey",
+      "matched_trademark": "Whitby Abbey",
+      "trademark_status": "Pending",
+      "seller_name": "Flower Meadow Dream",
+      "website_domain": "myroseworld.com",
+      "seller_location": "Southern California",
+      "website_host": "Squarespace (confirmed via the site's own collection JSON AP",
+      "first_date_found": "2026-10-20 09:12 MST (America/Phoenix)",
+      "last_verified": "2026-10-20 09:12 MST (America/Phoenix)",
+      "match_classification": "Exact",
+      "review_status": "New"
+    },
+    {
+      "case_number": "MYROSEWORL-007",
+      "site_code": "MYROSEWORL",
+      "variety": "Cappuccino",
+      "matched_trademark": "Cappuccino",
+      "trademark_status": "Pending",
+      "seller_name": "Flower Meadow Dream",
+      "website_domain": "myroseworld.com",
+      "seller_location": "Southern California",
+      "website_host": "Squarespace (confirmed via the site's own collection JSON AP",
+      "first_date_found": "2026-10-20 09:12 MST (America/Phoenix)",
+      "last_verified": "2026-10-20 09:12 MST (America/Phoenix)",
       "match_classification": "Possible",
       "review_status": "New"
     }

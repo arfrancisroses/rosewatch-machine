@@ -20,7 +20,7 @@
   "review_status": "New",
   "first_date_found": "2026-09-21 06:04 MST (America/Phoenix)",
   "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
-  "screenshot_captured_at": null,
+  "screenshot_captured_at": "2026-10-20 09:14 MST (America/Phoenix)",
   "seller_location": {
     "country": "United States (inferred — the site's \"Our Story\" page refers to a \"Southern California home\" but does not explicitly state \"United States\")",
     "state_or_region": "California (\"Southern California\" per the site's Our Story / About page)",
@@ -36,7 +36,26 @@
     "registrar": "Not available — WHOIS lookup services attempted (rdap.org, hackertarget.com) were blocked by this session's network policy",
     "estimated": true
   },
-  "evidence_screenshots": [],
+  "evidence_screenshots": [
+    {
+      "file": "cases/HILLSIDERO-005/screenshots/HILLSIDERO-005_2026-10-20_0914.png",
+      "captured_at": "2026-10-20 09:14 MST (America/Phoenix)",
+      "source_url": "https://hillsiderosefarm.com/products/darlington-达林顿-netherlands",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 1172389,
+      "product_image_box": {
+        "x": 151,
+        "y": 161.1875,
+        "w": 603,
+        "h": 603,
+        "detail_bottom": 1217.515625,
+        "dpr": 1
+      },
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing; dismissed: shopify-chat. No listing content was altered, added or removed."
+    }
+  ],
   "access_or_research_limitations": [
     "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown.",
     "2026-09-29: could not confirm the state of the rendered product page. The apex URL redirects to www.hillsiderosefarm.com, which this environment's egress proxy refuses at the CONNECT stage. The catalog-feed absence and the 404 on the product JSON endpoint are what the delisting rests on."
@@ -154,6 +173,11 @@
     {
       "date": "2026-10-20 06:06 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-10-20 09:14 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://hillsiderosefarm.com/products/darlington-达林顿-netherlands saved to cases/HILLSIDERO-005/screenshots/HILLSIDERO-005_2026-10-20_0914.png (1,172,389 bytes)."
     }
   ],
   "listing_availability": "NOT FOUND again, as of 2026-10-13 06:08 MST (America/Phoenix). The listing was present on 2026-10-12 after nine runs away, and is absent once more a single run later; Hillside Rose Farm's catalog fell 170 -> 159 in the same period, having risen 156 -> 170 the day before. So this listing has now gone, returned and gone again while the site's catalog swings by a dozen or more products at a time, which looks like inventory churn rather than anything directed at this listing -- but that is an observation about the pattern, not a conclusion, and nothing should be inferred about the seller's reasons. Last Verified stays at 2026-10-12, the last date the listing was actually confirmed present. The full sequence is in the history below and is not papered over."

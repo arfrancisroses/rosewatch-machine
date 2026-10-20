@@ -21,7 +21,7 @@
   "review_status": "New",
   "first_date_found": "2026-10-19 06:17 MST (America/Phoenix)",
   "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
-  "screenshot_captured_at": null,
+  "screenshot_captured_at": "2026-10-20 09:14 MST (America/Phoenix)",
   "units_in_stock_at_capture": null,
   "seller_sku": null,
   "page_publication_date": "Date not available on page",
@@ -41,7 +41,26 @@
     "registrar": "Not available — WHOIS lookup services attempted (rdap.org, hackertarget.com) were blocked by this session's network policy",
     "estimated": true
   },
-  "evidence_screenshots": [],
+  "evidence_screenshots": [
+    {
+      "file": "cases/HILLSIDERO-006/screenshots/HILLSIDERO-006_2026-10-20_0914.png",
+      "captured_at": "2026-10-20 09:14 MST (America/Phoenix)",
+      "source_url": "https://hillsiderosefarm.com/products/tinkerbell-王昭君-netherlands",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 1248649,
+      "product_image_box": {
+        "x": 151,
+        "y": 161.1875,
+        "w": 603,
+        "h": 603,
+        "detail_bottom": 1275.109375,
+        "dpr": 1
+      },
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing; dismissed: shopify-chat. No listing content was altered, added or removed."
+    }
+  ],
   "access_or_research_limitations": [
     "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown."
   ],
@@ -59,6 +78,11 @@
     {
       "date": "2026-10-20 06:06 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-10-20 09:14 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://hillsiderosefarm.com/products/tinkerbell-王昭君-netherlands saved to cases/HILLSIDERO-006/screenshots/HILLSIDERO-006_2026-10-20_0914.png (1,248,649 bytes)."
     }
   ]
 }

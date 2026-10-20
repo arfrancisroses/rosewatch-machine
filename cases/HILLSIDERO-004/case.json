@@ -140,6 +140,11 @@
       "date": "2026-10-20 06:06 MST (America/Phoenix)",
       "action": "Still not listed",
       "details": "Fifth consecutive run absent. Hillside Rose Farm served 178 products today, up from 177 on 2026-10-19, so the catalog keeps growing while this listing stays out. Last Verified stays at 2026-10-13. The product page itself could not be fetched directly to confirm: this environment's egress proxy allows the site's product-feed path but refuses its other paths. That is our own network policy, not the seller blocking us. Absence from the feed is the evidence here, and it is not proof the page is gone."
+    },
+    {
+      "date": "2026-10-20 09:25 MST (America/Phoenix)",
+      "action": "Listing confirmed removed (HTTP 404)",
+      "details": "hillsiderosefarm.com became reachable for page requests from here on 2026-10-20 after the user widened this environment's network policy, and this case's product URL now returns HTTP 404 from the seller's own server. This confirms what the feed had been indicating (absent from the feed since 2026-10-14); until today the page itself could not be fetched to check. Last Verified stays at the last date the listing was actually seen and is not advanced. A screenshot taken during this run captured the shop's 404 page rather than the listing, so it was discarded rather than filed as evidence. Case number, prior evidence and review status are unchanged."
     }
   ],
   "listing_availability": "NOT FOUND in the seller's catalog as of 2026-10-14 06:07 MST (America/Phoenix). Last confirmed present 2026-10-13 06:08 MST, so this is the first run in which it is missing. Evidence is its absence from hillsiderosefarm.com's own Shopify product feed, which served normally today at 160 products. The rendered product page itself could not be checked: the apex URL answers HTTP 301 to the www host, and www.hillsiderosefarm.com is refused by this environment's egress proxy at the CONNECT stage. So the listing is gone from the catalog; whether the page still renders for a public visitor is unconfirmed. Nothing is known about why it came down and nothing should be inferred."

@@ -435,6 +435,36 @@ def main():
                "cut_roses_only": cut_roses,
                "cut_roses_only_count": len(cut_roses),
                "sites": results}
+
+    # A --only run re-pulls named sites; it must MERGE into the day's file, never
+    # replace it. Overwriting would drop every other site from the record the daily
+    # PDF builds its coverage table from, and a site the crawler did reach would
+    # silently vanish from "Websites Checked".
+    if args.only and out_path.exists():
+        try:
+            prior = json.loads(out_path.read_text())
+        except (OSError, ValueError):
+            prior = None
+        if prior and isinstance(prior.get("sites"), dict):
+            merged_sites = dict(prior["sites"])
+            merged_sites.update(results)
+            touched = set(results)
+            def _keep(lst):
+                # drop the re-pulled sites' old rows, keep everyone else's
+                return [m for m in (lst or []) if m.get("site") not in touched]
+            payload = {
+                "crawl_date": today,
+                "total_product_pages_reviewed": sum(
+                    v.get("count", 0) for v in merged_sites.values()),
+                "new_matches": _keep(prior.get("new_matches")) + new_matches,
+                "cut_roses_only": _keep(prior.get("cut_roses_only")) + cut_roses,
+                "sites": merged_sites,
+            }
+            payload["cut_roses_only_count"] = len(payload["cut_roses_only"])
+            print(f"merged into the existing {out_path.name}: "
+                  f"{len(touched)} site(s) re-pulled, {len(merged_sites)} total on file",
+                  file=sys.stderr)
+
     out_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
     print(f"\n{total} product pages reviewed; {len(new_matches)} match(es) without an existing case",
           file=sys.stderr)

@@ -1,0 +1,77 @@
+{
+  "case_number": "MYROSEWORL-005",
+  "site_code": "MYROSEWORL",
+  "variety": "Secret",
+  "matched_trademark": "Secret",
+  "trademark_status": "(no status)",
+  "trademark_status_as_written": null,
+  "trademark_application_or_registration_no": "App. Ser. No. none on chart (Reg. No.: none on chart)",
+  "breeder": "Tom Carruth",
+  "seller_name": "Flower Meadow Dream",
+  "website_domain": "myroseworld.com",
+  "product_url": "https://www.myroseworld.com/shop/p/fall-2026-151",
+  "exact_product_title": "维多利亚的秘密 Victoria's secret（荷兰 Netherlands）",
+  "quoted_text": "中文： big size, growing in flower bed。美国本土自养三年以上盆栽苗；发货时脱土并保留包裹土球。 English cultivar profile: Victoria's secret is a collector rose selected for its distinctive ornamental blooms. Grow it in a sunny border or a roomy patio container with fertile, well-drained soil, regular watering, and good air circulation. English: Large plant currently growing in a flower bed. U.S. nursery-grown potted plant, three years or older...",
+  "price": "59.00",
+  "currency": "USD",
+  "price_note": null,
+  "quantity_or_form": "Not stated in the product feed",
+  "match_classification": "Possible",
+  "match_explanation": "The product title contains the single word \"Secret\", which is the whole of the chart entry. A one-word match can be coincidence rather than the variety -- it needs a human read of the listing before it means anything.",
+  "review_status": "New",
+  "first_date_found": "2026-10-20 09:12 MST (America/Phoenix)",
+  "last_verified": "2026-10-20 09:12 MST (America/Phoenix)",
+  "screenshot_captured_at": "2026-10-20 09:17 MST (America/Phoenix)",
+  "units_in_stock_at_capture": "Unlimited",
+  "seller_sku": "SQ4653734",
+  "page_publication_date": "2026-09-23 12:02 MST (America/Phoenix)",
+  "page_update_date": "2026-10-09 20:57 MST (America/Phoenix)",
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Southern California",
+    "city": "Not stated on the site",
+    "source": "The seller's own Our Story page (www.myroseworld.com/our-story) says \"We are two female gardening enthusiasts from Southern California\". Verified directly on 2026-10-20, the first day the site's pages were reachable from here since 2026-09-16. The Contact page carries a form only and gives no address. Prior known-sites research recorded \"Los Angeles\"; the site itself does not say that, so the city is left unstated rather than repeated.",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Squarespace (confirmed via the site's own collection JSON API and the Squarespace asset hosts its pages load)",
+    "cdn_or_proxy": null,
+    "server_ip": "198.49.23.144 (recorded on this site's earlier cases; not re-resolved this run)",
+    "ip_geolocation": "In a range Squarespace uses for hosted sites; not separately geolocated.",
+    "registrar": "Not available -- WHOIS lookup services are refused by this environment's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [
+    {
+      "file": "cases/MYROSEWORL-005/screenshots/MYROSEWORL-005_2026-10-20_0917.png",
+      "captured_at": "2026-10-20 09:17 MST (America/Phoenix)",
+      "source_url": "https://www.myroseworld.com/shop/p/fall-2026-151",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 130341,
+      "product_image_box": null,
+      "images_total": 3,
+      "images_failed_to_load": 3,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing; dismissed: div.section-border. No listing content was altered, added or removed.",
+      "image_load_note": "3 of 3 images on the page did not load and appear blank in this capture. Their host is refused by this environment's network policy, not by the seller. The capture is kept for its text, price and layout; it is not a complete picture of the listing as a buyer saw it."
+    }
+  ],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown.",
+    "Screenshot attempt failed 2026-10-20 09:15 MST (America/Phoenix): RenderFailure: page loaded unstyled (77 CSS rules, threshold 80); the stylesheets were refused, so the capture would not show the listing as served | sub-resources refused by this environment's egress proxy: clanker-events.squarespace.com, images.squarespace-cdn.com, js.stripe.com, p.typekit.net. No image was kept; this case has no screenshot rather than a blank one."
+  ],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-10-20, which matches product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"blank\", which carries no enforceable right: it is recorded so the match is tracked, and must not be read as a finding of infringement. The product title contains the single word \"Secret\", which is the whole of the chart entry. A one-word match can be coincidence rather than the variety -- it needs a human read of the listing before it means anything.",
+  "history": [
+    {
+      "date": "2026-10-20 09:12 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created from that day's crawl; chart status carried through unchanged."
+    },
+    {
+      "date": "2026-10-20 09:17 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://www.myroseworld.com/shop/p/fall-2026-151 saved to cases/MYROSEWORL-005/screenshots/MYROSEWORL-005_2026-10-20_0917.png (130,341 bytes)."
+    }
+  ]
+}

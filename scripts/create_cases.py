@@ -33,6 +33,7 @@ import time
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
+CASES_DIR = REPO / "cases"
 sys.path.insert(0, str(REPO / "scripts"))
 from crawl_sites import fetch, normalize, try_woocommerce, PHOENIX  # noqa: E402
 import datetime as _dt  # noqa: E402
@@ -41,6 +42,26 @@ import datetime as _dt  # noqa: E402
 # Research recorded by hand when the site joined the roster; keep the wording,
 # including its hedges -- "Estimated" is part of the finding.
 SITE_RESEARCH_SEED = {
+    "myroseworld.com": (
+        {"country": "United States",
+         "state_or_region": "Southern California",
+         "city": "Not stated on the site",
+         "source": "The seller's own Our Story page (www.myroseworld.com/our-story) says \"We are two "
+                   "female gardening enthusiasts from Southern California\". Verified directly on "
+                   "2026-10-20, the first day the site's pages were reachable from here since "
+                   "2026-09-16. The Contact page carries a form only and gives no address. Prior "
+                   "known-sites research recorded \"Los Angeles\"; the site itself does not say that, "
+                   "so the city is left unstated rather than repeated.",
+         "estimated": False},
+        {"hosting_platform": "Squarespace (confirmed via the site's own collection JSON API and the "
+                             "Squarespace asset hosts its pages load)",
+         "cdn_or_proxy": None,
+         "server_ip": "198.49.23.144 (recorded on this site's earlier cases; not re-resolved this run)",
+         "ip_geolocation": "In a range Squarespace uses for hosted sites; not separately geolocated.",
+         "registrar": "Not available -- WHOIS lookup services are refused by this environment's "
+                      "network policy.",
+         "estimated": True},
+    ),
     "molarose.com": (
         {"country": "United States",
          "state_or_region": "Wyoming (published) -- see note",
@@ -147,9 +168,33 @@ def _first_variant_label(structured):
     return opts[0].get("value") if opts else None
 
 
+def squarespace_collection_items(base):
+    """Find the store collection and return its raw items.
+
+    A Squarespace store lives at a collection path (/shop, /store, ...), not at
+    the site root, so a roster URL pointing at the homepage yields an empty list.
+    The candidate order mirrors try_squarespace() in crawl_sites.py; keeping the
+    two in step is what stops the crawler and the case builder disagreeing about
+    whether a site has a catalog.
+    """
+    root = base.split("//")[0] + "//" + base.split("//")[-1].split("/")[0]
+    path = "/" + base.split("//")[-1].partition("/")[2].rstrip("/")
+    candidates = [base.rstrip("/")] if path != "/" else []
+    candidates += [f"{root}{c}" for c in ("/shop", "/store", "/products", "/all-roses")
+                   if f"{root}{c}" not in candidates]
+    for collection in candidates:
+        try:
+            items = json.loads(fetch(f"{collection}?format=json")).get("items") or []
+        except Exception:
+            continue
+        if items:
+            return items
+    return []
+
+
 def squarespace_products(base):
     """Squarespace items in the shape the case builder expects, price included."""
-    raw = json.loads(fetch(f"{base.rstrip('/')}?format=json")).get("items") or []
+    raw = squarespace_collection_items(base)
     root = base.split("//")[0] + "//" + base.split("//")[-1].split("/")[0]
     out = []
     for i in raw:
@@ -209,6 +254,38 @@ def classify(title, mark):
     return "Possible", (f'The product title contains the single word "{mark}", which is the whole of '
                         f"the chart entry. A one-word match can be coincidence rather than the variety "
                         f"-- it needs a human read of the listing before it means anything.")
+
+
+def registry_entry(db, domain):
+    """The site's permanent code and next free sequence number.
+
+    Three things can put the stored sequence out of step with reality, and each
+    one would mean reusing a case number, which is never allowed:
+      * a legacy key written before www-stripping ("www.myroseworld.com");
+      * a site whose first cases were built by hand and never registered;
+      * a registry edited or restored out of band.
+    So the key is matched with and without the www prefix, a legacy key is
+    migrated in place, and the sequence is floored at one past the highest case
+    already on disk for that code.
+    """
+    reg_all = db.setdefault("site_code_registry", {})
+    reg = reg_all.get(domain)
+    if reg is None:
+        for alt in (f"www.{domain}", domain.removeprefix("www.")):
+            if alt != domain and alt in reg_all:
+                reg = reg_all.pop(alt)          # migrate the legacy key
+                break
+    if reg is None:
+        reg = {"site_code": site_code_for(domain), "next_sequence": 1}
+    reg_all[domain] = reg
+
+    highest = 0
+    for d in CASES_DIR.glob(f"{reg['site_code']}-*"):
+        tail = d.name.rsplit("-", 1)[-1]
+        if tail.isdigit():
+            highest = max(highest, int(tail))
+    reg["next_sequence"] = max(reg.get("next_sequence", 1), highest + 1)
+    return reg
 
 
 def main():
@@ -295,11 +372,19 @@ def main():
             sys.exit(f"No seller-location or hosting research on file for {domain}. Add it to "
                      f"SITE_RESEARCH_SEED, or create that site's first case by hand. A case with empty "
                      f"location fields would claim less than 'not available' does.")
-        reg = db["site_code_registry"].setdefault(domain, {
-            "site_code": site_code_for(domain), "next_sequence": 1})
+        reg = registry_entry(db, domain)
         seq = reg["next_sequence"]
         reg["next_sequence"] = seq + 1
         case_no = f"{reg['site_code']}-{seq:03d}"
+
+        # Case numbers are permanent and are never reused. If the allocator ever
+        # lands on one that already exists, stop rather than write over a case:
+        # on 2026-10-20 a legacy "www." registry key meant the lookup missed and
+        # the sequence restarted at 001, overwriting three live case records.
+        if (CASES_DIR / case_no).exists():
+            sys.exit(f"Refusing to write {case_no}: that case already exists. The sequence for "
+                     f"{domain} is out of step with the cases on disk -- fix "
+                     f"site_code_registry before re-running. Nothing was written.")
 
         rec = chart[normalize(m["trademark"])]
         prod = catalogs.get(label, {}).get(m["url"].rstrip("/"), {})

@@ -1,9 +1,45 @@
 {
   "crawl_date": "2026-10-20",
-  "total_product_pages_reviewed": 9716,
-  "new_matches": [],
+  "total_product_pages_reviewed": 9937,
+  "new_matches": [
+    {
+      "site": "Flower Meadow Dream",
+      "title": "达林顿Darlington",
+      "url": "https://www.myroseworld.com/shop/p/fall-2026-162",
+      "trademark": "Darlington",
+      "status": "Pending",
+      "status_raw": "Pending",
+      "cut_roses_only": false
+    },
+    {
+      "site": "Flower Meadow Dream",
+      "title": "维多利亚的秘密 Victoria's secret（荷兰 Netherlands）",
+      "url": "https://www.myroseworld.com/shop/p/fall-2026-151",
+      "trademark": "Secret",
+      "status": "(no status)",
+      "status_raw": null,
+      "cut_roses_only": false
+    },
+    {
+      "site": "Flower Meadow Dream",
+      "title": "惠比特修道院 / Whitby Abbey",
+      "url": "https://www.myroseworld.com/shop/p/fall-2026-110",
+      "trademark": "Whitby Abbey",
+      "status": "Pending",
+      "status_raw": "Pending",
+      "cut_roses_only": false
+    },
+    {
+      "site": "Flower Meadow Dream",
+      "title": "卡布奇诺 Cappuccino (Germany)",
+      "url": "https://www.myroseworld.com/shop/p/fall-2026-092",
+      "trademark": "Cappuccino",
+      "status": "Pending",
+      "status_raw": "Pending",
+      "cut_roses_only": false
+    }
+  ],
   "cut_roses_only": [],
-  "cut_roses_only_count": 0,
   "sites": {
     "Bloom Ladies Roses": {
       "url_used": "https://www.bloomladiesroses.com/shop",
@@ -338,12 +374,45 @@
       "matches": []
     },
     "Flower Meadow Dream": {
-      "url_used": null,
+      "url_used": "https://www.myroseworld.com",
       "url_attempted": "https://www.myroseworld.com/",
-      "platform": null,
-      "count": 0,
-      "error": "https://www.myroseworld.com [Shopify]: URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; https://www.myroseworld.com [WordPress/WooCommerce]: URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; https://www.myroseworld.com [Squarespace]: ValueError: no Squarespace product collection found; https://myroseworld.com [Shopify]: URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; https://myroseworld.com [WordPress/WooCommerce]: URLError: <urlopen error Tunnel connection failed: 403 Forbidden>; https://myroseworld.com [Squarespace]: ValueError: no Squarespace product collection found",
-      "matches": [],
+      "platform": "Squarespace",
+      "count": 221,
+      "error": null,
+      "matches": [
+        {
+          "title": "达林顿Darlington",
+          "url": "https://www.myroseworld.com/shop/p/fall-2026-162",
+          "trademark": "Darlington",
+          "status": "Pending",
+          "status_raw": "Pending",
+          "cut_roses_only": false
+        },
+        {
+          "title": "维多利亚的秘密 Victoria's secret（荷兰 Netherlands）",
+          "url": "https://www.myroseworld.com/shop/p/fall-2026-151",
+          "trademark": "Secret",
+          "status": "(no status)",
+          "status_raw": null,
+          "cut_roses_only": false
+        },
+        {
+          "title": "惠比特修道院 / Whitby Abbey",
+          "url": "https://www.myroseworld.com/shop/p/fall-2026-110",
+          "trademark": "Whitby Abbey",
+          "status": "Pending",
+          "status_raw": "Pending",
+          "cut_roses_only": false
+        },
+        {
+          "title": "卡布奇诺 Cappuccino (Germany)",
+          "url": "https://www.myroseworld.com/shop/p/fall-2026-092",
+          "trademark": "Cappuccino",
+          "status": "Pending",
+          "status_raw": "Pending",
+          "cut_roses_only": false
+        }
+      ],
       "cut_roses_only_count": 0
     },
     "GCM Ranch": {
@@ -3162,5 +3231,6 @@
       ],
       "cut_roses_only_count": 0
     }
-  }
+  },
+  "cut_roses_only_count": 0
 }
