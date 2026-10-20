@@ -19,7 +19,7 @@
   "review_status": "New",
   "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
   "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
-  "screenshot_captured_at": null,
+  "screenshot_captured_at": "2026-10-20 09:45 MST (America/Phoenix)",
   "seller_location": {
     "country": "United States",
     "state_or_region": "Texas",
@@ -35,7 +35,29 @@
     "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
     "estimated": true
   },
-  "evidence_screenshots": [],
+  "evidence_screenshots": [
+    {
+      "file": "cases/MUSEROSES-004/screenshots/MUSEROSES-004_2026-10-20_0945.png",
+      "captured_at": "2026-10-20 09:45 MST (America/Phoenix)",
+      "source_url": "https://museroses.com/products/emma-woodhouse-rose",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 1197625,
+      "product_image_box": {
+        "x": 115,
+        "y": 302,
+        "w": 671,
+        "h": 671,
+        "detail_bottom": 3096.0625,
+        "dpr": 1
+      },
+      "images_total": 99,
+      "images_failed_to_load": 66,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing; dismissed: div.background-overlay1, div.background-overlay, shopify-chat. No listing content was altered, added or removed.",
+      "image_load_note": "66 of 99 images on the page did not load and appear blank in this capture. Their host is refused by this environment's network policy, not by the seller. The capture is kept for its text, price and layout; it is not a complete picture of the listing as a buyer saw it."
+    }
+  ],
   "access_or_research_limitations": [
     "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed.",
     "museroses.com now 301-redirects to molarose.com; the redirect target could not be fetched this run (blocked by network egress policy). Catalog data was pulled from museroses.com's own product feed before the redirect was noticed and reflects that domain."
@@ -156,6 +178,11 @@
     {
       "date": "2026-10-20 06:06 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-10-20 09:45 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://museroses.com/products/emma-woodhouse-rose saved to cases/MUSEROSES-004/screenshots/MUSEROSES-004_2026-10-20_0945.png (1,197,625 bytes)."
     }
   ]
 }
