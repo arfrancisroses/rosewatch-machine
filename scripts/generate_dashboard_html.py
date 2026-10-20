@@ -125,6 +125,18 @@ def build_data():
             # page), pulled from the full case record so cases.json doesn't need to duplicate them.
             c.setdefault("product_url", detail.get("product_url"))
             c.setdefault("exact_product_title", detail.get("exact_product_title"))
+            # A web-sized copy of the latest capture, published beside this page.
+            # The full-resolution original stays in the case folder; it is far too
+            # large to serve. Only set when the file actually exists, so the page
+            # never points at an image that was not published.
+            shots = [x for x in (detail.get("evidence_screenshots") or [])
+                     if x.get("file") and (REPO_ROOT / x["file"]).exists()]
+            if shots and (REPO_ROOT / "dashboard" / "shots" / f"{case_no}.jpg").exists():
+                c["screenshotWeb"] = f"shots/{case_no}.jpg"
+                c["screenshotCapturedAt"] = shots[-1].get("captured_at")
+                c["screenshotFile"] = shots[-1].get("file")
+                c["screenshotNote"] = shots[-1].get("page_modifications")
+            c["hasScreenshot"] = bool(shots)
 
     status_counts = {}
     for r in trademarks:
@@ -360,6 +372,11 @@ code.k { font-family: 'IBM Plex Mono', monospace; background: var(--neutral-soft
 .field label { display: block; font-size: 11.5px; color: var(--ink-faint); margin-bottom: 3px; }
 .field .v { font-size: 14px; }
 .field .v.mono { font-family: 'IBM Plex Mono', monospace; font-size: 13px; }
+.shot { margin: 8px 0 0; }
+.shot img { display: block; width: 100%; max-width: 760px; height: auto; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+.shot figcaption { font-size: 11.5px; line-height: 1.55; color: var(--ink-faint); margin-top: 8px; max-width: 760px; }
+.shot a { display: block; }
+.shot-flag { font-size: 11px; color: var(--ink-faint); }
 .quote-block { font-size: 14px; line-height: 1.6; border-left: 3px solid var(--accent-soft); padding: 4px 0 4px 14px; margin: 6px 0; color: var(--ink-soft); font-style: italic; }
 .limitation-list, .note-list { margin: 0; padding-left: 20px; font-size: 13.5px; line-height: 1.6; color: var(--ink-soft); }
 .limitation-list li::marker { color: var(--bad); }
@@ -802,9 +819,18 @@ function showCaseDetail(caseNumber){
 
       <div class="case-section">
         <h3>Evidence Screenshots</h3>
-        ${screenshots.length
-          ? `<div class="field-grid">${screenshots.map(s => `<div class="field"><div class="v">${linkOut(s)}</div></div>`).join('')}</div>`
-          : '<div class="quote-block">No screenshot on file for this case — see Access &amp; Research Limitations below.</div>'}
+        ${summary?.screenshotWeb
+          ? `<figure class="shot">
+               <a href="${esc(summary.screenshotWeb)}" target="_blank" rel="noopener">
+                 <img src="${esc(summary.screenshotWeb)}" alt="Screenshot of the listing for ${esc(caseNumber)}" loading="lazy">
+               </a>
+               <figcaption>
+                 Full-page capture ${esc(summary.screenshotCapturedAt || '')}. Click to open at full size.
+                 <br><span class="mono">${esc(summary.screenshotFile || '')}</span> holds the full-resolution original.
+                 ${summary.screenshotNote ? `<br>${esc(summary.screenshotNote)}` : ''}
+               </figcaption>
+             </figure>`
+          : `<div class="quote-block">No screenshot on file for this case. Recorded as a coverage gap, not a clean result — see Access &amp; Research Limitations below.</div>`}
       </div>
 
       ${limitations.length ? `

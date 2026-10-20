@@ -3,3 +3,6 @@ __pycache__/
 # evidence-card build caches (regenerated on demand)
 reports/_thumbs/
 reports/_slices/
+
+# web-sized dashboard screenshots (regenerated from the case originals)
+dashboard/shots/
