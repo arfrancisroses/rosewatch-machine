@@ -128,7 +128,7 @@ def styles():
     add("Intro",     fontName="Helvetica", fontSize=9, textColor=SOFT, leading=12.5, spaceAfter=10)
     return st
 
-def thumb(src, box=None, max_w_px=1300):
+def thumb(src, box=None, max_w_px=900):
     """Crop the capture to the listing's product image so the rose is legible.
 
     Keeps the full page width -- header, product photo and the detail column
@@ -139,7 +139,11 @@ def thumb(src, box=None, max_w_px=1300):
     """
     cache = os.path.join(ROOT, "reports", "_thumbs")
     os.makedirs(cache, exist_ok=True)
-    out = os.path.join(cache, os.path.basename(src).replace(".png", "_crop.png"))
+    # JPEG, not PNG: the card image is a display copy shown about three inches
+    # wide, where the compression is invisible, and a PNG crop makes a site pack
+    # roughly seven times larger. The lossless original stays in the case folder
+    # and is what the record points at.
+    out = os.path.join(cache, os.path.basename(src).replace(".png", "_crop.jpg"))
     with Image.open(src) as im:
         W, H = im.size
         bottom = None
@@ -163,7 +167,7 @@ def thumb(src, box=None, max_w_px=1300):
         im = im.crop(region)
         if im.size[0] > max_w_px:
             im = im.resize((max_w_px, int(im.size[1] * max_w_px / im.size[0])), Image.LANCZOS)
-        im.save(out)
+        im.convert("RGB").save(out, "JPEG", quality=72, optimize=True)
     return out
 
 def scaled(path, max_w, max_h):

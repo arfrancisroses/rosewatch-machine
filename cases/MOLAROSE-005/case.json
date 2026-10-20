@@ -20,7 +20,7 @@
   "review_status": "New",
   "first_date_found": "2026-09-22 11:28 MST (America/Phoenix)",
   "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
-  "screenshot_captured_at": null,
+  "screenshot_captured_at": "2026-10-20 11:29 MST (America/Phoenix)",
   "seller_location": {
     "country": "United States",
     "state_or_region": "Wyoming (published) -- see note",
@@ -36,7 +36,29 @@
     "registrar": "Not determined -- RDAP/whois endpoints (rdap.org, rdap.verisign.com) are refused by this environment's network egress policy",
     "hosting_country": "Not determined"
   },
-  "evidence_screenshots": [],
+  "evidence_screenshots": [
+    {
+      "file": "cases/MOLAROSE-005/screenshots/MOLAROSE-005_2026-10-20_1129.png",
+      "captured_at": "2026-10-20 11:29 MST (America/Phoenix)",
+      "source_url": "https://molarose.com/products/the-pride-rose",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 1158743,
+      "product_image_box": {
+        "x": 115,
+        "y": 302,
+        "w": 671,
+        "h": 671,
+        "detail_bottom": 2653.5625,
+        "dpr": 1
+      },
+      "images_total": 100,
+      "images_failed_to_load": 61,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing; dismissed: div.background-overlay1, div.background-overlay, shopify-chat. No listing content was altered, added or removed.",
+      "image_load_note": "61 of 100 images on the page did not load and appear blank in this capture. Their host is refused by this environment's network policy, not by the seller. The capture is kept for its text, price and layout; it is not a complete picture of the listing as a buyer saw it."
+    }
+  ],
   "access_or_research_limitations": [
     "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown."
   ],
@@ -126,6 +148,11 @@
     {
       "date": "2026-10-20 06:06 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-10-20 11:29 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://molarose.com/products/the-pride-rose saved to cases/MOLAROSE-005/screenshots/MOLAROSE-005_2026-10-20_1129.png (1,158,743 bytes)."
     }
   ]
 }

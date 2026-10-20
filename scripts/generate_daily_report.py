@@ -527,7 +527,10 @@ def generate(run_date_str):
     story.append(Paragraph("All Cases on Record", styles["RWH2"]))
     story.append(Paragraph(
         "Every case on record to date, not just today's, in the same order: Registered and Pending first, then the "
-        "statuses that carry no enforceable right. The dashboard holds the full evidence for each.",
+        "statuses that carry no enforceable right. <b>This table is an index.</b> The full evidence for each case "
+        "&mdash; its screenshot, seller location, website host, capture time and quoted text &mdash; is in that "
+        "seller's evidence pack (<i>Rose Watch Evidence &mdash; &lt;seller&gt;</i>), and on the dashboard, where "
+        "any case can be opened and its screenshot viewed.",
         styles["RWBody"]))
     story.append(Spacer(1, 4))
     findings_tables(all_cases, "No cases exist yet.")

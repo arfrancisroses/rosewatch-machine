@@ -42,7 +42,8 @@
     "Not re-checked on 2026-09-14: myroseworld.com now redirects to the www subdomain, which was blocked by this session network egress policy this run.",
     "Not re-checked on 2026-09-15: myroseworld.com still redirects to the www subdomain, which remains blocked by this session network egress policy.",
     "Screenshot attempt failed 2026-10-20 09:35 MST (America/Phoenix): RenderFailure: the seller returned HTTP 404 for this URL, so the listing is not live; no image kept. No image was kept; this case has no screenshot rather than a blank one.",
-    "Screenshot attempt failed 2026-10-20 09:42 MST (America/Phoenix): RenderFailure: the seller returned HTTP 404 for this URL, so the listing is not live at it; no image kept. No image was kept; this case has no screenshot rather than a blank one."
+    "Screenshot attempt failed 2026-10-20 09:42 MST (America/Phoenix): RenderFailure: the seller returned HTTP 404 for this URL, so the listing is not live at it; no image kept. No image was kept; this case has no screenshot rather than a blank one.",
+    "Screenshot attempt failed 2026-10-20 11:40 MST (America/Phoenix): RenderFailure: the seller returned HTTP 404 for this URL, so the listing is not live at it; no image kept. No image was kept; this case has no screenshot rather than a blank one."
   ],
   "investigator_notes": "Identified via this session's crawl of the store's public product data feed on 2026-09-10, cross-checked against the Master Trademark Filing Chart. This is a potential lead for Francis Roses/legal counsel review, not a legal determination of infringement.",
   "history": [

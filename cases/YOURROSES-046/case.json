@@ -21,7 +21,7 @@
   "review_status": "New",
   "first_date_found": "2026-09-28 06:13 MST (America/Phoenix)",
   "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
-  "screenshot_captured_at": null,
+  "screenshot_captured_at": "2026-10-20 11:41 MST (America/Phoenix)",
   "seller_location": {
     "country": "China (Estimated)",
     "state_or_region": "Not available on page",
@@ -37,7 +37,29 @@
     "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
     "estimated": true
   },
-  "evidence_screenshots": [],
+  "evidence_screenshots": [
+    {
+      "file": "cases/YOURROSES-046/screenshots/YOURROSES-046_2026-10-20_1141.png",
+      "captured_at": "2026-10-20 11:41 MST (America/Phoenix)",
+      "source_url": "https://your-roses.com/product/pink-floyd-rose-2/",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 999886,
+      "product_image_box": {
+        "x": 1242,
+        "y": 261.140625,
+        "w": 542,
+        "h": 654.90625,
+        "detail_bottom": 1909.234375,
+        "dpr": 1
+      },
+      "images_total": 17,
+      "images_failed_to_load": 0,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing. No listing content was altered, added or removed.",
+      "image_load_note": null
+    }
+  ],
   "access_or_research_limitations": [
     "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown."
   ],
@@ -115,6 +137,11 @@
     {
       "date": "2026-10-20 06:06 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-10-20 11:41 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://your-roses.com/product/pink-floyd-rose-2/ saved to cases/YOURROSES-046/screenshots/YOURROSES-046_2026-10-20_1141.png (999,886 bytes)."
     }
   ]
 }
