@@ -306,10 +306,14 @@ def card(case, st, content_w):
                   st["CardQuote"]),
     ]
     if have:
-        below.append(Paragraph(
-            f"Screenshot: full-page capture {esc(img.get('captured_at'))}, filed at "
-            f"{esc(img.get('file'))}. Shown here cropped to the listing&rsquo;s product image; "
-            f"the complete capture is held with the case.", st["CapLabel"]))
+        cap = (f"Screenshot: full-page capture {esc(img.get('captured_at'))}, filed at "
+               f"{esc(img.get('file'))}. Shown here cropped to the listing&rsquo;s product image; "
+               f"the complete capture is held with the case.")
+        # If the listing's photos did not load, the card must say so rather than
+        # let an empty frame read as the listing the way a buyer saw it.
+        if img.get("image_load_note"):
+            cap += " <b>" + esc(img["image_load_note"]) + "</b>"
+        below.append(Paragraph(cap, st["CapLabel"]))
     else:
         below.append(Paragraph(
             "Screenshot: none on file &mdash; recorded as a coverage gap, not as a clean result. "
