@@ -6,3 +6,6 @@ reports/_slices/
 
 # web-sized dashboard screenshots (regenerated from the case originals)
 dashboard/shots/
+
+# generated evidence packs are rebuilt from the case records on demand
+reports/evidence/*.pdf
