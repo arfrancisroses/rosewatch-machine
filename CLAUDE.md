@@ -31,11 +31,13 @@ If picked up in a fresh session, raise this before closing out that day's work.
 
 ### The scheduled Routines (both updated or created 2026-10-20)
 
-Two Routines fire into this session. **Do not change either** -- schedule, name or binding -- unless the user explicitly asks.
+Three Routines fire into this session. **Do not change any of them** -- schedule, name or binding -- unless the user explicitly asks. All three are bound to this session, which is also their single point of failure: if the session is lost, all three stop. If a run that should have happened did not, check that before assuming the schedule is wrong.
 
 **Rose Watch Daily Monitoring Run** (`trig_015KreDFY19Dz7hVxM6XR5mQ`), cron `0 13 * * 1-5` = 6:00 AM America/Phoenix. Its prompt was rewritten on 2026-10-20, per explicit user instruction, to match the workflow as it now stands: screenshot capture for new cases, the dashboard image rebuild, the evidence-pack rebuild, findings as cards, and delivery of the report plus any rebuilt packs. It had previously drifted twice; it says outright that **CLAUDE.md is authoritative if the two disagree**, so the next drift self-corrects. Only the prompt changed.
 
 **Rose Watch manual screenshot reminder** (`trig_014sFptjrpJ8EutCBebjV9gh`), cron `CRON_TZ=America/Phoenix 56 9 * * 1-5` = 9:56 AM America/Phoenix, weekdays. Created 2026-10-20 at the user's request. It is a nudge, not a run: it reports the screenshot-gap figures and hands the user the product URLs that are theirs to capture by hand. It deliberately does **not** list gaps a manual capture cannot fix -- a removed listing has nothing to photograph, and a membership-walled one would need an account, which is not something to encourage. The 9:56 rather than 10:00 is deliberate: a time on the hour competes with every other schedule for server capacity.
+
+**Rose Watch quarterly seller research re-check** (`trig_017p13RezNg39R6sRYE6DkKm`), cron `CRON_TZ=America/Phoenix 50 10 5 1,4,7,10 *` = 10:50 AM on 5 January, 5 April, 5 July and 5 October. Created 2026-10-20 at the user's request. **First fire: 2027-01-05.** Seller location and hosting are researched once per site and reused across every case from that seller, so nothing otherwise notices a seller relocating or changing host. The run re-reads each site's own contact, about, shipping and footer pages, diffs what they say against what is stored, and **reports before writing** -- changing a site's location touches every case for that seller, so the user decides. The 5th avoids the New Year holiday and month-end; 10:50 keeps it clear of the 6:00 run and the 9:56 reminder.
 
 ### Superseded: the scheduled trigger's prompt (updated 2026-09-21)
 
@@ -418,7 +420,7 @@ Your goal is to provide accurate, organized, traceable research that helps Franc
 - **What goes stale here, and how to notice.** This file is prose about a moving system, so parts of it rot. Known rotters, checked 2026-10-20:
   - **Any count written into this file** -- cases, screenshots, roster size, gap totals. All are snapshots. The roster count sat wrong for six weeks. Read counts from the scripts, not from here.
   - **The two Routine prompts** have drifted twice. Both now say CLAUDE.md wins, but check them against the run steps if behaviour ever looks off: `get_trigger` shows the stored prompt.
-  - **Seller location and hosting research** is captured once per site and reused for every case from it. Some entries are explicitly estimated. Nothing re-checks them; a seller that moves or changes host will keep its old record until someone looks.
+  - **Seller location and hosting research** is captured once per site and reused for every case from it. Some entries are explicitly estimated. The quarterly re-check Routine above is the only thing that looks; between firings a seller that moves or changes host keeps its old record.
   - **A case's price and title** come from the feed on the day the case was made. Re-verification confirms the listing is still *there*, not that it still says the same thing. A screenshot is evidence of its own date and is deliberately not re-shot; the case fields around it can therefore describe an older state of the listing.
   - **Generated artefacts** -- `reports/evidence/`, `dashboard/shots/` -- are derived and gitignored. The pack generator deletes a pack's superseded dated file when it writes a new one. Published artifact images for a case whose screenshot is later removed are **not** cleaned up automatically; pass `null` for that path on the next publish.
   - **The browser path** is resolved by glob, not pinned, so a rebuilt container image with a different Chromium build still works. If capture ever fails everywhere at once, check that first.
