@@ -19,7 +19,7 @@
   "review_status": "New",
   "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
   "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
-  "screenshot_captured_at": null,
+  "screenshot_captured_at": "2026-10-20 09:35 MST (America/Phoenix)",
   "seller_location": {
     "country": "Canada",
     "state_or_region": "Ontario",
@@ -35,7 +35,29 @@
     "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
     "estimated": true
   },
-  "evidence_screenshots": [],
+  "evidence_screenshots": [
+    {
+      "file": "cases/HUNIUROSEG-002/screenshots/HUNIUROSEG-002_2026-10-20_0935.png",
+      "captured_at": "2026-10-20 09:35 MST (America/Phoenix)",
+      "source_url": "https://huniurosegarden.ca/products/charming-piano-germany-tantau",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 1294251,
+      "product_image_box": {
+        "x": 151,
+        "y": 161,
+        "w": 713,
+        "h": 715.578125,
+        "detail_bottom": null,
+        "dpr": 1
+      },
+      "images_total": 6,
+      "images_failed_to_load": 0,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing. No listing content was altered, added or removed.",
+      "image_load_note": null
+    }
+  ],
   "access_or_research_limitations": [
     "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed."
   ],
@@ -155,6 +177,11 @@
     {
       "date": "2026-10-20 06:06 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-10-20 09:35 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://huniurosegarden.ca/products/charming-piano-germany-tantau saved to cases/HUNIUROSEG-002/screenshots/HUNIUROSEG-002_2026-10-20_0935.png (1,294,251 bytes)."
     }
   ]
 }

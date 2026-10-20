@@ -217,7 +217,7 @@ def no_shot_box(st, width, case):
     inner = [Paragraph("NO SCREENSHOT ON FILE", st["GapHead"]),
              Spacer(1, 4),
              Paragraph(esc(shot_gap_reason(case)), st["GapBody"])]
-    t = Table([[inner]], colWidths=[width], rowHeights=[2.15 * inch])
+    t = Table([[inner]], colWidths=[width], rowHeights=[1.9 * inch])
     t.setStyle(TableStyle([
         ("BOX", (0, 0), (-1, -1), 0.8, LINE),
         ("BACKGROUND", (0, 0), (-1, -1), colors.HexColor("#f5f6f2")),
@@ -249,7 +249,7 @@ def card(case, st, content_w):
     right_w = content_w - left_w - 0.20 * inch
 
     if have:
-        left = scaled(thumb(path, img.get("product_image_box")), left_w, 3.2 * inch)
+        left = scaled(thumb(path, img.get("product_image_box")), left_w, 2.65 * inch)
     else:
         left = no_shot_box(st, left_w, case)
 

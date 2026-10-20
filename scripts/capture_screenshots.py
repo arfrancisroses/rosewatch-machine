@@ -212,6 +212,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("cases", nargs="*", help="case numbers; default = those named by --status")
     ap.add_argument("--status", help="capture every case with this trademark status")
+    ap.add_argument("--missing", action="store_true",
+                    help="every case that has no screenshot file on disk")
+    ap.add_argument("--skip-sites", default="",
+                    help="comma-separated site codes to leave out (e.g. HIGHGARDEN)")
+    ap.add_argument("--pace", type=float, default=2.0,
+                    help="seconds to wait between cases; keeps the load on a seller gentle")
     ap.add_argument("--width", type=int, default=1400)
     ap.add_argument("--settle", type=int, default=1200)
     ap.add_argument("--dry-run", action="store_true")
@@ -223,6 +229,23 @@ def main():
         wanted += [c["case_number"] for c in index
                    if (c.get("trademark_status") or "") == args.status
                    and c["case_number"] not in wanted]
+    if args.missing:
+        for row in index:
+            cn = row["case_number"]
+            case_file = os.path.join(ROOT, "cases", cn, "case.json")
+            if not os.path.exists(case_file) or cn in wanted:
+                continue
+            rec = json.load(open(case_file))
+            on_disk = [x for x in (rec.get("evidence_screenshots") or [])
+                       if x.get("file") and os.path.exists(os.path.join(ROOT, x["file"]))]
+            if not on_disk:
+                wanted.append(cn)
+    skip = {c.strip().upper() for c in args.skip_sites.split(",") if c.strip()}
+    if skip:
+        before = len(wanted)
+        wanted = [c for c in wanted if c.rsplit("-", 1)[0] not in skip]
+        print(f"skipping {before - len(wanted)} case(s) on {', '.join(sorted(skip))}",
+              file=sys.stderr)
     if not wanted:
         print("nothing selected", file=sys.stderr); return 2
 
@@ -298,6 +321,8 @@ def main():
             json.dump(case, open(cpath, "w"), indent=2, ensure_ascii=False)
             open(cpath, "a").write("\n")
             print(f"  {cn}: {size:,} bytes -> {rel}", file=sys.stderr); ok += 1
+            if args.pace:
+                page.wait_for_timeout(int(args.pace * 1000))
         browser.close()
     print(f"captured {ok}, failed {fail}", file=sys.stderr)
     return 0 if fail == 0 else 1

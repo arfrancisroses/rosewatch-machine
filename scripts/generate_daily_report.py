@@ -140,6 +140,29 @@ def cjk_safe(markup):
     return _CJK.sub(lambda m: f'<font name="{_CJK_FONT}">{m.group(0)}</font>', markup)
 
 
+_CARDS = None
+
+
+def card_renderer():
+    """The evidence-card renderer, shared with scripts/generate_evidence_cards.py.
+
+    The daily report's New Findings section is rendered as cards (user
+    instruction, 2026-10-20) so each finding carries its screenshot and its
+    identifying fields together. The full case history stays a table: at 380-odd
+    cases a card apiece would run to hundreds of pages and hundreds of megabytes,
+    which is not a daily attachment.
+    """
+    global _CARDS
+    if _CARDS is None:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location(
+            "rw_evidence_cards", str(Path(__file__).resolve().parent / "generate_evidence_cards.py"))
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        _CARDS = (mod, mod.styles())
+    return _CARDS
+
+
 def wrapped_table(header, rows, col_widths, styles, header_bg=INK, raw_html_cols=None):
     """raw_html_cols: set of column indices whose values are pre-built markup (e.g. from
     link_cell) and must NOT be XML-escaped, unlike plain text cells."""
@@ -405,16 +428,41 @@ def generate(run_date_str):
                 raw_html_cols={4},
             ))
 
+    def findings_cards(cases, note_when_empty):
+        """One evidence card per finding, grouped by status in enforceability order."""
+        if not cases:
+            story.append(Paragraph(note_when_empty, styles["RWBody"]))
+            return
+        mod, cstyles = card_renderer()
+        content_w = letter[0] - 1.3 * inch
+        groups = {}
+        for c in cases:
+            groups.setdefault(c.get("trademark_status") or "(no status)", []).append(c)
+        for status in sorted(groups, key=status_rank):
+            rows = groups[status]
+            story.append(Paragraph(
+                f"{xml_escape(status)} &mdash; {len(rows)} case{'s' if len(rows) != 1 else ''}",
+                ParagraphStyle("statusHead2", parent=styles["RWBody"], fontName="Helvetica-Bold",
+                               fontSize=11, textColor=ACCENT, spaceBefore=12, spaceAfter=6)))
+            for c in sorted(rows, key=lambda r: r.get("case_number") or ""):
+                detail = load_json(REPO_ROOT / "cases" / c["case_number"] / "case.json", None)
+                if detail is None:
+                    continue
+                story.extend(mod.card(detail, cstyles, content_w))
+
     story.append(Paragraph("New Findings", styles["RWH2"]))
     story.append(Paragraph(
         "Every row below is a potential lead for Francis Roses or legal counsel to review &mdash; a matching product "
         "or trademark name, not a legal determination of infringement. Grouped by the trademark's status in the "
         "chart, most enforceable first: <b>Registered</b> and <b>Pending</b> marks carry weight that <b>To Be "
         "Filed</b>, <b>Abandoned</b>, <b>Not Applicable</b>, <b>Do Not File</b> and unstatused entries do not. "
-        "Click &ldquo;View listing&rdquo; to open the seller's product page.",
+        "Each finding is shown as an evidence card: the listing&rsquo;s screenshot where one could be "
+        "captured, its identifying fields, the seller&rsquo;s product URL and the quoted text supporting "
+        "the match. A card with no screenshot says why, and that is recorded as a coverage gap rather "
+        "than a clean result.",
         styles["RWBody"]))
     story.append(Spacer(1, 4))
-    findings_tables(new_cases, "No new case records were created on this date.")
+    findings_cards(new_cases, "No new case records were created on this date.")
 
     if run.get("matches_held_pending_case_creation", 0):
         story.append(Spacer(1, 10))
