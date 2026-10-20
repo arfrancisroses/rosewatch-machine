@@ -19,7 +19,7 @@
   "review_status": "New",
   "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
   "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
-  "screenshot_captured_at": null,
+  "screenshot_captured_at": "2026-10-20 09:51 MST (America/Phoenix)",
   "seller_location": {
     "country": "United States",
     "state_or_region": "Texas",
@@ -35,7 +35,29 @@
     "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
     "estimated": true
   },
-  "evidence_screenshots": [],
+  "evidence_screenshots": [
+    {
+      "file": "cases/ONELOVEROS-004/screenshots/ONELOVEROS-004_2026-10-20_0951.png",
+      "captured_at": "2026-10-20 09:51 MST (America/Phoenix)",
+      "source_url": "https://oneloveroseandgardens.com/products/forever-yours-tan08242",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 447555,
+      "product_image_box": {
+        "x": 80.5,
+        "y": 1147.65625,
+        "w": 266.25,
+        "h": 266.25,
+        "detail_bottom": null,
+        "dpr": 1
+      },
+      "images_total": 4,
+      "images_failed_to_load": 0,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing. No listing content was altered, added or removed.",
+      "image_load_note": null
+    }
+  ],
   "access_or_research_limitations": [
     "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed."
   ],
@@ -155,6 +177,11 @@
     {
       "date": "2026-10-20 06:06 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-10-20 09:51 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://oneloveroseandgardens.com/products/forever-yours-tan08242 saved to cases/ONELOVEROS-004/screenshots/ONELOVEROS-004_2026-10-20_0951.png (447,555 bytes)."
     }
   ]
 }

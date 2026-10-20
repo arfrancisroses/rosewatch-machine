@@ -19,7 +19,7 @@
   "review_status": "New",
   "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
   "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
-  "screenshot_captured_at": null,
+  "screenshot_captured_at": "2026-10-20 09:52 MST (America/Phoenix)",
   "seller_location": {
     "country": "United States",
     "state_or_region": "Texas",
@@ -35,7 +35,29 @@
     "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
     "estimated": true
   },
-  "evidence_screenshots": [],
+  "evidence_screenshots": [
+    {
+      "file": "cases/ONELOVEROS-006/screenshots/ONELOVEROS-006_2026-10-20_0952.png",
+      "captured_at": "2026-10-20 09:52 MST (America/Phoenix)",
+      "source_url": "https://oneloveroseandgardens.com/products/moonlight-in-paris",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 1651149,
+      "product_image_box": {
+        "x": 59.5,
+        "y": 212.6875,
+        "w": 831.25,
+        "h": 690.765625,
+        "detail_bottom": 1502.1875,
+        "dpr": 1
+      },
+      "images_total": 9,
+      "images_failed_to_load": 0,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing. No listing content was altered, added or removed.",
+      "image_load_note": null
+    }
+  ],
   "access_or_research_limitations": [
     "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed."
   ],
@@ -155,6 +177,11 @@
     {
       "date": "2026-10-20 06:06 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-10-20 09:52 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://oneloveroseandgardens.com/products/moonlight-in-paris saved to cases/ONELOVEROS-006/screenshots/ONELOVEROS-006_2026-10-20_0952.png (1,651,149 bytes)."
     }
   ]
 }

@@ -19,7 +19,7 @@
   "review_status": "New",
   "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
   "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
-  "screenshot_captured_at": null,
+  "screenshot_captured_at": "2026-10-20 09:54 MST (America/Phoenix)",
   "seller_location": {
     "country": "China (Estimated)",
     "state_or_region": "Not available on page",
@@ -35,7 +35,29 @@
     "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
     "estimated": true
   },
-  "evidence_screenshots": [],
+  "evidence_screenshots": [
+    {
+      "file": "cases/ROSEEXPLOS-008/screenshots/ROSEEXPLOS-008_2026-10-20_0954.png",
+      "captured_at": "2026-10-20 09:54 MST (America/Phoenix)",
+      "source_url": "https://roseexplosion.com/products/darlington-rose",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 1848794,
+      "product_image_box": {
+        "x": 101,
+        "y": 267.515625,
+        "w": 583,
+        "h": 583,
+        "detail_bottom": 1196.296875,
+        "dpr": 1
+      },
+      "images_total": 125,
+      "images_failed_to_load": 18,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing; dismissed: shopify-chat. No listing content was altered, added or removed.",
+      "image_load_note": "18 of 125 images on the page did not load and appear blank in this capture. Their host is refused by this environment's network policy, not by the seller. The capture is kept for its text, price and layout; it is not a complete picture of the listing as a buyer saw it."
+    }
+  ],
   "access_or_research_limitations": [
     "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed.",
     "Site's Contact page (roseexplosion.com/pages/contact-us) returned HTTP 404 this run."
@@ -156,6 +178,11 @@
     {
       "date": "2026-10-20 06:06 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-10-20 09:54 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://roseexplosion.com/products/darlington-rose saved to cases/ROSEEXPLOS-008/screenshots/ROSEEXPLOS-008_2026-10-20_0954.png (1,848,794 bytes)."
     }
   ]
 }
