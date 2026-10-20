@@ -129,6 +129,15 @@ def main():
             continue
         out = os.path.join(OUT_DIR, fname)
         build_pack(mod, cases, out, title, subtitle)
+        # Drop the pack's previous dated file. Without this the directory silently
+        # accumulates months of superseded packs, and the newest is not obviously
+        # the current one. The repository's case records remain the archive.
+        old = (prior or {}).get("file")
+        if old and old != fname:
+            try:
+                os.remove(os.path.join(OUT_DIR, old))
+            except OSError:
+                pass
         size = os.path.getsize(out)
         state[key] = {"fingerprint": fp, "file": fname, "cases": len(cases),
                       "built": today, "bytes": size}

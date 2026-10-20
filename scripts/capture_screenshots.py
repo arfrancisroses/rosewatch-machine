@@ -23,7 +23,28 @@ PROXY = os.environ.get("HTTPS_PROXY") or "http://127.0.0.1:36525"
 
 # The pre-installed browser. The Playwright bindings here may pin a newer build
 # than the image ships, so point at the one on disk rather than downloading.
-CHROME = os.environ.get("ROSEWATCH_CHROME") or "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
+def _find_chrome():
+    """The browser on disk, whichever build the image happens to ship.
+
+    The Playwright bindings may pin a newer build than the container has, so we
+    point at what is installed rather than download. Globbing instead of naming
+    chromium-1194 means a rebuilt image with a different build still works; a
+    hardcoded path would fail the whole run the morning the image changes.
+    """
+    override = os.environ.get("ROSEWATCH_CHROME")
+    if override:
+        return override
+    import glob
+    for pattern in ("/opt/pw-browsers/chromium-*/chrome-linux/chrome",
+                    "/opt/pw-browsers/chromium/chrome-linux/chrome",
+                    "/opt/pw-browsers/chromium-*/chrome-linux64/chrome"):
+        found = sorted(glob.glob(pattern))
+        if found:
+            return found[-1]          # highest build number present
+    return "/opt/pw-browsers/chromium/chrome"
+
+
+CHROME = _find_chrome()
 
 # Overlay/popup dismissal. Each entry is a CSS selector for a close control or a
 # container to hide. Kept narrow on purpose: we remove chrome that covers the
