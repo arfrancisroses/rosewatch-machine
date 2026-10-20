@@ -19,7 +19,7 @@
   "review_status": "New",
   "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
   "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
-  "screenshot_captured_at": null,
+  "screenshot_captured_at": "2026-10-20 09:39 MST (America/Phoenix)",
   "seller_location": {
     "country": "United States",
     "state_or_region": "Texas",
@@ -35,10 +35,31 @@
     "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
     "estimated": true
   },
-  "evidence_screenshots": [],
+  "evidence_screenshots": [
+    {
+      "file": "cases/ERGONGZY-010/screenshots/ERGONGZY-010_2026-10-20_0939.png",
+      "captured_at": "2026-10-20 09:39 MST (America/Phoenix)",
+      "source_url": "https://ergongzy.com/products/rose-living-coral",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 2118299,
+      "product_image_box": {
+        "x": 15,
+        "y": 200,
+        "w": 795,
+        "h": 795,
+        "detail_bottom": 1495.5,
+        "dpr": 1
+      },
+      "images_total": 91,
+      "images_failed_to_load": 38,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing; dismissed: div.background-overlay, shopify-chat. No listing content was altered, added or removed.",
+      "image_load_note": "38 of 91 images on the page did not load and appear blank in this capture. Their host is refused by this environment's network policy, not by the seller. The capture is kept for its text, price and layout; it is not a complete picture of the listing as a buyer saw it."
+    }
+  ],
   "access_or_research_limitations": [
-    "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed.",
-    "Screenshot attempt failed 2026-10-20 09:35 MST (America/Phoenix): RenderFailure: the seller returned HTTP 429 for this URL, so the listing is not live; no image kept. No image was kept; this case has no screenshot rather than a blank one."
+    "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed."
   ],
   "investigator_notes": "Identified via this session's crawl of the store's public product data feed on 2026-09-10, cross-checked against the Master Trademark Filing Chart. This is a potential lead for Francis Roses/legal counsel review, not a legal determination of infringement.",
   "history": [
@@ -156,6 +177,11 @@
     {
       "date": "2026-10-20 06:06 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-10-20 09:39 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://ergongzy.com/products/rose-living-coral saved to cases/ERGONGZY-010/screenshots/ERGONGZY-010_2026-10-20_0939.png (2,118,299 bytes)."
     }
   ]
 }

@@ -37,8 +37,7 @@
   },
   "evidence_screenshots": [],
   "access_or_research_limitations": [
-    "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed.",
-    "Screenshot attempt failed 2026-10-20 09:35 MST (America/Phoenix): RenderFailure: the seller returned HTTP 429 for this URL, so the listing is not live; no image kept. No image was kept; this case has no screenshot rather than a blank one."
+    "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed."
   ],
   "investigator_notes": "Identified via this session's crawl of the store's public product data feed on 2026-09-10, cross-checked against the Master Trademark Filing Chart. This is a potential lead for Francis Roses/legal counsel review, not a legal determination of infringement.",
   "history": [

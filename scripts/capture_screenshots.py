@@ -63,16 +63,46 @@ class RenderFailure(RuntimeError):
 def stamp(dt=None):
     return (dt or datetime.now(PHX)).strftime("%Y-%m-%d %H:%M %Z (America/Phoenix)")
 
-def capture(page, url, out_path, settle_ms):
-    resp = page.goto(url, wait_until="domcontentloaded", timeout=90000)
-    # A delisted product still renders a page -- the shop's 404. Photographing that
-    # and filing it against the case would put a picture of "not found" on the
-    # record as if it were the listing. Only a 2xx response is evidence of a live
-    # listing; anything else is a removal to be recorded in history, not an image.
-    if resp is not None and not (200 <= resp.status < 300):
+class RateLimited(RuntimeError):
+    """The seller asked us to slow down. Not a gap, and never a dead listing."""
+
+
+def goto_checked(page, url, tries=4):
+    """Load the page, treating the seller's response honestly.
+
+    A 429 means "slow down", not "gone": back off and try again, the same rule
+    the crawler follows. Any other non-2xx means the listing is not live at this
+    URL, and photographing the shop's 404 would put a picture of "not found" on
+    the record as if it were the listing.
+    """
+    delay = 30
+    for attempt in range(tries):
+        resp = page.goto(url, wait_until="domcontentloaded", timeout=90000)
+        status = resp.status if resp is not None else 200
+        if 200 <= status < 300:
+            return resp
+        if status == 429:
+            if attempt == tries - 1:
+                raise RateLimited(
+                    f"the seller returned HTTP 429 (rate limited) on {tries} attempts with backoff. "
+                    f"This is the host asking us to slow down, not a missing listing and not a "
+                    f"coverage finding about the seller. No image kept; worth retrying later.")
+            retry_after = (resp.headers or {}).get("retry-after")
+            wait = delay
+            if retry_after and str(retry_after).strip().isdigit():
+                wait = max(wait, int(str(retry_after).strip()))
+            print(f"      429 - waiting {min(wait, 180)}s before retry", file=sys.stderr)
+            page.wait_for_timeout(min(wait, 180) * 1000)
+            delay *= 2
+            continue
         raise RenderFailure(
-            f"the seller returned HTTP {resp.status} for this URL, so the listing is not live; "
+            f"the seller returned HTTP {status} for this URL, so the listing is not live at it; "
             f"no image kept")
+    return None
+
+
+def capture(page, url, out_path, settle_ms):
+    goto_checked(page, url)
     try:
         page.wait_for_load_state("networkidle", timeout=45000)
     except Exception:
@@ -256,6 +286,7 @@ def main():
 
     from playwright.sync_api import sync_playwright
     ok = fail = 0
+    rate_limited = []
     with sync_playwright() as pw:
         browser = pw.chromium.launch(args=["--no-sandbox"], proxy={"server": PROXY},
                                      executable_path=CHROME)
@@ -278,6 +309,13 @@ def main():
                 r.url.split("//")[-1].split("/")[0]) if "TUNNEL" in (r.failure or "") else None)
             try:
                 dismissed, hero, imgs = capture(page, url, out, args.settle)
+            except RateLimited as e:
+                if os.path.exists(out):
+                    os.remove(out)
+                print(f"  {cn}: RATE LIMITED, left for a later run", file=sys.stderr)
+                rate_limited.append(cn)
+                page.wait_for_timeout(20000)
+                continue
             except Exception as e:
                 if os.path.exists(out):
                     os.remove(out)
@@ -324,8 +362,10 @@ def main():
             if args.pace:
                 page.wait_for_timeout(int(args.pace * 1000))
         browser.close()
-    print(f"captured {ok}, failed {fail}", file=sys.stderr)
-    return 0 if fail == 0 else 1
+    print(f"captured {ok}, failed {fail}"
+          + (f", rate-limited {len(rate_limited)} (retry later): {', '.join(rate_limited)}"
+             if rate_limited else ""), file=sys.stderr)
+    return 0 if not fail and not rate_limited else 1
 
 if __name__ == "__main__":
     sys.exit(main())
