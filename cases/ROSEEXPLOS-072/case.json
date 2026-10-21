@@ -19,7 +19,7 @@
   "match_explanation": "The product title contains the full chart name \"Notre Dame\" as a phrase, inside a longer title.",
   "review_status": "New",
   "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-10-21 06:09 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 11:24 MST (America/Phoenix)",
   "seller_location": {
     "country": "China (Estimated)",
@@ -161,6 +161,10 @@
       "date": "2026-10-20 11:24 MST (America/Phoenix)",
       "action": "Evidence screenshot captured",
       "details": "Full-page capture of https://roseexplosion.com/products/notre-dame-rose saved to cases/ROSEEXPLOS-072/screenshots/ROSEEXPLOS-072_2026-10-20_1124.png (1,864,629 bytes)."
+    },
+    {
+      "date": "2026-10-21 06:09 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

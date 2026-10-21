@@ -24,7 +24,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO / "scripts"))
-from create_cases import site_domain  # noqa: E402  same host normalisation as the cases
+from create_cases import site_domain, url_key  # noqa: E402  same normalisation as the cases
 from crawl_sites import PHOENIX  # noqa: E402
 
 
@@ -49,17 +49,21 @@ def main():
             continue
         served.add(site_domain(site["url_used"]))
         for m in site.get("matches", []):
-            listed.add(m["url"].rstrip("/"))
+            listed.add(url_key(m["url"]))
 
     db = json.loads((REPO / "cases" / "cases.json").read_text())
     verified, gone, unchecked = [], [], []
     for row in db["cases"]:
         path = REPO / "cases" / row["case_number"] / "case.json"
         case = json.loads(path.read_text())
-        if row["website_domain"] not in served:
+        # Normalise the stored domain too. The oldest Flower Meadow Dream cases
+        # recorded "www.myroseworld.com" while the served set is reduced to the
+        # apex, so they reported as "site did not serve" -- claiming we could not
+        # check when we could, which is the one thing this script must never do.
+        if site_domain(row["website_domain"]) not in served:
             unchecked.append(row["case_number"])
             continue
-        if case["product_url"].rstrip("/") not in listed:
+        if url_key(case["product_url"]) not in listed:
             gone.append((row["case_number"], row["website_domain"], case["product_url"]))
             continue
         # Appending the same date twice would double-count a re-run, so skip it.

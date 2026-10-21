@@ -37,15 +37,36 @@ def safe_name(text):
     cleaned = re.sub(r"[^A-Za-z0-9 ()&.-]", " ", (text or ""))
     return re.sub(r"\s+", " ", cleaned).strip(" -") or "Unknown"
 
+# A routine "still present" re-verification is not a change worth reissuing a
+# pack for. It advances last_verified on every case every day and appends a
+# history line, and nothing a reader sees on the card moves -- the card does not
+# show last_verified at all. Including either in the fingerprint rebuilt all 16
+# packs daily, which defeated the point of rebuilding only on change.
+# Daily restatements, not events. "Still not listed" and "Listing still removed"
+# repeat every morning for as long as a listing stays gone; the material event is
+# the transition -- first absence, confirmed removal, a return -- not the daily
+# restatement of it. Counting restatements rebuilt an absent listing's pack every
+# day for as long as it stayed absent.
+ROUTINE_ACTIONS = ("Re-verified", "Still not listed", "Listing still removed")
+
+
+def material_history(case):
+    """History entries that change what a pack says: everything but a routine re-verify."""
+    return [h for h in (case.get("history") or [])
+            if not str(h.get("action") or "").startswith(ROUTINE_ACTIONS)]
+
+
 def fingerprint(cases):
+    """What a reader would notice about this pack, and nothing else."""
     h = hashlib.sha256()
     for c in sorted(cases, key=lambda x: x.get("case_number") or ""):
         shots = c.get("evidence_screenshots") or []
         h.update("|".join([
             str(c.get("case_number")), str(c.get("trademark_status")),
-            str(c.get("review_status")), str(c.get("last_verified")),
+            str(c.get("review_status")), str(c.get("match_classification")),
+            str(c.get("price")), str(c.get("exact_product_title")),
             str(shots[-1].get("file") if shots else None),
-            str(len(c.get("history") or [])),
+            str(len(material_history(c))),
         ]).encode("utf-8"))
     return h.hexdigest()[:16]
 

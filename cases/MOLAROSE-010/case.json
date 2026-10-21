@@ -19,7 +19,7 @@
   "match_explanation": "The product title contains the full chart name \"St Tropez\" as a phrase, inside a longer title.",
   "review_status": "New",
   "first_date_found": "2026-09-22 11:28 MST (America/Phoenix)",
-  "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-10-21 06:09 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 11:30 MST (America/Phoenix)",
   "seller_location": {
     "country": "United States",
@@ -153,6 +153,10 @@
       "date": "2026-10-20 11:30 MST (America/Phoenix)",
       "action": "Evidence screenshot captured",
       "details": "Full-page capture of https://molarose.com/products/st-tropez-rose saved to cases/MOLAROSE-010/screenshots/MOLAROSE-010_2026-10-20_1130.png (1,386,712 bytes)."
+    },
+    {
+      "date": "2026-10-21 06:09 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

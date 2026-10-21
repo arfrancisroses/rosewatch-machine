@@ -20,7 +20,7 @@
   "match_explanation": "The product title contains the full chart name \"The Pride\" as a phrase, inside a longer title.",
   "review_status": "New",
   "first_date_found": "2026-09-28 06:13 MST (America/Phoenix)",
-  "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-10-21 06:09 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 11:43 MST (America/Phoenix)",
   "seller_location": {
     "country": "China (Estimated)",
@@ -142,6 +142,10 @@
       "date": "2026-10-20 11:43 MST (America/Phoenix)",
       "action": "Evidence screenshot captured",
       "details": "Full-page capture of https://your-roses.com/product/the-pride-rose/ saved to cases/YOURROSES-059/screenshots/YOURROSES-059_2026-10-20_1143.png (1,295,453 bytes)."
+    },
+    {
+      "date": "2026-10-21 06:09 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

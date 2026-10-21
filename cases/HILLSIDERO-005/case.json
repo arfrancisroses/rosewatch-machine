@@ -178,6 +178,11 @@
       "date": "2026-10-20 09:14 MST (America/Phoenix)",
       "action": "Evidence screenshot captured",
       "details": "Full-page capture of https://hillsiderosefarm.com/products/darlington-达林顿-netherlands saved to cases/HILLSIDERO-005/screenshots/HILLSIDERO-005_2026-10-20_0914.png (1,172,389 bytes)."
+    },
+    {
+      "date": "2026-10-21 06:09 MST (America/Phoenix)",
+      "action": "Listing still removed (HTTP 404)",
+      "details": "Absent again after being present on the 2026-10-19 and 2026-10-20 runs, and the listing's own URL returns HTTP 404 today. This is the third time this listing has come and gone. Hillside Rose Farm served 166 products, down from 178 yesterday. Last Verified stays at 2026-10-20, the last date it was actually seen. No Last Verified date is advanced by a check that did not see the listing."
     }
   ],
   "listing_availability": "NOT FOUND again, as of 2026-10-13 06:08 MST (America/Phoenix). The listing was present on 2026-10-12 after nine runs away, and is absent once more a single run later; Hillside Rose Farm's catalog fell 170 -> 159 in the same period, having risen 156 -> 170 the day before. So this listing has now gone, returned and gone again while the site's catalog swings by a dozen or more products at a time, which looks like inventory churn rather than anything directed at this listing -- but that is an observation about the pattern, not a conclusion, and nothing should be inferred about the seller's reasons. Last Verified stays at 2026-10-12, the last date the listing was actually confirmed present. The full sequence is in the history below and is not papered over."

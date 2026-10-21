@@ -19,7 +19,7 @@
   "match_explanation": "The product title contains the single word \"Tinkerbell!\", which is the whole of the chart entry. A one-word match can be coincidence rather than the variety -- needs a human read of the listing before it means anything.",
   "review_status": "New",
   "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-10-21 06:09 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 11:16 MST (America/Phoenix)",
   "seller_location": {
     "country": "China (Estimated)",
@@ -161,6 +161,10 @@
       "date": "2026-10-20 11:16 MST (America/Phoenix)",
       "action": "Evidence screenshot captured",
       "details": "Full-page capture of https://roseexplosion.com/products/tinkerbell saved to cases/ROSEEXPLOS-064/screenshots/ROSEEXPLOS-064_2026-10-20_1116.png (1,737,720 bytes)."
+    },
+    {
+      "date": "2026-10-21 06:09 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

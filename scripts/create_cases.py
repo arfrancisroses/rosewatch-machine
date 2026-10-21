@@ -223,6 +223,27 @@ def squarespace_products(base):
     return out
 
 
+def url_key(url):
+    """A product URL reduced to what identifies the listing.
+
+    The host's www prefix is dropped, along with the scheme, a trailing slash
+    and the query. On 2026-10-21 the egress allowlist gained the www. forms, so
+    the crawler began reaching Hillside Rose Farm on www.hillsiderosefarm.com
+    instead of the apex. Every product URL then differed from the stored one by
+    four characters and four existing cases looked brand new. Comparing on the
+    raw string is what made that possible.
+    """
+    u = (url or "").strip()
+    u = u.split("#", 1)[0].split("?", 1)[0]
+    for scheme in ("https://", "http://"):
+        if u.startswith(scheme):
+            u = u[len(scheme):]
+            break
+    if u.startswith("www."):
+        u = u[4:]
+    return u.rstrip("/").lower()
+
+
 def text_of(body, limit=420):
     """The listing's own description, tags stripped, as quoted evidence."""
     t = html.unescape(re.sub(r"(?s)<[^>]+>", " ", body or ""))
@@ -313,14 +334,14 @@ def main():
     site_research = dict(SITE_RESEARCH_SEED)
     for c in db["cases"]:
         detail = json.loads((REPO / "cases" / c["case_number"] / "case.json").read_text())
-        existing.add(detail["product_url"].rstrip("/"))
+        existing.add(url_key(detail["product_url"]))
         site_research.setdefault(c["website_domain"], (detail["seller_location"], detail["website_host"]))
 
     # The crawler already routes cut-roses-only listings to the Cut Roses register
     # rather than new_matches; the guard is here too so a hand-edited or older
     # crawl file cannot slip one into a case.
     todo = [m for m in crawl["new_matches"]
-            if m["url"].rstrip("/") not in existing and not m.get("cut_roses_only")]
+            if url_key(m["url"]) not in existing and not m.get("cut_roses_only")]
     if not todo:
         print(f"Nothing to create: all {len(crawl['new_matches'])} matches in crawl-{run_date}.json "
               f"already have cases.")
@@ -468,7 +489,7 @@ def main():
     register = db.setdefault("cut_roses", [])
     known = {r["product_url"].rstrip("/") for r in register}
     for m in crawl.get("cut_roses_only", []):
-        if m["url"].rstrip("/") in known or m["url"].rstrip("/") in existing:
+        if url_key(m["url"]) in known or url_key(m["url"]) in existing:
             continue
         register.append({
             "seller_name": m["site"].split(" (")[0], "product_url": m["url"],

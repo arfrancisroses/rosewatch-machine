@@ -18,7 +18,7 @@
   "match_explanation": "Product title contains the trademarked name \"Darlington\" (as part of a longer product title).",
   "review_status": "New",
   "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-  "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-10-21 06:09 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 10:07 MST (America/Phoenix)",
   "seller_location": {
     "country": "Location not available",
@@ -182,6 +182,10 @@
       "date": "2026-10-20 10:07 MST (America/Phoenix)",
       "action": "Evidence screenshot captured",
       "details": "Full-page capture of https://springlandflowers.com/products/spn116-netherlands-florist-shrub-rose-grafted saved to cases/SPRINGLAND-001/screenshots/SPRINGLAND-001_2026-10-20_1007.png (4,550,532 bytes)."
+    },
+    {
+      "date": "2026-10-21 06:09 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

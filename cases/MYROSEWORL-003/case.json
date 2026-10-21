@@ -57,6 +57,11 @@
       "date": "2026-10-20 09:20 MST (America/Phoenix)",
       "action": "Listing confirmed removed (HTTP 404)",
       "details": "Listing confirmed REMOVED. www.myroseworld.com became reachable from here again on 2026-10-20 after the user widened this environment's network policy, and this case's product URL now returns HTTP 404 from the seller's own server. This is the first positive confirmation of removal for this case rather than an inference from feed absence: between 2026-09-16 and 2026-10-19 the site could not be reached at all, so the listing was reported as unverified and Last Verified was held. Last Verified stays at its 2026-09-16 value -- the last date the listing was actually seen -- and is not advanced by this check. The seller has rebuilt the catalog as a 'fall-2026' collection with new URLs; where a matching variety appears in it, that is a separate listing with its own case (MYROSEWORL-004..007), not a continuation of this one. Case number, prior evidence and review status are unchanged."
+    },
+    {
+      "date": "2026-10-21 06:09 MST (America/Phoenix)",
+      "action": "Listing still removed (HTTP 404)",
+      "details": "Still absent and still HTTP 404. Flower Meadow Dream served 221 products today, its first appearance in a scheduled run since 2026-09-16. Removal was already confirmed on 2026-10-20; this run confirms it again. Last Verified stays at 2026-09-10. No Last Verified date is advanced by a check that did not see the listing."
     }
   ]
 }

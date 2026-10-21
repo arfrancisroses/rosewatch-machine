@@ -19,7 +19,7 @@
   "match_explanation": "The product title contains the full chart name \"The Most Beautiful\" as a phrase, inside a longer title.",
   "review_status": "New",
   "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-10-21 06:09 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 11:26 MST (America/Phoenix)",
   "seller_location": {
     "country": "Location not available",
@@ -161,6 +161,10 @@
       "date": "2026-10-20 11:26 MST (America/Phoenix)",
       "action": "Evidence screenshot captured",
       "details": "Full-page capture of https://springlandflowers.com/products/ligare-真彩230-领带-リガーレ-japanese-shrub-rose-2-years-old-1-gal-non-grafted-own-root saved to cases/SPRINGLAND-005/screenshots/SPRINGLAND-005_2026-10-20_1126.png (5,272,249 bytes)."
+    },
+    {
+      "date": "2026-10-21 06:09 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

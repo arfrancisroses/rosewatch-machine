@@ -371,6 +371,27 @@ def match_titles(items, active):
     return matches
 
 
+def url_key(url):
+    """A product URL reduced to what identifies the listing.
+
+    The host's www prefix is dropped, along with the scheme, a trailing slash
+    and the query. On 2026-10-21 the egress allowlist gained the www. forms, so
+    the crawler began reaching Hillside Rose Farm on www.hillsiderosefarm.com
+    instead of the apex. Every product URL then differed from the stored one by
+    four characters and four existing cases looked brand new. Comparing on the
+    raw string is what made that possible.
+    """
+    u = (url or "").strip()
+    u = u.split("#", 1)[0].split("?", 1)[0]
+    for scheme in ("https://", "http://"):
+        if u.startswith(scheme):
+            u = u[len(scheme):]
+            break
+    if u.startswith("www."):
+        u = u[4:]
+    return u.rstrip("/").lower()
+
+
 def existing_case_urls():
     cases = json.loads((REPO_ROOT / "cases" / "cases.json").read_text())
     out = {}
@@ -378,7 +399,7 @@ def existing_case_urls():
         detail = REPO_ROOT / "cases" / c["case_number"] / "case.json"
         if detail.exists():
             url = json.loads(detail.read_text()).get("product_url", "")
-            out[url.rstrip("/")] = c["case_number"]
+            out[url_key(url)] = c["case_number"]
     return out
 
 
@@ -418,7 +439,7 @@ def main():
             matches = match_titles(r["items"], active)
             total += r["count"]
             for m in matches:
-                if m["url"].rstrip("/") in existing:
+                if url_key(m["url"]) in existing:
                     continue
                 (cut_roses if m["cut_roses_only"] else new_matches).append({"site": label, **m})
             results[label] = {k: r[k] for k in ("url_used", "url_attempted", "platform", "count", "error")}

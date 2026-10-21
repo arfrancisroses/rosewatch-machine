@@ -20,7 +20,7 @@
   "match_explanation": "The product title contains the full chart name \"Pride of Jane\" as a phrase, inside a longer title.",
   "review_status": "New",
   "first_date_found": "2026-10-01 11:42 MST (America/Phoenix)",
-  "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-10-21 06:09 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 11:47 MST (America/Phoenix)",
   "units_in_stock_at_capture": 0,
   "seller_sku": "SQ0738689",
@@ -130,6 +130,10 @@
       "date": "2026-10-20 11:47 MST (America/Phoenix)",
       "action": "Evidence screenshot captured",
       "details": "Full-page capture of https://www.bloomladiesroses.com/shop/p/pride-of-jane-rose saved to cases/BLOOMLADIE-006/screenshots/BLOOMLADIE-006_2026-10-20_1147.png (4,687,359 bytes)."
+    },
+    {
+      "date": "2026-10-21 06:09 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

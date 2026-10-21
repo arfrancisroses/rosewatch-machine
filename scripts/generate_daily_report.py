@@ -549,7 +549,10 @@ def generate(run_date_str):
             header_bg=BAD,
         ))
     story.append(Spacer(1, 8))
-    story.append(Paragraph(f"<b>Screenshot capture:</b> {run['screenshot_limitation']}", styles["RWBodySmall"]))
+    # Optional: a run log without this key must not abort the day's report.
+    if run.get("screenshot_limitation"):
+        story.append(Paragraph(f"<b>Screenshot capture:</b> {run['screenshot_limitation']}",
+                               styles["RWBodySmall"]))
 
     story.append(Spacer(1, 14))
     story.append(HRFlowable(width="100%", thickness=0.5, color=LINE, spaceBefore=4, spaceAfter=6))

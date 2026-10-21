@@ -19,7 +19,7 @@
   "match_explanation": "The product title contains the full chart name \"Notre Dame\" as a phrase, inside a longer title.",
   "review_status": "New",
   "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-10-21 06:09 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 10:19 MST (America/Phoenix)",
   "seller_location": {
     "country": "Canada",
@@ -161,6 +161,10 @@
       "date": "2026-10-20 10:19 MST (America/Phoenix)",
       "action": "Evidence screenshot captured",
       "details": "Full-page capture of https://huniurosegarden.ca/products/dutch-cutting-rose-notre-dame saved to cases/HUNIUROSEG-013/screenshots/HUNIUROSEG-013_2026-10-20_1019.png (2,579,269 bytes)."
+    },
+    {
+      "date": "2026-10-21 06:09 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

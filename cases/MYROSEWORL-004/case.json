@@ -20,7 +20,7 @@
   "match_explanation": "The product title normalises exactly to the chart name \"Darlington\".",
   "review_status": "New",
   "first_date_found": "2026-10-20 09:12 MST (America/Phoenix)",
-  "last_verified": "2026-10-20 09:12 MST (America/Phoenix)",
+  "last_verified": "2026-10-21 06:09 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 09:32 MST (America/Phoenix)",
   "units_in_stock_at_capture": "Unlimited",
   "seller_sku": "SQ4334841",
@@ -98,6 +98,10 @@
       "date": "2026-10-20 09:32 MST (America/Phoenix)",
       "action": "Evidence screenshot captured",
       "details": "Full-page capture of https://www.myroseworld.com/shop/p/fall-2026-162 saved to cases/MYROSEWORL-004/screenshots/MYROSEWORL-004_2026-10-20_0932.png (550,522 bytes)."
+    },
+    {
+      "date": "2026-10-21 06:09 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

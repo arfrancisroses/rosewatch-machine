@@ -19,7 +19,7 @@
   "match_explanation": "The product title contains the single word \"Secret\", which is the whole of the chart entry. A one-word match can be coincidence rather than the variety -- needs a human read of the listing before it means anything.",
   "review_status": "New",
   "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-10-21 06:09 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 11:26 MST (America/Phoenix)",
   "seller_location": {
     "country": "Location not available",
@@ -161,6 +161,10 @@
       "date": "2026-10-20 11:26 MST (America/Phoenix)",
       "action": "Evidence screenshot captured",
       "details": "Full-page capture of https://springlandflowers.com/products/rose-victorias-secret-维多利亚的秘密-non-grafted-own-root-1-gal saved to cases/SPRINGLAND-004/screenshots/SPRINGLAND-004_2026-10-20_1126.png (5,060,683 bytes)."
+    },
+    {
+      "date": "2026-10-21 06:09 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

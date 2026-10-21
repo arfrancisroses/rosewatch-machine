@@ -20,7 +20,7 @@
   "match_explanation": "The product title contains the full chart name \"Just More!\" as a phrase, inside a longer title.",
   "review_status": "New",
   "first_date_found": "2026-10-12 06:18 MST (America/Phoenix)",
-  "last_verified": "2026-10-20 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-10-21 06:09 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 11:49 MST (America/Phoenix)",
   "units_in_stock_at_capture": null,
   "seller_sku": null,
@@ -106,6 +106,10 @@
       "date": "2026-10-20 11:49 MST (America/Phoenix)",
       "action": "Evidence screenshot captured",
       "details": "Full-page capture of https://your-roses.com/product/just-more-rose-2/ saved to cases/YOURROSES-073/screenshots/YOURROSES-073_2026-10-20_1149.png (1,454,222 bytes)."
+    },
+    {
+      "date": "2026-10-21 06:09 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

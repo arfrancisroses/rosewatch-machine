@@ -172,6 +172,11 @@
       "date": "2026-10-20 10:18 MST (America/Phoenix)",
       "action": "Evidence screenshot captured",
       "details": "Full-page capture of https://hillsiderosefarm.com/products/catalina-凯特琳娜-japan saved to cases/HILLSIDERO-004/screenshots/HILLSIDERO-004_2026-10-20_1018.png (2,485,637 bytes)."
+    },
+    {
+      "date": "2026-10-21 06:09 MST (America/Phoenix)",
+      "action": "Listing still removed (HTTP 404)",
+      "details": "Sixth consecutive run absent, and the listing's own URL returns HTTP 404 today. Hillside Rose Farm served 166 products, down from 178 on 2026-10-20. Last Verified stays at 2026-10-13. No Last Verified date is advanced by a check that did not see the listing."
     }
   ],
   "listing_availability": "NOT FOUND in the seller's catalog as of 2026-10-14 06:07 MST (America/Phoenix). Last confirmed present 2026-10-13 06:08 MST, so this is the first run in which it is missing. Evidence is its absence from hillsiderosefarm.com's own Shopify product feed, which served normally today at 160 products. The rendered product page itself could not be checked: the apex URL answers HTTP 301 to the www host, and www.hillsiderosefarm.com is refused by this environment's egress proxy at the CONNECT stage. So the listing is gone from the catalog; whether the page still renders for a public visitor is unconfirmed. Nothing is known about why it came down and nothing should be inferred."
