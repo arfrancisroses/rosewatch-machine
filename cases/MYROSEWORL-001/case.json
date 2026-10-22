@@ -62,6 +62,11 @@
       "date": "2026-10-21 06:09 MST (America/Phoenix)",
       "action": "Listing still removed (HTTP 404)",
       "details": "Still absent and still HTTP 404. Flower Meadow Dream served 221 products today, its first appearance in a scheduled run since 2026-09-16. Removal was already confirmed on 2026-10-20; this run confirms it again. Last Verified stays at 2026-09-10. No Last Verified date is advanced by a check that did not see the listing."
+    },
+    {
+      "date": "2026-10-22 06:06 MST (America/Phoenix)",
+      "action": "Listing still removed (HTTP 404)",
+      "details": "Flower Meadow Dream served 221 products today and this listing was not among them; its own URL returns HTTP 404. A restatement of a removal already confirmed, not a new event. Last Verified stays at 2026-09-10, the last date the listing was actually seen."
     }
   ]
 }

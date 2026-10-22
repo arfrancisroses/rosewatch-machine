@@ -173,6 +173,11 @@
       "date": "2026-10-21 06:09 MST (America/Phoenix)",
       "action": "Listing still removed (HTTP 404)",
       "details": "Still absent, now confirmed by HTTP 404 on the listing's own URL. Kate Roses served 61 products today, up from 53 on 2026-10-20, so the catalog is refilling without this listing. Last Verified stays at 2026-10-16. No Last Verified date is advanced by a check that did not see the listing."
+    },
+    {
+      "date": "2026-10-22 06:06 MST (America/Phoenix)",
+      "action": "Listing still removed (HTTP 404)",
+      "details": "Kate Roses served 62 products today and this listing was not among them; its own URL returns HTTP 404. A restatement of a removal already confirmed, not a new event. Last Verified stays at 2026-10-16, the last date the listing was actually seen."
     }
   ]
 }
