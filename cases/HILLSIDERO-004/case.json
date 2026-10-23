@@ -182,6 +182,11 @@
       "date": "2026-10-22 06:06 MST (America/Phoenix)",
       "action": "Listing still removed (HTTP 404)",
       "details": "Hillside Rose Farm served 166 products today and this listing was not among them; its own URL returns HTTP 404. A restatement of a removal already confirmed, not a new event. Last Verified stays at 2026-10-13, the last date the listing was actually seen."
+    },
+    {
+      "date": "2026-10-23 06:08 MST (America/Phoenix)",
+      "action": "Listing still removed (HTTP 404)",
+      "details": "Hillside Rose Farm served 165 products today and this listing was not among them; its own URL returns HTTP 404. A restatement of a removal already confirmed. Last Verified stays at 2026-10-13."
     }
   ],
   "listing_availability": "NOT FOUND in the seller's catalog as of 2026-10-14 06:07 MST (America/Phoenix). Last confirmed present 2026-10-13 06:08 MST, so this is the first run in which it is missing. Evidence is its absence from hillsiderosefarm.com's own Shopify product feed, which served normally today at 160 products. The rendered product page itself could not be checked: the apex URL answers HTTP 301 to the www host, and www.hillsiderosefarm.com is refused by this environment's egress proxy at the CONNECT stage. So the listing is gone from the catalog; whether the page still renders for a public visitor is unconfirmed. Nothing is known about why it came down and nothing should be inferred."

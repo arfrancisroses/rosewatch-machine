@@ -1,0 +1,92 @@
+{
+  "case_number": "HUNIUROSEG-021",
+  "site_code": "HUNIUROSEG",
+  "variety": "BARONESSE",
+  "matched_trademark": "BARONESSE",
+  "trademark_status": "Registered",
+  "trademark_status_as_written": "Registered",
+  "trademark_application_or_registration_no": "App. Ser. No. 98117709 (Reg. No.: 7593983)",
+  "breeder": "Rosen Tantau KG",
+  "seller_name": "Huniu Rose Garden",
+  "website_domain": "huniurosegarden.ca",
+  "product_url": "https://huniurosegarden.ca/products/germany-tantau-baronesse",
+  "exact_product_title": "Germany Tantau Baronesse",
+  "quoted_text": "Own roots 1 gallon pot, very hardy. Only for preorder 2027, finally sale.",
+  "price": "29.99",
+  "currency": "USD",
+  "price_note": null,
+  "quantity_or_form": "2027 preorder",
+  "match_classification": "Possible",
+  "match_explanation": "The product title contains the single word \"BARONESSE\", which is the whole of the chart entry. A one-word match can be coincidence rather than the variety -- it needs a human read of the listing before it means anything.",
+  "review_status": "New",
+  "first_date_found": "2026-10-23 06:07 MST (America/Phoenix)",
+  "last_verified": "2026-10-23 06:08 MST (America/Phoenix)",
+  "screenshot_captured_at": "2026-10-23 06:08 MST (America/Phoenix)",
+  "units_in_stock_at_capture": null,
+  "seller_sku": null,
+  "page_publication_date": "Date not available on page",
+  "page_update_date": "Date not available on page",
+  "seller_location": {
+    "country": "Canada",
+    "state_or_region": "Ontario",
+    "city": "North York (pick-up location stated on site)",
+    "source": "Site contact page: pick-up location \"North York\"; site states roses are grown \"in Ontario\" (huniurosegarden.ca)",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.67",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [
+    {
+      "file": "cases/HUNIUROSEG-021/screenshots/HUNIUROSEG-021_2026-10-23_0608.png",
+      "captured_at": "2026-10-23 06:08 MST (America/Phoenix)",
+      "source_url": "https://huniurosegarden.ca/products/germany-tantau-baronesse",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 2462594,
+      "product_image_box": {
+        "x": 151,
+        "y": 161,
+        "w": 713,
+        "h": 926.546875,
+        "detail_bottom": 1875.75,
+        "dpr": 1
+      },
+      "images_total": 18,
+      "images_failed_to_load": 3,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing. No listing content was altered, added or removed.",
+      "image_load_note": "3 of 18 images on the page did not load and appear blank in this capture. Their host is refused by this environment's network policy, not by the seller. The capture is kept for its text, price and layout; it is not a complete picture of the listing as a buyer saw it."
+    }
+  ],
+  "access_or_research_limitations": [
+    "Full-page screenshot could not be captured: the headless browser available in this session cannot complete a connection through this environment's network egress proxy. Evidence here is the product feed's own title, description and price as served by the site on the date shown."
+  ],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-10-23, which matches product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"Registered\". The product title contains the single word \"BARONESSE\", which is the whole of the chart entry. A one-word match can be coincidence rather than the variety -- it needs a human read of the listing before it means anything.\n\nObservation for human review, recorded 2026-10-23: the match classification is Possible because that rating is decided mechanically -- the chart entry \"BARONESSE\" is a single word, and a single ordinary word inside a longer title can be coincidence. In this case the surrounding words are not neutral: the listing is titled \"Germany Tantau Baronesse\", and Rosen Tantau KG is the registered owner of BARONESSE (Reg. No. 7593983) and the breeder on this case record. The seller naming the breeder alongside the mark is a fact about the listing, not a finding of infringement, and the classifier cannot see it because it compares names only. Flagged so the Possible rating is not read as the whole picture.",
+  "history": [
+    {
+      "date": "2026-10-23 06:07 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created from that day's crawl; chart status carried through unchanged."
+    },
+    {
+      "date": "2026-10-23 06:08 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://huniurosegarden.ca/products/germany-tantau-baronesse saved to cases/HUNIUROSEG-021/screenshots/HUNIUROSEG-021_2026-10-23_0608.png (2,462,594 bytes)."
+    },
+    {
+      "date": "2026-10-23 06:08 MST (America/Phoenix)",
+      "action": "Investigator note added",
+      "details": "Recorded that the listing title names Rosen Tantau, the registered owner of the matched mark. Classification left at Possible; the rating rule is mechanical and was not overridden."
+    },
+    {
+      "date": "2026-10-23 06:08 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
+    }
+  ]
+}
