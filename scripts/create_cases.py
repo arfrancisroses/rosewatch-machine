@@ -452,12 +452,14 @@ def main():
             "seller_location": loc,
             "website_host": host,
             "evidence_screenshots": [],
-            "access_or_research_limitations": [
-                "Full-page screenshot could not be captured: the headless browser available in this "
-                "session cannot complete a connection through this environment's network egress proxy. "
-                "Evidence here is the product feed's own title, description and price as served by the "
-                "site on the date shown.",
-            ],
+            # Do NOT seed a screenshot limitation here. This used to assert that the
+            # capture had failed on our network policy, which was written before any
+            # capture had been attempted -- and from 2026-10-19, when captures started
+            # working, it was simply false: 332 cases carried it alongside a screenshot
+            # filed right next to it, and the 52 gap cases carried it above the real
+            # reason (the seller's blanking, a membership wall, a 404). The capture
+            # script records the actual outcome; nothing is claimed before it runs.
+            "access_or_research_limitations": [],
             "investigator_notes": (
                 f"Found by the daily catalog crawl on {run_date}, which matches product titles against "
                 f"every name in the Master Trademark Filing Chart rather than Registered and Pending only "
