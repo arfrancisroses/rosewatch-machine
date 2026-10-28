@@ -1,0 +1,81 @@
+{
+  "case_number": "SPRINGLAND-009",
+  "site_code": "SPRINGLAND",
+  "variety": "Rallye des Gazelles",
+  "matched_trademark": "Rallye des Gazelles",
+  "trademark_status": "Pending",
+  "trademark_status_as_written": "Pending",
+  "trademark_application_or_registration_no": "App. Ser. No. 50173893 (Reg. No.: NYA)",
+  "breeder": "Société Nouvelle Pépinières et Roseraies Georges Delbard SAS",
+  "seller_name": "Springland Flowers",
+  "website_domain": "springlandflowers.com",
+  "product_url": "https://springlandflowers.com/products/spf137-extremely-similar-to-rallye-des-gazelles-瞪羚拉力赛-floribunda-rose-non-grafted-own-root",
+  "exact_product_title": "#SPF137，Rallye des Gazelles 瞪羚拉力赛，Floribunda Rose, Non-Grafted/Own Root.",
+  "quoted_text": "Apricot - brown, cream . Strong fragrance. up to 60 petals. Average diameter 8-10cm. Large, quartered, rosette bloom form. Blooms in flushes throughout the season. Upright. Dark green foliage. Height: 80cm to 100cm. Width: 60 to 80cm. Hardiness Zone: 6-10 SHIPS IN ORIGINAL PLANTER: To prevent root damage, all of our plants will be shipped in their original planters. Please be aware of the weather in your area. We...",
+  "price": "65.98",
+  "currency": "USD",
+  "price_note": null,
+  "quantity_or_form": "Not stated in the product feed",
+  "match_classification": "Strong",
+  "match_explanation": "The product title contains the full chart name \"Rallye des Gazelles\" as a phrase, inside a longer title.",
+  "review_status": "New",
+  "first_date_found": "2026-10-28 13:06 MST (America/Phoenix)",
+  "last_verified": "2026-10-28 13:06 MST (America/Phoenix)",
+  "screenshot_captured_at": "2026-10-28 13:11 MST (America/Phoenix)",
+  "units_in_stock_at_capture": null,
+  "seller_sku": null,
+  "page_publication_date": "Date not available on page",
+  "page_update_date": "Date not available on page",
+  "seller_location": {
+    "country": "Location not available",
+    "state_or_region": "Location not available",
+    "city": "Location not available",
+    "source": "Checked homepage and footer -- no location, address, or shipping-origin information is shown anywhere on the site. Prior known-sites research also left this field blank.",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed and site footer)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.67",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [
+    {
+      "file": "cases/SPRINGLAND-009/screenshots/SPRINGLAND-009_2026-10-28_1311.png",
+      "captured_at": "2026-10-28 13:11 MST (America/Phoenix)",
+      "source_url": "https://springlandflowers.com/products/spf137-extremely-similar-to-rallye-des-gazelles-瞪羚拉力赛-floribunda-rose-non-grafted-own-root",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 4006370,
+      "product_image_box": {
+        "x": 135.421875,
+        "y": 234.09375,
+        "w": 684.65625,
+        "h": 1026.984375,
+        "detail_bottom": 3214.828125,
+        "dpr": 1
+      },
+      "images_total": 39,
+      "images_failed_to_load": 6,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing; dismissed: shopify-chat.needsclick. No listing content was altered, added or removed.",
+      "image_load_note": "6 of 39 images on the page did not load and appear blank in this capture. Their host is refused by this environment's network policy, not by the seller. The capture is kept for its text, price and layout; it is not a complete picture of the listing as a buyer saw it."
+    }
+  ],
+  "access_or_research_limitations": [],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-10-28, which matches product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"Pending\". The product title contains the full chart name \"Rallye des Gazelles\" as a phrase, inside a longer title.",
+  "history": [
+    {
+      "date": "2026-10-28 13:06 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created from that day's crawl; chart status carried through unchanged."
+    },
+    {
+      "date": "2026-10-28 13:11 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://springlandflowers.com/products/spf137-extremely-similar-to-rallye-des-gazelles-瞪羚拉力赛-floribunda-rose-non-grafted-own-root saved to cases/SPRINGLAND-009/screenshots/SPRINGLAND-009_2026-10-28_1311.png (4,006,370 bytes)."
+    }
+  ]
+}

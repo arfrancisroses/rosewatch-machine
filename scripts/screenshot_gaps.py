@@ -21,8 +21,14 @@ def reason_for(case):
     if not attempts:
         return "no capture attempted yet"
     last = attempts[-1]
+    # Test the seller's blanking first, and on several phrasings: the note is
+    # assembled from an exception message and has been truncated mid-phrase before.
     if ("anti-automation" in last or "innerHTML" in last
-            or "detects an automated browser" in last):
+            or "detects an automated browser" in last
+            or "detects an autom" in last
+            or "blanks the document" in last
+            or "rendered nothing" in last
+            or "characters of text" in last):
         return "seller blocks automated browsing -- manual capture needed"
     if "members only" in last or "membership wall" in last:
         return "seller's membership login wall -- not bypassed"
@@ -30,7 +36,11 @@ def reason_for(case):
         return "listing removed by the seller -- nothing left to photograph"
     if "HTTP 429" in last:
         return "seller rate-limited us -- retry on a later run"
-    if "egress proxy" in last or "Tunnel connection" in last or "403" in last:
+    # Only our policy refusing the seller's OWN page counts here. A note that
+    # merely lists refused third-party sub-resources (analytics, ads, telemetry)
+    # is not that, and reading it as such blamed us for a seller's blanking.
+    if "sub-resources" not in last and ("egress proxy" in last
+                                        or "Tunnel connection" in last or "403" in last):
         return "our network policy refuses the seller's pages"
     return "last capture attempt failed"
 

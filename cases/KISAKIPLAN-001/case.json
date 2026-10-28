@@ -3,8 +3,8 @@
   "site_code": "KISAKIPLAN",
   "variety": "Cappuccino",
   "matched_trademark": "Cappuccino",
-  "trademark_status": "Pending",
-  "trademark_application_or_registration_no": "App. Ser. No. 99779822 (Reg. No.: NYA)",
+  "trademark_status": "Registered",
+  "trademark_application_or_registration_no": "App. Ser. No. 99779822 (Reg. No.: 8523591)",
   "breeder": "Rosen Tantau KG",
   "seller_name": "Kisaki Plant",
   "website_domain": "kisakiplant.com",
@@ -207,6 +207,12 @@
     {
       "date": "2026-10-28 06:23 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-10-28 13:10 MST (America/Phoenix)",
+      "action": "Trademark status changed: Pending -> Registered",
+      "details": "Chart status updated from Pending to Registered, and the registration number recorded, on ingesting the Master Trademark Filing Chart supplied by the user on 2026-10-28 (original filename 93000_Master_Trademark_Filing_Chart_2.xlsx; filed as data/sources/2026-10-28_MasterTrademarkFilingChart.xlsx). The chart gives Cappuccino U.S. Reg. No. 8523591, registered 2026-10-27, owner/breeder Rosen Tantau KG, goods narrowed from \"Live plants; roses\" to \"Roses\". This records a change in the trademark record only. Nothing about this listing, its evidence or its review status changed, and the change is not a finding of infringement."
     }
-  ]
+  ],
+  "trademark_status_as_written": "Registered"
 }

@@ -1,0 +1,81 @@
+{
+  "case_number": "MUSEROSES-042",
+  "site_code": "MUSEROSES",
+  "variety": "Rallye des Gazelles",
+  "matched_trademark": "Rallye des Gazelles",
+  "trademark_status": "Pending",
+  "trademark_status_as_written": "Pending",
+  "trademark_application_or_registration_no": "App. Ser. No. 50173893 (Reg. No.: NYA)",
+  "breeder": "Société Nouvelle Pépinières et Roseraies Georges Delbard SAS",
+  "seller_name": "Muse Roses",
+  "website_domain": "museroses.com",
+  "product_url": "https://museroses.com/products/rallye-des-gazelles-rose",
+  "exact_product_title": "Rallye des Gazelles Rose",
+  "quoted_text": "Rallye des Gazelles Rose – French Apricot-Colored Cut Rose with Deep Center Shade Rallye des Gazelles Rose – French Apricot-Colored Cut Rose with Deep Center Shade 🌸 🌸 Rallye des Gazelles Rose – Premium French Apricot-Colored Cut Rose with Deep Center Shade | 2-Year-Old Live Plant for Gardens & Containers 🌿 Variety Information • Name: Rallye des Gazelles Rose (French Cut Rose) • Origin: France (Quality French Rose...",
+  "price": "68.00",
+  "currency": "USD",
+  "price_note": null,
+  "quantity_or_form": "Not stated in the product feed",
+  "match_classification": "Strong",
+  "match_explanation": "The product title contains the full chart name \"Rallye des Gazelles\" as a phrase, inside a longer title.",
+  "review_status": "New",
+  "first_date_found": "2026-10-28 13:06 MST (America/Phoenix)",
+  "last_verified": "2026-10-28 13:06 MST (America/Phoenix)",
+  "screenshot_captured_at": "2026-10-28 13:10 MST (America/Phoenix)",
+  "units_in_stock_at_capture": null,
+  "seller_sku": null,
+  "page_publication_date": "Date not available on page",
+  "page_update_date": "Date not available on page",
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Texas",
+    "city": "Buda",
+    "source": "Not confirmed directly this run -- the site now redirects to molarose.com, which was blocked by this session's network egress policy. Carried over from prior known-sites research (data/known_sites.json), which separately notes the stated Texas office address resembles a home address -- flagged, not confirmed.",
+    "estimated": true
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed under the museroses.com domain)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.65",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [
+    {
+      "file": "cases/MUSEROSES-042/screenshots/MUSEROSES-042_2026-10-28_1310.png",
+      "captured_at": "2026-10-28 13:10 MST (America/Phoenix)",
+      "source_url": "https://museroses.com/products/rallye-des-gazelles-rose",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 1040082,
+      "product_image_box": {
+        "x": 115,
+        "y": 302,
+        "w": 671,
+        "h": 671,
+        "detail_bottom": 2688.5625,
+        "dpr": 1
+      },
+      "images_total": 111,
+      "images_failed_to_load": 74,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing; dismissed: div.background-overlay1, div.background-overlay, shopify-chat.needsclick. No listing content was altered, added or removed.",
+      "image_load_note": "74 of 111 images on the page did not load and appear blank in this capture. Their host is refused by this environment's network policy, not by the seller. The capture is kept for its text, price and layout; it is not a complete picture of the listing as a buyer saw it."
+    }
+  ],
+  "access_or_research_limitations": [],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-10-28, which matches product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"Pending\". The product title contains the full chart name \"Rallye des Gazelles\" as a phrase, inside a longer title.",
+  "history": [
+    {
+      "date": "2026-10-28 13:06 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created from that day's crawl; chart status carried through unchanged."
+    },
+    {
+      "date": "2026-10-28 13:10 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://museroses.com/products/rallye-des-gazelles-rose saved to cases/MUSEROSES-042/screenshots/MUSEROSES-042_2026-10-28_1310.png (1,040,082 bytes)."
+    }
+  ]
+}

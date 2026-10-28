@@ -1,6 +1,6 @@
 # Trademarks
 
-Source file: `2026-09-10_MasterTrademarkFilingChart.xlsx` — imported 2026-10-01.
+Source file: `2026-10-28_MasterTrademarkFilingChart.xlsx` — imported 2026-10-28.
 Total records: 275.
 
 Fields preserve the original wording from the Master Trademark Filing Chart. Rows flagged **Needs Review** have missing, unclear, duplicate, or conflicting source data and must not be silently corrected — see the reason(s) given.
@@ -99,12 +99,9 @@ Fields preserve the original wording from the Master Trademark Filing Chart. Row
 | First Look | To Be Filed | 93002.0289999996 |  | NYA |  | NYA |  |  |
 | Forever Parasol | To Be Filed | 93002.0299999995 |  | NYA |  | NYA |  |  |
 | Gelato | To Be Filed | 93002.023 |  | NYA |  | NYA |  |  |
-| Gelato | To Be Filed | 93002.034999999 |  | NYA |  | NYA |  | Yes — Duplicate trademark name also on source row 52 |
 | Gentle Trendsetter | To Be Filed | 93002.0359999989 |  | NYA |  | NYA |  |  |
 | Golden Mustard | To Be Filed | 93002.014 |  | NYA |  | NYA |  |  |
-| Golden Mustard | To Be Filed | 93002.0309999994 |  | NYA |  | NYA |  | Yes — Duplicate trademark name also on source row 44 |
 | Golden Trendsetter | To Be Filed | 93002.005 |  | NYA | N/A | NYA |  |  |
-| Golden Trendsetter (see 00500) | To Be Filed | 93002.0319999993 |  | NYA |  | NYA |  |  |
 | Golden Veil | To Be Filed | 93002.0329999992 |  | NYA |  | NYA |  |  |
 | Graceful | To Be Filed | 93002.0339999991 |  | NYA |  | NYA |  |  |
 | Holiday Island 'Galapagos' | To Be Filed | 93002.0369999988 |  | NYA |  | NYA |  |  |
@@ -140,7 +137,6 @@ Fields preserve the original wording from the Master Trademark Filing Chart. Row
 | Sunset Parasol | To Be Filed | 93002.0719999953 |  | NYA |  | NYA |  |  |
 | Swanky Veil | To Be Filed | 93002.0659999959 |  | NYA |  | NYA |  |  |
 | Sweet Flow | To Be Filed | 93002.013 |  | NYA |  | NYA |  |  |
-| Sweet Flow | To Be Filed | 93002.0669999958 |  | NYA |  | NYA |  | Yes — Duplicate trademark name also on source row 43 |
 | Sweet Mantiquilla | To Be Filed | 93002.0679999957 |  | NYA |  | NYA |  |  |
 | Symbol | To Be Filed | 93002.011 |  | NYA |  | NYA |  |  |
 | The Artist's Light | To Be Filed | 93002.0689999956 |  | NYA |  | NYA |  |  |
@@ -152,6 +148,7 @@ Fields preserve the original wording from the Master Trademark Filing Chart. Row
 
 | Rose/Variety | Status | Docket No. | App. Ser. No. | Reg. No. | Filing Date | Registration Date | Authorized Seller | Needs Review |
 |---|---|---|---|---|---|---|---|---|
+| Adventure | Pending | 93003.034 | 50173849 | N/A | 2026-10-21T00:00:00 | N/A |  |  |
 | Bloomsbury | Pending | 93003.003 | 50051501 | N/A | 2026-08-14T00:00:00 | N/A |  |  |
 | Bourbon Street | Pending | 93003.001 | 50051493 | N/A | 2026-08-14T00:00:00 | N/A |  |  |
 | Bridgerton | Pending | 93003.005 | 50051527 | N/A | 2026-08-14T00:00:00 | N/A |  |  |
@@ -274,14 +271,14 @@ Fields preserve the original wording from the Master Trademark Filing Chart. Row
 | Alsterwasser | Pending | 93004.005 | 99779594 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
 | Anni | Pending | 93004.006 | 99779625 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
 | Anuschka | Pending | 93004.0089999999 | 99779653 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
-| Ashley | To Be Filed | 93004.0439999999 |  | NYA |  | N/A | April & Ashley | Yes — Duplicate trademark name also on source row 142 |
+| Ashley | To Be Filed | 93004.0439999999 |  | NYA |  | N/A | April & Ashley | Yes — Duplicate trademark name also on source row 146 |
 | BARONESSE | Registered | 93004.002 | 98117709 | 7593983 | 2023-08-04T00:00:00 | 2024-12-10T00:00:00 | ? |  |
 | Barista | N/A | 93004.0099999999 | N/A | NYA | N/A | N/A | April & Ashley |  |
 | Belle de Noir | Pending | 93004.0109999999 | 99779689 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
 | Berliner Morgen | Pending | 93004.0139999999 | 99779731 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
 | Berliner Sonne | Pending | 93004.0149999999 | 99779754 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
 | Bumblebee | Pending | 93004.0159999998 | 99779786 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
-| Cappuccino | Pending | 93004.0169999998 | 99779822 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
+| Cappuccino | Registered | 93004.0169999998 | 99779822 | 8523591 | 2026-04-22T00:00:00 | 2026-10-27T00:00:00 | April & Ashley |  |
 | Capri | To Be Filed as ITU | 93004.0119999999 | N/A | NYA | N/A | N/A | ? |  |
 | Circle of Life | Abandoned |  | 78654347 | 3098144 | 2005-06-20T00:00:00 | 2026-05-30T00:00:00 |  |  |
 | Circle of Life (refile new application) | Pending | 93004.0179999998 | 99939797 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
@@ -309,7 +306,7 @@ Fields preserve the original wording from the Master Trademark Filing Chart. Row
 | Pacific Blue (not on site?) | ? | 93004.0459999999 |  | NYA |  | N/A | April & Ashley | Yes — Unrecognized status value: '?' |
 | Perennial Domino | Pending | 93004.0349999999 | 99940038 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
 | Pink Ashley | To Be Filed | 93004.0449999999 |  | NYA |  | N/A | April & Ashley |  |
-| Pink Piano | Pending | 93004.0359999999 | 99794198 | NYA | 2026-04-29T00:00:00 | N/A | April & Ashley |  |
+| Pink Piano | Registered | 93004.0359999999 | 99794198 | 8523676 | 2026-04-29T00:00:00 | 2026-10-27T00:00:00 | April & Ashley |  |
 | Polar Star | To Be Filed | 93004.0369999999 |  |  |  |  | April & Ashley |  |
 | Seena's Petals of Courage | Pending | 93004.0399999999 | 99794177 | NYA | 2026-04-29T00:00:00 | N/A | April & Ashley |  |
 | Shania Twain -- do we have consent to file? |  | 93004.059 |  |  |  |  |  | Yes — Missing status |
@@ -325,7 +322,7 @@ Fields preserve the original wording from the Master Trademark Filing Chart. Row
 | Starlet Beauty Natalie | Pending | 93004.05 | 99939436 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
 | Theodor Fontane Rose | Pending | 93004.0409999999 | 99940057 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
 | Tropicana | To Be Filed | 93004.0129999999 | N/A | NYA | N/A | N/A | April & Ashley |  |
-| Wedding Piano | Pending | 93004.0419999999 | 99794217 | NYA | 2026-04-29T00:00:00 | N/A | April & Ashley |  |
+| Wedding Piano | Registered | 93004.0419999999 | 99794217 | 8512579 | 2026-04-29T00:00:00 | 2026-10-20T00:00:00 | April & Ashley |  |
 | White Ashley | To Be Filed | 93004.0069999999 | N/A | NYA | N/A | N/A | April & Ashley |  |
 | Wildberry | Pending | 93004.0199999998 | 99779843 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
 
@@ -374,6 +371,7 @@ Fields preserve the original wording from the Master Trademark Filing Chart. Row
 | Garden Julietta Cream | Pending | 93001.011 | 99751146 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
 | Jardin Couture | Pending | 93001.012 | 99751166 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
 | Julie Andrews | DO NOT FILE | DO NOT FILE |  |  |  |  | April & Ashley |  |
+| Le Temps des Cerises | Pending | 93001.027 | 50173919 | NYA | 2026-10-21T00:00:00 | NYA |  |  |
 | Marc Chagall | Pending | 93001.013 | 99785477 | NYA | 2026-04-24T00:00:00 | NYA | April & Ashley |  |
 | Maurice Utrillo | Registered | 93001.014 | 97330478 | 7296592 | 2022-03-25T00:00:00 | 2024-02-06T00:00:00 | April & Ashley | Yes — Application/serial number 97330478 is also used by 'Moonlight in Paris' (source row 20). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing.; Registration number 7296592 is also used by 'Moonlight in Paris' (source row 20). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing. |
 | Monsieur | Pending | 93001.015 | 99751179 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
@@ -386,7 +384,9 @@ Fields preserve the original wording from the Master Trademark Filing Chart. Row
 | Pink O'Hara | Pending | 93001.002 | 99751092 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
 | Pont des Arts | Pending | 93001.0209999999 | 99751240 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
 | Princeses Astrid de Belgique -- LIVING PERSON | To Be Filed | 93001.0219999999 |  |  |  |  | April & Ashley |  |
+| Rallye des Gazelles | Pending | 93001.025 | 50173893 | NYA | 2026-10-21T00:00:00 | NYA |  |  |
 | Rue Saint-Honoré | Pending | 93001.0229999999 | 99751265 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
+| Sandrine Kiberlain | NYF | 93001.026 |  | NYA |  | NYA |  | Yes — Unrecognized status value: 'NYF' |
 | Velours de Nuit | Pending | 93001.0239999999 | 99751291 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
 | White O'Hara | Pending | 93001.001 | 99751057 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
 

@@ -1,0 +1,81 @@
+{
+  "case_number": "ROSEEXPLOS-076",
+  "site_code": "ROSEEXPLOS",
+  "variety": "Rallye des Gazelles",
+  "matched_trademark": "Rallye des Gazelles",
+  "trademark_status": "Pending",
+  "trademark_status_as_written": "Pending",
+  "trademark_application_or_registration_no": "App. Ser. No. 50173893 (Reg. No.: NYA)",
+  "breeder": "Société Nouvelle Pépinières et Roseraies Georges Delbard SAS",
+  "seller_name": "Rose Explosion",
+  "website_domain": "roseexplosion.com",
+  "product_url": "https://roseexplosion.com/products/rallye-des-gazelles",
+  "exact_product_title": "Rallye des Gazelles Rose Plant｜瞪羚拉力赛",
+  "quoted_text": "Name: Rallye des Gazelles Type: Cut Rose/Shrub Rose Origin: Bred in France Plant: 2-year-old live plant with strong roots. Plant height:100cm Fragrance: Medium fruit and rose aromas Flower: Size 10cm｜The flower is round with a high center at first, then turns into a lotus-shaped apricot flower with a darker middle fragrance and up to 60 petals. Characteristics: Repeats blooming in multiple seasons,good disease...",
+  "price": "69.00",
+  "currency": "USD",
+  "price_note": null,
+  "quantity_or_form": "Not stated in the product feed",
+  "match_classification": "Strong",
+  "match_explanation": "The product title contains the full chart name \"Rallye des Gazelles\" as a phrase, inside a longer title.",
+  "review_status": "New",
+  "first_date_found": "2026-10-28 13:06 MST (America/Phoenix)",
+  "last_verified": "2026-10-28 13:06 MST (America/Phoenix)",
+  "screenshot_captured_at": "2026-10-28 13:11 MST (America/Phoenix)",
+  "units_in_stock_at_capture": null,
+  "seller_sku": null,
+  "page_publication_date": "Date not available on page",
+  "page_update_date": "Date not available on page",
+  "seller_location": {
+    "country": "China (Estimated)",
+    "state_or_region": "Not available on page",
+    "city": "Not available on page",
+    "source": "Estimated from prior known-sites research (data/known_sites.json), which notes this seller ships from China. The site's own Contact page returned 404 this run and the homepage shows only a phone number with no geographic text.",
+    "estimated": true
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.66",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [
+    {
+      "file": "cases/ROSEEXPLOS-076/screenshots/ROSEEXPLOS-076_2026-10-28_1311.png",
+      "captured_at": "2026-10-28 13:11 MST (America/Phoenix)",
+      "source_url": "https://roseexplosion.com/products/rallye-des-gazelles",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 1589622,
+      "product_image_box": {
+        "x": 101,
+        "y": 267.515625,
+        "w": 583,
+        "h": 583,
+        "detail_bottom": 1316.78125,
+        "dpr": 1
+      },
+      "images_total": 122,
+      "images_failed_to_load": 24,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing; dismissed: shopify-chat.needsclick. No listing content was altered, added or removed.",
+      "image_load_note": "24 of 122 images on the page did not load and appear blank in this capture. Their host is refused by this environment's network policy, not by the seller. The capture is kept for its text, price and layout; it is not a complete picture of the listing as a buyer saw it."
+    }
+  ],
+  "access_or_research_limitations": [],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-10-28, which matches product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"Pending\". The product title contains the full chart name \"Rallye des Gazelles\" as a phrase, inside a longer title.",
+  "history": [
+    {
+      "date": "2026-10-28 13:06 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created from that day's crawl; chart status carried through unchanged."
+    },
+    {
+      "date": "2026-10-28 13:11 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://roseexplosion.com/products/rallye-des-gazelles saved to cases/ROSEEXPLOS-076/screenshots/ROSEEXPLOS-076_2026-10-28_1311.png (1,589,622 bytes)."
+    }
+  ]
+}

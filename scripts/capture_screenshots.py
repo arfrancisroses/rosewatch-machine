@@ -361,9 +361,21 @@ def main():
             except Exception as e:
                 if os.path.exists(out):
                     os.remove(out)
-                detail = f"{type(e).__name__}: {str(e)[:200]}"
+                # Keep the whole diagnosis. Truncating at 200 characters once cut
+                # "...detects an automated browser" mid-word on HIGHGARDEN-047, and
+                # screenshot_gaps.py reads that phrase to tell the seller's blanking
+                # apart from a network problem -- so the cut silently reclassified the
+                # gap as ours. Give it room, and cut on a word boundary if it must cut.
+                reason = str(e)
+                if len(reason) > 600:
+                    reason = reason[:600].rsplit(" ", 1)[0] + "..."
+                detail = f"{type(e).__name__}: {reason}"
                 if blocked:
-                    detail += (" | sub-resources refused by this environment's egress proxy: "
+                    # These are third-party scripts the page pulls in (analytics, ads,
+                    # error reporting), not the listing itself. Say so, so this never
+                    # reads as the seller's page having been refused to us.
+                    detail += (" | third-party sub-resources (analytics/ads/telemetry, not the "
+                               "listing itself) were refused by this environment's egress proxy: "
                                + ", ".join(sorted(blocked)[:6]))
                 msg = (f"Screenshot attempt failed {stamp(now)}: {detail}. No image was kept; "
                        f"this case has no screenshot rather than a blank one.")

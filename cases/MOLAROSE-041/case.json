@@ -1,0 +1,81 @@
+{
+  "case_number": "MOLAROSE-041",
+  "site_code": "MOLAROSE",
+  "variety": "Le Temps des Cerises",
+  "matched_trademark": "Le Temps des Cerises",
+  "trademark_status": "Pending",
+  "trademark_status_as_written": "Pending",
+  "trademark_application_or_registration_no": "App. Ser. No. 50173919 (Reg. No.: NYA)",
+  "breeder": "Société Nouvelle Pépinières et Roseraies Georges Delbard SAS",
+  "seller_name": "Mola Rose",
+  "website_domain": "molarose.com",
+  "product_url": "https://molarose.com/products/le-temps-des-cerises-rose",
+  "exact_product_title": "Le Temps Des Cerises Rose",
+  "quoted_text": ".rose-detail-minimal { font-family: inherit; color: #2b2b2b; line-height: 1.75; font-size: 16px; } .rose-detail-minimal h2 { font-size: 24px; margin: 34px 0 14px; color: #222; } .rose-summary { border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; padding: 24px 0; margin: 20px 0 30px; } .rose-keywords span { border: 1px solid #ddd; border-radius: 999px; padding: 6px 12px; font-size: 13px; margin-right...",
+  "price": "68.00",
+  "currency": "USD",
+  "price_note": null,
+  "quantity_or_form": "Not stated in the product feed",
+  "match_classification": "Strong",
+  "match_explanation": "The product title contains the full chart name \"Le Temps des Cerises\" as a phrase, inside a longer title.",
+  "review_status": "New",
+  "first_date_found": "2026-10-28 13:06 MST (America/Phoenix)",
+  "last_verified": "2026-10-28 13:06 MST (America/Phoenix)",
+  "screenshot_captured_at": "2026-10-28 13:09 MST (America/Phoenix)",
+  "units_in_stock_at_capture": null,
+  "seller_sku": null,
+  "page_publication_date": "Date not available on page",
+  "page_update_date": "Date not available on page",
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Wyoming (published) -- see note",
+    "city": "Sheridan (published) -- see note",
+    "source": "Published on the site itself: contact-information, privacy and shipping policy pages all give \"Mola Rose, 30 N Gould St, Sheridan WY 82801, US\" with support@molarose.com. The footer adds that the website \"is Jointly Operated By Molarose, 30 N Gould St, Sheridan, WY 82801, United States\" and \"TELOS TRADING LIMITED, 134 Corfield St, London, England, E2 0DS\". NOTE, as a fact about the address and not a claim about this seller: 30 N Gould St, Sheridan WY 82801 is a widely used commercial registered-agent / mail-forwarding address shared by a large number of unrelated companies, so it identifies the entity's agent of record rather than any growing, warehouse or shipping location. Where the plants themselves are held is not stated anywhere on the site. Ships only within the United States (shipping policy).",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc.",
+    "cdn_or_proxy": "cdn.shopify.com",
+    "server_ip": "23.227.38.65 (A), within Shopify's 23.227.38.0/24 range; 2620:127:f00f:5:: (AAAA), Shopify",
+    "ip_geolocation": "Not determined",
+    "registrar": "Not determined -- RDAP/whois endpoints (rdap.org, rdap.verisign.com) are refused by this environment's network egress policy",
+    "hosting_country": "Not determined"
+  },
+  "evidence_screenshots": [
+    {
+      "file": "cases/MOLAROSE-041/screenshots/MOLAROSE-041_2026-10-28_1309.png",
+      "captured_at": "2026-10-28 13:09 MST (America/Phoenix)",
+      "source_url": "https://molarose.com/products/le-temps-des-cerises-rose",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 1365468,
+      "product_image_box": {
+        "x": 115,
+        "y": 302,
+        "w": 671,
+        "h": 671,
+        "detail_bottom": 3125.8125,
+        "dpr": 1
+      },
+      "images_total": 94,
+      "images_failed_to_load": 62,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing; dismissed: div.background-overlay1, div.background-overlay, shopify-chat.needsclick. No listing content was altered, added or removed.",
+      "image_load_note": "62 of 94 images on the page did not load and appear blank in this capture. Their host is refused by this environment's network policy, not by the seller. The capture is kept for its text, price and layout; it is not a complete picture of the listing as a buyer saw it."
+    }
+  ],
+  "access_or_research_limitations": [],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-10-28, which matches product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"Pending\". The product title contains the full chart name \"Le Temps des Cerises\" as a phrase, inside a longer title.",
+  "history": [
+    {
+      "date": "2026-10-28 13:06 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created from that day's crawl; chart status carried through unchanged."
+    },
+    {
+      "date": "2026-10-28 13:09 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://molarose.com/products/le-temps-des-cerises-rose saved to cases/MOLAROSE-041/screenshots/MOLAROSE-041_2026-10-28_1309.png (1,365,468 bytes)."
+    }
+  ]
+}

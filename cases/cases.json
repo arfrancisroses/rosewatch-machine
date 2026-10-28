@@ -9,15 +9,15 @@
     },
     "ergongzy.com": {
       "site_code": "ERGONGZY",
-      "next_sequence": 26
+      "next_sequence": 28
     },
     "highgardenroses.com": {
       "site_code": "HIGHGARDEN",
-      "next_sequence": 47
+      "next_sequence": 48
     },
     "huniurosegarden.ca": {
       "site_code": "HUNIUROSEG",
-      "next_sequence": 22
+      "next_sequence": 23
     },
     "kateroses.com": {
       "site_code": "KATEROSES",
@@ -29,7 +29,7 @@
     },
     "museroses.com": {
       "site_code": "MUSEROSES",
-      "next_sequence": 41
+      "next_sequence": 43
     },
     "oneloveroseandgardens.com": {
       "site_code": "ONELOVEROS",
@@ -37,15 +37,15 @@
     },
     "roseexplosion.com": {
       "site_code": "ROSEEXPLOS",
-      "next_sequence": 75
+      "next_sequence": 77
     },
     "springlandflowers.com": {
       "site_code": "SPRINGLAND",
-      "next_sequence": 9
+      "next_sequence": 10
     },
     "your-roses.com": {
       "site_code": "YOURROSES",
-      "next_sequence": 76
+      "next_sequence": 78
     },
     "redlandranchroses.com": {
       "site_code": "REDLANDRAN",
@@ -53,7 +53,7 @@
     },
     "molarose.com": {
       "site_code": "MOLAROSE",
-      "next_sequence": 41
+      "next_sequence": 43
     },
     "bloomladiesroses.com": {
       "site_code": "BLOOMLADIE",
@@ -85,7 +85,7 @@
       "site_code": "HILLSIDERO",
       "variety": "Cappuccino",
       "matched_trademark": "Cappuccino",
-      "trademark_status": "Pending",
+      "trademark_status": "Registered",
       "seller_name": "Hillside Rose Farm",
       "website_domain": "hillsiderosefarm.com",
       "seller_location": "California, United States (site-stated \"Southern California\")",
@@ -115,7 +115,7 @@
       "site_code": "ERGONGZY",
       "variety": "Cappuccino",
       "matched_trademark": "Cappuccino",
-      "trademark_status": "Pending",
+      "trademark_status": "Registered",
       "seller_name": "Ergonzy / Ergonzi",
       "website_domain": "ergongzy.com",
       "seller_location": "Texas, United States",
@@ -415,7 +415,7 @@
       "site_code": "HIGHGARDEN",
       "variety": "Cappuccino",
       "matched_trademark": "Cappuccino",
-      "trademark_status": "Pending",
+      "trademark_status": "Registered",
       "seller_name": "High Garden",
       "website_domain": "highgardenroses.com",
       "seller_location": "Oregon, United States",
@@ -745,7 +745,7 @@
       "site_code": "HUNIUROSEG",
       "variety": "Cappuccino",
       "matched_trademark": "Cappuccino",
-      "trademark_status": "Pending",
+      "trademark_status": "Registered",
       "seller_name": "Huniu Rose Garden",
       "website_domain": "huniurosegarden.ca",
       "seller_location": "Ontario, Canada",
@@ -925,7 +925,7 @@
       "site_code": "KISAKIPLAN",
       "variety": "Cappuccino",
       "matched_trademark": "Cappuccino",
-      "trademark_status": "Pending",
+      "trademark_status": "Registered",
       "seller_name": "Kisaki Plant",
       "website_domain": "kisakiplant.com",
       "seller_location": "Texas, United States",
@@ -1300,7 +1300,7 @@
       "site_code": "ONELOVEROS",
       "variety": "Cappuccino",
       "matched_trademark": "Cappuccino",
-      "trademark_status": "Pending",
+      "trademark_status": "Registered",
       "seller_name": "One Love",
       "website_domain": "oneloveroseandgardens.com",
       "seller_location": "Texas, United States",
@@ -1465,7 +1465,7 @@
       "site_code": "ROSEEXPLOS",
       "variety": "Cappuccino",
       "matched_trademark": "Cappuccino",
-      "trademark_status": "Pending",
+      "trademark_status": "Registered",
       "seller_name": "Rose Explosion",
       "website_domain": "roseexplosion.com",
       "seller_location": "Not available on page, China (Estimated)",
@@ -1975,7 +1975,7 @@
       "site_code": "YOURROSES",
       "variety": "Cappuccino",
       "matched_trademark": "Cappuccino",
-      "trademark_status": "Pending",
+      "trademark_status": "Registered",
       "seller_name": "Your Roses",
       "website_domain": "your-roses.com",
       "seller_location": "Not available on page, China (Estimated)",
@@ -5605,7 +5605,7 @@
       "site_code": "BLOOMLADIE",
       "variety": "Cappuccino",
       "matched_trademark": "Cappuccino",
-      "trademark_status": "Pending",
+      "trademark_status": "Registered",
       "seller_name": "Bloom Ladies Roses",
       "website_domain": "bloomladiesroses.com",
       "seller_location": "Not stated on the site -- Pacific time zone (Estimated)",
@@ -5770,7 +5770,7 @@
       "site_code": "MYROSEWORL",
       "variety": "Cappuccino",
       "matched_trademark": "Cappuccino",
-      "trademark_status": "Pending",
+      "trademark_status": "Registered",
       "seller_name": "Flower Meadow Dream",
       "website_domain": "myroseworld.com",
       "seller_location": "Southern California",
@@ -5838,6 +5838,201 @@
       "first_date_found": "2026-10-28 06:22 MST (America/Phoenix)",
       "last_verified": "2026-10-28 06:23 MST (America/Phoenix)",
       "match_classification": "Possible",
+      "review_status": "New"
+    },
+    {
+      "case_number": "ERGONGZY-026",
+      "site_code": "ERGONGZY",
+      "variety": "Rallye des Gazelles",
+      "matched_trademark": "Rallye des Gazelles",
+      "trademark_status": "Pending",
+      "seller_name": "Ergonzy / Ergonzi",
+      "website_domain": "ergongzy.com",
+      "seller_location": "Texas",
+      "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
+      "first_date_found": "2026-10-28 13:06 MST (America/Phoenix)",
+      "last_verified": "2026-10-28 13:06 MST (America/Phoenix)",
+      "match_classification": "Strong",
+      "review_status": "New"
+    },
+    {
+      "case_number": "ERGONGZY-027",
+      "site_code": "ERGONGZY",
+      "variety": "Adventure",
+      "matched_trademark": "Adventure",
+      "trademark_status": "Pending",
+      "seller_name": "Ergonzy / Ergonzi",
+      "website_domain": "ergongzy.com",
+      "seller_location": "Texas",
+      "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
+      "first_date_found": "2026-10-28 13:06 MST (America/Phoenix)",
+      "last_verified": "2026-10-28 13:06 MST (America/Phoenix)",
+      "match_classification": "Possible",
+      "review_status": "New"
+    },
+    {
+      "case_number": "HIGHGARDEN-047",
+      "site_code": "HIGHGARDEN",
+      "variety": "Rallye des Gazelles",
+      "matched_trademark": "Rallye des Gazelles",
+      "trademark_status": "Pending",
+      "seller_name": "High Garden",
+      "website_domain": "highgardenroses.com",
+      "seller_location": "Oregon",
+      "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
+      "first_date_found": "2026-10-28 13:06 MST (America/Phoenix)",
+      "last_verified": "2026-10-28 13:06 MST (America/Phoenix)",
+      "match_classification": "Strong",
+      "review_status": "New"
+    },
+    {
+      "case_number": "HUNIUROSEG-022",
+      "site_code": "HUNIUROSEG",
+      "variety": "Rallye des Gazelles",
+      "matched_trademark": "Rallye des Gazelles",
+      "trademark_status": "Pending",
+      "seller_name": "Huniu Rose Garden",
+      "website_domain": "huniurosegarden.ca",
+      "seller_location": "Ontario",
+      "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
+      "first_date_found": "2026-10-28 13:06 MST (America/Phoenix)",
+      "last_verified": "2026-10-28 13:06 MST (America/Phoenix)",
+      "match_classification": "Strong",
+      "review_status": "New"
+    },
+    {
+      "case_number": "MOLAROSE-041",
+      "site_code": "MOLAROSE",
+      "variety": "Le Temps des Cerises",
+      "matched_trademark": "Le Temps des Cerises",
+      "trademark_status": "Pending",
+      "seller_name": "Mola Rose",
+      "website_domain": "molarose.com",
+      "seller_location": "Wyoming (published) -- see note",
+      "website_host": "Shopify, Inc.",
+      "first_date_found": "2026-10-28 13:06 MST (America/Phoenix)",
+      "last_verified": "2026-10-28 13:06 MST (America/Phoenix)",
+      "match_classification": "Strong",
+      "review_status": "New"
+    },
+    {
+      "case_number": "MOLAROSE-042",
+      "site_code": "MOLAROSE",
+      "variety": "Rallye des Gazelles",
+      "matched_trademark": "Rallye des Gazelles",
+      "trademark_status": "Pending",
+      "seller_name": "Mola Rose",
+      "website_domain": "molarose.com",
+      "seller_location": "Wyoming (published) -- see note",
+      "website_host": "Shopify, Inc.",
+      "first_date_found": "2026-10-28 13:06 MST (America/Phoenix)",
+      "last_verified": "2026-10-28 13:06 MST (America/Phoenix)",
+      "match_classification": "Strong",
+      "review_status": "New"
+    },
+    {
+      "case_number": "MUSEROSES-041",
+      "site_code": "MUSEROSES",
+      "variety": "Le Temps des Cerises",
+      "matched_trademark": "Le Temps des Cerises",
+      "trademark_status": "Pending",
+      "seller_name": "Muse Roses",
+      "website_domain": "museroses.com",
+      "seller_location": "Texas",
+      "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
+      "first_date_found": "2026-10-28 13:06 MST (America/Phoenix)",
+      "last_verified": "2026-10-28 13:06 MST (America/Phoenix)",
+      "match_classification": "Strong",
+      "review_status": "New"
+    },
+    {
+      "case_number": "MUSEROSES-042",
+      "site_code": "MUSEROSES",
+      "variety": "Rallye des Gazelles",
+      "matched_trademark": "Rallye des Gazelles",
+      "trademark_status": "Pending",
+      "seller_name": "Muse Roses",
+      "website_domain": "museroses.com",
+      "seller_location": "Texas",
+      "website_host": "Shopify, Inc. (confirmed via live products.json feed under t",
+      "first_date_found": "2026-10-28 13:06 MST (America/Phoenix)",
+      "last_verified": "2026-10-28 13:06 MST (America/Phoenix)",
+      "match_classification": "Strong",
+      "review_status": "New"
+    },
+    {
+      "case_number": "ROSEEXPLOS-075",
+      "site_code": "ROSEEXPLOS",
+      "variety": "Le Temps des Cerises",
+      "matched_trademark": "Le Temps des Cerises",
+      "trademark_status": "Pending",
+      "seller_name": "Rose Explosion",
+      "website_domain": "roseexplosion.com",
+      "seller_location": "Not available on page",
+      "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
+      "first_date_found": "2026-10-28 13:06 MST (America/Phoenix)",
+      "last_verified": "2026-10-28 13:06 MST (America/Phoenix)",
+      "match_classification": "Strong",
+      "review_status": "New"
+    },
+    {
+      "case_number": "ROSEEXPLOS-076",
+      "site_code": "ROSEEXPLOS",
+      "variety": "Rallye des Gazelles",
+      "matched_trademark": "Rallye des Gazelles",
+      "trademark_status": "Pending",
+      "seller_name": "Rose Explosion",
+      "website_domain": "roseexplosion.com",
+      "seller_location": "Not available on page",
+      "website_host": "Shopify, Inc. (confirmed via live products.json feed)",
+      "first_date_found": "2026-10-28 13:06 MST (America/Phoenix)",
+      "last_verified": "2026-10-28 13:06 MST (America/Phoenix)",
+      "match_classification": "Strong",
+      "review_status": "New"
+    },
+    {
+      "case_number": "SPRINGLAND-009",
+      "site_code": "SPRINGLAND",
+      "variety": "Rallye des Gazelles",
+      "matched_trademark": "Rallye des Gazelles",
+      "trademark_status": "Pending",
+      "seller_name": "Springland Flowers",
+      "website_domain": "springlandflowers.com",
+      "seller_location": "Location not available",
+      "website_host": "Shopify, Inc. (confirmed via live products.json feed and sit",
+      "first_date_found": "2026-10-28 13:06 MST (America/Phoenix)",
+      "last_verified": "2026-10-28 13:06 MST (America/Phoenix)",
+      "match_classification": "Strong",
+      "review_status": "New"
+    },
+    {
+      "case_number": "YOURROSES-076",
+      "site_code": "YOURROSES",
+      "variety": "Adventure",
+      "matched_trademark": "Adventure",
+      "trademark_status": "Pending",
+      "seller_name": "Your Roses",
+      "website_domain": "your-roses.com",
+      "seller_location": "Not available on page",
+      "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- produ",
+      "first_date_found": "2026-10-28 13:06 MST (America/Phoenix)",
+      "last_verified": "2026-10-28 13:06 MST (America/Phoenix)",
+      "match_classification": "Possible",
+      "review_status": "New"
+    },
+    {
+      "case_number": "YOURROSES-077",
+      "site_code": "YOURROSES",
+      "variety": "Rallye des Gazelles",
+      "matched_trademark": "Rallye des Gazelles",
+      "trademark_status": "Pending",
+      "seller_name": "Your Roses",
+      "website_domain": "your-roses.com",
+      "seller_location": "Not available on page",
+      "website_host": "WordPress / WooCommerce. Likely hosted on Hostinger -- produ",
+      "first_date_found": "2026-10-28 13:06 MST (America/Phoenix)",
+      "last_verified": "2026-10-28 13:06 MST (America/Phoenix)",
+      "match_classification": "Strong",
       "review_status": "New"
     }
   ],
