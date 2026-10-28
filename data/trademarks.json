@@ -574,11 +574,9 @@
       "owner_breeder": "Société Nouvelle Pépinières et Roseraies Georges Delbard SAS",
       "party_selling": null,
       "source_row": 29,
-      "status_category": null,
-      "needs_review": true,
-      "needs_review_reasons": [
-        "Unrecognized status value: 'NYF'"
-      ]
+      "status_category": "To Be Filed",
+      "needs_review": false,
+      "needs_review_reasons": []
     },
     {
       "row_index": null,

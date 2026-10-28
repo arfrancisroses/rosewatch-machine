@@ -386,7 +386,7 @@ Fields preserve the original wording from the Master Trademark Filing Chart. Row
 | Princeses Astrid de Belgique -- LIVING PERSON | To Be Filed | 93001.0219999999 |  |  |  |  | April & Ashley |  |
 | Rallye des Gazelles | Pending | 93001.025 | 50173893 | NYA | 2026-10-21T00:00:00 | NYA |  |  |
 | Rue Saint-Honoré | Pending | 93001.0229999999 | 99751265 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
-| Sandrine Kiberlain | NYF | 93001.026 |  | NYA |  | NYA |  | Yes — Unrecognized status value: 'NYF' |
+| Sandrine Kiberlain | NYF | 93001.026 |  | NYA |  | NYA |  |  |
 | Velours de Nuit | Pending | 93001.0239999999 | 99751291 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
 | White O'Hara | Pending | 93001.001 | 99751057 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
 

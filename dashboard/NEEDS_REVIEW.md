@@ -2,14 +2,13 @@
 
 ## Trademark chart records needing review
 
-88 of 275 trademark records have missing, unclear, duplicate, or conflicting data and were not silently corrected.
+87 of 275 trademark records have missing, unclear, duplicate, or conflicting data and were not silently corrected.
 
 | Rose/Variety | Owner/Breeder | Status (as written) | Source Row | Reason |
 |---|---|---|---|---|
 | Alfred Sisley | Société Nouvelle Pépinières et Roseraies Georges Delbard SAS | Registered | 8 | Application/serial number 9733048 has 7 digits; every other numeric serial in this chart has 8. Possible dropped or extra digit -- verify against the source filing. |
 | Maurice Utrillo | Société Nouvelle Pépinières et Roseraies Georges Delbard SAS | Registered | 17 | Application/serial number 97330478 is also used by 'Moonlight in Paris' (source row 20). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing.; Registration number 7296592 is also used by 'Moonlight in Paris' (source row 20). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing. |
 | Moonlight in Paris | Société Nouvelle Pépinières et Roseraies Georges Delbard SAS | Registered | 20 | Application/serial number 97330478 is also used by 'Maurice Utrillo' (source row 17). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing.; Registration number 7296592 is also used by 'Maurice Utrillo' (source row 17). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing. |
-| Sandrine Kiberlain | Société Nouvelle Pépinières et Roseraies Georges Delbard SAS | NYF | 29 | Unrecognized status value: 'NYF' |
 | Trendsetter | Interplant Roses B.V. | Abandoned (Rose Varietal) | 33 | Filing Date cell contains a raw number (45209) instead of a formatted date in the source spreadsheet -- likely an unformatted Excel date serial. Not converted automatically; needs source verification. |
 | Ashley | Rosen Tantau KG | To Be Filed | 188 | Duplicate trademark name also on source row 146 |
 | Pacific Blue (not on site?) | Rosen Tantau KG | ? | 190 | Unrecognized status value: '?' |

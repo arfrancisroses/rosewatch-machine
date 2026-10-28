@@ -50,6 +50,14 @@ STATUS_PREFIXES = [
     ("Abandoned", "Abandoned"),
     ("DO NOT FILE", "Do Not File"),
     ("N/A", "Not Applicable"),
+    # "NYF" = Not Yet Filed, confirmed by the user 2026-10-28 (it arrived on the
+    # chart of that date, on Sandrine Kiberlain, and was held as Needs Review
+    # until they confirmed it rather than guessed at). It is categorised with
+    # To Be Filed because it means the same thing for our purposes -- no
+    # application exists yet, so no enforceable right -- exactly as
+    # "To Be Filed as ITU" already is. The chart's own wording "NYF" is
+    # preserved untouched in the record's `status` field.
+    ("NYF", "To Be Filed"),
 ]
 
 
