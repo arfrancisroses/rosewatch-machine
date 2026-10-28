@@ -82,6 +82,11 @@
       "date": "2026-10-27 06:12 MST (America/Phoenix)",
       "action": "Listing still removed (HTTP 404)",
       "details": "Flower Meadow Dream served 216 products today and this listing was not among them; its own URL returns HTTP 404. A restatement of a removal already confirmed. Last Verified stays at 2026-09-10."
+    },
+    {
+      "date": "2026-10-28 06:24 MST (America/Phoenix)",
+      "action": "Listing still removed (HTTP 404)",
+      "details": "Flower Meadow Dream served 216 products today and this listing was not among them; its own URL returns HTTP 404. A restated removal, not a fresh one."
     }
   ]
 }
