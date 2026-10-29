@@ -20,7 +20,7 @@
   "match_explanation": "The product title contains the full chart name \"Rallye des Gazelles\" as a phrase, inside a longer title.",
   "review_status": "New",
   "first_date_found": "2026-10-28 13:06 MST (America/Phoenix)",
-  "last_verified": "2026-10-28 13:06 MST (America/Phoenix)",
+  "last_verified": "2026-10-29 06:12 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-28 13:11 MST (America/Phoenix)",
   "units_in_stock_at_capture": null,
   "seller_sku": null,
@@ -76,6 +76,10 @@
       "date": "2026-10-28 13:11 MST (America/Phoenix)",
       "action": "Evidence screenshot captured",
       "details": "Full-page capture of https://springlandflowers.com/products/spf137-extremely-similar-to-rallye-des-gazelles-瞪羚拉力赛-floribunda-rose-non-grafted-own-root saved to cases/SPRINGLAND-009/screenshots/SPRINGLAND-009_2026-10-28_1311.png (4,006,370 bytes)."
+    },
+    {
+      "date": "2026-10-29 06:12 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

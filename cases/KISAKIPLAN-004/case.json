@@ -8,7 +8,7 @@
   "breeder": "Société Nouvelle Pépinières et Roseraies Georges Delbard SAS",
   "seller_name": "Kisaki Plant",
   "website_domain": "kisakiplant.com",
-  "product_url": "https://kisakiplant.com/products/rose-pink-ohara-粉荔枝",
+  "product_url": "https://kisakiplant.com/products/pink-ohara",
   "exact_product_title": "Rose  ‘ Pink O'Hara ’  粉荔枝",
   "quoted_text": "🌺Characteristics ： Flowering: Repeat Flowering. 🌹Fragrance Intensity : Strong Fragrance 🌳 Size: Medium Shrub 70-90cm 🌸 Bloom Size: 10cm 🌈Color: pink 📍Recommended planting zone: Zone 6 and above -------------------------------------- ⭐Bloom Repeatedly ⭐Strong Disease Resistance ⭐Long flowering period",
   "price": "52.99",
@@ -18,7 +18,7 @@
   "match_explanation": "Product title contains the trademarked name \"Pink O'Hara\" (as part of a longer product title).",
   "review_status": "New",
   "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-  "last_verified": "2026-10-28 06:23 MST (America/Phoenix)",
+  "last_verified": "2026-10-29 06:17 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 09:43 MST (America/Phoenix)",
   "seller_location": {
     "country": "United States",
@@ -207,6 +207,19 @@
     {
       "date": "2026-10-28 06:23 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-10-29 06:17 MST (America/Phoenix)",
+      "action": "Seller changed this listing's URL",
+      "details": "The address this case was found at (https://kisakiplant.com/products/rose-pink-ohara-粉荔枝) now returns an HTTP redirect to https://kisakiplant.com/products/pink-ohara. Same seller, same variety, same listing -- a re-slug, not a new listing. The seller also lowered the shown price from USD 52.99, recorded when this case was made, to USD 49.99 today, and tidied the title's punctuation from \"Rose  ‘ Pink O'Hara ’  粉荔枝\" to \"Rose 'Pink O'Hara'  粉荔枝\". The recorded price and title are left as found on the day of the case, per the standing convention; this entry is the record of the change. The case now points at the live address and keeps the original in previous_product_urls. No evidence, review status or case number changed."
+    },
+    {
+      "date": "2026-10-29 06:17 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run.",
+      "details": "Present at the seller's new address for this listing. Kisaki Plant served 324 products today and this listing was among them; the automatic re-verification pass had flagged it absent only because it was still looking at the old address, which redirects here."
     }
+  ],
+  "previous_product_urls": [
+    "https://kisakiplant.com/products/rose-pink-ohara-粉荔枝"
   ]
 }

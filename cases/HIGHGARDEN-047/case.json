@@ -20,7 +20,7 @@
   "match_explanation": "The product title contains the full chart name \"Rallye des Gazelles\" as a phrase, inside a longer title.",
   "review_status": "New",
   "first_date_found": "2026-10-28 13:06 MST (America/Phoenix)",
-  "last_verified": "2026-10-28 13:06 MST (America/Phoenix)",
+  "last_verified": "2026-10-29 06:12 MST (America/Phoenix)",
   "screenshot_captured_at": null,
   "units_in_stock_at_capture": null,
   "seller_sku": null,
@@ -56,6 +56,10 @@
       "date": "2026-10-28 13:20 MST (America/Phoenix)",
       "action": "Correction to the capture note written earlier today",
       "details": "The automatic failure note was cut off at 200 characters mid-phrase, losing the words \"detects an automated browser\", and it listed the refused third-party sub-resources in a way that read as though this environment's network policy had refused the seller's page. It had not: the page was fetched and the seller's own script blanked it. The note has been restated in full and the two scripts fixed so the truncation and the wording cannot recur. The diagnosis itself is unchanged, and no evidence was added or removed."
+    },
+    {
+      "date": "2026-10-29 06:12 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

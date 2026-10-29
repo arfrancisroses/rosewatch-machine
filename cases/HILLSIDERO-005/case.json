@@ -207,6 +207,11 @@
       "date": "2026-10-28 06:24 MST (America/Phoenix)",
       "action": "Listing removed again (HTTP 404)",
       "details": "Absent again after being present on the 2026-10-26 and 2026-10-27 runs. This listing has now gone from and returned to the seller's feed five times since 2026-10-19; each absence has been confirmed by its own URL returning HTTP 404, and each return by the listing reappearing in the feed. The pattern is the seller's to explain -- it is recorded here as observed, without inference."
+    },
+    {
+      "date": "2026-10-29 06:17 MST (America/Phoenix)",
+      "action": "Listing still removed (HTTP 404)",
+      "details": "Hillside Rose Farm served 164 products today and this listing was not among them; its own URL returns HTTP 404. A restated removal, not a fresh one."
     }
   ],
   "listing_availability": "NOT FOUND again, as of 2026-10-13 06:08 MST (America/Phoenix). The listing was present on 2026-10-12 after nine runs away, and is absent once more a single run later; Hillside Rose Farm's catalog fell 170 -> 159 in the same period, having risen 156 -> 170 the day before. So this listing has now gone, returned and gone again while the site's catalog swings by a dozen or more products at a time, which looks like inventory churn rather than anything directed at this listing -- but that is an observation about the pattern, not a conclusion, and nothing should be inferred about the seller's reasons. Last Verified stays at 2026-10-12, the last date the listing was actually confirmed present. The full sequence is in the history below and is not papered over."

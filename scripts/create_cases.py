@@ -30,12 +30,14 @@ import json
 import re
 import sys
 import time
+import urllib.parse
+import urllib.request
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 CASES_DIR = REPO / "cases"
 sys.path.insert(0, str(REPO / "scripts"))
-from crawl_sites import fetch, normalize, try_woocommerce, PHOENIX  # noqa: E402
+from crawl_sites import fetch, normalize, try_woocommerce, UA, PHOENIX  # noqa: E402
 import datetime as _dt  # noqa: E402
 
 # Sites whose first case is being created before any case exists to copy from.
@@ -223,6 +225,32 @@ def squarespace_products(base):
     return out
 
 
+def site_domain_of(match):
+    """The domain a crawl match belongs to, as the case records spell it."""
+    host = urllib.parse.urlsplit(match["url"]).netloc.lower()
+    return host[4:] if host.startswith("www.") else host
+
+
+def resolve_final_url(url, timeout=25):
+    """Where this URL actually lands, following redirects. None if it cannot be
+    reached -- an unreachable URL proves nothing, so the caller treats it as
+    'no evidence of a re-slug' rather than as a match."""
+    try:
+        # Several sellers put Chinese characters in their slugs. urllib will not
+        # send a non-ASCII path, so percent-encode it first -- without this the
+        # lookup silently returns None and a re-slug slips through as new.
+        parts = urllib.parse.urlsplit(url)
+        safe = urllib.parse.urlunsplit((
+            parts.scheme, parts.netloc,
+            urllib.parse.quote(parts.path, safe="/%"),
+            urllib.parse.quote(parts.query, safe="=&%"), ""))
+        req = urllib.request.Request(safe, headers=UA)
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return urllib.parse.unquote(r.geturl())
+    except Exception:
+        return None
+
+
 def url_key(url):
     """A product URL reduced to what identifies the listing.
 
@@ -332,16 +360,71 @@ def main():
     # must not get a second one.
     existing = set()
     site_research = dict(SITE_RESEARCH_SEED)
+    # matched_trademark -> [(case_number, product_url)] per site, used by the
+    # re-slug check below.
+    by_site_mark = {}
     for c in db["cases"]:
         detail = json.loads((REPO / "cases" / c["case_number"] / "case.json").read_text())
         existing.add(url_key(detail["product_url"]))
+        # A seller that changes a listing's slug leaves the old URL 301-ing to the
+        # new one. The old URL stays on the case as the address it was found at;
+        # every address it is known to answer on lives here, so the new slug is
+        # not mistaken for a new listing.
+        for alias in detail.get("previous_product_urls") or []:
+            existing.add(url_key(alias))
         site_research.setdefault(c["website_domain"], (detail["seller_location"], detail["website_host"]))
+        key = (detail.get("website_domain"), normalize(detail.get("matched_trademark") or ""))
+        by_site_mark.setdefault(key, []).append((c["case_number"], detail["product_url"]))
 
     # The crawler already routes cut-roses-only listings to the Cut Roses register
     # rather than new_matches; the guard is here too so a hand-edited or older
     # crawl file cannot slip one into a case.
     todo = [m for m in crawl["new_matches"]
             if url_key(m["url"]) not in existing and not m.get("cut_roses_only")]
+
+    # A re-slugged listing looks brand new: same seller, same variety, a URL we
+    # have never seen. It is not new, and on 2026-10-29 Kisaki Plant's
+    # "Pink O'Hara" nearly got a second case this way -- its old URL answers 200
+    # but redirects to the new slug. So for any candidate that collides with an
+    # existing case on the same domain and the same chart name, follow that
+    # case's URL and see where it lands. Never more than a handful of requests,
+    # and only for candidates that already look suspicious.
+    deferred = []
+    for m in list(todo):
+        domain = site_domain_of(m)
+        cands = by_site_mark.get((domain, normalize(m.get("trademark") or "")), [])
+        for case_number, old_url in cands:
+            landed = resolve_final_url(old_url)
+            if landed and url_key(landed) == url_key(m["url"]):
+                deferred.append((m, case_number, old_url, landed))
+                todo.remove(m)
+                break
+    for m, case_number, old_url, landed in deferred:
+        print(f"  not a new listing: {m['url']} is where {case_number} now redirects "
+              f"(was {old_url}); recording the new address on that case instead.",
+              file=sys.stderr)
+        cpath = REPO / "cases" / case_number / "case.json"
+        detail = json.loads(cpath.read_text())
+        aliases = detail.setdefault("previous_product_urls", [])
+        if detail["product_url"] not in aliases:
+            aliases.append(detail["product_url"])
+        detail["product_url"] = landed
+        detail.setdefault("history", []).append({
+            "date": stamp,
+            "action": "Seller changed this listing's URL",
+            "details": (f"The address this case was found at ({old_url}) now returns an HTTP redirect to "
+                        f"{landed}. Same seller, same variety, same listing -- a re-slug, not a new listing, "
+                        f"so no second case was created. The case now points at the live address and keeps "
+                        f"the original one in previous_product_urls. No evidence, review status or case "
+                        f"number changed."),
+        })
+        cpath.write_text(json.dumps(detail, indent=2, ensure_ascii=False) + "\n")
+        for row in db["cases"]:
+            if row["case_number"] == case_number:
+                row["product_url"] = landed
+    if deferred:
+        (REPO / "cases" / "cases.json").write_text(json.dumps(db, indent=2, ensure_ascii=False) + "\n")
+
     if not todo:
         print(f"Nothing to create: all {len(crawl['new_matches'])} matches in crawl-{run_date}.json "
               f"already have cases.")

@@ -20,7 +20,7 @@
   "match_explanation": "The product title contains the full chart name \"Westminster Abbey\" as a phrase, inside a longer title.",
   "review_status": "New",
   "first_date_found": "2026-09-28 06:13 MST (America/Phoenix)",
-  "last_verified": "2026-10-28 06:23 MST (America/Phoenix)",
+  "last_verified": "2026-10-29 06:12 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 11:44 MST (America/Phoenix)",
   "seller_location": {
     "country": "China (Estimated)",
@@ -161,6 +161,10 @@
     },
     {
       "date": "2026-10-28 06:23 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-10-29 06:12 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]

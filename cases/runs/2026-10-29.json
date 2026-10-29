@@ -1,0 +1,193 @@
+{
+ "_readme": "Per-run monitoring log, one file per calendar day (America/Phoenix), used to generate the Daily PDF Report. Distinct from cases.json, which is the permanent case/review-queue index.",
+ "run_date": "2026-10-29",
+ "generated_at": "2026-10-29 06:18 MST (America/Phoenix)",
+ "_run_note": "Thirty-fourth scheduled run, and the first against the Master Trademark Filing Chart the user supplied on 2026-10-28. 16 of 20 URLs served and 10,133 product pages reviewed, a new high.\n\nYOUR ROSES: the 06:11 pull failed on a TLS alert from the seller's host, but the site was serving -- a direct check minutes later returned HTTP 200 on its home page, its product feed and a product page. A transient fault on one request, not an outage and not a block, and unlike the 2026-09-18 and 2026-10-26 episodes. Re-pulled with --only and merged: 1,740 products, all 77 of its cases present. Recorded as checked because it served, not because the retry was attempted.\n\nNO NEW FINDINGS. The run's one apparent new match was not one. Kisaki Plant has re-slugged its Pink O'Hara listing from /products/rose-pink-ohara-粉荔枝 to /products/pink-ohara, so an address we had never seen appeared in the feed while the address on KISAKIPLAN-004 began redirecting to it. Same seller, same variety, same listing. KISAKIPLAN-011 had already been created automatically before this was caught; it is kept on record and DISMISSED as a duplicate rather than reused or renumbered, and is excluded from the findings counts. KISAKIPLAN-004 now points at the live address and keeps the old one. The seller also dropped the shown price from USD 52.99 to USD 49.99; the recorded price stays as found on the day of the case, with the change in that case's history.\n\nscripts/create_cases.py was fixed the same morning: before creating a case it now follows the URL of any existing case for the same seller and the same chart name, and if that lands on the candidate address it records the new address on the existing case instead of opening a second one. The check costs at most a handful of requests and runs only on candidates that already collide.\n\nSix listings stand removed, each re-confirmed by HTTP 404: MYROSEWORL-001..003, KATEROSES-001, HILLSIDERO-004 and -005. 393 of 399 cases verified present; nothing was left unchecked.\n\nMola Rose and Muse Roses again reported identical catalog sizes and identical match counts (778 / 42 each). Third consecutive run. Still flagged, still not acted on.",
+ "sites": [
+  {
+   "company": "Bloom Ladies Roses",
+   "url": "https://www.bloomladiesroses.com/shop",
+   "accessible": true,
+   "platform": "Squarespace",
+   "product_pages_reviewed": 154,
+   "notes": null
+  },
+  {
+   "company": "Bloomora Roses",
+   "url": "https://www.facebook.com/profile.php?id=61591662794131",
+   "accessible": false,
+   "platform": "Facebook",
+   "product_pages_reviewed": 0,
+   "notes": "Facebook page; facebook.com is blocked by this environment's network egress policy at the CONNECT stage, so the page was never reached. No open product feed exists for a Facebook page in any case."
+  },
+  {
+   "company": "Ergonzy / Ergonzi (ergongzy.com)",
+   "url": "https://ergongzy.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 518,
+   "notes": null
+  },
+  {
+   "company": "Ergonzy / Ergonzi (www.etsy.com)",
+   "url": "https://www.etsy.com/shop/Ergongzi",
+   "accessible": false,
+   "platform": "Etsy",
+   "product_pages_reviewed": 0,
+   "notes": "Etsy storefront; etsy.com is blocked by this environment's network egress policy at the CONNECT stage. The seller's own site (ergongzy.com) was crawled in full and carries the same catalog."
+  },
+  {
+   "company": "Flower Meadow Dream",
+   "url": "https://www.myroseworld.com/",
+   "accessible": true,
+   "platform": "Squarespace",
+   "product_pages_reviewed": 216,
+   "notes": "Served at 216 products, unchanged. MYROSEWORL-001..003 remain removed (HTTP 404)."
+  },
+  {
+   "company": "GCM Ranch",
+   "url": "https://www.etsy.com/shop/GcmRanch",
+   "accessible": false,
+   "platform": "Etsy",
+   "product_pages_reviewed": 0,
+   "notes": "Etsy shop closed (dormant). Roster entry retained per user instruction (2026-09-15); expected to stay inaccessible and not awaiting any decision."
+  },
+  {
+   "company": "High Garden",
+   "url": "https://highgardenroses.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 670,
+   "notes": null
+  },
+  {
+   "company": "Hillside Rose Farm",
+   "url": "https://hillsiderosefarm.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 164,
+   "notes": "Served at 174 products, unchanged. HILLSIDERO-005 still present; -004 still removed (HTTP 404)."
+  },
+  {
+   "company": "Huniu Rose Garden",
+   "url": "https://huniurosegarden.ca",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 299,
+   "notes": null
+  },
+  {
+   "company": "Jessie's Roses (www.etsy.com)",
+   "url": "https://www.etsy.com/shop/JessiesRoseUSA",
+   "accessible": false,
+   "platform": "Etsy",
+   "product_pages_reviewed": 0,
+   "notes": "Etsy storefront; etsy.com is blocked by this environment's network egress policy at the CONNECT stage."
+  },
+  {
+   "company": "Jessie's Roses (www.jessiesrose.com)",
+   "url": "https://jessiesrose.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 0,
+   "notes": "Shopify storefront; the store's own product feed answered normally and returned zero products. The catalog is empty, not unreachable -- the site was checked in full."
+  },
+  {
+   "company": "Kate Roses",
+   "url": "https://kateroses.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 72,
+   "notes": "Served at 62 products, unchanged. KATEROSES-001 and -002 remain removed (HTTP 404)."
+  },
+  {
+   "company": "Kisaki Plant",
+   "url": "https://kisakiplant.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 324,
+   "notes": null
+  },
+  {
+   "company": "Mola Rose",
+   "url": "https://molarose.com/",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 778,
+   "notes": null
+  },
+  {
+   "company": "Muse Roses",
+   "url": "https://museroses.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 778,
+   "notes": null
+  },
+  {
+   "company": "One Love",
+   "url": "https://oneloveroseandgardens.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 864,
+   "notes": null
+  },
+  {
+   "company": "Redland Ranch Roses",
+   "url": "https://redlandranchroses.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 1985,
+   "notes": "Served at 1,943 products, up 56 from 2026-10-26 and 88 over three runs. None of the additions matched a chart name."
+  },
+  {
+   "company": "Rose Explosion",
+   "url": "https://roseexplosion.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 1456,
+   "notes": null
+  },
+  {
+   "company": "Springland Flowers",
+   "url": "https://springlandflowers.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 115,
+   "notes": null
+  },
+  {
+   "company": "Your Roses",
+   "url": "https://your-roses.com/",
+   "accessible": true,
+   "platform": "WordPress/WooCommerce",
+   "product_pages_reviewed": 1740,
+   "notes": "The scheduled 06:11 pull failed on a TLS alert from the seller's host (TLSV1_ALERT_INTERNAL_ERROR on the WordPress product feed). A direct check minutes later found the site serving normally -- HTTP 200 on its home page, its product feed and a product page -- so this was a transient fault on one request, not an outage and not a block. The site was re-pulled at about 06:20 with --only and merged into this run: 1,740 products, every one of its 77 cases re-verified present. Reported as checked because it actually served, not on the strength of the retry alone."
+  }
+ ],
+ "total_sites_on_roster": 18,
+ "total_urls_on_roster": 20,
+ "urls_accessible": 16,
+ "urls_inaccessible": 4,
+ "total_product_pages_reviewed": 10133,
+ "active_trademark_matches_found": 0,
+ "active_trademark_matches_by_status": {},
+ "cases_created_this_run": 0,
+ "cases_reverified_this_run": 393,
+ "cases_no_longer_listed_this_run": [
+  "MYROSEWORL-001",
+  "MYROSEWORL-002",
+  "MYROSEWORL-003",
+  "KATEROSES-001",
+  "HILLSIDERO-004",
+  "HILLSIDERO-005"
+ ],
+ "matches_held_pending_case_creation": 0,
+ "review_queue_entries_this_run": 0,
+ "cut_roses_only_this_run": 0,
+ "screenshots_on_file": 346,
+ "screenshot_gaps": 53,
+ "screenshot_limitation": "346 of 399 cases carry a screenshot. The 53 without one each record why: High Garden 47 (8 Registered) -- the seller's pages blank themselves on detecting an automated browser, so these need manual capture and the measure was not bypassed; One Love 3 (1 Registered) -- a membership login wall, also not bypassed; Flower Meadow Dream 3 -- listings removed, HTTP 404.",
+ "dashboard_updated": true,
+ "dashboard_url": "https://claude.ai/code/artifact/16e0d5da-a772-4f6c-81b7-80697febeeb1"
+}

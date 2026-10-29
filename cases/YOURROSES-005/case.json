@@ -18,7 +18,7 @@
   "match_explanation": "Product title contains the trademarked name \"Cappuccino\" (as part of a longer product title).",
   "review_status": "New",
   "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-  "last_verified": "2026-10-28 06:23 MST (America/Phoenix)",
+  "last_verified": "2026-10-29 06:12 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 10:08 MST (America/Phoenix)",
   "seller_location": {
     "country": "China (Estimated)",
@@ -183,6 +183,10 @@
       "date": "2026-10-28 13:10 MST (America/Phoenix)",
       "action": "Trademark status changed: Pending -> Registered",
       "details": "Chart status updated from Pending to Registered, and the registration number recorded, on ingesting the Master Trademark Filing Chart supplied by the user on 2026-10-28 (original filename 93000_Master_Trademark_Filing_Chart_2.xlsx; filed as data/sources/2026-10-28_MasterTrademarkFilingChart.xlsx). The chart gives Cappuccino U.S. Reg. No. 8523591, registered 2026-10-27, owner/breeder Rosen Tantau KG, goods narrowed from \"Live plants; roses\" to \"Roses\". This records a change in the trademark record only. Nothing about this listing, its evidence or its review status changed, and the change is not a finding of infringement."
+    },
+    {
+      "date": "2026-10-29 06:12 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ],
   "trademark_status_as_written": "Registered"

@@ -1,6 +1,6 @@
 # Rose Watch — Overview
 
-Dashboard last regenerated: 2026-10-28 14:29 MST
+Dashboard last regenerated: 2026-10-29 06:15 MST
 
 ## Trademark chart summary
 
@@ -22,9 +22,9 @@ Dashboard last regenerated: 2026-10-28 14:29 MST
 
 ## Cases
 
-- Active cases (matched Registered/Pending trademarks): 398
+- Active cases (matched Registered/Pending trademarks): 399
 - Review-queue entries (matched other statuses): 0
-- Last monitoring run completed: 2026-10-28T06:24:00-07:00
+- Last monitoring run completed: 2026-10-29T06:31:00-07:00
 
 ## Sections
 

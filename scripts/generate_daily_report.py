@@ -260,7 +260,15 @@ def generate(run_date_str):
 
     all_cases = cases_db.get("cases", [])
     # Cases first found on this run date (by First Date Found prefix match)
-    new_cases = [c for c in all_cases if str(c.get("first_date_found", "")).startswith(run_date_str)]
+    # A case dismissed on the day it was created was never a finding -- it is a
+    # record of something the system opened and then ruled out, such as the
+    # duplicate Kisaki Plant opened on 2026-10-29 when the seller re-slugged a
+    # listing we already track. Counting it as a new finding would overstate the
+    # day, so it is left out of the counts and the cards. It stays in All Cases
+    # on Record, with its review status shown, because the record is the point.
+    new_cases = [c for c in all_cases
+                 if str(c.get("first_date_found", "")).startswith(run_date_str)
+                 and c.get("review_status") != "Dismissed"]
     new_registered = [c for c in new_cases if c.get("trademark_status") == "Registered"]
     new_pending = [c for c in new_cases if c.get("trademark_status") == "Pending"]
     # Per user instruction: the PDF itemizes Registered-trademark matches only -- those are the

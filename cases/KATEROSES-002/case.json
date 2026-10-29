@@ -19,7 +19,7 @@
   "match_explanation": "The product title contains the full chart name \"Macaron Rose\" as a phrase, inside a longer title.",
   "review_status": "New",
   "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-10-28 06:23 MST (America/Phoenix)",
+  "last_verified": "2026-10-29 06:12 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 10:20 MST (America/Phoenix)",
   "seller_location": {
     "country": "United States",
@@ -198,6 +198,10 @@
       "date": "2026-10-28 06:23 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run.",
       "details": "Back in the seller's feed after being absent on the 2026-10-22, 10-23, 10-26 and 10-27 runs, each of those days confirmed by the listing's own URL returning HTTP 404. Kate Roses served 71 products today, up from 62 while this listing was away. Recorded as observed; the reason for the removal and return is the seller's."
+    },
+    {
+      "date": "2026-10-29 06:12 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

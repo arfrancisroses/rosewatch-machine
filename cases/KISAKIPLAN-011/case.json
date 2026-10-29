@@ -1,0 +1,90 @@
+{
+  "case_number": "KISAKIPLAN-011",
+  "site_code": "KISAKIPLAN",
+  "variety": "Pink O'Hara",
+  "matched_trademark": "Pink O'Hara",
+  "trademark_status": "Pending",
+  "trademark_status_as_written": "Pending",
+  "trademark_application_or_registration_no": "App. Ser. No. 99751092 (Reg. No.: NYA)",
+  "breeder": "Société Nouvelle Pépinières et Roseraies Georges Delbard SAS",
+  "seller_name": "Kisaki Plant",
+  "website_domain": "kisakiplant.com",
+  "product_url": "https://kisakiplant.com/products/pink-ohara",
+  "exact_product_title": "Rose 'Pink O'Hara'  粉荔枝",
+  "quoted_text": "📛 Name: Pink O'Hara / 粉荔枝 🌿 Class: Hybrid Tea / Modern Cut Rose 🌴 Height: 2.5 – 3.5 ft / 75 – 105 cm 🌺 Flower Size: 4\" – 5\" / 10 – 12 cm 🎨 Color: Soft blush pink with a delicate gradient heart 👃 Fragrance: Strong sweet fruity and lychee aroma 🌸 Bloom Period: Spring to late Autumn, Repeat Bloomer 🌤️ Best Feature: Strong Fragrance ☃️ Hardiness Zones: 5 – 9 (Down to -20°F / -29°C) ☀️ Sunlight: Full sun to Partial shade...",
+  "price": "49.99",
+  "currency": "USD",
+  "price_note": null,
+  "quantity_or_form": "1.5Gal Own-Root Live Plant",
+  "match_classification": "Strong",
+  "match_explanation": "The product title contains the full chart name \"Pink O'Hara\" as a phrase, inside a longer title.",
+  "review_status": "Dismissed",
+  "first_date_found": "2026-10-29 06:11 MST (America/Phoenix)",
+  "last_verified": "2026-10-29 06:12 MST (America/Phoenix)",
+  "screenshot_captured_at": "2026-10-29 06:11 MST (America/Phoenix)",
+  "units_in_stock_at_capture": null,
+  "seller_sku": null,
+  "page_publication_date": "Date not available on page",
+  "page_update_date": "Date not available on page",
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Texas",
+    "city": "Kerens",
+    "source": "Not confirmed directly this run -- the site's own About page returned 404. Carried over from prior known-sites research (data/known_sites.json).",
+    "estimated": true
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.65",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [
+    {
+      "file": "cases/KISAKIPLAN-011/screenshots/KISAKIPLAN-011_2026-10-29_0611.png",
+      "captured_at": "2026-10-29 06:11 MST (America/Phoenix)",
+      "source_url": "https://kisakiplant.com/products/pink-ohara",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 6386640,
+      "product_image_box": {
+        "x": 151,
+        "y": 488.890625,
+        "w": 603,
+        "h": 635.53125,
+        "detail_bottom": 6300.515625,
+        "dpr": 1
+      },
+      "images_total": 78,
+      "images_failed_to_load": 44,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing; dismissed: shopify-chat.needsclick. No listing content was altered, added or removed.",
+      "image_load_note": "44 of 78 images on the page did not load and appear blank in this capture. Their host is refused by this environment's network policy, not by the seller. The capture is kept for its text, price and layout; it is not a complete picture of the listing as a buyer saw it."
+    }
+  ],
+  "access_or_research_limitations": [],
+  "investigator_notes": "DUPLICATE -- not a separate finding. This case was created automatically on 2026-10-29 because Kisaki Plant had re-slugged its Pink O'Hara listing, so the new address looked like a listing we had never seen. It is the same listing already tracked as KISAKIPLAN-004 (first found 2026-09-10): the old address redirects to this one. The case number is kept rather than reused or renumbered, and is dismissed so it is not counted or reported as a finding. Refer to KISAKIPLAN-004 for this listing. The screenshot taken here is a genuine capture of the listing on 2026-10-29 and is left in place as evidence of that date.",
+  "history": [
+    {
+      "date": "2026-10-29 06:11 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created from that day's crawl; chart status carried through unchanged."
+    },
+    {
+      "date": "2026-10-29 06:11 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://kisakiplant.com/products/pink-ohara saved to cases/KISAKIPLAN-011/screenshots/KISAKIPLAN-011_2026-10-29_0611.png (6,386,640 bytes)."
+    },
+    {
+      "date": "2026-10-29 06:12 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-10-29 06:17 MST (America/Phoenix)",
+      "action": "Dismissed as a duplicate of KISAKIPLAN-004",
+      "details": "Kisaki Plant re-slugged its Pink O'Hara listing; the address on KISAKIPLAN-004 redirects here, so this is the same listing and not a second one. Dismissed the same morning it was created, before any report or dashboard carried it as a finding. create_cases.py was fixed the same day to resolve redirects before creating a case, so a re-slug cannot produce a phantom case again."
+    }
+  ]
+}
