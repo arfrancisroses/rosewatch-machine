@@ -20,7 +20,7 @@
   "match_explanation": "The product title contains the full chart name \"Pink O'Hara\" as a phrase, inside a longer title.",
   "review_status": "Dismissed",
   "first_date_found": "2026-10-29 06:11 MST (America/Phoenix)",
-  "last_verified": "2026-10-29 06:12 MST (America/Phoenix)",
+  "last_verified": "2026-10-30 06:07 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-29 06:11 MST (America/Phoenix)",
   "units_in_stock_at_capture": null,
   "seller_sku": null,
@@ -85,6 +85,10 @@
       "date": "2026-10-29 06:17 MST (America/Phoenix)",
       "action": "Dismissed as a duplicate of KISAKIPLAN-004",
       "details": "Kisaki Plant re-slugged its Pink O'Hara listing; the address on KISAKIPLAN-004 redirects here, so this is the same listing and not a second one. Dismissed the same morning it was created, before any report or dashboard carried it as a finding. create_cases.py was fixed the same day to resolve redirects before creating a case, so a re-slug cannot produce a phantom case again."
+    },
+    {
+      "date": "2026-10-30 06:07 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

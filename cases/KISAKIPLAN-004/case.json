@@ -18,7 +18,7 @@
   "match_explanation": "Product title contains the trademarked name \"Pink O'Hara\" (as part of a longer product title).",
   "review_status": "New",
   "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-  "last_verified": "2026-10-29 06:17 MST (America/Phoenix)",
+  "last_verified": "2026-10-30 06:07 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 09:43 MST (America/Phoenix)",
   "seller_location": {
     "country": "United States",
@@ -217,6 +217,10 @@
       "date": "2026-10-29 06:17 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run.",
       "details": "Present at the seller's new address for this listing. Kisaki Plant served 324 products today and this listing was among them; the automatic re-verification pass had flagged it absent only because it was still looking at the old address, which redirects here."
+    },
+    {
+      "date": "2026-10-30 06:07 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ],
   "previous_product_urls": [
