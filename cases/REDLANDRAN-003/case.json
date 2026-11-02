@@ -1,0 +1,90 @@
+{
+  "case_number": "REDLANDRAN-003",
+  "site_code": "REDLANDRAN",
+  "variety": "Wedding Piano",
+  "matched_trademark": "Wedding Piano",
+  "trademark_status": "Registered",
+  "trademark_status_as_written": "Registered",
+  "trademark_application_or_registration_no": "App. Ser. No. 99794217 (Reg. No.: 8512579)",
+  "breeder": "Rosen Tantau KG",
+  "seller_name": "Redland Ranch Roses",
+  "website_domain": "redlandranchroses.com",
+  "product_url": "https://redlandranchroses.com/products/wedding-piano®",
+  "exact_product_title": "Wedding Piano®",
+  "quoted_text": "A graceful variation of the Piano series, Wedding Piano keeps the signature globular bud to fully cupped form—this time dressed in creamy white with soft blush undertones. Blooming generously through the season, it lends a timeless romantic elegance to any setting, with a delicate fragrance and exceptional durability.",
+  "price": "69.99",
+  "currency": "USD",
+  "price_note": null,
+  "quantity_or_form": "3 GALLON POTTED ROSE - Ships Spring 2027",
+  "match_classification": "Exact",
+  "match_explanation": "The product title \"Wedding Piano®\" normalises exactly to the chart name \"Wedding Piano\". The ® symbol is the seller's own mark of registration and is not part of the name.",
+  "review_status": "New",
+  "first_date_found": "2026-11-02 06:10 MST (America/Phoenix)",
+  "last_verified": "2026-11-02 06:13 MST (America/Phoenix)",
+  "screenshot_captured_at": "2026-11-02 06:12 MST (America/Phoenix)",
+  "units_in_stock_at_capture": null,
+  "seller_sku": null,
+  "page_publication_date": "Date not available on page",
+  "page_update_date": "Date not available on page",
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Florida (Estimated)",
+    "city": "Redland / Miami-Dade area (Estimated)",
+    "source": "No address published on the contact, about or privacy pages -- only info@redlandranchroses.com. Estimated from the business name and the site's Deep-South / Fortuniana-rootstock focus; unconfirmed.",
+    "estimated": true
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (the site's own privacy policy states it is 'powered by Shopify')",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.32 (apex), within Shopify's 23.227.38.0/24 range",
+    "ip_geolocation": "Not determined",
+    "registrar": "Not determined -- RDAP/whois endpoints (rdap.org, rdap.verisign.com) are refused by this environment's network egress policy",
+    "hosting_country": "Not determined"
+  },
+  "evidence_screenshots": [
+    {
+      "file": "cases/REDLANDRAN-003/screenshots/REDLANDRAN-003_2026-11-02_0612.png",
+      "captured_at": "2026-11-02 06:12 MST (America/Phoenix)",
+      "source_url": "https://redlandranchroses.com/products/wedding-piano®",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 1545153,
+      "product_image_box": {
+        "x": 40,
+        "y": 163.375,
+        "w": 856,
+        "h": 856,
+        "detail_bottom": 2213.8125,
+        "dpr": 1
+      },
+      "images_total": 50,
+      "images_failed_to_load": 34,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing. No listing content was altered, added or removed.",
+      "image_load_note": "34 of 50 images on the page did not load and appear blank in this capture. Their host is refused by this environment's network policy, not by the seller. The capture is kept for its text, price and layout; it is not a complete picture of the listing as a buyer saw it."
+    }
+  ],
+  "access_or_research_limitations": [],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-11-02, which matches product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"Registered\". The product title contains the single word \"PIANO\", which is the whole of the chart entry. A one-word match can be coincidence rather than the variety -- it needs a human read of the listing before it means anything.",
+  "history": [
+    {
+      "date": "2026-11-02 06:10 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created from that day's crawl; chart status carried through unchanged."
+    },
+    {
+      "date": "2026-11-02 06:12 MST (America/Phoenix)",
+      "action": "Matched chart name corrected before this case was reported",
+      "details": "Created minutes earlier against the chart's standalone \"PIANO\" entry and rated Possible, because the matcher stopped at the first chart name that fitted rather than the most specific one. \"Wedding Piano\" is itself on the chart and Registered since 2026-10-20 (Reg. No. 8512579, Rosen Tantau KG), and the title matches it exactly. Corrected before this case appeared in any report or on the dashboard. scripts/crawl_sites.py was fixed the same morning to keep the most specific matching name."
+    },
+    {
+      "date": "2026-11-02 06:12 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://redlandranchroses.com/products/wedding-piano® saved to cases/REDLANDRAN-003/screenshots/REDLANDRAN-003_2026-11-02_0612.png (1,545,153 bytes)."
+    },
+    {
+      "date": "2026-11-02 06:13 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
+    }
+  ]
+}

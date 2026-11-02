@@ -359,15 +359,26 @@ def match_titles(items, active):
         if not is_rose_product(title):
             continue
         toks = normalize(title).split()
+        # Several chart names can match one title, and which one we record is
+        # not cosmetic: on 2026-11-02 Redland Ranch's "Wedding Piano(R)" matched
+        # the chart's standalone "PIANO" purely because that row comes first,
+        # and was written up as a Possible one-word match -- when "Wedding
+        # Piano" is itself on the chart, Registered since 2026-10-20, and the
+        # title matches it exactly. Always keep the most specific name that
+        # fits: most words first, then longest, then alphabetical so the choice
+        # is stable run to run.
+        hits = []
         for tm_norm, rec in active.items():
             tw = tm_norm.split()
             if any(toks[i:i + len(tw)] == tw for i in range(len(toks) - len(tw) + 1)):
-                matches.append({"title": title, "url": url,
-                                "trademark": rec["trademark"],
-                                "status": rec.get("status_category") or "(no status)",
-                                "status_raw": rec.get("status"),
-                                "cut_roses_only": is_cut_roses_only(item)})
-                break
+                hits.append((len(tw), len(tm_norm), tm_norm, rec))
+        if hits:
+            rec = max(hits, key=lambda h: (h[0], h[1], h[2]))[3]
+            matches.append({"title": title, "url": url,
+                            "trademark": rec["trademark"],
+                            "status": rec.get("status_category") or "(no status)",
+                            "status_raw": rec.get("status"),
+                            "cut_roses_only": is_cut_roses_only(item)})
     return matches
 
 
