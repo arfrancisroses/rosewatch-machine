@@ -242,9 +242,49 @@ def active_trademarks():
     recs = json.loads((REPO_ROOT / "data" / "trademarks.json").read_text())["records"]
     out = {}
     for r in recs:
-        if r.get("trademark"):
-            out.setdefault(normalize(r["trademark"]), r)
+        if not r.get("trademark"):
+            continue
+        key = normalize(match_name(r["trademark"]))
+        prev = out.get(key)
+        if prev is None or _enforceability(r) < _enforceability(prev):
+            out[key] = r
     return out
+
+
+# Where two chart rows reduce to the same matching name, the more enforceable
+# one wins. Two do: "Circle of Life" (Abandoned) against "Circle of Life
+# (refile new application)" (Pending), and "ASHLEY" ("Abandoned (will refile,
+# see 93004.4400 below)") against "Ashley" (To Be Filed). In both the chart's
+# own wording says the dead row was superseded by the live one, so taking the
+# first row encountered would report a live application as abandoned. Order in
+# the file is not a fact about the trademark; status is.
+_ENFORCEABILITY = ["Registered", "Pending", "To Be Filed", "Abandoned",
+                   "Not Applicable", "Do Not File"]
+
+
+def _enforceability(rec):
+    cat = rec.get("status_category")
+    return _ENFORCEABILITY.index(cat) if cat in _ENFORCEABILITY else len(_ENFORCEABILITY)
+
+
+# A parenthetical on a chart name is the attorney's own note to himself, not
+# part of the variety: "Northanger Abbey (varietal)", "Royal Park (2666367
+# flower bulbs)", "Pacific Blue (not on site?)". Matching required the whole
+# chart name to appear in a product title, so every one of these 14 names could
+# never match anything, on any site, and had been invisible to the crawl since
+# the system started. Per user instruction 2026-11-03 the parenthetical is
+# ignored FOR MATCHING ONLY -- `r["trademark"]` keeps Damon's exact wording, so
+# the chart, the case records, the dashboard and the reports all still show the
+# name as he wrote it. Nothing of his is edited away.
+PARENTHETICAL = re.compile(r"\s*\([^)]*\)")
+
+
+def match_name(trademark):
+    """The part of a chart name that is actually the variety name."""
+    cleaned = PARENTHETICAL.sub(" ", trademark).strip()
+    # A name that is nothing but a parenthetical would match everything; keep
+    # the original in that case rather than produce an empty needle.
+    return cleaned or trademark
 
 
 # Genus names of plants that are not roses. A trademark name is a word, and a
@@ -264,6 +304,12 @@ NON_ROSE_GENERA = (
     "mountain laurel", "goat's beard", "goats beard", "blanket flower",
     "stonecrop", "coral bells", "butterfly bush", "buddleia", "crape myrtle",
     "lagerstroemia", "nandina", "pieris", "ilex", "holly",
+    # Added 2026-11-03, both seen at Redland Ranch Roses, a general nursery:
+    # "Heliopsis helianthoides var. scabra 'Burning Hearts'" and "Sempervivum
+    # 'Pacific Blue Ice'" would otherwise have become cases against the chart's
+    # "Hearts" and "Pacific Blue". Neither is a rose, so neither is a finding.
+    "heliopsis", "false sunflower", "oxeye sunflower", "sempervivum",
+    "houseleek", "hens and chicks",
 )
 
 
