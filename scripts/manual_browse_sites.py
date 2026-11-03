@@ -8,9 +8,11 @@ environment cannot reach facebook.com at all -- so they are reported as coverage
 gaps on every run and nothing about them is ever verified. Handing over the links
 is the only honest way these get looked at.
 
-Etsy storefronts are the same problem for the same reasons and are listed in
-their own group, so the daily summary can carry them without implying the user
-asked for them.
+Etsy storefronts are the same problem for the same reasons, and the user asked
+for those too, later the same day. Both groups go into every daily summary --
+every run, including runs with no findings and runs where nothing about these
+sellers changed. A list that only shows up sometimes is a list people stop
+looking for.
 
     python3 scripts/manual_browse_sites.py            # grouped, for the summary
     python3 scripts/manual_browse_sites.py --json     # machine-readable
