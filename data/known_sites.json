@@ -1,7 +1,7 @@
 {
-  "source_file": "2026-10-01_ListofIPInfringements.xlsx",
-  "imported_date": "2026-10-28",
-  "record_count": 18,
+  "source_file": "2026-11-03_ListofIPInfringements.xlsx",
+  "imported_date": "2026-11-03",
+  "record_count": 20,
   "records": [
     {
       "company": "Bloom Ladies Roses",
@@ -35,6 +35,25 @@
       "prior_reported_varieties": [],
       "source_sheets": [
         "Sheet1"
+      ]
+    },
+    {
+      "company": "Commerce Farms",
+      "websites": [
+        "https://www.etsy.com/shop/CommerceFarms"
+      ],
+      "sales_platforms": [
+        "Etsy"
+      ],
+      "shipped_from": null,
+      "prior_manual_notes": [
+        "Added 2026-11-03 on the user's instruction. Shop tagline as shown on Etsy: \"Healthy and Strong Rare Rose plants\". Etsy storefront with no separate website supplied. Etsy is unreachable from the Rose Watch crawler (blocked at the network CONNECT stage), so this entry is expected to be reported as a coverage gap on every run until a crawlable URL exists. Variety columns left blank, not '-': blank means unchecked, '-' would claim the variety is confirmed absent.",
+        "Added 2026-11-03 on the user's instruction. Tagline: \"Healthy and Strong Rare Rose plants\". Not crawlable -- Etsy is blocked at the network CONNECT stage."
+      ],
+      "prior_reported_varieties": [],
+      "source_sheets": [
+        "Sheet1",
+        "Etsy"
       ]
     },
     {
@@ -307,6 +326,23 @@
         "Modern Art ®",
         "Sophie Rochas ®\nDelbard"
       ],
+      "source_sheets": [
+        "Sheet1"
+      ]
+    },
+    {
+      "company": "Winter Sonata (name taken from the page handle -- needs confirming)",
+      "websites": [
+        "https://www.facebook.com/winter.sonata.594800/"
+      ],
+      "sales_platforms": [
+        "Facebook"
+      ],
+      "shipped_from": null,
+      "prior_manual_notes": [
+        "Added 2026-11-03 on the user's instruction. No business name was supplied; \"Winter Sonata\" is read off the page handle winter.sonata.594800 and is NOT confirmed -- please correct it. Facebook pages cannot be crawled and facebook.com is unreachable from the Rose Watch crawler (blocked at the network CONNECT stage), so this entry will be reported as a coverage gap on every run. Its URL is surfaced in the daily summary for the user to browse by hand, per their instruction of 2026-11-03. Variety columns left blank, not '-': blank means unchecked."
+      ],
+      "prior_reported_varieties": [],
       "source_sheets": [
         "Sheet1"
       ]
