@@ -62,6 +62,10 @@
     "myroseworld.com": {
       "site_code": "MYROSEWORL",
       "next_sequence": 8
+    },
+    "etsy.com/shop/commercefarms": {
+      "site_code": "COMMERCEFA",
+      "next_sequence": 6
     }
   },
   "cases": [
@@ -6125,6 +6129,81 @@
       "first_date_found": "2026-11-02 06:10 MST (America/Phoenix)",
       "last_verified": "2026-11-03 06:06 MST (America/Phoenix)",
       "match_classification": "Exact",
+      "review_status": "New"
+    },
+    {
+      "case_number": "COMMERCEFA-001",
+      "site_code": "COMMERCEFA",
+      "variety": "Emma WoodHouse",
+      "matched_trademark": "Emma WoodHouse",
+      "trademark_status": "Pending",
+      "seller_name": "Commerce Farms",
+      "website_domain": "etsy.com/shop/CommerceFarms",
+      "seller_location": "South Carolina, United States",
+      "website_host": "Etsy, Inc. (marketplace storefront)",
+      "first_date_found": "2026-11-03 12:49 MST (America/Phoenix)",
+      "last_verified": "2026-11-03 12:49 MST (America/Phoenix)",
+      "match_classification": "Strong",
+      "review_status": "New"
+    },
+    {
+      "case_number": "COMMERCEFA-002",
+      "site_code": "COMMERCEFA",
+      "variety": "Pink 'n Pretty",
+      "matched_trademark": "Pink 'n Pretty",
+      "trademark_status": "Pending",
+      "seller_name": "Commerce Farms",
+      "website_domain": "etsy.com/shop/CommerceFarms",
+      "seller_location": "South Carolina, United States",
+      "website_host": "Etsy, Inc. (marketplace storefront)",
+      "first_date_found": "2026-11-03 12:49 MST (America/Phoenix)",
+      "last_verified": "2026-11-03 12:49 MST (America/Phoenix)",
+      "match_classification": "Strong",
+      "review_status": "New"
+    },
+    {
+      "case_number": "COMMERCEFA-003",
+      "site_code": "COMMERCEFA",
+      "variety": "Paradise Beach",
+      "matched_trademark": "Paradise Beach",
+      "trademark_status": "Pending",
+      "seller_name": "Commerce Farms",
+      "website_domain": "etsy.com/shop/CommerceFarms",
+      "seller_location": "South Carolina, United States",
+      "website_host": "Etsy, Inc. (marketplace storefront)",
+      "first_date_found": "2026-11-03 12:49 MST (America/Phoenix)",
+      "last_verified": "2026-11-03 12:49 MST (America/Phoenix)",
+      "match_classification": "Strong",
+      "review_status": "New"
+    },
+    {
+      "case_number": "COMMERCEFA-004",
+      "site_code": "COMMERCEFA",
+      "variety": "Jillian",
+      "matched_trademark": "Jillian",
+      "trademark_status": "Pending",
+      "seller_name": "Commerce Farms",
+      "website_domain": "etsy.com/shop/CommerceFarms",
+      "seller_location": "South Carolina, United States",
+      "website_host": "Etsy, Inc. (marketplace storefront)",
+      "first_date_found": "2026-11-03 12:49 MST (America/Phoenix)",
+      "last_verified": "2026-11-03 12:49 MST (America/Phoenix)",
+      "match_classification": "Possible",
+      "review_status": "New"
+    },
+    {
+      "case_number": "COMMERCEFA-005",
+      "site_code": "COMMERCEFA",
+      "variety": "Victorian Secret",
+      "matched_trademark": "Victorian Secret",
+      "trademark_status": "(no status)",
+      "seller_name": "Commerce Farms",
+      "website_domain": "etsy.com/shop/CommerceFarms",
+      "seller_location": "South Carolina, United States",
+      "website_host": "Etsy, Inc. (marketplace storefront)",
+      "first_date_found": "2026-11-03 12:49 MST (America/Phoenix)",
+      "last_verified": "2026-11-03 12:49 MST (America/Phoenix)",
+      "match_classification": "Strong",
       "review_status": "New"
     }
   ],

@@ -1,0 +1,73 @@
+{
+  "case_number": "COMMERCEFA-001",
+  "site_code": "COMMERCEFA",
+  "variety": "Emma WoodHouse",
+  "matched_trademark": "Emma WoodHouse",
+  "trademark_status": "Pending",
+  "trademark_status_as_written": "Pending",
+  "trademark_application_or_registration_no": "App. Ser. No. 50051637 (Reg. No.: N/A)",
+  "breeder": "Jan Spek Rozen",
+  "seller_name": "Commerce Farms",
+  "website_domain": "etsy.com/shop/CommerceFarms",
+  "product_url": "https://www.etsy.com/listing/4527291679/rose-emma-wood-house-ai-m-w-de-hao-s-2",
+  "exact_product_title": "Rose 'Emma Woodhouse' (艾玛) (2 Gallon+)",
+  "quoted_text": "Name: Emma Woodhouse Rose  Origin: Netherlands  Introduced: 2019...",
+  "price": "59.99",
+  "currency": "USD",
+  "price_note": "Read from the listing page by the user on 2026-11-03; shipping shown separately as $15.00 to the United States.",
+  "quantity_or_form": "2 Gallon+ (listed as \"Made to order\")",
+  "match_classification": "Strong",
+  "match_explanation": "The product title contains the full chart name \"Emma WoodHouse\" as a phrase, inside a longer title.",
+  "review_status": "New",
+  "first_date_found": "2026-11-03 12:49 MST (America/Phoenix)",
+  "last_verified": "2026-11-03 12:49 MST (America/Phoenix)",
+  "screenshot_captured_at": "2026-11-03 (America/Phoenix) -- time of day not recorded; captured by the user",
+  "units_in_stock_at_capture": null,
+  "seller_sku": null,
+  "page_publication_date": "Date not available on page",
+  "page_update_date": "Date not available on page",
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "South Carolina",
+    "city": "Not stated by the seller",
+    "source": "Published by the seller on its own Etsy shop page, which reads \"South Carolina, United States\" under the shop name, and in its About section: \"Rose Farmer Based In South Carolina\". Read from the shop page by the user on 2026-11-03 and supplied as a screenshot. Not estimated. No street address or city is stated anywhere on the shop.",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Etsy, Inc. This is a marketplace storefront, not the seller's own website: the listing pages are served by Etsy's infrastructure and the seller operates no hosting of their own that Rose Watch is aware of. If the seller also runs a separate website, it has not been found -- a search on 2026-11-03 turned up none.",
+    "cdn_or_proxy": null,
+    "server_ip": "Not determined -- etsy.com is unreachable from this environment, so no lookup was possible",
+    "ip_geolocation": "Not determined",
+    "registrar": "Not applicable -- the seller does not own the domain; etsy.com is registered to Etsy, Inc.",
+    "hosting_country": "Not determined"
+  },
+  "evidence_screenshots": [
+    {
+      "file": "cases/COMMERCEFA-001/screenshots/COMMERCEFA-001_2026-11-03_user.webp",
+      "captured_at": "2026-11-03 (America/Phoenix) -- time of day not recorded",
+      "source_url": "https://www.etsy.com/listing/4527291679/rose-emma-wood-house-ai-m-w-de-hao-s-2",
+      "captured_by": "The user, browsing the listing in their own browser",
+      "capture_method": "MANUAL CAPTURE BY THE USER, not an automated capture. Rose Watch cannot reach etsy.com from this environment. The image is the file the user supplied, stored byte-for-byte as delivered and not re-encoded.",
+      "full_page": false,
+      "bytes": 88950,
+      "page_modifications": "None known. The image is the user's own screenshot as supplied."
+    }
+  ],
+  "access_or_research_limitations": [
+    "This case was built entirely from evidence the user gathered by hand on 2026-11-03. Rose Watch cannot reach this listing: etsy.com answers HTTP 403 at this environment's network proxy's CONNECT stage, so the request never leaves, and Etsy publishes no open product feed that the crawler could read. The access control was not bypassed and no attempt was made to work around it.",
+    "CONSEQUENCE FOR RE-VERIFICATION: this listing is NOT re-checked by the daily run, and its Last Verified date will not advance on its own. It says only that the user saw the listing on the date shown. Any later confirmation that the listing is still live has to come from the user browsing it again."
+  ],
+  "investigator_notes": "Built by hand on 2026-11-03 from evidence the user gathered themselves, because this seller trades only on Etsy and Etsy cannot be crawled. This record's chart entry is \"Pending\". The product title contains the full chart name \"Emma WoodHouse\" as a phrase, inside a longer title. The listing showed \"In 19 carts\" at the time it was captured.",
+  "history": [
+    {
+      "date": "2026-11-03 12:49 MST (America/Phoenix)",
+      "action": "Case created from the user's own evidence",
+      "details": "Created by hand from the listing URL and screenshot the user supplied on 2026-11-03. Chart status carried through unchanged. The seller trades only on Etsy, which Rose Watch cannot crawl, so there is no automated crawl behind this record."
+    },
+    {
+      "date": "2026-11-03 12:49 MST (America/Phoenix)",
+      "action": "Evidence screenshot filed (captured by the user)",
+      "details": "The user's own screenshot of https://www.etsy.com/listing/4527291679/rose-emma-wood-house-ai-m-w-de-hao-s-2 saved to cases/COMMERCEFA-001/screenshots/COMMERCEFA-001_2026-11-03_user.webp (88,950 bytes). Recorded as captured by the user on 2026-11-03, not as an automated capture -- the provenance differs and the record says so. The image was checked before filing and shows the listing it claims: the title, the seller name CommerceFarms and the price are all visible."
+    }
+  ]
+}
