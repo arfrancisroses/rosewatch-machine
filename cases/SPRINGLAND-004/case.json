@@ -198,6 +198,11 @@
       "date": "2026-11-02 06:16 MST (America/Phoenix)",
       "action": "Listing no longer in the seller's catalog (HTTP 404)",
       "details": "First run on which this listing is absent. Springland Flowers served 113 products today, down from 115 on 2026-10-30, and this listing was not among them; its own URL returns HTTP 404. The listing is \"Rose Victoria's Secret 维多利亚的秘密 (Non-Grafted/Own Root, 1 Gal)\", matched against the chart entry \"Secret\", which carries no status and so no enforceable right. Recorded as observed; why the seller removed it is the seller's to say and is not inferred here. The evidence already captured for this case stands as evidence of its own date."
+    },
+    {
+      "date": "2026-11-03 06:07 MST (America/Phoenix)",
+      "action": "Listing still removed (HTTP 404)",
+      "details": "Springland Flowers served 113 products today and this listing was not among them; its own URL returns HTTP 404. A restated removal, not a fresh one."
     }
   ]
 }
