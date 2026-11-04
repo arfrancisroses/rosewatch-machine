@@ -103,9 +103,13 @@ def goto_checked(page, url, tries=4):
     """Load the page, treating the seller's response honestly.
 
     A 429 means "slow down", not "gone": back off and try again, the same rule
-    the crawler follows. Any other non-2xx means the listing is not live at this
-    URL, and photographing the shop's 404 would put a picture of "not found" on
-    the record as if it were the listing.
+    the crawler follows. A 403 or 401 means the seller REFUSED us, which is not
+    the same as the listing being absent -- on 2026-11-04 two Muse Roses pages
+    answered 403 to the browser while the listings sat in the seller's own feed,
+    and both captured normally on a retry minutes later. A 404 or 410 is the
+    listing being gone. Whatever the reason, no image is kept: photographing a
+    shop's error page would put "not found" on the record as if it were the
+    listing. The distinction matters for what the record then SAYS.
     """
     delay = 30
     for attempt in range(tries):
@@ -127,9 +131,19 @@ def goto_checked(page, url, tries=4):
             page.wait_for_timeout(min(wait, 180) * 1000)
             delay *= 2
             continue
+        if status in (401, 403):
+            raise RenderFailure(
+                f"the seller refused this request with HTTP {status}. That is the seller declining to "
+                f"serve the page to us, NOT evidence that the listing is gone -- check the seller's own "
+                f"feed before reading anything into it, and retry: a refusal of this kind has proved "
+                f"transient before. No image kept, and no attempt was made to work around the refusal")
+        if status in (404, 410):
+            raise RenderFailure(
+                f"the seller returned HTTP {status} for this URL, so the listing is no longer live at "
+                f"it; no image kept")
         raise RenderFailure(
-            f"the seller returned HTTP {status} for this URL, so the listing is not live at it; "
-            f"no image kept")
+            f"the seller returned HTTP {status} for this URL, so the page could not be photographed as "
+            f"the listing; no image kept. What the status means for the listing is not assumed here")
     return None
 
 

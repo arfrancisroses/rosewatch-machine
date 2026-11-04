@@ -1,0 +1,92 @@
+{
+  "case_number": "MUSEROSES-046",
+  "site_code": "MUSEROSES",
+  "variety": "Notting Hill (varietal)",
+  "matched_trademark": "Notting Hill (varietal)",
+  "trademark_status": "To Be Filed",
+  "trademark_status_as_written": "To Be Filed",
+  "trademark_application_or_registration_no": "App. Ser. No. none on chart (Reg. No.: N/A)",
+  "breeder": "Jan Spek Rozen",
+  "seller_name": "Muse Roses",
+  "website_domain": "museroses.com",
+  "product_url": "https://museroses.com/products/notting-hill-rose",
+  "exact_product_title": "Notting Hill Rose",
+  "quoted_text": "Notting Hill Rose – Dutch Pink Gradient Cut Rose with Ethereal Color and Lemon-Fruity Fragrance Notting Hill Rose – Dutch Pink Gradient Cut Rose with Ethereal Color and Lemon-Fruity Fragrance 🌸 🌸 Notting Hill Rose – Premium Dutch Pink Gradient Cut Rose with Ethereal Color & Lemon-Fruity Fragrance | 2-Year-Old Live Plant for Gardens & Bouquets 🌿 Variety Information • Name: Notting Hill Rose • Origin: Netherlands •...",
+  "price": "68.00",
+  "currency": "USD",
+  "price_note": null,
+  "quantity_or_form": "Not stated in the product feed",
+  "match_classification": "Strong",
+  "match_explanation": "The product title contains the full chart name \"Notting Hill (varietal)\" as a phrase, inside a longer title.",
+  "review_status": "New",
+  "first_date_found": "2026-11-04 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-11-04 06:21 MST (America/Phoenix)",
+  "screenshot_captured_at": "2026-11-04 06:20 MST (America/Phoenix)",
+  "units_in_stock_at_capture": null,
+  "seller_sku": null,
+  "page_publication_date": "Date not available on page",
+  "page_update_date": "Date not available on page",
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Texas",
+    "city": "Buda",
+    "source": "Not confirmed directly this run -- the site now redirects to molarose.com, which was blocked by this session's network egress policy. Carried over from prior known-sites research (data/known_sites.json), which separately notes the stated Texas office address resembles a home address -- flagged, not confirmed.",
+    "estimated": true
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed under the museroses.com domain)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.65",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [
+    {
+      "file": "cases/MUSEROSES-046/screenshots/MUSEROSES-046_2026-11-04_0620.png",
+      "captured_at": "2026-11-04 06:20 MST (America/Phoenix)",
+      "source_url": "https://museroses.com/products/notting-hill-rose",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 1078107,
+      "product_image_box": {
+        "x": 115,
+        "y": 302,
+        "w": 671,
+        "h": 671,
+        "detail_bottom": 2435.5625,
+        "dpr": 1
+      },
+      "images_total": 91,
+      "images_failed_to_load": 63,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing; dismissed: div.background-overlay1, div.background-overlay, shopify-chat.needsclick. No listing content was altered, added or removed.",
+      "image_load_note": "63 of 91 images on the page did not load and appear blank in this capture. Their host is refused by this environment's network policy, not by the seller. The capture is kept for its text, price and layout; it is not a complete picture of the listing as a buyer saw it."
+    }
+  ],
+  "access_or_research_limitations": [
+    "Screenshot attempt failed 2026-11-04 06:15 MST (America/Phoenix): RenderFailure: the seller returned HTTP 403 for this URL, so the listing is not live at it; no image kept | third-party sub-resources (analytics/ads/telemetry, not the listing itself) were refused by this environment's egress proxy: bzrcdn.openai.com, cdn.judge.me, challenges.cloudflare.com, error-analytics-sessions-production.shopifysvc.com, monorail-edge.shopifysvc.com, otlp-http-production.shopifysvc.com. No image was kept; this case has no screenshot rather than a blank one."
+  ],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-11-04, which matches product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"To Be Filed\", which carries no enforceable right: it is recorded so the match is tracked, and must not be read as a finding of infringement. The product title contains the full chart name \"Notting Hill (varietal)\" as a phrase, inside a longer title.",
+  "history": [
+    {
+      "date": "2026-11-04 06:06 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created from that day's crawl; chart status carried through unchanged."
+    },
+    {
+      "date": "2026-11-04 06:20 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://museroses.com/products/notting-hill-rose saved to cases/MUSEROSES-046/screenshots/MUSEROSES-046_2026-11-04_0620.png (1,078,107 bytes)."
+    },
+    {
+      "date": "2026-11-04 06:21 MST (America/Phoenix)",
+      "action": "Correction to the capture note written minutes earlier",
+      "details": "The first attempt's automatic note said the seller's HTTP 403 meant \"the listing is not live at it\". That was wrong. A 403 is the seller refusing to serve the page to us; the listing was in Muse Roses' own product feed on the same run, and a retry minutes later captured it normally -- the screenshot now on this case. The refusal was transient and was not worked around. scripts/capture_screenshots.py was corrected the same morning so a 403 or 401 is never again described as the listing being gone; only a 404 or 410 says that."
+    },
+    {
+      "date": "2026-11-04 06:21 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
+    }
+  ]
+}

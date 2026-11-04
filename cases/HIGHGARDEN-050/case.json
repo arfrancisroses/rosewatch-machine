@@ -1,0 +1,60 @@
+{
+  "case_number": "HIGHGARDEN-050",
+  "site_code": "HIGHGARDEN",
+  "variety": "Georgia Peach (varietal)",
+  "matched_trademark": "Georgia Peach (varietal)",
+  "trademark_status": "To Be Filed",
+  "trademark_status_as_written": "To Be Filed",
+  "trademark_application_or_registration_no": "App. Ser. No. none on chart (Reg. No.: N/A)",
+  "breeder": "Jan Spek Rozen",
+  "seller_name": "High Garden",
+  "website_domain": "highgardenroses.com",
+  "product_url": "https://highgardenroses.com/products/georgia-peach-netherlands-florist-shrub-rose",
+  "exact_product_title": "Georgia Peach Dutch Florist Shrub Rose",
+  "quoted_text": "This elegant rose showcases soft peach-colored blooms with a delicate, elegant appearance. Its compact growth makes it perfect for containers or garden beds, offering a charming touch of color throughout the season.",
+  "price": "30.00",
+  "currency": "USD",
+  "price_note": null,
+  "quantity_or_form": "S / Own Root",
+  "match_classification": "Strong",
+  "match_explanation": "The product title contains the full chart name \"Georgia Peach (varietal)\" as a phrase, inside a longer title.",
+  "review_status": "New",
+  "first_date_found": "2026-11-04 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-11-04 06:21 MST (America/Phoenix)",
+  "screenshot_captured_at": null,
+  "units_in_stock_at_capture": null,
+  "seller_sku": null,
+  "page_publication_date": "Date not available on page",
+  "page_update_date": "Date not available on page",
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Oregon",
+    "city": "Portland",
+    "source": "Site homepage: \"Grown and shipped from Portland, Oregon\" (highgardenroses.com)",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed and site footer)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.65",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "Screenshot attempt failed 2026-11-04 06:10 MST (America/Phoenix): RenderFailure: page rendered only 0 characters of text (threshold 400); the server sent the page but the browser rendered nothing, which is the signature of a script that blanks the document when it detects an automated browser | third-party sub-resources (analytics/ads/telemetry, not the listing itself) were refused by this environment's egress proxy: blessifyinfotech.com, connect.facebook.net, data4.superboosty.com, error-analytics-sessions-production.shopifysvc.com, js.sentry-cdn.com, monorail-edge.shopifysvc.com. No image was kept; this case has no screenshot rather than a blank one."
+  ],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-11-04, which matches product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"To Be Filed\", which carries no enforceable right: it is recorded so the match is tracked, and must not be read as a finding of infringement. The product title contains the full chart name \"Georgia Peach (varietal)\" as a phrase, inside a longer title.",
+  "history": [
+    {
+      "date": "2026-11-04 06:06 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created from that day's crawl; chart status carried through unchanged."
+    },
+    {
+      "date": "2026-11-04 06:21 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
+    }
+  ]
+}

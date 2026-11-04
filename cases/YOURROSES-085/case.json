@@ -1,0 +1,85 @@
+{
+  "case_number": "YOURROSES-085",
+  "site_code": "YOURROSES",
+  "variety": "Royal Romance (varietal)",
+  "matched_trademark": "Royal Romance (varietal)",
+  "trademark_status": "To Be Filed",
+  "trademark_status_as_written": "To Be Filed",
+  "trademark_application_or_registration_no": "App. Ser. No. none on chart (Reg. No.: N/A)",
+  "breeder": "Jan Spek Rozen",
+  "seller_name": "Your Roses",
+  "website_domain": "your-roses.com",
+  "product_url": "https://your-roses.com/product/royal-romance-rose/",
+  "exact_product_title": "Royal Romance Rose Plant",
+  "quoted_text": "Royal Romance Rose for sale！ 【Shipping Information】 Prior to shipping out your rose orders, our professional team will carefully trim the leaves, branches, and flower buds to ensure the plants’ health during transit. We will also remove the majority of the soil from the roots and delicately wrap a small quantity of fresh soil around them for protection. This meticulous process is designed to enhance the survival...",
+  "price": null,
+  "currency": null,
+  "price_note": "Not available: this site's WordPress product feed does not carry price, and no price was read from the product page.",
+  "quantity_or_form": "Not stated in the product feed",
+  "match_classification": "Strong",
+  "match_explanation": "The product title contains the full chart name \"Royal Romance (varietal)\" as a phrase, inside a longer title.",
+  "review_status": "New",
+  "first_date_found": "2026-11-04 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-11-04 06:21 MST (America/Phoenix)",
+  "screenshot_captured_at": "2026-11-04 06:19 MST (America/Phoenix)",
+  "units_in_stock_at_capture": null,
+  "seller_sku": null,
+  "page_publication_date": "Date not available on page",
+  "page_update_date": "Date not available on page",
+  "seller_location": {
+    "country": "China (Estimated)",
+    "state_or_region": "Not available on page",
+    "city": "Not available on page",
+    "source": "Estimated from a phone number shown on the site using China's country code (\"86-135-3333-8492\"); consistent with prior known-sites research noting this seller ships from China. No address or explicit country statement appears on the site itself.",
+    "estimated": true
+  },
+  "website_host": {
+    "hosting_platform": "WordPress / WooCommerce. Likely hosted on Hostinger -- product page content links to an internal \"mediumblue-otter-995861.hostingersite.com\" subdomain, Hostinger's default temporary domain pattern.",
+    "cdn_or_proxy": null,
+    "server_ip": "191.101.104.131",
+    "ip_geolocation": "Not separately geolocated this run.",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [
+    {
+      "file": "cases/YOURROSES-085/screenshots/YOURROSES-085_2026-11-04_0619.png",
+      "captured_at": "2026-11-04 06:19 MST (America/Phoenix)",
+      "source_url": "https://your-roses.com/product/royal-romance-rose/",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 1462092,
+      "product_image_box": {
+        "x": 700,
+        "y": 261.140625,
+        "w": 542,
+        "h": 541.09375,
+        "detail_bottom": 1717.21875,
+        "dpr": 1
+      },
+      "images_total": 17,
+      "images_failed_to_load": 0,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing. No listing content was altered, added or removed.",
+      "image_load_note": null
+    }
+  ],
+  "access_or_research_limitations": [],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-11-04, which matches product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"To Be Filed\", which carries no enforceable right: it is recorded so the match is tracked, and must not be read as a finding of infringement. The product title contains the full chart name \"Royal Romance (varietal)\" as a phrase, inside a longer title.",
+  "history": [
+    {
+      "date": "2026-11-04 06:06 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created from that day's crawl; chart status carried through unchanged."
+    },
+    {
+      "date": "2026-11-04 06:19 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://your-roses.com/product/royal-romance-rose/ saved to cases/YOURROSES-085/screenshots/YOURROSES-085_2026-11-04_0619.png (1,462,092 bytes)."
+    },
+    {
+      "date": "2026-11-04 06:21 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
+    }
+  ]
+}
