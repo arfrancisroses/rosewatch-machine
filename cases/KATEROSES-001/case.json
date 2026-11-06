@@ -250,6 +250,11 @@
       "date": "2026-11-05 06:06 MST (America/Phoenix)",
       "action": "Listing still removed (HTTP 404)",
       "details": "Kate Roses served 100 products today and this listing was not among them; its own URL returns HTTP 404. A restated removal, not a fresh one."
+    },
+    {
+      "date": "2026-11-06 06:06 MST (America/Phoenix)",
+      "action": "Listing still removed (HTTP 404)",
+      "details": "Kate Roses served 110 products today and this listing was not among them; its own URL returns HTTP 404. A restated removal, not a fresh one."
     }
   ]
 }
