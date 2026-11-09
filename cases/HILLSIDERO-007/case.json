@@ -1,0 +1,85 @@
+{
+  "case_number": "HILLSIDERO-007",
+  "site_code": "HILLSIDERO",
+  "variety": "Royal Park (2666367 flower bulbs)",
+  "matched_trademark": "Royal Park (2666367 flower bulbs)",
+  "trademark_status": "To Be Filed",
+  "trademark_status_as_written": "To Be Filed",
+  "trademark_application_or_registration_no": "App. Ser. No. none on chart (Reg. No.: N/A)",
+  "breeder": "Jan Spek Rozen",
+  "seller_name": "Hillside Rose Farm",
+  "website_domain": "hillsiderosefarm.com",
+  "product_url": "https://www.hillsiderosefarm.com/products/royal-park-皇家园林-china-天狼",
+  "exact_product_title": "Royal Park 皇家园林 (Netherlands)",
+  "quoted_text": "A strong upright shrub rose, creamy yellow flowers with a pinkish tone at the center, diameter 3 inches, repeated flowering for multiple seasons, cup-shaped, sweet fragrance, plant height 3.5 ft, a great choice for your rose garden. *See Disclaimer in the Footer of the webpages",
+  "price": "64.00",
+  "currency": "USD",
+  "price_note": null,
+  "quantity_or_form": "1 gallon",
+  "match_classification": "Strong",
+  "match_explanation": "The product title contains the full chart name \"Royal Park (2666367 flower bulbs)\" as a phrase, inside a longer title.",
+  "review_status": "New",
+  "first_date_found": "2026-11-09 06:08 MST (America/Phoenix)",
+  "last_verified": "2026-11-09 06:09 MST (America/Phoenix)",
+  "screenshot_captured_at": "2026-11-09 06:08 MST (America/Phoenix)",
+  "units_in_stock_at_capture": null,
+  "seller_sku": null,
+  "page_publication_date": "Date not available on page",
+  "page_update_date": "Date not available on page",
+  "seller_location": {
+    "country": "United States (inferred — the site's \"Our Story\" page refers to a \"Southern California home\" but does not explicitly state \"United States\")",
+    "state_or_region": "California (\"Southern California\" per the site's Our Story / About page)",
+    "city": "Not available on page",
+    "source": "hillsiderosefarm.com/pages/about-us (\"Our Story\"); no address given on Contact or Shipping & Ordering Information pages",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (storefront platform — page footer states \"Powered by Shopify\")",
+    "cdn_or_proxy": "Cloudflare, Inc. (AS13335)",
+    "server_ip": "23.227.38.68 (apex hillsiderosefarm.com); 23.227.38.74 (www.hillsiderosefarm.com)",
+    "ip_geolocation": "Ottawa, Ontario, Canada per ip-api.com lookup on the apex IP — labeled Estimated: this reflects Cloudflare's routing/edge location for the IP, not necessarily Shopify's or the seller's physical location",
+    "registrar": "Not available — WHOIS lookup services attempted (rdap.org, hackertarget.com) were blocked by this session's network policy",
+    "estimated": true
+  },
+  "evidence_screenshots": [
+    {
+      "file": "cases/HILLSIDERO-007/screenshots/HILLSIDERO-007_2026-11-09_0608.png",
+      "captured_at": "2026-11-09 06:08 MST (America/Phoenix)",
+      "source_url": "https://www.hillsiderosefarm.com/products/royal-park-皇家园林-china-天狼",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 1103724,
+      "product_image_box": {
+        "x": 151,
+        "y": 161.1875,
+        "w": 603,
+        "h": 603,
+        "detail_bottom": 1246.3125,
+        "dpr": 1
+      },
+      "images_total": 23,
+      "images_failed_to_load": 6,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing; dismissed: shopify-chat.needsclick. No listing content was altered, added or removed.",
+      "image_load_note": "6 of 23 images on the page did not load and appear blank in this capture. Their host is refused by this environment's network policy, not by the seller. The capture is kept for its text, price and layout; it is not a complete picture of the listing as a buyer saw it."
+    }
+  ],
+  "access_or_research_limitations": [],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-11-09, which matches product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"To Be Filed\", which carries no enforceable right: it is recorded so the match is tracked, and must not be read as a finding of infringement. The product title contains the full chart name \"Royal Park (2666367 flower bulbs)\" as a phrase, inside a longer title.",
+  "history": [
+    {
+      "date": "2026-11-09 06:08 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created from that day's crawl; chart status carried through unchanged."
+    },
+    {
+      "date": "2026-11-09 06:08 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://www.hillsiderosefarm.com/products/royal-park-皇家园林-china-天狼 saved to cases/HILLSIDERO-007/screenshots/HILLSIDERO-007_2026-11-09_0608.png (1,103,724 bytes)."
+    },
+    {
+      "date": "2026-11-09 06:09 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
+    }
+  ]
+}
