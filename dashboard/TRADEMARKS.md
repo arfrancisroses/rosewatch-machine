@@ -1,6 +1,6 @@
 # Trademarks
 
-Source file: `2026-10-28_MasterTrademarkFilingChart.xlsx` — imported 2026-11-03.
+Source file: `2026-11-09_MasterTrademarkFilingChart.xlsx` — imported 2026-11-09.
 Total records: 275.
 
 Fields preserve the original wording from the Master Trademark Filing Chart. Rows flagged **Needs Review** have missing, unclear, duplicate, or conflicting source data and must not be silently corrected — see the reason(s) given.
@@ -361,7 +361,7 @@ Fields preserve the original wording from the Master Trademark Filing Chart. Row
 
 | Rose/Variety | Status | Docket No. | App. Ser. No. | Reg. No. | Filing Date | Registration Date | Authorized Seller | Needs Review |
 |---|---|---|---|---|---|---|---|---|
-| Alexandra David Neel | Pending | 93001.005 | 99785515 | NYA | 2026-04-24T00:00:00 | NYA | April & Ashley |  |
+| Alexandra David Neel | Registered | 93001.005 | 99785515 | 8,533,298) | 2026-04-24T00:00:00 | 2026-11-03T00:00:00 | April & Ashley | Yes — Status is Registered and a registration number is present, but it is not a plain number: '8,533,298)'. Recorded exactly as written; needs confirming against the register before it is relied on. |
 | Alfred Sisley | Registered | 93001.006 | 9733048 | 7296593 | 2022-03-25T00:00:00 | 2024-02-06T00:00:00 | April & Ashley | Yes — Application/serial number 9733048 has 7 digits; every other numeric serial in this chart has 8. Possible dropped or extra digit -- verify against the source filing. |
 | Camille Pissarro | Registered | 93001.004 | 76510378 | 2924694 | 2003-04-29T00:00:00 | 2005-02-08T00:00:00 | April & Ashley |  |
 | Cathedral Bells | Registered | 93001.007 | 97330484 | 7042046 | 2022-05-25T00:00:00 | 2023-05-02T00:00:00 | April & Ashley |  |
@@ -374,12 +374,12 @@ Fields preserve the original wording from the Master Trademark Filing Chart. Row
 | Le Temps des Cerises | Pending | 93001.027 | 50173919 | NYA | 2026-10-21T00:00:00 | NYA |  |  |
 | Marc Chagall | Pending | 93001.013 | 99785477 | NYA | 2026-04-24T00:00:00 | NYA | April & Ashley |  |
 | Maurice Utrillo | Registered | 93001.014 | 97330478 | 7296592 | 2022-03-25T00:00:00 | 2024-02-06T00:00:00 | April & Ashley | Yes — Application/serial number 97330478 is also used by 'Moonlight in Paris' (source row 20). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing.; Registration number 7296592 is also used by 'Moonlight in Paris' (source row 20). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing. |
-| Monsieur | Pending | 93001.015 | 99751179 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
+| Monsieur | Registered | 93001.015 | 99751179 | 8,531, 724 | 2026-04-08T00:00:00 | 2026-11-03T00:00:00 | April & Ashley | Yes — Status is Registered and a registration number is present, but it is not a plain number: '8,531, 724'. Recorded exactly as written; needs confirming against the register before it is relied on. |
 | Montmartre | Pending | 93001.016 | 99751206 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
 | Moonlight in Paris | Registered | 93001.017 | 97330478 | 7296592 | 2022-03-25T00:00:00 | 2023-05-02T00:00:00 | April & Ashley | Yes — Application/serial number 97330478 is also used by 'Maurice Utrillo' (source row 17). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing.; Registration number 7296592 is also used by 'Maurice Utrillo' (source row 17). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing. |
-| Opus Noir | Pending | 93001.018 | 99751356 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
+| Opus Noir | Registered | 93001.018 | 99751356 | 8531748 | 2026-04-08T00:00:00 | 2026-11-03T00:00:00 | April & Ashley |  |
 | Paul Cezanne | Pending | 93001.003 | 98413050 | NYA | 2024-02-20T00:00:00 | NYA | ? |  |
-| Paul Gauguin | Pending | 93001.0199999999 | 99785452 | NYA | 2026-04-24T00:00:00 | NYA | April & Ashley |  |
+| Paul Gauguin | Registered | 93001.0199999999 | 99785452 | 8533297 | 2026-04-24T00:00:00 | 2026-11-03T00:00:00 | April & Ashley |  |
 | Pavlova | Pending | 93001.0189999999 | 99751222 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
 | Pink O'Hara | Pending | 93001.002 | 99751092 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
 | Pont des Arts | Pending | 93001.0209999999 | 99751240 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |

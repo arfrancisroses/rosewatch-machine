@@ -77,6 +77,24 @@ def classify_status(raw_status):
 PLACEHOLDER_NUMBERS = {"", "NYA", "N/A", "NA", "TBD", "?", "NONE"}
 
 
+def _clean_reg_no(value):
+    """True when a registration number is digits with at most comma grouping.
+
+    Commas pass: "8,533,298" is how a seven-digit number is ordinarily written.
+    A space between digits does NOT pass. "8,531, 724" resolves to 8531724
+    readily enough, but a gap inside a number is a typing slip, not a format,
+    and on a figure counsel will quote it is cheaper to have it confirmed than
+    to be confident. Anything else -- a bracket, a letter, a second number --
+    fails too. Nothing here corrects the value; it only decides what gets
+    flagged for a human.
+    """
+    if value is None:
+        return False
+    text = str(value).replace("\u00a0", " ").strip()
+    stripped = text.replace(",", "")
+    return stripped.isdigit() and len(stripped) >= 5
+
+
 def _is_real_number(value):
     """A number field that actually names a filing, not a placeholder like NYA."""
     return value is not None and str(value).strip().upper() not in PLACEHOLDER_NUMBERS
@@ -165,6 +183,19 @@ def parse_trademark_chart(path):
             reasons.append("Missing owner/breeder")
         if rec["status"] == "Registered" and (not rec["reg_no"] or str(rec["reg_no"]).upper() == "NYA"):
             reasons.append("Status is Registered but registration number is missing/NYA")
+        elif rec["status"] == "Registered" and not _clean_reg_no(rec["reg_no"]):
+            # A registration number that is present but cannot be one. The chart
+            # of 2026-11-09 carried "8,533,298)" with a stray bracket and
+            # "8,531, 724" with commas and an interior space. Until then the only
+            # check was for a MISSING number, so these would have passed straight
+            # through into case records and reports as written. The wording is
+            # still preserved untouched -- a registration number is what counsel
+            # quotes, and tidying one silently is not ours to do -- but it is
+            # flagged so somebody confirms it.
+            reasons.append(
+                f"Status is Registered and a registration number is present, but it is not a plain "
+                f"number: {rec['reg_no']!r}. Recorded exactly as written; needs confirming against the "
+                f"register before it is relied on.")
         if rec["status"] == "Pending" and (not rec["app_ser_no"]):
             reasons.append("Status is Pending but application serial number is missing")
 

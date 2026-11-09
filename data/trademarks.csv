@@ -7,9 +7,9 @@ row_index,docket_no,link,trademark,status,reg_no,app_ser_no,first_use_date,goods
 09/11/26 No Foreign Filing",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,4
 ,93001.003,,Paul Cezanne,Pending,NYA,98413050,ITU,"Live plants, namely, roses",,2024-02-20T00:00:00,NYA,,Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,?,Pending,False,,5
 4,93001.004,Camille Pissaro,Camille Pissarro,Registered,2924694,76510378,44E Application,Live plants and roses,,2003-04-29T00:00:00,2005-02-08T00:00:00,,Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,False,,6
-3,93001.005,,Alexandra David Neel,Pending,NYA,99785515,2025-11-01T00:00:00,Live plants; roses,18699928,2026-04-24T00:00:00,NYA,"09/15/26 Application Published
+3,93001.005,,Alexandra David Neel,Registered,"8,533,298)",99785515,2025-11-01T00:00:00,Live plants; roses,18699928,2026-04-24T00:00:00,2026-11-03T00:00:00,"09/11/26 No Foreign Filing
 
-09/11/26 No Foreign Filing",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,7
+11/03/31-11/03/32 Renewal Window",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,True,"Status is Registered and a registration number is present, but it is not a plain number: '8,533,298)'. Recorded exactly as written; needs confirming against the register before it is relied on.",7
 5,93001.006,Alfred Sisley,Alfred Sisley,Registered,7296593,9733048,2015-02-28T00:00:00,Live plants,18655602,2022-03-25T00:00:00,2024-02-06T00:00:00,,Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,True,Application/serial number 9733048 has 7 digits; every other numeric serial in this chart has 8. Possible dropped or extra digit -- verify against the source filing.,8
 6,93001.007,Cathedral Bells,Cathedral Bells,Registered,7042046,97330484,2021-12-20T00:00:00,Live plants,,2022-05-25T00:00:00,2023-05-02T00:00:00,,Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,False,,9
 7,93001.008,,Chamonix,Pending,NYA,99751108,2025-11-01T00:00:00,Live plants; roses,,2026-04-28T00:00:00,NYA,"09/11/26 No Foreign Filing
@@ -36,28 +36,24 @@ row_index,docket_no,link,trademark,status,reg_no,app_ser_no,first_use_date,goods
 
 01/04/27 Reply to Non-Final Office Action Due",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,16
 14,93001.014,Maurice Utrillo,Maurice Utrillo,Registered,7296592,97330478,2018-04-30T00:00:00,Live plants,,2022-03-25T00:00:00,2024-02-06T00:00:00,,Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,True,Application/serial number 97330478 is also used by 'Moonlight in Paris' (source row 20). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing.; Registration number 7296592 is also used by 'Moonlight in Paris' (source row 20). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing.,17
-15,93001.015,,Monsieur,Pending,NYA,99751179,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,NYA,"10/31/26 Reply to Office Action Due
+15,93001.015,,Monsieur,Registered,"8,531, 724",99751179,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,2026-11-03T00:00:00,"09/11/26 No Foreign Filing
 
-08/10/26 Reply to Office Action Filed
-
-09/15/26 Application Published
-
-09/11/26 No Foreign Filing",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,18
+11/03/31-11/03/32 Renewal Window",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,True,"Status is Registered and a registration number is present, but it is not a plain number: '8,531, 724'. Recorded exactly as written; needs confirming against the register before it is relied on.",18
 16,93001.016,,Montmartre,Pending,NYA,99751206,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,NYA,"09/11/26 No Foreign Filing
 
 09/22/26 Application Published",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,19
 17,93001.017,Moonlight in Paris,Moonlight in Paris,Registered,7296592,97330478,2018-12-07T00:00:00,Live plants,,2022-03-25T00:00:00,2023-05-02T00:00:00,,Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,True,Application/serial number 97330478 is also used by 'Maurice Utrillo' (source row 17). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing.; Registration number 7296592 is also used by 'Maurice Utrillo' (source row 17). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing.,20
-18,93001.018,,Opus Noir,Pending,NYA,99751356,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,NYA,"09/15/26 Application Published
+18,93001.018,,Opus Noir,Registered,8531748,99751356,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,2026-11-03T00:00:00,"09/11/26 No Foreign Filing
 
-09/11/26 No Foreign Filing",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,21
+11/03/31-11/03/32 Renewal Window",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,False,,21
 19,93001.0189999999,,Pavlova,Pending,NYA,99751222,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,NYA,"10/31/26 Reply to Office Action Due
 
 09/11/26 No Foreign Filing
 
 10/19/26 Reply to Office Action Filed",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,22
-20,93001.0199999999,,Paul Gauguin,Pending,NYA,99785452,2025-11-01T00:00:00,Live plants; roses,3417541,2026-04-24T00:00:00,NYA,"09/15/26 Application Published
+20,93001.0199999999,,Paul Gauguin,Registered,8533297,99785452,2025-11-01T00:00:00,Live plants; roses,3417541,2026-04-24T00:00:00,2026-11-03T00:00:00,"09/11/26 No Foreign Filing
 
-09/11/26 No Foreign Filing",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,23
+11/03/31-11/03/32 Renewal Window",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,False,,23
 21,93001.0209999999,,Pont des Arts,Pending,NYA,99751240,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,NYA,"09/11/26 No Foreign Filing
 09/22/26 Application Published",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,24
 22,93001.0219999999,,Princeses Astrid de Belgique -- LIVING PERSON,To Be Filed,,,2025-11-01T00:00:00,Live plants; roses,,,,,Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,To Be Filed,False,,25

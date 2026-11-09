@@ -3,8 +3,8 @@
   "site_code": "HUNIUROSEG",
   "variety": "Alexandra David Neel",
   "matched_trademark": "Alexandra David Neel",
-  "trademark_status": "Pending",
-  "trademark_application_or_registration_no": "App. Ser. No. 99785515 (Reg. No.: NYA)",
+  "trademark_status": "Registered",
+  "trademark_application_or_registration_no": "App. Ser. No. 99785515 (Reg. No.: 8,533,298))",
   "breeder": "Société Nouvelle Pépinières et Roseraies Georges Delbard SAS",
   "seller_name": "Huniu Rose Garden",
   "website_domain": "huniurosegarden.ca",
@@ -238,6 +238,12 @@
     {
       "date": "2026-11-09 06:09 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-11-09 12:38 MST (America/Phoenix)",
+      "action": "Trademark status changed: Pending -> Registered",
+      "details": "Chart status updated from Pending to Registered on ingesting the Master Trademark Filing Chart the user supplied from Damon on 2026-11-09 (original filename 93000_Master_Trademark_Filing_Chart_5.xlsx; filed as data/sources/2026-11-09_MasterTrademarkFilingChart.xlsx). The chart gives \"Alexandra David Neel\" U.S. Reg. No. 8,533,298), registered 2026-11-03, owner/breeder Société Nouvelle Pépinières et Roseraies Georges Delbard SAS. This records a change in the trademark record only. Nothing about this listing, its evidence or its review status changed, and the change is not a finding of infringement. NOTE: the registration number is recorded exactly as the chart writes it, '8,533,298)', which is not a plain number -- it is flagged Needs Review and must be confirmed against the register before it is relied on. Nothing here corrects it."
     }
-  ]
+  ],
+  "trademark_status_as_written": "Registered"
 }
