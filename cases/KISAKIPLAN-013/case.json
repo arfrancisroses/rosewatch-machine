@@ -1,0 +1,85 @@
+{
+  "case_number": "KISAKIPLAN-013",
+  "site_code": "KISAKIPLAN",
+  "variety": "Le Temps des Cerises",
+  "matched_trademark": "Le Temps des Cerises",
+  "trademark_status": "Pending",
+  "trademark_status_as_written": "Pending",
+  "trademark_application_or_registration_no": "App. Ser. No. 50173919 (Reg. No.: NYA)",
+  "breeder": "Société Nouvelle Pépinières et Roseraies Georges Delbard SAS",
+  "seller_name": "Kisaki Plant",
+  "website_domain": "kisakiplant.com",
+  "product_url": "https://kisakiplant.com/products/le-temps-des-cerises",
+  "exact_product_title": "Rose 'Le Temps des Cerises' 樱桃时节",
+  "quoted_text": "🌹Product Details 📛 Name: Rose 'Le Temps Des Cerises' / 樱桃时节 / ル・タン・デ・スリーズ 🇯🇵 Origin: Premium Japanese Selection 🌿 Class: Shrub Rose 🌴 Height: 4.5 – 5 ft / 130 – 150 cm 🌺 Flower Size: 3\" - 3.2\" / 7 - 8 cm 🎨 Color: Deep crimson-purple fading to velvety black-violet with ruffled petal margins 👃 Fragrance: Strong (Intense Damask rose infused with lychee, tea, and honey notes) 🌸 Bloom Period: Spring to Fall (Continuous...",
+  "price": "66.99",
+  "currency": "USD",
+  "price_note": null,
+  "quantity_or_form": "3-5Gal Grafted Live Plant",
+  "match_classification": "Strong",
+  "match_explanation": "The product title contains the full chart name \"Le Temps des Cerises\" as a phrase, inside a longer title.",
+  "review_status": "New",
+  "first_date_found": "2026-11-10 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-11-10 06:06 MST (America/Phoenix)",
+  "screenshot_captured_at": "2026-11-10 06:06 MST (America/Phoenix)",
+  "units_in_stock_at_capture": null,
+  "seller_sku": null,
+  "page_publication_date": "Date not available on page",
+  "page_update_date": "Date not available on page",
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Texas",
+    "city": "Kerens",
+    "source": "Not confirmed directly this run -- the site's own About page returned 404. Carried over from prior known-sites research (data/known_sites.json).",
+    "estimated": true
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (confirmed via live products.json feed)",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.65",
+    "ip_geolocation": "Not separately geolocated this run (same Shopify-assigned IP block as other sites on this roster).",
+    "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
+    "estimated": true
+  },
+  "evidence_screenshots": [
+    {
+      "file": "cases/KISAKIPLAN-013/screenshots/KISAKIPLAN-013_2026-11-10_0606.png",
+      "captured_at": "2026-11-10 06:06 MST (America/Phoenix)",
+      "source_url": "https://kisakiplant.com/products/le-temps-des-cerises",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 8712681,
+      "product_image_box": {
+        "x": 151,
+        "y": 488.890625,
+        "w": 603,
+        "h": 803.984375,
+        "detail_bottom": 8900.96875,
+        "dpr": 1
+      },
+      "images_total": 111,
+      "images_failed_to_load": 74,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing; dismissed: shopify-chat.needsclick. No listing content was altered, added or removed.",
+      "image_load_note": "74 of 111 images on the page did not load and appear blank in this capture. Their host is refused by this environment's network policy, not by the seller. The capture is kept for its text, price and layout; it is not a complete picture of the listing as a buyer saw it."
+    }
+  ],
+  "access_or_research_limitations": [],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-11-10, which matches product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"Pending\". The product title contains the full chart name \"Le Temps des Cerises\" as a phrase, inside a longer title.",
+  "history": [
+    {
+      "date": "2026-11-10 06:06 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created from that day's crawl; chart status carried through unchanged."
+    },
+    {
+      "date": "2026-11-10 06:06 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://kisakiplant.com/products/le-temps-des-cerises saved to cases/KISAKIPLAN-013/screenshots/KISAKIPLAN-013_2026-11-10_0606.png (8,712,681 bytes)."
+    },
+    {
+      "date": "2026-11-10 06:06 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
+    }
+  ]
+}

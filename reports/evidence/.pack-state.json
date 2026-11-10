@@ -1,10 +1,10 @@
 {
   "set:REGISTERED": {
-    "built": "2026-11-02",
-    "bytes": 5695069,
-    "cases": 54,
-    "file": "Rose Watch Evidence - Registered trademarks (all sellers) - 2026-11-02.pdf",
-    "fingerprint": "f0b512d32b5c320c"
+    "built": "2026-11-10",
+    "bytes": 6948581,
+    "cases": 62,
+    "file": "Rose Watch Evidence - Registered trademarks (all sellers) - 2026-11-10.pdf",
+    "fingerprint": "d3b178035bbcb896"
   },
   "site:BLOOMLADIE": {
     "built": "2026-11-04",
@@ -35,18 +35,18 @@
     "fingerprint": "60ae397183202938"
   },
   "site:HILLSIDERO": {
-    "built": "2026-11-09",
+    "built": "2026-11-10",
     "bytes": 673704,
     "cases": 7,
-    "file": "Rose Watch Evidence - Hillside Rose Farm (HILLSIDERO) - 2026-11-09.pdf",
-    "fingerprint": "f2e8a5e5893ab403"
+    "file": "Rose Watch Evidence - Hillside Rose Farm (HILLSIDERO) - 2026-11-10.pdf",
+    "fingerprint": "16e7105c37ba1cad"
   },
   "site:HUNIUROSEG": {
-    "built": "2026-11-04",
-    "bytes": 4066527,
+    "built": "2026-11-10",
+    "bytes": 4066504,
     "cases": 26,
-    "file": "Rose Watch Evidence - Huniu Rose Garden (HUNIUROSEG) - 2026-11-04.pdf",
-    "fingerprint": "d52db6ad80b9e021"
+    "file": "Rose Watch Evidence - Huniu Rose Garden (HUNIUROSEG) - 2026-11-10.pdf",
+    "fingerprint": "0c859ad40d720f55"
   },
   "site:KATEROSES": {
     "built": "2026-10-28",
@@ -56,25 +56,25 @@
     "fingerprint": "8b52e4665529192a"
   },
   "site:KISAKIPLAN": {
-    "built": "2026-11-04",
-    "bytes": 4160045,
-    "cases": 12,
-    "file": "Rose Watch Evidence - Kisaki Plant (KISAKIPLAN) - 2026-11-04.pdf",
-    "fingerprint": "d0f50cb4ce0b1cb8"
+    "built": "2026-11-10",
+    "bytes": 4970567,
+    "cases": 13,
+    "file": "Rose Watch Evidence - Kisaki Plant (KISAKIPLAN) - 2026-11-10.pdf",
+    "fingerprint": "885d376303270bb1"
   },
   "site:MOLAROSE": {
-    "built": "2026-11-04",
-    "bytes": 7627959,
+    "built": "2026-11-10",
+    "bytes": 7628119,
     "cases": 48,
-    "file": "Rose Watch Evidence - Mola Rose (MOLAROSE) - 2026-11-04.pdf",
-    "fingerprint": "5d90ec9531b5215b"
+    "file": "Rose Watch Evidence - Mola Rose (MOLAROSE) - 2026-11-10.pdf",
+    "fingerprint": "b689e998691a243e"
   },
   "site:MUSEROSES": {
-    "built": "2026-11-04",
-    "bytes": 7615821,
+    "built": "2026-11-10",
+    "bytes": 7616043,
     "cases": 48,
-    "file": "Rose Watch Evidence - Muse Roses (MUSEROSES) - 2026-11-04.pdf",
-    "fingerprint": "fc659259e2b06e3d"
+    "file": "Rose Watch Evidence - Muse Roses (MUSEROSES) - 2026-11-10.pdf",
+    "fingerprint": "3c7417b8877f98dd"
   },
   "site:MYROSEWORL": {
     "built": "2026-11-04",
@@ -84,11 +84,11 @@
     "fingerprint": "508fc7688748ad30"
   },
   "site:ONELOVEROS": {
-    "built": "2026-10-29",
-    "bytes": 1147723,
+    "built": "2026-11-10",
+    "bytes": 1147659,
     "cases": 16,
-    "file": "Rose Watch Evidence - One Love (ONELOVEROS) - 2026-10-29.pdf",
-    "fingerprint": "998856433a73e4c8"
+    "file": "Rose Watch Evidence - One Love (ONELOVEROS) - 2026-11-10.pdf",
+    "fingerprint": "beb805bc67211706"
   },
   "site:REDLANDRAN": {
     "built": "2026-11-02",
@@ -98,11 +98,11 @@
     "fingerprint": "e03427a34183f61a"
   },
   "site:ROSEEXPLOS": {
-    "built": "2026-11-04",
-    "bytes": 9124534,
+    "built": "2026-11-10",
+    "bytes": 9124751,
     "cases": 86,
-    "file": "Rose Watch Evidence - Rose Explosion (ROSEEXPLOS) - 2026-11-04.pdf",
-    "fingerprint": "9df2137b01895a02"
+    "file": "Rose Watch Evidence - Rose Explosion (ROSEEXPLOS) - 2026-11-10.pdf",
+    "fingerprint": "2226cad808d15422"
   },
   "site:SPRINGLAND": {
     "built": "2026-11-02",
@@ -112,10 +112,10 @@
     "fingerprint": "907804b5cd389d42"
   },
   "site:YOURROSES": {
-    "built": "2026-11-04",
-    "bytes": 12197841,
+    "built": "2026-11-10",
+    "bytes": 12197840,
     "cases": 89,
-    "file": "Rose Watch Evidence - Your Roses (YOURROSES) - 2026-11-04.pdf",
-    "fingerprint": "8a90ad9be759e5cd"
+    "file": "Rose Watch Evidence - Your Roses (YOURROSES) - 2026-11-10.pdf",
+    "fingerprint": "1285260b432e2b39"
   }
 }

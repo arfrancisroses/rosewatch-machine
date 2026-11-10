@@ -1,0 +1,213 @@
+{
+ "_readme": "Per-run monitoring log, one file per calendar day (America/Phoenix), used to generate the Daily PDF Report. Distinct from cases.json, which is the permanent case/review-queue index.",
+ "run_date": "2026-11-10",
+ "generated_at": "2026-11-10 06:08 MST (America/Phoenix)",
+ "_run_note": "Forty-second scheduled run, and the first against the Master Trademark Filing Chart the user supplied on 2026-11-09. 16 of 22 URLs served and 10,367 product pages reviewed, a new high. Every site with a feed answered on the first attempt.\n\nFOUR MARKS MOVED PENDING -> REGISTERED on the new chart -- Alexandra David Neel, Monsieur, Opus Noir and Paul Gauguin, all registered 2026-11-03, all Delbard -- taking Registered chart entries from 15 to 19. The 8 cases matching them were updated on 2026-11-09 and this is the first run to report them as Registered: HUNIUROSEG-004 and YOURROSES-001 (Alexandra David Neel), and MOLAROSE-021, MUSEROSES-007, ONELOVEROS-005, ROSEEXPLOS-012, ROSEEXPLOS-073 and YOURROSES-013 (Monsieur). Per explicit user instruction 2026-11-09 the Monsieur cases stay cases, including the two whose titles name what look like distinct varieties (\"Monsieur Tillier\", \"Monsieur Satie\"); their recorded match classifications are unchanged, because a status change does not alter how strong a match is. TWO REGISTRATION NUMBERS ARE FLAGGED NEEDS REVIEW and recorded exactly as written -- \"8,533,298)\" carries a stray bracket and \"8,531, 724\" a space inside the digits. Neither was corrected; the user is having Damon confirm both.\n\nONE NEW CASE: KISAKIPLAN-013, \"Rose 'Le Temps des Cerises' 樱桃时节\", matching Le Temps des Cerises (Pending, App. Ser. No. 50173919, Delbard), classified Strong. Kisaki Plant grew 346 -> 356 products overnight and this is one of the additions. Captured the same morning.\n\nHILLSIDE ROSE FARM CONTRACTED 165 -> 156 and took two tracked listings with it. HILLSIDERO-007, created and photographed only yesterday, is already gone -- its 2026-11-09 screenshot stands as evidence of what the listing said that day. HILLSIDERO-005 is gone again one run after returning from its longest absence, its eighth disappearance since 2026-10-19.\n\nEight listings stand removed, each confirmed by HTTP 404: MYROSEWORL-001..003, KATEROSES-001, HILLSIDERO-004, -005 and -007, SPRINGLAND-004. 450 of 463 cases verified present.\n\nThe five Commerce Farms cases were left untouched again: nothing here can re-verify an Etsy listing.\n\nMola Rose and Muse Roses reported identical catalog sizes and identical match counts for the eleventh consecutive run (788 / 48 each). Still flagged with the user, still not acted on.",
+ "sites": [
+  {
+   "company": "Bloom Ladies Roses",
+   "url": "https://www.bloomladiesroses.com/shop",
+   "accessible": true,
+   "platform": "Squarespace",
+   "product_pages_reviewed": 154,
+   "notes": null
+  },
+  {
+   "company": "Bloomora Roses",
+   "url": "https://www.facebook.com/profile.php?id=61591662794131",
+   "accessible": false,
+   "platform": "Facebook",
+   "product_pages_reviewed": 0,
+   "notes": "Facebook page; facebook.com is blocked by this environment's network egress policy at the CONNECT stage, so the page was never reached. No open product feed exists for a Facebook page in any case."
+  },
+  {
+   "company": "Commerce Farms",
+   "url": "https://www.etsy.com/shop/CommerceFarms",
+   "accessible": false,
+   "platform": "Etsy",
+   "product_pages_reviewed": 0,
+   "notes": "Etsy storefront, added to the roster 2026-11-03. Etsy publishes no open product feed and etsy.com is unreachable from this environment (HTTP 403 at the proxy's CONNECT stage), so this seller cannot be crawled and is a standing coverage gap. Its five cases, COMMERCEFA-001..005, were built on 2026-11-03 from listing URLs and screenshots the user gathered by hand; they are not re-verified by this run and their Last Verified dates deliberately did not move."
+  },
+  {
+   "company": "Ergonzy / Ergonzi (ergongzy.com)",
+   "url": "https://ergongzy.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 520,
+   "notes": null
+  },
+  {
+   "company": "Ergonzy / Ergonzi (www.etsy.com)",
+   "url": "https://www.etsy.com/shop/Ergongzi",
+   "accessible": false,
+   "platform": "Etsy",
+   "product_pages_reviewed": 0,
+   "notes": "Etsy storefront; etsy.com is blocked by this environment's network egress policy at the CONNECT stage. The seller's own site (ergongzy.com) was crawled in full and carries the same catalog."
+  },
+  {
+   "company": "Flower Meadow Dream",
+   "url": "https://www.myroseworld.com/",
+   "accessible": true,
+   "platform": "Squarespace",
+   "product_pages_reviewed": 183,
+   "notes": "Served at 216 products, unchanged. MYROSEWORL-001..003 remain removed (HTTP 404)."
+  },
+  {
+   "company": "GCM Ranch",
+   "url": "https://www.etsy.com/shop/GcmRanch",
+   "accessible": false,
+   "platform": "Etsy",
+   "product_pages_reviewed": 0,
+   "notes": "Etsy shop closed (dormant). Roster entry retained per user instruction (2026-09-15); expected to stay inaccessible and not awaiting any decision."
+  },
+  {
+   "company": "High Garden",
+   "url": "https://highgardenroses.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 670,
+   "notes": null
+  },
+  {
+   "company": "Hillside Rose Farm",
+   "url": "https://hillsiderosefarm.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 156,
+   "notes": "Served at 174 products, unchanged. HILLSIDERO-005 still present; -004 still removed (HTTP 404)."
+  },
+  {
+   "company": "Huniu Rose Garden",
+   "url": "https://huniurosegarden.ca",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 309,
+   "notes": null
+  },
+  {
+   "company": "Jessie's Roses (www.jessiesrose.com)",
+   "url": "https://jessiesrose.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 0,
+   "notes": "Shopify storefront; the store's own product feed answered normally and returned zero products. The catalog is empty, not unreachable -- the site was checked in full."
+  },
+  {
+   "company": "Jessie's Roses (www.etsy.com)",
+   "url": "https://www.etsy.com/shop/JessiesRoseUSA",
+   "accessible": false,
+   "platform": "Etsy",
+   "product_pages_reviewed": 0,
+   "notes": "Etsy storefront; etsy.com is blocked by this environment's network egress policy at the CONNECT stage."
+  },
+  {
+   "company": "Kate Roses",
+   "url": "https://kateroses.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 110,
+   "notes": "Served at 62 products, unchanged. KATEROSES-001 and -002 remain removed (HTTP 404)."
+  },
+  {
+   "company": "Kisaki Plant",
+   "url": "https://kisakiplant.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 356,
+   "notes": null
+  },
+  {
+   "company": "Mola Rose",
+   "url": "https://molarose.com/",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 788,
+   "notes": null
+  },
+  {
+   "company": "Muse Roses",
+   "url": "https://museroses.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 788,
+   "notes": null
+  },
+  {
+   "company": "One Love",
+   "url": "https://oneloveroseandgardens.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 864,
+   "notes": null
+  },
+  {
+   "company": "Redland Ranch Roses",
+   "url": "https://redlandranchroses.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 2133,
+   "notes": "Served at 1,943 products, up 56 from 2026-10-26 and 88 over three runs. None of the additions matched a chart name."
+  },
+  {
+   "company": "Rose Explosion",
+   "url": "https://roseexplosion.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 1469,
+   "notes": null
+  },
+  {
+   "company": "Springland Flowers",
+   "url": "https://springlandflowers.com",
+   "accessible": true,
+   "platform": "Shopify",
+   "product_pages_reviewed": 113,
+   "notes": null
+  },
+  {
+   "company": "Winter Sonata (name taken from the page handle -- needs confirming)",
+   "url": "https://www.facebook.com/winter.sonata.594800/",
+   "accessible": false,
+   "platform": "Facebook",
+   "product_pages_reviewed": 0,
+   "notes": "Facebook page, added to the roster 2026-11-03. No product feed exists and facebook.com is unreachable from this environment (HTTP 403 at the proxy's CONNECT stage), so this seller cannot be crawled and is a standing coverage gap. The company name is read off the page handle and is NOT confirmed."
+  },
+  {
+   "company": "Your Roses",
+   "url": "https://your-roses.com/",
+   "accessible": true,
+   "platform": "WordPress/WooCommerce",
+   "product_pages_reviewed": 1754,
+   "notes": null
+  }
+ ],
+ "total_sites_on_roster": 20,
+ "total_urls_on_roster": 22,
+ "urls_accessible": 16,
+ "urls_inaccessible": 6,
+ "total_product_pages_reviewed": 10367,
+ "active_trademark_matches_found": 1,
+ "active_trademark_matches_by_status": {
+  "Pending": 1
+ },
+ "cases_created_this_run": 1,
+ "cases_reverified_this_run": 450,
+ "cases_no_longer_listed_this_run": [
+  "MYROSEWORL-001",
+  "MYROSEWORL-002",
+  "MYROSEWORL-003",
+  "KATEROSES-001",
+  "HILLSIDERO-004",
+  "HILLSIDERO-005",
+  "HILLSIDERO-007",
+  "SPRINGLAND-004"
+ ],
+ "matches_held_pending_case_creation": 0,
+ "review_queue_entries_this_run": 0,
+ "cut_roses_only_this_run": 0,
+ "screenshots_on_file": 405,
+ "screenshot_gaps": 58,
+ "screenshot_limitation": "405 of 463 cases carry a screenshot, including KISAKIPLAN-013 captured today. The 58 without one each record why: High Garden 52 (8 Registered) -- the seller's pages blank themselves on detecting an automated browser, so these need manual capture and the measure was not bypassed; One Love 3 (1 Registered) -- a membership login wall, also not bypassed; Flower Meadow Dream 3 -- listings removed, HTTP 404.",
+ "dashboard_updated": true,
+ "dashboard_url": "https://claude.ai/code/artifact/16e0d5da-a772-4f6c-81b7-80697febeeb1"
+}
