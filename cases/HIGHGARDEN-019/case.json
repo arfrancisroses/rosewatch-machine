@@ -19,7 +19,7 @@
   "review_status": "New",
   "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
   "last_verified": "2026-11-10 06:06 MST (America/Phoenix)",
-  "screenshot_captured_at": null,
+  "screenshot_captured_at": "2026-11-10 (America/Phoenix) -- time of day not recorded; captured by the user",
   "seller_location": {
     "country": "United States",
     "state_or_region": "Oregon",
@@ -35,7 +35,19 @@
     "registrar": "Not available -- WHOIS lookup services were blocked by this session's network policy.",
     "estimated": true
   },
-  "evidence_screenshots": [],
+  "evidence_screenshots": [
+    {
+      "file": "cases/HIGHGARDEN-019/screenshots/HIGHGARDEN-019_2026-11-10_user.webp",
+      "captured_at": "2026-11-10 (America/Phoenix) -- time of day not recorded",
+      "source_url": "https://highgardenroses.com/products/scentuous-german-florist-shrub-rose",
+      "captured_by": "The user, browsing the listing in their own browser",
+      "capture_method": "MANUAL CAPTURE BY THE USER, not an automated capture. highgardenroses.com blanks its pages when it detects an automated browser, so Rose Watch has never been able to photograph this listing; the seller's measure was recorded, never bypassed. The image is the file the user supplied, stored byte-for-byte as delivered and not re-encoded.",
+      "full_page": false,
+      "bytes": 194106,
+      "page_modifications": "None known. The image is the user's own screenshot as supplied.",
+      "verified_against_case": "Checked before filing and it shows the listing it claims: the product title \"Scentuous German Florist Shrub Rose\" exactly as recorded on this case, the seller name HIGHGARDEN ROSES, the price $30.00, and a description beginning \"This lovely rose delights with a rich, captivating fragrance and\" -- the same wording already quoted on this case from the product feed."
+    }
+  ],
   "access_or_research_limitations": [
     "Full-page screenshot could not be captured: the headless browser (Playwright/Chromium) available in this session cannot complete a connection through this environment's network egress proxy (connection resets mid-handshake), even though direct page fetch succeeds. Evidence text (title, price, description) was instead verified directly against the store's live product data feed.",
     "Screenshot attempt failed 2026-10-20 11:52 MST (America/Phoenix): RenderFailure: page rendered only 0 characters of text (threshold 400); the server sent the page but the browser rendered nothing, which is the signature of a script that blanks the document when it detects an automated browser. highgardenroses.com is known to do this; it was not bypassed | sub-resources refused by this environment's egress proxy: blessifyinfotech.com, connect.facebook.net, data4.superboosty.com, error-analytics-sessions-production.shopifysvc.com, extensions.shopifycdn.com, js.sentry-cdn.com. No image was kept; this case has no screenshot rather than a blank one."
@@ -216,6 +228,16 @@
     {
       "date": "2026-11-10 06:06 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-11-10 15:43 MST (America/Phoenix)",
+      "action": "Evidence screenshot filed (captured by the user)",
+      "details": "The user's own screenshot of https://highgardenroses.com/products/scentuous-german-florist-shrub-rose saved to cases/HIGHGARDEN-019/screenshots/HIGHGARDEN-019_2026-11-10_user.webp (194,106 bytes). First screenshot on this case: the seller blanks its pages for an automated browser, so every attempt since 2026-10-19 was refused and recorded as a gap rather than photographed. Recorded as captured by the user on 2026-11-10. Verified before filing against the title, seller name, price and the description wording already on this case."
+    },
+    {
+      "date": "2026-11-10 15:43 MST (America/Phoenix)",
+      "action": "Listing state observed: SOLD OUT",
+      "details": "The screenshot shows SOLD OUT with all five sizes (S, S/M, M, M/L, L) and the Own Root type struck through, and a \"Back in stock notification\" button in place of add-to-cart. Still live and still in the seller's feed, re-verified present this morning; the price shown, $30.00 USD, matches what is recorded here. Recorded as observed; nothing on the case was changed."
     }
   ]
 }
