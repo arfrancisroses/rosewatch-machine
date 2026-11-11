@@ -85,6 +85,11 @@
       "date": "2026-11-10 06:08 MST (America/Phoenix)",
       "action": "Listing no longer in the seller's catalog (HTTP 404)",
       "details": "Absent on the first run after the case was created. This listing was found and photographed on 2026-11-09, when Hillside Rose Farm's catalog stood at 165 products; today it served 156 and the listing was not among them, with its own URL returning HTTP 404. The screenshot taken on 2026-11-09 remains evidence of what the listing said on that date. Recorded as observed; why it went is the seller's to say."
+    },
+    {
+      "date": "2026-11-11 06:07 MST (America/Phoenix)",
+      "action": "Listing still removed (HTTP 404)",
+      "details": "Hillside Rose Farm served 156 products today and this listing was not among them; its own URL returns HTTP 404. A restated removal, not a fresh one."
     }
   ]
 }

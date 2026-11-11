@@ -18,7 +18,7 @@
   "match_explanation": "Product title contains the trademarked name \"PIANO\" (as part of a longer product title).",
   "review_status": "New",
   "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-  "last_verified": "2026-11-10 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-11-11 06:06 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-11-10 (America/Phoenix) -- time of day not recorded; captured by the user",
   "seller_location": {
     "country": "United States",
@@ -248,6 +248,10 @@
       "date": "2026-11-10 15:42 MST (America/Phoenix)",
       "action": "Note for the pending more-specific-name decision",
       "details": "This case records the matched trademark as \"PIANO\" (Reg. No. 3504651), the standalone mark, because that is what the matcher chose when the case was made. The seller's title names \"Pink Piano\", which has been a Registered mark in its own right since 2026-10-20 (Reg. No. 8523676). This case is one of the 28 identified on 2026-11-02 that would record a more specific chart name under the rule fixed that day; the backlog is awaiting the user's decision and nothing has been changed here. Both marks are Registered, so the enforceability group is the same either way. Noted now because the screenshot makes the seller's wording plain on the record."
+    },
+    {
+      "date": "2026-11-11 06:06 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

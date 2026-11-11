@@ -18,7 +18,7 @@
   "match_explanation": "Product title contains the trademarked name \"BARONESSE\" (as part of a longer product title).",
   "review_status": "New",
   "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-  "last_verified": "2026-11-10 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-11-11 06:06 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-11-10 (America/Phoenix) -- time of day not recorded; captured by the user",
   "seller_location": {
     "country": "United States",
@@ -238,6 +238,10 @@
       "date": "2026-11-10 15:36 MST (America/Phoenix)",
       "action": "Listing state observed: SOLD OUT",
       "details": "The screenshot shows the listing marked SOLD OUT, with every size option (S, S/M, M, M/L, L) and the Own Root type struck through, and a \"Back in stock notification\" button in place of an add-to-cart. The listing is still live and still in the seller's product feed -- it re-verified present on this morning's run -- it is simply out of stock on this date. Recorded as observed; the recorded price of $30.00 USD, taken from the feed when the case was made, is unchanged on the page."
+    },
+    {
+      "date": "2026-11-11 06:06 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

@@ -18,7 +18,7 @@
   "match_explanation": "Product title contains the trademarked name \"Quicksand\" (as part of a longer product title).",
   "review_status": "New",
   "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-  "last_verified": "2026-11-10 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-11-11 06:06 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-11-10 (America/Phoenix) -- time of day not recorded; captured by the user",
   "seller_location": {
     "country": "United States",
@@ -238,6 +238,10 @@
       "date": "2026-11-10 15:45 MST (America/Phoenix)",
       "action": "Listing state observed: PRE-ORDER ENDED",
       "details": "The screenshot shows PRE-ORDER ENDED with four sizes (S, S/M, M, L) struck through and TWO type options -- Own Root AND Grafted -- both struck through. Grafted appears on no other High Garden listing photographed today; the other seven offer Own Root alone. A five-star rating is displayed. Still live and still in the seller's feed, re-verified present this morning; the price shown, $30.00 USD, matches what is recorded here. Recorded as observed; nothing on the case was changed."
+    },
+    {
+      "date": "2026-11-11 06:06 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }
