@@ -20,7 +20,7 @@
   "match_explanation": "The product title \"Wedding Piano®\" normalises exactly to the chart name \"Wedding Piano\". The ® symbol is the seller's own mark of registration and is not part of the name.",
   "review_status": "New",
   "first_date_found": "2026-11-02 06:10 MST (America/Phoenix)",
-  "last_verified": "2026-11-11 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-11-12 06:05 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-11-02 06:12 MST (America/Phoenix)",
   "units_in_stock_at_capture": null,
   "seller_sku": null,
@@ -112,6 +112,10 @@
     },
     {
       "date": "2026-11-11 06:06 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-11-12 06:05 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
