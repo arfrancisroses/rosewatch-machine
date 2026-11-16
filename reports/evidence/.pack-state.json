@@ -1,10 +1,10 @@
 {
   "set:REGISTERED": {
-    "built": "2026-11-11",
-    "bytes": 7505465,
-    "cases": 62,
-    "file": "Rose Watch Evidence - Registered trademarks (all sellers) - 2026-11-11.pdf",
-    "fingerprint": "a927f00d3b8bc8af"
+    "built": "2026-11-16",
+    "bytes": 9171513,
+    "cases": 75,
+    "file": "Rose Watch Evidence - Registered trademarks (all sellers) - 2026-11-16.pdf",
+    "fingerprint": "7c520fc3a50d8f17"
   },
   "site:BLOOMLADIE": {
     "built": "2026-11-04",
@@ -21,18 +21,18 @@
     "fingerprint": "a0e93e2242a494f2"
   },
   "site:ERGONGZY": {
-    "built": "2026-11-04",
-    "bytes": 4448984,
+    "built": "2026-11-16",
+    "bytes": 4448947,
     "cases": 33,
-    "file": "Rose Watch Evidence - Ergonzy Ergonzi (ERGONGZY) - 2026-11-04.pdf",
-    "fingerprint": "2455fbe8b37b3dce"
+    "file": "Rose Watch Evidence - Ergonzy Ergonzi (ERGONGZY) - 2026-11-16.pdf",
+    "fingerprint": "49aeb207999b2ab4"
   },
   "site:HIGHGARDEN": {
-    "built": "2026-11-11",
-    "bytes": 645356,
+    "built": "2026-11-16",
+    "bytes": 645894,
     "cases": 52,
-    "file": "Rose Watch Evidence - High Garden (HIGHGARDEN) - 2026-11-11.pdf",
-    "fingerprint": "4066a017eb4e2e6c"
+    "file": "Rose Watch Evidence - High Garden (HIGHGARDEN) - 2026-11-16.pdf",
+    "fingerprint": "c3fc2e9408e25c12"
   },
   "site:HILLSIDERO": {
     "built": "2026-11-10",
@@ -49,32 +49,32 @@
     "fingerprint": "0c859ad40d720f55"
   },
   "site:KATEROSES": {
-    "built": "2026-10-28",
+    "built": "2026-11-16",
     "bytes": 340079,
     "cases": 3,
-    "file": "Rose Watch Evidence - Kate Roses (KATEROSES) - 2026-10-28.pdf",
-    "fingerprint": "8b52e4665529192a"
+    "file": "Rose Watch Evidence - Kate Roses (KATEROSES) - 2026-11-16.pdf",
+    "fingerprint": "a6929a53f336548c"
   },
   "site:KISAKIPLAN": {
-    "built": "2026-11-10",
-    "bytes": 4970567,
-    "cases": 13,
-    "file": "Rose Watch Evidence - Kisaki Plant (KISAKIPLAN) - 2026-11-10.pdf",
-    "fingerprint": "885d376303270bb1"
+    "built": "2026-11-16",
+    "bytes": 5495274,
+    "cases": 14,
+    "file": "Rose Watch Evidence - Kisaki Plant (KISAKIPLAN) - 2026-11-16.pdf",
+    "fingerprint": "bb899673e528ec54"
   },
   "site:MOLAROSE": {
-    "built": "2026-11-10",
-    "bytes": 7628119,
+    "built": "2026-11-16",
+    "bytes": 7627921,
     "cases": 48,
-    "file": "Rose Watch Evidence - Mola Rose (MOLAROSE) - 2026-11-10.pdf",
-    "fingerprint": "b689e998691a243e"
+    "file": "Rose Watch Evidence - Mola Rose (MOLAROSE) - 2026-11-16.pdf",
+    "fingerprint": "0f40c52b7fed6001"
   },
   "site:MUSEROSES": {
-    "built": "2026-11-10",
-    "bytes": 7616043,
+    "built": "2026-11-16",
+    "bytes": 7616089,
     "cases": 48,
-    "file": "Rose Watch Evidence - Muse Roses (MUSEROSES) - 2026-11-10.pdf",
-    "fingerprint": "3c7417b8877f98dd"
+    "file": "Rose Watch Evidence - Muse Roses (MUSEROSES) - 2026-11-16.pdf",
+    "fingerprint": "a8c7fde9bf346cfb"
   },
   "site:MYROSEWORL": {
     "built": "2026-11-04",
@@ -98,24 +98,24 @@
     "fingerprint": "e03427a34183f61a"
   },
   "site:ROSEEXPLOS": {
-    "built": "2026-11-10",
-    "bytes": 9124751,
+    "built": "2026-11-16",
+    "bytes": 9124718,
     "cases": 86,
-    "file": "Rose Watch Evidence - Rose Explosion (ROSEEXPLOS) - 2026-11-10.pdf",
-    "fingerprint": "2226cad808d15422"
+    "file": "Rose Watch Evidence - Rose Explosion (ROSEEXPLOS) - 2026-11-16.pdf",
+    "fingerprint": "96fde6924f422a14"
   },
   "site:SPRINGLAND": {
-    "built": "2026-11-02",
+    "built": "2026-11-16",
     "bytes": 3041871,
     "cases": 9,
-    "file": "Rose Watch Evidence - Springland Flowers (SPRINGLAND) - 2026-11-02.pdf",
-    "fingerprint": "907804b5cd389d42"
+    "file": "Rose Watch Evidence - Springland Flowers (SPRINGLAND) - 2026-11-16.pdf",
+    "fingerprint": "eed7d53fb0777bed"
   },
   "site:YOURROSES": {
-    "built": "2026-11-10",
-    "bytes": 12197840,
+    "built": "2026-11-16",
+    "bytes": 12197844,
     "cases": 89,
-    "file": "Rose Watch Evidence - Your Roses (YOURROSES) - 2026-11-10.pdf",
-    "fingerprint": "1285260b432e2b39"
+    "file": "Rose Watch Evidence - Your Roses (YOURROSES) - 2026-11-16.pdf",
+    "fingerprint": "4abd91a63644e772"
   }
 }

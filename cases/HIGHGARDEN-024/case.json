@@ -3,8 +3,8 @@
   "site_code": "HIGHGARDEN",
   "variety": "Wildberry",
   "matched_trademark": "Wildberry",
-  "trademark_status": "Pending",
-  "trademark_application_or_registration_no": "App. Ser. No. 99779843 (Reg. No.: NYA)",
+  "trademark_status": "Registered",
+  "trademark_application_or_registration_no": "App. Ser. No. 99779843 (Reg. No.: 8542521)",
   "breeder": "Rosen Tantau KG",
   "seller_name": "High Garden",
   "website_domain": "highgardenroses.com",
@@ -18,7 +18,7 @@
   "match_explanation": "Product title contains the trademarked name \"Wildberry\" (as part of a longer product title).",
   "review_status": "New",
   "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-  "last_verified": "2026-11-13 06:44 MST (America/Phoenix)",
+  "last_verified": "2026-11-16 06:07 MST (America/Phoenix)",
   "screenshot_captured_at": null,
   "seller_location": {
     "country": "United States",
@@ -228,6 +228,16 @@
     {
       "date": "2026-11-13 06:44 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-11-16 06:06 MST (America/Phoenix)",
+      "action": "Trademark status changed: Pending -> Registered",
+      "details": "Chart status updated from Pending to Registered on ingesting the Master Trademark Filing Chart the user supplied from Damon on 2026-11-13 (original filename 93000_Master_Trademark_Filing_Chart_7.xlsx; filed as data/sources/2026-11-16_MasterTrademarkFilingChart.xlsx). The chart gives \"Wildberry\" U.S. Reg. No. 8542521, registered 2026-11-10, owner/breeder Rosen Tantau KG. The registration number is a plain seven-digit number and passes the malformed-number check; nothing about it needed flagging. This records a change in the trademark record only. Nothing about this listing, its evidence or its review status changed, and the change is not a finding of infringement."
+    },
+    {
+      "date": "2026-11-16 06:07 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
-  ]
+  ],
+  "trademark_status_as_written": "Registered"
 }

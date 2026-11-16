@@ -12,13 +12,15 @@ row_index,docket_no,link,trademark,status,reg_no,app_ser_no,first_use_date,goods
 11/03/31-11/03/32 Renewal Window",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,True,"Status is Registered and a registration number is present, but it is not a plain number: '8,533,298)'. Recorded exactly as written; needs confirming against the register before it is relied on.",7
 5,93001.006,Alfred Sisley,Alfred Sisley,Registered,7296593,9733048,2015-02-28T00:00:00,Live plants,18655602,2022-03-25T00:00:00,2024-02-06T00:00:00,,Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,True,Application/serial number 9733048 has 7 digits; every other numeric serial in this chart has 8. Possible dropped or extra digit -- verify against the source filing.,8
 6,93001.007,Cathedral Bells,Cathedral Bells,Registered,7042046,97330484,2021-12-20T00:00:00,Live plants,,2022-05-25T00:00:00,2023-05-02T00:00:00,,Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,False,,9
-7,93001.008,,Chamonix,Pending,NYA,99751108,2025-11-01T00:00:00,Live plants; roses,,2026-04-28T00:00:00,NYA,"09/11/26 No Foreign Filing
+7,93001.008,,Chamonix,Registered,8539740,99751108,2025-11-01T00:00:00,Live plants; roses,,2026-04-28T00:00:00,2026-11-10T00:00:00,"09/11/26 No Foreign Filing
 
-09/22/26 Application Published",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,10
+11/10/31-11/10/32 Renewal Window",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,False,,10
 8,93001.009,Dancing in the Dark,Dancing in the Dark,Registered,7042042,97330474,2018-12-20T00:00:00,Live plants,,2022-03-25T00:00:00,2023-05-02T00:00:00,,Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,False,,11
 9,93001.01,,Fleur de Lumière,Pending,NYA,99751123,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,NYA,"11/25/26 Reply to Office Action Due
 
-09/11/26 No Foreign Filing",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,12
+09/11/26 No Foreign Filing
+
+11/11/26 Reply to Office Action Filed",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,12
 10,93001.011,,Garden Julietta Cream,Pending,NYA,99751146,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,NYA,"11/25/26 Reply to Office Action Due
 09/03/26 Reply Filed
 
@@ -39,9 +41,9 @@ row_index,docket_no,link,trademark,status,reg_no,app_ser_no,first_use_date,goods
 15,93001.015,,Monsieur,Registered,"8,531, 724",99751179,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,2026-11-03T00:00:00,"09/11/26 No Foreign Filing
 
 11/03/31-11/03/32 Renewal Window",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,True,"Status is Registered and a registration number is present, but it is not a plain number: '8,531, 724'. Recorded exactly as written; needs confirming against the register before it is relied on.",18
-16,93001.016,,Montmartre,Pending,NYA,99751206,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,NYA,"09/11/26 No Foreign Filing
+16,93001.016,,Montmartre,Registered,8539742,99751206,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,2026-11-10T00:00:00,"09/11/26 No Foreign Filing
 
-09/22/26 Application Published",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,19
+11/10/31-11/10/32 Renewal Window",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,False,,19
 17,93001.017,Moonlight in Paris,Moonlight in Paris,Registered,7296592,97330478,2018-12-07T00:00:00,Live plants,,2022-03-25T00:00:00,2023-05-02T00:00:00,,Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,True,Application/serial number 97330478 is also used by 'Maurice Utrillo' (source row 17). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing.; Registration number 7296592 is also used by 'Maurice Utrillo' (source row 17). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing.,20
 18,93001.018,,Opus Noir,Registered,8531748,99751356,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,2026-11-03T00:00:00,"09/11/26 No Foreign Filing
 
@@ -54,15 +56,16 @@ row_index,docket_no,link,trademark,status,reg_no,app_ser_no,first_use_date,goods
 20,93001.0199999999,,Paul Gauguin,Registered,8533297,99785452,2025-11-01T00:00:00,Live plants; roses,3417541,2026-04-24T00:00:00,2026-11-03T00:00:00,"09/11/26 No Foreign Filing
 
 11/03/31-11/03/32 Renewal Window",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,False,,23
-21,93001.0209999999,,Pont des Arts,Pending,NYA,99751240,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,NYA,"09/11/26 No Foreign Filing
-09/22/26 Application Published",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,24
+21,93001.0209999999,,Pont des Arts,Registered,8539743,99751240,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,2026-11-10T00:00:00,"09/11/26 No Foreign Filing
+
+11/10/31-11/10/32 Renewal Window",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,False,,24
 22,93001.0219999999,,Princeses Astrid de Belgique -- LIVING PERSON,To Be Filed,,,2025-11-01T00:00:00,Live plants; roses,,,,,Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,To Be Filed,False,,25
-24,93001.0229999999,,Rue Saint-Honoré,Pending,NYA,99751265,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,NYA,"09/11/26 No Foreign Filing
+24,93001.0229999999,,Rue Saint-Honoré,Registered,8539744,99751265,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,2026-11-10T00:00:00,"09/11/26 No Foreign Filing
 
-09/22/26 Application Published",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,26
-25,93001.0239999999,,Velours de Nuit,Pending,NYA,99751291,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,NYA,"09/11/26 No Foreign Filing
+11/10/31-11/10/32 Renewal Window",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,False,,26
+25,93001.0239999999,,Velours de Nuit,Registered,8539748,99751291,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,2026-11-10T00:00:00,"09/11/26 No Foreign Filing
 
-09/22/26 Application Published",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,27
+11/10/31-11/10/32 Renewal Window",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,False,,27
 ,93001.025,,Rallye des Gazelles,Pending,NYA,50173893,ITU,Roses,,2026-10-21T00:00:00,NYA,,Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,,Pending,False,,28
 ,93001.026,,Sandrine Kiberlain,NYF,NYA,,ITU,Roses,,,NYA,,Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,,To Be Filed,False,,29
 ,93001.027,,Le Temps des Cerises,Pending,NYA,50173919,ITU,Roses,,2026-10-21T00:00:00,NYA,,Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,,Pending,False,,30
@@ -175,29 +178,29 @@ this registration is in force and owned by Flores Del Valle",Black Velvet,Regist
 2,93004.002,,BARONESSE,Registered,7593983,98117709,2014-11-17T00:00:00,"live plants, namely, rose plants, excluding barley",,2023-08-04T00:00:00,2024-12-10T00:00:00,,Rosen Tantau KG,?,Registered,False,,145
 3,93004.003,we only have white ashley ',ASHLEY,"Abandoned (will refile, see 93004.4400 below)",N/A,98117724,2014-11-17T00:00:00,"live plants, namely, rose plants",,2023-08-04T00:00:00,N/A,,Rosen Tantau KG,April & Ashley,Abandoned,False,,146
 4,93004.004,,MARIATHERESIA,Pending,NYA,98117754,ITU,"live plants, namely, rose plants",,2023-08-04T00:00:00,NYA,,Rosen Tantau KG,?,Pending,False,,147
-5,93004.005,,Alsterwasser,Pending,NYA,99779594,2025-11-01T00:00:00,Live plants; roses,,2026-04-22T00:00:00,N/A,"09/11/26 No Foreign Filing
+5,93004.005,,Alsterwasser,Registered,8542502,99779594,2025-11-01T00:00:00,Live plants; roses,,2026-04-22T00:00:00,2026-11-10T00:00:00,"09/11/26 No Foreign Filing
 
-09/22/26 Application Published",Rosen Tantau KG,April & Ashley,Pending,False,,148
-6,93004.006,,Anni,Pending,NYA,99779625,2025-11-01T00:00:00,Live plants; roses,,2026-04-22T00:00:00,N/A,"09/11/26 No Foreign Filing
+11/10/31-11/10/32 Renewal Window",Rosen Tantau KG,April & Ashley,Registered,False,,148
+6,93004.006,,Anni,Registered,8542505,99779625,2025-11-01T00:00:00,Roses,,2026-04-22T00:00:00,2026-11-10T00:00:00,"09/11/26 No Foreign Filing
 
-09/22/26 Application Published",Rosen Tantau KG,April & Ashley,Pending,False,,149
+11/10/31-11/10/32 Renewal Window",Rosen Tantau KG,April & Ashley,Registered,False,,149
 7,93004.0069999999,,White Ashley,To Be Filed,NYA,N/A,NEED DATE,Live plants; roses,N/A,N/A,N/A,,Rosen Tantau KG,April & Ashley,To Be Filed,False,,150
 8,93004.0079999999,Piano,PIANO,Registered,3504651,77397918,44E Application,"Living plants and natural flowers, in particular roses and rose plants",,2008-02-15T00:00:00,2008-09-23T00:00:00,,Rosen Tantau KG,April & Ashley,Registered,False,,151
-9,93004.0089999999,,Anuschka,Pending,NYA,99779653,2025-11-01T00:00:00,Live plants; roses,961016,2026-04-22T00:00:00,N/A,"09/11/26 No Foreign Filing
+9,93004.0089999999,,Anuschka,Registered,8542507,99779653,2025-11-01T00:00:00,Roses,961016,2026-04-22T00:00:00,2026-11-10T00:00:00,"09/11/26 No Foreign Filing
 
-09/22/26 Application Published",Rosen Tantau KG,April & Ashley,Pending,False,,152
+11/10/31-11/10/32 Renewal Window",Rosen Tantau KG,April & Ashley,Registered,False,,152
 10,93004.0099999999,DO NOT FILE,Barista,N/A,NYA,N/A,,See US Reg 5022199,German Reg. 302019023172,N/A,N/A,,Rosen Tantau KG,April & Ashley,Not Applicable,False,,153
-11,93004.0109999999,,Belle de Noir,Pending,NYA,99779689,2025-11-01T00:00:00,,,2026-04-22T00:00:00,N/A,"09/11/26 No Foreign Filing
+11,93004.0109999999,,Belle de Noir,Registered,8542509,99779689,2025-11-01T00:00:00,Roses,,2026-04-22T00:00:00,2026-11-10T00:00:00,"09/11/26 No Foreign Filing
 
-09/22/26 Application Published",Rosen Tantau KG,April & Ashley,Pending,False,,154
+11/10/31-11/10/32 Renewal Window",Rosen Tantau KG,April & Ashley,Registered,False,,154
 12,93004.0119999999,we have 'lady capri',Capri,To Be Filed as ITU,NYA,N/A,2025-11-01T00:00:00,Live plants; roses,Benelux Reg 614829,N/A,N/A,,Rosen Tantau KG,?,To Be Filed,False,,155
 13,93004.0129999999,,Tropicana,To Be Filed,NYA,N/A,2025-11-01T00:00:00,check varietal,German UK and EU Registrations,N/A,N/A,,Rosen Tantau KG,April & Ashley,To Be Filed,False,,156
-14,93004.0139999999,,Berliner Morgen,Pending,NYA,99779731,2025-11-01T00:00:00,Live plants; roses,,2026-04-22T00:00:00,N/A,"09/11/26 No Foreign Filing
+14,93004.0139999999,,Berliner Morgen,Registered,8542515,99779731,2025-11-01T00:00:00,Live plants; roses,,2026-04-22T00:00:00,2026-11-10T00:00:00,"09/11/26 No Foreign Filing
 
-09/22/26 Application Published",Rosen Tantau KG,April & Ashley,Pending,False,,157
-15,93004.0149999999,,Berliner Sonne,Pending,NYA,99779754,2025-11-01T00:00:00,Live plants; roses,,2026-04-22T00:00:00,N/A,"09/11/26 No Foreign Filing
+11/10/31-11/10/32 Renewal Window",Rosen Tantau KG,April & Ashley,Registered,False,,157
+15,93004.0149999999,,Berliner Sonne,Registered,8542516,99779754,2025-11-01T00:00:00,Roses,,2026-04-22T00:00:00,2026-11-10T00:00:00,"09/11/26 No Foreign Filing
 
-09/22/26 Application Published",Rosen Tantau KG,April & Ashley,Pending,False,,158
+11/10/31-11/10/32 Renewal Window",Rosen Tantau KG,April & Ashley,Registered,False,,158
 16,93004.0159999998,,Bumblebee,Pending,NYA,99779786,2025-11-01T00:00:00,Live plants; roses,,2026-04-22T00:00:00,N/A,"09/11/26 No Foreign Filing
 
 12/28/26 Deadline Reply to Final Office Action",Rosen Tantau KG,April & Ashley,Pending,False,,159
@@ -207,27 +210,27 @@ this registration is in force and owned by Flores Del Valle",Black Velvet,Regist
 18,,Circle of Life,Circle of Life,Abandoned,3098144,78654347,2025-11-01T00:00:00,live potted plants,,2005-06-20T00:00:00,2026-05-30T00:00:00,,Rosen Tantau KG,,Abandoned,False,,161
 19,93004.0179999998,Circle of Life,Circle of Life (refile new application),Pending,NYA,99939797,2025-11-01T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,09/29/26 Application Published,Rosen Tantau KG,April & Ashley,Pending,False,,162
 20,93004.0189999998,remove R symbol,Country Spirit Frieda,Pending,NYA,99939838,2025-11-01T00:00:00,Live plants; roses,registered,2026-07-14T00:00:00,N/A,,Rosen Tantau KG,April & Ashley,Pending,False,,163
-21,93004.0199999998,,Wildberry,Pending,NYA,99779843,2025-11-01T00:00:00,Live plants; roses,,2026-04-22T00:00:00,N/A,"09/11/26 No Foreign Filing
+21,93004.0199999998,,Wildberry,Registered,8542521,99779843,2025-11-01T00:00:00,Roses,,2026-04-22T00:00:00,2026-11-10T00:00:00,"09/11/26 No Foreign Filing
 
-09/22/26 Application Published",Rosen Tantau KG,April & Ashley,Pending,False,,164
+11/10/31-11/10/32 Renewal Window",Rosen Tantau KG,April & Ashley,Registered,False,,164
 22,93004.0209999998,remove R symbol,Country Spirit Peonia,Pending,NYA,99939860,2025-11-01T00:00:00,Live plants; roses,registered,2026-07-14T00:00:00,N/A,,Rosen Tantau KG,April & Ashley,Pending,False,,165
-23,93004.0219999998,,Debütantin,Pending,NYA,99779870,2025-11-01T00:00:00,Live plants; roses,,2026-04-22T00:00:00,N/A,"09/11/26 No Foreign Filing
+23,93004.0219999998,,Debütantin,Registered,8542525,99779870,2025-11-01T00:00:00,Live plants; roses,,2026-04-22T00:00:00,2026-11-10T00:00:00,"09/11/26 No Foreign Filing
 
-09/22/26 Application Published",Rosen Tantau KG,April & Ashley,Pending,False,,166
+11/10/31-11/10/32 Renewal Window",Rosen Tantau KG,April & Ashley,Registered,False,,166
 24,93004.0229999998,,Divina,Pending,NYA,99794126,2025-11-01T00:00:00,Live plants; roses,registered,2026-04-29T00:00:00,N/A,"09/01/26 Examiner amendment to roses and entering translation of ""divina"" as ""divine"" to allow publication
 
 09/11/26 No Foreign Filing
 
 10/06/26 Application Published",Rosen Tantau KG,April & Ashley,Pending,False,,167
-25,93004.0239999998,,Fontenay,Pending,NYA,99779908,2025-11-01T00:00:00,Live plants; roses,,2026-04-22T00:00:00,N/A,"09/11/26 No Foreign Filing
+25,93004.0239999998,,Fontenay,Registered,8542530,99779908,2025-11-01T00:00:00,Roses,,2026-04-22T00:00:00,2026-11-10T00:00:00,"09/11/26 No Foreign Filing
 
-09/22/26 Application Published",Rosen Tantau KG,April & Ashley,Pending,False,,168
+11/10/31-11/10/32 Renewal Window",Rosen Tantau KG,April & Ashley,Registered,False,,168
 26,93004.0249999998,,Forever Yours,Pending,NYA,99939895,2024-11-15T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,09/29/26 Application Published,Rosen Tantau KG,April & Ashley,Pending,False,,169
 27,93004.0259999998,remove R symbol,Grandma's Finest Mary,Pending,NYA,99939940,2025-11-01T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,,Rosen Tantau KG,April & Ashley,Pending,False,,170
 28,93004.0269999998,remove R symbol,Grandma's Finest Romy,Pending,NYA,99939954,2025-11-01T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,,Rosen Tantau KG,April & Ashley,Pending,False,,171
-29,93004.0279999998,,Guten Morgen,Pending,NYA,99779945,2025-11-01T00:00:00,Live plants; roses,,2026-04-22T00:00:00,N/A,"09/11/26 No Foreign Filing
+29,93004.0279999998,,Guten Morgen,Registered,8542535,99779945,2025-11-01T00:00:00,Roses,,2026-04-22T00:00:00,2026-11-10T00:00:00,"09/11/26 No Foreign Filing
 
-09/22/26 Application Published",Rosen Tantau KG,April & Ashley,Pending,False,,172
+11/10/31-11/10/32 Renewal Window",Rosen Tantau KG,April & Ashley,Registered,False,,172
 30,93004.0289999998,,Inkandeszenz,Pending,NYA,99779969,2025-11-01T00:00:00,Live plants; roses,,2026-04-22T00:00:00,N/A,"09/11/26 No Foreign Filing
 
 09/29/26 Application Published",Rosen Tantau KG,April & Ashley,Pending,False,,173

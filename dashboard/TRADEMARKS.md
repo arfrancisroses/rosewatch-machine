@@ -1,6 +1,6 @@
 # Trademarks
 
-Source file: `2026-11-09_MasterTrademarkFilingChart.xlsx` — imported 2026-11-09.
+Source file: `2026-11-16_MasterTrademarkFilingChart.xlsx` — imported 2026-11-16.
 Total records: 275.
 
 Fields preserve the original wording from the Master Trademark Filing Chart. Rows flagged **Needs Review** have missing, unclear, duplicate, or conflicting source data and must not be silently corrected — see the reason(s) given.
@@ -268,15 +268,15 @@ Fields preserve the original wording from the Master Trademark Filing Chart. Row
 |---|---|---|---|---|---|---|---|---|
 | ALABASTER | Registered | 93004.001 | 98117688 | 7593982 | 2023-08-04T00:00:00 | 2024-12-10T00:00:00 | April & Ashley |  |
 | ASHLEY | Abandoned (will refile, see 93004.4400 below) | 93004.003 | 98117724 | N/A | 2023-08-04T00:00:00 | N/A | April & Ashley |  |
-| Alsterwasser | Pending | 93004.005 | 99779594 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
-| Anni | Pending | 93004.006 | 99779625 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
-| Anuschka | Pending | 93004.0089999999 | 99779653 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
+| Alsterwasser | Registered | 93004.005 | 99779594 | 8542502 | 2026-04-22T00:00:00 | 2026-11-10T00:00:00 | April & Ashley |  |
+| Anni | Registered | 93004.006 | 99779625 | 8542505 | 2026-04-22T00:00:00 | 2026-11-10T00:00:00 | April & Ashley |  |
+| Anuschka | Registered | 93004.0089999999 | 99779653 | 8542507 | 2026-04-22T00:00:00 | 2026-11-10T00:00:00 | April & Ashley |  |
 | Ashley | To Be Filed | 93004.0439999999 |  | NYA |  | N/A | April & Ashley | Yes — Duplicate trademark name also on source row 146 |
 | BARONESSE | Registered | 93004.002 | 98117709 | 7593983 | 2023-08-04T00:00:00 | 2024-12-10T00:00:00 | ? |  |
 | Barista | N/A | 93004.0099999999 | N/A | NYA | N/A | N/A | April & Ashley |  |
-| Belle de Noir | Pending | 93004.0109999999 | 99779689 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
-| Berliner Morgen | Pending | 93004.0139999999 | 99779731 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
-| Berliner Sonne | Pending | 93004.0149999999 | 99779754 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
+| Belle de Noir | Registered | 93004.0109999999 | 99779689 | 8542509 | 2026-04-22T00:00:00 | 2026-11-10T00:00:00 | April & Ashley |  |
+| Berliner Morgen | Registered | 93004.0139999999 | 99779731 | 8542515 | 2026-04-22T00:00:00 | 2026-11-10T00:00:00 | April & Ashley |  |
+| Berliner Sonne | Registered | 93004.0149999999 | 99779754 | 8542516 | 2026-04-22T00:00:00 | 2026-11-10T00:00:00 | April & Ashley |  |
 | Bumblebee | Pending | 93004.0159999998 | 99779786 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
 | Cappuccino | Registered | 93004.0169999998 | 99779822 | 8523591 | 2026-04-22T00:00:00 | 2026-10-27T00:00:00 | April & Ashley |  |
 | Capri | To Be Filed as ITU | 93004.0119999999 | N/A | NYA | N/A | N/A | ? |  |
@@ -284,13 +284,13 @@ Fields preserve the original wording from the Master Trademark Filing Chart. Row
 | Circle of Life (refile new application) | Pending | 93004.0179999998 | 99939797 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
 | Country Spirit Frieda | Pending | 93004.0189999998 | 99939838 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
 | Country Spirit Peonia | Pending | 93004.0209999998 | 99939860 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
-| Debütantin | Pending | 93004.0219999998 | 99779870 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
+| Debütantin | Registered | 93004.0219999998 | 99779870 | 8542525 | 2026-04-22T00:00:00 | 2026-11-10T00:00:00 | April & Ashley |  |
 | Divina | Pending | 93004.0229999998 | 99794126 | NYA | 2026-04-29T00:00:00 | N/A | April & Ashley |  |
-| Fontenay | Pending | 93004.0239999998 | 99779908 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
+| Fontenay | Registered | 93004.0239999998 | 99779908 | 8542530 | 2026-04-22T00:00:00 | 2026-11-10T00:00:00 | April & Ashley |  |
 | Forever Yours | Pending | 93004.0249999998 | 99939895 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
 | Grandma's Finest Mary | Pending | 93004.0259999998 | 99939940 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
 | Grandma's Finest Romy | Pending | 93004.0269999998 | 99939954 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
-| Guten Morgen | Pending | 93004.0279999998 | 99779945 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
+| Guten Morgen | Registered | 93004.0279999998 | 99779945 | 8542535 | 2026-04-22T00:00:00 | 2026-11-10T00:00:00 | April & Ashley |  |
 | Hansestadt Rostock | Pending | 93004.0469999999 | 99939390 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
 | Hot Lady |  | 93004.057 |  |  |  |  |  | Yes — Missing status |
 | Inkandeszenz | Pending | 93004.0289999998 | 99779969 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
@@ -324,7 +324,7 @@ Fields preserve the original wording from the Master Trademark Filing Chart. Row
 | Tropicana | To Be Filed | 93004.0129999999 | N/A | NYA | N/A | N/A | April & Ashley |  |
 | Wedding Piano | Registered | 93004.0419999999 | 99794217 | 8512579 | 2026-04-29T00:00:00 | 2026-10-20T00:00:00 | April & Ashley |  |
 | White Ashley | To Be Filed | 93004.0069999999 | N/A | NYA | N/A | N/A | April & Ashley |  |
-| Wildberry | Pending | 93004.0199999998 | 99779843 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
+| Wildberry | Registered | 93004.0199999998 | 99779843 | 8542521 | 2026-04-22T00:00:00 | 2026-11-10T00:00:00 | April & Ashley |  |
 
 ## Roses Forever
 
@@ -365,7 +365,7 @@ Fields preserve the original wording from the Master Trademark Filing Chart. Row
 | Alfred Sisley | Registered | 93001.006 | 9733048 | 7296593 | 2022-03-25T00:00:00 | 2024-02-06T00:00:00 | April & Ashley | Yes — Application/serial number 9733048 has 7 digits; every other numeric serial in this chart has 8. Possible dropped or extra digit -- verify against the source filing. |
 | Camille Pissarro | Registered | 93001.004 | 76510378 | 2924694 | 2003-04-29T00:00:00 | 2005-02-08T00:00:00 | April & Ashley |  |
 | Cathedral Bells | Registered | 93001.007 | 97330484 | 7042046 | 2022-05-25T00:00:00 | 2023-05-02T00:00:00 | April & Ashley |  |
-| Chamonix | Pending | 93001.008 | 99751108 | NYA | 2026-04-28T00:00:00 | NYA | April & Ashley |  |
+| Chamonix | Registered | 93001.008 | 99751108 | 8539740 | 2026-04-28T00:00:00 | 2026-11-10T00:00:00 | April & Ashley |  |
 | Dancing in the Dark | Registered | 93001.009 | 97330474 | 7042042 | 2022-03-25T00:00:00 | 2023-05-02T00:00:00 | April & Ashley |  |
 | Fleur de Lumière | Pending | 93001.01 | 99751123 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
 | Garden Julietta Cream | Pending | 93001.011 | 99751146 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
@@ -375,19 +375,19 @@ Fields preserve the original wording from the Master Trademark Filing Chart. Row
 | Marc Chagall | Pending | 93001.013 | 99785477 | NYA | 2026-04-24T00:00:00 | NYA | April & Ashley |  |
 | Maurice Utrillo | Registered | 93001.014 | 97330478 | 7296592 | 2022-03-25T00:00:00 | 2024-02-06T00:00:00 | April & Ashley | Yes — Application/serial number 97330478 is also used by 'Moonlight in Paris' (source row 20). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing.; Registration number 7296592 is also used by 'Moonlight in Paris' (source row 20). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing. |
 | Monsieur | Registered | 93001.015 | 99751179 | 8,531, 724 | 2026-04-08T00:00:00 | 2026-11-03T00:00:00 | April & Ashley | Yes — Status is Registered and a registration number is present, but it is not a plain number: '8,531, 724'. Recorded exactly as written; needs confirming against the register before it is relied on. |
-| Montmartre | Pending | 93001.016 | 99751206 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
+| Montmartre | Registered | 93001.016 | 99751206 | 8539742 | 2026-04-08T00:00:00 | 2026-11-10T00:00:00 | April & Ashley |  |
 | Moonlight in Paris | Registered | 93001.017 | 97330478 | 7296592 | 2022-03-25T00:00:00 | 2023-05-02T00:00:00 | April & Ashley | Yes — Application/serial number 97330478 is also used by 'Maurice Utrillo' (source row 17). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing.; Registration number 7296592 is also used by 'Maurice Utrillo' (source row 17). Two records cannot share one filing; at least one is wrong. Not corrected automatically -- verify against the source filing. |
 | Opus Noir | Registered | 93001.018 | 99751356 | 8531748 | 2026-04-08T00:00:00 | 2026-11-03T00:00:00 | April & Ashley |  |
 | Paul Cezanne | Pending | 93001.003 | 98413050 | NYA | 2024-02-20T00:00:00 | NYA | ? |  |
 | Paul Gauguin | Registered | 93001.0199999999 | 99785452 | 8533297 | 2026-04-24T00:00:00 | 2026-11-03T00:00:00 | April & Ashley |  |
 | Pavlova | Pending | 93001.0189999999 | 99751222 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
 | Pink O'Hara | Pending | 93001.002 | 99751092 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
-| Pont des Arts | Pending | 93001.0209999999 | 99751240 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
+| Pont des Arts | Registered | 93001.0209999999 | 99751240 | 8539743 | 2026-04-08T00:00:00 | 2026-11-10T00:00:00 | April & Ashley |  |
 | Princeses Astrid de Belgique -- LIVING PERSON | To Be Filed | 93001.0219999999 |  |  |  |  | April & Ashley |  |
 | Rallye des Gazelles | Pending | 93001.025 | 50173893 | NYA | 2026-10-21T00:00:00 | NYA |  |  |
-| Rue Saint-Honoré | Pending | 93001.0229999999 | 99751265 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
+| Rue Saint-Honoré | Registered | 93001.0229999999 | 99751265 | 8539744 | 2026-04-08T00:00:00 | 2026-11-10T00:00:00 | April & Ashley |  |
 | Sandrine Kiberlain | NYF | 93001.026 |  | NYA |  | NYA |  |  |
-| Velours de Nuit | Pending | 93001.0239999999 | 99751291 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
+| Velours de Nuit | Registered | 93001.0239999999 | 99751291 | 8539748 | 2026-04-08T00:00:00 | 2026-11-10T00:00:00 | April & Ashley |  |
 | White O'Hara | Pending | 93001.001 | 99751057 | NYA | 2026-04-08T00:00:00 | NYA | April & Ashley |  |
 
 ## Texas Rose Venture

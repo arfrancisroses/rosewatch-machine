@@ -3,8 +3,8 @@
   "site_code": "KATEROSES",
   "variety": "Montmartre",
   "matched_trademark": "Montmartre",
-  "trademark_status": "Pending",
-  "trademark_application_or_registration_no": "App. Ser. No. 99751206 (Reg. No.: NYA)",
+  "trademark_status": "Registered",
+  "trademark_application_or_registration_no": "App. Ser. No. 99751206 (Reg. No.: 8539742)",
   "breeder": "Société Nouvelle Pépinières et Roseraies Georges Delbard SAS",
   "seller_name": "Kate Roses",
   "website_domain": "kateroses.com",
@@ -280,6 +280,17 @@
       "date": "2026-11-13 06:45 MST (America/Phoenix)",
       "action": "Listing still removed (HTTP 404)",
       "details": "Kate Roses served 113 products today and this listing was not among them; its own URL returns HTTP 404. A restated removal, not a fresh one."
+    },
+    {
+      "date": "2026-11-16 06:06 MST (America/Phoenix)",
+      "action": "Trademark status changed: Pending -> Registered",
+      "details": "Chart status updated from Pending to Registered on ingesting the Master Trademark Filing Chart the user supplied from Damon on 2026-11-13 (original filename 93000_Master_Trademark_Filing_Chart_7.xlsx; filed as data/sources/2026-11-16_MasterTrademarkFilingChart.xlsx). The chart gives \"Montmartre\" U.S. Reg. No. 8539742, registered 2026-11-10, owner/breeder Société Nouvelle Pépinières et Roseraies Georges Delbard SAS. The registration number is a plain seven-digit number and passes the malformed-number check; nothing about it needed flagging. This records a change in the trademark record only. Nothing about this listing, its evidence or its review status changed, and the change is not a finding of infringement."
+    },
+    {
+      "date": "2026-11-16 06:08 MST (America/Phoenix)",
+      "action": "Listing still removed (HTTP 404)",
+      "details": "Kate Roses served 113 products today and this listing was not among them; its own URL returns HTTP 404. A restated removal, not a fresh one. NOTE: this listing's chart entry, Montmartre, became Registered on 2026-11-10 and was recorded here today. The listing itself has been removed since 2026-10-22; the screenshot taken on 2026-10-20, while it was live, is the evidence of what it said then."
     }
-  ]
+  ],
+  "trademark_status_as_written": "Registered"
 }

@@ -19,7 +19,7 @@
   "match_explanation": "The product title contains the full chart name \"Royal Diva\" as a phrase, inside a longer title.",
   "review_status": "New",
   "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-11-13 06:44 MST (America/Phoenix)",
+  "last_verified": "2026-11-16 06:08 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 11:27 MST (America/Phoenix)",
   "seller_location": {
     "country": "Location not available",
@@ -233,6 +233,14 @@
     {
       "date": "2026-11-13 06:44 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-11-16 06:08 MST (America/Phoenix)",
+      "action": "Seller changed this listing's title; the chart name no longer appears in it",
+      "details": "The listing is STILL LIVE at the same URL and the same handle -- its page answers HTTP 200 and its own product record is readable -- but the title has changed. It was recorded here as \"Royal Diva/Opera Queen 皇家迪瓦/歌剧皇后，Shrub Rose,  Non-Grafted/Own Root.\" and now reads \"#SPJ173, Opera Queen 歌剧皇后，Shrub Rose,  Non-Grafted/Own Root.\". The words \"Royal Diva\" and \"皇家迪瓦\", the chart name this case was opened on, have been taken out; \"Opera Queen / 歌剧皇后\" remains. The seller's own record gives the change an updated_at of 2026-11-16T05:08:05-08:00, which is this morning, a little under an hour before this run read it.\n\nThat is why the listing dropped out of today's matches: nothing was removed from the catalog, the title simply no longer contains a chart name. Springland Flowers served 115 products today, up from 114, and its match count fell 8 to 7 for this reason alone.\n\nThis is recorded as observed. Why the seller retitled it is theirs to say and is not inferred here. For completeness: the chart entry \"Royal Diva\" carries the status Not Applicable, so it confers no enforceable right, and nothing about this may be read as a finding of infringement. The original title is kept in previous_product_titles and in the exact_product_title field as recorded on the day the case was made; the screenshot on this case is evidence of what the page said on its own date."
     }
+  ],
+  "previous_product_titles": [
+    "Royal Diva/Opera Queen 皇家迪瓦/歌剧皇后，Shrub Rose,  Non-Grafted/Own Root."
   ]
 }
