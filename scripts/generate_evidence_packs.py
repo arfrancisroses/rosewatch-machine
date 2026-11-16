@@ -56,8 +56,16 @@ def material_history(case):
             if not str(h.get("action") or "").startswith(ROUTINE_ACTIONS)]
 
 
-def fingerprint(cases):
-    """What a reader would notice about this pack, and nothing else."""
+def fingerprint(cases, mod=None):
+    """What a reader would notice about this pack, and nothing else.
+
+    Listing state joined this on 2026-11-16, when the cards began showing
+    whether a listing is still up. Without it a listing could be taken down and
+    the pack would keep saying LIVE until something else about the case changed
+    -- a stale claim on the face of the card, which is worse than no claim.
+    A removal is also a routine history action, so `material_history` does not
+    count it and would not have triggered a rebuild on its own.
+    """
     h = hashlib.sha256()
     for c in sorted(cases, key=lambda x: x.get("case_number") or ""):
         shots = c.get("evidence_screenshots") or []
@@ -67,6 +75,7 @@ def fingerprint(cases):
             str(c.get("price")), str(c.get("exact_product_title")),
             str(shots[-1].get("file") if shots else None),
             str(len(material_history(c))),
+            str(mod.listing_state(c) if mod else None),
         ]).encode("utf-8"))
     return h.hexdigest()[:16]
 
@@ -79,6 +88,30 @@ def build_pack(mod, cases, out_path, title, subtitle):
     ordered = sorted(cases, key=lambda c: (status_rank(c.get("trademark_status") or "(no status)"),
                                            c.get("case_number") or ""))
     mod.build(ordered, out_path, title, subtitle)
+
+
+def live_summary(mod, cases):
+    """How many of these listings are still up, for the pack's opening line.
+
+    A pack keeps every case for good, including listings the seller has taken
+    down -- that is what makes it a record rather than a snapshot. This says so
+    plainly at the top, so nobody has to count cards to find out how much of the
+    pack is still live. The classifier lives in the cards module, which is loaded
+    by path, so it is passed in rather than imported.
+    """
+    from collections import Counter
+    t = Counter(mod.listing_state(c)[0] for c in cases)
+    live, gone, unchecked = t["LIVE"], t["REMOVED BY THE SELLER"], t["NOT RE-CHECKED"]
+    bits = []
+    if live or not (gone or unchecked):
+        bits.append(f"{live} still live")
+    if gone:
+        bits.append(f"{gone} taken down by the seller but kept on record, with the evidence "
+                    f"captured while {'they were' if gone != 1 else 'it was'} up")
+    if unchecked:
+        bits.append(f"{unchecked} on a site Rose Watch cannot reach, so never re-verified")
+    return "Of these, " + ", ".join(bits) + ". Each card says which it is."
+
 
 def main():
     ap = argparse.ArgumentParser()
@@ -108,6 +141,9 @@ def main():
 
     wanted = {s.strip().upper() for s in (a.sites or "").split(",") if s.strip()} or set(by_site)
     today = datetime.now(PHX).strftime("%Y-%m-%d")
+    # Loaded here rather than further down: the pack subtitles call
+    # live_summary(), which needs the classifier out of this module.
+    mod = load_cards_module()
     changed, skipped = [], []
 
     targets = []
@@ -123,7 +159,7 @@ def main():
                 f"Rose Watch Evidence — {seller}",
                 f"Every case on record for {seller} ({cases[0].get('website_domain')}): "
                 f"{len(cases)} listing{'s' if len(cases) != 1 else ''}, ordered by trademark status, "
-                f"most enforceable first. {DISCLAIMER}"))
+                f"most enforceable first. {live_summary(mod, cases)} {DISCLAIMER}"))
 
     reg = [d for d in details.values() if (d.get("trademark_status") or "") == "Registered"]
     if reg and (a.registered_only or not a.sites):
@@ -134,15 +170,14 @@ def main():
             "Rose Watch Evidence — Registered trademarks",
             f"Every case matching a Registered mark on the Francis Roses chart: {len(reg)} listings "
             f"across {sites_n} sellers. These are the only cases carrying an enforceable "
-            f"registration. {DISCLAIMER}"))
+            f"registration. {live_summary(mod, reg)} {DISCLAIMER}"))
 
     if not targets:
         print("nothing to build", file=sys.stderr)
         return 0
 
-    mod = load_cards_module()
     for key, cases, fname, title, subtitle in targets:
-        fp = fingerprint(cases)
+        fp = fingerprint(cases, mod)
         prior = state.get(key) or {}
         if prior.get("fingerprint") == fp and not a.force and os.path.exists(
                 os.path.join(OUT_DIR, prior.get("file", ""))):

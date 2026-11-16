@@ -114,6 +114,8 @@ def styles():
         st.add(ParagraphStyle(n, parent=st["Normal"], **kw))
     add("CardTitle", fontName="Helvetica-Bold", fontSize=12.5, textColor=ACCENT, leading=15, spaceAfter=2)
     add("CardSub",   fontName="Helvetica", fontSize=8.5, textColor=SOFT, leading=11, spaceAfter=4)
+    add("CardState", fontName="Helvetica", fontSize=8.2, textColor=SOFT, leading=10.5,
+        spaceBefore=1, spaceAfter=4)
     add("CardFound", fontName="Helvetica-Bold", fontSize=9, textColor=LINK, leading=12, spaceAfter=6)
     add("FieldLabel",fontName="Helvetica", fontSize=6.5, textColor=LABEL, leading=8.5)
     add("FieldValue",fontName="Helvetica", fontSize=8.5, textColor=INK, leading=11)
@@ -243,6 +245,80 @@ def field(st, label, value):
     return [Paragraph(esc(label), st["FieldLabel"]),
             Paragraph(shown, st["FieldValue"])]
 
+# Whether the listing is still on the seller's site, decided from the case's own
+# history rather than from any field that could have gone stale. Added 2026-11-16
+# at the user's request: a pack is an all-time record and keeps a removed listing
+# for good, which is the point -- but a card that shows a dead listing exactly
+# like a live one makes the reader do work the record should do for them.
+#
+# The action strings below are the ones that actually occur across the case
+# files, not a guess at what they might be: they were enumerated before this was
+# written, and they include wordings used only a handful of times early on
+# ("Listing confirmed removed", "Listing is back", "Still not listed").
+_PRESENT = ("re-verified present", "re-verified", "listing is back")
+_ABSENT  = ("listing still removed", "listing confirmed removed", "listing removed again",
+            "listing no longer found", "listing no longer in the seller", "still not listed",
+            "listing gone again")
+
+
+def listing_state(case):
+    """(label, detail) describing whether this listing is still up.
+
+    Returns one of four states and never guesses between them:
+      LIVE      -- the most recent presence-bearing entry says it was there.
+      REMOVED   -- the most recent one says it was not, with the date.
+      NOT CHECKED -- no presence-bearing entry exists at all. True of the
+                   Commerce Farms cases, which sit on Etsy: Rose Watch cannot
+                   reach that site, so nothing here has ever re-verified them
+                   and the card must not imply otherwise.
+      UNKNOWN   -- a history that says nothing either way. Should not occur, but
+                   saying so is better than picking a side.
+    """
+    hist = case.get("history") or []
+    last_present = last_absent = -1
+    for i, e in enumerate(hist):
+        a = (e.get("action") or "").lower()
+        if any(a.startswith(k) for k in _PRESENT):
+            last_present = i
+        elif any(k in a for k in _ABSENT):
+            last_absent = i
+    if last_present < 0 and last_absent < 0:
+        # No presence check has ever run. Say why where we know why.
+        lims = " ".join(case.get("access_or_research_limitations") or [])
+        if "not re-checked by the daily run" in lims or "cannot reach this listing" in lims:
+            return ("NOT RE-CHECKED",
+                    "Rose Watch cannot reach this seller's site, so this listing is never re-verified "
+                    "automatically. The dates here are from when the evidence was gathered by hand.")
+        return ("NOT RE-CHECKED",
+                "No automated presence check has run against this listing.")
+    if last_absent > last_present:
+        when = (hist[last_absent].get("date") or "").split(" (")[0]
+        seen = (case.get("last_verified") or "").split(" --")[0].split(" (")[0]
+        return ("REMOVED BY THE SELLER",
+                f"Confirmed gone on {when}. Last seen live {seen}. The evidence on this card is of the "
+                f"date it was captured, while the listing was up.")
+    when = (hist[last_present].get("date") or "").split(" (")[0]
+    return ("LIVE", f"Still on the seller's site; last verified {when}.")
+
+
+_STATE_COLOR = {
+    "LIVE":                 colors.HexColor("#1f6b3a"),   # green: still up
+    "REMOVED BY THE SELLER": colors.HexColor("#8a2b2b"),  # red: gone
+    "NOT RE-CHECKED":       colors.HexColor("#8a5a13"),   # amber: we cannot know
+    "UNKNOWN":              colors.HexColor("#5a5a5a"),
+}
+
+
+def state_line(case, st):
+    """The status line that sits under the card's heading."""
+    label, detail = listing_state(case)
+    colour = _STATE_COLOR.get(label, _STATE_COLOR["UNKNOWN"])
+    return Paragraph(
+        f'<font color="#{colour.hexval()[2:]}"><b>{esc(label)}</b></font>'
+        f'<font color="#{SOFT.hexval()[2:]}"> &mdash; {esc(detail)}</font>',
+        st["CardState"])
+
+
 def card(case, st, content_w):
     cn   = case["case_number"]
     img  = (case.get("evidence_screenshots") or [{}])[-1]
@@ -264,6 +340,7 @@ def card(case, st, content_w):
                   f"Classification: {highlight(case.get('match_classification'))}", st["CardSub"]),
         Paragraph(f"Date &amp; time listing was found: {esc(case.get('first_date_found'))}",
                   st["CardFound"]),
+        state_line(case, st),
     ]
 
     loc = case.get("seller_location") or {}
