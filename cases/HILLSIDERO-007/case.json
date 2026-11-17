@@ -105,6 +105,11 @@
       "date": "2026-11-16 06:07 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run.",
       "details": "Back in the seller's feed after being absent from 2026-11-10, confirmed by HTTP 404 on each of those runs. It was created and photographed on 2026-11-09 and went the very next day; the screenshot from 2026-11-09 remains evidence of what the listing said then. Recorded as observed; the pattern is the seller's to explain."
+    },
+    {
+      "date": "2026-11-17 06:06 MST (America/Phoenix)",
+      "action": "Listing removed again (HTTP 404)",
+      "details": "Gone again, confirmed HTTP 404, one run after returning. Its second disappearance since the case was created on 2026-11-09. Recorded as observed; the pattern is the seller's to explain."
     }
   ]
 }

@@ -290,6 +290,11 @@
       "date": "2026-11-16 06:08 MST (America/Phoenix)",
       "action": "Listing still removed (HTTP 404)",
       "details": "Kate Roses served 113 products today and this listing was not among them; its own URL returns HTTP 404. A restated removal, not a fresh one. NOTE: this listing's chart entry, Montmartre, became Registered on 2026-11-10 and was recorded here today. The listing itself has been removed since 2026-10-22; the screenshot taken on 2026-10-20, while it was live, is the evidence of what it said then."
+    },
+    {
+      "date": "2026-11-17 06:06 MST (America/Phoenix)",
+      "action": "Listing still removed (HTTP 404)",
+      "details": "Kate Roses served 135 products today and this listing was not among them; its own URL returns HTTP 404. A restated removal, not a fresh one."
     }
   ],
   "trademark_status_as_written": "Registered"
