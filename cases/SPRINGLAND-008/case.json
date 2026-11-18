@@ -19,7 +19,7 @@
   "match_explanation": "The product title contains the full chart name \"Royal Diva\" as a phrase, inside a longer title.",
   "review_status": "New",
   "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-11-17 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-11-18 06:06 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 11:27 MST (America/Phoenix)",
   "seller_location": {
     "country": "Location not available",
@@ -248,6 +248,11 @@
       "date": "2026-11-17 06:06 MST (America/Phoenix)",
       "action": "Re-verified present at its own URL (not via the feed)",
       "details": "Still live: its URL answers HTTP 200. It is absent from Springland Flowers' matched products for the expected reason -- the seller retitled it on 2026-11-16, removing the chart name \"Royal Diva\", so it no longer matches anything in the chart. This is now a standing condition rather than a new event: this case will appear on the \"served but not in its feed\" list every run from here, and the check that matters is its URL, not the match list."
+    },
+    {
+      "date": "2026-11-18 06:06 MST (America/Phoenix)",
+      "action": "Re-verified present at its own URL (not via the feed)",
+      "details": "Still live: its URL answers HTTP 200. Absent from the matched products for the standing reason recorded on 2026-11-16 -- the seller retitled it, removing the chart name, so it no longer matches anything in the chart."
     }
   ],
   "previous_product_titles": [

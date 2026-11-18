@@ -110,6 +110,11 @@
       "date": "2026-11-17 06:06 MST (America/Phoenix)",
       "action": "Listing removed again (HTTP 404)",
       "details": "Gone again, confirmed HTTP 404, one run after returning. Its second disappearance since the case was created on 2026-11-09. Recorded as observed; the pattern is the seller's to explain."
+    },
+    {
+      "date": "2026-11-18 06:06 MST (America/Phoenix)",
+      "action": "Listing still removed (HTTP 404)",
+      "details": "Hillside Rose Farm served 150 products today and this listing was not among them; its own URL returns HTTP 404. A restated removal, not a fresh one."
     }
   ]
 }

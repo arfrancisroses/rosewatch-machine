@@ -75,7 +75,16 @@ def fingerprint(cases, mod=None):
             str(c.get("price")), str(c.get("exact_product_title")),
             str(shots[-1].get("file") if shots else None),
             str(len(material_history(c))),
-            str(mod.listing_state(c) if mod else None),
+            # The LABEL only, never the detail. The detail carries the
+            # last-verified date, which moves every day, so fingerprinting the
+            # whole tuple rebuilt all 17 packs every single run -- exactly the
+            # churn the rebuild-on-change design exists to avoid. Caught on
+            # 2026-11-18, when 16 packs rebuilt with no case change; the one
+            # that did not was Commerce Farms, whose NOT RE-CHECKED detail is
+            # the only one with no date in it. A LIVE card's date can therefore
+            # lag until something else about the pack changes, which is the same
+            # compromise already accepted for last_verified itself.
+            str(mod.listing_state(c)[0] if mod else None),
         ]).encode("utf-8"))
     return h.hexdigest()[:16]
 
