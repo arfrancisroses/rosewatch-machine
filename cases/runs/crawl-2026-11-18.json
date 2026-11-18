@@ -1,6 +1,6 @@
 {
   "crawl_date": "2026-11-18",
-  "total_product_pages_reviewed": 10440,
+  "total_product_pages_reviewed": 10632,
   "new_matches": [],
   "cut_roses_only": [],
   "cut_roses_only_count": 0,
@@ -3803,6 +3803,89 @@
         }
       ],
       "cut_roses_only_count": 0
+    },
+    "Xavian's Roses": {
+      "url_used": "https://xaviansroses.com",
+      "url_attempted": "https://xaviansroses.com/",
+      "platform": "WordPress/WooCommerce",
+      "count": 192,
+      "error": null,
+      "matches": [
+        {
+          "title": "Forever Yours",
+          "url": "https://xaviansroses.com/roses/forever-yours/",
+          "trademark": "Forever Yours",
+          "status": "Pending",
+          "status_raw": "Pending",
+          "cut_roses_only": false
+        },
+        {
+          "title": "Dancing in the Dark",
+          "url": "https://xaviansroses.com/roses/dancing-in-the-dark/",
+          "trademark": "Dancing in the Dark",
+          "status": "Registered",
+          "status_raw": "Registered",
+          "cut_roses_only": false
+        },
+        {
+          "title": "Peach Swirl",
+          "url": "https://xaviansroses.com/roses/peach-swirl/",
+          "trademark": "Peach Swirl",
+          "status": "(no status)",
+          "status_raw": null,
+          "cut_roses_only": false
+        },
+        {
+          "title": "Camille Pissarro",
+          "url": "https://xaviansroses.com/roses/camille-pissarro/",
+          "trademark": "Camille Pissarro",
+          "status": "Registered",
+          "status_raw": "Registered",
+          "cut_roses_only": false
+        },
+        {
+          "title": "Marc Chagall",
+          "url": "https://xaviansroses.com/roses/marc-chagall/",
+          "trademark": "Marc Chagall",
+          "status": "Pending",
+          "status_raw": "Pending",
+          "cut_roses_only": false
+        },
+        {
+          "title": "Cathedral Bells",
+          "url": "https://xaviansroses.com/roses/cathedral-bells/",
+          "trademark": "Cathedral Bells",
+          "status": "Registered",
+          "status_raw": "Registered",
+          "cut_roses_only": false
+        },
+        {
+          "title": "Tropicana",
+          "url": "https://xaviansroses.com/roses/tropicana/",
+          "trademark": "Tropicana",
+          "status": "To Be Filed",
+          "status_raw": "To Be Filed",
+          "cut_roses_only": false
+        },
+        {
+          "title": "Secret",
+          "url": "https://xaviansroses.com/roses/secret/",
+          "trademark": "Secret",
+          "status": "(no status)",
+          "status_raw": null,
+          "cut_roses_only": false
+        },
+        {
+          "title": "Eleganza Wedding Bells",
+          "url": "https://xaviansroses.com/roses/eleganza-wedding-bells/",
+          "trademark": "Wedding Bells",
+          "status": "To Be Filed",
+          "status_raw": "To Be Filed",
+          "cut_roses_only": false
+        }
+      ],
+      "_note": "Crawled by hand on 2026-11-18 at about 11:30 MST, not by the 06:00 scheduled pass -- the seller was added to the roster at the user's instruction later that morning, after the scheduled run had already completed and that day's report had gone out. Merged into this file per CLAUDE.md so the site appears in Websites Checked rather than having its findings listed while the site itself is missing from the coverage table. IMPORTANT, and the reason this entry is not an ordinary one: scripts/crawl_sites.py CANNOT read this site. The site's firewall closes the connection without any HTTP response to a request carrying the Rose Watch user-agent (reproduced 3/3 on both host forms); the same request without that header returns HTTP 200. The 192 products counted here were read from the seller's own public WooCommerce feeds with a standard command-line HTTP client sending its default identification. No access control was circumvented and the site's robots.txt permits these paths. On every scheduled run from 2026-11-19 onward this site is expected to report FAILED and must be carried as a coverage gap, never as clean, unless and until the user decides otherwise.",
+      "_crawled_by": "manual pull (scheduled crawler refused by the site's firewall)"
     }
   }
 }

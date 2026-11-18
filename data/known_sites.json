@@ -1,7 +1,7 @@
 {
-  "source_file": "2026-11-03_ListofIPInfringements.xlsx",
-  "imported_date": "2026-11-16",
-  "record_count": 20,
+  "source_file": "2026-11-18_ListofIPInfringements.xlsx",
+  "imported_date": "2026-11-18",
+  "record_count": 21,
   "records": [
     {
       "company": "Bloom Ladies Roses",
@@ -341,6 +341,23 @@
       "shipped_from": null,
       "prior_manual_notes": [
         "Added 2026-11-03 on the user's instruction. No business name was supplied; \"Winter Sonata\" is read off the page handle winter.sonata.594800 and is NOT confirmed -- please correct it. Facebook pages cannot be crawled and facebook.com is unreachable from the Rose Watch crawler (blocked at the network CONNECT stage), so this entry will be reported as a coverage gap on every run. Its URL is surfaced in the daily summary for the user to browse by hand, per their instruction of 2026-11-03. Variety columns left blank, not '-': blank means unchecked."
+      ],
+      "prior_reported_varieties": [],
+      "source_sheets": [
+        "Sheet1"
+      ]
+    },
+    {
+      "company": "Xavian's Roses",
+      "websites": [
+        "https://xaviansroses.com/"
+      ],
+      "sales_platforms": [
+        "WooCommerce, web"
+      ],
+      "shipped_from": "Cypress, Texas (Texas-only shipping; free local pickup by appointment)",
+      "prior_manual_notes": [
+        "Added 2026-11-18 on the user's instruction. Trade name of Strategix Growth LLC; TDA Nursery/Floral License #1009323. 192-product catalog pulled 2026-11-18: nine chart matches (3 Registered, 2 Pending, 2 To Be Filed, 2 unstatused). NOT CRAWLABLE on the scheduled run -- the site's firewall drops any request carrying the Rose Watch user-agent, so it is reported as a coverage gap, never as clean. The six columns to the left are marked '-' because the catalog was read in full and none of those six varieties appears in it."
       ],
       "prior_reported_varieties": [],
       "source_sheets": [

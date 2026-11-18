@@ -1,7 +1,7 @@
 # Known Sites
 
-Source file: `2026-11-03_ListofIPInfringements.xlsx` — imported 2026-11-16.
-Total known reseller sites: 20.
+Source file: `2026-11-18_ListofIPInfringements.xlsx` — imported 2026-11-18.
+Total known reseller sites: 21.
 
 This list is Rose Watch's crawl target roster (SOURCE FILES item 2), and per user instruction (2026-09-10) it is a **closed scope** — Rose Watch scans only these sites and does not discover or add others on its own. The "Prior reported varieties" and "Prior manual notes" columns carry over informal, pre-Rose-Watch research from the source spreadsheet. **They are background context only** — not verified Rose Watch case evidence (no case number, product URL, screenshot, quoted text, or evidence date exists for them). Each site must still be crawled and, if a match is confirmed against the trademark chart, given a proper case record in `cases/cases.json`.
 
@@ -26,5 +26,6 @@ This list is Rose Watch's crawl target roster (SOURCE FILES item 2), and per use
 | Rose Explosion | https://roseexplosion.com/ | PayPal, web | China | Admiral® Rose, Piano® Tantau, Pink O'Hara™, Sophie Rochas ® Delbard |  |
 | Springland Flowers | https://springlandflowers.com/ | Shop, web |  | Modern Art ®, Sophie Rochas ® Delbard |  |
 | Winter Sonata (name taken from the page handle -- needs confirming) | https://www.facebook.com/winter.sonata.594800/ | Facebook |  |  | Added 2026-11-03 on the user's instruction. No business name was supplied; "Winter Sonata" is read off the page handle winter.sonata.594800 and is NOT confirmed -- please correct it. Facebook pages cannot be crawled and facebook.com is unreachable from the Rose Watch crawler (blocked at the network CONNECT stage), so this entry will be reported as a coverage gap on every run. Its URL is surfaced in the daily summary for the user to browse by hand, per their instruction of 2026-11-03. Variety columns left blank, not '-': blank means unchecked. |
+| Xavian's Roses | https://xaviansroses.com/ | WooCommerce, web | Cypress, Texas (Texas-only shipping; free local pickup by appointment) |  | Added 2026-11-18 on the user's instruction. Trade name of Strategix Growth LLC; TDA Nursery/Floral License #1009323. 192-product catalog pulled 2026-11-18: nine chart matches (3 Registered, 2 Pending, 2 To Be Filed, 2 unstatused). NOT CRAWLABLE on the scheduled run -- the site's firewall drops any request carrying the Rose Watch user-agent, so it is reported as a coverage gap, never as clean. The six columns to the left are marked '-' because the catalog was read in full and none of those six varieties appears in it. |
 | Your Roses | https://your-roses.com/ | PayPal, web | China | Admiral® Rose, Modern Art ®, Pink O'Hara™, Sophie Rochas ® Delbard |  |
 

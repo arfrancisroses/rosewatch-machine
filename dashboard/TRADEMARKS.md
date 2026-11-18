@@ -1,6 +1,6 @@
 # Trademarks
 
-Source file: `2026-11-16_MasterTrademarkFilingChart.xlsx` — imported 2026-11-16.
+Source file: `2026-11-16_MasterTrademarkFilingChart.xlsx` — imported 2026-11-18.
 Total records: 275.
 
 Fields preserve the original wording from the Master Trademark Filing Chart. Rows flagged **Needs Review** have missing, unclear, duplicate, or conflicting source data and must not be silently corrected — see the reason(s) given.

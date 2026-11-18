@@ -1,0 +1,60 @@
+{
+  "case_number": "XAVIANSROS-002",
+  "site_code": "XAVIANSROS",
+  "variety": "Cathedral Bells",
+  "matched_trademark": "Cathedral Bells",
+  "trademark_status": "Registered",
+  "trademark_status_as_written": "Registered",
+  "trademark_application_or_registration_no": "App. Ser. No. 97330484 (Reg. No.: 7042046)",
+  "breeder": "Société Nouvelle Pépinières et Roseraies Georges Delbard SAS",
+  "seller_name": "Xavian's Roses",
+  "website_domain": "xaviansroses.com",
+  "product_url": "https://xaviansroses.com/roses/cathedral-bells/",
+  "exact_product_title": "Cathedral Bells",
+  "quoted_text": "Bubblegum buds open to layer upon layer of lilac-pink petals in an old-fashioned, almost peony form. Strong and unusual anise-and-lavender scent. Established 3-gallon plant.",
+  "price": "45.00",
+  "currency": "USD",
+  "price_note": "Read from the seller's own WooCommerce Store API on 2026-11-18, which carries price where the WordPress product feed does not.",
+  "quantity_or_form": "Roses, Shrub",
+  "match_classification": "Exact",
+  "match_explanation": "The product title normalises exactly to the chart name \"Cathedral Bells\".",
+  "review_status": "New",
+  "first_date_found": "2026-11-18 11:47 MST (America/Phoenix)",
+  "last_verified": "2026-11-18 11:47 MST (America/Phoenix)",
+  "screenshot_captured_at": null,
+  "units_in_stock_at_capture": null,
+  "seller_sku": null,
+  "page_publication_date": "2026-10-30 13:06 MST (America/Phoenix)",
+  "page_update_date": "2026-11-12 19:05 MST (America/Phoenix)",
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Texas",
+    "city": "Cypress",
+    "source": "Published by the seller on its own pages, verified directly on 2026-11-18. The privacy policy states: \"Xavian's Roses is a trade name of Strategix Growth LLC, a licensed Texas nursery (TDA Nursery/Floral License #1009323) in Cypress, Texas.\" The contact page gives the pickup address as \"14415 Laumar Ct., Cypress, TX 77429\" and describes the operation as a \"Home-based business. Pickup by appointment only.\" The about page names the founder as Nami Ahmed and the footer of every page repeats \"Strategix Growth LLC - Cypress, TX 77429 - TDA Nursery/Floral License #1009323\". The shipping page states shipping is \"Texas only\". Contact details shown: (281) 962-0759, orders@xaviansroses.com. Nothing here is estimated -- all of it is the seller's own published wording.",
+    "estimated": false
+  },
+  "website_host": {
+    "hosting_platform": "Not confirmed. The site is self-hosted WordPress/WooCommerce behind nginx. Response headers on 2026-11-18 were: server: nginx; x-cache-enabled: True; x-httpd-modphp: 1; host-header: 8441280b0c35cbc1147f8ba998a563a7; x-proxy-cache-info: DT:1. That combination is characteristic of a shared managed-WordPress stack, but the host-header value does not identify a provider -- the same header appears with different values across several unrelated hosts -- so no provider is named here rather than guessed at.",
+    "cdn_or_proxy": "None observed in the response headers.",
+    "server_ip": "Not available. This container has no DNS resolver tooling (dig is not installed and socket.gethostbyname fails), because all outbound traffic is tunnelled through the environment's egress proxy.",
+    "ip_geolocation": "Not available -- the server IP could not be resolved.",
+    "registrar": "Not available. RDAP and whois endpoints are refused by this environment's network egress policy: rdap.org, rdap.verisign.com, rdap.markmonitor.com, dns.google and cloudflare-dns.com all returned 403 at the proxy's CONNECT stage on 2026-11-18.",
+    "hosting_country": "Not available -- the server IP could not be resolved.",
+    "estimated": false
+  },
+  "evidence_screenshots": [],
+  "access_or_research_limitations": [
+    "The scheduled crawler cannot read this site. scripts/crawl_sites.py identifies itself as \"Mozilla/5.0 (compatible; RoseWatch/1.0; IP monitoring)\" and the site's firewall closes the connection without returning any HTTP response to a request carrying that header -- reproduced three times in a row on 2026-11-18, on both the apex and www host forms. The same request without that header is answered normally with HTTP 200. The site is therefore reported as a coverage gap on every scheduled run and is never recorded as clean. No user-agent was spoofed and no attempt was made to work around the rule; per the user's decision of 2026-11-18 (\"option 1\"), the gap is accepted and left in place.",
+    "How this catalog was obtained, stated precisely: the seller's own public WooCommerce feeds (/wp-json/wp/v2/product and /wp-json/wc/store/v1/products) were read on 2026-11-18 with a standard command-line HTTP client sending its own default identification rather than the Rose Watch header. No credential, login, CAPTCHA, paywall or access control of any kind was involved or circumvented, and no part of the site was accessed that a visitor could not reach. The site's robots.txt permits this: it is \"User-agent: *\" disallowing only /wp-admin/, the WooCommerce upload and log directories and add-to-cart query strings, and it advertises the sitemap for crawlers. Product pages and /wp-json/ are not disallowed.",
+    "Website host information is incomplete -- see website_host. The hosting provider could not be confirmed and the server IP, registrar and hosting country could not be obtained at all, because this environment's egress policy refuses every RDAP, whois and DNS-over-HTTPS endpoint tried and the container carries no DNS tooling.",
+    "No screenshot has been captured yet. Nothing is claimed about whether a capture will succeed; scripts/capture_screenshots.py records the real outcome when it runs."
+  ],
+  "investigator_notes": "NOT found by the scheduled daily crawl. This seller was added to the roster on 2026-11-18 at the user's instruction, and the catalog was read by hand the same day because the scheduled crawler is refused by the site's firewall -- see access_or_research_limitations, which records exactly how the catalog was obtained. All 192 products in the seller's public catalog were compared against every name in the Master Trademark Filing Chart, not Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"Registered\". The product title normalises exactly to the chart name \"Cathedral Bells\". The listing is sold as a plant, not as cut flowers. Observed on the site and recorded as fact, not as a finding: the seller displays no (R) or (TM) symbol anywhere, and no listing on the site carries authorization, licensing, propagation-rights or disclaimer language of any kind.",
+  "history": [
+    {
+      "date": "2026-11-18 11:47 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created by hand from the seller's own public product feeds, read on 2026-11-18. Chart status carried through unchanged. The scheduled crawler cannot reach this site; the limitation is recorded on this case rather than the site being treated as crawled."
+    }
+  ]
+}
