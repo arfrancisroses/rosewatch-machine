@@ -35,8 +35,24 @@ UA = {"User-Agent": "Mozilla/5.0 (compatible; RoseWatch/1.0; IP monitoring)"}
 NO_FEED_HOSTS = ("etsy.com", "facebook.com", "instagram.com", "amazon.com", "ebay.com")
 
 
+# Trademark/service/copyright symbols, stripped BEFORE the NFKD pass below.
+# This is not cosmetic. NFKD *decomposes* U+2122 TM into the two letters "TM"
+# and U+2120 SM into "SM", which then survive the [^a-z0-9] strip glued to the
+# preceding word: "Cathedral Bells(TM)" normalised to "cathedral bellstm" and
+# matched nothing. U+00AE (R) has no decomposition, so it fell through to the
+# strip and became a space -- which is why (R) names always matched and (TM)
+# names silently never did. Found 2026-11-18 on Textured Pot, where two
+# Registered marks (Cathedral Bells, Moonlight in Paris) were being missed
+# while "Scentuous(R)" on the same site matched fine. A seller's own (TM) is
+# exactly the case this tool exists to catch, so a silent miss here is the
+# worst kind of bug: it reports a site as clean. Verified additive -- all 473
+# cases on record at the time still matched, none was lost.
+MARK_SYMBOLS = "™®©℠"
+
+
 def normalize(s):
-    s = unicodedata.normalize("NFKD", s or "")
+    s = re.sub(f"[{MARK_SYMBOLS}]", " ", s or "")
+    s = unicodedata.normalize("NFKD", s)
     s = "".join(c for c in s if not unicodedata.combining(c))
     s = s.lower()
     s = re.sub(r"[''`’]", "", s)
