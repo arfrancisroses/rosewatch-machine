@@ -15,13 +15,13 @@
   "price": "45.00",
   "currency": "USD",
   "price_note": "Read from the seller's own WooCommerce Store API on 2026-11-18, which carries price where the WordPress product feed does not.",
-  "quantity_or_form": "Roses, Shrub",
+  "quantity_or_form": "Potted rose, ready now. Pickup only.",
   "match_classification": "Exact",
   "match_explanation": "The product title normalises exactly to the chart name \"Cathedral Bells\".",
   "review_status": "New",
   "first_date_found": "2026-11-18 11:47 MST (America/Phoenix)",
   "last_verified": "2026-11-18 11:47 MST (America/Phoenix)",
-  "screenshot_captured_at": null,
+  "screenshot_captured_at": "2026-11-18 12:13 MST (America/Phoenix)",
   "units_in_stock_at_capture": null,
   "seller_sku": null,
   "page_publication_date": "2026-10-30 13:06 MST (America/Phoenix)",
@@ -42,12 +42,34 @@
     "hosting_country": "Not available -- the server IP could not be resolved.",
     "estimated": false
   },
-  "evidence_screenshots": [],
+  "evidence_screenshots": [
+    {
+      "file": "cases/XAVIANSROS-002/screenshots/XAVIANSROS-002_2026-11-18_1213.png",
+      "captured_at": "2026-11-18 12:13 MST (America/Phoenix)",
+      "source_url": "https://xaviansroses.com/roses/cathedral-bells/",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 1626926,
+      "product_image_box": {
+        "x": 92,
+        "y": 195.375,
+        "w": 580,
+        "h": 580,
+        "detail_bottom": null,
+        "dpr": 1
+      },
+      "images_total": 8,
+      "images_failed_to_load": 0,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing. No listing content was altered, added or removed.",
+      "image_load_note": null
+    }
+  ],
   "access_or_research_limitations": [
     "The scheduled crawler cannot read this site. scripts/crawl_sites.py identifies itself as \"Mozilla/5.0 (compatible; RoseWatch/1.0; IP monitoring)\" and the site's firewall closes the connection without returning any HTTP response to a request carrying that header -- reproduced three times in a row on 2026-11-18, on both the apex and www host forms. The same request without that header is answered normally with HTTP 200. The site is therefore reported as a coverage gap on every scheduled run and is never recorded as clean. No user-agent was spoofed and no attempt was made to work around the rule; per the user's decision of 2026-11-18 (\"option 1\"), the gap is accepted and left in place.",
     "How this catalog was obtained, stated precisely: the seller's own public WooCommerce feeds (/wp-json/wp/v2/product and /wp-json/wc/store/v1/products) were read on 2026-11-18 with a standard command-line HTTP client sending its own default identification rather than the Rose Watch header. No credential, login, CAPTCHA, paywall or access control of any kind was involved or circumvented, and no part of the site was accessed that a visitor could not reach. The site's robots.txt permits this: it is \"User-agent: *\" disallowing only /wp-admin/, the WooCommerce upload and log directories and add-to-cart query strings, and it advertises the sitemap for crawlers. Product pages and /wp-json/ are not disallowed.",
     "Website host information is incomplete -- see website_host. The hosting provider could not be confirmed and the server IP, registrar and hosting country could not be obtained at all, because this environment's egress policy refuses every RDAP, whois and DNS-over-HTTPS endpoint tried and the container carries no DNS tooling.",
-    "No screenshot has been captured yet. Nothing is claimed about whether a capture will succeed; scripts/capture_screenshots.py records the real outcome when it runs."
+    "Method asymmetry on this seller, recorded so the record explains itself. The scheduled crawler (scripts/crawl_sites.py, a plain HTTP client sending the Rose Watch user-agent) is refused by this site's firewall -- see the first limitation above. The screenshot on this case WAS captured successfully, on 2026-11-18, by scripts/capture_screenshots.py, which drives a real headless Chromium browser via Playwright and therefore sends Chromium's own genuine browser user-agent, because it genuinely is that browser. No user-agent was forged or chosen to defeat the firewall, and the same capture tool and settings are used on every other seller Rose Watch tracks -- 414 screenshots on record before these nine. The page was loaded as an ordinary visitor would load it, with no credential, login, CAPTCHA or access control involved. This note exists because the two tools reached different outcomes on the same site on the same day, and the record should say why rather than leave it to be inferred."
   ],
   "investigator_notes": "NOT found by the scheduled daily crawl. This seller was added to the roster on 2026-11-18 at the user's instruction, and the catalog was read by hand the same day because the scheduled crawler is refused by the site's firewall -- see access_or_research_limitations, which records exactly how the catalog was obtained. All 192 products in the seller's public catalog were compared against every name in the Master Trademark Filing Chart, not Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"Registered\". The product title normalises exactly to the chart name \"Cathedral Bells\". The listing is sold as a plant, not as cut flowers. Observed on the site and recorded as fact, not as a finding: the seller displays no (R) or (TM) symbol anywhere, and no listing on the site carries authorization, licensing, propagation-rights or disclaimer language of any kind.",
   "history": [
@@ -55,6 +77,22 @@
       "date": "2026-11-18 11:47 MST (America/Phoenix)",
       "action": "Case created",
       "details": "Created by hand from the seller's own public product feeds, read on 2026-11-18. Chart status carried through unchanged. The scheduled crawler cannot reach this site; the limitation is recorded on this case rather than the site being treated as crawled."
+    },
+    {
+      "date": "2026-11-18 12:13 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://xaviansroses.com/roses/cathedral-bells/ saved to cases/XAVIANSROS-002/screenshots/XAVIANSROS-002_2026-11-18_1213.png (1,626,926 bytes)."
+    },
+    {
+      "date": "2026-11-18 12:13 MST (America/Phoenix)",
+      "action": "Screenshot limitation corrected",
+      "details": "The limitation written when this case was created said \"No screenshot has been captured yet\". That was true at 11:47 MST and became false at 12:13 MST the same day, when the capture succeeded. It has been replaced with a statement of what was actually done and by which tool. No evidence, review status or case number changed."
+    },
+    {
+      "date": "2026-11-18 12:22 MST (America/Phoenix)",
+      "action": "Product form and availability recorded from the listing page",
+      "details": "quantity_or_form was \"Roses, Shrub\", which was the product's category list from the seller's feed rather than the form the plant is sold in. Read from the listing page itself on 2026-11-18 and corrected to \"Potted rose, ready now. Pickup only.\" The page badge at the time of capture read \"IN STOCK / PICKUP ONLY\", recorded in listing_availability_at_capture. This is what the listing said on the capture date and is not re-checked automatically; the scheduled crawler cannot read this site."
     }
-  ]
+  ],
+  "listing_availability_at_capture": "IN STOCK / PICKUP ONLY"
 }
