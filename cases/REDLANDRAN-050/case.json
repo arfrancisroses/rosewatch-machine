@@ -1,0 +1,81 @@
+{
+  "case_number": "REDLANDRAN-050",
+  "site_code": "REDLANDRAN",
+  "variety": "Amnesia",
+  "matched_trademark": "Amnesia",
+  "trademark_status": "Not Applicable",
+  "trademark_status_as_written": "N/A",
+  "trademark_application_or_registration_no": "App. Ser. No. N/A (Reg. No.: N/A)",
+  "breeder": "NIRP",
+  "seller_name": "Redland Ranch Roses",
+  "website_domain": "redlandranchroses.com",
+  "product_url": "https://redlandranchroses.com/products/amnesia™",
+  "exact_product_title": "Amnesia™",
+  "quoted_text": "Amnesia boasts a captivating blend of lavender and gray; hugged by light-green outer petals. With blooms that flower continuously, it perfumes the air with a strong, spicy aroma all season long.",
+  "price": "69.99",
+  "currency": "USD",
+  "price_note": null,
+  "quantity_or_form": "3 GALLON POTTED ROSE - Ships Spring 2027",
+  "match_classification": "Exact",
+  "match_explanation": "The product title normalises exactly to the chart name \"Amnesia\".",
+  "review_status": "New",
+  "first_date_found": "2026-11-19 06:16 MST (America/Phoenix)",
+  "last_verified": "2026-11-19 06:16 MST (America/Phoenix)",
+  "screenshot_captured_at": "2026-11-19 06:17 MST (America/Phoenix)",
+  "units_in_stock_at_capture": null,
+  "seller_sku": null,
+  "page_publication_date": "Date not available on page",
+  "page_update_date": "Date not available on page",
+  "seller_location": {
+    "country": "United States",
+    "state_or_region": "Florida (Estimated)",
+    "city": "Redland / Miami-Dade area (Estimated)",
+    "source": "No address published on the contact, about or privacy pages -- only info@redlandranchroses.com. Estimated from the business name and the site's Deep-South / Fortuniana-rootstock focus; unconfirmed.",
+    "estimated": true
+  },
+  "website_host": {
+    "hosting_platform": "Shopify, Inc. (the site's own privacy policy states it is 'powered by Shopify')",
+    "cdn_or_proxy": null,
+    "server_ip": "23.227.38.32 (apex), within Shopify's 23.227.38.0/24 range",
+    "ip_geolocation": "Not determined",
+    "registrar": "Not determined -- RDAP/whois endpoints (rdap.org, rdap.verisign.com) are refused by this environment's network egress policy",
+    "hosting_country": "Not determined"
+  },
+  "evidence_screenshots": [
+    {
+      "file": "cases/REDLANDRAN-050/screenshots/REDLANDRAN-050_2026-11-19_0617.png",
+      "captured_at": "2026-11-19 06:17 MST (America/Phoenix)",
+      "source_url": "https://redlandranchroses.com/products/amnesia™",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 1570025,
+      "product_image_box": {
+        "x": 40,
+        "y": 163.375,
+        "w": 856,
+        "h": 856,
+        "detail_bottom": 1135.109375,
+        "dpr": 1
+      },
+      "images_total": 46,
+      "images_failed_to_load": 26,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing. No listing content was altered, added or removed.",
+      "image_load_note": "26 of 46 images on the page did not load and appear blank in this capture. Their host is refused by this environment's network policy, not by the seller. The capture is kept for its text, price and layout; it is not a complete picture of the listing as a buyer saw it."
+    }
+  ],
+  "access_or_research_limitations": [],
+  "investigator_notes": "Found by the daily catalog crawl on 2026-11-19, which matches product titles against every name in the Master Trademark Filing Chart rather than Registered and Pending only (user instruction, 2026-09-18). This record's chart entry is \"N/A\", which carries no enforceable right: it is recorded so the match is tracked, and must not be read as a finding of infringement. The product title normalises exactly to the chart name \"Amnesia\".",
+  "history": [
+    {
+      "date": "2026-11-19 06:16 MST (America/Phoenix)",
+      "action": "Case created",
+      "details": "Created from that day's crawl; chart status carried through unchanged."
+    },
+    {
+      "date": "2026-11-19 06:17 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://redlandranchroses.com/products/amnesia™ saved to cases/REDLANDRAN-050/screenshots/REDLANDRAN-050_2026-11-19_0617.png (1,570,025 bytes)."
+    }
+  ]
+}

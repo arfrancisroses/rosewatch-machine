@@ -119,6 +119,10 @@ def try_shopify(base):
                           "url": f"{base}/products/{p.get('handle','')}",
                           "product_type": p.get("product_type") or "",
                           "tags": p.get("tags") or [],
+                          # Variant titles carry the product FORM ("3 GALLON POTTED
+                          # ROSE", "Bare root"), which is often the only place a
+                          # listing says it is a plant at all. See listing_text.
+                          "variants": [v.get("title") or "" for v in (p.get("variants") or [])],
                           "description": (p.get("body_html") or "")[:3000]})
         if len(prods) < 250:
             break
@@ -398,9 +402,23 @@ def _says(text, tokens, phrases):
 
 
 def listing_text(item):
-    """Everything the seller says about the listing, flattened for matching."""
+    """Everything the seller says about the listing, flattened for matching.
+
+    Variant titles are in here because on 2026-11-19 they were the ONLY place
+    four Redland Ranch listings said they were plants. Each had an empty
+    product_type, no tags, and a description that is pure bloom-prose ("her
+    velvety petals glowing in a deep, passionate red") with no nursery noun in
+    it -- so is_cut_roses_only saw cut-flower language and no plant signal, and
+    moved all four to the Cut Roses register. Every one of them is sold as a
+    "3 GALLON POTTED ROSE - Ships Spring 2027", and one (Belle de Noir) is a
+    Registered mark that would have sat in the register instead of being a
+    case. The variant is where a seller states the product FORM, so it is
+    exactly the field the plant-wins rule needs. This ADDS plant evidence; it
+    does not loosen the rule.
+    """
     parts = [item.get("title", ""), item.get("product_type", ""),
-             " ".join(item.get("tags") or []), item.get("description", "")]
+             " ".join(item.get("tags") or []),
+             " ".join(item.get("variants") or []), item.get("description", "")]
     return normalize(re.sub(r"(?s)<[^>]+>", " ", " ".join(p for p in parts if p)))
 
 

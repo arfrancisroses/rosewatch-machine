@@ -8,7 +8,7 @@
   "breeder": "Société Nouvelle Pépinières et Roseraies Georges Delbard SAS",
   "seller_name": "Kisaki Plant",
   "website_domain": "kisakiplant.com",
-  "product_url": "https://kisakiplant.com/products/rose-white-ohara-白荔枝",
+  "product_url": "https://kisakiplant.com/products/white-ohara",
   "exact_product_title": "Rose  ‘ White O'Hara | 白荔枝 ’",
   "quoted_text": "🌺Characteristics ： 🌻Flowering: Repeat flowering 🌲Root Type: Own Root 📍Recommended planting zone: Zone 6 and above 🌹Fragrance: Strong fragrance 🌳Size: Medium Shrub 120-150cm 🌸Bloom Size: 10-14cm 🌈Color: White -------------------------------------- ⭐Abundant Blooming ⭐Bloom Repeatedly ⭐Rapid Growth ⭐S",
   "price": "45.99",
@@ -18,7 +18,7 @@
   "match_explanation": "Product title contains the trademarked name \"White O'Hara\" (as part of a longer product title).",
   "review_status": "New",
   "first_date_found": "2026-09-10 16:45 MST (America/Phoenix)",
-  "last_verified": "2026-11-18 06:05 MST (America/Phoenix)",
+  "last_verified": "2026-11-19 06:07 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 09:44 MST (America/Phoenix)",
   "seller_location": {
     "country": "United States",
@@ -267,6 +267,18 @@
     {
       "date": "2026-11-18 06:05 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-11-19 06:06 MST (America/Phoenix)",
+      "action": "Seller changed this listing's URL",
+      "details": "The address this case was found at (https://kisakiplant.com/products/rose-white-ohara-白荔枝) now returns an HTTP redirect to https://kisakiplant.com/products/white-ohara. Same seller, same variety, same listing -- a re-slug, not a new listing, so no second case was created. The case now points at the live address and keeps the original one in previous_product_urls. No evidence, review status or case number changed."
+    },
+    {
+      "date": "2026-11-19 06:07 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
+  ],
+  "previous_product_urls": [
+    "https://kisakiplant.com/products/rose-white-ohara-白荔枝"
   ]
 }
