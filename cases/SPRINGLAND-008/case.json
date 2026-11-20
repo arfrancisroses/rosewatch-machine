@@ -19,7 +19,7 @@
   "match_explanation": "The product title contains the full chart name \"Royal Diva\" as a phrase, inside a longer title.",
   "review_status": "New",
   "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-11-19 06:08 MST (America/Phoenix)",
+  "last_verified": "2026-11-20 06:06 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 11:27 MST (America/Phoenix)",
   "seller_location": {
     "country": "Location not available",
@@ -256,6 +256,11 @@
     },
     {
       "date": "2026-11-19 06:08 MST (America/Phoenix)",
+      "action": "Re-verified present at its own URL (not via the feed)",
+      "details": "Still live: its URL answers HTTP 200, checked directly today. Absent from the matched products for the standing reason recorded on 2026-11-16 -- the seller retitled it, removing the chart name, so it no longer matches anything in the chart."
+    },
+    {
+      "date": "2026-11-20 06:06 MST (America/Phoenix)",
       "action": "Re-verified present at its own URL (not via the feed)",
       "details": "Still live: its URL answers HTTP 200, checked directly today. Absent from the matched products for the standing reason recorded on 2026-11-16 -- the seller retitled it, removing the chart name, so it no longer matches anything in the chart."
     }

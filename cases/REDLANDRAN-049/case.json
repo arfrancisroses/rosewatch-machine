@@ -20,7 +20,7 @@
   "match_explanation": "The product title normalises exactly to the chart name \"Belle de Noir\".",
   "review_status": "New",
   "first_date_found": "2026-11-19 06:16 MST (America/Phoenix)",
-  "last_verified": "2026-11-19 06:16 MST (America/Phoenix)",
+  "last_verified": "2026-11-20 06:05 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-11-19 06:16 MST (America/Phoenix)",
   "units_in_stock_at_capture": null,
   "seller_sku": null,
@@ -76,6 +76,10 @@
       "date": "2026-11-19 06:16 MST (America/Phoenix)",
       "action": "Evidence screenshot captured",
       "details": "Full-page capture of https://redlandranchroses.com/products/belle-de-noir™ saved to cases/REDLANDRAN-049/screenshots/REDLANDRAN-049_2026-11-19_0616.png (1,610,450 bytes)."
+    },
+    {
+      "date": "2026-11-20 06:05 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

@@ -20,7 +20,7 @@
   "match_explanation": "The product title normalises exactly to the chart name \"Velours de Nuit\".",
   "review_status": "New",
   "first_date_found": "2026-11-19 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-11-19 06:07 MST (America/Phoenix)",
+  "last_verified": "2026-11-20 06:05 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-11-19 06:09 MST (America/Phoenix)",
   "units_in_stock_at_capture": null,
   "seller_sku": null,
@@ -80,6 +80,10 @@
       "date": "2026-11-19 06:09 MST (America/Phoenix)",
       "action": "Evidence screenshot captured",
       "details": "Full-page capture of https://redlandranchroses.com/products/velours-de-nuit™ saved to cases/REDLANDRAN-017/screenshots/REDLANDRAN-017_2026-11-19_0609.png (1,603,058 bytes)."
+    },
+    {
+      "date": "2026-11-20 06:05 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

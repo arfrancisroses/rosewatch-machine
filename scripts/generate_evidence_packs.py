@@ -47,7 +47,15 @@ def safe_name(text):
 # the transition -- first absence, confirmed removal, a return -- not the daily
 # restatement of it. Counting restatements rebuilt an absent listing's pack every
 # day for as long as it stayed absent.
-ROUTINE_ACTIONS = ("Re-verified", "Still not listed", "Listing still removed")
+# "Not verified today" joined these on 2026-11-20, the first day a seller's
+# catalog went unreachable while the site itself was up (Your Roses: root 200,
+# every catalog path 404). It is written on all 89 of that seller's cases each
+# run the gap persists, and it changes nothing a reader sees -- listing_state()
+# does not match it, and last_verified is deliberately NOT advanced -- so it is
+# a restatement, not an event. Left out of this list it would rebuild an 11.6 MB
+# pack every morning for as long as the seller stays dark.
+ROUTINE_ACTIONS = ("Re-verified", "Still not listed", "Listing still removed",
+                   "Not verified today")
 
 
 def material_history(case):

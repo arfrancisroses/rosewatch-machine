@@ -247,6 +247,11 @@
     {
       "date": "2026-11-19 06:07 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-11-20 06:06 MST (America/Phoenix)",
+      "action": "Not verified today -- seller's catalog unreachable",
+      "details": "your-roses.com answered HTTP 200 at its site root but returned HTTP 404 for every catalog path tried today: /wp-json/, /wp-json/wp/v2/product, /sitemap_index.xml and /shop/. The server identifies as Hostinger's CDN (hcdn). This is a different failure from the 2026-09-18 to 2026-09-25 block, which was HTTP 403 on those same paths. The listing was NOT checked and is NOT reported as present or as removed; Last Verified is unchanged. Per the precedent set when this site blocked in September, the crawler keeps making the same request each run, the gap is reported, and no workaround is attempted."
     }
   ],
   "trademark_status_as_written": "Registered"
