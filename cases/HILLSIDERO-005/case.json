@@ -19,7 +19,7 @@
   "match_explanation": "The product title contains the single word \"Darlington\", which is the whole of the chart entry. A one-word match can be coincidence rather than the variety -- it needs a human read of the listing before it means anything.",
   "review_status": "New",
   "first_date_found": "2026-09-21 06:04 MST (America/Phoenix)",
-  "last_verified": "2026-11-16 06:07 MST (America/Phoenix)",
+  "last_verified": "2026-11-23 06:06 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 09:14 MST (America/Phoenix)",
   "seller_location": {
     "country": "United States (inferred — the site's \"Our Story\" page refers to a \"Southern California home\" but does not explicitly state \"United States\")",
@@ -292,6 +292,15 @@
       "date": "2026-11-20 06:06 MST (America/Phoenix)",
       "action": "Listing still removed (HTTP 404)",
       "details": "Hillside Rose Farm served 148 products today and this listing was not among them; its own URL returns HTTP 404, checked directly today. A restated removal, not a fresh one."
+    },
+    {
+      "date": "2026-11-23 06:06 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-11-23 06:07 MST (America/Phoenix)",
+      "action": "Listing is back",
+      "details": "Back in Hillside Rose Farm's catalog feed, which served 154 products today against 148 on 2026-11-20. This listing had returned HTTP 404 and been recorded as removed on every run since 2026-11-17. The scheduled re-verify logged today's presence with its routine wording ('Re-verified present in site catalog feed'), which does not distinguish a return from an ordinary daily confirmation -- so the transition is recorded here explicitly. The case was never closed or altered while the listing was down; its evidence, review status and case number are unchanged, and the screenshot on file still dates from when it was first captured."
     }
   ],
   "listing_availability": "NOT FOUND again, as of 2026-10-13 06:08 MST (America/Phoenix). The listing was present on 2026-10-12 after nine runs away, and is absent once more a single run later; Hillside Rose Farm's catalog fell 170 -> 159 in the same period, having risen 156 -> 170 the day before. So this listing has now gone, returned and gone again while the site's catalog swings by a dozen or more products at a time, which looks like inventory churn rather than anything directed at this listing -- but that is an observation about the pattern, not a conclusion, and nothing should be inferred about the seller's reasons. Last Verified stays at 2026-10-12, the last date the listing was actually confirmed present. The full sequence is in the history below and is not papered over."
