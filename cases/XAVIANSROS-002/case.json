@@ -92,6 +92,11 @@
       "date": "2026-11-18 12:22 MST (America/Phoenix)",
       "action": "Product form and availability recorded from the listing page",
       "details": "quantity_or_form was \"Roses, Shrub\", which was the product's category list from the seller's feed rather than the form the plant is sold in. Read from the listing page itself on 2026-11-18 and corrected to \"Potted rose, ready now. Pickup only.\" The page badge at the time of capture read \"IN STOCK / PICKUP ONLY\", recorded in listing_availability_at_capture. This is what the listing said on the capture date and is not re-checked automatically; the scheduled crawler cannot read this site."
+    },
+    {
+      "date": "2026-11-24 06:06 MST (America/Phoenix)",
+      "action": "Not verified today -- seller's catalog unreachable",
+      "details": "xaviansroses.com again closed the connection with no HTTP response to a request carrying the Rose Watch user-agent -- the fourth consecutive scheduled run refused, and the same failure seen when this seller was added on 2026-11-18. The listing was NOT checked and is NOT reported as present or removed; Last Verified is unchanged. No user-agent was spoofed and no workaround was attempted, per the user's decision of 2026-11-18."
     }
   ],
   "listing_availability_at_capture": "IN STOCK / PICKUP ONLY"
