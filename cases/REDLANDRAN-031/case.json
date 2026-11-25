@@ -3,9 +3,9 @@
   "site_code": "REDLANDRAN",
   "variety": "Inkandeszenz",
   "matched_trademark": "Inkandeszenz",
-  "trademark_status": "Pending",
-  "trademark_status_as_written": "Pending",
-  "trademark_application_or_registration_no": "App. Ser. No. 99779969 (Reg. No.: NYA)",
+  "trademark_status": "Registered",
+  "trademark_status_as_written": "Registered",
+  "trademark_application_or_registration_no": "App. Ser. No. 99779969 (Reg. No.: 8550260)",
   "breeder": "Rosen Tantau KG",
   "seller_name": "Redland Ranch Roses",
   "website_domain": "redlandranchroses.com",
@@ -128,6 +128,11 @@
       "date": "2026-11-25 08:43 MST (America/Phoenix)",
       "action": "Former chart name recorded as a tracked field on this case",
       "details": "At the user's instruction (2026-11-25), this case now carries the name change as structured fields rather than only as a history note, so the former name is visible without reading the history. Added: current_product_title ('Incandescence™'), verified live today, and chart_name_removed_from_title, which records that Inkandeszenz was taken out of the title on 2026-11-25 per the seller's own change timestamp of 2026-11-25T08:06:30-05:00. exact_product_title is UNCHANGED and still holds the title as first recorded, 'Inkandeszenz™'; previous_product_titles holds it too. Nothing about the evidence, review status, case number, match classification or screenshots was altered."
+    },
+    {
+      "date": "2026-11-25 10:33 MST (America/Phoenix)",
+      "action": "Chart status changed: Pending -> Registered",
+      "details": "The Master Trademark Filing Chart supplied by the user on 2026-11-25 (2026-11-25_MasterTrademarkFilingChart.xlsx) moves \"Inkandeszenz\" from Pending to Registered. Registration number 8550260, registered 2026-11-17. Owner/breeder as the chart records it: Rosen Tantau KG. Only the chart status and the application/registration numbers changed. The match classification is untouched -- a registration does not make a title match any stronger or weaker -- and no evidence, review status, screenshot, price, title or case number was altered. This remains a potential lead for Francis Roses or counsel to review, not a finding of infringement."
     }
   ],
   "current_product_title": "Incandescence™",

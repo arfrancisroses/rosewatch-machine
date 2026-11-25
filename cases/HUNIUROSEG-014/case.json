@@ -3,9 +3,9 @@
   "site_code": "HUNIUROSEG",
   "variety": "Circle of Life",
   "matched_trademark": "Circle of Life",
-  "trademark_status": "Abandoned",
-  "trademark_status_as_written": "Abandoned",
-  "trademark_application_or_registration_no": "App. Ser. No. 78654347 (Reg. No.: 3098144)",
+  "trademark_status": "Registered",
+  "trademark_status_as_written": "Registered",
+  "trademark_application_or_registration_no": "App. Ser. No. 99939797 (Reg. No.: 8552804)",
   "breeder": "Rosen Tantau KG",
   "seller_name": "Huniu Rose Garden",
   "website_domain": "huniurosegarden.ca",
@@ -265,6 +265,11 @@
     {
       "date": "2026-11-25 06:06 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-11-25 10:33 MST (America/Phoenix)",
+      "action": "Chart status changed: Abandoned -> Registered",
+      "details": "The Master Trademark Filing Chart supplied by the user on 2026-11-25 (2026-11-25_MasterTrademarkFilingChart.xlsx) moves \"Circle of Life\" from Abandoned to Registered. Registration number 8552804, registered 2026-11-17. Owner/breeder as the chart records it: Rosen Tantau KG. THIS CASE'S CHART NAME NOW RESOLVES THROUGH A DUPLICATE: the chart carries two rows named \"Circle of Life\" -- an Abandoned 2005 registration (3098144) and this new one, the refile that succeeded. Matching takes the more enforceable row, so this case carries Registered. Both rows are flagged Needs Review as a duplicate; neither was reconciled automatically. Only the chart status and the application/registration numbers changed. The match classification is untouched -- a registration does not make a title match any stronger or weaker -- and no evidence, review status, screenshot, price, title or case number was altered. This remains a potential lead for Francis Roses or counsel to review, not a finding of infringement."
     }
   ]
 }

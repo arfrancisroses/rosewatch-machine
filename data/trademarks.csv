@@ -1,10 +1,10 @@
 row_index,docket_no,link,trademark,status,reg_no,app_ser_no,first_use_date,goods,eu_reg_no,filing_date,registration_date,next_action,owner_breeder,party_selling,status_category,needs_review,needs_review_reasons,source_row
-1,93001.001,White O'Hara Bush,White O'Hara,Pending,NYA,99751057,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,NYA,"11/25/26 Reply to Office Action Due
+1,93001.001,White O'Hara Bush,White O'Hara,Pending,NYA,99751057,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,NYA,"09/11/26 No Foreign Filing
 
-09/11/26 No Foreign Filing",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,3
-2,93001.002,,Pink O'Hara,Pending,NYA,99751092,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,NYA,"11/25/26 Reply to Office Action Due
+02/25/26 Reply to Office Action Due (after 3 month extension)",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,3
+2,93001.002,,Pink O'Hara,Pending,NYA,99751092,2025-11-01T00:00:00,Live plants; roses,,2026-04-08T00:00:00,NYA,"09/11/26 No Foreign Filing
 
-09/11/26 No Foreign Filing",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,4
+02/25/26 Reply to Office Action Due (after 3 month extension)",Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Pending,False,,4
 ,93001.003,,Paul Cezanne,Pending,NYA,98413050,ITU,"Live plants, namely, roses",,2024-02-20T00:00:00,NYA,,Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,?,Pending,False,,5
 4,93001.004,Camille Pissaro,Camille Pissarro,Registered,2924694,76510378,44E Application,Live plants and roses,,2003-04-29T00:00:00,2005-02-08T00:00:00,,Société Nouvelle Pépinières et Roseraies Georges Delbard SAS,April & Ashley,Registered,False,,6
 3,93001.005,,Alexandra David Neel,Registered,"8,533,298)",99785515,2025-11-01T00:00:00,Live plants; roses,18699928,2026-04-24T00:00:00,2026-11-03T00:00:00,"09/11/26 No Foreign Filing
@@ -208,7 +208,7 @@ this registration is in force and owned by Flores Del Valle",Black Velvet,Regist
 
 10/27/31-10/27/32 Window to File Sec. 8&15 Renewals",Rosen Tantau KG,April & Ashley,Registered,False,,160
 18,,Circle of Life,Circle of Life,Abandoned,3098144,78654347,2025-11-01T00:00:00,live potted plants,,2005-06-20T00:00:00,2026-05-30T00:00:00,,Rosen Tantau KG,,Abandoned,False,,161
-19,93004.0179999998,Circle of Life,Circle of Life (refile new application),Pending,NYA,99939797,2025-11-01T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,09/29/26 Application Published,Rosen Tantau KG,April & Ashley,Pending,False,,162
+19,93004.0179999998,Circle of Life,Circle of Life,Registered,8552804,99939797,2025-11-01T00:00:00,Live plants; roses,,2026-07-14T00:00:00,2026-11-17T00:00:00,11/17/31-11/17/32 Renewal Window,Rosen Tantau KG,April & Ashley,Registered,True,Duplicate trademark name also on source row 161,162
 20,93004.0189999998,remove R symbol,Country Spirit Frieda,Pending,NYA,99939838,2025-11-01T00:00:00,Live plants; roses,registered,2026-07-14T00:00:00,N/A,,Rosen Tantau KG,April & Ashley,Pending,False,,163
 21,93004.0199999998,,Wildberry,Registered,8542521,99779843,2025-11-01T00:00:00,Roses,,2026-04-22T00:00:00,2026-11-10T00:00:00,"09/11/26 No Foreign Filing
 
@@ -217,58 +217,50 @@ this registration is in force and owned by Flores Del Valle",Black Velvet,Regist
 23,93004.0219999998,,Debütantin,Registered,8542525,99779870,2025-11-01T00:00:00,Live plants; roses,,2026-04-22T00:00:00,2026-11-10T00:00:00,"09/11/26 No Foreign Filing
 
 11/10/31-11/10/32 Renewal Window",Rosen Tantau KG,April & Ashley,Registered,False,,166
-24,93004.0229999998,,Divina,Pending,NYA,99794126,2025-11-01T00:00:00,Live plants; roses,registered,2026-04-29T00:00:00,N/A,"09/01/26 Examiner amendment to roses and entering translation of ""divina"" as ""divine"" to allow publication
+24,93004.0229999998,,Divina,Registered,8559157,99794126,2025-11-01T00:00:00,Roses,registered,2026-04-29T00:00:00,2026-11-24T00:00:00,"09/11/26 No Foreign Filing
 
-09/11/26 No Foreign Filing
-
-10/06/26 Application Published",Rosen Tantau KG,April & Ashley,Pending,False,,167
+11/24/31-11/24/32 Renewal Window",Rosen Tantau KG,April & Ashley,Registered,False,,167
 25,93004.0239999998,,Fontenay,Registered,8542530,99779908,2025-11-01T00:00:00,Roses,,2026-04-22T00:00:00,2026-11-10T00:00:00,"09/11/26 No Foreign Filing
 
 11/10/31-11/10/32 Renewal Window",Rosen Tantau KG,April & Ashley,Registered,False,,168
-26,93004.0249999998,,Forever Yours,Pending,NYA,99939895,2024-11-15T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,09/29/26 Application Published,Rosen Tantau KG,April & Ashley,Pending,False,,169
+26,93004.0249999998,,Forever Yours,Registered,8552805,99939895,2024-11-15T00:00:00,Live plants; roses,,2026-07-14T00:00:00,2026-11-17T00:00:00,11/17/31-11/17/32 Renewal Window,Rosen Tantau KG,April & Ashley,Registered,False,,169
 27,93004.0259999998,remove R symbol,Grandma's Finest Mary,Pending,NYA,99939940,2025-11-01T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,,Rosen Tantau KG,April & Ashley,Pending,False,,170
 28,93004.0269999998,remove R symbol,Grandma's Finest Romy,Pending,NYA,99939954,2025-11-01T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,,Rosen Tantau KG,April & Ashley,Pending,False,,171
 29,93004.0279999998,,Guten Morgen,Registered,8542535,99779945,2025-11-01T00:00:00,Roses,,2026-04-22T00:00:00,2026-11-10T00:00:00,"09/11/26 No Foreign Filing
 
 11/10/31-11/10/32 Renewal Window",Rosen Tantau KG,April & Ashley,Registered,False,,172
-30,93004.0289999998,,Inkandeszenz,Pending,NYA,99779969,2025-11-01T00:00:00,Live plants; roses,,2026-04-22T00:00:00,N/A,"09/11/26 No Foreign Filing
+30,93004.0289999998,,Inkandeszenz,Registered,8550260,99779969,2025-11-01T00:00:00,Live plants; roses,,2026-04-22T00:00:00,2026-11-17T00:00:00,"09/11/26 No Foreign Filing
 
-09/29/26 Application Published",Rosen Tantau KG,April & Ashley,Pending,False,,173
+11/17/31-11/17/32 Renewal Window",Rosen Tantau KG,April & Ashley,Registered,False,,173
 31,93004.0299999998,,Lady Capri,Pending,NYA,99940002,2025-11-01T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,,Rosen Tantau KG,April & Ashley,Pending,False,,174
-32,93004.0309999998,,Lampion,Pending,NYA,99780143,2025-11-01T00:00:00,Live plants; roses,,2026-04-22T00:00:00,N/A,"09/01/26 Examiner amendment to roses to allow publication
+32,93004.0309999998,,Lampion,Registered,8558652,99780143,2025-11-01T00:00:00,Roses,,2026-04-22T00:00:00,2026-11-24T00:00:00,"09/11/26 No Foreign Filing
 
-09/11/26 No Foreign Filing
-
-10/06/26 Application Published",Rosen Tantau KG,April & Ashley,Pending,False,,175
+11/24/31-11/24/32 Renewal Window",Rosen Tantau KG,April & Ashley,Registered,False,,175
 33,93004.0319999998,,Maleica,Pending,NYA,99780168,2025-11-01T00:00:00,Live plants; roses,,2026-04-22T00:00:00,N/A,"11/28/26 DL Reply to Office Action
 
-09/11/26 No Foreign Filing",Rosen Tantau KG,April & Ashley,Pending,False,,176
-34,93004.0329999999,,Mila,Pending,NYA,99780199,2025-11-01T00:00:00,Live plants; roses,,2026-04-22T00:00:00,N/A,"09/01/26 Examiner amendment to roses to allow publication
-
 09/11/26 No Foreign Filing
 
-10/06/26 Application Published",Rosen Tantau KG,April & Ashley,Pending,False,,177
-35,93004.0339999999,,Orienta Aylin,Pending,NYA,99780235,2025-11-01T00:00:00,Live plants; roses,,2026-04-22T00:00:00,N/A,"09/01/26 Examiner amendment to roses and entering “ORIENTA AYLIN” has no meaning in a foreign language to allow publication
+11/20/26 Reply to Office Action Filed",Rosen Tantau KG,April & Ashley,Pending,False,,176
+34,93004.0329999999,,Mila,Registered,8558653,99780199,2025-11-01T00:00:00,Roses,,2026-04-22T00:00:00,2026-11-24T00:00:00,"09/11/26 No Foreign Filing
 
-09/11/26 No Foreign Filing
+11/24/31-11/24/32 Renewal Window",Rosen Tantau KG,April & Ashley,Registered,False,,177
+35,93004.0339999999,,Orienta Aylin,Registered,8558655,99780235,2025-11-01T00:00:00,Roses,,2026-04-22T00:00:00,2026-11-24T00:00:00,"09/11/26 No Foreign Filing
 
-10/06/26 Application Published",Rosen Tantau KG,April & Ashley,Pending,False,,178
-36,93004.0349999999,Spelling? (Perennial?),Perennial Domino,Pending,NYA,99940038,2025-11-01T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,"09/01/26 Examiner amendment to roses and disclaiming ""perennial"" to allow publication
+11/24/31-11/24/32 Renewal Window",Rosen Tantau KG,April & Ashley,Registered,False,,178
+36,93004.0349999999,Spelling? (Perennial?),Perennial Domino,Registered,8561699,99940038,2025-11-01T00:00:00,Roses,,2026-07-14T00:00:00,N/A,"09/11/26 No Foreign Filing
 
-10/06/26 Application Published",Rosen Tantau KG,April & Ashley,Pending,False,,179
+11/24/31-11/24/32 Renewal Window",Rosen Tantau KG,April & Ashley,Registered,False,,179
 37,93004.0359999999,refer to previous registration,Pink Piano,Registered,8523676,99794198,2025-11-01T00:00:00,Live plants; roses,,2026-04-29T00:00:00,2026-10-27T00:00:00,"09/11/26 No Foreign Filing
 
 10/27/31-10/27/32 Window to File Sec. 8&15 Renewals",Rosen Tantau KG,April & Ashley,Registered,False,,180
 38,93004.0369999999,,Polar Star,To Be Filed,,,NEED DATE,,,,,,Rosen Tantau KG,April & Ashley,To Be Filed,False,,181
 39,93004.0379999999,Scentuous,Scentuous,Registered,6415288,90204260,2019-08-30T00:00:00,Live plants,,2020-09-23T00:00:00,2021-07-13T00:00:00,,"Certfied Roses, Inc.",April & Ashley,Registered,False,,182
-40,93004.0389999999,,Sirius,Pending,NYA,99794144,2025-11-01T00:00:00,Live plants; roses,,,,"09/01/26 Examiner amendment to roses to allow publication
+40,93004.0389999999,,Sirius,Registered,8559159,99794144,2025-11-01T00:00:00,Roses,,2026-04-29T00:00:00,2026-11-24T00:00:00,"09/11/26 No Foreign Filing
 
-09/11/26 No Foreign Filing
+11/24/31-11/24/32 Renewal Window",Rosen Tantau KG,April & Ashley,Registered,False,,183
+41,93004.0399999999,,Seena's Petals of Courage,Registered,8559163,99794177,2025-11-01T00:00:00,Live plants; roses,,2026-04-29T00:00:00,2026-11-24T00:00:00,"09/11/26 No Foreign Filing
 
-10/06/26 Application Published",Rosen Tantau KG,April & Ashley,Pending,False,,183
-41,93004.0399999999,,Seena's Petals of Courage,Pending,NYA,99794177,2025-11-01T00:00:00,Live plants; roses,,2026-04-29T00:00:00,N/A,"09/11/26 No Foreign Filing
-
-10/06/26 Application Published",Rosen Tantau KG,April & Ashley,Pending,False,,184
+11/24/31-11/24/32 Renewal Window",Rosen Tantau KG,April & Ashley,Registered,False,,184
 42,93004.0409999999,Theodore Fontane Rose?,Theodor Fontane Rose,Pending,NYA,99940057,2025-11-01T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,,Rosen Tantau KG,April & Ashley,Pending,False,,185
 43,93004.0419999999,refer to previous registration,Wedding Piano,Registered,8512579,99794217,2025-11-01T00:00:00,Live plants; roses,,2026-04-29T00:00:00,2026-10-20T00:00:00,"09/11/26 No Foreign Filing
 
@@ -277,100 +269,102 @@ this registration is in force and owned by Flores Del Valle",Black Velvet,Regist
 45,93004.0439999999,,Ashley,To Be Filed,NYA,,2025-11-01T00:00:00,"Live plants; roses, excluding potatoes and cucumbers",,,N/A,,Rosen Tantau KG,April & Ashley,To Be Filed,True,Duplicate trademark name also on source row 146,188
 46,93004.0449999999,,Pink Ashley,To Be Filed,NYA,,NEED DATE,Live plants; roses,,,N/A,,Rosen Tantau KG,April & Ashley,To Be Filed,False,,189
 47,93004.0459999999,,Pacific Blue (not on site?),?,NYA,,2025-11-01T00:00:00,Live plants; roses,,,N/A,,Rosen Tantau KG,April & Ashley,,True,Unrecognized status value: '?',190
-48,93004.0469999999,,Hansestadt Rostock,Pending,NYA,99939390,2025-11-01T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,,Rosen Tantau KG,April & Ashley,Pending,False,,191
-49,93004.048,,Starlet Beauty Elida,Pending,NYA,99939373,2026-02-15T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,,Rosen Tantau KG,April & Ashley,Pending,False,,192
-50,93004.049,,Starlet Beauty Alina,Pending,NYA,99939415,2026-02-15T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,,Rosen Tantau KG,April & Ashley,Pending,False,,193
-51,93004.05,,Starlet Beauty Natalie,Pending,NYA,99939436,2026-02-15T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,,Rosen Tantau KG,April & Ashley,Pending,False,,194
-52,93004.051,,Starlet Beauty Melina,Pending,NYA,99939455,2026-02-15T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,,Rosen Tantau KG,April & Ashley,Pending,False,,195
-53,93004.052,,Starlet Beauty Lola,Pending,NYA,99939479,2026-02-15T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,,Rosen Tantau KG,April & Ashley,Pending,False,,196
-54,93004.053,,Starlet Beauty Lizzy,Pending,NYA,99939517,2026-02-15T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,,Rosen Tantau KG,April & Ashley,Pending,False,,197
-55,93004.054,,Starlet Beauty Eva,Pending,NYA,99939542,2026-02-15T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,,Rosen Tantau KG,April & Ashley,Pending,False,,198
-56,93004.055,,Starlet Beauty Ella,Pending,NYA,99939563,2026-02-15T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,,Rosen Tantau KG,April & Ashley,Pending,False,,199
-57,93004.056,,Starlet Beauty Carmen,Pending,NYA,99939583,2026-02-15T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,,Rosen Tantau KG,April & Ashley,Pending,False,,200
+48,93004.0469999999,,Hansestadt Rostock,Pending,NYA,99939390,2025-11-01T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,02/16/27 DL Reply to Non-Final Office Action,Rosen Tantau KG,April & Ashley,Pending,False,,191
+49,93004.048,,Starlet Beauty Elida,Pending,NYA,99939373,2026-02-15T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,02/16/27 DL Reply to Non-Final Office Action,Rosen Tantau KG,April & Ashley,Pending,False,,192
+50,93004.049,,Starlet Beauty Alina,Pending,NYA,99939415,2026-02-15T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,02/16/27 DL Reply to Non-Final Office Action,Rosen Tantau KG,April & Ashley,Pending,False,,193
+51,93004.05,,Starlet Beauty Natalie,Pending,NYA,99939436,2026-02-15T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,02/17/27 DL Reply to Non-Final Office Action,Rosen Tantau KG,April & Ashley,Pending,False,,194
+52,93004.051,,Starlet Beauty Melina,Pending,NYA,99939455,2026-02-15T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,02/17/27 DL Reply to Non-Final Office Action,Rosen Tantau KG,April & Ashley,Pending,False,,195
+53,93004.052,,Starlet Beauty Lola,Pending,NYA,99939479,2026-02-15T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,02/17/27 DL Reply to Non-Final Office Action,Rosen Tantau KG,April & Ashley,Pending,False,,196
+54,93004.053,,Starlet Beauty Lizzy,Pending,NYA,99939517,2026-02-15T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,02/17/27 DL Reply to Non-Final Office Action,Rosen Tantau KG,April & Ashley,Pending,False,,197
+55,93004.054,,Starlet Beauty Eva,Pending,NYA,99939542,2026-02-15T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,02/17/27 DL Reply to Non-Final Office Action,Rosen Tantau KG,April & Ashley,Pending,False,,198
+56,93004.055,,Starlet Beauty Ella,Pending,NYA,99939563,2026-02-15T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,02/17/27 DL Reply to Non-Final Office Action,Rosen Tantau KG,April & Ashley,Pending,False,,199
+57,93004.056,,Starlet Beauty Carmen,Pending,NYA,99939583,2026-02-15T00:00:00,Live plants; roses,,2026-07-14T00:00:00,N/A,02/17/27 DL Reply to Non-Final Office Action,Rosen Tantau KG,April & Ashley,Pending,False,,200
 58,93004.057,,Hot Lady,,,,,,,,,,Rosen Tantau KG,,,True,Missing status,201
 59,93004.058,,Morning Belle,,,,,,,,,,Rosen Tantau KG,,,True,Missing status,202
 60,93004.059,,Shania Twain -- do we have consent to file?,,,,,,,,,,Rosen Tantau KG,,,True,Missing status,203
-1,,only bouquet,Pink Floyd,N/A,N/A,N/A,,,N/A,N/A,N/A,,Piet Schreurs Holding B.V.,,Not Applicable,False,,206
-2,,,Kensington Gardens!,N/A,N/A,N/A,2025-11-01T00:00:00,,N/A,N/A,N/A,,Piet Schreurs Holding B.V.,,Not Applicable,False,,207
-3,,,Just More!,,,,2025-11-01T00:00:00,,,,,,Piet Schreurs Holding B.V.,,,True,Missing status,208
-4,,,Sheffield Park!,,,,2025-11-01T00:00:00,,,,,,Piet Schreurs Holding B.V.,,,True,Missing status,209
-5,,,Tinkerbell!,,,,2025-11-01T00:00:00,,,,,,Piet Schreurs Holding B.V.,,,True,Missing status,210
-6,,,Westminster Abbey,Abandoned,N/A,97276873,2025-11-01T00:00:00,,N/A,2022-02-21T00:00:00,N/A,,Piet Schreurs Holding B.V.,,Abandoned,False,,211
-7,,,Ayala!,,,,,,,,,,Piet Schreurs Holding B.V.,,,True,Missing status,212
-,,,Lost Gardens,,,,,,,,,,Piet Schreurs Holding B.V.,,,True,Missing status,213
-1,,,Barbra's Baby,,,,2025-11-01T00:00:00,,,,,,NIRP,idk,,True,Missing status,216
-2,,,The Pride,N/A,N/A,N/A,,,N/A,N/A,N/A,,NIRP,,Not Applicable,False,,217
-3,,,boheme,,,,,,,,,,NIRP,,,True,Missing status,218
-4,,,Climbing Parfum Royal,,,,,,,,,,NIRP,,,True,Missing status,219
-5,,,Amnesia,N/A,N/A,N/A,2025-11-01T00:00:00,,N/A,N/A,N/A,,NIRP,,Not Applicable,False,,220
-6,,,Crazy Fashion,,,,,,,,,,NIRP,,,True,Missing status,221
-7,,,Crazy Maya,,,,,,,,,,NIRP,,,True,Missing status,222
-8,,,Gruaud Larose,,,,,,,,,,NIRP,,,True,Missing status,223
-9,,,Jingle Bells,,,,,,,,,,NIRP,,,True,Missing status,224
-10,,,Organza,,,,,,,,,,NIRP,,,True,Missing status,225
-11,,,Parfum Royal,,,,,,,,,,NIRP,,,True,Missing status,226
-12,,,Pierre Bonte,,,,,,,,,,NIRP,,,True,Missing status,227
-13,,,Popstar,,,,2025-11-01T00:00:00,,,,,,NIRP,,,True,Missing status,228
-14,,,Red Maya,,,,,,,,,,NIRP,,,True,Missing status,229
-15,,,Rosa del Camino de Santiago,,,,,,,,,,NIRP,,,True,Missing status,230
-16,,,Rose de Bretagne,,,,,,,,,,NIRP,,,True,Missing status,231
-17,,,Rose de Tende,,,,,,,,,,NIRP,,,True,Missing status,232
-18,,,Rose De Rennes,,,,,,,,,,NIRP,,,True,Missing status,233
-19,,,Rosemantic Red,,,,,,,,,,NIRP,,,True,Missing status,234
-20,,,Tresor Du Jardin,,,,,,,,,,NIRP,,,True,Missing status,235
-21,,,Sweet Delight,,,,,,,,,,NIRP,,,True,Missing status,236
-22,,,Anastasia,,,,,,,,,,NIRP,,,True,Missing status,237
-23,,,Mexican Girl,,,,,,,,,,NIRP,,,True,Missing status,238
-,,,White Angel,,,,,,,,,,NIRP,,,True,Missing status,239
-,,,Only Teardrops,,,,2025-11-01T00:00:00,,,,,,Roses Forever,,,True,Missing status,242
-,,,Royal Diva,N/A,N/A,N/A,2025-11-01T00:00:00,,N/A,N/A,N/A,,Roses Forever,,Not Applicable,False,,243
-,,,Roseville,,,,2025-11-01T00:00:00,,,,,,Roses Forever,,,True,Missing status,244
-,,,Royal Viking,,,,2025-11-01T00:00:00,,,,,,Roses Forever,,,True,Missing status,245
-,,,So Must Love,,,,2025-11-01T00:00:00,,,,,,Roses Forever,,,True,Missing status,246
-,,,Sunshine Forever,,,,2025-11-01T00:00:00,,,,,,Roses Forever,,,True,Missing status,247
-,,,The Most Beautiful,,,,2025-11-01T00:00:00,,,,,,Roses Forever,,,True,Missing status,248
-,,,Winner Takes it All,,,,2025-11-01T00:00:00,,,,,,Roses Forever,,,True,Missing status,249
-,,,Macaron Rose,,,,2025-11-01T00:00:00,,,,,,Roses Orard Selection Edition,,,True,Missing status,252
-,,,Maison Mariée,,,,2025-11-01T00:00:00,,,,,,Roses Orard Selection Edition,,,True,Missing status,253
-,,,Maison Pêche,,,,2025-11-01T00:00:00,,,,,,Roses Orard Selection Edition,,,True,Missing status,254
-,,,Maison Rouge,,,,2025-11-01T00:00:00,,,,,,Roses Orard Selection Edition,,,True,Missing status,255
-,,,Paris Eiffel Jumping,,,,2025-11-01T00:00:00,,,,,,Roses Orard Selection Edition,,,True,Missing status,256
-,,,St Tropez,,,,,,,,,,Roses Orard Selection Edition,,,True,Missing status,257
-,,,Beauty from Within,,,,2025-11-01T00:00:00,,,,,,Roses Orard Selection Edition,,,True,Missing status,258
-,,,Beautiful Day,,,,,,,,,,Fryer,,,True,Missing status,261
-,,,BeeHive,,,,2025-11-01T00:00:00,,,,,,Dummen Orange,,,True,Missing status,262
-,,,Betty Boop,,,,,,,,,,Tom Carruth,,,True,Missing status,263
-,,,Catalina,,,,2025-11-01T00:00:00,,,,,,Dummen Orange,,,True,Missing status,264
-,,,City of San Francisco,,,,2025-11-01T00:00:00,,,,,,Tom Carruth,,,True,Missing status,265
-,,,Crystalline,,,,2025-11-01T00:00:00,,,,,,Tom Carruth,,,True,Missing status,266
-,,,Crescendo,Resgistered,,,,,,,Crescendo,,,,,True,Unrecognized status value: 'Resgistered'; Missing owner/breeder,267
-,,,Ember Room,,,,2025-11-01T00:00:00,,,,,,Frank Gatto,,,True,Missing status,268
-,,,Fine and Dandy,,,,2025-11-01T00:00:00,,,,,,Rippetoe,,,True,Missing status,269
-,,,Fragrant Plum,,,,,,,,,,Tom Carruth,,,True,Missing status,270
-,,,Halo,,,,2025-11-01T00:00:00,,,,,,Frank Gatto,,,True,Missing status,271
-,,,In the Pink,,,,2025-11-01T00:00:00,,,,,,Mattia,,,True,Missing status,272
-,,,Jeanne Moreau,,,,,,,,,,Meilland,,,True,Missing status,273
-,,,Just Be!,,,,2025-11-01T00:00:00,,,,,,Dummen Orange,,,True,Missing status,274
-,,,Lemontini,,,,,,,,,,David Kenny,,,True,Missing status,275
-,,,Magnifiscent,,,,2025-11-01T00:00:00,,,,,,Rippetoe,,,True,Missing status,276
-,,,Meredith,,,,,,,,,,Tom Carruth,,,True,Missing status,277
-,,,Notre Dame,,,,2025-11-01T00:00:00,,,,,,Dummen Orange,,,True,Missing status,278
-,,,Peach Swirl,,,,,,,,,,Texas Rose Venture,,,True,Missing status,279
-,,,Peach Tea,,,,2025-11-01T00:00:00,,,,,,Rippetoe,,,True,Missing status,280
-,,,Roberto Cappucci,,,,,,,,,,Enrico Barni,,,True,Missing status,281
-,,,Perfume Breeze,,,,,,,,,,Enrico Barni,,,True,Missing status,282
-,,,Pillow Fight,,,,2025-11-01T00:00:00,,,,,,Tom Carruth,,,True,Missing status,283
-,,,Pink Miracle,,,,,,,,,,Rippetoe,,,True,Missing status,284
-,,,Posh Life,,,,2025-11-01T00:00:00,,,,,,Rippetoe,,,True,Missing status,285
-,,,Royal Amethyst,,,,2025-11-01T00:00:00,,,,,,Paul Francis DeVor,,,True,Missing status,286
-,,,Secret,,,,2025-11-01T00:00:00,,,,,,Tom Carruth,,,True,Missing status,287
-,,,Sol Desire,,,,,,,,,,Texas Rose Venture,,,True,Missing status,288
-,,,Pacific Wonderland,,,,,,,,,,Garhart,,,True,Missing status,289
-,,,Sonoran Desert,,,,2025-11-01T00:00:00,,,,,,Garhart,,,True,Missing status,290
-,,,Strawberry Lemonade,,,,2025-11-01T00:00:00,,,,,,Rippetoe,,,True,Missing status,291
-,,,Sun Angel,,,,2025-11-01T00:00:00,,,,,,Rippetoe,,,True,Missing status,292
-,,,Ton of Bricks,,,,2025-11-01T00:00:00,,,,,,Pottschmidt,,,True,Missing status,293
-,,,Victorian Secret,,,,2025-11-01T00:00:00,,,,,,Dummen Orange,,,True,Missing status,294
-,,,White Lies,,,,,,,,,,Pottschmidt,,,True,Missing status,295
-,,,Perfumery,,,,,,,,,,Tom Carruth,,,True,Missing status,296
-,,,Sultry,,,,,,,,,,Dr. Keith W. Zary,,,True,Missing status,297
+61,93004.06,,Incandescence,Pending,NYA,50233224,2026-11-02T00:00:00,Roses,,2026-11-23T00:00:00,N/A,,Rosen Tantau KG,,Pending,False,,204
+62,93004.061,,Debutant,Pending,NYA,50233187,2026-11-02T00:00:00,Roses,,2026-11-23T00:00:00,N/A,,Rosen Tantau KG,,Pending,False,,205
+1,,only bouquet,Pink Floyd,N/A,N/A,N/A,,,N/A,N/A,N/A,,Piet Schreurs Holding B.V.,,Not Applicable,False,,208
+2,,,Kensington Gardens!,N/A,N/A,N/A,2025-11-01T00:00:00,,N/A,N/A,N/A,,Piet Schreurs Holding B.V.,,Not Applicable,False,,209
+3,,,Just More!,,,,2025-11-01T00:00:00,,,,,,Piet Schreurs Holding B.V.,,,True,Missing status,210
+4,,,Sheffield Park!,,,,2025-11-01T00:00:00,,,,,,Piet Schreurs Holding B.V.,,,True,Missing status,211
+5,,,Tinkerbell!,,,,2025-11-01T00:00:00,,,,,,Piet Schreurs Holding B.V.,,,True,Missing status,212
+6,,,Westminster Abbey,Abandoned,N/A,97276873,2025-11-01T00:00:00,,N/A,2022-02-21T00:00:00,N/A,,Piet Schreurs Holding B.V.,,Abandoned,False,,213
+7,,,Ayala!,,,,,,,,,,Piet Schreurs Holding B.V.,,,True,Missing status,214
+,,,Lost Gardens,,,,,,,,,,Piet Schreurs Holding B.V.,,,True,Missing status,215
+1,,,Barbra's Baby,,,,2025-11-01T00:00:00,,,,,,NIRP,idk,,True,Missing status,218
+2,,,The Pride,N/A,N/A,N/A,,,N/A,N/A,N/A,,NIRP,,Not Applicable,False,,219
+3,,,boheme,,,,,,,,,,NIRP,,,True,Missing status,220
+4,,,Climbing Parfum Royal,,,,,,,,,,NIRP,,,True,Missing status,221
+5,,,Amnesia,N/A,N/A,N/A,2025-11-01T00:00:00,,N/A,N/A,N/A,,NIRP,,Not Applicable,False,,222
+6,,,Crazy Fashion,,,,,,,,,,NIRP,,,True,Missing status,223
+7,,,Crazy Maya,,,,,,,,,,NIRP,,,True,Missing status,224
+8,,,Gruaud Larose,,,,,,,,,,NIRP,,,True,Missing status,225
+9,,,Jingle Bells,,,,,,,,,,NIRP,,,True,Missing status,226
+10,,,Organza,,,,,,,,,,NIRP,,,True,Missing status,227
+11,,,Parfum Royal,,,,,,,,,,NIRP,,,True,Missing status,228
+12,,,Pierre Bonte,,,,,,,,,,NIRP,,,True,Missing status,229
+13,,,Popstar,,,,2025-11-01T00:00:00,,,,,,NIRP,,,True,Missing status,230
+14,,,Red Maya,,,,,,,,,,NIRP,,,True,Missing status,231
+15,,,Rosa del Camino de Santiago,,,,,,,,,,NIRP,,,True,Missing status,232
+16,,,Rose de Bretagne,,,,,,,,,,NIRP,,,True,Missing status,233
+17,,,Rose de Tende,,,,,,,,,,NIRP,,,True,Missing status,234
+18,,,Rose De Rennes,,,,,,,,,,NIRP,,,True,Missing status,235
+19,,,Rosemantic Red,,,,,,,,,,NIRP,,,True,Missing status,236
+20,,,Tresor Du Jardin,,,,,,,,,,NIRP,,,True,Missing status,237
+21,,,Sweet Delight,,,,,,,,,,NIRP,,,True,Missing status,238
+22,,,Anastasia,,,,,,,,,,NIRP,,,True,Missing status,239
+23,,,Mexican Girl,,,,,,,,,,NIRP,,,True,Missing status,240
+,,,White Angel,,,,,,,,,,NIRP,,,True,Missing status,241
+,,,Only Teardrops,,,,2025-11-01T00:00:00,,,,,,Roses Forever,,,True,Missing status,244
+,,,Royal Diva,N/A,N/A,N/A,2025-11-01T00:00:00,,N/A,N/A,N/A,,Roses Forever,,Not Applicable,False,,245
+,,,Roseville,,,,2025-11-01T00:00:00,,,,,,Roses Forever,,,True,Missing status,246
+,,,Royal Viking,,,,2025-11-01T00:00:00,,,,,,Roses Forever,,,True,Missing status,247
+,,,So Must Love,,,,2025-11-01T00:00:00,,,,,,Roses Forever,,,True,Missing status,248
+,,,Sunshine Forever,,,,2025-11-01T00:00:00,,,,,,Roses Forever,,,True,Missing status,249
+,,,The Most Beautiful,,,,2025-11-01T00:00:00,,,,,,Roses Forever,,,True,Missing status,250
+,,,Winner Takes it All,,,,2025-11-01T00:00:00,,,,,,Roses Forever,,,True,Missing status,251
+,,,Macaron Rose,,,,2025-11-01T00:00:00,,,,,,Roses Orard Selection Edition,,,True,Missing status,254
+,,,Maison Mariée,,,,2025-11-01T00:00:00,,,,,,Roses Orard Selection Edition,,,True,Missing status,255
+,,,Maison Pêche,,,,2025-11-01T00:00:00,,,,,,Roses Orard Selection Edition,,,True,Missing status,256
+,,,Maison Rouge,,,,2025-11-01T00:00:00,,,,,,Roses Orard Selection Edition,,,True,Missing status,257
+,,,Paris Eiffel Jumping,,,,2025-11-01T00:00:00,,,,,,Roses Orard Selection Edition,,,True,Missing status,258
+,,,St Tropez,,,,,,,,,,Roses Orard Selection Edition,,,True,Missing status,259
+,,,Beauty from Within,,,,2025-11-01T00:00:00,,,,,,Roses Orard Selection Edition,,,True,Missing status,260
+,,,Beautiful Day,,,,,,,,,,Fryer,,,True,Missing status,263
+,,,BeeHive,,,,2025-11-01T00:00:00,,,,,,Dummen Orange,,,True,Missing status,264
+,,,Betty Boop,,,,,,,,,,Tom Carruth,,,True,Missing status,265
+,,,Catalina,,,,2025-11-01T00:00:00,,,,,,Dummen Orange,,,True,Missing status,266
+,,,City of San Francisco,,,,2025-11-01T00:00:00,,,,,,Tom Carruth,,,True,Missing status,267
+,,,Crystalline,,,,2025-11-01T00:00:00,,,,,,Tom Carruth,,,True,Missing status,268
+,,,Crescendo,Resgistered,,,,,,,Crescendo,,,,,True,Unrecognized status value: 'Resgistered'; Missing owner/breeder,269
+,,,Ember Room,,,,2025-11-01T00:00:00,,,,,,Frank Gatto,,,True,Missing status,270
+,,,Fine and Dandy,,,,2025-11-01T00:00:00,,,,,,Rippetoe,,,True,Missing status,271
+,,,Fragrant Plum,,,,,,,,,,Tom Carruth,,,True,Missing status,272
+,,,Halo,,,,2025-11-01T00:00:00,,,,,,Frank Gatto,,,True,Missing status,273
+,,,In the Pink,,,,2025-11-01T00:00:00,,,,,,Mattia,,,True,Missing status,274
+,,,Jeanne Moreau,,,,,,,,,,Meilland,,,True,Missing status,275
+,,,Just Be!,,,,2025-11-01T00:00:00,,,,,,Dummen Orange,,,True,Missing status,276
+,,,Lemontini,,,,,,,,,,David Kenny,,,True,Missing status,277
+,,,Magnifiscent,,,,2025-11-01T00:00:00,,,,,,Rippetoe,,,True,Missing status,278
+,,,Meredith,,,,,,,,,,Tom Carruth,,,True,Missing status,279
+,,,Notre Dame,,,,2025-11-01T00:00:00,,,,,,Dummen Orange,,,True,Missing status,280
+,,,Peach Swirl,,,,,,,,,,Texas Rose Venture,,,True,Missing status,281
+,,,Peach Tea,,,,2025-11-01T00:00:00,,,,,,Rippetoe,,,True,Missing status,282
+,,,Roberto Cappucci,,,,,,,,,,Enrico Barni,,,True,Missing status,283
+,,,Perfume Breeze,,,,,,,,,,Enrico Barni,,,True,Missing status,284
+,,,Pillow Fight,,,,2025-11-01T00:00:00,,,,,,Tom Carruth,,,True,Missing status,285
+,,,Pink Miracle,,,,,,,,,,Rippetoe,,,True,Missing status,286
+,,,Posh Life,,,,2025-11-01T00:00:00,,,,,,Rippetoe,,,True,Missing status,287
+,,,Royal Amethyst,,,,2025-11-01T00:00:00,,,,,,Paul Francis DeVor,,,True,Missing status,288
+,,,Secret,,,,2025-11-01T00:00:00,,,,,,Tom Carruth,,,True,Missing status,289
+,,,Sol Desire,,,,,,,,,,Texas Rose Venture,,,True,Missing status,290
+,,,Pacific Wonderland,,,,,,,,,,Garhart,,,True,Missing status,291
+,,,Sonoran Desert,,,,2025-11-01T00:00:00,,,,,,Garhart,,,True,Missing status,292
+,,,Strawberry Lemonade,,,,2025-11-01T00:00:00,,,,,,Rippetoe,,,True,Missing status,293
+,,,Sun Angel,,,,2025-11-01T00:00:00,,,,,,Rippetoe,,,True,Missing status,294
+,,,Ton of Bricks,,,,2025-11-01T00:00:00,,,,,,Pottschmidt,,,True,Missing status,295
+,,,Victorian Secret,,,,2025-11-01T00:00:00,,,,,,Dummen Orange,,,True,Missing status,296
+,,,White Lies,,,,,,,,,,Pottschmidt,,,True,Missing status,297
+,,,Perfumery,,,,,,,,,,Tom Carruth,,,True,Missing status,298
+,,,Sultry,,,,,,,,,,Dr. Keith W. Zary,,,True,Missing status,299

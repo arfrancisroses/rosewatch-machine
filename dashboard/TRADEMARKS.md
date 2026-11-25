@@ -1,7 +1,7 @@
 # Trademarks
 
-Source file: `2026-11-16_MasterTrademarkFilingChart.xlsx` — imported 2026-11-18.
-Total records: 275.
+Source file: `2026-11-25_MasterTrademarkFilingChart.xlsx` — imported 2026-11-25.
+Total records: 277.
 
 Fields preserve the original wording from the Master Trademark Filing Chart. Rows flagged **Needs Review** have missing, unclear, duplicate, or conflicting source data and must not be silently corrected — see the reason(s) given.
 
@@ -281,36 +281,38 @@ Fields preserve the original wording from the Master Trademark Filing Chart. Row
 | Cappuccino | Registered | 93004.0169999998 | 99779822 | 8523591 | 2026-04-22T00:00:00 | 2026-10-27T00:00:00 | April & Ashley |  |
 | Capri | To Be Filed as ITU | 93004.0119999999 | N/A | NYA | N/A | N/A | ? |  |
 | Circle of Life | Abandoned |  | 78654347 | 3098144 | 2005-06-20T00:00:00 | 2026-05-30T00:00:00 |  |  |
-| Circle of Life (refile new application) | Pending | 93004.0179999998 | 99939797 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
+| Circle of Life | Registered | 93004.0179999998 | 99939797 | 8552804 | 2026-07-14T00:00:00 | 2026-11-17T00:00:00 | April & Ashley | Yes — Duplicate trademark name also on source row 161 |
 | Country Spirit Frieda | Pending | 93004.0189999998 | 99939838 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
 | Country Spirit Peonia | Pending | 93004.0209999998 | 99939860 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
+| Debutant | Pending | 93004.061 | 50233187 | NYA | 2026-11-23T00:00:00 | N/A |  |  |
 | Debütantin | Registered | 93004.0219999998 | 99779870 | 8542525 | 2026-04-22T00:00:00 | 2026-11-10T00:00:00 | April & Ashley |  |
-| Divina | Pending | 93004.0229999998 | 99794126 | NYA | 2026-04-29T00:00:00 | N/A | April & Ashley |  |
+| Divina | Registered | 93004.0229999998 | 99794126 | 8559157 | 2026-04-29T00:00:00 | 2026-11-24T00:00:00 | April & Ashley |  |
 | Fontenay | Registered | 93004.0239999998 | 99779908 | 8542530 | 2026-04-22T00:00:00 | 2026-11-10T00:00:00 | April & Ashley |  |
-| Forever Yours | Pending | 93004.0249999998 | 99939895 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
+| Forever Yours | Registered | 93004.0249999998 | 99939895 | 8552805 | 2026-07-14T00:00:00 | 2026-11-17T00:00:00 | April & Ashley |  |
 | Grandma's Finest Mary | Pending | 93004.0259999998 | 99939940 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
 | Grandma's Finest Romy | Pending | 93004.0269999998 | 99939954 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
 | Guten Morgen | Registered | 93004.0279999998 | 99779945 | 8542535 | 2026-04-22T00:00:00 | 2026-11-10T00:00:00 | April & Ashley |  |
 | Hansestadt Rostock | Pending | 93004.0469999999 | 99939390 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
 | Hot Lady |  | 93004.057 |  |  |  |  |  | Yes — Missing status |
-| Inkandeszenz | Pending | 93004.0289999998 | 99779969 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
+| Incandescence | Pending | 93004.06 | 50233224 | NYA | 2026-11-23T00:00:00 | N/A |  |  |
+| Inkandeszenz | Registered | 93004.0289999998 | 99779969 | 8550260 | 2026-04-22T00:00:00 | 2026-11-17T00:00:00 | April & Ashley |  |
 | Juwena | Pending | 93004.0429999999 | 99940086 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
 | Lady Capri | Pending | 93004.0299999998 | 99940002 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
-| Lampion | Pending | 93004.0309999998 | 99780143 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
+| Lampion | Registered | 93004.0309999998 | 99780143 | 8558652 | 2026-04-22T00:00:00 | 2026-11-24T00:00:00 | April & Ashley |  |
 | MARIATHERESIA | Pending | 93004.004 | 98117754 | NYA | 2023-08-04T00:00:00 | NYA | ? |  |
 | Maleica | Pending | 93004.0319999998 | 99780168 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
-| Mila | Pending | 93004.0329999999 | 99780199 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
+| Mila | Registered | 93004.0329999999 | 99780199 | 8558653 | 2026-04-22T00:00:00 | 2026-11-24T00:00:00 | April & Ashley |  |
 | Morning Belle |  | 93004.058 |  |  |  |  |  | Yes — Missing status |
-| Orienta Aylin | Pending | 93004.0339999999 | 99780235 | NYA | 2026-04-22T00:00:00 | N/A | April & Ashley |  |
+| Orienta Aylin | Registered | 93004.0339999999 | 99780235 | 8558655 | 2026-04-22T00:00:00 | 2026-11-24T00:00:00 | April & Ashley |  |
 | PIANO | Registered | 93004.0079999999 | 77397918 | 3504651 | 2008-02-15T00:00:00 | 2008-09-23T00:00:00 | April & Ashley |  |
 | Pacific Blue (not on site?) | ? | 93004.0459999999 |  | NYA |  | N/A | April & Ashley | Yes — Unrecognized status value: '?' |
-| Perennial Domino | Pending | 93004.0349999999 | 99940038 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
+| Perennial Domino | Registered | 93004.0349999999 | 99940038 | 8561699 | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
 | Pink Ashley | To Be Filed | 93004.0449999999 |  | NYA |  | N/A | April & Ashley |  |
 | Pink Piano | Registered | 93004.0359999999 | 99794198 | 8523676 | 2026-04-29T00:00:00 | 2026-10-27T00:00:00 | April & Ashley |  |
 | Polar Star | To Be Filed | 93004.0369999999 |  |  |  |  | April & Ashley |  |
-| Seena's Petals of Courage | Pending | 93004.0399999999 | 99794177 | NYA | 2026-04-29T00:00:00 | N/A | April & Ashley |  |
+| Seena's Petals of Courage | Registered | 93004.0399999999 | 99794177 | 8559163 | 2026-04-29T00:00:00 | 2026-11-24T00:00:00 | April & Ashley |  |
 | Shania Twain -- do we have consent to file? |  | 93004.059 |  |  |  |  |  | Yes — Missing status |
-| Sirius | Pending | 93004.0389999999 | 99794144 | NYA |  |  | April & Ashley |  |
+| Sirius | Registered | 93004.0389999999 | 99794144 | 8559159 | 2026-04-29T00:00:00 | 2026-11-24T00:00:00 | April & Ashley |  |
 | Starlet Beauty Alina | Pending | 93004.049 | 99939415 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
 | Starlet Beauty Carmen | Pending | 93004.056 | 99939583 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
 | Starlet Beauty Elida | Pending | 93004.048 | 99939373 | NYA | 2026-07-14T00:00:00 | N/A | April & Ashley |  |
