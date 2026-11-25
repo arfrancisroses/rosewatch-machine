@@ -20,8 +20,8 @@
   "match_explanation": "The product title normalises exactly to the chart name \"Inkandeszenz\".",
   "review_status": "New",
   "first_date_found": "2026-11-19 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-11-24 06:06 MST (America/Phoenix)",
-  "screenshot_captured_at": "2026-11-19 06:11 MST (America/Phoenix)",
+  "last_verified": "2026-11-25 06:07 MST (America/Phoenix)",
+  "screenshot_captured_at": "2026-11-25 06:07 MST (America/Phoenix)",
   "units_in_stock_at_capture": null,
   "seller_sku": null,
   "page_publication_date": "Date not available on page",
@@ -62,6 +62,27 @@
       "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
       "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing. No listing content was altered, added or removed.",
       "image_load_note": "38 of 53 images on the page did not load and appear blank in this capture. Their host is refused by this environment's network policy, not by the seller. The capture is kept for its text, price and layout; it is not a complete picture of the listing as a buyer saw it."
+    },
+    {
+      "file": "cases/REDLANDRAN-031/screenshots/REDLANDRAN-031_2026-11-25_0607.png",
+      "captured_at": "2026-11-25 06:07 MST (America/Phoenix)",
+      "source_url": "https://redlandranchroses.com/products/inkandeszenz™",
+      "viewport_width_px": 1400,
+      "full_page": true,
+      "bytes": 1668512,
+      "product_image_box": {
+        "x": 40,
+        "y": 163.375,
+        "w": 856,
+        "h": 856,
+        "detail_bottom": 1817.78125,
+        "dpr": 1
+      },
+      "images_total": 50,
+      "images_failed_to_load": 34,
+      "capture_method": "Headless Chromium via Playwright, rendered through this environment's egress proxy. Full-page capture at the URL shown.",
+      "page_modifications": "Newsletter/cookie overlays hidden before capture so they did not cover the listing. No listing content was altered, added or removed.",
+      "image_load_note": "34 of 50 images on the page did not load and appear blank in this capture. Their host is refused by this environment's network policy, not by the seller. The capture is kept for its text, price and layout; it is not a complete picture of the listing as a buyer saw it."
     }
   ],
   "access_or_research_limitations": [],
@@ -92,6 +113,16 @@
     {
       "date": "2026-11-24 06:06 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-11-25 06:07 MST (America/Phoenix)",
+      "action": "Seller retitled this listing; chart name no longer appears in the title",
+      "details": "Observed, stated as fact and not as a finding about the seller's reasons. The listing is STILL LIVE -- its URL answers HTTP 200 -- but the title has changed from \"Inkandeszenz\\u2122\", as recorded on this case when it was found on 2026-11-19, to \"Incandescence\\u2122\". The seller's own feed gives the change time as 2026-11-25T08:06:30-05:00, this morning. The URL handle is unchanged and still reads \"inkandeszenz\\u2122\", so the original name survives in the address. \"Inkandeszenz\" is on the Master Trademark Filing Chart as Pending, owner/breeder Rosen Tantau KG; \"Incandescence\" is NOT on the chart -- checked against all 273 chart names today. The two are commonly used as the German and English trade names of the same variety, but that is horticultural background, not something Rose Watch has verified about this plant. CONSEQUENCE FOR FUTURE RUNS: this listing will report as absent from the seller's matched products every run from now on while remaining live, exactly as SPRINGLAND-008 has since 2026-11-16. It is not removed and must not be recorded as removed. Nothing about the case was altered: the originally recorded title, price, evidence, review status and case number are unchanged, and the screenshot captured on 2026-11-19 remains the record of what this listing said while it carried the chart name. Two further observations from the same check, both verified directly: the PRICE IS UNCHANGED at USD 59.99 and the product form is unchanged (\"3 GALLON POTTED ROSE - Ships Spring 2027\"), so nothing about what is being sold appears to have changed -- only what it is called. The DESCRIPTION was rewritten too, not just the title: the text recorded on this case opens \"Inkandeszenz radiates quiet brilliance, its luminous white petals unfurling...\" and the live page now opens \"Incandescence\\u2122 radiates quiet brilliance, its luminous white petals unfurling...\" -- the same sentence with the name substituted, and replaced at each later mention as well. A second screenshot was captured today under the standing rule that a case is re-shot on a material change, so this case now carries evidence of both states: 2026-11-19 while titled \"Inkandeszenz\\u2122\" and 2026-11-25 as \"Incandescence\\u2122\"."
+    },
+    {
+      "date": "2026-11-25 06:07 MST (America/Phoenix)",
+      "action": "Evidence screenshot captured",
+      "details": "Full-page capture of https://redlandranchroses.com/products/inkandeszenz™ saved to cases/REDLANDRAN-031/screenshots/REDLANDRAN-031_2026-11-25_0607.png (1,668,512 bytes)."
     }
   ]
 }

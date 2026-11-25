@@ -182,6 +182,11 @@
       "date": "2026-11-24 06:06 MST (America/Phoenix)",
       "action": "Listing still removed (HTTP 404)",
       "details": "Flower Meadow Dream served 183 products today and this listing was not among them; its own URL returns HTTP 404, checked directly today. A restated removal, not a fresh one."
+    },
+    {
+      "date": "2026-11-25 06:07 MST (America/Phoenix)",
+      "action": "Listing still removed (HTTP 404)",
+      "details": "Flower Meadow Dream served 183 products today and this listing was not among them; its own URL returns HTTP 404, checked directly today. A restated removal, not a fresh one."
     }
   ]
 }
