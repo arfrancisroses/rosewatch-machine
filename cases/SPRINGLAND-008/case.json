@@ -19,7 +19,7 @@
   "match_explanation": "The product title contains the full chart name \"Royal Diva\" as a phrase, inside a longer title.",
   "review_status": "New",
   "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-11-25 06:07 MST (America/Phoenix)",
+  "last_verified": "2026-11-25 08:43 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 11:27 MST (America/Phoenix)",
   "seller_location": {
     "country": "Location not available",
@@ -278,9 +278,28 @@
       "date": "2026-11-25 06:07 MST (America/Phoenix)",
       "action": "Re-verified present at its own URL (not via the feed)",
       "details": "Still live: its URL answers HTTP 200, checked directly today. Absent from the matched products for the standing reason recorded on 2026-11-16 -- the seller retitled it, removing the chart name."
+    },
+    {
+      "date": "2026-11-25 08:43 MST (America/Phoenix)",
+      "action": "Former chart name recorded as a tracked field on this case",
+      "details": "At the user's instruction (2026-11-25), this case now carries the name change as structured fields rather than only as a history note, so the former name is visible without reading the history. Added: current_product_title ('#SPJ173, Opera Queen 歌剧皇后，Shrub Rose,  Non-Grafted/Own Root.'), verified live today, and chart_name_removed_from_title, which records that Royal Diva (and its Chinese form 皇家迪瓦) was taken out of the title on 2026-11-16 per the seller's own change timestamp of 2026-11-16T05:08:05-08:00. exact_product_title is UNCHANGED and still holds the title as first recorded, 'Royal Diva/Opera Queen 皇家迪瓦/歌剧皇后，Shrub Rose,  Non-Grafted/Own Root.'; previous_product_titles holds it too. Nothing about the evidence, review status, case number, match classification or screenshots was altered."
     }
   ],
   "previous_product_titles": [
     "Royal Diva/Opera Queen 皇家迪瓦/歌剧皇后，Shrub Rose,  Non-Grafted/Own Root."
-  ]
+  ],
+  "current_product_title": "#SPJ173, Opera Queen 歌剧皇后，Shrub Rose,  Non-Grafted/Own Root.",
+  "current_product_title_verified": "2026-11-25 08:43 MST (America/Phoenix)",
+  "chart_name_removed_from_title": {
+    "chart_name_removed": "Royal Diva (and its Chinese form 皇家迪瓦)",
+    "date_removed": "2026-11-16",
+    "sellers_own_change_timestamp": "2026-11-16T05:08:05-08:00",
+    "title_as_first_recorded": "Royal Diva/Opera Queen 皇家迪瓦/歌剧皇后，Shrub Rose,  Non-Grafted/Own Root.",
+    "title_now": "#SPJ173, Opera Queen 歌剧皇后，Shrub Rose,  Non-Grafted/Own Root.",
+    "what_was_kept": "\"Opera Queen / 歌剧皇后\" remains in the title, and the internal SKU \"#SPJ173\" was added.",
+    "url_still_carries_the_name": "The URL handle still contains 皇家迪瓦 -- the Chinese form of the removed name -- so the chart name survives in the address even though it is gone from the title.",
+    "enforceability": "The chart entry \"Royal Diva\" carries the status Not Applicable, which confers NO enforceable right. Nothing here may be read as a finding of infringement.",
+    "listing_state": "STILL LIVE at the same URL. This case will report as absent from the seller's matched products on every run from now on because its title no longer contains a chart name. It must NEVER be recorded as removed.",
+    "recorded_as": "Observed fact. Why the seller changed the title is theirs to say and is not inferred here."
+  }
 }
