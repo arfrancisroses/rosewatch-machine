@@ -19,7 +19,7 @@
   "match_explanation": "The product title contains the full chart name \"Circle of Life\" as a phrase, inside a longer title.",
   "review_status": "New",
   "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-11-25 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-11-26 06:05 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 10:19 MST (America/Phoenix)",
   "seller_location": {
     "country": "Canada",
@@ -270,6 +270,10 @@
       "date": "2026-11-25 10:33 MST (America/Phoenix)",
       "action": "Chart status changed: Abandoned -> Registered",
       "details": "The Master Trademark Filing Chart supplied by the user on 2026-11-25 (2026-11-25_MasterTrademarkFilingChart.xlsx) moves \"Circle of Life\" from Abandoned to Registered. Registration number 8552804, registered 2026-11-17. Owner/breeder as the chart records it: Rosen Tantau KG. THIS CASE'S CHART NAME NOW RESOLVES THROUGH A DUPLICATE: the chart carries two rows named \"Circle of Life\" -- an Abandoned 2005 registration (3098144) and this new one, the refile that succeeded. Matching takes the more enforceable row, so this case carries Registered. Both rows are flagged Needs Review as a duplicate; neither was reconciled automatically. Only the chart status and the application/registration numbers changed. The match classification is untouched -- a registration does not make a title match any stronger or weaker -- and no evidence, review status, screenshot, price, title or case number was altered. This remains a potential lead for Francis Roses or counsel to review, not a finding of infringement."
+    },
+    {
+      "date": "2026-11-26 06:05 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

@@ -1,0 +1,222 @@
+{
+  "_readme": "Per-run monitoring log, one file per calendar day (America/Phoenix), used to generate the Daily PDF Report. Distinct from cases.json, which is the permanent case/review-queue index.",
+  "run_date": "2026-11-26",
+  "generated_at": "2026-11-26 06:07 MST (America/Phoenix)",
+  "_run_note": "Fifty-fourth scheduled run, and the first under the chart Damon supplied on 2026-11-25 (277 records, 275 matchable names against 273 before). NO NEW FINDINGS: zero matches without an existing case across 10,482 product pages on 16 serving URLs. THE NEW CHART'S EFFECT WAS EXACTLY THE ONE PREDICTED AND NO MORE. \"Incandescence\", added as Pending on 2026-11-25, matched exactly one listing anywhere on the roster: Redland Ranch's \"Incandescence(TM)\", which is REDLANDRAN-031 -- the listing that seller retitled the same day. It is the same URL, already carried by that case, so no second case was created and the case number is unchanged; Redland's match count went 49 -> 50 for this reason alone. Both of that listing's titles are now chart names with different statuses: \"Inkandeszenz\" Registered, \"Incandescence\" Pending. The case keeps the name it was opened on and the match is recorded in its history. \"Debutant\", added the same day, matched NOTHING on any site -- an honest null, recorded so it is not re-checked as an open question. Ergonzi served on the first attempt, ending four resets in six runs. Xavian's Roses was refused for a sixth consecutive run; 9 cases unchecked, dates held.",
+  "sites": [
+    {
+      "company": "Bloom Ladies Roses",
+      "url": "https://www.bloomladiesroses.com/shop",
+      "accessible": true,
+      "platform": "Squarespace",
+      "product_pages_reviewed": 154,
+      "notes": null
+    },
+    {
+      "company": "Bloomora Roses",
+      "url": "https://www.facebook.com/profile.php?id=61591662794131",
+      "accessible": false,
+      "platform": "Facebook",
+      "product_pages_reviewed": 0,
+      "notes": "No open product feed and unreachable from this environment; a coverage gap, never clean."
+    },
+    {
+      "company": "Commerce Farms",
+      "url": "https://www.etsy.com/shop/CommerceFarms",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "No open product feed and unreachable from this environment; a coverage gap, never clean."
+    },
+    {
+      "company": "Ergonzy / Ergonzi",
+      "url": "https://ergongzy.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 520,
+      "notes": "Served on the FIRST attempt today, ending a run of four connection resets in six runs (2026-11-19, 11-23, 11-24, 11-25), each of which had served in full on one re-pull. No re-pull was needed today."
+    },
+    {
+      "company": "Ergonzy / Ergonzi",
+      "url": "https://www.etsy.com/shop/Ergongzi",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "No open product feed and unreachable from this environment; a coverage gap, never clean."
+    },
+    {
+      "company": "Flower Meadow Dream",
+      "url": "https://www.myroseworld.com/",
+      "accessible": true,
+      "platform": "Squarespace",
+      "product_pages_reviewed": 183,
+      "notes": null
+    },
+    {
+      "company": "GCM Ranch",
+      "url": "https://www.etsy.com/shop/GcmRanch",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "No open product feed and unreachable from this environment; a coverage gap, never clean."
+    },
+    {
+      "company": "High Garden",
+      "url": "https://highgardenroses.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 672,
+      "notes": null
+    },
+    {
+      "company": "Hillside Rose Farm",
+      "url": "https://www.hillsiderosefarm.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 154,
+      "notes": null
+    },
+    {
+      "company": "Huniu Rose Garden",
+      "url": "https://huniurosegarden.ca/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 318,
+      "notes": null
+    },
+    {
+      "company": "Jessie's Roses",
+      "url": "https://www.jessiesrose.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 0,
+      "notes": null
+    },
+    {
+      "company": "Jessie's Roses",
+      "url": "https://www.etsy.com/shop/JessiesRoseUSA",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "No open product feed and unreachable from this environment; a coverage gap, never clean."
+    },
+    {
+      "company": "Kate Roses",
+      "url": "https://www.kateroses.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 148,
+      "notes": null
+    },
+    {
+      "company": "Kisaki Plant",
+      "url": "https://kisakiplant.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 384,
+      "notes": null
+    },
+    {
+      "company": "Mola Rose",
+      "url": "https://molarose.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 795,
+      "notes": null
+    },
+    {
+      "company": "Muse Roses",
+      "url": "https://museroses.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 795,
+      "notes": null
+    },
+    {
+      "company": "One Love",
+      "url": "https://oneloveroseandgardens.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 864,
+      "notes": null
+    },
+    {
+      "company": "Redland Ranch Roses",
+      "url": "https://redlandranchroses.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 2135,
+      "notes": "50 matches, up from 49 yesterday, with the catalog unchanged at 2,135 products. The difference is REDLANDRAN-031 matching again: the seller retitled it to \"Incandescence(TM)\" on 2026-11-25 and the chart ingested that day adds \"Incandescence\" as a Pending mark, so the same listing matches once more under its new name. Correctly not a new finding -- the URL already carries that case."
+    },
+    {
+      "company": "Rose Explosion",
+      "url": "https://roseexplosion.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 1482,
+      "notes": null
+    },
+    {
+      "company": "Springland Flowers",
+      "url": "https://springlandflowers.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 114,
+      "notes": null
+    },
+    {
+      "company": "Winter Sonata",
+      "url": "https://www.facebook.com/winter.sonata.594800/",
+      "accessible": false,
+      "platform": "Facebook",
+      "product_pages_reviewed": 0,
+      "notes": "No open product feed and unreachable from this environment; a coverage gap, never clean."
+    },
+    {
+      "company": "Xavian's Roses",
+      "url": "https://xaviansroses.com/",
+      "accessible": false,
+      "platform": null,
+      "product_pages_reviewed": 0,
+      "notes": "Firewall closes the connection with no HTTP response to any request carrying the Rose Watch user-agent. SIXTH consecutive scheduled run refused. Coverage gap; its 9 cases hold their 2026-11-18 Last Verified date. No workaround attempted."
+    },
+    {
+      "company": "Your Roses",
+      "url": "https://your-roses.com/",
+      "accessible": true,
+      "platform": "WordPress/WooCommerce",
+      "product_pages_reviewed": 1764,
+      "notes": null
+    }
+  ],
+  "total_sites_on_roster": 21,
+  "total_urls_on_roster": 23,
+  "urls_accessible": 16,
+  "urls_inaccessible": 7,
+  "total_product_pages_reviewed": 10482,
+  "active_trademark_matches_found": 0,
+  "active_trademark_matches_by_status": {},
+  "cases_created_this_run": 0,
+  "cases_reverified_this_run": 495,
+  "cases_no_longer_listed_this_run": [
+    "MYROSEWORL-001",
+    "MYROSEWORL-002",
+    "MYROSEWORL-003",
+    "KATEROSES-001",
+    "HILLSIDERO-004",
+    "SPRINGLAND-004"
+  ],
+  "cases_returned_this_run": [],
+  "cases_rematched_under_a_new_chart_name": [
+    "REDLANDRAN-031"
+  ],
+  "cases_unchecked_this_run": 14,
+  "matches_held_pending_case_creation": 0,
+  "review_queue_entries_this_run": 0,
+  "cut_roses_only_this_run": 0,
+  "screenshots_on_file": 466,
+  "screenshot_gaps": 50,
+  "screenshot_limitation": "466 of 516 cases carry a screenshot; 50 do not, unchanged because no case was created today. 468 files on disk -- 455 PNG plus 13 WEBP supplied by the user -- two cases holding two each. The 50 gaps are 44 High Garden (the seller blanks its pages for automated browsers; capturable only by the user), 3 Flower Meadow Dream (removed, HTTP 404) and 3 One Love (membership login wall, not bypassed). Registered coverage MOVED because the chart moved, not because any screenshot did: 97 cases now carry a Registered mark against 88 yesterday, and 93 of those 97 have a screenshot. The 4 Registered gaps are unchanged -- HIGHGARDEN-011, -018 and -024 (the seller's blanking, capturable by the user) and ONELOVEROS-002 (membership wall).",
+  "dashboard_updated": true,
+  "dashboard_url": "https://claude.ai/code/artifact/16e0d5da-a772-4f6c-81b7-80697febeeb1"
+}

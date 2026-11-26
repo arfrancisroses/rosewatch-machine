@@ -20,7 +20,7 @@
   "match_explanation": "The product title contains the full chart name \"Circle of Life (refile new application)\" as a phrase, inside a longer title.",
   "review_status": "New",
   "first_date_found": "2026-11-19 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-11-25 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-11-26 06:05 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-11-19 06:12 MST (America/Phoenix)",
   "units_in_stock_at_capture": null,
   "seller_sku": null,
@@ -106,6 +106,10 @@
       "date": "2026-11-25 10:33 MST (America/Phoenix)",
       "action": "Chart renamed this record; the name recorded on this case no longer appears on the chart",
       "details": "This case records its matched trademark as \"Circle of Life (refile new application)\", which is how Damon's chart worded it when the case was made. The 2026-11-25 chart drops the parenthetical and the row now reads plainly \"Circle of Life\" -- the refile succeeded and registered as 8552804 on 2026-11-17, so the note was no longer needed. Same docket, same application serial 99939797, same owner/breeder; only the wording and the status changed. matched_trademark is left exactly as recorded, per the rule that Damon's wording on the day is preserved and never edited away. Matching is unaffected because the parenthetical was already ignored for matching purposes (user instruction 2026-11-03). Note for anyone reading the chart alongside this case: searching the current chart for the recorded name will not find it; search \"Circle of Life\", which now appears TWICE -- the Abandoned 2005 registration and this one."
+    },
+    {
+      "date": "2026-11-26 06:05 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

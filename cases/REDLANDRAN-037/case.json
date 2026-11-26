@@ -20,7 +20,7 @@
   "match_explanation": "The product title normalises exactly to the chart name \"Divina\".",
   "review_status": "New",
   "first_date_found": "2026-11-19 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-11-25 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-11-26 06:05 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-11-19 06:12 MST (America/Phoenix)",
   "units_in_stock_at_capture": null,
   "seller_sku": null,
@@ -101,6 +101,10 @@
       "date": "2026-11-25 10:33 MST (America/Phoenix)",
       "action": "Chart status changed: Pending -> Registered",
       "details": "The Master Trademark Filing Chart supplied by the user on 2026-11-25 (2026-11-25_MasterTrademarkFilingChart.xlsx) moves \"Divina\" from Pending to Registered. Registration number 8559157, registered 2026-11-24. Owner/breeder as the chart records it: Rosen Tantau KG. Only the chart status and the application/registration numbers changed. The match classification is untouched -- a registration does not make a title match any stronger or weaker -- and no evidence, review status, screenshot, price, title or case number was altered. This remains a potential lead for Francis Roses or counsel to review, not a finding of infringement."
+    },
+    {
+      "date": "2026-11-26 06:05 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }

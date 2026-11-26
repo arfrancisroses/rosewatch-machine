@@ -107,6 +107,11 @@
       "date": "2026-11-25 10:33 MST (America/Phoenix)",
       "action": "Chart status changed: Pending -> Registered",
       "details": "The Master Trademark Filing Chart supplied by the user on 2026-11-25 (2026-11-25_MasterTrademarkFilingChart.xlsx) moves \"Forever Yours\" from Pending to Registered. Registration number 8552805, registered 2026-11-17. Owner/breeder as the chart records it: Rosen Tantau KG. Only the chart status and the application/registration numbers changed. The match classification is untouched -- a registration does not make a title match any stronger or weaker -- and no evidence, review status, screenshot, price, title or case number was altered. This remains a potential lead for Francis Roses or counsel to review, not a finding of infringement."
+    },
+    {
+      "date": "2026-11-26 06:06 MST (America/Phoenix)",
+      "action": "Not verified today -- seller's catalog unreachable",
+      "details": "xaviansroses.com again closed the connection with no HTTP response to a request carrying the Rose Watch user-agent -- sixth consecutive scheduled run refused. NOT checked, NOT reported as present or removed; Last Verified unchanged. No workaround attempted."
     }
   ],
   "listing_availability_at_capture": "IN STOCK / PICKUP ONLY"

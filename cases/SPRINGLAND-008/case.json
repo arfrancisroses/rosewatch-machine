@@ -19,7 +19,7 @@
   "match_explanation": "The product title contains the full chart name \"Royal Diva\" as a phrase, inside a longer title.",
   "review_status": "New",
   "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-11-25 08:43 MST (America/Phoenix)",
+  "last_verified": "2026-11-26 06:06 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 11:27 MST (America/Phoenix)",
   "seller_location": {
     "country": "Location not available",
@@ -283,6 +283,11 @@
       "date": "2026-11-25 08:43 MST (America/Phoenix)",
       "action": "Former chart name recorded as a tracked field on this case",
       "details": "At the user's instruction (2026-11-25), this case now carries the name change as structured fields rather than only as a history note, so the former name is visible without reading the history. Added: current_product_title ('#SPJ173, Opera Queen 歌剧皇后，Shrub Rose,  Non-Grafted/Own Root.'), verified live today, and chart_name_removed_from_title, which records that Royal Diva (and its Chinese form 皇家迪瓦) was taken out of the title on 2026-11-16 per the seller's own change timestamp of 2026-11-16T05:08:05-08:00. exact_product_title is UNCHANGED and still holds the title as first recorded, 'Royal Diva/Opera Queen 皇家迪瓦/歌剧皇后，Shrub Rose,  Non-Grafted/Own Root.'; previous_product_titles holds it too. Nothing about the evidence, review status, case number, match classification or screenshots was altered."
+    },
+    {
+      "date": "2026-11-26 06:06 MST (America/Phoenix)",
+      "action": "Re-verified present at its own URL (not via the feed)",
+      "details": "Still live: its URL answers HTTP 200, checked directly today. Absent from the matched products for the standing reason recorded on 2026-11-16 -- the seller removed the chart name from the title. Unlike REDLANDRAN-031, the name it was retitled to is not on the chart, so this listing does not match again."
     }
   ],
   "previous_product_titles": [

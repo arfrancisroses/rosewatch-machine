@@ -19,7 +19,7 @@
   "match_explanation": "The product title contains the single word \"ASHLEY\", which is the whole of the chart entry. A one-word match can be coincidence rather than the variety -- needs a human read of the listing before it means anything.",
   "review_status": "New",
   "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-11-25 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-11-26 06:05 MST (America/Phoenix)",
   "screenshot_captured_at": null,
   "seller_location": {
     "country": "United States",
@@ -244,6 +244,10 @@
       "date": "2026-11-25 10:33 MST (America/Phoenix)",
       "action": "Chart status corrected: Abandoned -> To Be Filed (not a change in the chart)",
       "details": "CORRECTION OF OUR OWN RECORD, NOT A CHANGE IN DAMON'S CHART. Verified directly today: the chart rows for this name are IDENTICAL in the 2026-11-16 and 2026-11-25 charts -- row 146 \"ASHLEY\" with status \"Abandoned (will refile, see 93004.4400 below)\" and row 188 \"Ashley\" with status \"To Be Filed\". Nothing about Ashley moved. What changed is which of those two rows this case resolves to. Two chart rows reduce to the same matching name, and until 2026-11-02 the matcher took whichever came first in the file -- so this case was opened carrying the Abandoned row. The collision rule added that day takes the MORE ENFORCEABLE row instead, because order in a spreadsheet is not a fact about a trademark and the chart's own wording says the dead row was superseded (\"will refile, see 93004.4400 below\"). This case had never been re-resolved since, so it kept the stale value until the 2026-11-25 chart import re-read every case against the current rule. To Be Filed is the correct status and carries NO enforceable right, exactly as Abandoned did, so nothing about the enforceability of this case changes. The match classification, evidence, review status, screenshots, price, title and case number are all untouched. An earlier version of this entry, written minutes before this one during the same uncommitted import and never delivered or committed, wrongly attributed the change to the new chart; it was corrected on the spot rather than left standing."
+    },
+    {
+      "date": "2026-11-26 06:05 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ]
 }
