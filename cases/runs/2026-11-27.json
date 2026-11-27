@@ -1,0 +1,216 @@
+{
+  "_readme": "Per-run monitoring log, one file per calendar day (America/Phoenix), used to generate the Daily PDF Report. Distinct from cases.json, which is the permanent case/review-queue index.",
+  "run_date": "2026-11-27",
+  "generated_at": "2026-11-27 06:07 MST (America/Phoenix)",
+  "_run_note": "Fifty-fifth scheduled run. NO NEW FINDINGS: zero matches without an existing case across 10,304 product pages on 15 serving URLs. A SECOND SITE WENT UNREACHABLE TODAY, and it is a different failure from the one we know. Flower Meadow Dream (www.myroseworld.com) returned HTTP 502 Bad Gateway at the egress proxy's CONNECT stage on the scheduled pass and again on a re-pull. That is NOT the proxy refusing the host -- a refusal is a 403 -- and kisakiplant.com and highgardenroses.com both returned HTTP 200 through the same proxy minutes later, so the proxy itself was healthy. A 502 means the connection was attempted and the upstream did not answer properly, which points at the site's own origin rather than our network policy. Rose Watch cannot distinguish a site being down from a failure somewhere between us and it, and the record says so rather than guessing. The site had served on every run since 2026-10-20; this is its first failure. 8 cases unchecked, Last Verified held, each carrying a dated note. Per the standing precedent the crawler keeps making the same request each run and nothing is worked around. Xavian's Roses was refused for a seventh consecutive run (9 cases unchecked). 22 cases went unchecked in total, against 14 on a normal day. Your Roses grew 1,764 -> 1,769 products with no new matches among them.",
+  "sites": [
+    {
+      "company": "Bloom Ladies Roses",
+      "url": "https://www.bloomladiesroses.com/shop",
+      "accessible": true,
+      "platform": "Squarespace",
+      "product_pages_reviewed": 154,
+      "notes": null
+    },
+    {
+      "company": "Bloomora Roses",
+      "url": "https://www.facebook.com/profile.php?id=61591662794131",
+      "accessible": false,
+      "platform": "Facebook",
+      "product_pages_reviewed": 0,
+      "notes": "No open product feed and unreachable from this environment; a coverage gap, never clean."
+    },
+    {
+      "company": "Commerce Farms",
+      "url": "https://www.etsy.com/shop/CommerceFarms",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "No open product feed and unreachable from this environment; a coverage gap, never clean."
+    },
+    {
+      "company": "Ergonzy / Ergonzi",
+      "url": "https://ergongzy.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 520,
+      "notes": null
+    },
+    {
+      "company": "Ergonzy / Ergonzi",
+      "url": "https://www.etsy.com/shop/Ergongzi",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "No open product feed and unreachable from this environment; a coverage gap, never clean."
+    },
+    {
+      "company": "Flower Meadow Dream",
+      "url": "https://www.myroseworld.com/",
+      "accessible": false,
+      "platform": null,
+      "product_pages_reviewed": 0,
+      "notes": "NEW TODAY. HTTP 502 Bad Gateway at the egress proxy's CONNECT stage, on the scheduled pass and again on a re-pull. Not a proxy refusal -- that is a 403 -- and other tracked sites returned HTTP 200 through the same proxy minutes later, so the proxy was healthy. A 502 means the connection was attempted and the upstream did not answer properly, which points at the site's own origin; Rose Watch cannot tell that from a failure between us and it and does not claim to. This site had served on every run since 2026-10-20. 8 cases unchecked, dates held."
+    },
+    {
+      "company": "GCM Ranch",
+      "url": "https://www.etsy.com/shop/GcmRanch",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "No open product feed and unreachable from this environment; a coverage gap, never clean."
+    },
+    {
+      "company": "High Garden",
+      "url": "https://highgardenroses.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 672,
+      "notes": null
+    },
+    {
+      "company": "Hillside Rose Farm",
+      "url": "https://www.hillsiderosefarm.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 154,
+      "notes": null
+    },
+    {
+      "company": "Huniu Rose Garden",
+      "url": "https://huniurosegarden.ca/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 318,
+      "notes": null
+    },
+    {
+      "company": "Jessie's Roses",
+      "url": "https://www.jessiesrose.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 0,
+      "notes": null
+    },
+    {
+      "company": "Jessie's Roses",
+      "url": "https://www.etsy.com/shop/JessiesRoseUSA",
+      "accessible": false,
+      "platform": "Etsy",
+      "product_pages_reviewed": 0,
+      "notes": "No open product feed and unreachable from this environment; a coverage gap, never clean."
+    },
+    {
+      "company": "Kate Roses",
+      "url": "https://www.kateroses.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 148,
+      "notes": null
+    },
+    {
+      "company": "Kisaki Plant",
+      "url": "https://kisakiplant.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 384,
+      "notes": null
+    },
+    {
+      "company": "Mola Rose",
+      "url": "https://molarose.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 795,
+      "notes": null
+    },
+    {
+      "company": "Muse Roses",
+      "url": "https://museroses.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 795,
+      "notes": null
+    },
+    {
+      "company": "One Love",
+      "url": "https://oneloveroseandgardens.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 864,
+      "notes": null
+    },
+    {
+      "company": "Redland Ranch Roses",
+      "url": "https://redlandranchroses.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 2135,
+      "notes": null
+    },
+    {
+      "company": "Rose Explosion",
+      "url": "https://roseexplosion.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 1482,
+      "notes": null
+    },
+    {
+      "company": "Springland Flowers",
+      "url": "https://springlandflowers.com/",
+      "accessible": true,
+      "platform": "Shopify",
+      "product_pages_reviewed": 114,
+      "notes": null
+    },
+    {
+      "company": "Winter Sonata",
+      "url": "https://www.facebook.com/winter.sonata.594800/",
+      "accessible": false,
+      "platform": "Facebook",
+      "product_pages_reviewed": 0,
+      "notes": "No open product feed and unreachable from this environment; a coverage gap, never clean."
+    },
+    {
+      "company": "Xavian's Roses",
+      "url": "https://xaviansroses.com/",
+      "accessible": false,
+      "platform": null,
+      "product_pages_reviewed": 0,
+      "notes": "Firewall closes the connection with no HTTP response to any request carrying the Rose Watch user-agent. SEVENTH consecutive scheduled run refused. 9 cases unchecked, dates held. No workaround attempted."
+    },
+    {
+      "company": "Your Roses",
+      "url": "https://your-roses.com/",
+      "accessible": true,
+      "platform": "WordPress/WooCommerce",
+      "product_pages_reviewed": 1769,
+      "notes": "1,769 products, up from 1,764 on 2026-11-26. No new matches among the five added."
+    }
+  ],
+  "total_sites_on_roster": 21,
+  "total_urls_on_roster": 23,
+  "urls_accessible": 15,
+  "urls_inaccessible": 8,
+  "total_product_pages_reviewed": 10304,
+  "active_trademark_matches_found": 0,
+  "active_trademark_matches_by_status": {},
+  "cases_created_this_run": 0,
+  "cases_reverified_this_run": 490,
+  "cases_no_longer_listed_this_run": [
+    "KATEROSES-001",
+    "HILLSIDERO-004",
+    "SPRINGLAND-004"
+  ],
+  "cases_returned_this_run": [],
+  "cases_unchecked_this_run": 22,
+  "matches_held_pending_case_creation": 0,
+  "review_queue_entries_this_run": 0,
+  "cut_roses_only_this_run": 0,
+  "screenshots_on_file": 466,
+  "screenshot_gaps": 50,
+  "screenshot_limitation": "466 of 516 cases carry a screenshot; 50 do not, unchanged because no case was created today. The gaps are 44 High Garden (the seller blanks its pages for automated browsers; capturable only by the user), 3 Flower Meadow Dream (removed, HTTP 404 -- unrelated to today's 502, which is about reaching the site at all) and 3 One Love (membership login wall, not bypassed). Registered coverage is 93 of 97; the 4 gaps are HIGHGARDEN-011, -018, -024 and ONELOVEROS-002.",
+  "dashboard_updated": true,
+  "dashboard_url": "https://claude.ai/code/artifact/16e0d5da-a772-4f6c-81b7-80697febeeb1"
+}

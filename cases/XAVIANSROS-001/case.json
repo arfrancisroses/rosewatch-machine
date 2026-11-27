@@ -107,6 +107,11 @@
       "date": "2026-11-26 06:06 MST (America/Phoenix)",
       "action": "Not verified today -- seller's catalog unreachable",
       "details": "xaviansroses.com again closed the connection with no HTTP response to a request carrying the Rose Watch user-agent -- sixth consecutive scheduled run refused. NOT checked, NOT reported as present or removed; Last Verified unchanged. No workaround attempted."
+    },
+    {
+      "date": "2026-11-27 06:06 MST (America/Phoenix)",
+      "action": "Not verified today -- seller's catalog unreachable",
+      "details": "xaviansroses.com again closed the connection with no HTTP response to a request carrying the Rose Watch user-agent -- SEVENTH consecutive scheduled run refused, unchanged since this seller was added on 2026-11-18. The listing was NOT checked and is NOT reported as present or as removed; Last Verified is unchanged. No workaround was attempted."
     }
   ],
   "listing_availability_at_capture": "IN STOCK / PICKUP ONLY"

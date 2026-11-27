@@ -19,7 +19,7 @@
   "match_explanation": "The product title contains the full chart name \"Royal Diva\" as a phrase, inside a longer title.",
   "review_status": "New",
   "first_date_found": "2026-09-18 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-11-26 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-11-27 06:06 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-10-20 11:27 MST (America/Phoenix)",
   "seller_location": {
     "country": "Location not available",
@@ -288,6 +288,11 @@
       "date": "2026-11-26 06:06 MST (America/Phoenix)",
       "action": "Re-verified present at its own URL (not via the feed)",
       "details": "Still live: its URL answers HTTP 200, checked directly today. Absent from the matched products for the standing reason recorded on 2026-11-16 -- the seller removed the chart name from the title. Unlike REDLANDRAN-031, the name it was retitled to is not on the chart, so this listing does not match again."
+    },
+    {
+      "date": "2026-11-27 06:06 MST (America/Phoenix)",
+      "action": "Re-verified present at its own URL (not via the feed)",
+      "details": "Still live: its URL answers HTTP 200, checked directly today. Absent from the matched products for the standing reason recorded on 2026-11-16 -- the seller removed the chart name from the title, and the name they used instead is not on the chart."
     }
   ],
   "previous_product_titles": [

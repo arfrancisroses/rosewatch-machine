@@ -187,6 +187,11 @@
     {
       "date": "2026-11-26 06:05 MST (America/Phoenix)",
       "action": "Re-verified present in site catalog feed during scheduled daily run."
+    },
+    {
+      "date": "2026-11-27 06:06 MST (America/Phoenix)",
+      "action": "Not verified today -- seller's catalog unreachable",
+      "details": "www.myroseworld.com could not be reached today: the request failed with HTTP 502 Bad Gateway at the egress proxy's CONNECT stage, on the scheduled pass and again on a re-pull. This is NOT the proxy refusing the host -- a refusal is a 403, and other tracked sites (kisakiplant.com, highgardenroses.com) returned HTTP 200 through the same proxy minutes later. A 502 means the connection was attempted and the upstream did not answer properly, which points at the site's own origin rather than our network policy -- but Rose Watch cannot tell a site being down from a failure somewhere between us and it, and does not claim to. This site has served normally on every run since 2026-10-20; today is the first failure. The listing was NOT checked and is NOT reported as present or as removed; Last Verified is unchanged. No workaround was attempted."
     }
   ]
 }

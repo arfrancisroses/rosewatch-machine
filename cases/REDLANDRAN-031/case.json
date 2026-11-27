@@ -20,7 +20,7 @@
   "match_explanation": "The product title normalises exactly to the chart name \"Inkandeszenz\".",
   "review_status": "New",
   "first_date_found": "2026-11-19 06:06 MST (America/Phoenix)",
-  "last_verified": "2026-11-26 06:06 MST (America/Phoenix)",
+  "last_verified": "2026-11-27 06:06 MST (America/Phoenix)",
   "screenshot_captured_at": "2026-11-25 06:07 MST (America/Phoenix)",
   "units_in_stock_at_capture": null,
   "seller_sku": null,
@@ -142,6 +142,10 @@
       "date": "2026-11-26 06:06 MST (America/Phoenix)",
       "action": "Listing matches the chart again, under the name the seller changed it to",
       "details": "Observed, and stated as fact only. This case was opened on 2026-11-19 on the title \"Inkandeszenz\\u2122\". The seller retitled it to \"Incandescence\\u2122\" on 2026-11-25. The chart Damon supplied that same day, ingested 2026-11-25 and in force from today's run, ADDS \"Incandescence\" as a Pending mark (App. Ser. No. 50233224, filed 2026-11-23, Rosen Tantau KG) and separately moves \"Inkandeszenz\" to Registered (Reg. No. 8550260, registered 2026-11-17). So today's crawl matched this same listing again -- same URL, whose handle still reads \"inkandeszenz\\u2122\" -- this time on the chart name \"Incandescence\". It was correctly NOT treated as a new finding: the URL already carries this case, so no second case was created and the case number is unchanged. BOTH of this listing's titles are now chart names, with different statuses: the title it carried when the case was opened is Registered, and the title it carries now is Pending. This case keeps matched_trademark \"Inkandeszenz\" and the Registered status it took from that record; the match on \"Incandescence\" is recorded here rather than by changing the case's matched name, because a case's recorded match is what it was opened on. For the avoidance of doubt about the sequence, which is dates only and carries no inference about what the seller knew or intended: Inkandeszenz registered 2026-11-17; this case opened 2026-11-19; Francis Roses filed for Incandescence 2026-11-23; the seller retitled 2026-11-25 at 08:06:30-05:00 by its own feed timestamp; the chart carrying both arrived 2026-11-25. What that means is for Francis Roses or counsel to judge and is not judged here."
+    },
+    {
+      "date": "2026-11-27 06:06 MST (America/Phoenix)",
+      "action": "Re-verified present in site catalog feed during scheduled daily run."
     }
   ],
   "current_product_title": "Incandescence™",
